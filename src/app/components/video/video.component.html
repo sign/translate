@@ -1,0 +1,20 @@
+<ng-container *ngIf="videoState$ | async as videoState">
+  <ng-container *ngIf="poseState$ | async as poseState">
+    <ng-container *transloco="let t; read: 'video'">
+      <p *ngIf="videoState.error">{{t('errors.' + videoState.error)}}</p>
+      <p *ngIf="!videoState.error && !poseState.isLoaded">{{'pose.loading' | transloco}}</p>
+    </ng-container>
+
+
+    <div id="video-container" [hidden]="videoState.error || !poseState.isLoaded">
+      <video #video></video>
+      <canvas #canvas class="flip" height="100%" width="100%"></canvas>
+      <div #stats></div>
+    </div>
+
+    <app-video-controls></app-video-controls>
+  <!--  <app-audio [playState]="isSigning$"></app-audio>-->
+  </ng-container>
+</ng-container>
+
+

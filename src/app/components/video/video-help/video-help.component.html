@@ -1,0 +1,20 @@
+<ng-container *transloco="let t; read: 'video.help.menu'">
+  <button [matMenuTriggerFor]="menu" aria-label="TODO" mat-icon-button>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu #menu xPosition="before">
+    <!--    <a mat-menu-item href="/help" target="_blank">-->
+    <!--      <mat-icon>help</mat-icon>-->
+    <!--      {{t('help')}}-->
+    <!--    </a>-->
+    <!--<button mat-menu-item>
+      <mat-icon>feedback</mat-icon>
+      {{t('feedback')}}
+    </button>-->
+    <button (click)="broadcastTest()" mat-menu-item>
+      <mat-icon>campaign</mat-icon>
+      {{t('micTest')}}
+    </button>
+  </mat-menu>
+</ng-container>

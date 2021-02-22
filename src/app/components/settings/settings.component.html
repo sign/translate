@@ -1,0 +1,8 @@
+<ng-container *transloco="let t; read: 'settings'">
+  <ng-container *ngIf="settingsState$ | async as settings">
+    <mat-checkbox (change)="applySetting('shareData', $event.checked)"
+                  [checked]="settings.shareData">
+      {{t('shareData')}}
+    </mat-checkbox>
+  </ng-container>
+</ng-container>

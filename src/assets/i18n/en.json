@@ -1,0 +1,26 @@
+{
+  "header": {
+    "title": "Sign Language Processing Playground"
+  },
+  "video": {
+    "errors": {
+      "starting": "Camera starting",
+      "turnedOff": "Camera turned off",
+      "notConnected": "Camera not connected",
+      "permissionDenied": "Camera permission denied"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Turn off camera",
+        "off": "Turn on camera"
+      },
+      "dominantHand": {
+        "left": "Left handed",
+        "right": "Right handed"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Loading Pose Estimation..."
+  }
+}

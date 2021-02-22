@@ -1,0 +1,64 @@
+:host {
+  background: #202124;
+  display: flex;
+  border-radius: 8px;
+  position: relative;
+
+  color: white;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+
+  min-height: 216px;
+  height: 720px;
+  max-height: 45vw;
+
+  &.aspect-4-3 {
+    min-width: 288px;
+    width: 960px;
+    max-width: 60vw;
+  }
+
+  &.aspect-16-9 {
+    min-width: 384px;
+    width: 1280px;
+    max-width: 80vw;
+  }
+
+  &.aspect-2-1 {
+    min-width: 432px;
+    width: 1440px;
+    max-width: 90vw;
+  }
+}
+
+p {
+  margin: auto;
+  font-size: 36px;
+}
+
+#video-container {
+  height: 100%;
+
+  video {
+    display: none;
+  }
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+app-video-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+}
+
+app-video-help {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+}
