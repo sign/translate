@@ -1,0 +1,3 @@
+<mat-selection-list [(ngModel)]="this.currentSettings" *transloco="let t; read: 'settings'" (ngModelChange)="onSettingsChange($event)">
+  <mat-list-option *ngFor="let s of availableSettings" [value]="s">{{t(s)}}</mat-list-option>
+</mat-selection-list>

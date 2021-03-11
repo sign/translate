@@ -5,12 +5,12 @@ import {AppComponent} from './app.component';
 import {AppSharedModule} from './core/modules/shared.module';
 import {HeaderComponent} from './components/header/header.component';
 import {VideoComponent} from './components/video/video.component';
-import {SettingsComponent} from './components/settings/settings.component';
 import {VideoControlsComponent} from './components/video/video-controls/video-controls.component';
 import {NavigatorService} from './core/services/navigator/navigator.service';
-import {AudioComponent} from './components/audio/audio.component';
 import {PoseModule} from './modules/pose/pose.module';
-import {HandsModule} from './modules/hands/hands.module';
+import {SignWritingModule} from './modules/sign-writing/sign-writing.module';
+import {SettingsModule} from './modules/settings/settings.module';
+import {DetectorModule} from './modules/detector/detector.module';
 
 
 @NgModule({
@@ -18,15 +18,15 @@ import {HandsModule} from './modules/hands/hands.module';
     AppComponent,
     HeaderComponent,
     VideoComponent,
-    SettingsComponent,
     VideoControlsComponent,
-    AudioComponent
   ],
   imports: [
     BrowserModule,
     AppSharedModule,
+    SettingsModule,
     PoseModule,
-    HandsModule
+    SignWritingModule,
+    DetectorModule
   ],
   providers: [
     NavigatorService

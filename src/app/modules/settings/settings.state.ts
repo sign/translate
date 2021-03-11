@@ -5,10 +5,22 @@ import {SetSetting} from './settings.actions';
 
 export interface SettingsStateModel {
   receiveVideo: boolean;
+
+  detectSign: boolean;
+
+  drawVideo: boolean;
+  drawPose: boolean;
+  drawSignWriting: boolean;
 }
 
 const initialState: SettingsStateModel = {
-  receiveVideo: true
+  receiveVideo: true,
+
+  detectSign: false,
+
+  drawVideo: true,
+  drawPose: true,
+  drawSignWriting: true,
 };
 
 @Injectable()

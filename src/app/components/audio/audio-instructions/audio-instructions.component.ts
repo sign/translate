@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngxs/store';
-import {SetSetting} from '../../../core/modules/ngxs/store/settings/settings.actions';
+import {SetSetting} from '../../../modules/settings/settings.actions';
 
 @Component({
   selector: 'app-audio-instructions',

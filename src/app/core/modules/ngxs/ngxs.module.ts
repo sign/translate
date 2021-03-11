@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {environment} from '../../../../environments/environment';
 import {NgxsModule, NgxsModuleOptions} from '@ngxs/store';
 import {AppState} from './store/app/app.state';
-import {SettingsState} from './store/settings/settings.state';
+import {SettingsState} from '../../../modules/settings/settings.state';
 import {VideoState} from './store/video/video.state';
 import {AudioState} from './store/audio/audio.state';
 

@@ -3,14 +3,15 @@ import {Select, Store} from '@ngxs/store';
 import {combineLatest, Observable} from 'rxjs';
 import {CameraSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
-import {filter, map, takeUntil, tap} from 'rxjs/operators';
+import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../base/base.component';
 import {wait} from '../../core/helpers/wait/wait';
 import {PoseVideoFrame} from '../../modules/pose/pose.actions';
 import {Pose, PoseStateModel} from '../../modules/pose/pose.state';
 import {PoseService} from '../../modules/pose/pose.service';
-import {HandsStateModel} from '../../modules/hands/hands.state';
-import {HandsService} from '../../modules/hands/hands.service';
+import {SignWritingStateModel} from '../../modules/sign-writing/sign-writing.state';
+import {SettingsStateModel} from '../../modules/settings/settings.state';
+import {SignWritingService} from '../../modules/sign-writing/sign-writing.service';
 
 @Component({
   selector: 'app-video',
@@ -18,11 +19,11 @@ import {HandsService} from '../../modules/hands/hands.service';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
+  @Select(state => state.settings) settingsState$: Observable<SettingsStateModel>;
   @Select(state => state.video) videoState$: Observable<VideoStateModel>;
   @Select(state => state.pose) poseState$: Observable<PoseStateModel>;
-  @Select(state => state.hands) handsState$: Observable<HandsStateModel>;
-  // @Select(state => state.models.signingProbability) signingProbability$: Observable<number>;
-  // @Select(state => state.models.isSigning) isSigning$: Observable<boolean>;
+  @Select(state => state.signWriting) signWritingState$: Observable<SignWritingStateModel>;
+  @Select(state => state.detector.signingProbability) signingProbability$: Observable<number>;
 
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
@@ -37,17 +38,18 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   constructor(private store: Store,
               private poseService: PoseService,
-              private handsService: HandsService) {
+              private signWritingService: SignWritingService) {
     super();
   }
 
   ngAfterViewInit(): void {
     this.setCamera();
-    this.drawChanges();
     this.setStats();
     this.trackPose();
 
     this.canvasCtx = this.canvasEl.nativeElement.getContext('2d');
+    this.drawChanges();
+
     this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
   }
 
@@ -114,11 +116,31 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   drawChanges(): void {
-    combineLatest([this.poseState$, this.handsState$]).pipe(
-      tap(([poseState, handsState]) => {
+    const ctx = this.canvasCtx;
+    const canvas = ctx.canvas;
+    combineLatest([this.poseState$, this.signWritingState$, this.settingsState$]).pipe(
+      distinctUntilChanged((x, y) => x[1].timestamp === y[1].timestamp),
+      tap(([poseState, signWritingState, settingsState]) => {
         if (poseState.pose) {
-          this.poseService.draw(poseState.pose, this.canvasCtx);
-          this.handsService.draw(handsState, this.canvasCtx);
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          // Draw video
+          if (settingsState.drawVideo) {
+            ctx.drawImage(poseState.pose.image, 0, 0, canvas.width, canvas.height);
+          } else {
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          }
+
+          // Draw pose
+          if (settingsState.drawPose) {
+            this.poseService.draw(poseState.pose, ctx);
+          }
+
+          // Draw Sign Writing
+          if (settingsState.drawSignWriting) {
+            this.signWritingService.draw(signWritingState, ctx);
+          }
         }
       }),
       takeUntil(this.ngUnsubscribe)
@@ -131,6 +153,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.fpsStats.domElement.style.position = 'absolute';
     this.statsEl.nativeElement.appendChild(this.fpsStats.dom);
 
+    // Sign detection panel
     const signingPanel = new Stats.Panel('Signing', '#ff8', '#221');
     this.signingStats.dom.innerHTML = '';
     this.signingStats.addPanel(signingPanel);
@@ -139,13 +162,24 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.signingStats.domElement.style.left = '80px';
     this.statsEl.nativeElement.appendChild(this.signingStats.dom);
 
-    // this.setDetectorListener(signingPanel);
+    this.setDetectorListener(signingPanel);
   }
 
-  // setDetectorListener(panel: Stats.Panel): void {
-  //   this.signingProbability$.pipe(
-  //     tap(v => panel.update(v * 100, 100)),
-  //     takeUntil(this.ngUnsubscribe)
-  //   ).subscribe();
-  // }
+  setDetectorListener(panel: Stats.Panel): void {
+    // Update panel value
+    this.signingProbability$.pipe(
+      tap(v => panel.update(v * 100, 100)),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
+
+    // Show hide panel
+    this.settingsState$.pipe(
+      map(settings => settings.detectSign),
+      distinctUntilChanged(),
+      tap(detectSign => {
+        this.signingStats.domElement.style.display = detectSign ? 'block' : 'none';
+      }),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
+  }
 }

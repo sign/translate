@@ -96,10 +96,6 @@ export class PoseService {
   }
 
   draw(pose: Pose, ctx: CanvasRenderingContext2D): void {
-    ctx.save();
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.drawImage(pose.image, 0, 0, ctx.canvas.width, ctx.canvas.height);
-
     if (pose.poseLandmarks) {
       this.drawBody(pose.poseLandmarks, ctx);
       this.drawElbowHandsConnection(pose, ctx);

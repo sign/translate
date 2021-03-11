@@ -22,5 +22,11 @@
   },
   "pose": {
     "loading": "Loading Pose Estimation..."
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Draw Video",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Draw Sign Writing"
   }
 }

@@ -1,23 +1,20 @@
 import {Injectable} from '@angular/core';
 import * as THREE from 'three';
-import {HandDirection, HandNormal, HandPlane, HandsStateModel, HandStateModel} from './hands.state';
+import {HandStateModel, SignWritingStateModel} from './sign-writing.state';
+import {SignWritingService} from './sign-writing.service';
 
+export type HandPlane = 'wall' | 'floor';
+export type HandDirection = 'me' | 'you' | 'middle';
+
+export interface HandNormal {
+  center: THREE.Vector3;
+  direction: THREE.Vector3;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class HandsService {
-
-  //     const normal = this.handsService.normal(landmarks);
-  //
-  //
-  //     patchState({
-  //       [hand]: {
-  //         bbox: this.handsService.bbox(landmarks),
-  //         normal,
-  //         plane: this.handsService.plane(normal),
-  //         rotation: this.handsService.rotation(landmarks),
-  //         direction: this.handsService.direction(landmarks),
 
   bbox(vectors: THREE.Vector3[]): THREE.Box3 {
     return new THREE.Box3().setFromPoints(vectors);
@@ -42,8 +39,14 @@ export class HandsService {
     return {center, direction};
   }
 
-  plane(normal: HandNormal): HandPlane {
-    if (Math.abs(normal.direction.y) < Math.abs(normal.direction.z)) {
+  plane(vectors: THREE.Vector3[]): HandPlane {
+    const p1 = vectors[0];
+    const p2 = vectors[13];
+
+    const y = Math.abs(p2.y - p1.y) * 1.5; // add bias to y
+    const z = Math.abs(p2.z - p1.z);
+
+    if (y > z) {
       return 'wall';
     }
     return 'floor';
@@ -57,7 +60,8 @@ export class HandsService {
     const p1 = vectors[0];
     const p2 = vectors[13];
 
-    let angle = this.angle(p2.y - p1.y, p2.x - p1.x) + 90; // SignWriting first chat is 90 degrees rotated
+    let angle = this.angle(p2.y - p1.y, p2.x - p1.x) + 94; // SignWriting first chat is 90 degrees rotated
+
     angle += 360 / 16; // make a safety margin around every angle
     angle = (angle + 360) % 360; // working with positive angles is easier
     return Math.floor(angle / 45);
@@ -129,10 +133,10 @@ export class HandsService {
     ctx.stroke();
   }
 
-  drawShape(hand: HandStateModel, isLeft: boolean, ctx: CanvasRenderingContext2D): void {
+  drawShape(shouldersWidth: number, hand: HandStateModel, isLeft: boolean, ctx: CanvasRenderingContext2D): void {
     let char = hand.shape.codePointAt(0);
 
-    if (isLeft) {
+    if (!isLeft) {
       char += 0x8;
     }
 
@@ -142,7 +146,7 @@ export class HandsService {
     }
 
     // Rotation
-    char += isLeft ? hand.rotation : (8 - hand.rotation) % 8;
+    char += isLeft ? (8 - hand.rotation) % 8 : hand.rotation ;
 
     // Direction
     const shifts = {
@@ -152,36 +156,27 @@ export class HandsService {
     };
     char += shifts[hand.direction];
 
-
-    ctx.font = '100px SignWriting';
     const text = String.fromCodePoint(char);
-    const measure = ctx.measureText(text);
-    const bboxWidth = (hand.bbox.max.x - hand.bbox.min.x) * ctx.canvas.width;
-    const scale = bboxWidth / measure.width;
-    ctx.font = (100 * scale) + 'px SignWriting';
+    const center = new THREE.Vector2((hand.bbox.min.x + hand.bbox.max.x) / 2, (hand.bbox.min.y + hand.bbox.max.y) / 2);
 
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
+    // Font should be same size for all shapes, where flat hand is 1/3 of shoulders width
+    const fontSize = SignWritingService.textFontSize('񂇁', shouldersWidth / 3, ctx);
 
-    const x = (hand.bbox.min.x + hand.bbox.max.x) / 2 * ctx.canvas.width;
-    const y = (hand.bbox.min.y + hand.bbox.max.y) / 2 * ctx.canvas.height;
-
-    ctx.fillText(String.fromCodePoint(char), x, y);
+    SignWritingService.drawSWText(text, center, fontSize, ctx);
   }
 
-  drawHand(hand: HandStateModel, isLeft: boolean, ctx: CanvasRenderingContext2D): void {
-    this.drawBbox(hand.bbox, ctx);
-    this.drawNormal(hand.normal, ctx);
-    this.drawShape(hand, isLeft, ctx);
+  drawHand(shouldersWidth: number, hand: HandStateModel, isLeft: boolean, ctx: CanvasRenderingContext2D): void {
+    // this.drawBbox(hand.bbox, ctx);
+    // this.drawNormal(hand.normal, ctx);
+    this.drawShape(shouldersWidth, hand, isLeft, ctx);
   }
 
-  draw(hands: HandsStateModel, ctx: CanvasRenderingContext2D): void {
-    if (hands.leftHand) {
-      this.drawHand(hands.leftHand, true, ctx);
+  draw(swState: SignWritingStateModel, ctx: CanvasRenderingContext2D): void {
+    if (swState.leftHand) {
+      this.drawHand(swState.body.shoulders.width, swState.leftHand, true, ctx);
     }
-    if (hands.rightHand) {
-      this.drawHand(hands.rightHand, false, ctx);
+    if (swState.rightHand) {
+      this.drawHand(swState.body.shoulders.width, swState.rightHand, false, ctx);
     }
   }
-
 }

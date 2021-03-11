@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 const materialModules = [
   MatToolbarModule,
@@ -26,6 +27,7 @@ const materialModules = [
   MatListModule,
   MatFormFieldModule,
   MatCheckboxModule,
+  MatSlideToggleModule,
   BrowserAnimationsModule,
 ];
 

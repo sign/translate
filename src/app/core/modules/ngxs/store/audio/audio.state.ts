@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 import {tap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {SetSetting} from '../settings/settings.actions';
+import {SetSetting} from '../../../../../modules/settings/settings.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 import {DisableTransmission, EnableTransmission} from './audio.actions';
 
