@@ -10,8 +10,7 @@ import {Store} from '@ngxs/store';
 })
 export class SettingsComponent extends BaseSettingsComponent implements OnInit {
 
-  // availableSettings = ['detectSign', 'drawVideo', 'drawPose', 'drawSignWriting'];
-  availableSettings = ['drawVideo', 'drawPose', 'drawSignWriting'];
+  availableSettings = ['detectSign', 'drawVideo', 'drawPose', 'drawSignWriting'];
   lastSettings = [];
   currentSettings = [];
 

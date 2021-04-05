@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
               private dialog: MatDialog,
               private snackBar: MatSnackBar,
               private store: Store) {
-
   }
 
   ngOnInit(): void {

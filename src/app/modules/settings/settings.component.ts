@@ -1,7 +1,7 @@
 import {SettingsStateModel} from './settings.state';
 import {SetSetting} from './settings.actions';
-import { Observable } from 'rxjs';
-import { Select, Store } from '@ngxs/store';
+import {Observable} from 'rxjs';
+import {Select, Store} from '@ngxs/store';
 import {BaseComponent} from '../../components/base/base.component';
 
 export class BaseSettingsComponent extends BaseComponent {

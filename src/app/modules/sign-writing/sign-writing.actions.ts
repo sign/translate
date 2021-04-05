@@ -3,7 +3,7 @@ import {Pose, PoseLandmark} from '../pose/pose.state';
 export class EstimateHandShape {
   static readonly type = '[SignWriting - Hands] Estimate Hand Shape';
 
-  constructor(public hand: 'leftHand' | 'rightHand', public landmarks?: PoseLandmark[]) {
+  constructor(public hand: 'leftHand' | 'rightHand', public landmarks: PoseLandmark[], public poseImage: HTMLCanvasElement) {
   }
 }
 

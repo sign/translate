@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Action, NgxsOnInit, Select, State, StateContext, Store} from '@ngxs/store';
+import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {Pose, PoseLandmark} from '../pose/pose.state';
 import {filter, tap} from 'rxjs/operators';
@@ -59,7 +59,6 @@ export class SignWritingState implements NgxsOnInit {
   constructor(private bodyService: BodyService,
               private faceService: FaceService,
               private handsService: HandsService) {
-
   }
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
@@ -69,8 +68,8 @@ export class SignWritingState implements NgxsOnInit {
         dispatch([
           new CalculateBodyFactors(pose),
           new EstimateFaceShape(pose.faceLandmarks),
-          new EstimateHandShape('leftHand', pose.leftHandLandmarks),
-          new EstimateHandShape('rightHand', pose.rightHandLandmarks)
+          new EstimateHandShape('leftHand', pose.leftHandLandmarks, pose.image),
+          new EstimateHandShape('rightHand', pose.rightHandLandmarks, pose.image)
         ]).subscribe(() => patchState({timestamp: Date.now()}));
       })
     ).subscribe();
@@ -110,7 +109,8 @@ export class SignWritingState implements NgxsOnInit {
   }
 
   @Action(EstimateHandShape)
-  async estimateHand({patchState, dispatch}: StateContext<SignWritingStateModel>, {hand, landmarks}: EstimateHandShape): Promise<void> {
+  async estimateHand({patchState, dispatch}: StateContext<SignWritingStateModel>,
+                     {hand, landmarks, poseImage}: EstimateHandShape): Promise<void> {
     if (!landmarks) {
       patchState({[hand]: null});
       return;
@@ -118,11 +118,10 @@ export class SignWritingState implements NgxsOnInit {
 
     const isLeft = hand === 'leftHand';
 
-    const vectors = landmarks.map(l => new THREE.Vector3(l.x, l.y, l.z));
+    const vectors = landmarks.map(l => new THREE.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     const normal = this.handsService.normal(vectors, isLeft);
     const plane = this.handsService.plane(vectors);
-
 
     patchState({
       [hand]: {
@@ -131,7 +130,7 @@ export class SignWritingState implements NgxsOnInit {
         plane,
         rotation: this.handsService.rotation(vectors),
         direction: this.handsService.direction(plane, normal, isLeft),
-        shape: '񂋡' // Hand flat
+        shape: this.handsService.shape(vectors, normal, isLeft)
       }
     });
   }

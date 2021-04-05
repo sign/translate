@@ -48,6 +48,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.trackPose();
 
     this.canvasCtx = this.canvasEl.nativeElement.getContext('2d');
+    this.preloadSignWritingFont();
     this.drawChanges();
 
     this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
@@ -113,6 +114,11 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
       }),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
+  }
+
+  preloadSignWritingFont(): void {
+    this.canvasCtx.font = '100px SignWriting';
+    this.canvasCtx.fillText('Preload SignWriting', 0, 0);
   }
 
   drawChanges(): void {

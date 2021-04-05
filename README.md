@@ -5,9 +5,16 @@ This playground is intended for ease of prototyping real-time sign language mode
 [Visit the playground!](https://sign-language-processing.github.io/playground/)
 
 It includes, as a basic first step, MediaPipe Holistic pose estimation, on top of which other predictions are performed:
-- SignWriting hand orientation and rotation
+- Sign language detection (Model based)
+- SignWriting hand orientation (Rule based)
+- SignWriting hand shape (Model based)
 
 To be added:
-- SignWriting handshape classification
-- Sign language detection
-
+- SignWriting:
+    - eyebrows 
+    - forehead
+    - eyes
+    - cheeks
+    - nose
+    - mouthing
+    - tongue

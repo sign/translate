@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {PoseService} from './pose.service';
 import {NgxsModule} from '@ngxs/store';
 import {PoseState} from './pose.state';
-
 
 
 @NgModule({
@@ -12,4 +11,5 @@ import {PoseState} from './pose.state';
     NgxsModule.forFeature([PoseState])
   ]
 })
-export class PoseModule { }
+export class PoseModule {
+}

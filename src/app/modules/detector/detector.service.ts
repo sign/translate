@@ -113,9 +113,11 @@ export class DetectorService {
   }
 
   getSequentialConfidence(opticalFlow: Float32Array): number {
-    const pred: Tensor = this.sequentialModel.predict(tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])) as Tensor;
-    const probs = tf.softmax(pred).dataSync();
-    return probs[1];
+    return tf.tidy(() => {
+      const pred: Tensor = this.sequentialModel.predict(tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])) as Tensor;
+      const probs = tf.softmax(pred).dataSync();
+      return probs[1];
+    });
   }
 
   detect(pose: Pose): number {

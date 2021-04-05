@@ -11,4 +11,5 @@ import {DetectorService} from './detector.service';
     NgxsModule.forFeature([DetectorState])
   ]
 })
-export class DetectorModule { }
+export class DetectorModule {
+}

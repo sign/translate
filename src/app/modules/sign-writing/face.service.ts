@@ -1,10 +1,8 @@
 import {Injectable} from '@angular/core';
 import * as THREE from 'three';
-import {BodyStateModel, FaceStateModel, SignWritingStateModel} from './sign-writing.state';
+import {FaceStateModel, SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
-import * as holistic from '@mediapipe/holistic/holistic.js';
-
 
 
 @Injectable({
