@@ -47,9 +47,7 @@ describe('HandsService', () => {
           }
         }
       }
-      console.log(yHat);
     }
-
   });
 
 

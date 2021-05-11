@@ -12,9 +12,6 @@ export class PoseService {
 
   model?: any;
 
-  constructor() {
-  }
-
   async load(): Promise<void> {
     this.model = new holistic.Holistic({
       locateFile: (file) => {
@@ -22,6 +19,8 @@ export class PoseService {
         return `https://cdn.jsdelivr.net/npm/@mediapipe/holistic@0.1/${file}`;
       }
     });
+
+    this.model.setOptions({upperBodyOnly: false});
   }
 
   async predict(video: HTMLVideoElement): Promise<void> {
@@ -30,7 +29,6 @@ export class PoseService {
     }
     await this.model.send({image: video}); // This is void
   }
-
 
   drawBody(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D): void {
     const filteredLandmarks = Array.from(landmarks);

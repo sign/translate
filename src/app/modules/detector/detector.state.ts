@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 import {DetectorService} from './detector.service';
 import {DetectSigning} from './detector.actions';
-import {filter, tap} from 'rxjs/operators';
+import {filter, first, tap} from 'rxjs/operators';
 import {Pose} from '../pose/pose.state';
 import {Observable} from 'rxjs';
 
@@ -30,6 +30,12 @@ export class DetectorState implements NgxsOnInit {
   }
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
+    // Load model once setting turns on
+    this.detectSign$.pipe(
+      filter(Boolean),
+      first(),
+      tap(() => this.detector.loadModel())
+    ).subscribe();
     this.detectSign$.subscribe(detectSign => this.detectSign = detectSign);
 
     this.pose$.pipe(

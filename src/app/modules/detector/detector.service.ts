@@ -19,7 +19,7 @@ export class DetectorService {
 
   sequentialModel: LayersModel;
 
-  constructor() {
+  loadModel(): void {
     tf.loadLayersModel('assets/models/sign-detector/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }

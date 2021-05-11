@@ -1,35 +1,15 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 import {Observable} from 'rxjs';
-import {Pose, PoseLandmark} from '../pose/pose.state';
-import {filter, tap} from 'rxjs/operators';
-import {HandNormal, HandPlane, HandsService} from './hands.service';
+import {Pose} from '../pose/pose.state';
+import {filter, first, tap} from 'rxjs/operators';
+import {HandsService, HandStateModel} from './hands.service';
 import * as THREE from 'three';
 import {CalculateBodyFactors, EstimateFaceShape, EstimateHandShape} from './sign-writing.actions';
-import {BodyService, BodyShoulders} from './body.service';
+import {BodyService, BodyStateModel} from './body.service';
 import * as holistic from '@mediapipe/holistic/holistic';
-import {FaceService} from './face.service';
+import {FaceService, FaceStateModel} from './face.service';
 
-
-export interface HandStateModel {
-  bbox: THREE.Box3;
-  normal: HandNormal;
-  plane: HandPlane;
-  rotation: number; // Rotation  [0,7]
-  direction: 'me' | 'you' | 'both';
-  shape: string;
-}
-
-export interface BodyStateModel {
-  shoulders: BodyShoulders;
-  elbows: [PoseLandmark, PoseLandmark];
-  wrists: [PoseLandmark, PoseLandmark];
-}
-
-export interface FaceStateModel {
-  center: THREE.Vector2;
-  shape: string;
-}
 
 export interface SignWritingStateModel {
   timestamp: number;
@@ -53,8 +33,9 @@ const initialState: SignWritingStateModel = {
   defaults: initialState
 })
 export class SignWritingState implements NgxsOnInit {
+  drawSignWriting = false;
   @Select(state => state.pose.pose) pose$: Observable<Pose>;
-
+  @Select(state => state.settings.drawSignWriting) drawSignWriting$: Observable<boolean>;
 
   constructor(private bodyService: BodyService,
               private faceService: FaceService,
@@ -62,12 +43,24 @@ export class SignWritingState implements NgxsOnInit {
   }
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
+    // Load model once setting turns on
+    this.drawSignWriting$.pipe(
+      filter(Boolean),
+      first(),
+      tap(() => {
+        this.handsService.loadModel();
+        this.faceService.loadModel();
+      })
+    ).subscribe();
+    this.drawSignWriting$.subscribe(drawSignWriting => this.drawSignWriting = drawSignWriting);
+
     this.pose$.pipe(
       filter(Boolean),
+      filter(() => this.drawSignWriting), // Only run if needed
       tap((pose: Pose) => {
         dispatch([
           new CalculateBodyFactors(pose),
-          new EstimateFaceShape(pose.faceLandmarks),
+          new EstimateFaceShape(pose.faceLandmarks, pose.image),
           new EstimateHandShape('leftHand', pose.leftHandLandmarks, pose.image),
           new EstimateHandShape('rightHand', pose.rightHandLandmarks, pose.image)
         ]).subscribe(() => patchState({timestamp: Date.now()}));
@@ -94,17 +87,17 @@ export class SignWritingState implements NgxsOnInit {
   }
 
   @Action(EstimateFaceShape)
-  async estimateFace({patchState, dispatch}: StateContext<SignWritingStateModel>, {landmarks}: EstimateFaceShape): Promise<void> {
+  async estimateFace({patchState, dispatch}: StateContext<SignWritingStateModel>,
+                     {landmarks, poseImage}: EstimateFaceShape): Promise<void> {
     if (!landmarks) {
       patchState({face: null});
       return;
     }
 
+    const vectors = landmarks.map(l => new THREE.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
+
     patchState({
-      face: {
-        center: this.faceService.center(landmarks),
-        shape: '񌞁'
-      }
+      face: this.faceService.shape(vectors)
     });
   }
 

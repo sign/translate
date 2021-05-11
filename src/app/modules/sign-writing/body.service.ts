@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import * as THREE from 'three';
-import {BodyStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
 import * as holistic from '@mediapipe/holistic/holistic.js';
@@ -8,6 +7,12 @@ import * as holistic from '@mediapipe/holistic/holistic.js';
 export interface BodyShoulders {
   center: THREE.Vector2;
   width: number;
+}
+
+export interface BodyStateModel {
+  shoulders: BodyShoulders;
+  elbows: [PoseLandmark, PoseLandmark];
+  wrists: [PoseLandmark, PoseLandmark];
 }
 
 @Injectable({

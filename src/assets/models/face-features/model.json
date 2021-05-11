@@ -1,0 +1,485 @@
+{
+  "format": "layers-model",
+  "generatedBy": "keras v2.4.0",
+  "convertedBy": "TensorFlow.js Converter v3.6.0",
+  "modelTopology": {
+    "keras_version": "2.4.0",
+    "backend": "tensorflow",
+    "model_config": {
+      "class_name": "Model",
+      "config": {
+        "name": "model_4",
+        "layers": [
+          {
+            "class_name": "InputLayer",
+            "config": {
+              "batch_input_shape": [
+                1,
+                1,
+                1404
+              ],
+              "dtype": "float32",
+              "sparse": false,
+              "ragged": false,
+              "name": "input_5"
+            },
+            "name": "input_5",
+            "inbound_nodes": []
+          },
+          {
+            "class_name": "SimpleRNN",
+            "config": {
+              "name": "simple_rnn_8",
+              "trainable": true,
+              "dtype": "float32",
+              "return_sequences": true,
+              "return_state": false,
+              "go_backwards": false,
+              "stateful": true,
+              "unroll": false,
+              "time_major": false,
+              "units": 128,
+              "activation": "tanh",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "recurrent_initializer": {
+                "class_name": "Orthogonal",
+                "config": {
+                  "gain": 1.0,
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "recurrent_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "recurrent_constraint": null,
+              "bias_constraint": null,
+              "dropout": 0.0,
+              "recurrent_dropout": 0.0
+            },
+            "name": "simple_rnn_8",
+            "inbound_nodes": [
+              [
+                [
+                  "input_5",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "SimpleRNN",
+            "config": {
+              "name": "simple_rnn_9",
+              "trainable": true,
+              "dtype": "float32",
+              "return_sequences": true,
+              "return_state": false,
+              "go_backwards": false,
+              "stateful": true,
+              "unroll": false,
+              "time_major": false,
+              "units": 128,
+              "activation": "tanh",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "recurrent_initializer": {
+                "class_name": "Orthogonal",
+                "config": {
+                  "gain": 1.0,
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "recurrent_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "recurrent_constraint": null,
+              "bias_constraint": null,
+              "dropout": 0.0,
+              "recurrent_dropout": 0.0
+            },
+            "name": "simple_rnn_9",
+            "inbound_nodes": [
+              [
+                [
+                  "simple_rnn_8",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "LayerNormalization",
+            "config": {
+              "name": "layer_normalization_4",
+              "trainable": true,
+              "dtype": "float32",
+              "axis": [
+                2
+              ],
+              "epsilon": 0.001,
+              "center": true,
+              "scale": true,
+              "beta_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "gamma_initializer": {
+                "class_name": "Ones",
+                "config": {}
+              },
+              "beta_regularizer": null,
+              "gamma_regularizer": null,
+              "beta_constraint": null,
+              "gamma_constraint": null
+            },
+            "name": "layer_normalization_4",
+            "inbound_nodes": [
+              [
+                [
+                  "simple_rnn_9",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "dense_12",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 4,
+              "activation": "softmax",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "dense_12",
+            "inbound_nodes": [
+              [
+                [
+                  "layer_normalization_4",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "dense_13",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 3,
+              "activation": "softmax",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "dense_13",
+            "inbound_nodes": [
+              [
+                [
+                  "layer_normalization_4",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Dense",
+            "config": {
+              "name": "dense_14",
+              "trainable": true,
+              "dtype": "float32",
+              "units": 7,
+              "activation": "softmax",
+              "use_bias": true,
+              "kernel_initializer": {
+                "class_name": "GlorotUniform",
+                "config": {
+                  "seed": null
+                }
+              },
+              "bias_initializer": {
+                "class_name": "Zeros",
+                "config": {}
+              },
+              "kernel_regularizer": null,
+              "bias_regularizer": null,
+              "activity_regularizer": null,
+              "kernel_constraint": null,
+              "bias_constraint": null
+            },
+            "name": "dense_14",
+            "inbound_nodes": [
+              [
+                [
+                  "layer_normalization_4",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          },
+          {
+            "class_name": "Concatenate",
+            "config": {
+              "name": "concatenate_4",
+              "trainable": true,
+              "dtype": "float32",
+              "axis": -1
+            },
+            "name": "concatenate_4",
+            "inbound_nodes": [
+              [
+                [
+                  "dense_12",
+                  0,
+                  0,
+                  {}
+                ],
+                [
+                  "dense_13",
+                  0,
+                  0,
+                  {}
+                ],
+                [
+                  "dense_14",
+                  0,
+                  0,
+                  {}
+                ]
+              ]
+            ]
+          }
+        ],
+        "input_layers": [
+          [
+            "input_5",
+            0,
+            0
+          ]
+        ],
+        "output_layers": [
+          [
+            "concatenate_4",
+            0,
+            0
+          ]
+        ]
+      }
+    },
+    "training_config": {
+      "loss": {
+        "class_name": "CategoricalCrossentropy",
+        "config": {
+          "reduction": "auto",
+          "name": "categorical_crossentropy",
+          "from_logits": false,
+          "label_smoothing": 0
+        }
+      },
+      "metrics": [
+        [
+          {
+            "class_name": "CategoricalAccuracy",
+            "config": {
+              "name": "categorical_accuracy",
+              "dtype": "float32"
+            }
+          }
+        ]
+      ],
+      "weighted_metrics": null,
+      "loss_weights": null,
+      "optimizer_config": {
+        "class_name": "Adam",
+        "config": {
+          "name": "Adam",
+          "learning_rate": 0.0010000000474974513,
+          "decay": 0.0,
+          "beta_1": 0.8999999761581421,
+          "beta_2": 0.9990000128746033,
+          "epsilon": 1e-07,
+          "amsgrad": false
+        }
+      }
+    }
+  },
+  "weightsManifest": [
+    {
+      "paths": [
+        "group1-shard1of1.bin"
+      ],
+      "weights": [
+        {
+          "name": "dense_12/kernel",
+          "shape": [
+            128,
+            4
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "dense_12/bias",
+          "shape": [
+            4
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "dense_13/kernel",
+          "shape": [
+            128,
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "dense_13/bias",
+          "shape": [
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "dense_14/kernel",
+          "shape": [
+            128,
+            7
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "dense_14/bias",
+          "shape": [
+            7
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "layer_normalization_4/gamma",
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "layer_normalization_4/beta",
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "simple_rnn_8/simple_rnn_cell_8/kernel",
+          "shape": [
+            1404,
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "simple_rnn_8/simple_rnn_cell_8/recurrent_kernel",
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "simple_rnn_8/simple_rnn_cell_8/bias",
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "simple_rnn_9/simple_rnn_cell_9/kernel",
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "simple_rnn_9/simple_rnn_cell_9/recurrent_kernel",
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "float32"
+        },
+        {
+          "name": "simple_rnn_9/simple_rnn_cell_9/bias",
+          "shape": [
+            128
+          ],
+          "dtype": "float32"
+        }
+      ]
+    }
+  ]
+}

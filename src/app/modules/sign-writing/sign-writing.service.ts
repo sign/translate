@@ -24,12 +24,15 @@ export class SignWritingService {
     return 100 * scale;
   }
 
-  static drawSWText(text: string, center: THREE.Vector2, fontSize: number, ctx: CanvasRenderingContext2D): void {
+  static drawSWText(text: string, center: THREE.Vector2 | THREE.Vector3, fontSize: number, ctx: CanvasRenderingContext2D, isNormalized = true): void {
     ctx.font = fontSize + 'px SignWriting';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'black';
-    ctx.fillText(text, center.x * ctx.canvas.width, center.y * ctx.canvas.height);
+
+    const x = isNormalized ? center.x * ctx.canvas.width : center.x;
+    const y = isNormalized ? center.y * ctx.canvas.height : center.y;
+    ctx.fillText(text, x, y);
   }
 
 
