@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {AppSharedModule} from './core/modules/shared.module';
@@ -11,6 +11,8 @@ import {PoseModule} from './modules/pose/pose.module';
 import {SignWritingModule} from './modules/sign-writing/sign-writing.module';
 import {SettingsModule} from './modules/settings/settings.module';
 import {DetectorModule} from './modules/detector/detector.module';
+import {AnimationModule} from './modules/animation/animation.module';
+import {AnimationComponent} from './components/animation/animation.component';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import {DetectorModule} from './modules/detector/detector.module';
     HeaderComponent,
     VideoComponent,
     VideoControlsComponent,
+    AnimationComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,12 +29,14 @@ import {DetectorModule} from './modules/detector/detector.module';
     SettingsModule,
     PoseModule,
     SignWritingModule,
-    DetectorModule
+    DetectorModule,
+    AnimationModule
   ],
   providers: [
     NavigatorService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
 }

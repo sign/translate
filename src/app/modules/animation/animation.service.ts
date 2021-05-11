@@ -1,0 +1,88 @@
+import * as tf from '@tensorflow/tfjs';
+import {Tensor} from '@tensorflow/tfjs';
+import {Pose, PoseLandmark} from '../pose/pose.state';
+import {LayersModel} from '@tensorflow/tfjs-layers';
+import {Injectable} from '@angular/core';
+import * as holistic from '@mediapipe/holistic/holistic.js';
+
+const ANIMATION_KEYS = [
+  'mixamorigHead.quaternion', 'mixamorigNeck.quaternion', 'mixamorigSpine.quaternion',
+  'mixamorigSpine1.quaternion', 'mixamorigSpine2.quaternion', 'mixamorigHips.quaternion',
+
+  'mixamorigLeftUpLeg.quaternion', 'mixamorigLeftLeg.quaternion', 'mixamorigLeftToeBase.quaternion',
+  'mixamorigLeftFoot.quaternion', 'mixamorigLeftArm.quaternion',
+  'mixamorigLeftShoulder.quaternion', 'mixamorigLeftForeArm.quaternion',
+
+  'mixamorigRightUpLeg.quaternion', 'mixamorigRightLeg.quaternion', 'mixamorigRightToeBase.quaternion',
+  'mixamorigRightFoot.quaternion', 'mixamorigRightArm.quaternion',
+  'mixamorigRightShoulder.quaternion', 'mixamorigRightForeArm.quaternion',
+
+  'mixamorigLeftHand.quaternion',
+  'mixamorigLeftHandThumb1.quaternion', 'mixamorigLeftHandThumb2.quaternion',
+  'mixamorigLeftHandThumb3.quaternion',
+  'mixamorigLeftHandIndex1.quaternion', 'mixamorigLeftHandIndex2.quaternion',
+  'mixamorigLeftHandIndex3.quaternion',
+  'mixamorigLeftHandMiddle1.quaternion', 'mixamorigLeftHandMiddle2.quaternion',
+  'mixamorigLeftHandMiddle3.quaternion',
+  'mixamorigLeftHandRing1.quaternion', 'mixamorigLeftHandRing2.quaternion', 'mixamorigLeftHandRing3.quaternion',
+  'mixamorigLeftHandPinky1.quaternion', 'mixamorigLeftHandPinky2.quaternion',
+  'mixamorigLeftHandPinky3.quaternion',
+
+  'mixamorigRightHand.quaternion',
+  'mixamorigRightHandThumb1.quaternion', 'mixamorigRightHandThumb2.quaternion',
+  'mixamorigRightHandThumb3.quaternion',
+  'mixamorigRightHandIndex1.quaternion', 'mixamorigRightHandIndex2.quaternion',
+  'mixamorigRightHandIndex3.quaternion',
+  'mixamorigRightHandMiddle1.quaternion', 'mixamorigRightHandMiddle2.quaternion',
+  'mixamorigRightHandMiddle3.quaternion',
+  'mixamorigRightHandRing1.quaternion', 'mixamorigRightHandRing2.quaternion',
+  'mixamorigRightHandRing3.quaternion',
+  'mixamorigRightHandPinky1.quaternion', 'mixamorigRightHandPinky2.quaternion',
+  'mixamorigRightHandPinky3.quaternion',
+];
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AnimationService {
+  sequentialModel: LayersModel;
+
+  loadModel(): void {
+    tf.loadLayersModel('assets/models/pose-animation/model.json')
+      .then(model => this.sequentialModel = model as unknown as LayersModel);
+  }
+
+  normalizePose(pose: Pose): tf.Tensor {
+    const emptyLandmark: PoseLandmark = {x: 0, y: 0, z: 0};
+
+    const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(emptyLandmark);
+    const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(emptyLandmark);
+    const rightHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(emptyLandmark);
+    const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
+
+    const tensor = tf.tensor(landmarks.map(l => [l.x, l.y, l.z]))
+      .mul(tf.tensor([pose.image.width, pose.image.height, pose.image.width]));
+
+    const p1 = tensor.slice(holistic.POSE_LANDMARKS.LEFT_SHOULDER, 1);
+    const p2 = tensor.slice(holistic.POSE_LANDMARKS.RIGHT_SHOULDER, 1);
+
+    const d = tf.sqrt(tf.pow(p2.sub(p1), 2).sum());
+    const normTensor = tf.sub(tensor, p1.add(p2).div(2)).div(d);
+    // normTensor[tensor.equal(0)] = 0; // TODO
+
+    return normTensor;
+  }
+
+  estimate(pose: Pose): { [key: string]: [number, number, number, number] } {
+    const quaternions = tf.tidy(() => {
+      const normalized = this.normalizePose(pose);
+      const pred: Tensor = this.sequentialModel.predict(normalized.reshape([1, 1, 75 * 3])) as Tensor;
+      return pred.reshape([ANIMATION_KEYS.length, 4]).arraySync();
+    });
+
+    const tracks = {};
+    ANIMATION_KEYS.forEach((k, i) => tracks[k] = quaternions[i]);
+    return tracks;
+  }
+
+}
