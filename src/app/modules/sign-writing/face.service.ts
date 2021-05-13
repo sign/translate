@@ -120,24 +120,26 @@ export class FaceService {
   }
 
   draw(swState: SignWritingStateModel, ctx: CanvasRenderingContext2D): void {
+    if (!swState.face) {
+      return;
+    }
+
     const sw = swState.body.shoulders.width;
 
-    if (swState.face) {
-      const {face, eyes, eyebrows, mouth} = swState.face;
-      if (face) {
-        this.drawFaceFeature(sw * 0.6, face, ctx);
-      }
-      if (eyes) {
-        this.drawFaceFeature(sw * 0.2, eyes.left, ctx);
-        this.drawFaceFeature(sw * 0.2, eyes.right, ctx);
-      }
-      if (eyebrows) {
-        this.drawFaceFeature(sw * 0.15, eyebrows.left, ctx);
-        this.drawFaceFeature(sw * 0.15, eyebrows.right, ctx);
-      }
-      if (mouth) {
-        this.drawFaceFeature(sw * 0.25, mouth, ctx);
-      }
+    const {face, eyes, eyebrows, mouth} = swState.face;
+    if (face) {
+      this.drawFaceFeature(sw * 0.7, face, ctx);
+    }
+    if (eyes) {
+      this.drawFaceFeature(sw * 0.2, eyes.left, ctx);
+      this.drawFaceFeature(sw * 0.2, eyes.right, ctx);
+    }
+    if (eyebrows) {
+      this.drawFaceFeature(sw * 0.15, eyebrows.left, ctx);
+      this.drawFaceFeature(sw * 0.15, eyebrows.right, ctx);
+    }
+    if (mouth) {
+      this.drawFaceFeature(sw * 0.25, mouth, ctx);
     }
   }
 }

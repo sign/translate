@@ -66,6 +66,15 @@ export class SignWritingState implements NgxsOnInit {
         ]).subscribe(() => patchState({timestamp: Date.now()}));
       })
     ).subscribe();
+
+    // If no sign writing required to be drawn
+    this.pose$.pipe(
+      filter(Boolean),
+      filter(() => !this.drawSignWriting), // Only run if needed
+      tap((pose: Pose) => {
+        patchState({timestamp: Date.now()});
+      })
+    ).subscribe();
   }
 
 

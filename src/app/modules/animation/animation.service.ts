@@ -57,7 +57,7 @@ export class AnimationService {
 
     const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(emptyLandmark);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(emptyLandmark);
-    const rightHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(emptyLandmark);
+    const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(emptyLandmark);
     const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
 
     const tensor = tf.tensor(landmarks.map(l => [l.x, l.y, l.z]))
@@ -67,16 +67,16 @@ export class AnimationService {
     const p2 = tensor.slice(holistic.POSE_LANDMARKS.RIGHT_SHOULDER, 1);
 
     const d = tf.sqrt(tf.pow(p2.sub(p1), 2).sum());
-    const normTensor = tf.sub(tensor, p1.add(p2).div(2)).div(d);
-    // normTensor[tensor.equal(0)] = 0; // TODO
+    let normTensor = tf.sub(tensor, p1.add(p2).div(2)).div(d);
+    normTensor = normTensor.mul(tensor.notEqual(0)); // Remove landmarks not detected
 
     return normTensor;
   }
 
   estimate(pose: Pose): { [key: string]: [number, number, number, number] } {
     const quaternions = tf.tidy(() => {
-      const normalized = this.normalizePose(pose);
-      const pred: Tensor = this.sequentialModel.predict(normalized.reshape([1, 1, 75 * 3])) as Tensor;
+      const normalized = this.normalizePose(pose).reshape([1, 1, 75 * 3]);
+      const pred: Tensor = this.sequentialModel.predict(normalized) as Tensor;
       return pred.reshape([ANIMATION_KEYS.length, 4]).arraySync();
     });
 
