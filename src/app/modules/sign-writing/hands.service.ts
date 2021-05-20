@@ -32,10 +32,10 @@ export class HandsService {
   }
 
   loadModel(): void {
-    // tf.loadLayersModel('assets/models/hand-shape/model.json')
-    //   .then(model => this.leftHandSequentialModel = model as unknown as LayersModel);
-    // tf.loadLayersModel('assets/models/hand-shape/model.json')
-    //   .then(model => this.rightHandSequentialModel = model as unknown as LayersModel);
+    tf.loadLayersModel('assets/models/hand-shape/model.json')
+      .then(model => this.leftHandSequentialModel = model as unknown as LayersModel);
+    tf.loadLayersModel('assets/models/hand-shape/model.json')
+      .then(model => this.rightHandSequentialModel = model as unknown as LayersModel);
   }
 
   normalizeHand(vectors: THREE.Vector3[], normal: PlaneNormal, flipHand: boolean): tf.Tensor {

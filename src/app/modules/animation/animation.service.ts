@@ -74,6 +74,10 @@ export class AnimationService {
   }
 
   estimate(pose: Pose): { [key: string]: [number, number, number, number] } {
+    if (!this.sequentialModel) {
+      return null;
+    }
+
     const quaternions = tf.tidy(() => {
       const normalized = this.normalizePose(pose).reshape([1, 1, 75 * 3]);
       const pred: Tensor = this.sequentialModel.predict(normalized) as Tensor;
