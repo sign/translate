@@ -27,6 +27,7 @@
     "detectSign": "Detect Sign",
     "drawVideo": "Draw Video",
     "drawPose": "Draw Pose",
-    "drawSignWriting": "Draw Sign Writing"
+    "drawSignWriting": "Draw Sign Writing",
+    "animatePose": "Animate Pose"
   }
 }

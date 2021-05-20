@@ -20,6 +20,8 @@ import {SignWritingService} from '../../modules/sign-writing/sign-writing.servic
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   @Select(state => state.settings) settingsState$: Observable<SettingsStateModel>;
+  @Select(state => state.settings.animatePose) animatePose$: Observable<boolean>;
+
   @Select(state => state.video) videoState$: Observable<VideoStateModel>;
   @Select(state => state.pose) poseState$: Observable<PoseStateModel>;
   @Select(state => state.signWriting) signWritingState$: Observable<SignWritingStateModel>;

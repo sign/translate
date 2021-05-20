@@ -42,8 +42,8 @@ export class FaceService {
   }
 
   loadModel(): void {
-    tf.loadLayersModel('assets/models/face-features/model.json')
-      .then(model => this.faceSequentialModel = model as unknown as LayersModel);
+    // tf.loadLayersModel('assets/models/face-features/model.json')
+    //   .then(model => this.faceSequentialModel = model as unknown as LayersModel);
   }
 
   private shift(char: string, shift: number): string {

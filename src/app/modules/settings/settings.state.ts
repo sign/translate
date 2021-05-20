@@ -20,11 +20,11 @@ const initialState: SettingsStateModel = {
 
   detectSign: false,
 
-  animatePose: true,
+  animatePose: false,
 
   drawVideo: true,
   drawPose: true,
-  drawSignWriting: false,
+  drawSignWriting: true,
 };
 
 @Injectable()

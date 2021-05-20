@@ -27,29 +27,32 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     let i = 0;
     const el = this.modelViewerEl.nativeElement;
 
-    el.play();
-    const scene = el[Object.getOwnPropertySymbols(el)[14]];
+    el.addEventListener('load', () => {
+      console.log('load');
+      const scene = el[Object.getOwnPropertySymbols(el)[14]];
 
-    this.animationState$.pipe(
-      map(a => a.tracks),
-      tap((trackDict) => {
-        const name = 'u' + (i++);
-        const tracks = [new THREE.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
-        if (trackDict) {
-          Object.entries(trackDict).forEach(([k, q]) => {
-            tracks.push(new THREE.QuaternionKeyframeTrack(k, [0], q));
-          });
-        }
-        const newAnimation = new THREE.AnimationClip(name, 0, tracks);
+      this.animationState$.pipe(
+        map(a => a.tracks),
+        tap((trackDict) => {
+          const name = 'u' + (i++);
+          const tracks = [new THREE.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
+          if (trackDict) {
+            Object.entries(trackDict).forEach(([k, q]) => {
+              tracks.push(new THREE.QuaternionKeyframeTrack(k, [0], q));
+            });
+          }
+          const newAnimation = new THREE.AnimationClip(name, 0, tracks);
 
-        scene.animationsByName.set(name, newAnimation);
-        scene.playAnimation(name);
-        if (el.paused) {
-          el.play();
-        }
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+          scene.animationsByName.set(name, newAnimation);
+          scene.playAnimation(name);
+          if (el.paused) {
+            el.play();
+          }
+        }),
+        takeUntil(this.ngUnsubscribe)
+      ).subscribe();
+    });
+
   }
 
 }

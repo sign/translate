@@ -12,6 +12,8 @@
       <div #stats></div>
     </div>
 
+    <app-animation [hidden]="videoState.error || !poseState.isLoaded || !(animatePose$ | async)"></app-animation>
+
     <app-video-controls></app-video-controls>
     <!--  <app-audio [playState]="isSigning$"></app-audio>-->
   </ng-container>
