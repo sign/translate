@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 import {AnimatePose} from './animation.actions';
 
 export interface AnimationStateModel {
-  tracks: { [key: string]: [number, number, number, number] }
+  tracks: { [key: string]: [number, number, number, number] };
 }
 
 const initialState: AnimationStateModel = {

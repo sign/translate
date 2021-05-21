@@ -5,17 +5,16 @@
       <p *ngIf="!videoState.error && !poseState.isLoaded">{{'pose.loading' | transloco}}</p>
     </ng-container>
 
-
     <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
       <video #video></video>
       <canvas #canvas class="flip" height="100%" width="100%"></canvas>
       <div #stats></div>
     </div>
 
-    <app-animation [hidden]="videoState.error || !poseState.isLoaded || !(animatePose$ | async)"></app-animation>
+    <!-- [hidden]="videoState.error || !poseState.isLoaded" -->
+    <app-animation *ngIf="animatePose$ | async" ></app-animation>
 
     <app-video-controls></app-video-controls>
-    <!--  <app-audio [playState]="isSigning$"></app-audio>-->
   </ng-container>
 </ng-container>
 

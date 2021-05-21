@@ -24,7 +24,8 @@ export class SignWritingService {
     return 100 * scale;
   }
 
-  static drawSWText(text: string, center: THREE.Vector2 | THREE.Vector3, fontSize: number, ctx: CanvasRenderingContext2D, isNormalized = true): void {
+  static drawSWText(text: string, center: THREE.Vector2 | THREE.Vector3, fontSize: number,
+                    ctx: CanvasRenderingContext2D, isNormalized = true): void {
     ctx.font = fontSize + 'px SignWriting';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
