@@ -1,6 +1,6 @@
 import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
-import {Pose, PoseLandmark} from '../pose/pose.state';
+import {EMPTY_LANDMARK, Pose} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
@@ -53,11 +53,9 @@ export class AnimationService {
   }
 
   normalizePose(pose: Pose): tf.Tensor {
-    const emptyLandmark: PoseLandmark = {x: 0, y: 0, z: 0};
-
-    const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(emptyLandmark);
-    const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(emptyLandmark);
-    const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(emptyLandmark);
+    const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
+    const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
+    const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
 
     const tensor = tf.tensor(landmarks.map(l => [l.x, l.y, l.z]))
