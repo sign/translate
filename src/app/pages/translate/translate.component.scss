@@ -1,0 +1,130 @@
+::ng-deep body {
+  background-color: white;
+}
+
+:host {
+  height: 100vh;
+
+  &::before {
+    background-color: #fafafa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    content: '';
+    display: block;
+    height: 162px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+mat-toolbar {
+  background-color: white;
+  box-sizing: content-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+  font-family: "Product Sans", Arial, sans-serif;
+  color: #5f6368;
+  font-weight: 400;
+}
+
+#container {
+  width: auto;
+  max-width: 1280px;
+  padding: 0 48px;
+  margin: 0 auto;
+
+  #input-mode-group {
+    height: 68px;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    align-items: center;
+    display: flex;
+    gap: .5em;
+  }
+
+  #translation-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+
+    #language-selector {
+      display: flex;
+      border-bottom: 1px solid #0000001f;
+
+      div {
+        width: calc(50% - 20px);
+
+        mat-tab-group {
+          display: inline-block;
+        }
+
+        // Make language expansion menu show the correct icon
+        button.menu-button {
+          mat-icon {
+            transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          &[aria-expanded] mat-icon {
+            transform: rotateZ(-180deg);
+          }
+        }
+      }
+    }
+
+    #content {
+      display: flex;
+
+      div:first-child {
+        width: 50%;
+
+        border-right: 1px solid #0000001f;
+      }
+
+      #translation-result {
+        padding: 20px 58px 20px 24px;
+        font-size: 24px;
+        line-height: 32px;
+        color: #878787;
+      }
+    }
+  }
+}
+
+#feedback {
+  float: right;
+  color: #5f6368;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
+:host(.spoken-to-signed) {
+  #language-selector {
+    flex-direction: row-reverse;
+  }
+}
+
+::ng-deep {
+  mat-tab-header {
+    border-bottom: none !important;
+  }
+
+  .mat-tab-label {
+    min-width: unset !important;
+    text-transform: uppercase;
+  }
+
+  // Mat tab has a bug that when changing tabs, the height of the body is at least 1 px
+  .mat-tab-body-wrapper {
+    display: none !important;
+  }
+
+  .flag-icon {
+    background-size: cover;
+    border-radius: 50%;
+    width: 1em;
+    margin-right: .5em;
+  }
+}

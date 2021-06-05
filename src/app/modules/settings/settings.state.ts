@@ -16,7 +16,7 @@ export interface SettingsStateModel {
 }
 
 const initialState: SettingsStateModel = {
-  receiveVideo: true,
+  receiveVideo: false,
 
   detectSign: false,
 

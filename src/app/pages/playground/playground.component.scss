@@ -1,0 +1,18 @@
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+

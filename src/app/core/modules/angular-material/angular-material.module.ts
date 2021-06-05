@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatTabsModule} from '@angular/material/tabs';
 
 const materialModules = [
   MatToolbarModule,
@@ -29,6 +30,7 @@ const materialModules = [
   MatCheckboxModule,
   MatSlideToggleModule,
   BrowserAnimationsModule,
+  MatTabsModule
 ];
 
 @NgModule({

@@ -1,0 +1,90 @@
+<ng-container *transloco="let t; read: 'translate'">
+  <mat-toolbar>
+    <mat-icon>translate</mat-icon>
+    <span>{{t('title')}}</span>
+  </mat-toolbar>
+
+  <div id="container">
+    <div id="input-mode-group">
+      <ng-container *ngIf="spokenToSigned">
+        <button mat-stroked-button color="primary" (click)="setInputMode('text')">
+          <mat-icon>translate</mat-icon>
+          {{t('input.text')}}
+        </button>
+      </ng-container>
+      <ng-container *ngIf="!spokenToSigned">
+        <button mat-stroked-button color="primary" (click)="setInputMode('webcam')">
+          <mat-icon>videocam</mat-icon>
+          {{t('input.webcam')}}
+        </button>
+        <button mat-stroked-button color="primary" (click)="setInputMode('upload')">
+          <mat-icon>upload</mat-icon>
+          {{t('input.upload')}}
+        </button>
+      </ng-container>
+    </div>
+
+    <div id="translation-card">
+      <div id="language-selector">
+        <div>
+          <mat-tab-group [selectedIndex]="topSignedLanguage.indexOf(signedLanguage) + 1">
+            <mat-tab disabled label="Detect Language" *ngIf="!spokenToSigned"></mat-tab>
+            <mat-tab *ngFor="let lang of topSignedLanguage" [label]="">
+              <ng-template mat-tab-label>
+                <flag-icon [country]="lang"></flag-icon>
+                {{t('languages.signed.' + lang)}}
+              </ng-template>
+            </mat-tab>
+          </mat-tab-group>
+          <button mat-icon-button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-button">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+          <mat-menu #signedLanguagesMenu>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </div>
+
+        <!-- disabled -->
+        <button mat-icon-button (click)="flipDirection()" [matTooltip]="t('translation.swapLanguages')">
+          <mat-icon>swap_horiz</mat-icon>
+        </button>
+
+        <div>
+          <mat-tab-group>
+            <mat-tab label="Detect Language" *ngIf="spokenToSigned"></mat-tab>
+            <mat-tab label="First"></mat-tab>
+            <mat-tab label="Second"></mat-tab>
+            <mat-tab label="Third"></mat-tab>
+          </mat-tab-group>
+
+          <button mat-icon-button [matMenuTriggerFor]="spokenLanguagesMenu" class="menu-button">
+            <mat-icon>expand_more</mat-icon>
+          </button>
+          <mat-menu #spokenLanguagesMenu>
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </div>
+      </div>
+
+      <div id="content">
+        <!-- Spoken to sign requires a text input and video output -->
+        <ng-container *ngIf="spokenToSigned">
+          TODO
+        </ng-container>
+
+        <!-- Sign to spoken requires a video output and text output -->
+        <ng-container *ngIf="!spokenToSigned">
+          <div>
+            <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%">
+          </div>
+          <div id="translation-result">Translation</div>
+        </ng-container>
+      </div>
+    </div>
+
+    <a id="feedback"
+       href="mailto:amitmoryossef@gmail.com?subject=Sign Language Translate Feedback">{{t('feedback')}}</a>
+  </div>
+</ng-container>

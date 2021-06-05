@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {filter, tap} from 'rxjs/operators';
@@ -17,9 +17,6 @@ export class AppComponent implements OnInit {
   @Select(state => state.app.isLoading) isLoading$: Observable<boolean>;
   @Select(state => state.app.error) error$: Observable<string>;
   @Select(state => state.audio.error) audioError$: Observable<string>;
-
-  @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
-
 
   loaderDialog: MatDialogRef<MatProgressSpinner>;
 

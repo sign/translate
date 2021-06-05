@@ -1,6 +1,64 @@
 {
-  "header": {
+  "playground": {
     "title": "Sign Language Processing Playground"
+  },
+  "translate": {
+    "title": "Sign Language Translate",
+    "feedback": "Send feedback",
+    "input": {
+      "webcam": "Webcam",
+      "upload": "Upload",
+      "text": "Text"
+    },
+    "translation": {
+      "swapLanguages": "Swap languages (Cmd+Shift+S)"
+    },
+    "languages": {
+      "signed": {
+        "sy": "Syria",
+        "by": "Belarus",
+        "bg": "Bulgaria",
+        "fl": "China",
+        "hr": "Croatia",
+        "cz": "Czech",
+        "dk": "Denmark",
+        "in": "India",
+        "nz": "New Zealand",
+        "gb": "United Kingdom",
+        "us": "America",
+        "ee": "Estonia",
+        "fi": "Finland",
+        "fr": "France",
+        "at": "Austria",
+        "de": "Germany",
+        "cy": "Cyprus",
+        "gr": "Greece",
+        "is": "Iceland",
+        "isl": "International",
+        "it": "Italy",
+        "jp": "Japan",
+        "lv": "Latvia",
+        "lt": "Lithuania",
+        "ir": "Iran",
+        "pl": "Poland",
+        "br": "Brazil",
+        "pt": "Portugal",
+        "ro": "Romania",
+        "ru": "Russia",
+        "sk": "Slovakia",
+        "ar": "Argentina",
+        "cl": "Chile",
+        "cu": "Cuba",
+        "mx": "Mexico",
+        "es": "Spain",
+        "se": "Sweden",
+        "tr": "Turkey",
+        "ua": "Ukraine",
+        "pk": "Urdu"
+      },
+      "spoken": {
+      }
+    }
   },
   "video": {
     "errors": {
