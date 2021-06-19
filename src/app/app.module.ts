@@ -16,7 +16,10 @@ import {AppRoutingModule} from './app-routing.module';
 import {PlaygroundComponent} from './pages/playground/playground.component';
 import {TranslateComponent} from './pages/translate/translate.component';
 import {NgxFlagIconCssModule} from 'ngx-flag-icon-css';
-
+import {UploadComponent} from './pages/translate/upload/upload.component';
+import {SpokenToSignedComponent} from './pages/translate/spoken-to-signed/spoken-to-signed.component';
+import {SignedToSpokenComponent} from './pages/translate/signed-to-spoken/signed-to-spoken.component';
+import {LanguageSelectorComponent} from './pages/translate/language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,10 @@ import {NgxFlagIconCssModule} from 'ngx-flag-icon-css';
     AnimationComponent,
     PlaygroundComponent,
     TranslateComponent,
+    UploadComponent,
+    SpokenToSignedComponent,
+    SignedToSpokenComponent,
+    LanguageSelectorComponent,
   ],
   imports: [
     BrowserModule,

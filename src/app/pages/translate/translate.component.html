@@ -7,17 +7,20 @@
   <div id="container">
     <div id="input-mode-group">
       <ng-container *ngIf="spokenToSigned">
-        <button mat-stroked-button color="primary" (click)="setInputMode('text')">
+        <button mat-stroked-button color="primary" (click)="setInputMode('text')"
+                [class.selected]="inputMode === 'text'">
           <mat-icon>translate</mat-icon>
           {{t('input.text')}}
         </button>
       </ng-container>
       <ng-container *ngIf="!spokenToSigned">
-        <button mat-stroked-button color="primary" (click)="setInputMode('webcam')">
+        <button mat-stroked-button color="primary" (click)="setInputMode('webcam')"
+                [class.selected]="inputMode === 'webcam'">
           <mat-icon>videocam</mat-icon>
           {{t('input.webcam')}}
         </button>
-        <button mat-stroked-button color="primary" (click)="setInputMode('upload')">
+        <button mat-stroked-button color="primary" (click)="setInputMode('upload')"
+                [class.selected]="inputMode === 'upload'">
           <mat-icon>upload</mat-icon>
           {{t('input.upload')}}
         </button>
@@ -26,65 +29,61 @@
 
     <div id="translation-card">
       <div id="language-selector">
-        <div>
-          <mat-tab-group [selectedIndex]="topSignedLanguage.indexOf(signedLanguage) + 1">
-            <mat-tab disabled label="Detect Language" *ngIf="!spokenToSigned"></mat-tab>
-            <mat-tab *ngFor="let lang of topSignedLanguage" [label]="">
-              <ng-template mat-tab-label>
-                <flag-icon [country]="lang"></flag-icon>
-                {{t('languages.signed.' + lang)}}
-              </ng-template>
-            </mat-tab>
-          </mat-tab-group>
-          <button mat-icon-button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-button">
-            <mat-icon>expand_more</mat-icon>
-          </button>
-          <mat-menu #signedLanguagesMenu>
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
-        </div>
+        <app-language-selector [flags]="true" [languages]="signedLanguages" translationKey="translate.languages.signed"
+                               [hasLanguageDetection]="!spokenToSigned"></app-language-selector>
 
         <!-- disabled -->
-        <button mat-icon-button (click)="flipDirection()" [matTooltip]="t('translation.swapLanguages')">
+        <button mat-icon-button (click)="swapLanguages()" [matTooltip]="t('swapLanguages')" id="swap-languages">
           <mat-icon>swap_horiz</mat-icon>
         </button>
 
-        <div>
-          <mat-tab-group>
-            <mat-tab label="Detect Language" *ngIf="spokenToSigned"></mat-tab>
-            <mat-tab label="First"></mat-tab>
-            <mat-tab label="Second"></mat-tab>
-            <mat-tab label="Third"></mat-tab>
-          </mat-tab-group>
-
-          <button mat-icon-button [matMenuTriggerFor]="spokenLanguagesMenu" class="menu-button">
-            <mat-icon>expand_more</mat-icon>
-          </button>
-          <mat-menu #spokenLanguagesMenu>
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
-          </mat-menu>
-        </div>
+        <app-language-selector [languages]="spokenLanguages" translationKey="translate.languages.spoken"
+                               [hasLanguageDetection]="spokenToSigned"></app-language-selector>
       </div>
 
       <div id="content">
         <!-- Spoken to sign requires a text input and video output -->
         <ng-container *ngIf="spokenToSigned">
-          TODO
+          <div class="translation-text">
+            <textarea></textarea>
+          </div>
+          <div class="sign-writing">
+            <sgnw-sign *ngFor="let sign of this.signWriting" [attr.fsw]="sign"></sgnw-sign>
+          </div>
+          <div class="sign-language">
+            <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%">
+          </div>
         </ng-container>
 
         <!-- Sign to spoken requires a video output and text output -->
         <ng-container *ngIf="!spokenToSigned">
-          <div>
-            <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%">
-          </div>
-          <div id="translation-result">Translation</div>
+          <ng-container *ngIf="inputMode === 'upload'">
+            <ng-container *ngIf="videoState$ | async as videoState">
+              <app-upload *ngIf="!videoState.src"></app-upload>
+              <ng-container *ngIf="videoState.src">
+                <div class="sign-language">
+                  <app-video [displayControls]="false" [displayFps]="false"></app-video>
+                </div>
+                <div class="sign-writing">
+                  <sgnw-sign *ngFor="let sign of this.signWriting" [attr.fsw]="sign"></sgnw-sign>
+                </div>
+                <div class="translation-text">{{translation}}</div>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+
+          <ng-container *ngIf="inputMode === 'webcam'">
+            <div class="sign-language">
+              <app-video [displayControls]="false" [displayFps]="false"></app-video>
+            </div>
+            <div class="translation-text">Translation</div>
+          </ng-container>
         </ng-container>
       </div>
     </div>
 
-    <a id="feedback"
-       href="mailto:amitmoryossef@gmail.com?subject=Sign Language Translate Feedback">{{t('feedback')}}</a>
+    <a id="feedback" href="mailto:amitmoryossef@gmail.com?subject=Sign Language Translate Feedback">
+      {{t('feedback')}}
+    </a>
   </div>
 </ng-container>

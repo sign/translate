@@ -1,0 +1,37 @@
+@import "../../../../theme/variables";
+
+
+mat-tab-group {
+  display: inline-block;
+}
+
+
+::ng-deep {
+  mat-tab-header {
+    border-bottom: none !important;
+  }
+
+  .mat-tab-label {
+    min-width: unset !important;
+    text-transform: uppercase;
+    padding: 0 16px !important;
+    color: black;
+
+    &[aria-selected="true"] {
+      color: mat-color($app-primary);
+      transition: color .2s;
+    }
+  }
+
+  // Mat tab has a bug that when changing tabs, the height of the body is at least 1 px
+  .mat-tab-body-wrapper {
+    display: none !important;
+  }
+
+  .flag-icon {
+    background-size: cover;
+    border-radius: 50%;
+    width: 1em;
+    margin-right: .5em;
+  }
+}

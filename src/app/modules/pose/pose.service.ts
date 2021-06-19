@@ -16,11 +16,14 @@ export class PoseService {
     this.model = new holistic.Holistic({
       locateFile: (file) => {
         console.log('Holistic', 'loading', file);
-        return `https://cdn.jsdelivr.net/npm/@mediapipe/holistic@0.1/${file}`;
+        return `assets/models/holistic/${file}`;
       }
     });
 
-    this.model.setOptions({upperBodyOnly: false});
+    this.model.setOptions({
+      upperBodyOnly: false,
+      modelComplexity: 1
+    });
   }
 
   async predict(video: HTMLVideoElement): Promise<void> {

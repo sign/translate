@@ -1,5 +1,7 @@
 ::ng-deep body {
   background-color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 :host {
@@ -39,11 +41,20 @@ mat-toolbar {
     align-items: center;
     display: flex;
     gap: .5em;
+
+    button {
+      transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &.selected {
+        background-color: rgba(66, 133, 244, 0.12);
+      }
+    }
   }
 
   #translation-card {
     background-color: white;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
     width: 100%;
 
@@ -51,12 +62,8 @@ mat-toolbar {
       display: flex;
       border-bottom: 1px solid #0000001f;
 
-      div {
+      app-language-selector {
         width: calc(50% - 20px);
-
-        mat-tab-group {
-          display: inline-block;
-        }
 
         // Make language expansion menu show the correct icon
         button.menu-button {
@@ -71,24 +78,78 @@ mat-toolbar {
       }
     }
 
+    #swap-languages {
+      color: #5f6368;
+      margin-top: 3px;
+    }
+
     #content {
       display: flex;
 
-      div:first-child {
-        width: 50%;
 
+      div:not(:last-child) {
         border-right: 1px solid #0000001f;
       }
 
-      #translation-result {
+      .sign-language {
+        width: 50%;
+      }
+
+      .translation-text {
+        font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
         padding: 20px 58px 20px 24px;
+        color: #878787;
         font-size: 24px;
         line-height: 32px;
-        color: #878787;
+        flex: 1;
+      }
+
+      textarea {
+        font-size: 24px;
+        line-height: 32px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        resize: none;
+        outline: none;
+      }
+
+      app-upload {
+        text-align: center;
+        padding: 43px 16px 65px;
+        width: 100%;
+      }
+
+      app-video {
+        width: 100%;
+
+        &.aspect-4-3 {
+          height: 480px
+        }
+
+        &.aspect-16-9 {
+          height: 360px;
+        }
+
+        &.aspect-2-1 {
+          height: 420px;
+        }
+      }
+
+      .sign-writing {
+        width: 100px !important;
+        text-align: center;
+        padding: 20px 0;
+
+        sgnw-sign {
+          display: block;
+          margin: 20px 0;
+        }
       }
     }
   }
 }
+
 
 #feedback {
   float: right;
@@ -103,28 +164,5 @@ mat-toolbar {
 :host(.spoken-to-signed) {
   #language-selector {
     flex-direction: row-reverse;
-  }
-}
-
-::ng-deep {
-  mat-tab-header {
-    border-bottom: none !important;
-  }
-
-  .mat-tab-label {
-    min-width: unset !important;
-    text-transform: uppercase;
-  }
-
-  // Mat tab has a bug that when changing tabs, the height of the body is at least 1 px
-  .mat-tab-body-wrapper {
-    display: none !important;
-  }
-
-  .flag-icon {
-    background-size: cover;
-    border-radius: 50%;
-    width: 1em;
-    margin-right: .5em;
   }
 }

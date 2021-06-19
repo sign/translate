@@ -1,7 +1,7 @@
-import {AfterViewInit, Component, ElementRef, HostBinding, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
 import {combineLatest, Observable} from 'rxjs';
-import {CameraSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
+import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../base/base.component';
@@ -33,6 +33,9 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
 
+  @Input() displayFps = true;
+  @Input() displayControls = true;
+
   canvasCtx!: CanvasRenderingContext2D;
 
   fpsStats = new Stats();
@@ -40,7 +43,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   constructor(private store: Store,
               private poseService: PoseService,
-              private signWritingService: SignWritingService) {
+              private signWritingService: SignWritingService,
+              private elementRef: ElementRef) {
     super();
   }
 
@@ -57,18 +61,18 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   async appLoop(): Promise<void> {
-    const fps = this.store.snapshot().video.cameraSettings.frameRate;
+    // const fps = this.store.snapshot().video.videoSettings.frameRate;
     const video = this.videoEl.nativeElement;
     const poseAction = new PoseVideoFrame(this.videoEl.nativeElement);
 
     let lastTime = null;
     while (true) {
-      if (video.readyState !== 4) {
+      if (video.readyState === 0) { // if video is no longer available
         break;
       }
 
       // Make sure the frame changed
-      if (video.currentTime > lastTime) {
+      if (video.currentTime !== lastTime) {
         lastTime = video.currentTime;
 
         // Get pose estimation
@@ -81,27 +85,34 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   setCamera(): void {
     const video = this.videoEl.nativeElement;
+    video.muted = true;
     video.addEventListener('loadedmetadata', e => video.play());
 
     this.videoState$.pipe(
-      map(state => state.camera),
-      tap(camera => video.srcObject = camera),
-      // tap(camera => {
-      //   video.src = 'assets/videos/example_maayan.mp4';
-      //   video.muted = true;
-      //   setTimeout(() => this.aspectRatio = 'aspect-16-9', 0);
-      // }),
+      tap(({camera, src}) => {
+        // Either video feed or camera
+        video.src = src || '';
+        video.srcObject = camera;
+      }),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
 
     this.videoState$.pipe(
-      map(state => state.cameraSettings),
+      map(state => state.videoSettings),
       filter(Boolean),
       tap(({width, height}) => {
         this.canvasEl.nativeElement.width = width;
         this.canvasEl.nativeElement.height = height;
+
+        // Zoom canvas to 100% width
+        requestAnimationFrame(() => {
+          // It is required to wait for next frame, as flex element is still resizing
+          const bbox = this.elementRef.nativeElement.getBoundingClientRect();
+          this.canvasEl.nativeElement.style.zoom = (100 * bbox.width / width) + '%';
+        });
+
       }),
-      tap((settings: CameraSettings) => this.aspectRatio = 'aspect-' + settings.aspectRatio),
+      tap((settings: VideoSettings) => this.aspectRatio = 'aspect-' + settings.aspectRatio),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
   }
@@ -160,6 +171,11 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.fpsStats.showPanel(0);
     this.fpsStats.domElement.style.position = 'absolute';
     this.statsEl.nativeElement.appendChild(this.fpsStats.dom);
+
+    // TODO this on change of input property
+    if (!this.displayFps) {
+      this.fpsStats.domElement.style.display = 'none';
+    }
 
     // Sign detection panel
     const signingPanel = new Stats.Panel('Signing', '#ff8', '#221');

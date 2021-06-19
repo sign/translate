@@ -1,15 +1,15 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
-import {tap} from 'rxjs/operators';
+import {filter, tap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {StartCamera, StopCamera} from './video.actions';
+import {SetVideo, StartCamera, StopVideo} from './video.actions';
 import {SetSetting} from '../../../../../modules/settings/settings.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 
 
 export type AspectRatio = '16-9' | '4-3' | '2-1';
 
-export interface CameraSettings {
+export interface VideoSettings {
   aspectRatio: AspectRatio;
   frameRate: number;
   height: number;
@@ -18,13 +18,15 @@ export interface CameraSettings {
 
 export interface VideoStateModel {
   camera: MediaStream;
-  cameraSettings: CameraSettings;
+  src: string | null;
+  videoSettings: VideoSettings;
   error: string;
 }
 
 const initialState: VideoStateModel = {
   camera: null,
-  cameraSettings: null,
+  src: null,
+  videoSettings: null,
   error: null,
 };
 
@@ -42,18 +44,13 @@ export class VideoState implements NgxsOnInit {
 
   ngxsOnInit({dispatch}: StateContext<VideoStateModel>): void {
     this.receiveVideo$.pipe(
-      tap((state) => {
-        if (state) {
-          dispatch(StartCamera);
-        } else {
-          dispatch(StopCamera);
-        }
-      })
+      filter(state => !state),
+      tap(() => dispatch(StopVideo))
     ).subscribe();
   }
 
-  @Action(StopCamera)
-  stopCamera({patchState, getState}: StateContext<VideoStateModel>): void {
+  @Action(StopVideo)
+  stopVideo({patchState, getState}: StateContext<VideoStateModel>): void {
     // Stop camera stream if its open
     const {camera, error} = getState();
     if (camera) {
@@ -66,12 +63,16 @@ export class VideoState implements NgxsOnInit {
     });
   }
 
+  private aspectRatio(ratio: number): AspectRatio {
+    return ratio > 1.9 ? '2-1' : ratio < 1.5 ? '4-3' : '16-9';
+  }
+
   @Action(StartCamera)
   async startCamera(context: StateContext<VideoStateModel>): Promise<void> {
     const {patchState, dispatch} = context;
 
     patchState({error: 'starting'});
-    this.stopCamera(context);
+    this.stopVideo(context);
 
     const turnOffVideo = () => dispatch(new SetSetting('receiveVideo', false));
 
@@ -87,19 +88,42 @@ export class VideoState implements NgxsOnInit {
 
       const videoTrack = camera.getVideoTracks()[0];
       const trackSettings = videoTrack.getSettings();
-      const aspectRatio = trackSettings.aspectRatio > 1.9 ? '2-1' : trackSettings.aspectRatio < 1.5 ? '4-3' : '16-9';
-      const cameraSettings: CameraSettings = {
-        aspectRatio,
+      const videoSettings: VideoSettings = {
+        aspectRatio: this.aspectRatio(trackSettings.aspectRatio),
         frameRate: trackSettings.frameRate,
         width: trackSettings.width,
         height: trackSettings.height
       };
       videoTrack.addEventListener('ended', turnOffVideo);
 
-      patchState({camera, cameraSettings, error: null});
+      patchState({camera, videoSettings, error: null});
     } catch (e) {
       patchState({error: e.message});
       turnOffVideo();
     }
+  }
+
+
+  @Action(SetVideo)
+  async setVideo(context: StateContext<VideoStateModel>, {src}: SetVideo): Promise<void> {
+    const {patchState} = context;
+    patchState({error: null});
+    this.stopVideo(context);
+
+    const videoEl: HTMLVideoElement = document.createElement('video');
+    videoEl.addEventListener('loadedmetadata', () => {
+      const width = videoEl.videoWidth;
+      const height = videoEl.videoHeight;
+      const videoSettings: VideoSettings = {
+        aspectRatio: this.aspectRatio(width / height),
+        frameRate: null,
+        width,
+        height
+      };
+
+      patchState({src, videoSettings, error: null});
+      videoEl.remove();
+    });
+    videoEl.src = src;
   }
 }

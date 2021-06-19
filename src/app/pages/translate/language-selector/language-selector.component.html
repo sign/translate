@@ -1,0 +1,16 @@
+<mat-tab-group [selectedIndex]="selectedIndex()">
+  <mat-tab disabled label="Detect Language" *ngIf="hasLanguageDetection"></mat-tab>
+  <mat-tab *ngFor="let lang of topLanguages">
+    <ng-template mat-tab-label>
+      <flag-icon [country]="lang" *ngIf="flags"></flag-icon>
+      {{translationKey + '.' + lang | transloco}}
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+<button mat-icon-button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-button">
+  <mat-icon>expand_more</mat-icon>
+</button>
+<mat-menu #signedLanguagesMenu>
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>

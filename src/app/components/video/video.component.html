@@ -6,7 +6,7 @@
     </ng-container>
 
     <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
-      <video #video></video>
+      <video #video loop autoplay></video>
       <canvas #canvas class="flip" height="100%" width="100%"></canvas>
       <div #stats></div>
     </div>
@@ -14,7 +14,7 @@
     <!-- [hidden]="videoState.error || !poseState.isLoaded" -->
     <app-animation *ngIf="animatePose$ | async"></app-animation>
 
-    <app-video-controls></app-video-controls>
+    <app-video-controls *ngIf="displayControls"></app-video-controls>
   </ng-container>
 </ng-container>
 

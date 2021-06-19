@@ -112,12 +112,12 @@ describe('VideoState', () => {
     expect(tracksSpy).toHaveBeenCalled();
     expect(cameraSpy).toHaveBeenCalled();
 
-    const {cameraSettings, error} = store.selectSnapshot(state => state.video);
+    const {videoSettings, error} = store.selectSnapshot(state => state.video);
 
     expect(error).toBe(null);
-    expect(cameraSettings.aspectRatio).toBe('2-1');
-    expect(cameraSettings.height).toBe(mockSettings.height);
-    expect(cameraSettings.width).toBe(mockSettings.width);
-    expect(cameraSettings.frameRate).toBe(mockSettings.frameRate);
+    expect(videoSettings.aspectRatio).toBe('2-1');
+    expect(videoSettings.height).toBe(mockSettings.height);
+    expect(videoSettings.width).toBe(mockSettings.width);
+    expect(videoSettings.frameRate).toBe(mockSettings.frameRate);
   });
 });
