@@ -43,17 +43,7 @@
 
       <div id="content">
         <!-- Spoken to sign requires a text input and video output -->
-        <ng-container *ngIf="spokenToSigned">
-          <div class="translation-text">
-            <textarea></textarea>
-          </div>
-          <div class="sign-writing">
-            <sgnw-sign *ngFor="let sign of this.signWriting" [attr.fsw]="sign"></sgnw-sign>
-          </div>
-          <div class="sign-language">
-            <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%">
-          </div>
-        </ng-container>
+        <app-spoken-to-signed *ngIf="spokenToSigned"></app-spoken-to-signed>
 
         <!-- Sign to spoken requires a video output and text output -->
         <ng-container *ngIf="!spokenToSigned">
@@ -64,9 +54,7 @@
                 <div class="sign-language">
                   <app-video [displayControls]="false" [displayFps]="false"></app-video>
                 </div>
-                <div class="sign-writing">
-                  <sgnw-sign *ngFor="let sign of this.signWriting" [attr.fsw]="sign"></sgnw-sign>
-                </div>
+                <app-signwriting [signs]="signWriting"></app-signwriting>
                 <div class="translation-text">{{translation}}</div>
               </ng-container>
             </ng-container>

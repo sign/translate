@@ -20,6 +20,8 @@ import {UploadComponent} from './pages/translate/upload/upload.component';
 import {SpokenToSignedComponent} from './pages/translate/spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from './pages/translate/signed-to-spoken/signed-to-spoken.component';
 import {LanguageSelectorComponent} from './pages/translate/language-selector/language-selector.component';
+import { SignwritingComponent } from './pages/translate/signwriting/signwriting.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,11 @@ import {LanguageSelectorComponent} from './pages/translate/language-selector/lan
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     LanguageSelectorComponent,
+    SignwritingComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     AppSharedModule,
     SettingsModule,

@@ -15,14 +15,35 @@ export class LanguageSelectorComponent implements OnInit {
   language: string;
   topLanguages: string[];
 
+  selectedIndex = 0;
 
   ngOnInit(): void {
     this.topLanguages = this.languages.slice(0, 3);
-    this.language = this.languages[0];
+    this.selectLanguage(this.languages[0]);
   }
 
-  selectedIndex(): number {
+  selectLanguage(lang: string): void {
+    if (lang === this.language) {
+      return;
+    }
+
+    if (!this.topLanguages.includes(lang)) {
+      this.topLanguages.unshift(lang);
+      this.topLanguages.pop();
+    }
+
+    // Update selected language
+    this.language = lang;
+
     const index = this.topLanguages.indexOf(this.language);
-    return this.hasLanguageDetection ? index + 1 : index;
+    this.selectedIndex = this.hasLanguageDetection ? index + 1 : index;
+  }
+
+  selectLanguageIndex(index: number): void {
+    if (index === 0 && this.hasLanguageDetection) {
+      this.selectLanguage(null);
+    } else {
+      this.selectLanguage(this.topLanguages[index - Number(this.hasLanguageDetection)]);
+    }
   }
 }

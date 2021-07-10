@@ -69,7 +69,7 @@ const FAKE_WORDS = [
 })
 export class TranslateComponent implements OnInit {
 
-  @HostBinding('class.spoken-to-signed') spokenToSigned = false;
+  @HostBinding('class.spoken-to-signed') spokenToSigned = true;
 
   @Select(state => state.video) videoState$: Observable<VideoStateModel>;
 
@@ -91,7 +91,7 @@ export class TranslateComponent implements OnInit {
 
   constructor(private store: Store) {
     this.store.dispatch(new SetSetting('receiveVideo', true));
-    this.setInputMode('upload');
+    this.setInputMode('text');
   }
 
   ngOnInit(): void {
