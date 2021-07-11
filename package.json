@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production --base-href /playground/",
+    "build": "ng build --configuration=production --base-href --deploy-url=https://sign-language-processing.github.io/playground/ --base-href=/playground/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
+  },
+  "engines": {
+    "node": "~0.12"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +28,7 @@
     "@mediapipe/drawing_utils": "^0.3.1620248257",
     "@mediapipe/holistic": "^0.3.1620694839",
     "@ngneat/transloco": "^2.20.1",
-    "@ngneat/transloco-messageformat": "^1.3.0",
+    "@ngneat/transloco-messageformat": "^1.3.1",
     "@ngxs/store": "^3.7.2",
     "@sutton-signwriting/sgnw-components": "^0.9.0",
     "@tensorflow/tfjs": "^3.6.0",
@@ -36,7 +39,6 @@
     "flag-icon-css": "^3.5.0",
     "ngx-flag-icon-css": "^1.0.1",
     "rxjs": "~6.6.3",
-    "pose-viewer": "^0.0.3",
     "seedrandom": "^2.4.3",
     "stats.js": "^0.17.0",
     "three": "0.125.2",

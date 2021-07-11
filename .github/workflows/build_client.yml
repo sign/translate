@@ -39,6 +39,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Copy 404 page
+        run: cp dist/sign-language-playground/index.html dist/sign-language-playground/404.html
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
