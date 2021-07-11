@@ -42,6 +42,10 @@ p {
   video {
     display: none;
   }
+
+  canvas {
+    transform-origin: top left;
+  }
 }
 
 .flip {

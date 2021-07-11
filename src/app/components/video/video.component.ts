@@ -108,7 +108,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         requestAnimationFrame(() => {
           // It is required to wait for next frame, as flex element is still resizing
           const bbox = this.elementRef.nativeElement.getBoundingClientRect();
-          this.canvasEl.nativeElement.style.zoom = (100 * bbox.width / width) + '%';
+          this.canvasEl.nativeElement.style.transform = `scale(${bbox.width / width})`;
+          // TODO, ideally change scale based on resize observer
         });
 
       }),
