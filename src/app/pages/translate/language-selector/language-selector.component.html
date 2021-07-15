@@ -10,7 +10,13 @@
   </mat-tab>
 </mat-tab-group>
 
-<button mat-icon-button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-button">
+<!-- Language button for small screens -->
+<button mat-button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary">
+  <flag-icon [country]="language" *ngIf="flags"></flag-icon>
+  {{translationKey + '.' + language | transloco}}
+</button>
+<!-- Expand icon for large screens -->
+<button mat-icon-button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-icon-button">
   <mat-icon>expand_more</mat-icon>
 </button>
 <mat-menu #signedLanguagesMenu class="language-selector-menu">

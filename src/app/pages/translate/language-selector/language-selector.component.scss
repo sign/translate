@@ -1,8 +1,39 @@
 @import "../../../../theme/variables";
 
+:host {
+  display: flex;
+}
 
 mat-tab-group {
   display: inline-block;
+}
+
+// Make language expansion menu show the correct icon
+button.menu-icon-button {
+  mat-icon {
+    transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &[aria-expanded] mat-icon {
+    transform: rotateZ(-180deg);
+  }
+}
+
+button.menu-language-button {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+@media #{$mat-lt-md} {
+  button.menu-icon-button, mat-tab-group {
+    display: none;
+  }
+  button.menu-language-button {
+    display: block;
+  }
 }
 
 

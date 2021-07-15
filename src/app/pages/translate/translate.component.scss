@@ -1,3 +1,5 @@
+@import "../../../theme/variables";
+
 ::ng-deep body {
   background-color: white;
   -webkit-font-smoothing: antialiased;
@@ -32,8 +34,12 @@ mat-toolbar {
 #container {
   width: auto;
   max-width: 1280px;
-  padding: 0 48px;
   margin: 0 auto;
+  transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media #{$mat-gt-md} {
+    padding: 0 48px;
+  }
 
   #input-mode-group {
     height: 68px;
@@ -49,14 +55,22 @@ mat-toolbar {
         background-color: rgba(66, 133, 244, 0.12);
       }
     }
+
+    @media #{$mat-lt-lg} {
+      padding: 0 12px;
+    }
   }
 
   #translation-card {
     background-color: white;
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
     width: 100%;
+    transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media #{$mat-gt-md} {
+      border-radius: 8px;
+    }
 
     #language-selector {
       display: flex;
@@ -64,17 +78,6 @@ mat-toolbar {
 
       app-language-selector {
         width: calc(50% - 20px);
-
-        // Make language expansion menu show the correct icon
-        button.menu-button {
-          mat-icon {
-            transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1);
-          }
-
-          &[aria-expanded] mat-icon {
-            transform: rotateZ(-180deg);
-          }
-        }
       }
     }
 
@@ -139,6 +142,9 @@ mat-toolbar {
   font-weight: 400;
   margin: 8px 0;
   text-decoration: none;
+  @media #{$mat-lt-lg} {
+    padding: 0 12px;
+  }
 }
 
 :host(.spoken-to-signed) {
