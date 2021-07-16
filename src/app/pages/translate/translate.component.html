@@ -7,20 +7,20 @@
   <div id="container">
     <div id="input-mode-group">
       <ng-container *ngIf="spokenToSigned">
-        <button mat-stroked-button color="primary" (click)="setInputMode('text')"
-                [class.selected]="inputMode === 'text'">
+        <button (click)="setInputMode('text')" [class.selected]="inputMode === 'text'" color="primary"
+                mat-stroked-button>
           <mat-icon>translate</mat-icon>
           {{t('input.text')}}
         </button>
       </ng-container>
       <ng-container *ngIf="!spokenToSigned">
-        <button mat-stroked-button color="primary" (click)="setInputMode('webcam')"
-                [class.selected]="inputMode === 'webcam'">
+        <button (click)="setInputMode('webcam')" [class.selected]="inputMode === 'webcam'" color="primary"
+                mat-stroked-button>
           <mat-icon>videocam</mat-icon>
           {{t('input.webcam')}}
         </button>
-        <button mat-stroked-button color="primary" (click)="setInputMode('upload')"
-                [class.selected]="inputMode === 'upload'">
+        <button (click)="setInputMode('upload')" [class.selected]="inputMode === 'upload'" color="primary"
+                mat-stroked-button>
           <mat-icon>upload</mat-icon>
           {{t('input.upload')}}
         </button>
@@ -29,48 +29,27 @@
 
     <div id="translation-card">
       <div id="language-selector">
-        <app-language-selector [flags]="true" [languages]="signedLanguages" translationKey="translate.languages.signed"
-                               [hasLanguageDetection]="!spokenToSigned"></app-language-selector>
+        <app-language-selector [flags]="true" [hasLanguageDetection]="!spokenToSigned" [languages]="signedLanguages"
+                               translationKey="translate.languages.signed"></app-language-selector>
 
         <!-- disabled -->
-        <button mat-icon-button (click)="swapLanguages()" [matTooltip]="t('swapLanguages')" id="swap-languages">
+        <button (click)="swapLanguages()" [matTooltip]="t('swapLanguages')" id="swap-languages" mat-icon-button>
           <mat-icon>swap_horiz</mat-icon>
         </button>
 
-        <app-language-selector [languages]="spokenLanguages" translationKey="translate.languages.spoken"
-                               [hasLanguageDetection]="spokenToSigned"></app-language-selector>
+        <app-language-selector [hasLanguageDetection]="spokenToSigned" [languages]="spokenLanguages"
+                               translationKey="translate.languages.spoken"></app-language-selector>
       </div>
 
       <div id="content">
         <!-- Spoken to sign requires a text input and video output -->
         <app-spoken-to-signed *ngIf="spokenToSigned"></app-spoken-to-signed>
-
-        <!-- Sign to spoken requires a video output and text output -->
-        <ng-container *ngIf="!spokenToSigned">
-          <ng-container *ngIf="inputMode === 'upload'">
-            <ng-container *ngIf="videoState$ | async as videoState">
-              <app-upload *ngIf="!videoState.src"></app-upload>
-              <ng-container *ngIf="videoState.src">
-                <div class="sign-language">
-                  <app-video [displayControls]="false" [displayFps]="false"></app-video>
-                </div>
-                <app-signwriting [signs]="signWriting"></app-signwriting>
-                <div class="translation-text">{{translation}}</div>
-              </ng-container>
-            </ng-container>
-          </ng-container>
-
-          <ng-container *ngIf="inputMode === 'webcam'">
-            <div class="sign-language">
-              <app-video [displayControls]="false" [displayFps]="false"></app-video>
-            </div>
-            <div class="translation-text">Translation</div>
-          </ng-container>
-        </ng-container>
+        <!-- Sign to spoken requires a video input and text output -->
+        <app-signed-to-spoken *ngIf="!spokenToSigned" [inputMode]="inputMode"></app-signed-to-spoken>
       </div>
     </div>
 
-    <a id="feedback" href="mailto:amitmoryossef@gmail.com?subject=Sign Language Translate Feedback">
+    <a href="mailto:amitmoryossef@gmail.com?subject=Sign Language Translate Feedback" id="feedback">
       {{t('feedback')}}
     </a>
   </div>

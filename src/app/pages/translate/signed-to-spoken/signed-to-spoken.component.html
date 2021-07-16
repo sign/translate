@@ -1,1 +1,19 @@
-<p>signed-to-spoken works!</p>
+<ng-container *ngIf="inputMode === 'upload'">
+  <ng-container *ngIf="videoState$ | async as videoState">
+    <app-upload *ngIf="!videoState.src"></app-upload>
+    <div *ngIf="videoState.src" class="interface">
+      <div class="sign-language">
+        <app-video [displayControls]="false" [displayFps]="false"></app-video>
+      </div>
+      <app-signwriting [signs]="signWriting"></app-signwriting>
+      <div class="translation-text">{{translation}}</div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<div *ngIf="inputMode === 'webcam'" class="interface">
+  <div class="sign-language">
+    <app-video [displayControls]="false" [displayFps]="false"></app-video>
+  </div>
+  <div class="translation-text">Translation</div>
+</div>

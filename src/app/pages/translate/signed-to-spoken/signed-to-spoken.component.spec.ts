@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SignedToSpokenComponent } from './signed-to-spoken.component';
+import {SignedToSpokenComponent} from './signed-to-spoken.component';
 
 describe('SignedToSpokenComponent', () => {
   let component: SignedToSpokenComponent;
@@ -8,9 +8,9 @@ describe('SignedToSpokenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignedToSpokenComponent ]
+      declarations: [SignedToSpokenComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

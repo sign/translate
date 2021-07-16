@@ -9,26 +9,6 @@
   overflow: hidden;
 
   min-height: 216px;
-  height: 720px;
-  max-height: 45vw;
-
-  &.aspect-4-3 {
-    min-width: 288px;
-    width: 960px;
-    max-width: 60vw;
-  }
-
-  &.aspect-16-9 {
-    min-width: 384px;
-    width: 1280px;
-    max-width: 80vw;
-  }
-
-  &.aspect-2-1 {
-    min-width: 432px;
-    width: 1440px;
-    max-width: 90vw;
-  }
 }
 
 p {

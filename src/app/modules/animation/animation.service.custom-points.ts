@@ -62,14 +62,6 @@ export class AnimationService {
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }
 
-  private bodyLandmarks(pose: Pose): PoseLandmark[] {
-    if (!pose.poseLandmarks) {
-      return new Array(Object.keys(BODY_MAPPING).length).fill(EMPTY_LANDMARK);
-    }
-
-    return Object.values(BODY_MAPPING).map(i => pose.poseLandmarks[i]);
-  }
-
   normalizePose(pose: Pose): tf.Tensor {
     const bodyLandmarks = this.bodyLandmarks(pose);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
@@ -113,6 +105,14 @@ export class AnimationService {
     const tracks = {};
     ANIMATION_KEYS.forEach((k, i) => tracks[k] = quaternions[i]);
     return tracks;
+  }
+
+  private bodyLandmarks(pose: Pose): PoseLandmark[] {
+    if (!pose.poseLandmarks) {
+      return new Array(Object.keys(BODY_MAPPING).length).fill(EMPTY_LANDMARK);
+    }
+
+    return Object.values(BODY_MAPPING).map(i => pose.poseLandmarks[i]);
   }
 
 }

@@ -1,10 +1,10 @@
 <div class="translation-text">
-  <textarea autofocus [formControl]="text"></textarea>
+  <textarea [formControl]="text" autofocus></textarea>
 </div>
 <app-signwriting [signs]="signWriting"></app-signwriting>
 <div class="sign-language">
   <pose-viewer *ngIf="pose" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
-  <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%"
-       style="display: block">
+  <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block"
+       width="100%">
 </div>
 

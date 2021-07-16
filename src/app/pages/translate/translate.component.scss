@@ -68,10 +68,13 @@ mat-toolbar {
   #translation-card {
     background-color: white;
     overflow: hidden;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
     width: 100%;
     transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.37);
 
+    @media #{$mat-gt-xs} {
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    }
     @media #{$mat-gt-md} {
       border-radius: 8px;
     }
@@ -88,51 +91,6 @@ mat-toolbar {
     #swap-languages {
       color: #5f6368;
       margin-top: 3px;
-    }
-
-    #content {
-      display: flex;
-
-
-      div:not(:last-child) {
-        border-right: 1px solid #0000001f;
-      }
-
-      .sign-language {
-        width: 50%;
-      }
-
-      .translation-text {
-        font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-        padding: 20px 58px 20px 24px;
-        color: #878787;
-        font-size: 24px;
-        line-height: 32px;
-        flex: 1;
-      }
-
-
-      app-upload {
-        text-align: center;
-        padding: 43px 16px 65px;
-        width: 100%;
-      }
-
-      app-video {
-        width: 100%;
-
-        &.aspect-4-3 {
-          height: 480px
-        }
-
-        &.aspect-16-9 {
-          height: 360px;
-        }
-
-        &.aspect-2-1 {
-          height: 420px;
-        }
-      }
     }
   }
 }

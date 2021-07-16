@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SignwritingComponent } from './signwriting.component';
+import {SignwritingComponent} from './signwriting.component';
 
 describe('SignwritingComponent', () => {
   let component: SignwritingComponent;
@@ -8,9 +8,9 @@ describe('SignwritingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignwritingComponent ]
+      declarations: [SignwritingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

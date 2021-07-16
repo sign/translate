@@ -46,10 +46,6 @@ export class FaceService {
       .then(model => this.faceSequentialModel = model as unknown as LayersModel);
   }
 
-  private shift(char: string, shift: number): string {
-    return String.fromCodePoint(char.codePointAt(0) + shift);
-  }
-
   normalize(vectors): Tensor {
     const normal = this.poseNormalization.normal(vectors, [4, 133, 362]);
     return this.poseNormalization.normalize(vectors, normal, [4, 6], 4);
@@ -141,5 +137,9 @@ export class FaceService {
     if (mouth) {
       this.drawFaceFeature(sw * 0.25, mouth, ctx);
     }
+  }
+
+  private shift(char: string, shift: number): string {
+    return String.fromCodePoint(char.codePointAt(0) + shift);
   }
 }

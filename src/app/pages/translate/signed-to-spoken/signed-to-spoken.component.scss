@@ -1,0 +1,45 @@
+@import "../../../../theme/variables";
+
+:host {
+  display: flex;
+}
+
+.interface {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "signed spoken signwriting";
+  grid-template-columns: 50% 100px auto;
+
+  @media #{$mat-lt-sm} {
+    grid-template-areas: "signed signed" "spoken signwriting";
+    grid-template-columns: 100px auto;
+  }
+
+  app-signwriting {
+    border-right: 1px solid #0000001f;
+  }
+}
+
+.sign-language {
+  grid-area: signed;
+}
+
+.translation-text {
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  padding: 20px 58px 20px 24px;
+  color: #878787;
+  font-size: 24px;
+  line-height: 32px;
+  flex: 1;
+}
+
+
+app-upload {
+  text-align: center;
+  padding: 43px 16px 65px;
+  width: 100%;
+}
+
+app-video {
+  width: 100%;
+}

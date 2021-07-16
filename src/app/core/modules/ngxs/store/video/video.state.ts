@@ -63,10 +63,6 @@ export class VideoState implements NgxsOnInit {
     });
   }
 
-  private aspectRatio(ratio: number): AspectRatio {
-    return ratio > 1.9 ? '2-1' : ratio < 1.5 ? '4-3' : '16-9';
-  }
-
   @Action(StartCamera)
   async startCamera(context: StateContext<VideoStateModel>): Promise<void> {
     const {patchState, dispatch} = context;
@@ -103,7 +99,6 @@ export class VideoState implements NgxsOnInit {
     }
   }
 
-
   @Action(SetVideo)
   async setVideo(context: StateContext<VideoStateModel>, {src}: SetVideo): Promise<void> {
     const {patchState} = context;
@@ -125,5 +120,9 @@ export class VideoState implements NgxsOnInit {
       videoEl.remove();
     });
     videoEl.src = src;
+  }
+
+  private aspectRatio(ratio: number): AspectRatio {
+    return ratio > 1.9 ? '2-1' : ratio < 1.5 ? '4-3' : '16-9';
   }
 }

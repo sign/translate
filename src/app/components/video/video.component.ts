@@ -58,6 +58,10 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.drawChanges();
 
     this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
+
+    // @ts-ignore
+    const resizeObserver = new ResizeObserver(this.scaleCanvas.bind(this));
+    resizeObserver.observe(this.elementRef.nativeElement);
   }
 
   async appLoop(): Promise<void> {
@@ -104,18 +108,22 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         this.canvasEl.nativeElement.width = width;
         this.canvasEl.nativeElement.height = height;
 
-        // Zoom canvas to 100% width
-        requestAnimationFrame(() => {
-          // It is required to wait for next frame, as flex element is still resizing
-          const bbox = this.elementRef.nativeElement.getBoundingClientRect();
-          this.canvasEl.nativeElement.style.transform = `scale(${bbox.width / width})`;
-          // TODO, ideally change scale based on resize observer
-        });
-
+        // It is required to wait for next frame, as grid element might still be resizing
+        requestAnimationFrame(this.scaleCanvas.bind(this));
       }),
       tap((settings: VideoSettings) => this.aspectRatio = 'aspect-' + settings.aspectRatio),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
+  }
+
+  scaleCanvas(): void {
+    // Zoom canvas to 100% width
+    const bbox = this.elementRef.nativeElement.getBoundingClientRect();
+    const scale = bbox.width / this.canvasEl.nativeElement.width;
+    this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
+
+    // Set parent element height
+    this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';
   }
 
   trackPose(): void {
