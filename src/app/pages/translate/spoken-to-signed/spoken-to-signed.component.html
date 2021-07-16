@@ -3,7 +3,8 @@
 </div>
 <app-signwriting [signs]="signWriting"></app-signwriting>
 <div class="sign-language">
-  <pose-viewer *ngIf="pose" [attr.src]="pose" autoplay loop></pose-viewer>
-  <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%">
+  <pose-viewer *ngIf="pose" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
+  <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" width="100%"
+       style="display: block">
 </div>
 

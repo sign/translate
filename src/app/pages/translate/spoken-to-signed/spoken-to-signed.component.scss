@@ -1,6 +1,19 @@
+@import "../../../../theme/variables";
+
 :host {
-  display: flex;
+  display: grid;
   width: 100%;
+  grid-template-areas: "spoken signwriting signed";
+  grid-template-columns: auto 100px 50%;
+
+  @media #{$mat-lt-sm} {
+    grid-template-areas: "spoken signwriting" "signed signed";
+    grid-template-columns: auto 100px;
+
+    .sign-language {
+      border-top: 1px solid #0000001f;
+    }
+  }
 
   *:not(:last-child) {
     border-right: 1px solid #0000001f;
@@ -8,8 +21,7 @@
 }
 
 .translation-text {
-  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-  padding: 20px 58px 20px 24px;
+  padding: 20px 24px;
   color: #878787;
   font-size: 24px;
   line-height: 32px;
@@ -27,9 +39,9 @@
 }
 
 .sign-language {
-  width: 50%;
+  grid-area: signed;
 }
 
 pose-viewer {
-  zoom: 0.5;
+  display: block;
 }

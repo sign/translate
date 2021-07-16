@@ -23,7 +23,7 @@
 
 mat-toolbar {
   background-color: white;
-  box-sizing: content-box;
+  box-sizing: border-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 
   font-family: "Product Sans", Arial, sans-serif;
@@ -58,6 +58,10 @@ mat-toolbar {
 
     @media #{$mat-lt-lg} {
       padding: 0 12px;
+    }
+
+    @media #{$mat-lt-sm} {
+      display: none;
     }
   }
 

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
 import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
-import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
+import {SetVideo, StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -24,5 +24,7 @@ export class PlaygroundComponent extends BaseComponent implements OnInit {
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
 
+
+    this.store.dispatch(new SetVideo('assets/tmp/example-sentence.mp4'));
   }
 }
