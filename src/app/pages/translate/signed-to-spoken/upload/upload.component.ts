@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngxs/store';
-import {SetVideo} from '../../../core/modules/ngxs/store/video/video.actions';
+import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
 
 @Component({
   selector: 'app-upload',

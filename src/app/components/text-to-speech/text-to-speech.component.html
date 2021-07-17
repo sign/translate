@@ -1,0 +1,14 @@
+<ng-container *transloco="let t; read: 'text-to-speech'">
+  <ng-container *ngIf="text">
+    <!-- As a single button it is uglier code, but nice ripple animation -->
+    <button mat-icon-button (click)="isSpeaking ? cancel() : play()" *ngIf="isSupported"
+            [attr.aria-label]="t(isSpeaking ? 'cancel' : 'play')"
+            [matTooltipPosition]="'below'" [matTooltip]="t(isSpeaking ? 'cancel' : 'play')">
+      <mat-icon>{{isSpeaking ? 'stop' : 'volume_up'}}</mat-icon>
+    </button>
+    <!-- If language is not supported -->
+    <button mat-icon-button *ngIf="!isSupported" [attr.aria-label]="t('unavailable')">
+      <mat-icon>volume_off</mat-icon>
+    </button>
+  </ng-container>
+</ng-container>

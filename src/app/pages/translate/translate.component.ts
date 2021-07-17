@@ -12,7 +12,7 @@ export type InputMode = 'webcam' | 'upload' | 'text';
 })
 export class TranslateComponent {
 
-  @HostBinding('class.spoken-to-signed') spokenToSigned = false;
+  @HostBinding('class.spoken-to-signed') spokenToSigned = true;
 
   inputMode: InputMode;
 
@@ -28,8 +28,12 @@ export class TranslateComponent {
 
   constructor(private store: Store) {
     document.title = 'Sign Translate'; // Set page title
-    this.store.dispatch(new SetSetting('receiveVideo', true));
-    this.setInputMode('upload');
+    // Default settings
+    this.store.dispatch([
+      new SetSetting('receiveVideo', true),
+      new SetSetting('detectSign', false),
+    ]);
+    this.setInputMode('text');
   }
 
   setInputMode(inputMode: InputMode): void {

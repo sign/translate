@@ -188,6 +188,11 @@
   "pose": {
     "loading": "Loading Pose Estimation..."
   },
+  "text-to-speech": {
+    "play": "Listen",
+    "cancel": "Stop",
+    "unavailable": "Voice output isn't available for the selected language"
+  },
   "settings": {
     "detectSign": "Detect Sign",
     "drawVideo": "Draw Video",

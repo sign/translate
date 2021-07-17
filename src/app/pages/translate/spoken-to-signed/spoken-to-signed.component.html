@@ -1,5 +1,9 @@
 <div class="translation-text">
-  <textarea [formControl]="text" autofocus></textarea>
+  <textarea [formControl]="text" [maxLength]="maxTextLength" autofocus data-gramm_editor="false"></textarea>
+  <div>
+    <app-text-to-speech [lang]="'en'" [text]="text.value"></app-text-to-speech>
+    <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
+  </div>
 </div>
 <app-signwriting [signs]="signWriting"></app-signwriting>
 <div class="sign-language">
@@ -7,4 +11,3 @@
   <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block"
        width="100%">
 </div>
-

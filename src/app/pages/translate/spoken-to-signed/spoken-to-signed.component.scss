@@ -15,7 +15,7 @@
     }
   }
 
-  *:not(:last-child) {
+  > *:not(:last-child) {
     border-right: 1px solid #0000001f;
   }
 }
@@ -23,7 +23,6 @@
 .translation-text {
   padding: 20px 24px;
   color: #878787;
-  font-size: 24px;
   line-height: 32px;
   flex: 1;
 
@@ -31,10 +30,20 @@
     font-size: 24px;
     line-height: 32px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40px);
     border: none;
     resize: none;
     outline: none;
+  }
+
+  > div {
+    display: flex;
+  }
+
+  #char-count {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 12px;
   }
 }
 
