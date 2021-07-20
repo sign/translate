@@ -13,7 +13,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   isSupported = false;
   isSpeaking = false;
 
-  private speech = new SpeechSynthesisUtterance();
+  speech = new SpeechSynthesisUtterance();
 
   private listeners: { [key: string]: EventListener } = {};
 
@@ -64,7 +64,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
     // Try to find any voice for the language
     const voice = this.voices.find(v => v.lang.startsWith(this.lang));
     if (voice) {
-      this.speech.voice = localVoice;
+      this.speech.voice = voice;
       this.isSupported = true;
       return;
     }

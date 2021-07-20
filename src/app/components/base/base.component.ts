@@ -3,11 +3,7 @@ import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-base',
-  template: `
-    <p>
-      base works!
-    </p>
-  `,
+  template: ``,
   styles: []
 })
 export abstract class BaseComponent implements OnDestroy {

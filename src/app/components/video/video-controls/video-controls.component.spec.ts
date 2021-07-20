@@ -1,7 +1,10 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
 import {VideoControlsComponent} from './video-controls.component';
-import {AppModule} from '../../../app.module';
+import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
+import {NgxsModule} from '@ngxs/store';
+import {SettingsState} from '../../../modules/settings/settings.state';
+import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 
 describe('VideoControlsComponent', () => {
   let component: VideoControlsComponent;
@@ -10,7 +13,10 @@ describe('VideoControlsComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [VideoControlsComponent],
-      imports: [AppModule]
+      imports: [
+        AppTranslocoModule,
+        NgxsModule.forRoot([SettingsState], ngxsConfig)
+      ]
     }).compileComponents();
   }));
 

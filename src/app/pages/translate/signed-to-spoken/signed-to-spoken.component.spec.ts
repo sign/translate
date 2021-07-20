@@ -9,8 +9,7 @@ describe('SignedToSpokenComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SignedToSpokenComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {

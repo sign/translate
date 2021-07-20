@@ -11,7 +11,7 @@ import {interval} from 'rxjs';
 })
 export class SpokenToSignedComponent extends BaseComponent implements OnInit {
 
-  text = new FormControl('love the way you lie');
+  text = new FormControl('what is your name?');
   maxTextLength = 500;
 
   // signWriting = [];

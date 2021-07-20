@@ -23,18 +23,20 @@ It includes:
 - Desktop / Mobile ready UI
 - Language selectors
 - Translation direction selector
-
-
 - Signed-to-spoken language translation
-  - Camera / File upload video inputs
-  - SignWriting hand shape and orientation estimation
-  - SignWriting facial features estimation
-  - Language identification (Detect Language) - **TODO**
-  - Segmentation - **TODO**
-  - Tokenization - **TODO**
-  - SignWriting to spoken language translation - **TODO**
-  - Text-to-speech - **TODO**
 - Spoken-to-signed language translation
+
+#### Signed-to-spoken language translation
+- Camera / File upload video inputs
+- SignWriting hand shape and orientation estimation
+- SignWriting facial features estimation
+- Language identification (Detect Language) - **TODO**
+- Segmentation - **TODO**
+- Tokenization - **TODO**
+- SignWriting to spoken language translation - **TODO**
+- Text-to-speech - **TODO**
+
+#### Spoken-to-signed language translation
   - Text / Microphone inputs - **TODO**
   - Text-to-speech
   - Spoken language text to SignWriting translation - **TODO**

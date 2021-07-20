@@ -9,8 +9,7 @@ describe('SignwritingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SignwritingComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {

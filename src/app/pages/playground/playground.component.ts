@@ -24,7 +24,6 @@ export class PlaygroundComponent extends BaseComponent implements OnInit {
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
 
-
     this.store.dispatch(new SetVideo('assets/tmp/example-sentence.mp4'));
   }
 }

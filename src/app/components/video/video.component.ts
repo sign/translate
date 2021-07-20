@@ -117,13 +117,15 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   scaleCanvas(): void {
-    // Zoom canvas to 100% width
-    const bbox = this.elementRef.nativeElement.getBoundingClientRect();
-    const scale = bbox.width / this.canvasEl.nativeElement.width;
-    this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
+    window.requestAnimationFrame(() => {
+      // Zoom canvas to 100% width
+      const bbox = this.elementRef.nativeElement.getBoundingClientRect();
+      const scale = bbox.width / this.canvasEl.nativeElement.width;
+      this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
 
-    // Set parent element height
-    this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';
+      // Set parent element height
+      this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';
+    });
   }
 
   trackPose(): void {

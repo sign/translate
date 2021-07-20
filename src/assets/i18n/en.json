@@ -10,7 +10,7 @@
       "upload": "Upload",
       "text": "Text"
     },
-    "swapLanguages": "Swap languages (Cmd+Shift+S)",
+    "swapLanguages": "Swap languages",
     "upload": {
       "title": "Choose a video",
       "types": "Upload a .mp4, .ogv, or .webm",

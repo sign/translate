@@ -52,7 +52,6 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         takeUntil(this.ngUnsubscribe)
       ).subscribe();
     });
-
   }
 
 }

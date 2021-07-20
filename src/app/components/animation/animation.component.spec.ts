@@ -9,8 +9,7 @@ describe('AnimationComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AnimationComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {

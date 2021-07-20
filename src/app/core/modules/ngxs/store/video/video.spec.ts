@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {NgxsModule, Store} from '@ngxs/store';
 import {VideoState, VideoStateModel} from './video.state';
-import {StartCamera, StopCamera} from './video.actions';
+import {StartCamera, StopVideo} from './video.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 
 
@@ -41,32 +41,32 @@ describe('VideoState', () => {
     snapshot = store.snapshot();
   });
 
-  it('StopCamera should stop camera', () => {
+  it('StopVideo should stop camera', () => {
     snapshot.video.camera = new MediaStream();
     store.reset(snapshot);
 
-    store.dispatch(new StopCamera());
+    store.dispatch(new StopVideo());
 
     const camera = store.selectSnapshot(state => state.video.camera);
     expect(camera).toBe(null);
   });
 
-  it('StopCamera should set error to turnedOff', () => {
+  it('StopVideo should set error to turnedOff', () => {
     snapshot.video.error = null;
     store.reset(snapshot);
 
-    store.dispatch(new StopCamera());
+    store.dispatch(new StopVideo());
 
     const error = store.selectSnapshot(state => state.video.error);
     expect(error).toBe('turnedOff');
   });
 
-  it('StopCamera should keep error if exists', () => {
+  it('StopVideo should keep error if exists', () => {
     const testError = 'testError';
     snapshot.video.error = testError;
     store.reset(snapshot);
 
-    store.dispatch(new StopCamera());
+    store.dispatch(new StopVideo());
 
     const error = store.selectSnapshot(state => state.video.error);
     expect(error).toBe(testError);
