@@ -32,6 +32,7 @@ export class TranslateComponent {
     this.store.dispatch([
       new SetSetting('receiveVideo', true),
       new SetSetting('detectSign', false),
+      new SetSetting('drawPose', true),
     ]);
     this.setInputMode('text');
   }
