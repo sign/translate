@@ -12,7 +12,7 @@ function createFileFromMockFile(name: string, body: string, mimeType: string): F
   blob.lastModifiedDate = new Date();
   blob.name = name;
   return blob as File;
-};
+}
 
 describe('UploadComponent', () => {
   let store: Store;
