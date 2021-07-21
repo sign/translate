@@ -16,7 +16,7 @@ export class SignWritingService {
   }
 
   static textFontSize(text: string, width: number, ctx: CanvasRenderingContext2D): number {
-    ctx.font = '100px SignWriting';
+    ctx.font = '100px SuttonSignWritingOneD';
     const measure = ctx.measureText(text);
     const bboxWidth = width * ctx.canvas.width;
     const scale = bboxWidth / measure.width;
@@ -26,7 +26,7 @@ export class SignWritingService {
 
   static drawSWText(text: string, center: THREE.Vector2 | THREE.Vector3, fontSize: number,
                     ctx: CanvasRenderingContext2D, isNormalized = true): void {
-    ctx.font = fontSize + 'px SignWriting';
+    ctx.font = fontSize + 'px SuttonSignWritingOneD';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillStyle = 'black';

@@ -17,11 +17,6 @@
 @include angular-material-theme($app-theme);
 
 
-@font-face {
-  font-family: SignWriting;
-  src: url('../assets/fonts/SuttonSignWritingOneD.ttf');
-}
-
 html, body {
   height: 100%;
 }

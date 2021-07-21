@@ -141,7 +141,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   preloadSignWritingFont(): void {
-    this.canvasCtx.font = '100px SignWriting';
+    this.canvasCtx.font = '100px SuttonSignWritingOneD';
     this.canvasCtx.fillText('Preload SignWriting', 0, 0);
   }
 
