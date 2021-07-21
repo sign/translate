@@ -1,10 +1,8 @@
 import {NgModule} from '@angular/core';
 import {environment} from '../../../../environments/environment';
 import {NgxsModule, NgxsModuleOptions} from '@ngxs/store';
-import {AppState} from './store/app/app.state';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {VideoState} from './store/video/video.state';
-import {AudioState} from './store/audio/audio.state';
 
 
 export const ngxsConfig: NgxsModuleOptions = {
@@ -22,7 +20,7 @@ export const ngxsConfig: NgxsModuleOptions = {
 
 @NgModule({
   imports: [
-    NgxsModule.forRoot([AppState, SettingsState, VideoState, AudioState], ngxsConfig)
+    NgxsModule.forRoot([SettingsState, VideoState], ngxsConfig)
   ]
 })
 export class AppNgxsModule {
