@@ -1,6 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SignedToSpokenComponent} from './signed-to-spoken.component';
+import {NgxsModule} from '@ngxs/store';
+import {VideoState} from '../../../core/modules/ngxs/store/video/video.state';
+import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {SettingsState} from '../../../modules/settings/settings.state';
 
 describe('SignedToSpokenComponent', () => {
   let component: SignedToSpokenComponent;
@@ -8,7 +12,10 @@ describe('SignedToSpokenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignedToSpokenComponent]
+      declarations: [SignedToSpokenComponent],
+      imports: [
+        NgxsModule.forRoot([SettingsState, VideoState], ngxsConfig)
+      ]
     }).compileComponents();
   });
 

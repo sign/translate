@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {BaseSettingsComponent} from '../settings.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
+import {SettingsStateModel} from '../settings.state';
 
 @Component({
   selector: 'app-settings',
@@ -10,7 +11,7 @@ import {Store} from '@ngxs/store';
 })
 export class SettingsComponent extends BaseSettingsComponent implements OnInit {
 
-  availableSettings = ['detectSign', 'drawVideo', 'drawPose', 'drawSignWriting', 'animatePose'];
+  availableSettings: Array<keyof SettingsStateModel> = ['detectSign', 'drawVideo', 'drawPose', 'drawSignWriting', 'animatePose'];
   lastSettings = [];
   currentSettings = [];
 
@@ -27,7 +28,7 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
     ).subscribe();
   }
 
-  onSettingsChange(currentSettings): void {
+  onSettingsChange(currentSettings: Array<keyof SettingsStateModel>): void {
     this.availableSettings.forEach(s => {
       if (this.lastSettings.includes(s) && !currentSettings.includes(s)) {
         this.applySetting(s, false);

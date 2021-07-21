@@ -28,7 +28,6 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     const el = this.modelViewerEl.nativeElement;
 
     el.addEventListener('load', () => {
-      console.log('load');
       const scene = el[Object.getOwnPropertySymbols(el)[14]];
 
       this.animationState$.pipe(

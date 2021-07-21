@@ -14,10 +14,7 @@ export class PoseService {
 
   async load(): Promise<void> {
     this.model = new holistic.Holistic({
-      locateFile: (file) => {
-        console.log('Holistic', 'loading', file);
-        return `assets/models/holistic/${file}`;
-      }
+      locateFile: (file) => `assets/models/holistic/${file}`
     });
 
     this.model.setOptions({
@@ -65,7 +62,7 @@ export class PoseService {
     drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_LIPS, {color: '#E0E0E0'});
   }
 
-  drawConnect(connectors, ctx: CanvasRenderingContext2D): void {
+  drawConnect(connectors: PoseLandmark[][], ctx: CanvasRenderingContext2D): void {
     for (const connector of connectors) {
       const from = connector[0];
       const to = connector[1];

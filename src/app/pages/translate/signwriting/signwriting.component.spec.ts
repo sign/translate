@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SignwritingComponent} from './signwriting.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('SignwritingComponent', () => {
   let component: SignwritingComponent;
@@ -8,7 +9,8 @@ describe('SignwritingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignwritingComponent]
+      declarations: [SignwritingComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   });
 

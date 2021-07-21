@@ -12,7 +12,7 @@ export class BaseSettingsComponent extends BaseComponent {
   }
 
 
-  applySetting(setting: string, value: any): void {
+  applySetting(setting: keyof SettingsStateModel, value: any): void {
     this.store.dispatch(new SetSetting(setting, value));
   }
 }

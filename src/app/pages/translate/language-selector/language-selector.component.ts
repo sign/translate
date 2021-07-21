@@ -27,7 +27,7 @@ export class LanguageSelectorComponent implements OnInit {
       return;
     }
 
-    if (!this.topLanguages.includes(lang)) {
+    if (lang && !this.topLanguages.includes(lang)) {
       this.topLanguages.unshift(lang);
       this.topLanguages.pop();
     }
@@ -36,7 +36,7 @@ export class LanguageSelectorComponent implements OnInit {
     this.language = lang;
 
     const index = this.topLanguages.indexOf(this.language);
-    this.selectedIndex = this.hasLanguageDetection ? index + 1 : index;
+    this.selectedIndex = index + Number(this.hasLanguageDetection);
   }
 
   selectLanguageIndex(index: number): void {
