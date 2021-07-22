@@ -25,6 +25,7 @@
     "@angular/platform-browser": "~11.2.1",
     "@angular/platform-browser-dynamic": "~11.2.1",
     "@angular/router": "~11.2.1",
+    "@angular/service-worker": "~11.2.1",
     "@google/model-viewer": "^1.7.1",
     "@mediapipe/drawing_utils": "^0.3.1620248257",
     "@mediapipe/holistic": "^0.3.1620694839",

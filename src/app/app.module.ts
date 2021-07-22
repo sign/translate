@@ -23,6 +23,8 @@ import {LanguageSelectorComponent} from './pages/translate/language-selector/lan
 import {SignwritingComponent} from './pages/translate/signwriting/signwriting.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {TextToSpeechComponent} from './components/text-to-speech/text-to-speech.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,12 @@ import {TextToSpeechComponent} from './components/text-to-speech/text-to-speech.
     DetectorModule,
     AnimationModule,
     NgxFlagIconCssModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     NavigatorService

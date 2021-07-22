@@ -1,8 +1,14 @@
+[![Client Build Test Status](https://github.com/sign-language-processing/playground/actions/workflows/build_client.yml/badge.svg)](https://github.com/sign-language-processing/playground/actions/workflows/build_client.yml)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/sign-language-processing/playground/blob/master/LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sign-language-processing/playground/issues)
+<!--![Tests Coverage](https://img.shields.io/coveralls/github/sign-language-processing/playground)-->
+
 # Sign Language Processing Playground
 
 This playground is intended for ease of prototyping real-time sign language models.
 
 [Visit the playground!](https://sign-language-processing.github.io/playground/)
+
 
 It includes, as a basic first step, MediaPipe Holistic pose estimation, on top of which other predictions are performed:
 
@@ -18,7 +24,7 @@ This app facilitates bi-directional multi-directional translation research, base
 
 [Visit the app!](https://sign-language-processing.github.io/playground/translate)
 
-It includes:
+#### Including:
 
 - Desktop / Mobile ready UI
 - Language selectors
@@ -37,9 +43,16 @@ It includes:
 - Text-to-speech - **TODO**
 
 #### Spoken-to-signed language translation
-  - Text / Microphone inputs - **TODO**
-  - Text-to-speech
-  - Spoken language text to SignWriting translation - **TODO**
-  - SignWriting to pose sequence - **TODO**
-  - Pose sequence to video - **TODO**
-  - Text to pose sequence (server side)
+- Text / Microphone inputs - **TODO**
+- Text-to-speech
+- Spoken language text to SignWriting translation - **TODO**
+- SignWriting to pose sequence - **TODO**
+- Pose sequence to video - **TODO**
+- Text to pose sequence (server side)
+
+#### Additionally Missing:
+- favicon
+- app homescreen icon
+- service worker
+- mediapipe mobile support
+- pose format canvas renderer

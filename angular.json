@@ -31,14 +31,17 @@
                 "glob": "*.ttf",
                 "input": "./node_modules/@sutton-signwriting/font-ttf/font",
                 "output": "./assets/fonts/signwriting/"
-              }
+              },
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "./node_modules/flag-icon-css/css/flag-icon.min.css",
               "src/theme/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -96,7 +99,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
