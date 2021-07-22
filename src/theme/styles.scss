@@ -16,6 +16,9 @@
 // that you are using.
 @include angular-material-theme($app-theme);
 
+@import "fonts/material-icons.css";
+@import "fonts/roboto.css";
+
 
 html, body {
   height: 100%;
