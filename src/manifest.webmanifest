@@ -2,7 +2,7 @@
   "name": "Sign Translate",
   "short_name": "Sign Translate",
   "scope": "/",
-  "start_url": "/translate",
+  "start_url": "/playground/translate",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#3F51B5",
