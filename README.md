@@ -51,8 +51,5 @@ This app facilitates bi-directional multi-directional translation research, base
 - Text to pose sequence (server side)
 
 #### Additionally Missing:
-- favicon
-- app homescreen icon
-- service worker
 - mediapipe mobile support
 - pose format canvas renderer
