@@ -43,7 +43,8 @@ This app facilitates bi-directional multi-directional translation research, base
 - Text-to-speech - **TODO**
 
 #### Spoken-to-signed language translation
-- Text / Microphone inputs - **TODO**
+- Text input
+- Microphone inputs - **TODO**
 - Text-to-speech
 - Spoken language text to SignWriting translation - **TODO**
 - SignWriting to pose sequence - **TODO**
@@ -51,5 +52,10 @@ This app facilitates bi-directional multi-directional translation research, base
 - Text to pose sequence (server side)
 
 #### Additionally Missing:
-- mediapipe mobile support
-- pose format canvas renderer
+- pose-format canvas renderer
+
+#### Mobile support - TODOs
+- Rethink app icon
+- Prevent iOS rubberband scrolling
+- Verify status-bar is white with black text
+- MediaPipe doesn't work on mobile (https://github.com/google/mediapipe/issues/1427)
