@@ -5,7 +5,7 @@ import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions'
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.css']
+  styleUrls: ['./upload.component.scss']
 })
 export class UploadComponent {
 

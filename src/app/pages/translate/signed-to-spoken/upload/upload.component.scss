@@ -1,3 +1,5 @@
+@import "../../../../../theme/variables.scss";
+
 h3 {
   color: #202124;
   font-family: "Google Sans", sans-serif;
@@ -8,7 +10,7 @@ h3 {
 }
 
 p {
-  color: #5f6368;
+  color: map-get($mat-gray, 800);
   font-size: 14px;
   font-weight: 400;
   margin-top: 8px;

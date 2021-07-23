@@ -4,31 +4,43 @@
   background-color: white;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: map-get($mat-dark-theme-background, app-bar)
+  }
 }
 
 :host {
   height: 100vh;
 
   &::before {
-    background-color: #fafafa;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: map-get($mat-grey, 50);
+    border-bottom: 1px solid map-get($mat-light-theme-foreground, divider);
     content: '';
     display: block;
     height: 162px;
     width: 100%;
     position: absolute;
     z-index: -1;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #2a2a2a;
+      border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
+    }
   }
 }
 
 mat-toolbar {
-  background-color: white;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-
+  border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
   font-family: "Product Sans", Arial, sans-serif;
-  color: #5f6368;
   font-weight: 400;
+
+  @media (prefers-color-scheme: light) {
+    background-color: white;
+    border-bottom: 1px solid map-get($mat-light-theme-foreground, divider);
+    color: map-get($mat-gray, 800);
+  }
 }
 
 #container {
@@ -72,6 +84,10 @@ mat-toolbar {
     transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.37);
 
+    @media (prefers-color-scheme: dark) {
+      background-color: map-get($mat-dark-theme-background, app-bar)
+    }
+
     @media #{$mat-gt-xs} {
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
     }
@@ -81,7 +97,11 @@ mat-toolbar {
 
     #language-selector {
       display: flex;
-      border-bottom: 1px solid #0000001f;
+      border-bottom: 1px solid map-get($mat-light-theme-foreground, divider);
+
+      @media (prefers-color-scheme: dark) {
+        border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
+      }
 
       app-language-selector {
         width: calc(50% - 20px);
@@ -89,7 +109,7 @@ mat-toolbar {
     }
 
     #swap-languages {
-      color: #5f6368;
+      color: map-get($mat-gray, 800);
       margin-top: 3px;
     }
   }
@@ -98,7 +118,7 @@ mat-toolbar {
 
 #feedback {
   float: right;
-  color: #5f6368;
+  color: map-get($mat-gray, 800);
   font-size: 11px;
   font-style: italic;
   font-weight: 400;
@@ -107,6 +127,11 @@ mat-toolbar {
   @media #{$mat-lt-lg} {
     padding: 0 12px;
   }
+
+  @media (prefers-color-scheme: dark) {
+    color: map-get($mat-gray, 400);
+  }
+
 }
 
 :host(.spoken-to-signed) {

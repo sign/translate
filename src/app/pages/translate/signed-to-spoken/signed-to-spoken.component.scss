@@ -16,7 +16,11 @@
   }
 
   app-signwriting {
-    border-right: 1px solid #0000001f;
+    border-right: 1px solid map-get($mat-light-theme-foreground, divider);
+
+    @media (prefers-color-scheme: dark) {
+      border-right: 1px solid map-get($mat-dark-theme-foreground, divider);
+    }
   }
 }
 

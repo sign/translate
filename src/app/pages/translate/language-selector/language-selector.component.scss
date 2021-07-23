@@ -17,6 +17,10 @@ button.menu-icon-button {
   &[aria-expanded] mat-icon {
     transform: rotateZ(-180deg);
   }
+
+  @media (prefers-color-scheme: dark) {
+    color: map-get($mat-dark-theme-foreground, icon);
+  }
 }
 
 button.menu-language-button {
@@ -46,7 +50,10 @@ button.menu-language-button {
     min-width: unset !important;
     text-transform: uppercase;
     padding: 0 16px !important;
-    color: black;
+
+    @media (prefers-color-scheme: dark) {
+      opacity: 1 !important;
+    }
 
     &[aria-selected="true"] {
       color: mat-color($app-primary);

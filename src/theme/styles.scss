@@ -16,6 +16,10 @@
 // that you are using.
 @include angular-material-theme($app-theme);
 
+@media (prefers-color-scheme: dark) {
+  @include angular-material-theme($app-dark-theme);
+}
+
 @import "fonts/material-icons.css";
 @import "fonts/roboto.css";
 

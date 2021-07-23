@@ -11,12 +11,20 @@
     grid-template-columns: auto 100px;
 
     .sign-language {
-      border-top: 1px solid #0000001f;
+      border-top: 1px solid map-get($mat-light-theme-foreground, divider);
+
+      @media (prefers-color-scheme: dark) {
+        border-top: 1px solid map-get($mat-dark-theme-foreground, divider);
+      }
     }
   }
 
   > *:not(:last-child) {
-    border-right: 1px solid #0000001f;
+    border-right: 1px solid map-get($mat-light-theme-foreground, divider);
+
+    @media (prefers-color-scheme: dark) {
+      border-right: 1px solid map-get($mat-dark-theme-foreground, divider);
+    }
   }
 }
 
@@ -34,6 +42,11 @@
     border: none;
     resize: none;
     outline: none;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: map-get($mat-dark-theme-background, app-bar);
+      color: white;
+    }
   }
 
   > div {
