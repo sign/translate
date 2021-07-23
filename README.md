@@ -59,3 +59,4 @@ This app facilitates bi-directional multi-directional translation research, base
 - Prevent iOS rubberband scrolling
 - Verify status-bar is white with black text
 - MediaPipe doesn't work on mobile (https://github.com/google/mediapipe/issues/1427)
+- Dark mode

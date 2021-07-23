@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production --base-href --deploy-url=https://sign-language-processing.github.io/playground/ --base-href=/playground/",
-    "pwa:assets": "pwa-asset-generator src/assets/icons/icon.png -i src/index.html -m src/manifest.webmanifest --background #3F51B5 --favicon --mstile",
+    "build": "ng build --configuration=production --base-href=/playground/",
+    "pwa:assets": "pwa-asset-generator src/assets/icons/icon.png src/assets/icons/generated/ -i src/index.html -m src/manifest.webmanifest --background #3F51B5 --favicon --mstile",
     "test": "ng test --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "lint": "ng lint",
