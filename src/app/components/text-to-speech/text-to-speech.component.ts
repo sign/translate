@@ -17,14 +17,13 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
 
   private listeners: { [key: string]: EventListener } = {};
 
-  constructor() {
-  }
-
   ngOnInit(): void {
-    this.listeners.voiceschanged = () => {
+    const voicesLoaded = () => {
       this.voices = window.speechSynthesis.getVoices();
       this.setVoice();
     };
+    this.listeners.voiceschanged = voicesLoaded;
+    voicesLoaded(); // In case voices were loaded before event
 
     for (const [type, listener] of Object.entries(this.listeners)) {
       window.speechSynthesis.addEventListener(type, listener);
