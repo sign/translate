@@ -1,0 +1,10 @@
+<mat-progress-bar *ngIf="!ready" mode="determinate" [value]="progress()"></mat-progress-bar>
+
+<pose-viewer #poseViewer
+             [attr.src]="src"
+             [attr.autoplay]="false"
+             [attr.loop]="false"
+             width="256px"
+             height="256px"></pose-viewer>
+
+<canvas #canvas width="256" height="256"></canvas>

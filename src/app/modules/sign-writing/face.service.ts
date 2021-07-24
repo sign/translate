@@ -41,8 +41,8 @@ export class FaceService {
   constructor(private poseNormalization: PoseNormalizationService) {
   }
 
-  loadModel(): void {
-    tf.loadLayersModel('assets/models/face-features/model.json')
+  loadModel(): Promise<LayersModel> {
+    return tf.loadLayersModel('assets/models/face-features/model.json')
       .then(model => this.faceSequentialModel = model as unknown as LayersModel);
   }
 

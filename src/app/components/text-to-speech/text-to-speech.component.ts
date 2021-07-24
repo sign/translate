@@ -23,7 +23,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
       this.setVoice();
     };
     this.listeners.voiceschanged = voicesLoaded;
-    voicesLoaded(); // In case voices were loaded before event
+    voicesLoaded(); // In case voices are already loaded
 
     for (const [type, listener] of Object.entries(this.listeners)) {
       window.speechSynthesis.addEventListener(type, listener);

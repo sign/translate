@@ -19,8 +19,8 @@ export class DetectorService {
 
   sequentialModel: LayersModel;
 
-  loadModel(): void {
-    tf.loadLayersModel('assets/models/sign-detector/model.json')
+  loadModel(): Promise<LayersModel> {
+    return tf.loadLayersModel('assets/models/sign-detector/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }
 

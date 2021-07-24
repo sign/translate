@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {BaseComponent} from '../../../components/base/base.component';
 import {debounce, takeUntil, tap} from 'rxjs/operators';
-import {interval} from 'rxjs';
+import {interval, Observable} from 'rxjs';
+import {Select} from '@ngxs/store';
 
 @Component({
   selector: 'app-spoken-to-signed',
@@ -10,8 +11,9 @@ import {interval} from 'rxjs';
   styleUrls: ['./spoken-to-signed.component.scss']
 })
 export class SpokenToSignedComponent extends BaseComponent implements OnInit {
+  @Select(state => state.settings.humanizePose) humanize$: Observable<boolean>;
 
-  text = new FormControl('what is your name?');
+  text = new FormControl('A');
   maxTextLength = 500;
 
   // signWriting = [];
@@ -20,17 +22,21 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   pose: string;
 
   ngOnInit(): void {
+    const translateText = (text) => {
+      if (text) {
+        this.pose = 'https://nlp.biu.ac.il/~ccohenya8/sign/sentence/?lang=en.us&sentence=' + encodeURIComponent(text);
+      } else {
+        this.pose = null;
+      }
+    };
+    // Listen to text change
     this.text.valueChanges.pipe(
       debounce(() => interval(500)),
-      tap((text) => {
-        if (text) {
-          this.pose = 'https://nlp.biu.ac.il/~ccohenya8/sign/sentence/?lang=en.us&sentence=' + encodeURIComponent(text);
-        } else {
-          this.pose = null;
-        }
-      }),
+      tap(translateText),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
+    // Start from current text value
+    translateText(this.text.value);
   }
 
 }
