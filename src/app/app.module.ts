@@ -25,6 +25,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {TextToSpeechComponent} from './components/text-to-speech/text-to-speech.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
+import {Pix2PixModule} from './modules/pix2pix/pix2pix.module';
+import { PoseViewerComponent } from './pages/translate/pose-viewer/pose-viewer.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import {environment} from '../environments/environment';
     LanguageSelectorComponent,
     SignwritingComponent,
     TextToSpeechComponent,
+    PoseViewerComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import {environment} from '../environments/environment';
     SignWritingModule,
     DetectorModule,
     AnimationModule,
+    Pix2PixModule,
     NgxFlagIconCssModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

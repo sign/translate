@@ -6,8 +6,9 @@
   </div>
 </div>
 <app-signwriting [signs]="signWriting"></app-signwriting>
-<div class="sign-language">
-  <pose-viewer *ngIf="pose" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
+<div class="sign-language" *ngIf="humanize$ | async as humanize">
+  <app-pose-viewer *ngIf="pose && humanize" [src]="pose" autoplay loop></app-pose-viewer>
+  <pose-viewer *ngIf="pose && !humanize" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
   <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block"
        width="100%">
 </div>
