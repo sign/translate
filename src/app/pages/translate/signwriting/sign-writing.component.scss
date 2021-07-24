@@ -1,0 +1,14 @@
+:host {
+  width: 100px !important;
+  text-align: center;
+  padding: 20px 0;
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
+}
+
+sgnw-sign {
+  display: block;
+  margin: 20px 0;
+}
