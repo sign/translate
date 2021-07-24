@@ -20,10 +20,12 @@ import {UploadComponent} from './pages/translate/signed-to-spoken/upload/upload.
 import {SpokenToSignedComponent} from './pages/translate/spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from './pages/translate/signed-to-spoken/signed-to-spoken.component';
 import {LanguageSelectorComponent} from './pages/translate/language-selector/language-selector.component';
-import {SignwritingComponent} from './pages/translate/signwriting/signwriting.component';
+import {SignWritingComponent} from './pages/translate/signwriting/sign-writing.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {TextToSpeechComponent} from './components/text-to-speech/text-to-speech.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
+import {Pix2PixModule} from './modules/pix2pix/pix2pix.module';
+import {PoseViewerComponent} from './pages/translate/pose-viewer/pose-viewer.component';
 import {environment} from '../environments/environment';
 
 @NgModule({
@@ -38,8 +40,9 @@ import {environment} from '../environments/environment';
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     LanguageSelectorComponent,
-    SignwritingComponent,
+    SignWritingComponent,
     TextToSpeechComponent,
+    PoseViewerComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ import {environment} from '../environments/environment';
     SignWritingModule,
     DetectorModule,
     AnimationModule,
+    Pix2PixModule,
     NgxFlagIconCssModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

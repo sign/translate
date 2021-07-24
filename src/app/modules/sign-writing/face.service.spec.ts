@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import * as THREE from 'three';
 import {FaceService} from './face.service';
+import * as tf from '@tensorflow/tfjs';
 
 describe('FaceService', () => {
   let service: FaceService;
@@ -10,8 +11,21 @@ describe('FaceService', () => {
     service = TestBed.inject(FaceService);
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('model weights should not contain NaN', async () => {
+    await service.loadModel();
+    const model = service.faceSequentialModel;
+
+    expect(model).toBeTruthy();
+
+    for (const weight of model.getWeights()) {
+      const data = await weight.data();
+      const isNaN = Boolean(tf.isNaN(data).any().dataSync()[0]);
+      expect(isNaN).toBeFalse();
+    }
   });
 
   it('should normalize face correctly', () => {

@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const materialModules = [
   MatToolbarModule,
@@ -22,7 +23,8 @@ const materialModules = [
   MatFormFieldModule,
   MatCheckboxModule,
   BrowserAnimationsModule,
-  MatTabsModule
+  MatTabsModule,
+  MatProgressBarModule
 ];
 
 @NgModule({

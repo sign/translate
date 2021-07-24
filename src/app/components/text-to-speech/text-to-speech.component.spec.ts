@@ -3,6 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {TextToSpeechComponent} from './text-to-speech.component';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {SimpleChange} from '@angular/core';
+import Spy = jasmine.Spy;
 
 describe('TextToSpeechComponent', () => {
   let component: TextToSpeechComponent;
@@ -13,19 +14,11 @@ describe('TextToSpeechComponent', () => {
     {default: false, lang: 'en-US', localService: true, name: 'English local', voiceURI: 'English local'},
     {default: false, lang: 'de-DE', localService: false, name: 'German non-local', voiceURI: 'German non-local'},
   ] as SpeechSynthesisVoice[];
+  let getVoicesSpy: Spy;
 
-
-  // default: false
-  // lang: "en-US"
-  // localService: false
-  // name: "Google US English"
-  // voiceURI: "Google US English"
-
-  // readonly default: boolean;
-  //     readonly lang: string;
-  //     readonly localService: boolean;
-  //     readonly name: string;
-  //     readonly voiceURI: string;
+  beforeAll(() => {
+    getVoicesSpy = spyOn(window.speechSynthesis, 'getVoices').and.returnValue(voices);
+  });
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -37,6 +30,7 @@ describe('TextToSpeechComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TextToSpeechComponent);
     component = fixture.componentInstance;
+    component.lang = 'random';
     fixture.detectChanges();
   });
 
@@ -47,9 +41,8 @@ describe('TextToSpeechComponent', () => {
   });
 
   it('voiceschanged event should select local service', () => {
-    const getVoicesSpy = spyOn(window.speechSynthesis, 'getVoices').and.returnValue(voices);
     const voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
-
+    component.lang = 'en';
     window.speechSynthesis.dispatchEvent(new Event('voiceschanged'));
     expect(getVoicesSpy).toHaveBeenCalled();
     expect(voiceSpy).toHaveBeenCalled();
@@ -63,8 +56,11 @@ describe('TextToSpeechComponent', () => {
   it('language change with no voices should not select service', () => {
     const voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
 
+    component.voices = [];
+
     component.lang = 'de';
     fixture.detectChanges();
+    component.ngOnChanges({lang: new SimpleChange('en', 'de', false)}); // detectChanges does not trigger ngOnChange
 
     expect(voiceSpy).not.toHaveBeenCalled();
     expect(component.isSupported).toBeFalse();
@@ -76,8 +72,7 @@ describe('TextToSpeechComponent', () => {
 
     component.lang = 'de';
     fixture.detectChanges();
-    // detectChanges does not trigger ngOnChange
-    component.ngOnChanges({lang: new SimpleChange('en', 'de', false)});
+    component.ngOnChanges({lang: new SimpleChange('en', 'de', false)}); // detectChanges does not trigger ngOnChange
 
     expect(voiceSpy).toHaveBeenCalled();
     expect(component.isSupported).toBeTrue();
@@ -91,6 +86,7 @@ describe('TextToSpeechComponent', () => {
 
     component.lang = 'unk';
     fixture.detectChanges();
+    component.ngOnChanges({lang: new SimpleChange('en', 'unk', false)}); // detectChanges does not trigger ngOnChange
 
     expect(voiceSpy).not.toHaveBeenCalled();
     expect(component.isSupported).toBeFalse();

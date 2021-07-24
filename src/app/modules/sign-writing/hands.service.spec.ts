@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {HandsService} from './hands.service';
 import * as THREE from 'three';
+import * as tf from '@tensorflow/tfjs';
 
 describe('HandsService', () => {
   let service: HandsService;
@@ -10,8 +11,21 @@ describe('HandsService', () => {
     service = TestBed.inject(HandsService);
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('model weights should not contain NaN', async () => {
+    await service.loadModel();
+    const model = service.leftHandSequentialModel;
+
+    expect(model).toBeTruthy();
+
+    for (const weight of model.getWeights()) {
+      const data = await weight.data();
+      const isNaN = Boolean(tf.isNaN(data).any().dataSync()[0]);
+      expect(isNaN).toBeFalse();
+    }
   });
 
   it('should normalize hands correctly', () => {

@@ -47,8 +47,8 @@ const ANIMATION_KEYS = [
 export class AnimationService {
   sequentialModel: LayersModel;
 
-  loadModel(): void {
-    tf.loadLayersModel('assets/models/pose-animation/model.json')
+  loadModel(): Promise<LayersModel> {
+    return tf.loadLayersModel('assets/models/pose-animation/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }
 

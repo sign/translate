@@ -31,11 +31,13 @@ export class HandsService {
   constructor(private poseNormalization: PoseNormalizationService) {
   }
 
-  loadModel(): void {
-    tf.loadLayersModel('assets/models/hand-shape/model.json')
-      .then(model => this.leftHandSequentialModel = model as unknown as LayersModel);
-    tf.loadLayersModel('assets/models/hand-shape/model.json')
-      .then(model => this.rightHandSequentialModel = model as unknown as LayersModel);
+  async loadModel(): Promise<LayersModel[]> {
+    return Promise.all([
+      tf.loadLayersModel('assets/models/hand-shape/model.json')
+        .then(model => this.leftHandSequentialModel = model as unknown as LayersModel),
+      tf.loadLayersModel('assets/models/hand-shape/model.json') // TODO figure out a way to copy the model, not load twice
+        .then(model => this.rightHandSequentialModel = model as unknown as LayersModel)
+    ]);
   }
 
   normalizeHand(vectors: THREE.Vector3[], normal: PlaneNormal, flipHand: boolean): tf.Tensor {
