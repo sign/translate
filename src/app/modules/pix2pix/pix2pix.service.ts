@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import * as tf from '@tensorflow/tfjs';
-import {Tensor, Tensor3D} from '@tensorflow/tfjs';
+import {Tensor} from '@tensorflow/tfjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,17 +22,27 @@ export class Pix2PixService {
       return null;
     }
 
+    // TODO add this code as a test
+    console.log(this.sequentialModel.getWeights());
+    for (const weight of this.sequentialModel.getWeights()) {
+      const data = await weight.data();
+      tf.isNaN(data).any().print();
+    }
+
     const image = tf.tidy(() => {
       const pixels = tf.browser.fromPixels(canvas).toFloat();
-      console.log({pixels}, pixels.dtype);
-      pixels.print();
-      const tensor = pixels.reshape([1, canvas.width, canvas.height, 3]);
+      const input = tf.sub(tf.div(pixels, tf.scalar(127.5)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
+      const tensor = input.reshape([1, canvas.width, canvas.height, 3]);
+
+
+      tensor.print();
+
       const pred = this.sequentialModel.predict(tensor) as Tensor;
-      return pred.reshape([canvas.width, canvas.height, 3]) as Tensor3D;
+      pred.print();
+      // return pred.reshape([canvas.width, canvas.height, 3]) as Tensor3D;
     });
 
-    console.log(image.dataSync());
 
-    await tf.browser.toPixels(image, target);
+    // await tf.browser.toPixels(image, target);
   }
 }

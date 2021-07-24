@@ -1,5 +1,4 @@
 import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
-import {Store} from '@ngxs/store';
 import {BaseComponent} from '../../../components/base/base.component';
 import {Pix2PixService} from '../../../modules/pix2pix/pix2pix.service';
 
@@ -10,6 +9,8 @@ function promiseRaf<T>(callback: CallableFunction): Promise<T> {
     });
   });
 }
+
+declare type HTMLPoseViewerElement = any; // TODO figure out why tests break without this
 
 @Component({
   selector: 'app-pose-viewer',
@@ -29,7 +30,7 @@ export class PoseViewerComponent extends BaseComponent implements AfterViewInit 
   cache: ImageData[] = [];
   ready = false;
 
-  constructor(private store: Store, private pix2pix: Pix2PixService) {
+  constructor(private pix2pix: Pix2PixService) {
     super();
   }
 
@@ -51,9 +52,9 @@ export class PoseViewerComponent extends BaseComponent implements AfterViewInit 
         });
         const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
         this.cache.push(image);
-        console.log({image});
 
         await pose.nextFrame();
+        break;
       }
 
       console.log('Ended');

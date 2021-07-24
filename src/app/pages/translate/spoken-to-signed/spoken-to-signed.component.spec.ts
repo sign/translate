@@ -1,9 +1,13 @@
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 
 import {SpokenToSignedComponent} from './spoken-to-signed.component';
-import {SignwritingComponent} from '../signwriting/signwriting.component';
+import {SignWritingComponent} from '../signwriting/sign-writing.component';
 import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {NgxsModule} from '@ngxs/store';
+import {SettingsState} from '../../../modules/settings/settings.state';
+import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 
 describe('SpokenToSignedComponent', () => {
   let component: SpokenToSignedComponent;
@@ -13,13 +17,15 @@ describe('SpokenToSignedComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         SpokenToSignedComponent,
-        SignwritingComponent,
+        SignWritingComponent,
         TextToSpeechComponent
       ],
       imports: [
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
         FormsModule,
         ReactiveFormsModule
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   });
 

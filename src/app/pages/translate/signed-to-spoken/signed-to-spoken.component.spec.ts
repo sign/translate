@@ -5,6 +5,7 @@ import {NgxsModule} from '@ngxs/store';
 import {VideoState} from '../../../core/modules/ngxs/store/video/video.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {SettingsState} from '../../../modules/settings/settings.state';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('SignedToSpokenComponent', () => {
   let component: SignedToSpokenComponent;
@@ -15,7 +16,8 @@ describe('SignedToSpokenComponent', () => {
       declarations: [SignedToSpokenComponent],
       imports: [
         NgxsModule.forRoot([SettingsState, VideoState], ngxsConfig)
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   });
 

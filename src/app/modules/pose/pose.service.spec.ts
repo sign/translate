@@ -28,7 +28,7 @@ describe('PoseService', () => {
     };
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(service).toBeTruthy();
   });
 

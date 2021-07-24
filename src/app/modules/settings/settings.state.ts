@@ -28,7 +28,7 @@ const initialState: SettingsStateModel = {
   drawPose: true,
   drawSignWriting: true,
 
-  humanizePose: true,
+  humanizePose: false,
 };
 
 @Injectable()

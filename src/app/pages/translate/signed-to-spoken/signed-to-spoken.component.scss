@@ -15,7 +15,7 @@
     grid-template-columns: 100px auto;
   }
 
-  app-signwriting {
+  app-sign-writing {
     border-right: 1px solid map-get($mat-light-theme-foreground, divider);
 
     @media (prefers-color-scheme: dark) {

@@ -1,21 +1,20 @@
 import {TestBed} from '@angular/core/testing';
-
-import {DetectorService} from './detector.service';
 import * as tf from '@tensorflow/tfjs';
+import {Pix2PixService} from './pix2pix.service';
 
-describe('DetectorService', () => {
-  let service: DetectorService;
+describe('Pix2Pix', () => {
+  let service: Pix2PixService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DetectorService);
+    service = TestBed.inject(Pix2PixService);
   });
 
   it('should create', () => {
     expect(service).toBeTruthy();
   });
 
-  it('model weights should not contain NaN', async () => {
+  xit('model weights should not contain NaN', async () => {
     await service.loadModel();
     const model = service.sequentialModel;
 

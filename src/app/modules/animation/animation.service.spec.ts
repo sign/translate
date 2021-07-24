@@ -2,6 +2,7 @@ import {TestBed} from '@angular/core/testing';
 
 import {AnimationService} from './animation.service';
 import {Pose} from '../pose/pose.state';
+import * as tf from '@tensorflow/tfjs';
 
 describe('AnimationService', () => {
   let service: AnimationService;
@@ -9,6 +10,23 @@ describe('AnimationService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(AnimationService);
+  });
+
+  it('should create', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('model weights should not contain NaN', async () => {
+    await service.loadModel();
+    const model = service.sequentialModel;
+
+    expect(model).toBeTruthy();
+
+    for (const weight of model.getWeights()) {
+      const data = await weight.data();
+      const isNaN = Boolean(tf.isNaN(data).any().dataSync()[0]);
+      expect(isNaN).toBeFalse();
+    }
   });
 
   it('should normalize pose correctly', () => {
