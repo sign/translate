@@ -26,6 +26,8 @@
 
 html, body {
   height: 100%;
+  // Does not work in iOS PWA, requires hijacking javascript
+  overscroll-behavior-y: none;
 }
 
 body {

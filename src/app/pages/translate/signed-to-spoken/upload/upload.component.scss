@@ -1,20 +1,27 @@
 @import "../../../../../theme/variables.scss";
 
 h3 {
-  color: #202124;
   font-family: "Google Sans", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  margin: 0
+  margin: 0;
+
+  @media (prefers-color-scheme: dark) {
+    color: map-get($mat-dark-theme-foreground, text);
+  }
 }
 
 p {
-  color: map-get($mat-gray, 800);
+  color: map-get($mat-light-theme-foreground, secondary-text);
   font-size: 14px;
   font-weight: 400;
   margin-top: 8px;
   margin-bottom: 26px;
+
+  @media (prefers-color-scheme: dark) {
+    color: map-get($mat-dark-theme-foreground, secondary-text);
+  }
 }
 
 button {

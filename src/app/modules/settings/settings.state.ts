@@ -13,6 +13,8 @@ export interface SettingsStateModel {
   drawVideo: boolean;
   drawPose: boolean;
   drawSignWriting: boolean;
+
+  humanizePose: boolean;
 }
 
 const initialState: SettingsStateModel = {
@@ -25,6 +27,8 @@ const initialState: SettingsStateModel = {
   drawVideo: true,
   drawPose: true,
   drawSignWriting: true,
+
+  humanizePose: true,
 };
 
 @Injectable()
