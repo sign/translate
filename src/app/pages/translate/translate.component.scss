@@ -6,7 +6,7 @@
   text-rendering: optimizeLegibility;
 
   @media (prefers-color-scheme: dark) {
-    background-color: map-get($mat-dark-theme-background, app-bar)
+    background-color: black;
   }
 }
 
@@ -24,7 +24,7 @@
     z-index: -1;
 
     @media (prefers-color-scheme: dark) {
-      background-color: #2a2a2a;
+      background-color: #151515;
       border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
     }
   }
@@ -32,6 +32,7 @@
 
 mat-toolbar {
   box-sizing: border-box;
+  background-color: black;
   border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
   font-family: "Product Sans", Arial, sans-serif;
   font-weight: 400;
@@ -85,7 +86,7 @@ mat-toolbar {
     box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.37);
 
     @media (prefers-color-scheme: dark) {
-      background-color: map-get($mat-dark-theme-background, app-bar)
+      background-color: #101010;
     }
 
     @media #{$mat-gt-xs} {
