@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 import * as tf from '@tensorflow/tfjs';
-import {Pix2PixService} from './pix2pix.service';
+import {ModelNotLoadedError, Pix2PixService} from './pix2pix.service';
 
 describe('Pix2Pix', () => {
   let service: Pix2PixService;
@@ -25,5 +25,14 @@ describe('Pix2Pix', () => {
       const isNaN = Boolean(tf.isNaN(data).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
+  });
+
+  it('translate when model isn\'t available should not draw', async () => {
+    const canvas1 = document.createElement('canvas');
+    const canvas2 = document.createElement('canvas');
+    canvas1.width = canvas2.width = canvas1.height = canvas2.height = 256;
+
+    const translate = service.translate(canvas1, canvas2);
+    await expectAsync(translate).toBeRejectedWith(new ModelNotLoadedError());
   });
 });

@@ -44,19 +44,15 @@ This app facilitates bi-directional multi-directional translation research, base
 
 #### Spoken-to-signed language translation
 - Text input
-- Microphone inputs - **TODO**
+- Microphone input - **TODO**
 - Text-to-speech
 - Spoken language text to SignWriting translation - **TODO**
 - SignWriting to pose sequence - **TODO**
-- Pose sequence to video - **TODO**
+- Pose sequence to video - **TODO** (https://github.com/tensorflow/tfjs/issues/5374)
 - Text to pose sequence (server side)
-
-#### Additionally Missing:
-- pose-format canvas renderer
 
 #### Mobile support - TODOs
 - Rethink app icon
 - Prevent iOS rubberband scrolling
-- Verify status-bar is white with black text
+- iOS status-bar is black-translucent in light mode
 - MediaPipe doesn't work on mobile (https://github.com/google/mediapipe/issues/1427)
-- Dark mode

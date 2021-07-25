@@ -83,6 +83,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         await this.store.dispatch(poseAction).toPromise();
       }
 
+      // TODO await videoframe if supported
+
       await wait(0);
     }
   }

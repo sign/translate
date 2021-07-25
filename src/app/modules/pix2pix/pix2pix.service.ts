@@ -3,6 +3,12 @@ import {LayersModel} from '@tensorflow/tfjs-layers';
 import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
 
+export class ModelNotLoadedError extends Error {
+  constructor() {
+    super('Model not loaded');
+  }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +25,7 @@ export class Pix2PixService {
 
   async translate(canvas: HTMLCanvasElement, target: HTMLCanvasElement): Promise<void> {
     if (!this.sequentialModel) {
-      return null;
+      throw new ModelNotLoadedError();
     }
 
     // TODO add this code as a test
