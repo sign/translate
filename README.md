@@ -54,5 +54,4 @@ This app facilitates bi-directional multi-directional translation research, base
 #### Mobile support - TODOs
 - Rethink app icon
 - Prevent iOS rubberband scrolling
-- iOS status-bar is black-translucent in light mode
 - MediaPipe doesn't work on mobile (https://github.com/google/mediapipe/issues/1427)
