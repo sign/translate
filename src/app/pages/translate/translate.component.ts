@@ -16,7 +16,6 @@ import {FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSpokenLang
 export class TranslateComponent extends BaseComponent implements OnInit {
   @Select(state => state.translate.spokenToSigned) spokenToSigned$: Observable<boolean>;
   @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
-  @Select(state => state.translate) translate$: Observable<any>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
@@ -45,8 +44,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translate$.subscribe((state) => console.log(state));
-
     this.spokenToSigned$.pipe(
       tap((spokenToSigned) => this.spokenToSigned = spokenToSigned),
       takeUntil(this.ngUnsubscribe)
