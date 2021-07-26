@@ -13,6 +13,7 @@ import {SetSpokenLanguageText} from '../../../modules/translate/translate.action
 })
 export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   @Select(state => state.settings.humanizePose) humanize$: Observable<boolean>;
+  @Select(state => state.translate.spokenLanguage) spokenLanguage$: Observable<string>;
   @Select(state => state.translate.spokenLanguageText) text$: Observable<string>;
   @Select(state => state.translate.signedLanguagePose) pose$: Observable<string>;
 

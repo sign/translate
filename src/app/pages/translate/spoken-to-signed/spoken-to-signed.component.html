@@ -1,7 +1,7 @@
 <div class="translation-text">
   <textarea [formControl]="text" [maxLength]="maxTextLength" autofocus data-gramm_editor="false"></textarea>
   <div>
-    <app-text-to-speech [lang]="'en'" [text]="text.value"></app-text-to-speech>
+    <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="text.value"></app-text-to-speech>
     <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
   </div>
 </div>
@@ -16,5 +16,4 @@
   <ng-template #noPose>
     <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block" width="100%">
   </ng-template>
-
 </div>

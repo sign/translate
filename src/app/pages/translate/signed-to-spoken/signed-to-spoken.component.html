@@ -16,6 +16,12 @@
     <div class="sign-language">
       <app-video [displayControls]="false" [displayFps]="false"></app-video>
     </div>
-    <div class="translation-text">Translation</div>
+
+    <div class="translation-text">
+      <div>Translation</div>
+      <div>
+        <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="'Translation'"></app-text-to-speech>
+      </div>
+    </div>
   </div>
 </ng-container>

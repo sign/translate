@@ -92,8 +92,14 @@ mat-toolbar {
     @media #{$mat-gt-xs} {
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
     }
+
     @media #{$mat-gt-md} {
       border-radius: 8px;
+    }
+
+    @media #{$mat-lt-sm} {
+      overflow-y: auto;
+      max-height: calc(100vh - 56px);
     }
 
     #language-selector {

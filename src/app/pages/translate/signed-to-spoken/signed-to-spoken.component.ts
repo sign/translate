@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
@@ -68,7 +68,7 @@ export class SignedToSpokenComponent implements OnInit {
 
   @Select(state => state.video) videoState$: Observable<VideoStateModel>;
   @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
-
+  @Select(state => state.translate.spokenLanguage) spokenLanguage$: Observable<string>;
 
   // This is bullshit for now
   translation = 'Translation';
