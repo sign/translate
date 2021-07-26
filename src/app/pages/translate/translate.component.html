@@ -5,7 +5,7 @@
   </mat-toolbar>
 
   <div id="container">
-    <div id="input-mode-group">
+    <div id="input-mode-group" *ngIf="inputMode$ | async as inputMode">
       <ng-container *ngIf="spokenToSigned">
         <button (click)="setInputMode('text')" [class.selected]="inputMode === 'text'" color="primary"
                 mat-stroked-button>
@@ -30,7 +30,8 @@
     <div id="translation-card">
       <div id="language-selector">
         <app-language-selector [flags]="true" [hasLanguageDetection]="!spokenToSigned" [languages]="signedLanguages"
-                               translationKey="translate.languages.signed"></app-language-selector>
+                               translationKey="translate.languages.signed"
+                               (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
         <!-- disabled -->
         <button (click)="swapLanguages()" [matTooltip]="t('swapLanguages')" id="swap-languages" mat-icon-button>
@@ -38,14 +39,15 @@
         </button>
 
         <app-language-selector [hasLanguageDetection]="spokenToSigned" [languages]="spokenLanguages"
-                               translationKey="translate.languages.spoken"></app-language-selector>
+                               translationKey="translate.languages.spoken"
+                               (languageChange)="setSpokenLanguage($event)"></app-language-selector>
       </div>
 
       <div id="content">
         <!-- Spoken to sign requires a text input and video output -->
         <app-spoken-to-signed *ngIf="spokenToSigned"></app-spoken-to-signed>
         <!-- Sign to spoken requires a video input and text output -->
-        <app-signed-to-spoken *ngIf="!spokenToSigned" [inputMode]="inputMode"></app-signed-to-spoken>
+        <app-signed-to-spoken *ngIf="!spokenToSigned"></app-signed-to-spoken>
       </div>
     </div>
 

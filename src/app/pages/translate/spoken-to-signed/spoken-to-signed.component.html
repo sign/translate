@@ -6,9 +6,15 @@
   </div>
 </div>
 <app-sign-writing [signs]="signWriting"></app-sign-writing>
-<div class="sign-language" *ngIf="{humanize: humanize$ | async} as context">
-  <app-pose-viewer *ngIf="pose && context.humanize" [src]="pose" autoplay loop></app-pose-viewer>
-  <pose-viewer *ngIf="pose && !context.humanize" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
-  <img *ngIf="!pose" src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block"
-       width="100%">
+<div class="sign-language">
+  <ng-container *ngIf="pose$ | async as pose; else noPose">
+    <ng-container *ngIf="{humanize: humanize$ | async} as context">
+      <app-pose-viewer *ngIf="pose && context.humanize" [src]="pose" autoplay loop></app-pose-viewer>
+      <pose-viewer *ngIf="pose && !context.humanize" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
+    </ng-container>
+  </ng-container>
+  <ng-template #noPose>
+    <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block" width="100%">
+  </ng-template>
+
 </div>

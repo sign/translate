@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {InputMode} from '../translate.component';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
+import {InputMode} from '../../../modules/translate/translate.state';
 
 
 const FAKE_WORDS = [
@@ -67,8 +67,8 @@ const FAKE_WORDS = [
 export class SignedToSpokenComponent implements OnInit {
 
   @Select(state => state.video) videoState$: Observable<VideoStateModel>;
+  @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
 
-  @Input() inputMode: InputMode;
 
   // This is bullshit for now
   translation = 'Translation';

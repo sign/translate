@@ -1,20 +1,25 @@
-import {Component, HostBinding} from '@angular/core';
-import {Store} from '@ngxs/store';
-import {StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
+import {Component, HostBinding, OnInit} from '@angular/core';
+import {Select, Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
+import {Observable} from 'rxjs';
+import {BaseComponent} from '../../components/base/base.component';
+import {takeUntil, tap} from 'rxjs/operators';
+import {InputMode} from '../../modules/translate/translate.state';
+import {FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSpokenLanguage} from '../../modules/translate/translate.actions';
 
-export type InputMode = 'webcam' | 'upload' | 'text';
 
 @Component({
   selector: 'app-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss']
 })
-export class TranslateComponent {
+export class TranslateComponent extends BaseComponent implements OnInit {
+  @Select(state => state.translate.spokenToSigned) spokenToSigned$: Observable<boolean>;
+  @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
+  @Select(state => state.translate) translate$: Observable<any>;
 
-  @HostBinding('class.spoken-to-signed') spokenToSigned = true;
+  @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
-  inputMode: InputMode;
 
   signedLanguages = ['us', 'fr', 'es', 'sy', 'by', 'bg', 'fl', 'hr', 'cz', 'dk', 'in', 'nz', 'gb', 'ee', 'fi', 'at', 'de', 'cy', 'gr', 'is',
     'isl', 'it', 'jp', 'lv', 'lt', 'ir', 'pl', 'br', 'pt', 'ro', 'ru', 'sk', 'ar', 'cl', 'cu', 'mx', 'se', 'tr', 'ua', 'pk'];
@@ -27,31 +32,42 @@ export class TranslateComponent {
 
 
   constructor(private store: Store) {
+    super();
+
     document.title = 'Sign Translate'; // Set page title
+
     // Default settings
     this.store.dispatch([
       new SetSetting('receiveVideo', true),
       new SetSetting('detectSign', false),
       new SetSetting('drawPose', true),
     ]);
-    this.setInputMode('text');
   }
 
-  setInputMode(inputMode: InputMode): void {
-    if (this.inputMode === inputMode) {
-      return;
-    }
-    this.inputMode = inputMode;
+  ngOnInit(): void {
+    this.translate$.subscribe((state) => console.log(state));
 
-    this.store.dispatch(StopVideo);
-    if (inputMode === 'webcam') {
-      this.store.dispatch(StartCamera);
-    }
+    this.spokenToSigned$.pipe(
+      tap((spokenToSigned) => this.spokenToSigned = spokenToSigned),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
+  }
+
+
+  setSignedLanguage(lang: string): void {
+    this.store.dispatch(new SetSignedLanguage(lang));
+  }
+
+  setSpokenLanguage(lang: string): void {
+    this.store.dispatch(new SetSpokenLanguage(lang));
+  }
+
+  setInputMode(mode: InputMode): void {
+    this.store.dispatch(new SetInputMode(mode));
   }
 
   swapLanguages(): void {
-    this.spokenToSigned = !this.spokenToSigned;
-    this.setInputMode(this.spokenToSigned ? 'text' : 'webcam');
+    this.store.dispatch(FlipTranslationDirection);
   }
 }
 

@@ -1,19 +1,21 @@
-<ng-container *ngIf="inputMode === 'upload'">
-  <ng-container *ngIf="videoState$ | async as videoState">
-    <app-upload *ngIf="!videoState.src"></app-upload>
-    <div *ngIf="videoState.src" class="interface">
-      <div class="sign-language">
-        <app-video [displayControls]="false" [displayFps]="false"></app-video>
+<ng-container *ngIf="inputMode$ | async as inputMode">
+  <ng-container *ngIf="inputMode === 'upload'">
+    <ng-container *ngIf="videoState$ | async as videoState">
+      <app-upload *ngIf="!videoState.src"></app-upload>
+      <div *ngIf="videoState.src" class="interface">
+        <div class="sign-language">
+          <app-video [displayControls]="false" [displayFps]="false"></app-video>
+        </div>
+        <app-sign-writing [signs]="signWriting"></app-sign-writing>
+        <div class="translation-text">{{translation}}</div>
       </div>
-      <app-sign-writing [signs]="signWriting"></app-sign-writing>
-      <div class="translation-text">{{translation}}</div>
-    </div>
+    </ng-container>
   </ng-container>
-</ng-container>
 
-<div *ngIf="inputMode === 'webcam'" class="interface">
-  <div class="sign-language">
-    <app-video [displayControls]="false" [displayFps]="false"></app-video>
+  <div *ngIf="inputMode === 'webcam'" class="interface">
+    <div class="sign-language">
+      <app-video [displayControls]="false" [displayFps]="false"></app-video>
+    </div>
+    <div class="translation-text">Translation</div>
   </div>
-  <div class="translation-text">Translation</div>
-</div>
+</ng-container>

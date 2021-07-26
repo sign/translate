@@ -27,6 +27,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {Pix2PixModule} from './modules/pix2pix/pix2pix.module';
 import {PoseViewerComponent} from './pages/translate/pose-viewer/pose-viewer.component';
 import {environment} from '../environments/environment';
+import {TranslateModule} from './modules/translate/translate.module';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import {environment} from '../environments/environment';
     DetectorModule,
     AnimationModule,
     Pix2PixModule,
+    TranslateModule,
     NgxFlagIconCssModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

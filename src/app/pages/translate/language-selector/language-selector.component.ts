@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-language-selector',
@@ -12,7 +12,10 @@ export class LanguageSelectorComponent implements OnInit {
   @Input() languages: string[];
   @Input() translationKey: string;
 
-  language: string;
+  @Input() language: string;
+
+  @Output() languageChange = new EventEmitter<string>();
+
   topLanguages: string[];
 
   selectedIndex = 0;
@@ -34,6 +37,7 @@ export class LanguageSelectorComponent implements OnInit {
 
     // Update selected language
     this.language = lang;
+    this.languageChange.emit(this.language);
 
     const index = this.topLanguages.indexOf(this.language);
     this.selectedIndex = index + Number(this.hasLanguageDetection);
