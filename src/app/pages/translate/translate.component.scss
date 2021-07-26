@@ -1,12 +1,18 @@
 @import "../../../theme/variables";
 
-::ng-deep body {
-  background-color: white;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+::ng-deep {
+  html, body {
+    overflow: hidden;
+  }
 
-  @media (prefers-color-scheme: dark) {
-    background-color: black;
+  body {
+    background-color: white;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: black;
+    }
   }
 }
 
@@ -49,6 +55,13 @@ mat-toolbar {
   max-width: 1280px;
   margin: 0 auto;
   transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+
+  max-height: calc(100vh - 64px);
+
+  @media #{$mat-lt-sm} {
+    max-height: calc(100vh - 56px);
+  }
 
   @media #{$mat-gt-md} {
     padding: 0 48px;
@@ -95,11 +108,6 @@ mat-toolbar {
 
     @media #{$mat-gt-md} {
       border-radius: 8px;
-    }
-
-    @media #{$mat-lt-sm} {
-      overflow-y: auto;
-      max-height: calc(100vh - 56px);
     }
 
     #language-selector {

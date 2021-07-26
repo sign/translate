@@ -40,7 +40,7 @@ This app facilitates bi-directional multi-directional translation research, base
 - Segmentation - **TODO**
 - Tokenization - **TODO**
 - SignWriting to spoken language translation - **TODO**
-- Text-to-speech - **TODO**
+- Text-to-speech
 
 #### Spoken-to-signed language translation
 - Text input
