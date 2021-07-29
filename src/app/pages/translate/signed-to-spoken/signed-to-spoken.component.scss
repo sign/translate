@@ -37,6 +37,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 150px;
 
   :first-child {
     flex-grow: 1;
