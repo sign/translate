@@ -38,6 +38,11 @@
               "./node_modules/flag-icon-css/css/flag-icon.min.css",
               "src/theme/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/"
+              ]
+            },
             "scripts": [],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json",

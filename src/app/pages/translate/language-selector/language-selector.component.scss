@@ -42,17 +42,13 @@ button.menu-language-button {
 
 
 ::ng-deep {
-  mat-tab-header {
-    border-bottom: none !important;
-  }
-
-  .mat-tab-label {
+  .mdc-tab {
     min-width: unset !important;
     text-transform: uppercase;
     padding: 0 16px !important;
 
     @media (prefers-color-scheme: dark) {
-      opacity: 1 !important;
+      color: map-get($mat-dark-theme-foreground, text);
     }
 
     &[aria-selected="true"] {
@@ -62,7 +58,7 @@ button.menu-language-button {
   }
 
   // Mat tab has a bug that when changing tabs, the height of the body is at least 1 px
-  .mat-tab-body-wrapper {
+  .mat-mdc-tab-body-wrapper {
     display: none !important;
   }
 

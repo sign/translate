@@ -9,7 +9,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatTabsModule} from '@angular/material/tabs';
+import {MatTabsModule} from '@angular/material-experimental/mdc-tabs';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const materialModules = [
