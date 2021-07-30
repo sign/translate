@@ -9,8 +9,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatTabsModule} from '@angular/material-experimental/mdc-tabs';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTabsModule} from '@angular/material-experimental/mdc-tabs';
 
 const materialModules = [
   MatToolbarModule,
@@ -23,8 +23,8 @@ const materialModules = [
   MatFormFieldModule,
   MatCheckboxModule,
   BrowserAnimationsModule,
-  MatTabsModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatTabsModule
 ];
 
 @NgModule({
