@@ -64,6 +64,18 @@ describe('HandsService', () => {
     }
   });
 
+  it('should find angle rotation bucket for representative points', () => {
+    expect(service.angleRotationBucket(45 * 0)).toBe(0);
+    expect(service.angleRotationBucket(45 * 1)).toBe(1);
+    expect(service.angleRotationBucket(45 * 2)).toBe(2);
+    expect(service.angleRotationBucket(45 * 3)).toBe(3);
+    expect(service.angleRotationBucket(45 * 4)).toBe(4);
+    expect(service.angleRotationBucket(45 * 5)).toBe(5);
+    expect(service.angleRotationBucket(45 * 6)).toBe(6);
+    expect(service.angleRotationBucket(45 * 7)).toBe(7);
+    expect(service.angleRotationBucket(45 * 8)).toBe(0);
+  });
+
 
 });
 

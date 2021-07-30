@@ -89,15 +89,18 @@ export class HandsService {
     return 'floor';
   }
 
+  angleRotationBucket(angle: number): number {
+    angle += 360 / 16; // make a safety margin around every angle
+    angle = (angle + 360) % 360; // working with positive angles is easier
+    return Math.floor(angle / 45);
+  }
+
   rotation(vectors: THREE.Vector3[]): number {
     const p1 = vectors[0];
     const p2 = vectors[13];
 
-    let angle = this.poseNormalization.angle(p2.y - p1.y, p2.x - p1.x) + 94; // SignWriting first chat is 90 degrees rotated
-
-    angle += 360 / 16; // make a safety margin around every angle
-    angle = (angle + 360) % 360; // working with positive angles is easier
-    return Math.floor(angle / 45);
+    const angle = this.poseNormalization.angle(p2.y - p1.y, p2.x - p1.x) + 90; // SignWriting first char is 90 degrees rotated
+    return this.angleRotationBucket(angle);
   }
 
   direction(plane: HandPlane, normal: PlaneNormal, flipAxis: boolean): HandDirection {
