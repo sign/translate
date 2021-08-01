@@ -71,7 +71,7 @@ describe('SignWritingComponent', () => {
 
     const newColor = await getColor();
     expect(newColor).toBe(specialColor);
-  });
+  }, 10000);
 
   it('should unregister event listenr on destroy', () => {
     const spy = spyOn(component.colorSchemeMedia, 'removeEventListener');
