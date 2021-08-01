@@ -52,6 +52,7 @@ describe('HandsService', () => {
       const vectors = x.map(v => new THREE.Vector3(v[0], v[1], v[2]));
       const normal = service.normal(vectors); // TODO maybe need to flip normal?
       const yHat = service.normalizeHand(vectors, normal, false).arraySync();
+      // This is evaluated one item at a time because of negative zeros
       for (let i = 0; i < y.length; i++) {
         for (let j = 0; j < 3; j++) {
           const yRound = Number(y[i][j].toFixed(2));

@@ -19,19 +19,21 @@
 :host {
   height: 100vh;
 
-  &::before {
-    background-color: map-get($mat-grey, 50);
-    border-bottom: 1px solid map-get($mat-light-theme-foreground, divider);
-    content: '';
-    display: block;
-    height: 162px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
+  @media #{$mat-gt-xs} {
+    &::before {
+      background-color: map-get($mat-grey, 50);
+      border-bottom: 1px solid map-get($mat-light-theme-foreground, divider);
+      content: '';
+      display: block;
+      height: 162px;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
 
-    @media (prefers-color-scheme: dark) {
-      background-color: #151515;
-      border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
+      @media (prefers-color-scheme: dark) {
+        background-color: #151515;
+        border-bottom: 1px solid map-get($mat-dark-theme-foreground, divider);
+      }
     }
   }
 }

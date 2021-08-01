@@ -12,6 +12,8 @@ and perform various techniques to extract meaningful information for sign langua
 based on the SignWriting definitions of the five major axis of variation -
 handedness; plane; rotation; view; and shape.
 
+![Skeleton anatomy of a hand](https://www.assh.org/handcare/servlet/servlet.FileDownload?file=00P0a00000ocFz1EAE)
+
 ## Handedness
 Handedness is the distinction between the right, and left hand.
 Signed Languages make a distinction between the dominant hand, and non-dominant hand 
@@ -50,8 +52,8 @@ $tan^{-1}(mmcp.y - sst.y / mmcp.x - sst.x)$, and find the bucket it should be ca
 ## View
 
 View is the distinction between the hand's various *y* rotations, grouped to four categories:
-1. Outwards - the signer can only observe the back of their hand.
-2. Inwards - the signer can only observe the front of their hand.
+1. Back - the signer can only observe the back of their hand.
+2. Palm - the signer can only observe the front of their hand.
 3. Sideways - the signer can observe both sides of their hand. The back of the hand on the same side as its handedness (e.g, the back of the hand on the right side, for the right hand).
 3. Other-sideways - the signer can observe both sides of their hand, but the hand is rotated to the other side than 3.
 
@@ -67,4 +69,18 @@ If the normal is TODO ...
 
 ## Shape
 
-TODO
+Shape is the distinctive configurations that the hand takes as it is used to form signs.
+Different signed languages use different number of hand shapes (e.g. BSL is limited to [approximately 40](https://bsl.surrey.ac.uk/principles/i-hand-shapes), while estimates of ASL handshapes vary [from 30 to 80](https://aslfont.github.io/Symbol-Font-For-ASL/asl/handshapes.html)).
+
+TODO add handshapes table https://aslfont.github.io/Symbol-Font-For-ASL/asl/handshapes.html
+
+As SignWriting is designed to be a universal writing system for signed languages, it specifies a super-set of 261 distinct hand shapes, 
+where each sign language uses a subset of these.
+All handshapes are specified in the [SignWriting Hand Symbols](https://www.academia.edu/39941992/SignWriting_Hand_Symbols_in_the_International_SignWriting_Alphabet_2010) book,
+including a title for each handshape, a unique identifier, and 6 examples from different plane and view, with images of an adult white male hand.
+
+We observe a fundamental truth - every example for each hand shape is a photograph of the same hand, and thus, given the 3D coordinates of every joint, 
+can be transformed to the other examples by a closed, and well defined set of mathematical operations (namely, 3D rotation, scaling, and translation).
+Given this observation, the analysis of a hand shape from an image can ignore the variation in rotation, view, and plane, and mathematically normalize any given hand to a fixed orientation.
+
+Thus, we go on a quest to find the best, accurate 3D hand pose estimation system, based on the 3D rotation consistency alone: [3D Hand Pose Benchmark](https://github.com/sign-language-processing/3d-hands-benchmark).
