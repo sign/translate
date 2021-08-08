@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Client Build Test
+name: Client Test > Build > Deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -38,6 +38,11 @@ jobs:
 
       - name: Test code
         run: npm run test:ci
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
         run: npm run build
