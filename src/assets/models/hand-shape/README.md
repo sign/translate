@@ -5,24 +5,24 @@ Videos:
 # Hand Shape Analysis
 
 The most prominent feature of signed languages, is their use of the hands.
-The hands play an important role in the phonetics of signs, and a slight variation in them can create variations in meaning.
+The hands play an important role in the phonetics of signs, and a slight variation in them can convey differences in meaning.
 
 We use 3D pose estimation to extract a semi-accurate hand skeletal representation, 
-and perform various techniques to extract meaningful information for sign language, 
-based on the SignWriting definitions of the five major axis of variation -
-handedness; plane; rotation; view; and shape.
+and perform various techniques to analyze meaningful information for sign language, 
+based on the SignWriting definitions of the five major axis of hand variation -
+handedness, plane, rotation, view, and shape.
 
 ![Skeleton anatomy of a hand](https://www.assh.org/handcare/servlet/servlet.FileDownload?file=00P0a00000ocFz1EAE)
 
 ## Handedness
-Handedness is the distinction between the right, and left hand.
-Signed Languages make a distinction between the dominant hand, and non-dominant hand 
+Handedness is the distinction between the right, and left hands.
+Signed languages make a distinction between the dominant hand, and non-dominant hand 
 (for right-handed individuals, the right hand is considered dominant, and vice-versa).
 One should use their dominant hand for fingerspelling, and all one-handed signs,
 and their non-dominant hand for support (e.g. enumeration), and two-handed signs.
 
 Using pose estimation, the handedness analysis is trivial,
-as the pose estimation platform predicts which hand is which.
+as the pose estimation platform we use predicts which hand is which.
 
 ## Plane
 
@@ -39,7 +39,6 @@ exhibit the same hand shape, view, rotation, contact, and movement, but differ b
 To analyze each hand's plane, we compare the *dy* and *dz* of the *middle finger metacarpal bone* (spanning from the *wrist* (or *sst*), to the *middle finger metacarpophalngeal joint* (or *mmcp*)).
 If $dy = |mmcp.y - sst.y|$ is greater than $dz = |mmcp.z - sst.z|$ we consider the hand parallel to the wall plane. 
 Otherwise, we consider the hand parallel to the floor plane.
-
 
 ## Rotation
 
