@@ -38,7 +38,6 @@ const initialState: PoseStateModel = {
 })
 export class PoseState implements NgxsOnInit {
   constructor(private poseService: PoseService, private store: Store) {
-
   }
 
   ngxsOnInit(ctx?: StateContext<any>): void {
@@ -49,7 +48,16 @@ export class PoseState implements NgxsOnInit {
   async load({patchState, dispatch}: StateContext<PoseStateModel>): Promise<void> {
     patchState({isLoaded: false});
     await this.poseService.load();
-    this.poseService.model.onResults((results) => this.store.dispatch(new StoreFramePose(results)));
+    this.poseService.model.onResults((results) => {
+      // Since v0.4, "results" include additional parameters
+      this.store.dispatch(new StoreFramePose({
+        faceLandmarks: results.faceLandmarks,
+        poseLandmarks: results.poseLandmarks,
+        leftHandLandmarks: results.leftHandLandmarks,
+        rightHandLandmarks: results.rightHandLandmarks,
+        image: results.image
+      }));
+    });
   }
 
   @Action(PoseVideoFrame)
