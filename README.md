@@ -5,11 +5,10 @@
 
 
 
-# Sign Translate App
+# [👋 Sign Translate](https://sign-language-processing.github.io/playground/translate)
 
-This app facilitates bi-directional multi-directional translation research, based on models from the playground.
-
-[Visit the app!](https://sign-language-processing.github.io/playground/translate)
+A bi-directional multilingual translation app for desktop and mobile, 
+based on state-of-the-art real-time client side models.
 
 #### Including:
 
