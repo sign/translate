@@ -39,7 +39,6 @@ based on state-of-the-art real-time client side models.
 
 #### Mobile support - TODOs
 - Rethink app icon
-- Prevent iOS rubberband scrolling
 - MediaPipe doesn't work on mobile (https://github.com/google/mediapipe/issues/1427)
 
 
