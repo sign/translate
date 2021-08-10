@@ -4,8 +4,8 @@ import {PlaygroundComponent} from './pages/playground/playground.component';
 import {TranslateComponent} from './pages/translate/translate.component';
 
 const routes: Routes = [
-  {path: '', component: PlaygroundComponent},
-  {path: 'translate', component: TranslateComponent},
+  {path: '', component: TranslateComponent},
+  {path: 'playground', component: PlaygroundComponent},
 ];
 
 @NgModule({

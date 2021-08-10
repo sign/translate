@@ -5,7 +5,7 @@
 
 
 
-# [👋 Sign Translate](https://sign-language-processing.github.io/playground/translate)
+# [👋 Sign Translate](https://sign.mt/)
 
 A bi-directional multilingual translation app for desktop and mobile, 
 based on state-of-the-art real-time client side models.

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --configuration=production --base-href=/playground/",
+    "build": "ng build --configuration=production --base-href=/",
     "pwa:assets": "pwa-asset-generator src/assets/icons/icon.png src/assets/icons/generated/ -i src/index.html -m src/manifest.webmanifest --background #3F51B5 --favicon --mstile",
     "test": "ng test --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
