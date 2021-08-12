@@ -1,8 +1,10 @@
 <ng-container *transloco="let t; read: 'translate'">
-  <mat-toolbar>
-    <mat-icon>waving_hand</mat-icon>
-    <span>&nbsp;{{t('title')}}</span>
-  </mat-toolbar>
+  <header>
+    <mat-toolbar>
+      <mat-icon>waving_hand</mat-icon>
+      <span>&nbsp;{{t('title')}}</span>
+    </mat-toolbar>
+  </header>
 
   <div id="container">
     <div id="input-mode-group" *ngIf="inputMode$ | async as inputMode">
@@ -34,7 +36,8 @@
                                (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
         <!-- disabled -->
-        <button (click)="swapLanguages()" [matTooltip]="t('swapLanguages')" id="swap-languages" mat-icon-button>
+        <button (click)="swapLanguages()" id="swap-languages" mat-icon-button
+                [matTooltip]="t('swapLanguages')" [attr.aria-label]="t('swapLanguages')">
           <mat-icon>swap_horiz</mat-icon>
         </button>
 

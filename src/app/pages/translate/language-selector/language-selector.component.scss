@@ -19,7 +19,7 @@ button.menu-icon-button {
   }
 
   @media (prefers-color-scheme: dark) {
-    color: map-get($mat-dark-theme-foreground, icon);
+    color: map-get($dark-theme-foreground-palette, icon);
   }
 }
 
@@ -48,7 +48,7 @@ button.menu-language-button {
     padding: 0 16px !important;
 
     @media (prefers-color-scheme: dark) {
-      color: map-get($mat-dark-theme-foreground, text);
+      color: map-get($dark-theme-foreground-palette, text);
     }
 
     &[aria-selected="true"] {

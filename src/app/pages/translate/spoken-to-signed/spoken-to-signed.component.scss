@@ -11,19 +11,19 @@
     grid-template-columns: auto 100px;
 
     .sign-language {
-      border-top: 1px solid map-get($mat-light-theme-foreground, divider);
+      border-top: 1px solid map-get($light-theme-foreground-palette, divider);
 
       @media (prefers-color-scheme: dark) {
-        border-top: 1px solid map-get($mat-dark-theme-foreground, divider);
+        border-top: 1px solid map-get($dark-theme-foreground-palette, divider);
       }
     }
   }
 
   > *:not(:last-child) {
-    border-right: 1px solid map-get($mat-light-theme-foreground, divider);
+    border-right: 1px solid map-get($light-theme-foreground-palette, divider);
 
     @media (prefers-color-scheme: dark) {
-      border-right: 1px solid map-get($mat-dark-theme-foreground, divider);
+      border-right: 1px solid map-get($dark-theme-foreground-palette, divider);
     }
   }
 }
@@ -33,6 +33,10 @@
   color: #878787;
   line-height: 32px;
   flex: 1;
+
+  #spoken-language-label {
+    display: none;
+  }
 
   textarea {
     background-color: transparent;
@@ -45,7 +49,7 @@
     outline: none;
 
     @media (prefers-color-scheme: dark) {
-      color: map-get($mat-dark-theme-foreground, text);
+      color: map-get($dark-theme-foreground-palette, text);
     }
   }
 

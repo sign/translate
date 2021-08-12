@@ -6,6 +6,7 @@ import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {InputMode} from '../../modules/translate/translate.state';
 import {FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSpokenLanguage} from '../../modules/translate/translate.actions';
+import {TranslocoService} from '@ngneat/transloco';
 
 
 @Component({
@@ -30,10 +31,8 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     'sl', 'so', 'su', 'sw', 'sv', 'tl', 'tg', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'];
 
 
-  constructor(private store: Store) {
+  constructor(private store: Store, private translocoService: TranslocoService) {
     super();
-
-    document.title = 'Sign Translate'; // Set page title
 
     // Default settings
     this.store.dispatch([
@@ -44,6 +43,11 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.translocoService.events$.pipe(
+      tap(() => document.title = this.translocoService.translate('translate.title')),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
+
     this.spokenToSigned$.pipe(
       tap((spokenToSigned) => this.spokenToSigned = spokenToSigned),
       takeUntil(this.ngUnsubscribe)
