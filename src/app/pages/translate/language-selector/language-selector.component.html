@@ -1,27 +1,30 @@
-<mat-tab-group (selectedIndexChange)="selectLanguageIndex($event)"
-               [(selectedIndex)]="selectedIndex"
-               [disablePagination]="true">
-  <mat-tab *ngIf="hasLanguageDetection" disabled label="Detect Language"></mat-tab>
-  <mat-tab (select)="selectLanguage(lang)" *ngFor="let lang of topLanguages">
-    <ng-template mat-tab-label>
+<ng-container *transloco="let t; read: 'translate.language-selector'">
+  <mat-tab-group (selectedIndexChange)="selectLanguageIndex($event)"
+                 [(selectedIndex)]="selectedIndex"
+                 [disablePagination]="true">
+    <mat-tab *ngIf="hasLanguageDetection" disabled label="Detect Language"></mat-tab>
+    <mat-tab (select)="selectLanguage(lang)" *ngFor="let lang of topLanguages">
+      <ng-template mat-tab-label>
+        <flag-icon *ngIf="flags" [country]="lang"></flag-icon>
+        {{translationKey + '.' + lang | transloco}}
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+
+  <!-- Language button for small screens -->
+  <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
+    <flag-icon *ngIf="flags" [country]="language"></flag-icon>
+    {{translationKey + '.' + language | transloco}}
+  </button>
+  <!-- Expand icon for large screens -->
+  <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-icon-button" mat-icon-button
+          [attr.aria-label]="t('more')">
+    <mat-icon>expand_more</mat-icon>
+  </button>
+  <mat-menu #signedLanguagesMenu class="language-selector-menu">
+    <button (click)="selectLanguage(lang)" *ngFor="let lang of languages" mat-menu-item>
       <flag-icon *ngIf="flags" [country]="lang"></flag-icon>
       {{translationKey + '.' + lang | transloco}}
-    </ng-template>
-  </mat-tab>
-</mat-tab-group>
-
-<!-- Language button for small screens -->
-<button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
-  <flag-icon *ngIf="flags" [country]="language"></flag-icon>
-  {{translationKey + '.' + language | transloco}}
-</button>
-<!-- Expand icon for large screens -->
-<button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-icon-button" mat-icon-button>
-  <mat-icon>expand_more</mat-icon>
-</button>
-<mat-menu #signedLanguagesMenu class="language-selector-menu">
-  <button (click)="selectLanguage(lang)" *ngFor="let lang of languages" mat-menu-item>
-    <flag-icon *ngIf="flags" [country]="lang"></flag-icon>
-    {{translationKey + '.' + lang | transloco}}
-  </button>
-</mat-menu>
+    </button>
+  </mat-menu>
+</ng-container>

@@ -1,10 +1,8 @@
 <ng-container *transloco="let t; read: 'translate'">
-  <header>
-    <mat-toolbar>
-      <mat-icon>waving_hand</mat-icon>
-      <span>&nbsp;{{t('title')}}</span>
-    </mat-toolbar>
-  </header>
+  <mat-toolbar>
+    <mat-icon>waving_hand</mat-icon>
+    <span>&nbsp;{{t('title')}}</span>
+  </mat-toolbar>
 
   <div id="container">
     <div id="input-mode-group" *ngIf="inputMode$ | async as inputMode">

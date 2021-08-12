@@ -11,7 +11,10 @@
       "text": "Text"
     },
     "swapLanguages": "Swap languages",
-    "spokenToSigned": {
+    "language-selector": {
+      "more": "More Languages"
+    },
+    "spoken-to-igned": {
       "text": "Spoken Language Text"
     },
     "upload": {

@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "../../../theme/variables";
 
 ::ng-deep {
@@ -21,8 +22,8 @@
 
   @media #{$mat-gt-xs} {
     &::before {
-      background-color: map-get($mat-grey, 50);
-      border-bottom: 1px solid map-get($light-theme-foreground-palette, divider);
+      background-color: map-get(mat.$grey-palette, 50);
+      border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
       content: '';
       display: block;
       height: 162px;
@@ -32,7 +33,7 @@
 
       @media (prefers-color-scheme: dark) {
         background-color: #151515;
-        border-bottom: 1px solid map-get($dark-theme-foreground-palette, divider);
+        border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
       }
     }
   }
@@ -41,14 +42,14 @@
 mat-toolbar {
   box-sizing: border-box;
   background-color: black;
-  border-bottom: 1px solid map-get($dark-theme-foreground-palette, divider);
+  border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
   font-family: "Product Sans", Arial, sans-serif;
   font-weight: 400;
 
   @media (prefers-color-scheme: light) {
     background-color: white;
-    border-bottom: 1px solid map-get($light-theme-foreground-palette, divider);
-    color: map-get($mat-gray, 800);
+    border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+    color: map-get(mat.$gray-palette, 800);
   }
 }
 
@@ -114,10 +115,10 @@ mat-toolbar {
 
     #language-selector {
       display: flex;
-      border-bottom: 1px solid map-get($light-theme-foreground-palette, divider);
+      border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
 
       @media (prefers-color-scheme: dark) {
-        border-bottom: 1px solid map-get($dark-theme-foreground-palette, divider);
+        border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
       }
 
       app-language-selector {
@@ -126,11 +127,11 @@ mat-toolbar {
     }
 
     #swap-languages {
-      color: map-get($light-theme-foreground-palette, icon);
+      color: map-get(mat.$light-theme-foreground-palette, icon);
       margin-top: 3px;
 
       @media (prefers-color-scheme: dark) {
-        color: map-get($dark-theme-foreground-palette, icon);
+        color: map-get(mat.$dark-theme-foreground-palette, icon);
       }
     }
   }
@@ -139,8 +140,8 @@ mat-toolbar {
 
 #feedback {
   float: right;
-  color: map-get($light-theme-foreground-palette, text);
-  font-size: 11px;
+  color: map-get(mat.$light-theme-foreground-palette, text);
+  font-size: 12px;
   font-style: italic;
   font-weight: 400;
   margin: 8px 0;
@@ -151,7 +152,7 @@ mat-toolbar {
   }
 
   @media (prefers-color-scheme: dark) {
-    color: map-get($dark-theme-foreground-palette, text);
+    color: map-get(mat.$dark-theme-foreground-palette, text);
   }
 
 }

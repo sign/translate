@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import "../../../../theme/variables";
 
 :host {
@@ -19,7 +20,7 @@ button.menu-icon-button {
   }
 
   @media (prefers-color-scheme: dark) {
-    color: map-get($dark-theme-foreground-palette, icon);
+    color: map-get(mat.$dark-theme-foreground-palette, icon);
   }
 }
 
@@ -48,11 +49,11 @@ button.menu-language-button {
     padding: 0 16px !important;
 
     @media (prefers-color-scheme: dark) {
-      color: map-get($dark-theme-foreground-palette, text);
+      color: map-get(mat.$dark-theme-foreground-palette, text);
     }
 
     &[aria-selected="true"] {
-      color: mat-color($app-primary);
+      color: mat.get-color-from-palette($app-primary);
       transition: color .2s;
     }
   }
