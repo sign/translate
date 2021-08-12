@@ -11,7 +11,7 @@ describe('SignWritingComponent', () => {
 
   beforeAll(async () => {
     await defineCustomElementsSW();
-    await customElements.whenDefined('sgnw-sign');
+    await customElements.whenDefined('fsw-sign');
   });
 
   beforeEach(async () => {
@@ -33,11 +33,11 @@ describe('SignWritingComponent', () => {
   });
 
   it('should change color when prefers-color-scheme changes', async () => {
-    await customElements.whenDefined('sgnw-sign');
+    await customElements.whenDefined('fsw-sign');
 
     const getColor = async () => {
       const getSVG = () => {
-        const el = fixture.nativeElement.querySelector('sgnw-sign');
+        const el = fixture.nativeElement.querySelector('fsw-sign');
         if (!el) {
           return null;
         }
