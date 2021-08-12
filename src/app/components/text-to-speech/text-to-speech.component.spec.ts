@@ -8,6 +8,7 @@ import Spy = jasmine.Spy;
 describe('TextToSpeechComponent', () => {
   let component: TextToSpeechComponent;
   let fixture: ComponentFixture<TextToSpeechComponent>;
+  let voiceSpy: Spy;
 
   const voices = [
     {default: false, lang: 'en-US', localService: false, name: 'English non-local', voiceURI: 'English non-local'},
@@ -32,6 +33,8 @@ describe('TextToSpeechComponent', () => {
     component = fixture.componentInstance;
     component.lang = 'random';
     fixture.detectChanges();
+
+    voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
   });
 
   it('should create', () => {
@@ -41,7 +44,6 @@ describe('TextToSpeechComponent', () => {
   });
 
   it('voiceschanged event should select local service', () => {
-    const voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
     component.lang = 'en';
     window.speechSynthesis.dispatchEvent(new Event('voiceschanged'));
     expect(getVoicesSpy).toHaveBeenCalled();
@@ -54,8 +56,6 @@ describe('TextToSpeechComponent', () => {
   });
 
   it('language change with no voices should not select service', () => {
-    const voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
-
     component.voices = [];
 
     component.lang = 'de';
@@ -67,7 +67,6 @@ describe('TextToSpeechComponent', () => {
   });
 
   it('language change with voices should select service', () => {
-    const voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
     component.voices = voices;
 
     component.lang = 'de';
@@ -81,7 +80,6 @@ describe('TextToSpeechComponent', () => {
   });
 
   it('unknown language change should not be supported', () => {
-    const voiceSpy = spyOnProperty(component.speech, 'voice', 'set');
     component.voices = voices;
 
     component.lang = 'unk';

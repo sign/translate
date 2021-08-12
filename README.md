@@ -27,6 +27,7 @@ based on state-of-the-art real-time client side models.
 - Tokenization - **TODO**
 - SignWriting to spoken language translation - **TODO**
 - Text-to-speech
+- Copy / share / edit translation - **TODO**
 
 #### Spoken-to-signed language translation
 - Text input
