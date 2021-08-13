@@ -31,9 +31,13 @@
 
 .translation-text {
   padding: 20px 24px;
-  color: #878787;
+  color: map-get(mat.$light-theme-foreground-palette, text);
   line-height: 32px;
   flex: 1;
+
+  @media (prefers-color-scheme: dark) {
+    color: map-get(mat.$dark-theme-foreground-palette, text);
+  }
 
   #spoken-language-label {
     display: none;
@@ -41,17 +45,14 @@
 
   textarea {
     background-color: transparent;
+    color: inherit;
+    border: none;
+    resize: none;
+    outline: none;
     font-size: 24px;
     line-height: 32px;
     width: 100%;
     height: calc(100% - 40px);
-    border: none;
-    resize: none;
-    outline: none;
-
-    @media (prefers-color-scheme: dark) {
-      color: map-get(mat.$dark-theme-foreground-palette, text);
-    }
   }
 
   > div {

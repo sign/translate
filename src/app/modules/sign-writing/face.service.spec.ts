@@ -21,9 +21,9 @@ describe('FaceService', () => {
 
     expect(model).toBeTruthy();
 
-    for (const weight of model.getWeights()) {
-      const data = await weight.data();
-      const isNaN = Boolean(tf.isNaN(data).any().dataSync()[0]);
+    const weights = await Promise.all(model.getWeights().map(w => w.data()));
+    for (const weight of weights) {
+      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
