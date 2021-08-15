@@ -13,9 +13,7 @@ export class PoseService {
   model?: any;
 
   async load(): Promise<void> {
-    this.model = new holistic.Holistic({
-      locateFile: (file) => `assets/models/holistic/${file}`
-    });
+    this.model = new holistic.Holistic({locateFile: (file) => `assets/models/holistic/${file}`});
 
     this.model.setOptions({
       upperBodyOnly: false,

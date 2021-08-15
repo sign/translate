@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
     "build": "ng build --configuration=production --base-href=/",
-    "pwa:assets": "pwa-asset-generator src/assets/icons/icon.png src/assets/icons/generated/ -i src/index.html -m src/manifest.webmanifest --background #3F51B5 --favicon --mstile",
+    "pwa:assets": "pwa-asset-generator src/assets/icons/dark-logo.svg src/assets/icons/generated/ -i src/index.html -m src/manifest.webmanifest --background white --favicon --mstile && pwa-asset-generator src/assets/icons/light-logo.svg --dark-mode src/assets/icons/generated/ -i src/index.html --background black --splash-only",
     "test": "ng test --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "lint": "ng lint",
