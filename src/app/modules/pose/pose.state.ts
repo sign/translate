@@ -49,13 +49,21 @@ export class PoseState implements NgxsOnInit {
     patchState({isLoaded: false});
     await this.poseService.load();
     this.poseService.model.onResults((results) => {
+      // TODO: passing the `image` canvas through NGXS bugs the pose.
+      // https://github.com/google/mediapipe/issues/2422
+      const fakeImage = document.createElement('canvas');
+      fakeImage.width = results.image.width;
+      fakeImage.height = results.image.height;
+      const ctx = fakeImage.getContext('2d');
+      ctx.drawImage(results.image, 0, 0, fakeImage.width, fakeImage.height);
+
       // Since v0.4, "results" include additional parameters
       this.store.dispatch(new StoreFramePose({
         faceLandmarks: results.faceLandmarks,
         poseLandmarks: results.poseLandmarks,
         leftHandLandmarks: results.leftHandLandmarks,
         rightHandLandmarks: results.rightHandLandmarks,
-        image: results.image
+        image: fakeImage
       }));
     });
   }

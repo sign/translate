@@ -10,14 +10,6 @@
 A bi-directional multilingual translation app for desktop and mobile, 
 based on state-of-the-art real-time client side models.
 
-#### Including:
-
-- Desktop / Mobile ready UI
-- Language selectors
-- Translation direction selector
-- Signed-to-spoken language translation
-- Spoken-to-signed language translation
-
 #### Signed-to-spoken language translation
 - Camera / File upload video inputs
 - SignWriting hand shape and orientation estimation
@@ -39,9 +31,15 @@ based on state-of-the-art real-time client side models.
 - Text to pose sequence (server side)
 
 #### Mobile support - TODOs
-- Rethink app icon
-- MediaPipe doesn't work on mobile (https://github.com/google/mediapipe/issues/1427)
+- MediaPipe doesn't work on mobile
+    - https://github.com/google/mediapipe/issues/1427
+    - https://github.com/google/mediapipe/issues/2422
 
+#### Query Parameters Control
+- `lang` to control the page language **TODO**
+- `spl` to control the spoken language **TODO**
+- `sil` to control the signed language **TODO**
+- `spt` to control the spoken language text input  **TODO**
 
 
 # Sign Language Processing Playground
@@ -57,3 +55,5 @@ It includes, as a basic first step, MediaPipe Holistic pose estimation, on top o
 - SignWriting hand orientation (Rule based)
 - SignWriting hand shape (Model based)
 - Partial SignWriting non-manuals - eyebrows, eyes, mouthing (Model based)
+
+

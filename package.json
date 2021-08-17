@@ -30,7 +30,7 @@
     "@angular/service-worker": "~12.2.1",
     "@google/model-viewer": "^1.8.0",
     "@mediapipe/drawing_utils": "^0.3.1620248257",
-    "@mediapipe/holistic": "^0.3.1620694839",
+    "@mediapipe/holistic": "^0.4.1628005088",
     "@ngneat/transloco": "^2.20.1",
     "@ngneat/transloco-messageformat": "^1.3.1",
     "@ngxs/store": "^3.7.2",
@@ -49,7 +49,7 @@
     "seedrandom": "^2.4.3",
     "stats.js": "^0.17.0",
     "three": "0.125.2",
-    "tslib": "^2.0.0",
+    "tslib": "^2.3.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -57,7 +57,7 @@
     "@angular-devkit/build-angular": "^12.2.1",
     "@angular/cli": "~12.2.1",
     "@angular/compiler-cli": "~12.2.1",
-    "@types/jasmine": "~3.8.1",
+    "@types/jasmine": "~3.8.2",
     "@types/jasminewd2": "~2.0.3",
     "@types/three": "^0.129.1",
     "@types/webgl2": "0.0.6",
@@ -75,7 +75,7 @@
     "open": "^8.0.9",
     "protractor": "~7.0.0",
     "pwa-asset-generator": "^4.3.6",
-    "ts-node": "~10.1.0",
+    "ts-node": "~10.2.0",
     "tslint": "~6.1.3",
     "typescript": "~4.3.5"
   }
