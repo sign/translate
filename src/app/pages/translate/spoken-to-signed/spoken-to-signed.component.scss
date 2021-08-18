@@ -21,10 +21,10 @@
   }
 
   > *:not(:last-child) {
-    border-right: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+    border-inline-end: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
 
     @media (prefers-color-scheme: dark) {
-      border-right: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
+      border-inline-end: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
     }
   }
 }
@@ -65,6 +65,12 @@
     text-align: end;
     font-size: 12px;
   }
+}
+
+// Numbers should always be left-to-right
+::ng-deep html[dir="rtl"] #char-count {
+  direction: ltr;
+  text-align: start !important;
 }
 
 .sign-language {

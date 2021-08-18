@@ -23,23 +23,13 @@ based on state-of-the-art real-time client side models.
 
 #### Spoken-to-signed language translation
 - Text input
-- Microphone input - **TODO**
+- Microphone input - #9
 - Text-to-speech
-- Spoken language text to SignWriting translation - **TODO**
+- Language identification (Detect Language) - #10
+- Spoken language text to SignWriting translation - #11
 - SignWriting to pose sequence - **TODO**
-- Pose sequence to video - **TODO** (https://github.com/tensorflow/tfjs/issues/5374)
+- Pose sequence to video - #12
 - Text to pose sequence (server side)
-
-#### Mobile support - TODOs
-- MediaPipe doesn't work on mobile
-    - https://github.com/google/mediapipe/issues/1427
-    - https://github.com/google/mediapipe/issues/2422
-
-#### Query Parameters Control
-- `lang` to control the page language **TODO**
-- `spl` to control the spoken language **TODO**
-- `sil` to control the signed language **TODO**
-- `spt` to control the spoken language text input  **TODO**
 
 
 # Sign Language Processing Playground
@@ -52,7 +42,7 @@ This playground is intended for ease of prototyping real-time sign language mode
 It includes, as a basic first step, MediaPipe Holistic pose estimation, on top of which other predictions are performed:
 
 - Sign language detection (Model based)
-- SignWriting hand orientation (Rule based)
+- SignWriting hand orientation (Rule based) - #1
 - SignWriting hand shape (Model based)
 - Partial SignWriting non-manuals - eyebrows, eyes, mouthing (Model based)
 

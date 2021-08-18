@@ -184,10 +184,6 @@
       "receiveVideo": {
         "on": "Turn off camera",
         "off": "Turn on camera"
-      },
-      "dominantHand": {
-        "left": "Left handed",
-        "right": "Right handed"
       }
     }
   },

@@ -1,0 +1,55 @@
+{
+  "playground": {
+    "title": "גן המשחקים לעיבוד שפת הסימנים"
+  },
+  "translate": {
+    "title": "תרגום סימנים",
+    "feedback": "שליחת משוב",
+    "input": {
+      "webcam": "מצלמת רשת",
+      "upload": "העלאה",
+      "text": "טקסט"
+    },
+    "swapLanguages": "החלף שפות",
+    "language-selector": {
+      "more": "עוד שפות"
+    },
+    "spoken-to-signed": {
+      "text": "טקסט בשפה דבורה"
+    },
+    "upload": {
+      "title": "יש לבחור וידאו",
+      "types": "אפשר להעלות .mp4, .ogv או .webm",
+      "browse": "עיון במחשב"
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "המצלמה מתחילה",
+      "turnedOff": "המצלמה כבויה",
+      "notConnected": "אין מצלמה מחוברת",
+      "permissionDenied": "הרשאות המצלמה נדחו"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "כיבוי המצלמה",
+        "off": "הדלקת המצלמה"
+      }
+    }
+  },
+  "pose": {
+    "loading": "טוען הערכת שלד..."
+  },
+  "text-to-speech": {
+    "play": "הקשב",
+    "cancel": "עצירה",
+    "unavailable": "פלט קולי אינו זמין עבור השפה שנבחרה"
+  },
+  "settings": {
+    "detectSign": "זהו מתי מסמנים",
+    "drawVideo": "ציירו וידאו",
+    "drawPose": "ציירו שלד",
+    "drawSignWriting": "ציירו SignWriting",
+    "animatePose": "אנימציית שלד"
+  }
+}

@@ -18,8 +18,9 @@ import {HttpClientModule} from '@angular/common/http';
     {
       provide: TRANSLOCO_CONFIG,
       useValue: {
-        availableLangs: ['en', 'es'],
+        availableLangs: ['en', 'he'],
         defaultLang: 'en',
+        fallbackLang: 'en',
         prodMode: environment.production,
       } as TranslocoConfig
     },

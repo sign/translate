@@ -154,7 +154,10 @@ mat-toolbar {
   @media (prefers-color-scheme: dark) {
     color: map-get(mat.$dark-theme-foreground-palette, text);
   }
+}
 
+::ng-deep html[dir="rtl"] #feedback {
+  float: left;
 }
 
 :host(.spoken-to-signed) {
