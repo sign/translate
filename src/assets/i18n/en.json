@@ -4,6 +4,7 @@
   },
   "translate": {
     "title": "Sign Translate",
+    "description": "A bi-directional multilingual sign language translation app for desktop and mobile",
     "feedback": "Send feedback",
     "input": {
       "webcam": "Webcam",

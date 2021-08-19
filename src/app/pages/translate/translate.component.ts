@@ -31,7 +31,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     'sl', 'so', 'su', 'sw', 'sv', 'tl', 'tg', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'];
 
 
-  constructor(private store: Store, private translocoService: TranslocoService) {
+  constructor(private store: Store, private transloco: TranslocoService) {
     super();
 
     // Default settings
@@ -43,10 +43,17 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translocoService.events$.pipe(
-      tap(() => document.title = this.translocoService.translate('translate.title')),
+    this.transloco.events$.pipe(
+      tap(() => {
+        document.title = this.transloco.translate('translate.title');
+
+        const description = this.transloco.translate('translate.description');
+        document.head.children.namedItem('description').setAttribute('content', description);
+      }),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
+
+    //
 
     this.spokenToSigned$.pipe(
       tap((spokenToSigned) => this.spokenToSigned = spokenToSigned),
