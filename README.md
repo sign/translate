@@ -23,12 +23,12 @@ based on state-of-the-art real-time client side models.
 
 #### Spoken-to-signed language translation
 - Text input
-- Microphone input - #9
+- Microphone input - https://github.com/sign-language-processing/playground/issues/9
 - Text-to-speech
-- Language identification (Detect Language) - #10
-- Spoken language text to SignWriting translation - #11
+- Language identification (Detect Language) - https://github.com/sign-language-processing/playground/issues/10
+- Spoken language text to SignWriting translation - https://github.com/sign-language-processing/playground/issues/11
 - SignWriting to pose sequence - **TODO**
-- Pose sequence to video - #12
+- Pose sequence to video - https://github.com/sign-language-processing/playground/issues/12
 - Text to pose sequence (server side)
 
 
@@ -42,7 +42,7 @@ This playground is intended for ease of prototyping real-time sign language mode
 It includes, as a basic first step, MediaPipe Holistic pose estimation, on top of which other predictions are performed:
 
 - Sign language detection (Model based)
-- SignWriting hand orientation (Rule based) - #1
+- SignWriting hand orientation (Rule based) - https://github.com/sign-language-processing/playground/issues/1
 - SignWriting hand shape (Model based)
 - Partial SignWriting non-manuals - eyebrows, eyes, mouthing (Model based)
 
