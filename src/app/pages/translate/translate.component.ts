@@ -47,8 +47,10 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       tap(() => {
         document.title = this.transloco.translate('translate.title');
 
-        const description = this.transloco.translate('translate.description');
-        document.head.children.namedItem('description').setAttribute('content', description);
+        const descriptionEl = document.head.children.namedItem('description');
+        if(descriptionEl) {
+          descriptionEl.setAttribute('content', this.transloco.translate('translate.description'));
+        }
       }),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
