@@ -116,19 +116,30 @@ export class TranslateState implements NgxsOnInit {
 
     const data = await fetch(signedLanguageVideo);
     const blob = await data.blob();
+    try {
+      const item = new ClipboardItem({[blob.type]: blob});
+      await navigator.clipboard.write([item]);
+    } catch (e) {
+      console.error(e);
+      alert(`Copying "${blob.type}" on this device is not supported`);
+    }
 
-    const item = new ClipboardItem({[blob.type]: blob});
-    await navigator.clipboard.write([item]);
   }
 
   @Action(ShareSignedLanguageVideo)
   async shareSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {signedLanguageVideo} = getState();
 
+    if (!('share' in navigator)) { // For example in non-HTTPS on iOS
+      alert(`Share functionality is not available`);
+      return;
+    }
+
     const data = await fetch(signedLanguageVideo);
     const blob = await data.blob();
+    const ext = blob.type.split('/').pop();
 
-    const files: File[] = [new File([blob], 'video.webm', {type: blob.type})];
+    const files: File[] = [new File([blob], 'video.' + ext, {type: blob.type})];
 
     const url = window.location.href;
     const title = 'Signed Language Video for text';

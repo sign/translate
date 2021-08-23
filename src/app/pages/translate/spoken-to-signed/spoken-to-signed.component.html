@@ -11,7 +11,7 @@
   <app-sign-writing [signs]="signWriting"></app-sign-writing>
   <div class="sign-language">
     <ng-container *ngIf="videoUrl; else noVideo">
-      <video [src]="videoUrl" autoplay loop width="100%"></video>
+      <video [src]="videoUrl" autoplay loop muted playsinline width="100%"></video>
     </ng-container>
     <ng-template #noVideo>
       <ng-container *ngIf="pose$ | async as pose; else noPose">

@@ -17,6 +17,8 @@ interface CanvasElement extends HTMLCanvasElement {
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
+  mimeTypes = ['video/mp4', 'video/webm'];
+  mimeType: string;
   mediaRecorder: MediaRecorder;
 
   protected constructor(private store: Store) {
@@ -35,12 +37,26 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     this.store.dispatch(new SetSignedLanguageVideo(url));
   }
 
-  startRecording(canvas: CanvasElement): void {
+  async startRecording(canvas: CanvasElement): Promise<void> {
     const recordedChunks: Blob[] = [];
 
-    const stream = canvas.captureStream(25);
+    const pose = await this.poseEl.nativeElement.getPose();
+    const fps = pose.body.fps;
 
-    this.mediaRecorder = new MediaRecorder(stream, {mimeType: 'video/webm; codecs=vp9'});
+    const stream = canvas.captureStream(fps);
+
+    for (const mimeType of this.mimeTypes) {
+      try {
+        this.mediaRecorder = new MediaRecorder(stream, {mimeType});
+        this.mimeType = mimeType;
+      } catch (e) {
+        console.warn(mimeType, 'not supported');
+      }
+    }
+
+    if (!this.mimeType) {
+      return;
+    }
 
     fromEvent(this.mediaRecorder, 'dataavailable').pipe(
       tap((event: BlobEvent) => recordedChunks.push(event.data)),
@@ -49,7 +65,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
     fromEvent(this.mediaRecorder, 'stop').pipe(
       tap(() => {
-        const blob = new Blob(recordedChunks, {type: 'video/webm'});
+        const blob = new Blob(recordedChunks, {type: this.mimeType});
         const url = URL.createObjectURL(blob);
         this.setVideo(url);
       }),
@@ -60,6 +76,8 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   stopRecording(): void {
-    this.mediaRecorder.stop();
+    if (this.mediaRecorder) {
+      this.mediaRecorder.stop();
+    }
   }
 }
