@@ -4,12 +4,14 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jasmine"
+      "jasmine",
+      "@types/dom-mediacapture-record"
     ]
   },
   "files": [
     "src/test.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "node_modules/pose-viewer/dist/types/components.d.ts"
   ],
   "include": [
     "src/**/*.spec.ts",

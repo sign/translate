@@ -8,6 +8,7 @@ import {LanguageSelectorComponent} from './language-selector/language-selector.c
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../modules/translate/translate.state';
+import {SettingsState} from '../../modules/settings/settings.state';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -23,7 +24,7 @@ describe('TranslateComponent', () => {
       imports: [
         AppTranslocoModule,
         AppAngularMaterialModule,
-        NgxsModule.forRoot([TranslateState], ngxsConfig)
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig)
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();

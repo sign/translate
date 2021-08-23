@@ -39,3 +39,10 @@ body {
 app-root {
   height: 100%
 }
+
+button[mat-icon-button] {
+  color: map-get(mat.$light-theme-foreground-palette, icon);
+  @media (prefers-color-scheme: dark) {
+    color: map-get(mat.$dark-theme-foreground-palette, icon);
+  }
+}

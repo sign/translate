@@ -14,7 +14,7 @@ describe('Pix2Pix', () => {
     expect(service).toBeTruthy();
   });
 
-  xit('model weights should not contain NaN', async () => {
+  it('model weights should not contain NaN', async () => {
     await service.loadModel();
     const model = service.sequentialModel;
 

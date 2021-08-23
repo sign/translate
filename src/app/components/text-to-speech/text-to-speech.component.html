@@ -3,7 +3,7 @@
     <!-- As a single button it is uglier code, but nice ripple animation -->
     <button mat-icon-button (click)="isSpeaking ? cancel() : play()" *ngIf="isSupported"
             [attr.aria-label]="t(isSpeaking ? 'cancel' : 'play')"
-            [matTooltipPosition]="'below'" [matTooltip]="t(isSpeaking ? 'cancel' : 'play')">
+            [matTooltipPosition]="'above'" [matTooltip]="t(isSpeaking ? 'cancel' : 'play')">
       <mat-icon>{{isSpeaking ? 'stop' : 'volume_up'}}</mat-icon>
     </button>
     <!-- If language is not supported -->

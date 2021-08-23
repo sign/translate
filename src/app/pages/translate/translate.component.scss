@@ -127,12 +127,7 @@ mat-toolbar {
     }
 
     #swap-languages {
-      color: map-get(mat.$light-theme-foreground-palette, icon);
       margin-top: 3px;
-
-      @media (prefers-color-scheme: dark) {
-        color: map-get(mat.$dark-theme-foreground-palette, icon);
-      }
     }
   }
 }

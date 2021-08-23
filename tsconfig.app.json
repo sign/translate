@@ -2,7 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [
+      "@types/dom-mediacapture-record"
+    ]
   },
   "files": [
     "src/main.ts",

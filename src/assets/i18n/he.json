@@ -16,7 +16,12 @@
       "more": "עוד שפות"
     },
     "spoken-to-signed": {
-      "text": "טקסט בשפה דבורה"
+      "text": "טקסט בשפה דבורה",
+      "actions": {
+        "download": "הורדת תרגום",
+        "copy": "העתקת תרגום",
+        "share": "שיתוף תרגום"
+      }
     },
     "upload": {
       "title": "יש לבחור וידאו",
@@ -205,6 +210,11 @@
     "drawVideo": "ציירו וידאו",
     "drawPose": "ציירו שלד",
     "drawSignWriting": "ציירו SignWriting",
-    "animatePose": "אנימציית שלד"
+    "animatePose": "אנימציית שלד",
+    "poseViewer": {
+      "pose": "שלד",
+      "avatar": "אווטאר",
+      "human": "אנושי"
+    }
   }
 }

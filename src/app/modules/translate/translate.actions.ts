@@ -33,6 +33,26 @@ export class SetSpokenLanguageText {
   }
 }
 
+export class SetSignedLanguageVideo {
+  static readonly type = '[Translate] Set Signed Language Video';
+
+  constructor(public url: string) {
+  }
+}
+
+export class CopySignedLanguageVideo {
+  static readonly type = '[Translate] Copy Signed Language Video';
+}
+
+
+export class ShareSignedLanguageVideo {
+  static readonly type = '[Translate] Share Signed Language Video';
+}
+
+export class DownloadSignedLanguageVideo {
+  static readonly type = '[Translate] Download Signed Language Video';
+}
+
 
 export class ChangeTranslation {
   static readonly type = '[Translate] Change Translation';

@@ -16,7 +16,12 @@
       "more": "More Languages"
     },
     "spoken-to-signed": {
-      "text": "Spoken Language Text"
+      "text": "Spoken Language Text",
+      "actions": {
+        "download": "Download Translation",
+        "copy": "Copy Translation",
+        "share": "Share Translation"
+      }
     },
     "upload": {
       "title": "Choose a video",
@@ -205,6 +210,11 @@
     "drawVideo": "Draw Video",
     "drawPose": "Draw Pose",
     "drawSignWriting": "Draw Sign Writing",
-    "animatePose": "Animate Pose"
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Skeleton",
+      "avatar": "Avatar",
+      "human": "Human"
+    }
   }
 }

@@ -25,9 +25,11 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {TextToSpeechComponent} from './components/text-to-speech/text-to-speech.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {Pix2PixModule} from './modules/pix2pix/pix2pix.module';
-import {PoseViewerComponent} from './pages/translate/pose-viewer/pose-viewer.component';
+import {HumanPoseViewerComponent} from './pages/translate/pose-viewers/human-pose-viewer/human-pose-viewer.component';
 import {environment} from '../environments/environment';
 import {TranslateModule} from './modules/translate/translate.module';
+import {ViewerSelectorComponent} from './pages/translate/spoken-to-signed/viewer-selector/viewer-selector.component';
+import {SkeletonPoseViewerComponent} from './pages/translate/pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {TranslateModule} from './modules/translate/translate.module';
     LanguageSelectorComponent,
     SignWritingComponent,
     TextToSpeechComponent,
-    PoseViewerComponent,
+    ViewerSelectorComponent,
+    HumanPoseViewerComponent,
+    SkeletonPoseViewerComponent,
   ],
   imports: [
     BrowserModule,

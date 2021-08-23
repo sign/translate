@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+pose-viewer {
+  display: none;
+}
+
+canvas {
+  width: 100%;
+  display: block;
+}
+
+mat-progress-bar {
+  position: absolute;
+}
+
+mat-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

@@ -1,21 +1,58 @@
-<div class="translation-text" *transloco="let t; read: 'translate.spoken-to-signed'">
-  <label id="spoken-language-label">{{t('text')}}</label>
-  <textarea [formControl]="text" [maxLength]="maxTextLength"
-            aria-labelledby="spoken-language-label" autofocus data-gramm_editor="false"></textarea>
-  <div>
-    <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="text.value"></app-text-to-speech>
-    <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
+<ng-container *transloco="let t; read: 'translate.spoken-to-signed'">
+  <div class="translation-text">
+    <label id="spoken-language-label">{{t('text')}}</label>
+    <textarea [formControl]="text" [maxLength]="maxTextLength"
+              aria-labelledby="spoken-language-label" autofocus data-gramm_editor="false"></textarea>
+    <div>
+      <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="text.value"></app-text-to-speech>
+      <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
+    </div>
   </div>
-</div>
-<app-sign-writing [signs]="signWriting"></app-sign-writing>
-<div class="sign-language">
-  <ng-container *ngIf="pose$ | async as pose; else noPose">
-    <ng-container *ngIf="{humanize: humanize$ | async} as context">
-      <app-pose-viewer *ngIf="pose && context.humanize" [src]="pose" autoplay loop></app-pose-viewer>
-      <pose-viewer *ngIf="pose && !context.humanize" [attr.src]="pose" autoplay loop width="100%"></pose-viewer>
+  <app-sign-writing [signs]="signWriting"></app-sign-writing>
+  <div class="sign-language">
+    <ng-container *ngIf="videoUrl; else noVideo">
+      <video [src]="videoUrl" autoplay loop width="100%"></video>
     </ng-container>
-  </ng-container>
-  <ng-template #noPose>
-    <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block" width="100%">
-  </ng-template>
-</div>
+    <ng-template #noVideo>
+      <ng-container *ngIf="pose$ | async as pose; else noPose">
+        <ng-container *ngIf="poseViewerSetting$ | async as poseViewerSetting">
+          <app-skeleton-pose-viewer *ngIf="poseViewerSetting == 'pose'" [src]="pose" [autoplay]="true"
+                                    [loop]="true"></app-skeleton-pose-viewer>
+          <app-human-pose-viewer *ngIf="poseViewerSetting == 'human'" [src]="pose" autoplay
+                                 loop></app-human-pose-viewer>
+          <div *ngIf="poseViewerSetting == 'avatar'">
+            <h2>Avatar not yet supported with OpenPose.</h2>
+          </div>
+        </ng-container>
+      </ng-container>
+      <ng-template #noPose>
+        <img src="https://explorit.ch/wp-content/uploads/2019/10/placeholder.png" style="display: block" width="100%">
+      </ng-template>
+    </ng-template>
+
+    <div id="actions" *ngIf="pose$ | async as pose">
+      <app-viewer-selector></app-viewer-selector>
+
+      <ng-container *ngIf="videoUrl; else spinner">
+        <button mat-icon-button [attr.aria-label]="t('actions.download')"
+                (click)="downloadTranslation()"
+                [matTooltipPosition]="'above'" [matTooltip]="t('actions.download')">
+          <mat-icon>download</mat-icon>
+        </button>
+        <button mat-icon-button [attr.aria-label]="t('actions.copy')"
+                (click)="copyTranslation()"
+                [matTooltipPosition]="'above'" [matTooltip]="t('actions.copy')">
+          <mat-icon>file_copy</mat-icon>
+        </button>
+        <button mat-icon-button [attr.aria-label]="t('actions.share')"
+                (click)="shareTranslation()"
+                [matTooltipPosition]="'above'" [matTooltip]="t('actions.share')">
+          <mat-icon>{{shareIcon()}}</mat-icon>
+        </button>
+      </ng-container>
+      <ng-template #spinner>
+        <mat-spinner diameter="24"></mat-spinner>
+      </ng-template>
+    </div>
+  </div>
+</ng-container>

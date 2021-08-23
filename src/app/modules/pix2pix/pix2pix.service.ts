@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import * as tf from '@tensorflow/tfjs';
-import {Tensor} from '@tensorflow/tfjs';
+import {Tensor, Tensor3D} from '@tensorflow/tfjs';
 
 export class ModelNotLoadedError extends Error {
   constructor() {
@@ -28,27 +28,18 @@ export class Pix2PixService {
       throw new ModelNotLoadedError();
     }
 
-    // TODO add this code as a test
-    console.log(this.sequentialModel.getWeights());
-    for (const weight of this.sequentialModel.getWeights()) {
-      const data = await weight.data();
-      tf.isNaN(data).any().print();
-    }
-
     const image = tf.tidy(() => {
       const pixels = tf.browser.fromPixels(canvas).toFloat();
-      const input = tf.sub(tf.div(pixels, tf.scalar(127.5)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
+      const input = tf.sub(tf.div(pixels, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
       const tensor = input.reshape([1, canvas.width, canvas.height, 3]);
 
-
-      tensor.print();
-
-      const pred = this.sequentialModel.predict(tensor) as Tensor;
-      pred.print();
-      // return pred.reshape([canvas.width, canvas.height, 3]) as Tensor3D;
+      // Must apply model in training=True mode to avoid using aggregated norm statistics
+      let pred = this.sequentialModel.apply(tensor, {training: true}) as Tensor;
+      pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
+      // pred = pred.clipByValue(0, 1); // Clip to range [0, 1]
+      return pred.reshape([canvas.width, canvas.height, 3]) as Tensor3D;
     });
 
-
-    // await tf.browser.toPixels(image, target);
+    await tf.browser.toPixels(image, target);
   }
 }

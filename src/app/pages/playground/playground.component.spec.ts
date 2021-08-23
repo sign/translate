@@ -7,6 +7,7 @@ import {AppAngularMaterialModule} from '../../core/modules/angular-material/angu
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {SettingsComponent} from '../../modules/settings/settings/settings.component';
+import {TranslateState} from '../../modules/translate/translate.state';
 
 
 describe('PlaygroundComponent', () => {
@@ -23,7 +24,7 @@ describe('PlaygroundComponent', () => {
       imports: [
         AppAngularMaterialModule,
         AppTranslocoModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
       ]
     }).compileComponents();
   });
