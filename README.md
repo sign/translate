@@ -30,7 +30,7 @@ based on state-of-the-art real-time client side models.
 - SignWriting to pose sequence - **TODO**
 - Pose sequence to video - https://github.com/sign-language-processing/playground/issues/12
 - Text to pose sequence (server side)
-- Download / Copy / share translation
+- Copy / share / download translation
 
 # Sign Language Processing Playground
 

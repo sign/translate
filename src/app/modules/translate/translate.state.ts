@@ -145,12 +145,8 @@ export class TranslateState implements NgxsOnInit {
     const title = 'Signed Language Video for text';
 
     if ('canShare' in navigator && (navigator as any).canShare({files})) {
-      await navigator.share({
-        text: 'FILE',
-        files,
-        title,
-        url
-      } as ShareData);
+      // Apps like WhatsApp only support sharing a single item
+      await navigator.share({files} as ShareData);
     } else {
       // TODO convert the video to GIF, try to share the GIF.
       await navigator.share({
