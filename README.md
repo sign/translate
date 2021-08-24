@@ -25,9 +25,9 @@ based on state-of-the-art real-time client side models.
 - Text input
 - Microphone input - https://github.com/sign-language-processing/playground/issues/9
 - Text-to-speech
-- Language identification (Detect Language) - https://github.com/sign-language-processing/playground/issues/10
+- Language identification (Detect Language)
 - Spoken language text to SignWriting translation - https://github.com/sign-language-processing/playground/issues/11
-- SignWriting to pose sequence - **TODO**
+- SignWriting to pose sequence - https://github.com/sign-language-processing/sign-translate/issues/15
 - Text to pose sequence (server side)
 - Pose sequence to video
 - Copy / share / download translation

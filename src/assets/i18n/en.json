@@ -13,7 +13,9 @@
     },
     "swapLanguages": "Swap languages",
     "language-selector": {
-      "more": "More Languages"
+      "more": "More Languages",
+      "detect": "Detect Language",
+      "detected": "{lang} - Detected"
     },
     "spoken-to-signed": {
       "text": "Spoken Language Text",

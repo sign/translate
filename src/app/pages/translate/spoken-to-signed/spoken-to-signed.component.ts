@@ -7,6 +7,7 @@ import {Select, Store} from '@ngxs/store';
 import {CopySignedLanguageVideo, DownloadSignedLanguageVideo, SetSpokenLanguageText, ShareSignedLanguageVideo} from '../../../modules/translate/translate.actions';
 import {PoseViewerSetting} from '../../../modules/settings/settings.state';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {TranslateStateModel} from '../../../modules/translate/translate.state';
 
 @Component({
   selector: 'app-spoken-to-signed',
@@ -15,12 +16,13 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 })
 export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
-  @Select(state => state.translate.spokenLanguage) spokenLanguage$: Observable<string>;
+  @Select(state => state.translate) translate$: Observable<TranslateStateModel>;
   @Select(state => state.translate.spokenLanguageText) text$: Observable<string>;
   @Select(state => state.translate.signedLanguagePose) pose$: Observable<string>;
   @Select(state => state.translate.signedLanguageVideo) video$: Observable<string>;
 
   videoUrl: SafeUrl;
+  spokenLanguage: string;
 
   text = new FormControl();
   maxTextLength = 500;
@@ -33,6 +35,11 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.translate$.pipe(
+      tap(({spokenLanguage, detectedLanguage}) => this.spokenLanguage = spokenLanguage || detectedLanguage),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
+
     // Local text changes
     this.text.valueChanges.pipe(
       debounce(() => interval(500)),

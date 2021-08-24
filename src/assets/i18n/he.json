@@ -13,7 +13,9 @@
     },
     "swapLanguages": "החלף שפות",
     "language-selector": {
-      "more": "עוד שפות"
+      "more": "עוד שפות",
+      "detect": "זיהוי שפה",
+      "detected": "{lang} - זוהתה"
     },
     "spoken-to-signed": {
       "text": "טקסט בשפה דבורה",

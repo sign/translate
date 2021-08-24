@@ -16,6 +16,7 @@ export interface TranslateStateModel {
 
   spokenLanguage: string;
   signedLanguage: string;
+  detectedLanguage: string;
 
   spokenLanguageText: string;
   signedLanguagePose: string;
@@ -28,6 +29,7 @@ const initialState: TranslateStateModel = {
 
   spokenLanguage: 'en',
   signedLanguage: 'us',
+  detectedLanguage: null,
 
   spokenLanguageText: 'Test',
   signedLanguagePose: null,
@@ -56,8 +58,14 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(FlipTranslationDirection)
   async flipTranslationMode({getState, patchState, dispatch}: StateContext<TranslateStateModel>): Promise<void> {
-    const {spokenToSigned} = getState();
-    patchState({spokenToSigned: !spokenToSigned});
+    const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage} = getState();
+    patchState({
+      spokenToSigned: !spokenToSigned,
+      // Collapse detected language if used
+      spokenLanguage: spokenLanguage ?? detectedLanguage,
+      signedLanguage: signedLanguage ?? detectedLanguage,
+      detectedLanguage: null
+    });
     dispatch(new SetInputMode(spokenToSigned ? 'webcam' : 'text'));
   }
 
@@ -73,8 +81,18 @@ export class TranslateState implements NgxsOnInit {
   }
 
   @Action(SetSpokenLanguage)
-  async setSpokenLanguage({patchState, dispatch}: StateContext<TranslateStateModel>, {language}: SetSpokenLanguage): Promise<void> {
-    patchState({spokenLanguage: language});
+  async setSpokenLanguage({patchState, getState, dispatch}: StateContext<TranslateStateModel>, {language}: SetSpokenLanguage): Promise<void> {
+    patchState({spokenLanguage: language, detectedLanguage: null});
+
+    // Load and apply language detection if selected
+    if (!language) {
+      await this.service.initCld();
+      const {spokenLanguageText} = getState();
+      if (spokenLanguageText) {
+        patchState({detectedLanguage: this.service.detectSpokenLanguage(spokenLanguageText)});
+      }
+    }
+
     dispatch(ChangeTranslation);
   }
 
@@ -85,8 +103,12 @@ export class TranslateState implements NgxsOnInit {
   }
 
   @Action(SetSpokenLanguageText)
-  async setSpokenLanguageText({patchState, dispatch}: StateContext<TranslateStateModel>, {text}: SetSpokenLanguageText): Promise<void> {
-    patchState({spokenLanguageText: text});
+  async setSpokenLanguageText({patchState, getState, dispatch}: StateContext<TranslateStateModel>, {text}: SetSpokenLanguageText): Promise<void> {
+    const {spokenLanguage} = getState();
+    patchState({
+      spokenLanguageText: text,
+      detectedLanguage: (!text || spokenLanguage) ? null : this.service.detectSpokenLanguage(text)
+    });
     dispatch(ChangeTranslation);
   }
 
@@ -97,14 +119,15 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(ChangeTranslation)
   async changeTranslation({getState, patchState}: StateContext<TranslateStateModel>): Promise<void> {
-    const {spokenToSigned, spokenLanguage, signedLanguage, spokenLanguageText} = getState();
+    const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, spokenLanguageText} = getState();
     if (spokenToSigned) {
       patchState({signedLanguageVideo: null}); // Always reset the signed language video
 
       if (!spokenLanguageText) {
         patchState({signedLanguagePose: null});
       } else {
-        const path = this.service.translateSpokenToSigned(spokenLanguageText, spokenLanguage, signedLanguage);
+        const actualSpokenLanguage = spokenLanguage || detectedLanguage;
+        const path = this.service.translateSpokenToSigned(spokenLanguageText, actualSpokenLanguage, signedLanguage);
         patchState({signedLanguagePose: path});
       }
     }

@@ -1,10 +1,10 @@
 <ng-container *transloco="let t; read: 'translate.spoken-to-signed'">
   <div class="translation-text">
     <label id="spoken-language-label">{{t('text')}}</label>
-    <textarea [formControl]="text" [maxLength]="maxTextLength"
+    <textarea [formControl]="text" [maxLength]="maxTextLength" dir="auto"
               aria-labelledby="spoken-language-label" autofocus data-gramm_editor="false"></textarea>
     <div>
-      <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="text.value"></app-text-to-speech>
+      <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
       <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
     </div>
   </div>

@@ -46,10 +46,11 @@
     background-color: transparent;
     color: inherit;
     border: none;
-    resize: none;
-    outline: none;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     font-size: 24px;
     line-height: 32px;
+    resize: none;
+    outline: none;
     width: 100%;
     height: calc(100% - 40px);
   }
@@ -63,6 +64,7 @@
     align-self: center;
     text-align: end;
     font-size: 12px;
+    line-height: 40px;
   }
 }
 

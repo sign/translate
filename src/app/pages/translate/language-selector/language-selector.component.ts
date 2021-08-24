@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Select} from '@ngxs/store';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-language-selector',
@@ -6,6 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./language-selector.component.scss']
 })
 export class LanguageSelectorComponent implements OnInit {
+  @Select(state => state.translate.detectedLanguage) detectedLanguage$: Observable<string>;
 
   @Input() flags = false;
   @Input() hasLanguageDetection = false;
