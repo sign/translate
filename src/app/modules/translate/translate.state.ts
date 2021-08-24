@@ -149,11 +149,7 @@ export class TranslateState implements NgxsOnInit {
       await navigator.share({files} as ShareData);
     } else {
       // TODO convert the video to GIF, try to share the GIF.
-      await navigator.share({
-        text: 'NO FILE',
-        title,
-        url
-      });
+      await navigator.share({text: title, title, url});
     }
   }
 

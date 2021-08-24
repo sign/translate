@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
 import {fromEvent, interval, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -19,14 +19,14 @@ function promiseRaf<T>(callback: CallableFunction): Promise<T> {
   templateUrl: './human-pose-viewer.component.html',
   styleUrls: ['./human-pose-viewer.component.scss']
 })
-export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
+export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
 
   @Input() src: string;
   @Input() width: string;
   @Input() height: string;
 
-  cache: ImageData[] = []; // TODO cache using the MediaCapture API, such that a video will be generated, downloadable
+  cache: ImageData[] = [];
   cacheSubscription: Subscription;
   ready = false;
   modelReady = false;
@@ -99,6 +99,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         i++;
         if (i < this.cache.length) {
           ctx.putImageData(this.cache[i], 0, 0);
+          delete this.cache[i]; // Free up memory after cached frame is no longer necessary
         } else {
           this.cacheSubscription.unsubscribe();
           this.stopRecording();

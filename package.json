@@ -49,7 +49,7 @@
     "flag-icon-css": "^3.5.0",
     "material-components-web": "^12.0.0",
     "ngx-flag-icon-css": "^1.0.1",
-    "pose-viewer": "^0.2.2",
+    "pose-viewer": "^0.2.3",
     "rxjs": "~6.6.3",
     "seedrandom": "^2.4.3",
     "stats.js": "^0.17.0",

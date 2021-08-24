@@ -76,6 +76,7 @@
   grid-area: signed;
   background-color: #f5f5f5;
   position: relative;
+  aspect-ratio: 1;
 
   @media (prefers-color-scheme: dark) {
     background-color: #202124;
@@ -95,6 +96,6 @@
   }
 }
 
-pose-viewer {
+video {
   display: block;
 }

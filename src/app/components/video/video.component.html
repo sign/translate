@@ -6,7 +6,7 @@
     </ng-container>
 
     <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
-      <video #video autoplay loop></video>
+      <video #video autoplay loop muted playsinline></video>
       <canvas #canvas class="flip" height="100%" width="100%"></canvas>
       <div #stats></div>
     </div>

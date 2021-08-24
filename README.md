@@ -28,8 +28,8 @@ based on state-of-the-art real-time client side models.
 - Language identification (Detect Language) - https://github.com/sign-language-processing/playground/issues/10
 - Spoken language text to SignWriting translation - https://github.com/sign-language-processing/playground/issues/11
 - SignWriting to pose sequence - **TODO**
-- Pose sequence to video - https://github.com/sign-language-processing/playground/issues/12
 - Text to pose sequence (server side)
+- Pose sequence to video
 - Copy / share / download translation
 
 # Sign Language Processing Playground

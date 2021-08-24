@@ -12,8 +12,6 @@ import {Store} from '@ngxs/store';
 })
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
-  @Input() width: string;
-  @Input() height: string;
 
   constructor(store: Store) {
     super(store);

@@ -18,7 +18,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
   mimeTypes = ['video/mp4', 'video/webm'];
-  mimeType: string;
   mediaRecorder: MediaRecorder;
 
   protected constructor(private store: Store) {
@@ -43,18 +42,21 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     const pose = await this.poseEl.nativeElement.getPose();
     const fps = pose.body.fps;
 
+
     const stream = canvas.captureStream(fps);
 
+    let supportedMimeType: string;
     for (const mimeType of this.mimeTypes) {
       try {
         this.mediaRecorder = new MediaRecorder(stream, {mimeType});
-        this.mimeType = mimeType;
+        supportedMimeType = mimeType;
+        break;
       } catch (e) {
         console.warn(mimeType, 'not supported');
       }
     }
 
-    if (!this.mimeType) {
+    if (!supportedMimeType) {
       return;
     }
 
@@ -65,14 +67,17 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
     fromEvent(this.mediaRecorder, 'stop').pipe(
       tap(() => {
-        const blob = new Blob(recordedChunks, {type: this.mimeType});
+        stream.getTracks().forEach(track => track.stop());
+        const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
         const url = URL.createObjectURL(blob);
         this.setVideo(url);
       }),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
 
-    this.mediaRecorder.start();
+
+    const duration = this.poseEl.nativeElement.duration * 1000;
+    this.mediaRecorder.start(duration);
   }
 
   stopRecording(): void {
