@@ -81,7 +81,8 @@ export class TranslateState implements NgxsOnInit {
   }
 
   @Action(SetSpokenLanguage)
-  async setSpokenLanguage({patchState, getState, dispatch}: StateContext<TranslateStateModel>, {language}: SetSpokenLanguage): Promise<void> {
+  async setSpokenLanguage({patchState, getState, dispatch}: StateContext<TranslateStateModel>,
+                          {language}: SetSpokenLanguage): Promise<void> {
     patchState({spokenLanguage: language, detectedLanguage: null});
 
     // Load and apply language detection if selected
@@ -103,7 +104,8 @@ export class TranslateState implements NgxsOnInit {
   }
 
   @Action(SetSpokenLanguageText)
-  async setSpokenLanguageText({patchState, getState, dispatch}: StateContext<TranslateStateModel>, {text}: SetSpokenLanguageText): Promise<void> {
+  async setSpokenLanguageText({patchState, getState, dispatch}: StateContext<TranslateStateModel>,
+                              {text}: SetSpokenLanguageText): Promise<void> {
     const {spokenLanguage} = getState();
     patchState({
       spokenLanguageText: text,

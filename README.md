@@ -23,12 +23,12 @@ based on state-of-the-art real-time client side models.
 
 #### Spoken-to-signed language translation
 - Text input
-- Microphone input - https://github.com/sign-language-processing/playground/issues/9
+- [Microphone input](https://github.com/sign-language-processing/playground/issues/9)
 - Text-to-speech
 - Language identification (Detect Language)
-- Spoken language text to SignWriting translation - https://github.com/sign-language-processing/playground/issues/11
-- SignWriting to pose sequence - https://github.com/sign-language-processing/sign-translate/issues/15
-- Text to pose sequence (server side)
+- [Spoken language text to SignWriting translation](https://github.com/sign-language-processing/playground/issues/11)
+- [SignWriting to pose sequence](https://github.com/sign-language-processing/sign-translate/issues/15)
+- Text to pose sequence (server side) - To be removed
 - Pose sequence to video
 - Copy / share / download translation
 
