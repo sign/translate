@@ -48,11 +48,11 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         await this.pix2pix.loadModel();
         this.modelReady = true;
 
+        await promiseRaf(() => {});
+        const poseCanvas = pose.shadowRoot.querySelector('canvas');
+
         while (!pose.ended) {
-          await promiseRaf(() => {
-            const poseCanvas = pose.shadowRoot.querySelector('canvas');
-            return this.pix2pix.translate(poseCanvas, canvas);
-          });
+          await this.pix2pix.translate(poseCanvas, canvas);
           const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
           this.cache.push(image);
 

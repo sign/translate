@@ -7,7 +7,8 @@
       <mat-icon>{{isSpeaking ? 'stop' : 'volume_up'}}</mat-icon>
     </button>
     <!-- If language is not supported -->
-    <button mat-icon-button *ngIf="!isSupported" [attr.aria-label]="t('unavailable')">
+    <button mat-icon-button *ngIf="!isSupported" [attr.aria-label]="t('unavailable')"
+            [matTooltipPosition]="'above'" [matTooltip]="t('unavailable')">
       <mat-icon>volume_off</mat-icon>
     </button>
   </ng-container>

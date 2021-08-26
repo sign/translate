@@ -7,7 +7,7 @@ import {SetSetting} from '../../../../../modules/settings/settings.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 
 
-export type AspectRatio = '16-9' | '4-3' | '2-1';
+export type AspectRatio = '16-9' | '4-3' | '2-1' | '1-1';
 
 export interface VideoSettings {
   aspectRatio: AspectRatio;
@@ -123,6 +123,6 @@ export class VideoState implements NgxsOnInit {
   }
 
   private aspectRatio(ratio: number): AspectRatio {
-    return ratio > 1.9 ? '2-1' : ratio < 1.5 ? '4-3' : '16-9';
+    return ratio > 1.9 ? '2-1' : ratio < 1.5 ? (ratio < 1.1 ? '1-1' : '4-3') : '16-9';
   }
 }

@@ -17,7 +17,7 @@ interface CanvasElement extends HTMLCanvasElement {
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
-  mimeTypes = ['video/mp4', 'video/webm'];
+  mimeTypes = ['video/webm', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
 
   protected constructor(private store: Store) {

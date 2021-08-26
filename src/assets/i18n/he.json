@@ -35,7 +35,7 @@
         "sy": "סוריה",
         "by": "בלארוס",
         "bg": "בולגריה",
-        "fl": "סין",
+        "cn": "סין",
         "hr": "קרואטיה",
         "cz": "צ'כיה",
         "dk": "דנמרק",
@@ -207,11 +207,16 @@
     "cancel": "עצירה",
     "unavailable": "פלט קולי אינו זמין עבור השפה שנבחרה"
   },
+  "speech-to-text": {
+    "start": "תרגום באמצעות דיבור",
+    "stop": "הפסקת התרגום באמצעות דיבור",
+    "unavailable": "נדרשת הרשאה להשתמש במיקרופון"
+  },
   "settings": {
-    "detectSign": "זהו מתי מסמנים",
-    "drawVideo": "ציירו וידאו",
-    "drawPose": "ציירו שלד",
-    "drawSignWriting": "ציירו SignWriting",
+    "detectSign": "זיהוי מתי מסמנים",
+    "drawVideo": "ציור וידאו",
+    "drawPose": "ציור שלד",
+    "drawSignWriting": "ציור SignWriting",
     "animatePose": "אנימציית שלד",
     "poseViewer": {
       "pose": "שלד",

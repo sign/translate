@@ -4,6 +4,7 @@
     <textarea [formControl]="text" [maxLength]="maxTextLength" dir="auto"
               aria-labelledby="spoken-language-label" autofocus data-gramm_editor="false"></textarea>
     <div>
+      <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
       <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
       <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
     </div>
@@ -29,8 +30,6 @@
     </ng-template>
 
     <div id="actions" *ngIf="pose$ | async as pose">
-      <app-viewer-selector></app-viewer-selector>
-
       <ng-container *ngIf="videoUrl; else spinner">
         <button mat-icon-button [attr.aria-label]="t('actions.download')"
                 (click)="downloadTranslation()"
@@ -51,6 +50,7 @@
       <ng-template #spinner>
         <mat-spinner diameter="24"></mat-spinner>
       </ng-template>
+      <app-viewer-selector></app-viewer-selector>
     </div>
   </div>
 </ng-container>

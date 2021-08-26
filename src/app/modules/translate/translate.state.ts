@@ -3,7 +3,7 @@ import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 // tslint:disable-next-line:max-line-length
 import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
 import {TranslationService} from './translate.service';
-import {StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
+import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
@@ -58,15 +58,28 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(FlipTranslationDirection)
   async flipTranslationMode({getState, patchState, dispatch}: StateContext<TranslateStateModel>): Promise<void> {
-    const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage} = getState();
+    const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, signedLanguageVideo} = getState();
     patchState({
       spokenToSigned: !spokenToSigned,
       // Collapse detected language if used
       spokenLanguage: spokenLanguage ?? detectedLanguage,
       signedLanguage: signedLanguage ?? detectedLanguage,
-      detectedLanguage: null
+      detectedLanguage: null,
+      signedLanguageVideo: null
     });
-    dispatch(new SetInputMode(spokenToSigned ? 'webcam' : 'text'));
+
+    if (spokenToSigned) {
+      if (signedLanguageVideo) {
+        dispatch([
+          new SetInputMode('upload'),
+          new SetVideo(signedLanguageVideo)
+        ]);
+      } else {
+        dispatch(new SetInputMode('webcam'));
+      }
+    } else {
+      dispatch(new SetInputMode('text'));
+    }
   }
 
   @Action(SetInputMode)

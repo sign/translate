@@ -11,7 +11,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material-experimental/mdc-tabs';
-import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const materialModules = [
@@ -27,8 +26,7 @@ const materialModules = [
   BrowserAnimationsModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
-  MatTabsModule,
-  MatFabMenuModule
+  MatTabsModule
 ];
 
 @NgModule({

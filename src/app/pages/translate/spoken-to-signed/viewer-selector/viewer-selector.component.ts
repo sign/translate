@@ -3,28 +3,33 @@ import {BaseSettingsComponent} from '../../../../modules/settings/settings.compo
 import {Select, Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
-import {MatFabMenu} from '@angular-material-extensions/fab-menu';
 import {takeUntil, tap} from 'rxjs/operators';
-import {TranslocoService} from '@ngneat/transloco';
+import {ThemePalette} from '@angular/material/core';
+
+export interface MatFabMenu {
+  id: string;
+  icon?: string;
+  color?: ThemePalette;
+}
 
 @Component({
   selector: 'app-viewer-selector',
   templateUrl: './viewer-selector.component.html',
-  styleUrls: ['./viewer-selector.component.css']
+  styleUrls: ['./viewer-selector.component.scss']
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {
   @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
 
   buttons: MatFabMenu[] = [
-    {id: 'pose', icon: 'timeline', color: 'primary', tooltipPosition: 'after'},
-    {id: 'avatar', icon: 'view_in_ar', color: 'accent', tooltipPosition: 'after'},
-    {id: 'human', icon: 'emoji_people', color: 'warn', tooltipPosition: 'after'},
+    {id: 'human', icon: 'emoji_people', color: 'warn'},
+    {id: 'avatar', icon: 'view_in_ar', color: 'accent'},
+    {id: 'pose', icon: 'timeline', color: 'primary'},
   ];
 
   fab: MatFabMenu;
   fabButtons: MatFabMenu[] = [];
 
-  constructor(store: Store, private transloco: TranslocoService) {
+  constructor(store: Store) {
     super(store);
   }
 
@@ -40,22 +45,6 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
           }
         }
       }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
-
-    this.updateTooltips();
-  }
-
-  updateTooltips(): void {
-    const updateTooltips = () => {
-      for (const button of this.buttons) {
-        button.tooltip = this.transloco.translate('settings.poseViewer.' + button.id);
-      }
-    };
-
-    updateTooltips();
-    this.transloco.events$.pipe(
-      tap(() => updateTooltips),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
   }

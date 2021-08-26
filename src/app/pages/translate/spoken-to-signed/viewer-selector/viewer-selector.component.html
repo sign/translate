@@ -1,2 +1,15 @@
-<mat-fab-menu *ngIf="fab" [color]="fab.color" [fabButtons]="fabButtons" [icon]="fab.icon"
-              (onFabMenuItemSelected)="applySetting('poseViewer', $event)"></mat-fab-menu>
+<ng-container *transloco="let t; read: 'settings.poseViewer'">
+
+  <button mat-mini-fab [matMenuTriggerFor]="menu" [color]="fab.color" [attr.aria-label]="t(fab.id)"
+          [matTooltipPosition]="'after'" [matTooltip]="t(fab.id)">
+    <mat-icon>{{fab.icon}}</mat-icon>
+  </button>
+
+  <mat-menu #menu yPosition="above" xPosition="before" class="fab-menu">
+    <button mat-fab *ngFor="let button of fabButtons" [color]="button.color" [attr.aria-label]="t(button.id)"
+            [matTooltipPosition]="'after'" [matTooltip]="t(button.id)"
+            (click)="applySetting('poseViewer', button.id)">
+      <mat-icon>{{button.icon}}</mat-icon>
+    </button>
+  </mat-menu>
+</ng-container>

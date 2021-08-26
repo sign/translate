@@ -21,6 +21,11 @@ app-video {
   height: 720px;
   max-height: 45vw;
 
+  &.aspect-1-1 {
+    width: 720px;
+    max-width: 45vw;
+  }
+
   &.aspect-4-3 {
     min-width: 288px;
     width: 960px;

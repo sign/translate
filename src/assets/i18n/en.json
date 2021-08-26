@@ -35,7 +35,7 @@
         "sy": "Syria",
         "by": "Belarus",
         "bg": "Bulgaria",
-        "fl": "China",
+        "cn": "China",
         "hr": "Croatia",
         "cz": "Czech",
         "dk": "Denmark",
@@ -206,6 +206,12 @@
     "play": "Listen",
     "cancel": "Stop",
     "unavailable": "Voice output isn't available for the selected language"
+  },
+  "speech-to-text": {
+    "start": "Translate by voice",
+    "stop": "Stop translation by voice",
+    "not-allowed": "Need permission to use microphone",
+    "language-not-supported": "Selected language is not supported"
   },
   "settings": {
     "detectSign": "Detect Sign",

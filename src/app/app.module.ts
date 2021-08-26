@@ -30,6 +30,7 @@ import {environment} from '../environments/environment';
 import {TranslateModule} from './modules/translate/translate.module';
 import {ViewerSelectorComponent} from './pages/translate/spoken-to-signed/viewer-selector/viewer-selector.component';
 import {SkeletonPoseViewerComponent} from './pages/translate/pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
+import { SpeechToTextComponent } from './components/speech-to-text/speech-to-text.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {SkeletonPoseViewerComponent} from './pages/translate/pose-viewers/skelet
     ViewerSelectorComponent,
     HumanPoseViewerComponent,
     SkeletonPoseViewerComponent,
+    SpeechToTextComponent,
   ],
   imports: [
     BrowserModule,

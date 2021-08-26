@@ -29,7 +29,7 @@
 
     <div id="translation-card">
       <div id="language-selector">
-        <app-language-selector [flags]="true" [hasLanguageDetection]="!spokenToSigned" [languages]="signedLanguages"
+        <app-language-selector [flags]="true" [hasLanguageDetection]="false" [languages]="signedLanguages"
                                translationKey="translate.languages.signed"
                                (languageChange)="setSignedLanguage($event)"></app-language-selector>
 

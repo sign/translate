@@ -19,7 +19,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-material-extensions/fab-menu": "^3.0.1",
     "@angular/animations": "~12.2.1",
     "@angular/cdk": "~12.2.1",
     "@angular/common": "~12.2.1",

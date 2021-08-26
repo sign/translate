@@ -21,7 +21,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
 
-  signedLanguages = ['us', 'gb', 'fr', 'es', 'sy', 'by', 'bg', 'fl', 'hr', 'cz', 'dk', 'in', 'nz', 'ee', 'fi', 'at', 'de', 'cy', 'gr', 'is',
+  signedLanguages = ['us', 'gb', 'fr', 'es', 'sy', 'by', 'bg', 'cn', 'hr', 'cz', 'dk', 'in', 'nz', 'ee', 'fi', 'at', 'de', 'cy', 'gr', 'is',
     'isl', 'it', 'jp', 'lv', 'lt', 'ir', 'pl', 'br', 'pt', 'ro', 'ru', 'sk', 'ar', 'cl', 'cu', 'mx', 'se', 'tr', 'ua', 'pk'];
 
   spokenLanguages = ['en', 'fr', 'es', 'af', 'sq', 'am', 'ar', 'hy', 'az', 'eu', 'be', 'bn', 'bs', 'bg', 'ca', 'ceb', 'ny', 'zh-CN', 'co',

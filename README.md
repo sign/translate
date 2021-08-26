@@ -10,40 +10,27 @@
 A bi-directional multilingual translation app for desktop and mobile, 
 based on state-of-the-art real-time client side models.
 
-#### Signed-to-spoken language translation
-- Camera / File upload video inputs
-- SignWriting hand shape and orientation estimation
-- SignWriting facial features estimation
-- Language identification (Detect Language) - **TODO**
-- Segmentation - **TODO**
-- Tokenization - **TODO**
-- SignWriting to spoken language translation - **TODO**
-- Text-to-speech
-- Copy / share / edit translation - **TODO**
+### Key Features
+
+(Hyperlinks to issues indicate the feature does not exist fully)
 
 #### Spoken-to-signed language translation
-- Text input
-- [Microphone input](https://github.com/sign-language-processing/playground/issues/9)
+- Text / Microphone inputs
 - Text-to-speech
 - Language identification (Detect Language)
 - [Spoken language text to SignWriting translation](https://github.com/sign-language-processing/playground/issues/11)
 - [SignWriting to pose sequence](https://github.com/sign-language-processing/sign-translate/issues/15)
-- Text to pose sequence (server side) - To be removed
-- Pose sequence to video
-- Copy / share / download translation
+- [Text to pose sequence fallback (server side)](https://github.com/sign-language-processing/sign-translate/issues/17)
+- Skeleton / [Avatar](https://github.com/sign-language-processing/sign-translate/issues/16) / Human Pose Viewers
+- Copy / share / download video
 
-# Sign Language Processing Playground
-
-This playground is intended for ease of prototyping real-time sign language models.
-
-[Visit the playground!](https://sign-language-processing.github.io/playground/)
-
-
-It includes, as a basic first step, MediaPipe Holistic pose estimation, on top of which other predictions are performed:
-
-- Sign language detection (Model based)
-- SignWriting hand orientation (Rule based) - https://github.com/sign-language-processing/playground/issues/1
-- SignWriting hand shape (Model based)
-- Partial SignWriting non-manuals - eyebrows, eyes, mouthing (Model based)
-
-
+#### Signed-to-spoken language translation
+- Camera / File upload video inputs
+- SignWriting hand shape and [orientation](https://github.com/sign-language-processing/playground/issues/1)  estimation
+- SignWriting facial features estimation
+- [Language identification (Detect Language)](https://github.com/sign-language-processing/sign-translate/issues/21)
+- [Segmentation]() - **TODO CREATE ISSUE**
+- [Tokenization]() - **TODO CREATE ISSUE**
+- [SignWriting to spoken language translation](https://github.com/sign-language-processing/sign-translate/issues/18)
+- Text-to-speech
+- [Copy / share translation](https://github.com/sign-language-processing/sign-translate/issues/19)

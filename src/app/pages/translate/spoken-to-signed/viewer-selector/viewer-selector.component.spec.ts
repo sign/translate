@@ -5,7 +5,6 @@ import {AppTranslocoModule} from '../../../../core/modules/transloco/transloco.m
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
-import {MatFabMenuModule} from '@angular-material-extensions/fab-menu';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('ViewerSelectorComponent', () => {
@@ -17,7 +16,6 @@ describe('ViewerSelectorComponent', () => {
       declarations: [ViewerSelectorComponent],
       imports: [
         AppTranslocoModule,
-        MatFabMenuModule,
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig)
       ]
