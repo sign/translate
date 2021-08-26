@@ -21,7 +21,6 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
 
   ngOnInit(): void {
     this.speechRecognition.interimResults = true;
-    this.speechRecognition.continuous = true;
 
     fromEvent(this.speechRecognition, 'result').subscribe((event: SpeechRecognitionEvent) => {
       const transcription = event.results[0][0].transcript;
@@ -40,7 +39,7 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
       this.changeText.emit('');
       this.isRecording = true;
     });
-    fromEvent(this.speechRecognition, 'audioend').subscribe(() => this.isRecording = false);
+    fromEvent(this.speechRecognition, 'end').subscribe(() => this.isRecording = false);
 
     fromEvent(this.speechRecognition, 'speechend').subscribe(this.stop.bind(this));
   }
