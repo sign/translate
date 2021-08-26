@@ -36,7 +36,6 @@ export class Pix2PixService {
       // Must apply model in training=True mode to avoid using aggregated norm statistics
       let pred = this.sequentialModel.apply(tensor, {training: true}) as Tensor;
       pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
-      // pred = pred.clipByValue(0, 1); // Clip to range [0, 1]
       return pred.reshape([canvas.width, canvas.height, 3]) as Tensor3D;
     });
 

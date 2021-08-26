@@ -21,7 +21,7 @@ based on state-of-the-art real-time client side models.
 - [Spoken language text to SignWriting translation](https://github.com/sign-language-processing/playground/issues/11)
 - [SignWriting to pose sequence](https://github.com/sign-language-processing/sign-translate/issues/15)
 - [Text to pose sequence fallback (server side)](https://github.com/sign-language-processing/sign-translate/issues/17)
-- Skeleton / [Avatar](https://github.com/sign-language-processing/sign-translate/issues/16) / Human Pose Viewers
+- Skeleton / [Avatar](https://github.com/sign-language-processing/sign-translate/issues/16) / [Human](https://github.com/tensorflow/tfjs/issues/5537) Pose Viewers
 - Copy / share / download video
 
 #### Signed-to-spoken language translation

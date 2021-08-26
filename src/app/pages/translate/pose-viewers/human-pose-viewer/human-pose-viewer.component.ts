@@ -41,6 +41,9 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     const canvas = this.canvasEl.nativeElement;
     const ctx = canvas.getContext('2d');
 
+    let destroyed = false;
+    this.ngUnsubscribe.subscribe(() => destroyed = true);
+
     fromEvent(pose, 'firstRender$').pipe(
       tap(async () => {
         this.reset();
@@ -48,11 +51,20 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         await this.pix2pix.loadModel();
         this.modelReady = true;
 
-        await promiseRaf(() => {});
+        await promiseRaf(() => {
+        });
         const poseCanvas = pose.shadowRoot.querySelector('canvas');
 
         while (!pose.ended) {
+          // Verify element is not destroyed
+          if (destroyed) {
+            return;
+          }
+
+          const perf = performance.now();
           await this.pix2pix.translate(poseCanvas, canvas);
+          console.log(performance.now() - perf);
+
           const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
           this.cache.push(image);
 

@@ -6,6 +6,7 @@ import {LayersModel} from '@tensorflow/tfjs-layers';
 import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
+import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
 
 export type HandPlane = 'wall' | 'floor';
 export type HandDirection = 'me' | 'you' | 'side';
@@ -31,13 +32,12 @@ export class HandsService {
   constructor(private poseNormalization: PoseNormalizationService) {
   }
 
-  async loadModel(): Promise<LayersModel[]> {
-    return Promise.all([
-      tf.loadLayersModel('assets/models/hand-shape/model.json')
-        .then(model => this.leftHandSequentialModel = model as unknown as LayersModel),
-      tf.loadLayersModel('assets/models/hand-shape/model.json') // TODO figure out a way to copy the model, not load twice
-        .then(model => this.rightHandSequentialModel = model as unknown as LayersModel)
-    ]);
+  async loadModel(): Promise<void> {
+    this.leftHandSequentialModel = await tf.loadLayersModel('assets/models/hand-shape/model.json');
+
+    // Clone the model for the right hand, instead of loading again from disk
+    const modelData = new Promise<ModelArtifacts>(resolve => this.leftHandSequentialModel.save({save: resolve as any}));
+    this.rightHandSequentialModel = await tf.loadLayersModel({load: () => modelData});
   }
 
   normalizeHand(vectors: THREE.Vector3[], normal: PlaneNormal, flipHand: boolean): tf.Tensor {
