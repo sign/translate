@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import * as tf from '@tensorflow/tfjs';
 import {ModelNotLoadedError, Pix2PixService} from './pix2pix.service';
+import createSpy = jasmine.createSpy;
 
 describe('Pix2Pix', () => {
   let service: Pix2PixService;
@@ -34,5 +35,28 @@ describe('Pix2Pix', () => {
 
     const translate = service.translate(canvas1, canvas2);
     await expectAsync(translate).toBeRejectedWith(new ModelNotLoadedError());
+  });
+
+  it('should not reload model after model is loaded', async () => {
+    service.sequentialModel = true as any;
+    await service.loadModel();
+
+    expect(service.sequentialModel).toEqual(true as any);
+  });
+
+  it('should call model in pipeline', async () => {
+    service.sequentialModel = {
+      apply: createSpy('apply').and.callFake((tensor) => tensor)
+    } as any;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 256;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    await service.translate(canvas, canvas);
+
+    expect(service.sequentialModel.apply).toHaveBeenCalled();
   });
 });
