@@ -27,7 +27,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   ngOnDestroy(): void {
     super.ngOnDestroy();
 
-    if (this.mediaRecorder.state !== 'inactive') {
+    if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
       this.mediaRecorder.stop();
     }
   }
