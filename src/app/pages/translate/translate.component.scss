@@ -2,10 +2,6 @@
 @import "../../../theme/variables";
 
 ::ng-deep {
-  html, body {
-    overflow: hidden;
-  }
-
   body {
     background-color: white;
     -webkit-font-smoothing: antialiased;
@@ -18,8 +14,6 @@
 }
 
 :host {
-  height: 100vh;
-
   @media #{$mat-gt-xs} {
     &::before {
       background-color: map-get(mat.$grey-palette, 50);
@@ -58,13 +52,6 @@ mat-toolbar {
   max-width: 1280px;
   margin: 0 auto;
   transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: auto;
-
-  max-height: calc(100vh - 64px);
-
-  @media #{$mat-lt-sm} {
-    max-height: calc(100vh - 56px);
-  }
 
   @media #{$mat-gt-md} {
     padding: 0 48px;
@@ -96,7 +83,6 @@ mat-toolbar {
 
   #translation-card {
     background-color: white;
-    overflow: hidden;
     width: 100%;
     transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.37);
