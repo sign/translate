@@ -1,44 +1,44 @@
 import {Injectable} from '@angular/core';
-import {LayersModel} from '@tensorflow/tfjs-layers';
 import * as tf from '@tensorflow/tfjs';
-import {Tensor, Tensor3D} from '@tensorflow/tfjs';
+import {TensorLike} from '@tensorflow/tfjs';
+import * as comlink from 'comlink';
 
-export class ModelNotLoadedError extends Error {
-  constructor() {
-    super('Model not loaded');
-  }
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class Pix2PixService {
-  sequentialModel: LayersModel;
+  worker: comlink.Remote<{
+    loadModel: () => Promise<void>,
+    translate: (width: number, height: number, pixels: TensorLike) => Promise<Uint8ClampedArray>,
+  }>;
 
   async loadModel(): Promise<void> {
-    if (this.sequentialModel) {
+    if (this.worker) {
       return;
     }
-    const model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
-    this.sequentialModel = model as unknown as LayersModel;
+
+    // tslint:disable-next-line: whitespace
+    this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
+    await this.worker.loadModel();
   }
 
-  async translate(canvas: HTMLCanvasElement, target: HTMLCanvasElement): Promise<void> {
-    if (!this.sequentialModel) {
-      throw new ModelNotLoadedError();
-    }
+  async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
+    /*
+     TODO
+     Communication costs are very high!
+     A typical timing of this function is:
+     - this entire function: 103.435791015625 ms
+     - fromPixels: 35.729736328125 ms
+     - web worker "translate": 11.86181640625 ms
+     TODO one improvement would be to make the drawing canvas an offscreen one
+     */
 
-    const image = tf.tidy(() => {
-      const pixels = tf.browser.fromPixels(canvas).toFloat();
-      const input = tf.sub(tf.div(pixels, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
-      const tensor = input.reshape([1, canvas.width, canvas.height, 3]);
+    const {width, height} = canvas;
 
-      // Must apply model in training=True mode to avoid using aggregated norm statistics
-      let pred = this.sequentialModel.apply(tensor, {training: true}) as Tensor;
-      pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
-      return pred.reshape([canvas.width, canvas.height, 3]) as Tensor3D;
-    });
+    // TODO: this operation takes >25ms!!! Insane
+    const pixels = tf.browser.fromPixels(canvas).dataSync(); // TODO move to the web worker itself
 
-    await tf.browser.toPixels(image, target);
+    return this.worker.translate(width, height, pixels);
   }
 }

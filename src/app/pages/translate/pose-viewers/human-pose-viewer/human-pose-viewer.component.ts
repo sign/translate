@@ -51,8 +51,6 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         await this.pix2pix.loadModel();
         this.modelReady = true;
 
-        await promiseRaf(() => {
-        });
         const poseCanvas = pose.shadowRoot.querySelector('canvas');
 
         while (!pose.ended) {
@@ -61,12 +59,12 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             return;
           }
 
-          const perf = performance.now();
-          await this.pix2pix.translate(poseCanvas, canvas);
-          console.log(performance.now() - perf);
+          const uint8Array: Uint8ClampedArray = await promiseRaf(() => this.pix2pix.translate(poseCanvas));
 
-          const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          this.cache.push(image);
+          const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
+          this.cache.push(imageData);
+
+          ctx.putImageData(imageData, 0, 0);
 
           await pose.nextFrame();
         }
