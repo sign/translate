@@ -17,6 +17,19 @@ async function loadModel(): Promise<void> {
   model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
 }
 
+function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
+  // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
+  for (let i = 0; i < data.length; i += 4) {
+    const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
+
+    // If its white-ish, change it
+    if (r > 170 && g > 170 && b > 170) {
+      data[i + 3] = 0;
+    }
+  }
+  return data;
+}
+
 async function translate(width: number, height: number, pixels: TensorLike): Promise<Uint8ClampedArray> {
   if (!model) {
     throw new ModelNotLoadedError();
@@ -33,7 +46,8 @@ async function translate(width: number, height: number, pixels: TensorLike): Pro
     return pred.reshape([width, height, 3]) as Tensor3D;
   });
 
-  return tf.browser.toPixels(image);
+  const data = await tf.browser.toPixels(image);
+  return removeGreenScreen(data);
 }
 
 

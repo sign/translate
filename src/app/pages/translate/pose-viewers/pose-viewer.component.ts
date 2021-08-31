@@ -9,6 +9,8 @@ interface CanvasElement extends HTMLCanvasElement {
   captureStream(frameRate?: number): MediaStream;
 }
 
+const BPS = 2_000_000;
+
 @Component({
   selector: 'app-pose-viewer',
   template: ``,
@@ -48,7 +50,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     let supportedMimeType: string;
     for (const mimeType of this.mimeTypes) {
       try {
-        this.mediaRecorder = new MediaRecorder(stream, {mimeType});
+        this.mediaRecorder = new MediaRecorder(stream, {mimeType, bitsPerSecond: BPS});
         supportedMimeType = mimeType;
         break;
       } catch (e) {
