@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
 import {map, takeUntil, tap} from 'rxjs/operators';
-import * as THREE from 'three';
+import {AnimationClip, QuaternionKeyframeTrack, VectorKeyframeTrack} from 'three';
 
 
 @Component({
@@ -34,13 +34,13 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         map(a => a.tracks),
         tap((trackDict) => {
           const name = 'u' + (i++);
-          const tracks = [new THREE.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
+          const tracks = [new VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
           if (trackDict) {
             Object.entries(trackDict).forEach(([k, q]) => {
-              tracks.push(new THREE.QuaternionKeyframeTrack(k, [0], q));
+              tracks.push(new QuaternionKeyframeTrack(k, [0], q));
             });
           }
-          const newAnimation = new THREE.AnimationClip(name, 0, tracks);
+          const newAnimation = new AnimationClip(name, 0, tracks);
 
           scene.animationsByName.set(name, newAnimation);
           scene.playAnimation(name);

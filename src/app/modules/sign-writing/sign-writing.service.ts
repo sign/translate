@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HandsService} from './hands.service';
-import * as THREE from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {BodyService} from './body.service';
 import {FaceService} from './face.service';
+import {Vector2, Vector3} from 'three';
 
 
 @Injectable({
@@ -24,7 +24,7 @@ export class SignWritingService {
     return 100 * scale;
   }
 
-  static drawSWText(text: string, center: THREE.Vector2 | THREE.Vector3, fontSize: number,
+  static drawSWText(text: string, center: Vector2 | Vector3, fontSize: number,
                     ctx: CanvasRenderingContext2D, isNormalized = true): void {
     ctx.font = fontSize + 'px SuttonSignWritingOneD';
     ctx.textAlign = 'center';

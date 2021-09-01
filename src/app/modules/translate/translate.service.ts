@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
-import {LanguageIdentifier, loadModule} from 'cld3-asm';
+import {LanguageIdentifier} from 'cld3-asm';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he'
 };
 const DEFAULT_SPOKEN_LANGUAGE = 'en';
+
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,8 @@ export class TranslationService {
     if (this.cld) {
       return;
     }
-    const cldFactory = await loadModule();
+    const cld3 = await import(/* webpackChunkName: "cld3-asm" */ 'cld3-asm');
+    const cldFactory = await cld3.loadModule();
     this.cld = cldFactory.create(1, 500);
   }
 

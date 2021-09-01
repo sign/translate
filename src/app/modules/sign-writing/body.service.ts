@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
-import * as THREE from 'three';
+import {Vector2} from 'three';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
 import * as holistic from '@mediapipe/holistic/holistic.js';
 
 export interface BodyShoulders {
-  center: THREE.Vector2;
+  center: Vector2;
   width: number;
 }
 
@@ -25,7 +25,7 @@ export class BodyService {
     const p2 = landmarks[holistic.POSE_LANDMARKS.RIGHT_SHOULDER];
 
     return {
-      center: new THREE.Vector2((p1.x + p2.x) / 2, (p1.y + p2.y) / 2),
+      center: new Vector2((p1.x + p2.x) / 2, (p1.y + p2.y) / 2),
       width: Math.abs(p1.x - p2.x)
     };
   }

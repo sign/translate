@@ -4,11 +4,11 @@ import {Observable} from 'rxjs';
 import {Pose} from '../pose/pose.state';
 import {filter, first, tap} from 'rxjs/operators';
 import {HandsService, HandStateModel} from './hands.service';
-import * as THREE from 'three';
 import {CalculateBodyFactors, EstimateFaceShape, EstimateHandShape} from './sign-writing.actions';
 import {BodyService, BodyStateModel} from './body.service';
 import * as holistic from '@mediapipe/holistic/holistic';
 import {FaceService, FaceStateModel} from './face.service';
+import {Vector3} from 'three';
 
 
 export interface SignWritingStateModel {
@@ -103,7 +103,7 @@ export class SignWritingState implements NgxsOnInit {
       return;
     }
 
-    const vectors = landmarks.map(l => new THREE.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
+    const vectors = landmarks.map(l => new Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     patchState({
       face: this.faceService.shape(vectors)
@@ -120,7 +120,7 @@ export class SignWritingState implements NgxsOnInit {
 
     const isLeft = hand === 'leftHand';
 
-    const vectors = landmarks.map(l => new THREE.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
+    const vectors = landmarks.map(l => new Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     const normal = this.handsService.normal(vectors, isLeft);
     const plane = this.handsService.plane(vectors);

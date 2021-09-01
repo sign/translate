@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import * as tf from '@tensorflow/tfjs';
-import * as THREE from 'three';
+import {Plane, Vector3} from 'three';
 
 
 export interface PlaneNormal {
-  center: THREE.Vector3;
-  direction: THREE.Vector3;
+  center: Vector3;
+  direction: Vector3;
 }
 
 @Injectable({
@@ -14,16 +14,16 @@ export interface PlaneNormal {
 export class PoseNormalizationService {
   model?: any;
 
-  normal(vectors: THREE.Vector3[], planeIdx: [number, number, number]): PlaneNormal {
+  normal(vectors: Vector3[], planeIdx: [number, number, number]): PlaneNormal {
     const triangle = planeIdx.map(i => vectors[i]);
 
-    const center = new THREE.Vector3(
+    const center = new Vector3(
       (triangle[0].x + triangle[1].x + triangle[2].x) / 3,
       (triangle[0].y + triangle[1].y + triangle[2].y) / 3,
       (triangle[0].z + triangle[1].z + triangle[2].z) / 3,
     );
 
-    const plane = new THREE.Plane().setFromCoplanarPoints(triangle[0], triangle[1], triangle[2]);
+    const plane = new Plane().setFromCoplanarPoints(triangle[0], triangle[1], triangle[2]);
     const direction = plane.normal;
 
     return {center, direction};
@@ -33,15 +33,15 @@ export class PoseNormalizationService {
     return (Math.atan2(n, d) * 180 / Math.PI + 360) % 360;
   }
 
-  normalize(vectors: THREE.Vector3[], normal: PlaneNormal, line: [number, number], center: number, flip: boolean = false): tf.Tensor {
+  normalize(vectors: Vector3[], normal: PlaneNormal, line: [number, number], center: number, flip: boolean = false): tf.Tensor {
     let matrix: tf.Tensor = tf.tensor2d(vectors.map(v => [v.x, v.y, v.z]));
 
 
     // 1. Rotate vectors to normal
-    const oldXAxis = new THREE.Vector3(1, 0, 0);
+    const oldXAxis = new Vector3(1, 0, 0);
     const zAxis = normal.direction.multiplyScalar(-1);
-    const yAxis = new THREE.Vector3().crossVectors(oldXAxis, zAxis);
-    const xAxis = new THREE.Vector3().crossVectors(zAxis, yAxis);
+    const yAxis = new Vector3().crossVectors(oldXAxis, zAxis);
+    const xAxis = new Vector3().crossVectors(zAxis, yAxis);
 
     const axis = tf.tensor2d([
       [xAxis.x, yAxis.x, zAxis.x],

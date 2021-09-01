@@ -1,7 +1,6 @@
 /// <reference lib="webworker" />
 
 import * as comlink from 'comlink';
-import * as tf from '@tensorflow/tfjs';
 import {Tensor, Tensor3D, TensorLike} from '@tensorflow/tfjs';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 
@@ -11,9 +10,11 @@ class ModelNotLoadedError extends Error {
   }
 }
 
+const tfPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs');
 let model: LayersModel;
 
 async function loadModel(): Promise<void> {
+  const tf = await tfPromise;
   model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
 }
 
@@ -41,6 +42,7 @@ async function translate(width: number, height: number, pixels: TensorLike): Pro
   if (!model) {
     throw new ModelNotLoadedError();
   }
+  const tf = await tfPromise;
 
   const image = tf.tidy(() => {
     const pixelsTensor = tf.tensor(pixels).toFloat();

@@ -1,5 +1,5 @@
 import {TestBed} from '@angular/core/testing';
-import * as THREE from 'three';
+import {Vector3} from 'three';
 import {FaceService} from './face.service';
 import * as tf from '@tensorflow/tfjs';
 
@@ -47,7 +47,7 @@ describe('FaceService', () => {
     ];
 
     for (const [x, y] of faceNormalizations) {
-      const vectors = x.map(v => new THREE.Vector3(v[0], v[1], v[2]));
+      const vectors = x.map(v => new Vector3(v[0], v[1], v[2]));
 
       const yHat = service.normalize(vectors).arraySync();
       for (let i = 0; i < y.length; i++) {

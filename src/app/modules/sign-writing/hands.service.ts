@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import * as THREE from 'three';
+import {Box3, Vector2, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import {LayersModel} from '@tensorflow/tfjs-layers';
@@ -12,7 +12,7 @@ export type HandPlane = 'wall' | 'floor';
 export type HandDirection = 'me' | 'you' | 'side';
 
 export interface HandStateModel {
-  bbox: THREE.Box3;
+  bbox: Box3;
   normal: PlaneNormal;
   plane: HandPlane;
   rotation: number; // Rotation  [0,7]
@@ -40,11 +40,11 @@ export class HandsService {
     this.rightHandSequentialModel = await tf.loadLayersModel({load: () => modelData});
   }
 
-  normalizeHand(vectors: THREE.Vector3[], normal: PlaneNormal, flipHand: boolean): tf.Tensor {
+  normalizeHand(vectors: Vector3[], normal: PlaneNormal, flipHand: boolean): tf.Tensor {
     return this.poseNormalization.normalize(vectors, normal, [0, 9], 0, flipHand);
   }
 
-  shape(vectors: THREE.Vector3[], normal: PlaneNormal, isLeft: boolean): string {
+  shape(vectors: Vector3[], normal: PlaneNormal, isLeft: boolean): string {
     const model = isLeft ? this.leftHandSequentialModel : this.rightHandSequentialModel;
     if (!model) {
       return '񆄡'; // By default just fist shape
@@ -61,11 +61,11 @@ export class HandsService {
     return String.fromCodePoint(code);
   }
 
-  bbox(vectors: THREE.Vector3[]): THREE.Box3 {
-    return new THREE.Box3().setFromPoints(vectors);
+  bbox(vectors: Vector3[]): Box3 {
+    return new Box3().setFromPoints(vectors);
   }
 
-  normal(vectors: THREE.Vector3[], flipNormal: boolean = false): PlaneNormal {
+  normal(vectors: Vector3[], flipNormal: boolean = false): PlaneNormal {
     // 0 - WRIST
     // 5 - INDEX_FINGER_MCP
     // 17 - PINKY_MCP
@@ -76,7 +76,7 @@ export class HandsService {
     return planeNormal;
   }
 
-  plane(vectors: THREE.Vector3[]): HandPlane {
+  plane(vectors: Vector3[]): HandPlane {
     const p1 = vectors[0];
     const p2 = vectors[13];
 
@@ -95,7 +95,7 @@ export class HandsService {
     return Math.floor(angle / 45);
   }
 
-  rotation(vectors: THREE.Vector3[]): number {
+  rotation(vectors: Vector3[]): number {
     const p1 = vectors[0];
     const p2 = vectors[13];
 
@@ -139,10 +139,10 @@ export class HandsService {
     }
   }
 
-  drawBbox(bbox: THREE.Box3, ctx: CanvasRenderingContext2D): void {
-    const dimensions = new THREE.Vector3(ctx.canvas.width, ctx.canvas.height, 0);
-    const min = new THREE.Vector3().multiplyVectors(bbox.min, dimensions);
-    const max = new THREE.Vector3().multiplyVectors(bbox.max, dimensions);
+  drawBbox(bbox: Box3, ctx: CanvasRenderingContext2D): void {
+    const dimensions = new Vector3(ctx.canvas.width, ctx.canvas.height, 0);
+    const min = new Vector3().multiplyVectors(bbox.min, dimensions);
+    const max = new Vector3().multiplyVectors(bbox.max, dimensions);
 
     ctx.strokeStyle = '#0000FF';
     ctx.beginPath();
@@ -155,11 +155,11 @@ export class HandsService {
   }
 
   drawNormal(normal: PlaneNormal, ctx: CanvasRenderingContext2D): void {
-    const dimensions = new THREE.Vector3(ctx.canvas.width, ctx.canvas.height, ctx.canvas.width);
+    const dimensions = new Vector3(ctx.canvas.width, ctx.canvas.height, ctx.canvas.width);
 
-    const scaledNormal = new THREE.Vector3().multiplyVectors(dimensions, normal.direction).normalize().multiplyScalar(100);
+    const scaledNormal = new Vector3().multiplyVectors(dimensions, normal.direction).normalize().multiplyScalar(100);
 
-    const center = new THREE.Vector3().multiplyVectors(dimensions, normal.center);
+    const center = new Vector3().multiplyVectors(dimensions, normal.center);
 
     ctx.strokeStyle = '#FFFF00';
     ctx.lineWidth = 10;
@@ -199,7 +199,7 @@ export class HandsService {
     }
 
     const text = String.fromCodePoint(char);
-    const center = new THREE.Vector2((hand.bbox.min.x + hand.bbox.max.x) / (2 * ctx.canvas.width),
+    const center = new Vector2((hand.bbox.min.x + hand.bbox.max.x) / (2 * ctx.canvas.width),
       (hand.bbox.min.y + hand.bbox.max.y) / (2 * ctx.canvas.height));
 
     // Font should be same size for all shapes, where flat hand is 1/3 of shoulders width

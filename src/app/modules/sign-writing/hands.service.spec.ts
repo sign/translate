@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 import {HandsService} from './hands.service';
-import * as THREE from 'three';
+import {Vector3} from 'three';
 import * as tf from '@tensorflow/tfjs';
 
 describe('HandsService', () => {
@@ -49,7 +49,7 @@ describe('HandsService', () => {
     ];
 
     for (const [x, y] of handNormalizations) {
-      const vectors = x.map(v => new THREE.Vector3(v[0], v[1], v[2]));
+      const vectors = x.map(v => new Vector3(v[0], v[1], v[2]));
       const normal = service.normal(vectors); // TODO maybe need to flip normal?
       const yHat = service.normalizeHand(vectors, normal, false).arraySync();
       // This is evaluated one item at a time because of negative zeros
