@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
-import * as tf from '@tensorflow/tfjs';
 import {Plane, Vector3} from 'three';
+import {TensorflowLoader} from '../../core/services/tfjs';
+import {Tensor} from '@tensorflow/tfjs-core';
 
 
 export interface PlaneNormal {
@@ -11,7 +12,7 @@ export interface PlaneNormal {
 @Injectable({
   providedIn: 'root'
 })
-export class PoseNormalizationService {
+export class PoseNormalizationService extends TensorflowLoader {
   model?: any;
 
   normal(vectors: Vector3[], planeIdx: [number, number, number]): PlaneNormal {
@@ -33,8 +34,8 @@ export class PoseNormalizationService {
     return (Math.atan2(n, d) * 180 / Math.PI + 360) % 360;
   }
 
-  normalize(vectors: Vector3[], normal: PlaneNormal, line: [number, number], center: number, flip: boolean = false): tf.Tensor {
-    let matrix: tf.Tensor = tf.tensor2d(vectors.map(v => [v.x, v.y, v.z]));
+  normalize(vectors: Vector3[], normal: PlaneNormal, line: [number, number], center: number, flip: boolean = false): Tensor {
+    let matrix: Tensor = this.tf.tensor2d(vectors.map(v => [v.x, v.y, v.z]));
 
 
     // 1. Rotate vectors to normal
@@ -43,18 +44,18 @@ export class PoseNormalizationService {
     const yAxis = new Vector3().crossVectors(oldXAxis, zAxis);
     const xAxis = new Vector3().crossVectors(zAxis, yAxis);
 
-    const axis = tf.tensor2d([
+    const axis = this.tf.tensor2d([
       [xAxis.x, yAxis.x, zAxis.x],
       [xAxis.y, yAxis.y, zAxis.y],
       [xAxis.z, yAxis.z, zAxis.z],
     ]);
 
     matrix = matrix.sub(matrix.slice(0, 1));
-    matrix = tf.dot(matrix, axis);
+    matrix = this.tf.dot(matrix, axis);
 
     if (flip) {
       // Because of mismatch between training and inference, need to flip X axis for right hand
-      matrix = matrix.mul(tf.tensor2d([[-1, 1, 1]]));
+      matrix = matrix.mul(this.tf.tensor2d([[-1, 1, 1]]));
     }
 
     // 2. Rotate hand on the XY plane such that the BASE-M_CMC is on the Y axis
@@ -64,7 +65,7 @@ export class PoseNormalizationService {
     const angle = 90 + this.angle(vec[0][1], vec[0][0]);
     const sinAngle = Math.sin(angle * Math.PI / 180);
     const cosAngle = Math.cos(angle * Math.PI / 180);
-    const rotationMatrix = tf.tensor2d([
+    const rotationMatrix = this.tf.tensor2d([
       [cosAngle, -sinAngle, 0],
       [sinAngle, cosAngle, 0],
       [0, 0, 1],
@@ -75,8 +76,8 @@ export class PoseNormalizationService {
     // 3. Scale line to be of length 200
     const j1 = matrix.slice(line[0], 1); // BASE
     const j2 = matrix.slice(line[1], 1); // M_CMC
-    const len = tf.pow(j2.sub(j1), 2).sum().sqrt();
-    const scalingFactor = tf.scalar(200).div(len);
+    const len = this.tf.pow(j2.sub(j1), 2).sum().sqrt();
+    const scalingFactor = this.tf.scalar(200).div(len);
     matrix = matrix.mul(scalingFactor);
 
     return matrix.sub(matrix.slice(center, 1));

@@ -3,10 +3,10 @@ import {Box3, Vector2, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import {LayersModel} from '@tensorflow/tfjs-layers';
-import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
 import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
+import {TensorflowLoader} from '../../core/services/tfjs';
 
 export type HandPlane = 'wall' | 'floor';
 export type HandDirection = 'me' | 'you' | 'side';
@@ -23,24 +23,27 @@ export interface HandStateModel {
 @Injectable({
   providedIn: 'root'
 })
-export class HandsService {
+export class HandsService extends TensorflowLoader {
 
   // Need two models because they are stateful
   leftHandSequentialModel: LayersModel;
   rightHandSequentialModel: LayersModel;
 
   constructor(private poseNormalization: PoseNormalizationService) {
+    super();
   }
 
   async loadModel(): Promise<void> {
-    this.leftHandSequentialModel = await tf.loadLayersModel('assets/models/hand-shape/model.json');
+    await this.loadTensorflow();
+
+    this.leftHandSequentialModel = await this.tf.loadLayersModel('assets/models/hand-shape/model.json');
 
     // Clone the model for the right hand, instead of loading again from disk
     const modelData = new Promise<ModelArtifacts>(resolve => this.leftHandSequentialModel.save({save: resolve as any}));
-    this.rightHandSequentialModel = await tf.loadLayersModel({load: () => modelData});
+    this.rightHandSequentialModel = await this.tf.loadLayersModel({load: () => modelData});
   }
 
-  normalizeHand(vectors: Vector3[], normal: PlaneNormal, flipHand: boolean): tf.Tensor {
+  normalizeHand(vectors: Vector3[], normal: PlaneNormal, flipHand: boolean): Tensor {
     return this.poseNormalization.normalize(vectors, normal, [0, 9], 0, flipHand);
   }
 
@@ -50,10 +53,10 @@ export class HandsService {
       return '񆄡'; // By default just fist shape
     }
 
-    const hsIndex = tf.tidy(() => {
+    const hsIndex = this.tf.tidy(() => {
       const handTensor = this.normalizeHand(vectors, normal, isLeft);
       const pred: Tensor = model.predict(handTensor.reshape([1, 1, 63])) as Tensor;
-      const argmax = tf.softmax(pred).argMax(2).dataSync();
+      const argmax = this.tf.softmax(pred).argMax(2).dataSync();
       return argmax[0];
     });
 

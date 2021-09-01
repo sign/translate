@@ -1,21 +1,21 @@
-import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, Pose} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
+import {TensorflowLoader} from '../../core/services/tfjs';
 
 const ANIMATION_KEYS = [
   'mixamorigHead.quaternion', 'mixamorigNeck.quaternion', 'mixamorigSpine.quaternion',
   'mixamorigSpine1.quaternion', 'mixamorigSpine2.quaternion', 'mixamorigHips.quaternion',
 
   'mixamorigLeftUpLeg.quaternion', 'mixamorigLeftLeg.quaternion', 'mixamorigLeftToeBase.quaternion',
-  'mixamorigLeftFoot.quaternion', 'mixamorigLeftArm.quaternion',
-  'mixamorigLeftShoulder.quaternion', 'mixamorigLeftForeArm.quaternion',
+  'mixamorigLefthis.tfoot.quaternion', 'mixamorigLeftArm.quaternion',
+  'mixamorigLeftShoulder.quaternion', 'mixamorigLefthis.tforeArm.quaternion',
 
   'mixamorigRightUpLeg.quaternion', 'mixamorigRightLeg.quaternion', 'mixamorigRightToeBase.quaternion',
-  'mixamorigRightFoot.quaternion', 'mixamorigRightArm.quaternion',
-  'mixamorigRightShoulder.quaternion', 'mixamorigRightForeArm.quaternion',
+  'mixamorigRighthis.tfoot.quaternion', 'mixamorigRightArm.quaternion',
+  'mixamorigRightShoulder.quaternion', 'mixamorigRighthis.tforeArm.quaternion',
 
   'mixamorigLeftHand.quaternion',
   'mixamorigLeftHandThumb1.quaternion', 'mixamorigLeftHandThumb2.quaternion',
@@ -44,28 +44,29 @@ const ANIMATION_KEYS = [
 @Injectable({
   providedIn: 'root'
 })
-export class AnimationService {
+export class AnimationService extends TensorflowLoader {
   sequentialModel: LayersModel;
 
-  loadModel(): Promise<LayersModel> {
-    return tf.loadLayersModel('assets/models/pose-animation/model.json')
+  async loadModel(): Promise<LayersModel> {
+    await this.loadTensorflow();
+    return this.tf.loadLayersModel('assets/models/pose-animation/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }
 
-  normalizePose(pose: Pose): tf.Tensor {
+  normalizePose(pose: Pose): Tensor {
     const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
 
-    const tensor = tf.tensor(landmarks.map(l => [l.x, l.y, l.z]))
-      .mul(tf.tensor([pose.image.width, pose.image.height, pose.image.width]));
+    const tensor = this.tf.tensor(landmarks.map(l => [l.x, l.y, l.z]))
+      .mul(this.tf.tensor([pose.image.width, pose.image.height, pose.image.width]));
 
     const p1 = tensor.slice(holistic.POSE_LANDMARKS.LEFT_SHOULDER, 1);
     const p2 = tensor.slice(holistic.POSE_LANDMARKS.RIGHT_SHOULDER, 1);
 
-    const d = tf.sqrt(tf.pow(p2.sub(p1), 2).sum());
-    let normTensor = tf.sub(tensor, p1.add(p2).div(2)).div(d);
+    const d = this.tf.sqrt(this.tf.pow(p2.sub(p1), 2).sum());
+    let normTensor = this.tf.sub(tensor, p1.add(p2).div(2)).div(d);
     normTensor = normTensor.mul(tensor.notEqual(0)); // Remove landmarks not detected
 
     return normTensor;
@@ -76,7 +77,7 @@ export class AnimationService {
       return null;
     }
 
-    const quaternions = tf.tidy(() => {
+    const quaternions = this.tf.tidy(() => {
       const normalized = this.normalizePose(pose).reshape([1, 1, 75 * 3]);
       const pred: Tensor = this.sequentialModel.predict(normalized) as Tensor;
       return pred.reshape([ANIMATION_KEYS.length, 4]).arraySync();

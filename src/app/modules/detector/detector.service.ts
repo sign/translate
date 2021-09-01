@@ -1,16 +1,16 @@
-import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, Pose, PoseLandmark} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
+import {TensorflowLoader} from '../../core/services/tfjs';
 
 const WINDOW_SIZE = 20;
 
 @Injectable({
   providedIn: 'root'
 })
-export class DetectorService {
+export class DetectorService extends TensorflowLoader {
   lastPose: PoseLandmark[];
   lastTimestamp: number;
 
@@ -19,8 +19,9 @@ export class DetectorService {
 
   sequentialModel: LayersModel;
 
-  loadModel(): Promise<LayersModel> {
-    return tf.loadLayersModel('assets/models/sign-detector/model.json')
+  async loadModel(): Promise<LayersModel> {
+    await this.loadTensorflow();
+    return this.tf.loadLayersModel('assets/models/sign-detector/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }
 
@@ -111,9 +112,9 @@ export class DetectorService {
   }
 
   getSequentialConfidence(opticalFlow: Float32Array): number {
-    return tf.tidy(() => {
-      const pred: Tensor = this.sequentialModel.predict(tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])) as Tensor;
-      const probs = tf.softmax(pred).dataSync();
+    return this.tf.tidy(() => {
+      const pred: Tensor = this.sequentialModel.predict(this.tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])) as Tensor;
+      const probs = this.tf.softmax(pred).dataSync();
       return probs[1];
     });
   }

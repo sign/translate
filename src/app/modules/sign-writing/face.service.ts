@@ -3,9 +3,9 @@ import {Vector2, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import {LayersModel} from '@tensorflow/tfjs-layers';
-import * as tf from '@tensorflow/tfjs';
 import {Tensor} from '@tensorflow/tfjs';
 import {PoseNormalizationService} from '../pose/pose-normalization.service';
+import {TensorflowLoader} from '../../core/services/tfjs';
 
 export interface SWFeatureDescription {
   location: Vector2 | Vector3;
@@ -34,15 +34,17 @@ const FACE_MAP = {
 @Injectable({
   providedIn: 'root'
 })
-export class FaceService {
+export class FaceService extends TensorflowLoader {
 
   faceSequentialModel: LayersModel;
 
   constructor(private poseNormalization: PoseNormalizationService) {
+    super();
   }
 
-  loadModel(): Promise<LayersModel> {
-    return tf.loadLayersModel('assets/models/face-features/model.json')
+  async loadModel(): Promise<LayersModel> {
+    await this.loadTensorflow();
+    return this.tf.loadLayersModel('assets/models/face-features/model.json')
       .then(model => this.faceSequentialModel = model as unknown as LayersModel);
   }
 
@@ -64,7 +66,7 @@ export class FaceService {
     // 362 # Right eye inner
     // 133 # Left eye inner
 
-    const state = tf.tidy((): any => {
+    const state = this.tf.tidy((): any => {
       const faceTensor = this.normalize(vectors);
       let pred: Tensor = model.predict(faceTensor.reshape([1, 1, 468 * 3])) as Tensor;
       pred = pred.reshape([-1]);

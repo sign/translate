@@ -21,13 +21,13 @@ export interface SettingsStateModel {
 const initialState: SettingsStateModel = {
   receiveVideo: false,
 
-  detectSign: true,
+  detectSign: false,
 
   animatePose: false,
 
   drawVideo: true,
   drawPose: true,
-  drawSignWriting: true,
+  drawSignWriting: false,
 
   poseViewer: 'pose',
 };
