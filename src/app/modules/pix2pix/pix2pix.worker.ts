@@ -17,13 +17,20 @@ async function loadModel(): Promise<void> {
   model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
 }
 
+const RANGE_LIMIT = 17;
+
+function isWhitish(rgb): boolean {
+  const min = Math.min(...rgb);
+  return min > 130 && Math.max(...rgb) - min <= RANGE_LIMIT;
+}
+
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
   for (let i = 0; i < data.length; i += 4) {
-    const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
+    const rgb = [data[i], data[i + 1], data[i + 2]];
 
     // If its white-ish, change it
-    if (r > 170 && g > 170 && b > 170) {
+    if (isWhitish(rgb)) {
       data[i + 3] = 0;
     }
   }
