@@ -6,6 +6,7 @@ import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Tensor} from '@tensorflow/tfjs';
 import {PoseNormalizationService} from '../pose/pose-normalization.service';
 import {TensorflowService} from '../../core/services/tfjs.service';
+import {ThreeService} from '../../core/services/three.service';
 
 export interface SWFeatureDescription {
   location: Vector2 | Vector3;
@@ -38,11 +39,11 @@ export class FaceService {
 
   faceSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService) {
+  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService, public three: ThreeService) {
   }
 
   async loadModel(): Promise<LayersModel> {
-    await this.tf.load();
+    await Promise.all([this.tf.load(), this.three.load()]);
     return this.tf.loadLayersModel('assets/models/face-features/model.json')
       .then(model => this.faceSequentialModel = model as unknown as LayersModel);
   }
@@ -81,20 +82,20 @@ export class FaceService {
     // Eyes
     const eyeSymbol = this.shift(state.Eyes, 0x10);
     const eyesY = (vectors[133].y + vectors[362].y) / 2;
-    const leftEye = new Vector2((vectors[133].x + vectors[33].x) / 2, eyesY);
-    const rightEye = new Vector2((vectors[362].x + vectors[263].x) / 2, eyesY);
+    const leftEye = new this.three.Vector2((vectors[133].x + vectors[33].x) / 2, eyesY);
+    const rightEye = new this.three.Vector2((vectors[362].x + vectors[263].x) / 2, eyesY);
 
     // Eyebrows
     const eyebrowsY = (vectors[65].y + vectors[362].y) / 2;
     const leftEyebrowSymbol = this.shift(state.Eyebrows, 0x10);
-    const leftEyebrow = new Vector2(vectors[282].x, eyebrowsY);
+    const leftEyebrow = new this.three.Vector2(vectors[282].x, eyebrowsY);
     const rightEyebrowSymbol = this.shift(state.Eyebrows, 0x20);
-    const rightEyebrow = new Vector2(vectors[52].x, eyebrowsY);
+    const rightEyebrow = new this.three.Vector2(vectors[52].x, eyebrowsY);
 
     // Mouth
     const mouthX = (vectors[14].x + vectors[17].x) / 2;
     const mouthY = (vectors[14].y + vectors[17].y) / 2;
-    const mouthLocation = new Vector2(mouthX, mouthY);
+    const mouthLocation = new this.three.Vector2(mouthX, mouthY);
 
 
     return {

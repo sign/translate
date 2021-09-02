@@ -6,16 +6,16 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class TensorflowService {
-  private tfPromise: Promise<typeof tf>;
+  private importPromise: Promise<typeof tf>;
   private tf: typeof tf;
 
   async load(): Promise<typeof tf> {
-    if (!this.tfPromise) {
-      this.tfPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs')
+    if (!this.importPromise) {
+      this.importPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs')
         .then(module => this.tf = module);
     }
 
-    return this.tfPromise;
+    return this.importPromise;
   }
 
   // TODO implement a global getter to get all properties from tf

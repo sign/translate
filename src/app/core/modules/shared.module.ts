@@ -4,6 +4,7 @@ import {AppNgxsModule} from './ngxs/ngxs.module';
 import {AppTranslocoModule} from './transloco/transloco.module';
 import {CommonModule} from '@angular/common';
 import {TensorflowService} from '../services/tfjs.service';
+import {ThreeService} from '../services/three.service';
 
 const components = [];
 
@@ -22,7 +23,9 @@ const modules = [
     ...modules
   ],
   providers: [
-    TensorflowService
+    // ES Module Services
+    TensorflowService,
+    ThreeService
   ]
 })
 export class AppSharedModule {

@@ -4,14 +4,7 @@ import {fromEvent, interval, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
-
-function promiseRaf<T>(callback: CallableFunction): Promise<T> {
-  return new Promise((resolve) => {
-    requestAnimationFrame(async () => {
-      resolve(await callback());
-    });
-  });
-}
+import {promiseRaf} from '../../../../core/helpers/raf/raf';
 
 
 @Component({

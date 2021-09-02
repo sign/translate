@@ -1,13 +1,13 @@
 import {TestBed} from '@angular/core/testing';
 import {HandsService} from './hands.service';
-import {Vector3} from 'three';
 import {TensorflowService} from '../../core/services/tfjs.service';
+import {ThreeService} from '../../core/services/three.service';
 
 describe('HandsService', () => {
   let service: HandsService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({providers: [TensorflowService]});
+    TestBed.configureTestingModule({providers: [TensorflowService, ThreeService]});
     service = TestBed.inject(HandsService);
   });
 
@@ -29,7 +29,7 @@ describe('HandsService', () => {
   });
 
   it('should normalize hands correctly', async () => {
-    await service.tf.load();
+    await Promise.all([service.tf.load(), service.three.load()]);
 
     const handNormalizations = [
       [
@@ -51,7 +51,7 @@ describe('HandsService', () => {
     ];
 
     for (const [x, y] of handNormalizations) {
-      const vectors = x.map(v => new Vector3(v[0], v[1], v[2]));
+      const vectors = x.map(v => new service.three.Vector3(v[0], v[1], v[2]));
       const normal = service.normal(vectors); // TODO maybe need to flip normal?
       const yHat = service.normalizeHand(vectors, normal, false).arraySync();
       // This is evaluated one item at a time because of negative zeros

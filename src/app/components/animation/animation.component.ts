@@ -4,7 +4,7 @@ import {Observable} from 'rxjs';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
 import {map, takeUntil, tap} from 'rxjs/operators';
-import {AnimationClip, QuaternionKeyframeTrack, VectorKeyframeTrack} from 'three';
+import {ThreeService} from '../../core/services/three.service';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
 
-  constructor() {
+  constructor(private three: ThreeService) {
     super();
 
     // Load model viewer dynamically
@@ -26,6 +26,8 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
   }
 
   async ngAfterViewInit(): Promise<void> {
+    await this.three.load();
+
     // Wait for element to be defined
     if (!customElements.get('model-viewer')) {
       await customElements.whenDefined('model-viewer');
@@ -45,13 +47,13 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         map(a => a.tracks),
         tap((trackDict) => {
           const name = 'u' + (i++);
-          const tracks = [new VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
+          const tracks = [new this.three.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
           if (trackDict) {
             Object.entries(trackDict).forEach(([k, q]) => {
-              tracks.push(new QuaternionKeyframeTrack(k, [0], q));
+              tracks.push(new this.three.QuaternionKeyframeTrack(k, [0], q));
             });
           }
-          const newAnimation = new AnimationClip(name, 0, tracks);
+          const newAnimation = new this.three.AnimationClip(name, 0, tracks);
 
           scene.animationsByName.set(name, newAnimation);
           scene.playAnimation(name);

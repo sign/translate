@@ -8,7 +8,7 @@ import {CalculateBodyFactors, EstimateFaceShape, EstimateHandShape} from './sign
 import {BodyService, BodyStateModel} from './body.service';
 import * as holistic from '@mediapipe/holistic/holistic';
 import {FaceService, FaceStateModel} from './face.service';
-import {Vector3} from 'three';
+import {ThreeService} from '../../core/services/three.service';
 
 
 export interface SignWritingStateModel {
@@ -39,7 +39,8 @@ export class SignWritingState implements NgxsOnInit {
 
   constructor(private bodyService: BodyService,
               private faceService: FaceService,
-              private handsService: HandsService) {
+              private handsService: HandsService,
+              private three: ThreeService) {
   }
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
@@ -75,6 +76,9 @@ export class SignWritingState implements NgxsOnInit {
         patchState({timestamp: Date.now()});
       })
     ).subscribe();
+
+    // Load three
+    this.three.load().then();
   }
 
 
@@ -103,7 +107,7 @@ export class SignWritingState implements NgxsOnInit {
       return;
     }
 
-    const vectors = landmarks.map(l => new Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
+    const vectors = landmarks.map(l => new this.three.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     patchState({
       face: this.faceService.shape(vectors)
@@ -120,7 +124,7 @@ export class SignWritingState implements NgxsOnInit {
 
     const isLeft = hand === 'leftHand';
 
-    const vectors = landmarks.map(l => new Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
+    const vectors = landmarks.map(l => new this.three.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     const normal = this.handsService.normal(vectors, isLeft);
     const plane = this.handsService.plane(vectors);

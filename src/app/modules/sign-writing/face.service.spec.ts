@@ -2,12 +2,13 @@ import {TestBed} from '@angular/core/testing';
 import {Vector3} from 'three';
 import {FaceService} from './face.service';
 import {TensorflowService} from '../../core/services/tfjs.service';
+import {ThreeService} from '../../core/services/three.service';
 
 describe('FaceService', () => {
   let service: FaceService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({providers: [TensorflowService]});
+    TestBed.configureTestingModule({providers: [TensorflowService, ThreeService]});
     service = TestBed.inject(FaceService);
   });
 
@@ -29,7 +30,7 @@ describe('FaceService', () => {
   });
 
   it('should normalize face correctly', async () => {
-    await service.tf.load();
+    await Promise.all([service.tf.load(), service.three.load()]);
 
     const faceNormalizations = [
       // This is from the dataset, normalized on colab
@@ -49,7 +50,7 @@ describe('FaceService', () => {
     ];
 
     for (const [x, y] of faceNormalizations) {
-      const vectors = x.map(v => new Vector3(v[0], v[1], v[2]));
+      const vectors = x.map(v => new service.three.Vector3(v[0], v[1], v[2]));
 
       const yHat = service.normalize(vectors).arraySync();
       for (let i = 0; i < y.length; i++) {

@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Vector2} from 'three';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
-import * as holistic from '@mediapipe/holistic/holistic.js';
+import {POSE_LANDMARKS} from '@mediapipe/holistic/holistic.js';
+import {ThreeService} from '../../core/services/three.service';
+import {Vector2} from 'three';
 
 export interface BodyShoulders {
   center: Vector2;
@@ -20,12 +21,15 @@ export interface BodyStateModel {
 })
 export class BodyService {
 
+  constructor(private three: ThreeService) {
+  }
+
   shoulders(landmarks: PoseLandmark[]): BodyShoulders {
-    const p1 = landmarks[holistic.POSE_LANDMARKS.LEFT_SHOULDER];
-    const p2 = landmarks[holistic.POSE_LANDMARKS.RIGHT_SHOULDER];
+    const p1 = landmarks[POSE_LANDMARKS.LEFT_SHOULDER];
+    const p2 = landmarks[POSE_LANDMARKS.RIGHT_SHOULDER];
 
     return {
-      center: new Vector2((p1.x + p2.x) / 2, (p1.y + p2.y) / 2),
+      center: new this.three.Vector2((p1.x + p2.x) / 2, (p1.y + p2.y) / 2),
       width: Math.abs(p1.x - p2.x)
     };
   }

@@ -7,6 +7,7 @@ import {Tensor} from '@tensorflow/tfjs';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
 import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
 import {TensorflowService} from '../../core/services/tfjs.service';
+import {ThreeService} from '../../core/services/three.service';
 
 export type HandPlane = 'wall' | 'floor';
 export type HandDirection = 'me' | 'you' | 'side';
@@ -29,12 +30,12 @@ export class HandsService {
   leftHandSequentialModel: LayersModel;
   rightHandSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService) {
+  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService, public three: ThreeService) {
   }
 
 
   async loadModel(): Promise<void> {
-    await this.tf.load();
+    await Promise.all([this.tf.load(), this.three.load()]);
 
     this.leftHandSequentialModel = await this.tf.loadLayersModel('assets/models/hand-shape/model.json');
 
@@ -65,7 +66,7 @@ export class HandsService {
   }
 
   bbox(vectors: Vector3[]): Box3 {
-    return new Box3().setFromPoints(vectors);
+    return new this.three.Box3().setFromPoints(vectors);
   }
 
   normal(vectors: Vector3[], flipNormal: boolean = false): PlaneNormal {
@@ -143,9 +144,9 @@ export class HandsService {
   }
 
   drawBbox(bbox: Box3, ctx: CanvasRenderingContext2D): void {
-    const dimensions = new Vector3(ctx.canvas.width, ctx.canvas.height, 0);
-    const min = new Vector3().multiplyVectors(bbox.min, dimensions);
-    const max = new Vector3().multiplyVectors(bbox.max, dimensions);
+    const dimensions = new this.three.Vector3(ctx.canvas.width, ctx.canvas.height, 0);
+    const min = new this.three.Vector3().multiplyVectors(bbox.min, dimensions);
+    const max = new this.three.Vector3().multiplyVectors(bbox.max, dimensions);
 
     ctx.strokeStyle = '#0000FF';
     ctx.beginPath();
@@ -158,11 +159,11 @@ export class HandsService {
   }
 
   drawNormal(normal: PlaneNormal, ctx: CanvasRenderingContext2D): void {
-    const dimensions = new Vector3(ctx.canvas.width, ctx.canvas.height, ctx.canvas.width);
+    const dimensions = new this.three.Vector3(ctx.canvas.width, ctx.canvas.height, ctx.canvas.width);
 
-    const scaledNormal = new Vector3().multiplyVectors(dimensions, normal.direction).normalize().multiplyScalar(100);
+    const scaledNormal = new this.three.Vector3().multiplyVectors(dimensions, normal.direction).normalize().multiplyScalar(100);
 
-    const center = new Vector3().multiplyVectors(dimensions, normal.center);
+    const center = new this.three.Vector3().multiplyVectors(dimensions, normal.center);
 
     ctx.strokeStyle = '#FFFF00';
     ctx.lineWidth = 10;
@@ -202,7 +203,7 @@ export class HandsService {
     }
 
     const text = String.fromCodePoint(char);
-    const center = new Vector2((hand.bbox.min.x + hand.bbox.max.x) / (2 * ctx.canvas.width),
+    const center = new this.three.Vector2((hand.bbox.min.x + hand.bbox.max.x) / (2 * ctx.canvas.width),
       (hand.bbox.min.y + hand.bbox.max.y) / (2 * ctx.canvas.height));
 
     // Font should be same size for all shapes, where flat hand is 1/3 of shoulders width

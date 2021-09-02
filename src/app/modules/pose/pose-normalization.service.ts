@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Plane, Vector3} from 'three';
 import {Tensor} from '@tensorflow/tfjs-core';
 import {TensorflowService} from '../../core/services/tfjs.service';
+import {ThreeService} from '../../core/services/three.service';
+import {Vector3} from 'three';
 
 
 export interface PlaneNormal {
@@ -15,19 +16,19 @@ export interface PlaneNormal {
 export class PoseNormalizationService {
   model?: any;
 
-  constructor(public tf: TensorflowService) {
+  constructor(public tf: TensorflowService, private three: ThreeService) {
   }
 
   normal(vectors: Vector3[], planeIdx: [number, number, number]): PlaneNormal {
     const triangle = planeIdx.map(i => vectors[i]);
 
-    const center = new Vector3(
+    const center = new this.three.Vector3(
       (triangle[0].x + triangle[1].x + triangle[2].x) / 3,
       (triangle[0].y + triangle[1].y + triangle[2].y) / 3,
       (triangle[0].z + triangle[1].z + triangle[2].z) / 3,
     );
 
-    const plane = new Plane().setFromCoplanarPoints(triangle[0], triangle[1], triangle[2]);
+    const plane = new this.three.Plane().setFromCoplanarPoints(triangle[0], triangle[1], triangle[2]);
     const direction = plane.normal;
 
     return {center, direction};
@@ -42,10 +43,10 @@ export class PoseNormalizationService {
 
 
     // 1. Rotate vectors to normal
-    const oldXAxis = new Vector3(1, 0, 0);
+    const oldXAxis = new this.three.Vector3(1, 0, 0);
     const zAxis = normal.direction.multiplyScalar(-1);
-    const yAxis = new Vector3().crossVectors(oldXAxis, zAxis);
-    const xAxis = new Vector3().crossVectors(zAxis, yAxis);
+    const yAxis = new this.three.Vector3().crossVectors(oldXAxis, zAxis);
+    const xAxis = new this.three.Vector3().crossVectors(zAxis, yAxis);
 
     const axis = this.tf.tensor2d([
       [xAxis.x, yAxis.x, zAxis.x],
