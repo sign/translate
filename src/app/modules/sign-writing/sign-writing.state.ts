@@ -76,9 +76,6 @@ export class SignWritingState implements NgxsOnInit {
         patchState({timestamp: Date.now()});
       })
     ).subscribe();
-
-    // Load three
-    this.three.load().then();
   }
 
 
@@ -107,6 +104,7 @@ export class SignWritingState implements NgxsOnInit {
       return;
     }
 
+    await this.three.load();
     const vectors = landmarks.map(l => new this.three.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     patchState({
@@ -124,6 +122,7 @@ export class SignWritingState implements NgxsOnInit {
 
     const isLeft = hand === 'leftHand';
 
+    await this.three.load();
     const vectors = landmarks.map(l => new this.three.Vector3(l.x * poseImage.width, l.y * poseImage.height, l.z * poseImage.width));
 
     const normal = this.handsService.normal(vectors, isLeft);
