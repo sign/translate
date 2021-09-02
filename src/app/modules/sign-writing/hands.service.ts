@@ -6,7 +6,7 @@ import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Tensor} from '@tensorflow/tfjs';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
 import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
-import {TensorflowLoader} from '../../core/services/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 export type HandPlane = 'wall' | 'floor';
 export type HandDirection = 'me' | 'you' | 'side';
@@ -23,18 +23,18 @@ export interface HandStateModel {
 @Injectable({
   providedIn: 'root'
 })
-export class HandsService extends TensorflowLoader {
+export class HandsService {
 
   // Need two models because they are stateful
   leftHandSequentialModel: LayersModel;
   rightHandSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService) {
-    super();
+  constructor(private poseNormalization: PoseNormalizationService, private tf: TensorflowService) {
   }
 
+
   async loadModel(): Promise<void> {
-    await this.loadTensorflow();
+    await this.tf.load();
 
     this.leftHandSequentialModel = await this.tf.loadLayersModel('assets/models/hand-shape/model.json');
 

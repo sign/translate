@@ -3,7 +3,7 @@ import {EMPTY_LANDMARK, Pose} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
-import {TensorflowLoader} from '../../core/services/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 const ANIMATION_KEYS = [
   'mixamorigHead.quaternion', 'mixamorigNeck.quaternion', 'mixamorigSpine.quaternion',
@@ -44,11 +44,14 @@ const ANIMATION_KEYS = [
 @Injectable({
   providedIn: 'root'
 })
-export class AnimationService extends TensorflowLoader {
+export class AnimationService {
   sequentialModel: LayersModel;
 
+  constructor(private tf: TensorflowService) {
+  }
+
   async loadModel(): Promise<LayersModel> {
-    await this.loadTensorflow();
+    await this.tf.load();
     return this.tf.loadLayersModel('assets/models/pose-animation/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }

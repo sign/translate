@@ -5,7 +5,7 @@ import {SignWritingService} from './sign-writing.service';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Tensor} from '@tensorflow/tfjs';
 import {PoseNormalizationService} from '../pose/pose-normalization.service';
-import {TensorflowLoader} from '../../core/services/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 export interface SWFeatureDescription {
   location: Vector2 | Vector3;
@@ -34,16 +34,15 @@ const FACE_MAP = {
 @Injectable({
   providedIn: 'root'
 })
-export class FaceService extends TensorflowLoader {
+export class FaceService {
 
   faceSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService) {
-    super();
+  constructor(private poseNormalization: PoseNormalizationService, private tf: TensorflowService) {
   }
 
   async loadModel(): Promise<LayersModel> {
-    await this.loadTensorflow();
+    await this.tf.load();
     return this.tf.loadLayersModel('assets/models/face-features/model.json')
       .then(model => this.faceSequentialModel = model as unknown as LayersModel);
   }

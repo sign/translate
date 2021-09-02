@@ -3,6 +3,7 @@ import {AppAngularMaterialModule} from './angular-material/angular-material.modu
 import {AppNgxsModule} from './ngxs/ngxs.module';
 import {AppTranslocoModule} from './transloco/transloco.module';
 import {CommonModule} from '@angular/common';
+import {TensorflowService} from '../services/tfjs.service';
 
 const components = [];
 
@@ -19,6 +20,9 @@ const modules = [
   exports: [
     ...components,
     ...modules
+  ],
+  providers: [
+    TensorflowService
   ]
 })
 export class AppSharedModule {

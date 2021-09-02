@@ -1,24 +1,28 @@
 import {Injectable} from '@angular/core';
 import {TensorLike} from '@tensorflow/tfjs';
 import * as comlink from 'comlink';
-import {TensorflowLoader} from '../../core/services/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class Pix2PixService extends TensorflowLoader {
+export class Pix2PixService {
   worker: comlink.Remote<{
     loadModel: () => Promise<void>,
     translate: (width: number, height: number, pixels: TensorLike) => Promise<Uint8ClampedArray>,
   }>;
+
+
+  constructor(private tf: TensorflowService) {
+  }
 
   async loadModel(): Promise<void> {
     if (this.worker) {
       return;
     }
 
-    await this.loadTensorflow();
+    await this.tf.load();
 
     // tslint:disable-next-line: whitespace
     this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));

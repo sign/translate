@@ -3,14 +3,14 @@ import {EMPTY_LANDMARK, Pose, PoseLandmark} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
-import {TensorflowLoader} from '../../core/services/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 const WINDOW_SIZE = 20;
 
 @Injectable({
   providedIn: 'root'
 })
-export class DetectorService extends TensorflowLoader {
+export class DetectorService {
   lastPose: PoseLandmark[];
   lastTimestamp: number;
 
@@ -19,8 +19,11 @@ export class DetectorService extends TensorflowLoader {
 
   sequentialModel: LayersModel;
 
+  constructor(private tf: TensorflowService) {
+  }
+
   async loadModel(): Promise<LayersModel> {
-    await this.loadTensorflow();
+    await this.tf.load();
     return this.tf.loadLayersModel('assets/models/sign-detector/model.json')
       .then(model => this.sequentialModel = model as unknown as LayersModel);
   }

@@ -1,5 +1,4 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import '@google/model-viewer';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
@@ -18,6 +17,13 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
   @Select(state => state.animation) animationState$: Observable<AnimationStateModel>;
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
+
+  constructor() {
+    super();
+
+    // Load model viewer dynamically
+    import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
+  }
 
   ngAfterViewInit(): void {
     // Always render highest quality
