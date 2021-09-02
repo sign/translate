@@ -29,7 +29,7 @@ export class HandsService {
   leftHandSequentialModel: LayersModel;
   rightHandSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService, private tf: TensorflowService) {
+  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService) {
   }
 
 

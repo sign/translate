@@ -15,7 +15,7 @@ export interface PlaneNormal {
 export class PoseNormalizationService {
   model?: any;
 
-  constructor(private tf: TensorflowService) {
+  constructor(public tf: TensorflowService) {
   }
 
   normal(vectors: Vector3[], planeIdx: [number, number, number]): PlaneNormal {

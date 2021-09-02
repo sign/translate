@@ -14,7 +14,7 @@ export class Pix2PixService {
   }>;
 
 
-  constructor(private tf: TensorflowService) {
+  constructor(public tf: TensorflowService) {
   }
 
   async loadModel(): Promise<void> {

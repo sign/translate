@@ -25,7 +25,12 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
   }
 
-  ngAfterViewInit(): void {
+  async ngAfterViewInit(): Promise<void> {
+    // Wait for element to be defined
+    if (!customElements.get('model-viewer')) {
+      await customElements.whenDefined('model-viewer');
+    }
+
     // Always render highest quality
     const ModelViewerElement = customElements.get('model-viewer');
     ModelViewerElement.minimumRenderScale = 1;

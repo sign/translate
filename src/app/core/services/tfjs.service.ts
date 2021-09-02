@@ -63,4 +63,7 @@ export class TensorflowService {
   get browser(): typeof tf.browser {
     return this.tf.browser;
   }
+  get isNaN(): typeof tf.isNaN {
+    return this.tf.isNaN;
+  }
 }

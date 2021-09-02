@@ -1,13 +1,13 @@
 import {TestBed} from '@angular/core/testing';
 import {Vector3} from 'three';
 import {FaceService} from './face.service';
-import * as tf from '@tensorflow/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 describe('FaceService', () => {
   let service: FaceService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({providers: [TensorflowService]});
     service = TestBed.inject(FaceService);
   });
 
@@ -23,12 +23,14 @@ describe('FaceService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
 
-  it('should normalize face correctly', () => {
+  it('should normalize face correctly', async () => {
+    await service.tf.load();
+    
     const faceNormalizations = [
       // This is from the dataset, normalized on colab
       [
@@ -61,6 +63,4 @@ describe('FaceService', () => {
       }
     }
   });
-
-
 });

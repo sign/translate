@@ -1,15 +1,15 @@
 import {TestBed} from '@angular/core/testing';
 
 import {DetectorService} from './detector.service';
-import * as tf from '@tensorflow/tfjs';
 import {Pose, PoseLandmark} from '../pose/pose.state';
+import {TensorflowService} from '../../core/services/tfjs.service';
 import createSpy = jasmine.createSpy;
 
 describe('DetectorService', () => {
   let service: DetectorService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({providers: [TensorflowService]});
     service = TestBed.inject(DetectorService);
   });
 
@@ -25,7 +25,7 @@ describe('DetectorService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
@@ -96,8 +96,10 @@ describe('DetectorService', () => {
     });
   });
 
-  it('should use model to get confidence', () => {
-    const spy = createSpy('predict').and.returnValue(tf.tensor([1, 2]));
+  it('should use model to get confidence', async () => {
+    await service.tf.load();
+
+    const spy = createSpy('predict').and.returnValue(service.tf.tensor([1, 2]));
     service.sequentialModel = {predict: spy} as any;
 
     const confidence = service.getSequentialConfidence(new Float32Array(25).fill(0));

@@ -47,7 +47,7 @@ const ANIMATION_KEYS = [
 export class AnimationService {
   sequentialModel: LayersModel;
 
-  constructor(private tf: TensorflowService) {
+  constructor(public tf: TensorflowService) {
   }
 
   async loadModel(): Promise<LayersModel> {

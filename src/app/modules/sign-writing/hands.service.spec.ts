@@ -1,13 +1,13 @@
 import {TestBed} from '@angular/core/testing';
 import {HandsService} from './hands.service';
 import {Vector3} from 'three';
-import * as tf from '@tensorflow/tfjs';
+import {TensorflowService} from '../../core/services/tfjs.service';
 
 describe('HandsService', () => {
   let service: HandsService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({providers: [TensorflowService]});
     service = TestBed.inject(HandsService);
   });
 
@@ -23,12 +23,14 @@ describe('HandsService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
 
-  it('should normalize hands correctly', () => {
+  it('should normalize hands correctly', async () => {
+    await service.tf.load();
+
     const handNormalizations = [
       [
         // tslint:disable-next-line:max-line-length
@@ -76,8 +78,6 @@ describe('HandsService', () => {
     expect(service.angleRotationBucket(45 * 7)).toBe(7);
     expect(service.angleRotationBucket(45 * 8)).toBe(0);
   });
-
-
 });
 
 

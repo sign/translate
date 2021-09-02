@@ -38,7 +38,7 @@ export class FaceService {
 
   faceSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService, private tf: TensorflowService) {
+  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService) {
   }
 
   async loadModel(): Promise<LayersModel> {
