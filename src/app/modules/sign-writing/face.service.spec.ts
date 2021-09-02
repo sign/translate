@@ -30,7 +30,7 @@ describe('FaceService', () => {
 
   it('should normalize face correctly', async () => {
     await service.tf.load();
-    
+
     const faceNormalizations = [
       // This is from the dataset, normalized on colab
       [
