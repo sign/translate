@@ -44,7 +44,9 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     const pose = await this.poseEl.nativeElement.getPose();
     const fps = pose.body.fps;
 
-
+    // Must get canvas context for FireFox
+    // https://stackoverflow.com/questions/63140354/firefox-gives-irregular-initialization-error-when-trying-to-use-navigator-mediad
+    canvas.getContext('2d');
     const stream = canvas.captureStream(fps);
 
     let supportedMimeType: string;

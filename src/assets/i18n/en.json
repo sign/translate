@@ -211,7 +211,8 @@
     "start": "Translate by voice",
     "stop": "Stop translation by voice",
     "not-allowed": "Need permission to use microphone",
-    "language-not-supported": "Selected language is not supported"
+    "language-not-supported": "Selected language is not supported",
+    "browser-not-supported": "Voice input isn't supported on this browser"
   },
   "settings": {
     "detectSign": "Detect Sign",

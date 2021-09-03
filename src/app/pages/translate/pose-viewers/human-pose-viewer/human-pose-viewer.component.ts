@@ -42,10 +42,10 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         this.reset();
 
         await this.pix2pix.loadModel();
-        this.modelReady = true;
 
         const poseCanvas = pose.shadowRoot.querySelector('canvas');
 
+        let lastTime = -Infinity;
         while (!pose.ended) {
           // Verify element is not destroyed
           if (destroyed) {
@@ -53,6 +53,13 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           }
 
           const uint8Array: Uint8ClampedArray = await promiseRaf(() => this.pix2pix.translate(poseCanvas));
+          this.modelReady = true; // Stop loading after first model inference
+
+          // If did not change the pose time
+          if (lastTime > pose.currentTime) {
+            return;
+          }
+          lastTime = pose.currentTime;
 
           const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
           this.cache.push(imageData);

@@ -14,12 +14,18 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   @Input() lang = 'en';
   @Output() changeText: EventEmitter<string> = new EventEmitter<string>();
 
-  speechRecognition: SpeechRecognition = new SpeechRecognition();
+  speechRecognition!: SpeechRecognition;
 
   supportError = null;
   isRecording = false;
 
   ngOnInit(): void {
+    if (!SpeechRecognition) {
+      this.supportError = 'browser-not-supported';
+      return;
+    }
+
+    this.speechRecognition = new SpeechRecognition();
     this.speechRecognition.interimResults = true;
 
     fromEvent(this.speechRecognition, 'result').subscribe((event: SpeechRecognitionEvent) => {
@@ -45,7 +51,7 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.lang) {
+    if (changes.lang && this.speechRecognition) {
       this.speechRecognition.lang = this.lang;
     }
   }
