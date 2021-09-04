@@ -29,6 +29,13 @@
   }
 }
 
+app-sign-writing {
+  @media #{$mat-lt-sm} {
+    overflow-y: auto;
+    height: 195px;
+  }
+}
+
 .translation-text {
   padding: 20px 24px;
   color: map-get(mat.$light-theme-foreground-palette, text);
