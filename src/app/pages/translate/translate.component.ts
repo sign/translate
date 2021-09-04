@@ -1,7 +1,7 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
-import {Observable} from 'rxjs';
+import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {InputMode} from '../../modules/translate/translate.state';
@@ -53,6 +53,38 @@ export class TranslateComponent extends BaseComponent implements OnInit {
         this.spokenToSigned = spokenToSigned;
         if (!this.spokenToSigned) {
           this.store.dispatch(new SetSetting('drawSignWriting', true));
+        }
+      }),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
+
+
+    this.playVideos();
+  }
+
+  async playVideos(): Promise<void> {
+    // Autoplay videos don't play before page interaction. Make sure it is played on first interaction
+
+    const subscription = fromEvent(window, 'click').pipe(
+      tap(async () => {
+        const videos = Array.from(document.querySelectorAll('video'));
+        if (videos.length === 0) {
+          subscription.unsubscribe();
+        }
+
+        for (const video of videos) {
+          if (video.autoplay) {
+            if (!video.paused) {
+              subscription.unsubscribe(); // Page was interacted with, videos are not paused
+            } else {
+              try {
+                await video.play();
+                subscription.unsubscribe();
+              } catch (e) {
+                console.error(e);
+              }
+            }
+          }
         }
       }),
       takeUntil(this.ngUnsubscribe)
