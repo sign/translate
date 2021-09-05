@@ -17,11 +17,11 @@
     <ng-template #noVideo>
       <ng-container *ngIf="pose$ | async as pose; else noPose">
         <ng-container *ngIf="poseViewerSetting$ | async as poseViewerSetting">
-          <app-skeleton-pose-viewer *ngIf="poseViewerSetting == 'pose'" [src]="pose" [autoplay]="true"
+          <app-skeleton-pose-viewer *ngIf="poseViewerSetting === 'pose'" [src]="pose" [autoplay]="true"
                                     [loop]="true"></app-skeleton-pose-viewer>
-          <app-human-pose-viewer *ngIf="poseViewerSetting == 'human'" [src]="pose" autoplay
+          <app-human-pose-viewer *ngIf="poseViewerSetting === 'human'" [src]="pose" autoplay
                                  loop></app-human-pose-viewer>
-          <div *ngIf="poseViewerSetting == 'avatar'">
+          <div *ngIf="poseViewerSetting === 'avatar'">
             <h2>Avatar not yet supported with OpenPose.</h2>
           </div>
         </ng-container>
