@@ -21,9 +21,8 @@ export class AppComponent {
     ).subscribe();
 
     const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang');
-    if (langParam) {
-      this.transloco.setActiveLang(langParam);
-    }
+    const urlParam = urlParams.get('lang');
+    const [navigatorParam] = navigator.language.split('-');
+    this.transloco.setActiveLang(urlParam || navigatorParam);
   }
 }

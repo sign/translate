@@ -125,24 +125,11 @@
           "options": {
             "tsConfig": [
               "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sign-language-playground:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "sign-language-playground:serve:production"
-            }
           }
         }
       }

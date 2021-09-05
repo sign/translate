@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Box3, Vector2, Vector3} from 'three';
+import {Box3, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import {LayersModel} from '@tensorflow/tfjs-layers';
