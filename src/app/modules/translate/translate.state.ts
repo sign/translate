@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
-// tslint:disable-next-line:max-line-length
+// eslint-disable-next-line max-len
 import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';

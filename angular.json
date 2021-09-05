@@ -121,14 +121,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         }
@@ -137,6 +134,7 @@
   },
   "defaultProject": "sign-language-playground",
   "cli": {
-    "analytics": "da7f7e1b-ea69-47b0-a971-5d7f28b86a48"
+    "analytics": "da7f7e1b-ea69-47b0-a971-5d7f28b86a48",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }

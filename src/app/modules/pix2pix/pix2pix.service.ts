@@ -24,7 +24,7 @@ export class Pix2PixService {
 
     await this.tf.load();
 
-    // tslint:disable-next-line: whitespace
+    // eslint-disable-next-line
     this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
     await this.worker.loadModel();
   }
