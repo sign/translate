@@ -11,8 +11,7 @@
     "pwa:assets": "pwa-asset-generator src/assets/icons/dark-logo.svg src/assets/icons/generated/ -i src/index.html -m src/manifest.webmanifest --background white --favicon --mstile && pwa-asset-generator src/assets/icons/light-logo.svg --dark-mode src/assets/icons/generated/ -i src/index.html --background black --splash-only",
     "i18n:find": "transloco-keys-manager find",
     "test": "ng test --code-coverage",
-    "test:ci": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
-    "e2e": "ng e2e"
+    "test:ci": "ng test --browsers=ChromeHeadless --watch=false --code-coverage"
   },
   "engines": {
     "node": "~0.12"
