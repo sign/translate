@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
-import * as holistic from '@mediapipe/holistic/holistic.js';
+import {FACEMESH_FACE_OVAL, FACEMESH_LEFT_EYE, FACEMESH_LEFT_EYEBROW, FACEMESH_LIPS, FACEMESH_RIGHT_EYE, FACEMESH_RIGHT_EYEBROW, FACEMESH_TESSELATION, HAND_CONNECTIONS, POSE_CONNECTIONS, POSE_LANDMARKS} from '@mediapipe/holistic';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {Pose, PoseLandmark} from './pose.state';
+import * as comlink from 'comlink';
+
 
 const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22];
 
@@ -10,22 +12,38 @@ const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18
 })
 export class PoseService {
 
-  model?: any;
+  worker: comlink.Remote<{
+    loadModel: () => Promise<void>,
+    pose: (imageData: ImageData) => Promise<Pose>,
+  }>;
 
   async load(): Promise<void> {
-    this.model = new holistic.Holistic({locateFile: (file) => `assets/models/holistic/${file}`});
+    if (this.worker) {
+      return;
+    }
 
-    this.model.setOptions({
-      upperBodyOnly: false,
-      modelComplexity: 1
-    });
+    this.worker = comlink.wrap(new Worker(new URL('./pose.worker', import.meta.url)));
+    await this.worker.loadModel();
   }
 
-  async predict(video: HTMLVideoElement): Promise<void> {
-    if (!this.model) {
+  async predict(video: HTMLVideoElement): Promise<Pose> {
+    const [width, height] = [video.videoWidth, video.videoHeight];
+    if (!this.worker || width === 0) {
       return Promise.resolve(null);
     }
-    await this.model.send({image: video}); // This is void
+
+    // Create a canvas
+    const fakeImage = document.createElement('canvas');
+    fakeImage.width = width;
+    fakeImage.height = height;
+    const ctx = fakeImage.getContext('2d');
+    ctx.drawImage(video, 0, 0, width, height);
+    const imageData = ctx.getImageData(0, 0, width, height);
+
+    const result: Pose = await this.worker.pose(imageData);
+    result.image = fakeImage;
+
+    return result;
   }
 
   drawBody(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D): void {
@@ -34,12 +52,12 @@ export class PoseService {
       delete filteredLandmarks[l];
     }
 
-    drawing.drawConnectors(ctx, filteredLandmarks, holistic.POSE_CONNECTIONS, {color: '#00FF00'});
+    drawing.drawConnectors(ctx, filteredLandmarks, POSE_CONNECTIONS, {color: '#00FF00'});
     drawing.drawLandmarks(ctx, filteredLandmarks, {color: '#00FF00', fillColor: '#FF0000'});
   }
 
   drawHand(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D, lineColor: string, dotColor: string, dotFillColor: string): void {
-    drawing.drawConnectors(ctx, landmarks, holistic.HAND_CONNECTIONS, {color: lineColor});
+    drawing.drawConnectors(ctx, landmarks, HAND_CONNECTIONS, {color: lineColor});
     drawing.drawLandmarks(ctx, landmarks, {
       color: dotColor,
       fillColor: dotFillColor,
@@ -51,13 +69,13 @@ export class PoseService {
   }
 
   drawFace(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D): void {
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_TESSELATION, {color: '#C0C0C070', lineWidth: 1});
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_RIGHT_EYE, {color: '#FF3030'});
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_LEFT_EYE, {color: '#30FF30'});
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
-    drawing.drawConnectors(ctx, landmarks, holistic.FACEMESH_LIPS, {color: '#E0E0E0'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_TESSELATION, {color: '#C0C0C070', lineWidth: 1});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_RIGHT_EYE, {color: '#FF3030'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_LEFT_EYE, {color: '#30FF30'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_LIPS, {color: '#E0E0E0'});
   }
 
   drawConnect(connectors: PoseLandmark[][], ctx: CanvasRenderingContext2D): void {
@@ -82,12 +100,12 @@ export class PoseService {
 
     if (pose.rightHandLandmarks) {
       ctx.strokeStyle = '#00FF00';
-      this.drawConnect([[pose.poseLandmarks[holistic.POSE_LANDMARKS.RIGHT_ELBOW], pose.rightHandLandmarks[0]]], ctx);
+      this.drawConnect([[pose.poseLandmarks[POSE_LANDMARKS.RIGHT_ELBOW], pose.rightHandLandmarks[0]]], ctx);
     }
 
     if (pose.leftHandLandmarks) {
       ctx.strokeStyle = '#FF0000';
-      this.drawConnect([[pose.poseLandmarks[holistic.POSE_LANDMARKS.LEFT_ELBOW], pose.leftHandLandmarks[0]]], ctx);
+      this.drawConnect([[pose.poseLandmarks[POSE_LANDMARKS.LEFT_ELBOW], pose.leftHandLandmarks[0]]], ctx);
     }
   }
 

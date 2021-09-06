@@ -26,6 +26,11 @@
                 "output": "./assets/models/holistic/"
               },
               {
+                "glob": "**/*",
+                "input": "./node_modules/@mediapipe/holistic/",
+                "output": "./"
+              },
+              {
                 "glob": "*.ttf",
                 "input": "./node_modules/@sutton-signwriting/font-ttf/font",
                 "output": "./assets/fonts/signwriting/"

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
-import {POSE_LANDMARKS} from '@mediapipe/holistic/holistic.js';
+import {POSE_LANDMARKS} from '@mediapipe/holistic';
 import {ThreeService} from '../../core/services/three.service';
 import {Vector2} from 'three';
 

@@ -4,12 +4,6 @@ import * as comlink from 'comlink';
 import {Tensor, Tensor3D, TensorLike} from '@tensorflow/tfjs';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 
-class ModelNotLoadedError extends Error {
-  constructor() {
-    super('Model not loaded');
-  }
-}
-
 const tfPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs');
 let model: LayersModel;
 
@@ -40,7 +34,7 @@ function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
 
 async function translate(width: number, height: number, pixels: TensorLike): Promise<Uint8ClampedArray> {
   if (!model) {
-    throw new ModelNotLoadedError();
+    throw new Error('Model not loaded');
   }
   const tf = await tfPromise;
 

@@ -30,6 +30,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       new SetSetting('receiveVideo', true),
       new SetSetting('detectSign', false),
       new SetSetting('drawSignWriting', false),
+      new SetSetting('pose', false),
       new SetSetting('drawPose', true),
       new SetSetting('poseViewer', 'pose'),
     ]);
@@ -52,7 +53,10 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       tap((spokenToSigned) => {
         this.spokenToSigned = spokenToSigned;
         if (!this.spokenToSigned) {
-          this.store.dispatch(new SetSetting('drawSignWriting', true));
+          this.store.dispatch([
+            new SetSetting('pose', true),
+            new SetSetting('drawSignWriting', true)
+          ]);
         }
       }),
       takeUntil(this.ngUnsubscribe)

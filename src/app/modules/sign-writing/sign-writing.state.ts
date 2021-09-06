@@ -6,7 +6,7 @@ import {filter, first, tap} from 'rxjs/operators';
 import {HandsService, HandStateModel} from './hands.service';
 import {CalculateBodyFactors, EstimateFaceShape, EstimateHandShape} from './sign-writing.actions';
 import {BodyService, BodyStateModel} from './body.service';
-import * as holistic from '@mediapipe/holistic/holistic';
+import {POSE_LANDMARKS} from '@mediapipe/holistic';
 import {FaceService, FaceStateModel} from './face.service';
 import {ThreeService} from '../../core/services/three.service';
 
@@ -90,8 +90,8 @@ export class SignWritingState implements NgxsOnInit {
     patchState({
       body: {
         shoulders: this.bodyService.shoulders(pose.poseLandmarks),
-        elbows: [pose.poseLandmarks[holistic.POSE_LANDMARKS.LEFT_ELBOW], pose.poseLandmarks[holistic.POSE_LANDMARKS.RIGHT_ELBOW]],
-        wrists: [pose.poseLandmarks[holistic.POSE_LANDMARKS.LEFT_WRIST], pose.poseLandmarks[holistic.POSE_LANDMARKS.RIGHT_WRIST]],
+        elbows: [pose.poseLandmarks[POSE_LANDMARKS.LEFT_ELBOW], pose.poseLandmarks[POSE_LANDMARKS.RIGHT_ELBOW]],
+        wrists: [pose.poseLandmarks[POSE_LANDMARKS.LEFT_WRIST], pose.poseLandmarks[POSE_LANDMARKS.RIGHT_WRIST]],
       }
     });
   }
