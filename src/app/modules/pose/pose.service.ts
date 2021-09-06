@@ -29,7 +29,7 @@ export class PoseService {
   async predict(video: HTMLVideoElement): Promise<Pose> {
     const [width, height] = [video.videoWidth, video.videoHeight];
     if (!this.worker || width === 0) {
-      return Promise.resolve(null);
+      return null;
     }
 
     // Create a canvas
@@ -41,8 +41,11 @@ export class PoseService {
     const imageData = ctx.getImageData(0, 0, width, height);
 
     const result: Pose = await this.worker.pose(imageData);
-    result.image = fakeImage;
+    if (!result) {
+      return null;
+    }
 
+    result.image = fakeImage;
     return result;
   }
 

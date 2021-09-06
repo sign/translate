@@ -13,6 +13,7 @@ async function loadModel(): Promise<void> {
 
   model.setOptions({modelComplexity: 1});
   await model.initialize();
+  console.log('Pose model loaded!');
 
   results = new Observable(subscriber => {
     model.onResults((results) => {
@@ -27,8 +28,8 @@ async function loadModel(): Promise<void> {
 }
 
 async function pose(imageData: ImageData): Promise<any> {
-  if (!model) {
-    throw new Error('Model not loaded');
+  if (!results) {
+    return null;
   }
 
   const image = new OffscreenCanvas(imageData.width, imageData.height);
