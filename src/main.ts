@@ -12,5 +12,6 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
-defineCustomElementsSW();
+// defineCustomElementsSW();
+window.addEventListener('load', () => defineCustomElementsSW());
 defineCustomElementsPoseViewer();

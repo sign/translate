@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
 import {BaseComponent} from '../../../components/base/base.component';
-import {fromEvent} from 'rxjs';
+import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
@@ -21,6 +21,9 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
   mimeTypes = ['video/webm; codecs=vp9', 'video/webm; codecs=vp8', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
+
+  cache: ImageData[] = [];
+  cacheSubscription: Subscription;
 
   protected constructor(private store: Store) {
     super();
@@ -88,5 +91,21 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     if (this.mediaRecorder) {
       this.mediaRecorder.stop();
     }
+  }
+
+  addCacheData(image: ImageData): void {
+    if ('VideoEncoder' in window) {
+      // WebCodecs API is supported.
+      console.warn('VideoEncoder video creation is supported, but not implemented');
+    }
+
+    this.cache.push(image);
+  }
+
+  reset(): void {
+    if (this.cacheSubscription) {
+      this.cacheSubscription.unsubscribe();
+    }
+    this.cache = [];
   }
 }

@@ -19,8 +19,6 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   @Input() width: string;
   @Input() height: string;
 
-  cache: ImageData[] = [];
-  cacheSubscription: Subscription;
   ready = false;
   modelReady = false;
 
@@ -62,7 +60,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           lastTime = pose.currentTime;
 
           const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-          this.cache.push(imageData);
+          this.addCacheData(imageData);
 
           ctx.putImageData(imageData, 0, 0);
 
@@ -78,10 +76,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   }
 
   reset(): void {
-    if (this.cacheSubscription) {
-      this.cacheSubscription.unsubscribe();
-    }
-    this.cache = [];
+    super.reset();
     this.ready = false;
   }
 

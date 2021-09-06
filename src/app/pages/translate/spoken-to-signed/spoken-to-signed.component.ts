@@ -27,8 +27,8 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   text = new FormControl();
   maxTextLength = 500;
 
-  // signWriting = [];
   signWriting = ['M507x523S15a28494x496S26500493x477', 'M522x525S11541498x491S11549479x498S20600489x476', 'AS14c31S14c39S27102S27116S30300S30a00S36e00M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S27102539x545S27116445x545'];
+  // signWriting = [];
 
   constructor(private store: Store, private domSanitizer: DomSanitizer) {
     super();

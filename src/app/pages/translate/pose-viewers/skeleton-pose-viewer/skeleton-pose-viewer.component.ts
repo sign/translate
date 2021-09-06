@@ -13,6 +13,10 @@ import {Store} from '@ngxs/store';
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
 
+  colorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+
+  background: string = '';
+
   constructor(store: Store) {
     super(store);
   }
@@ -23,7 +27,12 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
     fromEvent(pose, 'firstRender$').pipe(
       tap(async () => {
         const poseCanvas = pose.shadowRoot.querySelector('canvas');
-        this.startRecording(poseCanvas as any);
+        await this.startRecording(poseCanvas as any);
+
+        // MP4 videos can't have a transparent background
+        if (this.mediaRecorder && this.mediaRecorder.mimeType === 'video/mp4' && !this.colorSchemeMedia.matches) {
+          this.background = 'white';
+        }
       }),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
