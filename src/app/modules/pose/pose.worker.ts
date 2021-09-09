@@ -27,14 +27,14 @@ async function loadModel(): Promise<void> {
   });
 }
 
-async function pose(imageData: ImageData): Promise<any> {
+async function pose(imageBitmap: ImageBitmap): Promise<any> {
   if (!results) {
     return null;
   }
 
-  const image = new OffscreenCanvas(imageData.width, imageData.height);
+  const image = new OffscreenCanvas(imageBitmap.width, imageBitmap.height);
   const ctx = image.getContext('2d');
-  ctx.putImageData(imageData, 0, 0);
+  ctx.drawImage(imageBitmap, 0, 0);
 
   const result = results.pipe(first()).toPromise();
   await model.send({image: image as any});

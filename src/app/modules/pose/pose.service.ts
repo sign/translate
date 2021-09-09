@@ -14,7 +14,7 @@ export class PoseService {
 
   worker: comlink.Remote<{
     loadModel: () => Promise<void>,
-    pose: (imageData: ImageData) => Promise<Pose>,
+    pose: (imageBitmap: ImageBitmap) => Promise<Pose>,
   }>;
 
   async load(): Promise<void> {
@@ -37,10 +37,11 @@ export class PoseService {
     fakeImage.width = width;
     fakeImage.height = height;
     const ctx = fakeImage.getContext('2d');
-    ctx.drawImage(video, 0, 0, width, height);
-    const imageData = ctx.getImageData(0, 0, width, height);
 
-    const result: Pose = await this.worker.pose(imageData);
+    const bitmap = await createImageBitmap(video);
+    ctx.drawImage(bitmap, 0, 0);
+
+    const result: Pose = await this.worker.pose(bitmap);
     if (!result) {
       return null;
     }
