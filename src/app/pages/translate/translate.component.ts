@@ -63,26 +63,17 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   }
 
   async playVideos(): Promise<void> {
-    // Autoplay videos don't play before page interaction. Make sure it is played on first interaction
-
-    const subscription = fromEvent(window, 'click').pipe(
+    // Autoplay videos don't play before page interaction, or after re-opening PWA without refresh
+    fromEvent(window, 'click').pipe(
       tap(async () => {
-        const videos = Array.from(document.querySelectorAll('video'));
-        if (videos.length === 0) {
-          subscription.unsubscribe();
-        }
+        const videos = Array.from(document.getElementsByTagName('video'));
 
         for (const video of videos) {
-          if (video.autoplay) {
-            if (!video.paused) {
-              subscription.unsubscribe(); // Page was interacted with, videos are not paused
-            } else {
-              try {
-                await video.play();
-                subscription.unsubscribe();
-              } catch (e) {
-                console.error(e);
-              }
+          if (video.autoplay && video.paused) {
+            try {
+              await video.play();
+            } catch (e) {
+              console.error(e);
             }
           }
         }
