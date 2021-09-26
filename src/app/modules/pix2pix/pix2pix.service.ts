@@ -1,7 +1,5 @@
 import {Injectable} from '@angular/core';
-import {TensorLike} from '@tensorflow/tfjs';
 import * as comlink from 'comlink';
-import {TensorflowService} from '../../core/services/tfjs.service';
 
 
 @Injectable({
@@ -10,19 +8,13 @@ import {TensorflowService} from '../../core/services/tfjs.service';
 export class Pix2PixService {
   worker: comlink.Remote<{
     loadModel: () => Promise<void>,
-    translate: (width: number, height: number, pixels: TensorLike) => Promise<Uint8ClampedArray>,
+    translate: (bitmap: ImageBitmap) => Promise<Uint8ClampedArray>,
   }>;
-
-
-  constructor(public tf: TensorflowService) {
-  }
 
   async loadModel(): Promise<void> {
     if (this.worker) {
       return;
     }
-
-    await this.tf.load();
 
     // eslint-disable-next-line
     this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
@@ -30,10 +22,8 @@ export class Pix2PixService {
   }
 
   async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
-    const {width, height} = canvas;
+    const bitmap = await createImageBitmap(canvas);
 
-    const pixels = this.tf.browser.fromPixels(canvas).dataSync(); // TODO maybe move to the web worker itself
-
-    return this.worker.translate(width, height, pixels);
+    return this.worker.translate(bitmap);
   }
 }

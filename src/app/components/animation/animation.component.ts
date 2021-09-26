@@ -18,11 +18,16 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
 
+  static isCustomElementDefined = false;
+
   constructor(private three: ThreeService) {
     super();
 
-    // Load model viewer dynamically
-    import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
+    // Load the `model-viewer` custom element
+    if (!AnimationComponent.isCustomElementDefined) {
+      import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
+      AnimationComponent.isCustomElementDefined = true;
+    }
   }
 
   async ngAfterViewInit(): Promise<void> {

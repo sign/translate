@@ -1,7 +1,7 @@
 /// <reference lib="webworker" />
 
 import * as comlink from 'comlink';
-import {Tensor, Tensor3D, TensorLike} from '@tensorflow/tfjs';
+import {Tensor, Tensor3D} from '@tensorflow/tfjs';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 
 class ModelNotLoadedError extends Error {
@@ -38,14 +38,17 @@ function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   return data;
 }
 
-async function translate(width: number, height: number, pixels: TensorLike): Promise<Uint8ClampedArray> {
+async function translate(bitmap: ImageBitmap): Promise<Uint8ClampedArray> {
   if (!model) {
     throw new ModelNotLoadedError();
   }
   const tf = await tfPromise;
 
+  const {width, height} = bitmap;
+  const pixels = tf.browser.fromPixels(bitmap);
+
   const image = tf.tidy(() => {
-    const pixelsTensor = tf.tensor(pixels).toFloat();
+    const pixelsTensor = pixels.toFloat();
     const input = tf.sub(tf.div(pixelsTensor, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
     const tensor = input.reshape([1, width, height, 3]);
 

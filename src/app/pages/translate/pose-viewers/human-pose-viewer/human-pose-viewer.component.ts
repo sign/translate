@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
-import {fromEvent, interval, Subscription} from 'rxjs';
+import {fromEvent, interval} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
@@ -50,7 +50,12 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             return;
           }
 
-          const uint8Array: Uint8ClampedArray = await promiseRaf(() => this.pix2pix.translate(poseCanvas));
+          const uint8Array: Uint8ClampedArray = await promiseRaf(async () => {
+            console.time('translate');
+            const t = await this.pix2pix.translate(poseCanvas);
+            console.timeEnd('translate');
+            return t;
+          });
           this.modelReady = true; // Stop loading after first model inference
 
           // If did not change the pose time
