@@ -9,7 +9,7 @@
       <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
     </div>
   </div>
-  <app-sign-writing [signs]="signWriting"></app-sign-writing>
+  <app-sign-writing [signs]="signWriting$ | async"></app-sign-writing>
   <div class="sign-language">
     <ng-container *ngIf="videoUrl; else noVideo">
       <video [src]="videoUrl" autoplay loop muted playsinline width="100%"></video>
@@ -17,13 +17,10 @@
     <ng-template #noVideo>
       <ng-container *ngIf="pose$ | async as pose; else noPose">
         <ng-container *ngIf="poseViewerSetting$ | async as poseViewerSetting">
-          <app-skeleton-pose-viewer *ngIf="poseViewerSetting === 'pose'" [src]="pose" [autoplay]="true"
-                                    [loop]="true"></app-skeleton-pose-viewer>
+          <app-skeleton-pose-viewer *ngIf="poseViewerSetting === 'pose'" [src]="pose"></app-skeleton-pose-viewer>
           <app-human-pose-viewer *ngIf="poseViewerSetting === 'human'" [src]="pose" autoplay
                                  loop></app-human-pose-viewer>
-          <div *ngIf="poseViewerSetting === 'avatar'">
-            <h2>Avatar not yet supported with OpenPose.</h2>
-          </div>
+          <app-avatar-pose-viewer *ngIf="poseViewerSetting === 'avatar'" [src]="pose"></app-avatar-pose-viewer>
         </ng-container>
       </ng-container>
       <ng-template #noPose></ng-template>

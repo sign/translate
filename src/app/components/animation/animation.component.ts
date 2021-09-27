@@ -18,11 +18,16 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
 
+  static isCustomElementDefined = false;
+
   constructor(private three: ThreeService) {
     super();
 
-    // Load model viewer dynamically
-    import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
+    // Load the `model-viewer` custom element
+    if (!AnimationComponent.isCustomElementDefined) {
+      import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
+      AnimationComponent.isCustomElementDefined = true;
+    }
   }
 
   async ngAfterViewInit(): Promise<void> {
@@ -39,6 +44,8 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
     let i = 0;
     const el = this.modelViewerEl.nativeElement;
+
+    this.applyStyle(el);
 
     el.addEventListener('load', () => {
       const scene = el[Object.getOwnPropertySymbols(el)[14]];
@@ -64,6 +71,20 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         takeUntil(this.ngUnsubscribe)
       ).subscribe();
     });
+  }
+
+  applyStyle(el: HTMLElement) {
+    if (document.dir === 'rtl') {
+      return;
+    }
+    const style = document.createElement('style');
+    style.innerHTML = `
+      a#default-ar-button {
+        transform-origin: bottom left;
+        right: initial;
+        left: 16px;
+      }`;
+    el.shadowRoot.appendChild(style);
   }
 
 }

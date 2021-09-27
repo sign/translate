@@ -4,6 +4,7 @@ import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
+import {defineCustomElements as defineCustomElementsPoseViewer} from 'pose-viewer/loader';
 
 interface CanvasElement extends HTMLCanvasElement {
   captureStream(frameRate?: number): MediaStream;
@@ -25,8 +26,16 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   cache: ImageData[] = [];
   cacheSubscription: Subscription;
 
+  static isCustomElementDefined = false;
+
   protected constructor(private store: Store) {
     super();
+
+    // Load the `pose-viewer` custom element
+    if (!BasePoseViewerComponent.isCustomElementDefined) {
+      defineCustomElementsPoseViewer().then().catch();
+      BasePoseViewerComponent.isCustomElementDefined = true;
+    }
   }
 
   ngOnDestroy(): void {
