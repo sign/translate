@@ -41,7 +41,7 @@ export class PoseService {
     const bitmap = await createImageBitmap(video);
     ctx.drawImage(bitmap, 0, 0);
 
-    const result: Pose = await this.worker.pose(bitmap);
+    const result: Pose = await this.worker.pose(comlink.transfer(bitmap, [bitmap]));
     if (!result) {
       return null;
     }

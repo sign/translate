@@ -9,7 +9,13 @@ let model: Holistic;
 let results: Observable<any>;
 
 async function loadModel(): Promise<void> {
-  model = new Holistic({locateFile: (file) => `/assets/models/holistic/${file}`});
+  model = new Holistic({
+    locateFile: (file) => {
+      const f = new URL(`/assets/models/holistic/${file}`, globalThis.location.origin).toString();
+      console.log('path', f);
+      return f;
+    }
+  });
 
   model.setOptions({modelComplexity: 1});
   await model.initialize();
@@ -32,12 +38,13 @@ async function pose(imageBitmap: ImageBitmap): Promise<any> {
     return null;
   }
 
-  const image = new OffscreenCanvas(imageBitmap.width, imageBitmap.height);
-  const ctx = image.getContext('2d');
-  ctx.drawImage(imageBitmap, 0, 0);
+  // TODO remove
+  // const image = new OffscreenCanvas(imageBitmap.width, imageBitmap.height);
+  // const ctx = image.getContext('2d');
+  // ctx.drawImage(imageBitmap, 0, 0);
 
   const result = results.pipe(first()).toPromise();
-  await model.send({image: image as any});
+  await model.send({image: imageBitmap as any});
   return result;
 }
 

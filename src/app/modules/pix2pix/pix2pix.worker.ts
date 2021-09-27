@@ -54,7 +54,7 @@ async function translate(bitmap: ImageBitmap): Promise<Uint8ClampedArray> {
 
   const data = await tf.browser.toPixels(image);
   const cleanData = removeGreenScreen(data);
-  return comlink.transfer(cleanData, [cleanData.buffer])
+  return comlink.transfer(cleanData, [cleanData.buffer]);
 }
 
 
