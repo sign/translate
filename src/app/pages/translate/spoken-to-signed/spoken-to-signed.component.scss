@@ -95,12 +95,13 @@ app-sign-writing {
     position: absolute;
     margin: 14px;
     bottom: 0;
+    right: 0;
     text-align: end;
-    width: calc(100% - 2 * 14px);
+    width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
 
     mat-spinner {
       display: inline-block;
-      margin: 8px;
+      margin: 0 8px -8px 0;
     }
   }
 }

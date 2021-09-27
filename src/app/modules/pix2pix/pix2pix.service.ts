@@ -24,6 +24,6 @@ export class Pix2PixService {
   async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
     const bitmap = await createImageBitmap(canvas);
 
-    return this.worker.translate(bitmap);
+    return this.worker.translate(comlink.transfer(bitmap, [bitmap]));
   }
 }

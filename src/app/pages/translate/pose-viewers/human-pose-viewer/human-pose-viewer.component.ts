@@ -50,12 +50,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             return;
           }
 
-          const uint8Array: Uint8ClampedArray = await promiseRaf(async () => {
-            console.time('translate');
-            const t = await this.pix2pix.translate(poseCanvas);
-            console.timeEnd('translate');
-            return t;
-          });
+          const uint8Array: Uint8ClampedArray = await promiseRaf(() => this.pix2pix.translate(poseCanvas));
           this.modelReady = true; // Stop loading after first model inference
 
           // If did not change the pose time
