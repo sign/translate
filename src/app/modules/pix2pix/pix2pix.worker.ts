@@ -38,16 +38,16 @@ function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   return data;
 }
 
-async function translate(bitmap: ImageBitmap): Promise<Uint8ClampedArray> {
+async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedArray> {
   if (!model) {
     throw new ModelNotLoadedError();
   }
   const tf = await tfPromise;
 
-  const {width, height} = bitmap;
-  const pixels = tf.browser.fromPixels(bitmap);
+  const {width, height} = image;
+  const pixels = tf.browser.fromPixels(image);
 
-  const image = tf.tidy(() => {
+  const output = tf.tidy(() => {
     const pixelsTensor = pixels.toFloat();
     const input = tf.sub(tf.div(pixelsTensor, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
     const tensor = input.reshape([1, width, height, 3]);
@@ -58,9 +58,9 @@ async function translate(bitmap: ImageBitmap): Promise<Uint8ClampedArray> {
     return pred.reshape([width, height, 3]) as Tensor3D;
   });
 
-  const data = await tf.browser.toPixels(image);
+  const data = await tf.browser.toPixels(output);
   const cleanData = removeGreenScreen(data);
-  return comlink.transfer(cleanData, [cleanData.buffer])
+  return comlink.transfer(cleanData, [cleanData.buffer]);
 }
 
 

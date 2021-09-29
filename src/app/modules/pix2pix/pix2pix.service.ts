@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import * as comlink from 'comlink';
+import {transferableImage} from '../../core/helpers/image/transferable';
 
 
 @Injectable({
@@ -8,7 +9,7 @@ import * as comlink from 'comlink';
 export class Pix2PixService {
   worker: comlink.Remote<{
     loadModel: () => Promise<void>,
-    translate: (bitmap: ImageBitmap) => Promise<Uint8ClampedArray>,
+    translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>,
   }>;
 
   async loadModel(): Promise<void> {
@@ -22,8 +23,7 @@ export class Pix2PixService {
   }
 
   async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
-    const bitmap = await createImageBitmap(canvas);
-
-    return this.worker.translate(comlink.transfer(bitmap, [bitmap]));
+    const image = await transferableImage(canvas);
+    return this.worker.translate(image);
   }
 }
