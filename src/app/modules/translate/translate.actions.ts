@@ -40,6 +40,14 @@ export class SetSignedLanguageVideo {
   }
 }
 
+// TODO remove this action, this is a mock
+export class SetSignWritingText {
+  static readonly type = '[Translate] SetSignWritingText';
+
+  constructor(public text: string[]) {
+  }
+}
+
 export class CopySignedLanguageVideo {
   static readonly type = '[Translate] Copy Signed Language Video';
 }

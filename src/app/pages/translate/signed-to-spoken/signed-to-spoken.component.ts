@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Select} from '@ngxs/store';
+import {Select, Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
 import {InputMode} from '../../../modules/translate/translate.state';
+import {SetSignWritingText} from '../../../modules/translate/translate.actions';
 
 
 const FAKE_WORDS = [
@@ -74,7 +75,7 @@ export class SignedToSpokenComponent implements OnInit {
   // This is bullshit for now
   translation = 'Translation';
 
-  constructor() {
+  constructor(private store: Store) {
   }
 
   ngOnInit(): void {
@@ -82,14 +83,13 @@ export class SignedToSpokenComponent implements OnInit {
     // To get the fake translation
     const f = () => {
       this.translation = 'Translation';
-      // this.signWriting = ['M507x523S15a28494x496S26500493x477', 'M522x525S11541498x491S11549479x498S20600489x476', 'AS14c31S14c39S27102S27116S30300S30a00S36e00M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S27102539x545S27116445x545'];
 
       const video = document.querySelector('video');
       if (video) {
         for (const step of FAKE_WORDS) {
           if (step.time <= video.currentTime) {
             this.translation = step.text;
-            // this.signWriting = step.sw;
+            this.store.dispatch(new SetSignWritingText(step.sw));
           }
         }
       }

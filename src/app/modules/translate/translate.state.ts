@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 // eslint-disable-next-line max-len
-import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
+import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSignWritingText, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
 import {Observable} from 'rxjs';
@@ -133,6 +133,11 @@ export class TranslateState implements NgxsOnInit {
   @Action(SetSignedLanguageVideo)
   async setSignedLanguageVideo({patchState, dispatch}: StateContext<TranslateStateModel>, {url}: SetSignedLanguageVideo): Promise<void> {
     patchState({signedLanguageVideo: url});
+  }
+
+  @Action(SetSignWritingText)
+  async setSignWritingText({patchState, dispatch}: StateContext<TranslateStateModel>, {text}: SetSignWritingText): Promise<void> {
+    patchState({signWriting: text});
   }
 
   @Action(ChangeTranslation)
