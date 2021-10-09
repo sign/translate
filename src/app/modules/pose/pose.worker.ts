@@ -33,7 +33,7 @@ async function loadModel(): Promise<void> {
   });
 }
 
-async function pose(imageBitmap: ImageBitmap): Promise<any> {
+async function pose(imageBitmap: ImageBitmap | ImageData): Promise<any> {
   if (!results) {
     return null;
   }

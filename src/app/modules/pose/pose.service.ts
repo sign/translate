@@ -3,6 +3,7 @@ import {FACEMESH_FACE_OVAL, FACEMESH_LEFT_EYE, FACEMESH_LEFT_EYEBROW, FACEMESH_L
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {Pose, PoseLandmark} from './pose.state';
 import * as comlink from 'comlink';
+import {transferableImage} from '../../core/helpers/image/transferable';
 
 
 const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22];
@@ -14,7 +15,7 @@ export class PoseService {
 
   worker: comlink.Remote<{
     loadModel: () => Promise<void>,
-    pose: (imageBitmap: ImageBitmap) => Promise<Pose>,
+    pose: (imageBitmap: ImageBitmap | ImageData) => Promise<Pose>,
   }>;
 
   async load(): Promise<void> {
@@ -32,21 +33,14 @@ export class PoseService {
       return null;
     }
 
-    // Create a canvas
-    const fakeImage = document.createElement('canvas');
-    fakeImage.width = width;
-    fakeImage.height = height;
-    const ctx = fakeImage.getContext('2d');
+    const image = await transferableImage(video);
 
-    const bitmap = await createImageBitmap(video);
-    ctx.drawImage(bitmap, 0, 0);
-
-    const result: Pose = await this.worker.pose(comlink.transfer(bitmap, [bitmap]));
+    const result: Pose = await this.worker.pose(image);
     if (!result) {
       return null;
     }
 
-    result.image = fakeImage;
+    // result.image = image; // TODO fix
     return result;
   }
 
