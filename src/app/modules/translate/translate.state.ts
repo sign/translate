@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 // eslint-disable-next-line max-len
-import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
+import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSignWritingText, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
 import {Observable} from 'rxjs';
@@ -135,6 +135,11 @@ export class TranslateState implements NgxsOnInit {
     patchState({signedLanguageVideo: url});
   }
 
+  @Action(SetSignWritingText)
+  async setSignWritingText({patchState, dispatch}: StateContext<TranslateStateModel>, {text}: SetSignWritingText): Promise<void> {
+    patchState({signWriting: text});
+  }
+
   @Action(ChangeTranslation)
   async changeTranslation({getState, patchState}: StateContext<TranslateStateModel>): Promise<void> {
     const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, spokenLanguageText} = getState();
@@ -198,9 +203,12 @@ export class TranslateState implements NgxsOnInit {
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {signedLanguageVideo} = getState();
 
+    const ext = signedLanguageVideo.split('.').pop();
+    const downloadName = ['webm', 'mp4'].includes(ext) ? signedLanguageVideo : (signedLanguageVideo + '.mp4');
+
     const a = document.createElement('a');
     a.href = signedLanguageVideo;
-    a.download = signedLanguageVideo;
+    a.download = downloadName;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
