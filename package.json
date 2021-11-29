@@ -51,6 +51,7 @@
     "ngx-flag-icon-css": "^1.0.1",
     "pose-viewer": "^0.2.3",
     "rxjs": "~7.4.0",
+    "seedrandom": "^2.4.3",
     "stats.js": "^0.17.0",
     "three": "0.125.2",
     "tslib": "^2.3.1",
