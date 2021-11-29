@@ -9,7 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   imports: [
     HttpClientModule,
-    TranslocoMessageFormatModule.init(),
+    TranslocoMessageFormatModule.forRoot(),
   ],
   exports: [
     TranslocoModule,

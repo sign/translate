@@ -3,8 +3,9 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "types": [
-      "@types/dom-mediacapture-record",
-      "@types/node"
+      "@types/dom-speech-recognition",
+      "@types/node",
+      "@types/offscreencanvas"
     ]
   },
   "files": [
