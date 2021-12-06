@@ -18,8 +18,7 @@
       <ng-container *ngIf="pose$ | async as pose; else noPose">
         <ng-container *ngIf="poseViewerSetting$ | async as poseViewerSetting">
           <app-skeleton-pose-viewer *ngIf="poseViewerSetting === 'pose'" [src]="pose"></app-skeleton-pose-viewer>
-          <app-human-pose-viewer *ngIf="poseViewerSetting === 'human'" [src]="pose" autoplay
-                                 loop></app-human-pose-viewer>
+          <app-human-pose-viewer *ngIf="poseViewerSetting === 'human'" [src]="pose"></app-human-pose-viewer>
           <app-avatar-pose-viewer *ngIf="poseViewerSetting === 'avatar'" [src]="pose"></app-avatar-pose-viewer>
         </ng-container>
       </ng-container>
@@ -33,11 +32,12 @@
                 [matTooltipPosition]="'above'" [matTooltip]="t('actions.download')">
           <mat-icon>download</mat-icon>
         </button>
+        <!-- Currently, no platform I know of allows copying video
         <button mat-icon-button [attr.aria-label]="t('actions.copy')"
                 (click)="copyTranslation()"
                 [matTooltipPosition]="'above'" [matTooltip]="t('actions.copy')">
           <mat-icon>file_copy</mat-icon>
-        </button>
+        </button> -->
         <button mat-icon-button [attr.aria-label]="t('actions.share')"
                 (click)="shareTranslation()"
                 [matTooltipPosition]="'above'" [matTooltip]="t('actions.share')">

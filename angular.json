@@ -33,9 +33,18 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "./node_modules/flag-icon-css/css/flag-icon.min.css",
-              "src/theme/styles.scss"
+              {
+                "input": "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+                "bundleName": "app"
+              },
+              {
+                "input": "src/theme/styles.scss",
+                "bundleName": "app"
+              },
+              {
+                "input": "src/theme/flags.scss",
+                "bundleName": "flags"
+              }
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
