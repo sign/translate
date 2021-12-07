@@ -1,9 +1,10 @@
+import * as comlink from 'comlink';
+
 export async function transferableImage(image: HTMLCanvasElement | HTMLVideoElement): Promise<ImageBitmap | ImageData> {
-  // TODO reconsider this, once I can consistently make it run fast
-  // if (window.createImageBitmap) {
-  //   const bitmap = await createImageBitmap(image);
-  //   return comlink.transfer(bitmap, [bitmap]);
-  // }
+  if (window.createImageBitmap) {
+    const bitmap = await createImageBitmap(image);
+    return comlink.transfer(bitmap, [bitmap]);
+  }
 
   let {width, height} = image;
   if (image instanceof HTMLVideoElement) {
@@ -23,6 +24,5 @@ export async function transferableImage(image: HTMLCanvasElement | HTMLVideoElem
   }
 
   const data = ctx.getImageData(0, 0, width, height);
-  // return comlink.transfer(data, [data.data]);
-  return data;
+  return comlink.transfer(data, [data.data.buffer]);
 }

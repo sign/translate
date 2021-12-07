@@ -45,8 +45,9 @@ export class TranslationService {
   }
 
   translateSpokenToSigned(text: string, spokenLanguage: string, signedLanguage: string): string {
-    const api = 'https://nlp.biu.ac.il/~ccohenya8/sign/sentence/';
-    return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
+    // const api = 'https://nlp.biu.ac.il/~ccohenya8/sign/sentence/';
+    // return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
+    return 'assets/tmp/example.pose'
   }
 
 }
