@@ -5,8 +5,9 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine",
-      "@types/dom-mediacapture-record",
-      "@types/node"
+      "@types/dom-speech-recognition",
+      "@types/node",
+      "@types/offscreencanvas"
     ]
   },
   "files": [

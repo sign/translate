@@ -2,6 +2,7 @@
   "name": "Sign Translate",
   "short_name": "Sign Translate",
   "scope": "/",
+  "id": "sign.mt",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
@@ -20,6 +21,12 @@
       "purpose": "maskable any"
     }
   ],
+  "protocol_handlers": [
+      {
+        "protocol": "web+sign",
+        "url": "/?text=%s"
+      }
+    ],
   "shortcuts": [
     {
       "name": "Translate sign language",

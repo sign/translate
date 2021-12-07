@@ -40,7 +40,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
     // Always render highest quality
     const ModelViewerElement = customElements.get('model-viewer');
-    ModelViewerElement.minimumRenderScale = 1;
+    (ModelViewerElement as any).minimumRenderScale = 1; // TODO investigate why type is not set
 
     let i = 0;
     const el = this.modelViewerEl.nativeElement;

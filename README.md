@@ -15,6 +15,23 @@ based on state-of-the-art real-time client side models.
 (Hyperlinks to issues indicate the feature does not exist fully)
 
 #### Spoken-to-signed language translation
+
+```
+┌─────────────────────┐
+│Spoken Language Audio│                                        ┌─────────┐
+└─────────┬───────────┘                            ┌──────────►│Human GAN│
+          │                                        │           └─────────┘
+          ▼                                        │
+┌────────────────────┐     ┌───────────┐    ┌──────┴──────┐    ┌───────────────┐
+│Spoken Language Text├────►│SignWriting├───►│Pose Sequence├───►│Skeleton Viewer│
+└─────────┬──────────┘     └───────────┘    └──────┬──────┘    └───────────────┘
+          │                      ▲                 │
+          ▼                      │                 │           ┌────────────────┐
+┌───────────────────────┐        │                 └──────────►│Avatar Animation│
+│Language Identification├────────┘                             └────────────────┘
+└───────────────────────┘
+```
+
 - Text / Microphone inputs
 - Text-to-speech
 - Spoken Language identification (Detect Language)
@@ -25,6 +42,21 @@ based on state-of-the-art real-time client side models.
 - Copy / share / download video
 
 #### Signed-to-spoken language translation
+
+```
+┌──────────────────────────┐                                ┌────────────────────┐
+│Upload Sign Language Video│                      ┌────────►│Spoken Language Text│
+└──────────┬───────────────┘                      │         └──────────┬─────────┘
+           │                                      │                    │
+           │          ┌────────────┐       ┌──────┴────┐               │
+           ├─────────►│Segmentation├──────►│SignWriting│               │
+           │          └────────────┘       └───────────┘               │
+           │                                                           ▼
+┌──────────┴────────────────┐                               ┌─────────────────────┐
+│Camera Sign Language Video │                               │Spoken Language Audio│
+└───────────────────────────┘                               └─────────────────────┘
+```
+
 - Camera / File upload video inputs
 - SignWriting hand shape and [orientation](https://github.com/sign-language-processing/playground/issues/1) estimation
 - SignWriting facial features estimation

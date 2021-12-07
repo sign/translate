@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
 
-const SpeechRecognition = window.SpeechRecognition || (window as any).webkitSpeechRecognition;
+const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
 @Component({
   selector: 'app-speech-to-text',

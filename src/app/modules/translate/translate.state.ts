@@ -163,7 +163,7 @@ export class TranslateState implements NgxsOnInit {
     const data = await fetch(signedLanguageVideo);
     const blob = await data.blob();
     try {
-      const item = new ClipboardItem({[blob.type]: blob});
+      const item = new ClipboardItem({[blob.type]: Promise.resolve(blob)});
       await navigator.clipboard.write([item]);
     } catch (e) {
       console.error(e);

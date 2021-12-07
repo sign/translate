@@ -1,5 +1,5 @@
-@use '~@angular/material' as mat;
-@import "../../../../theme/variables";
+@use '@angular/material' as mat;
+@import '../../../../theme/variables';
 
 :host {
   display: flex;
@@ -52,7 +52,7 @@ button.menu-language-button {
       color: map-get(mat.$dark-theme-foreground-palette, text);
     }
 
-    &[aria-selected="true"] {
+    &[aria-selected='true'] {
       color: mat.get-color-from-palette($app-primary);
       transition: color .2s;
     }
