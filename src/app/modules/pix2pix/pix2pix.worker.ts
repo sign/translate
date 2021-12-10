@@ -55,11 +55,14 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
     // Must apply model in training=True mode to avoid using aggregated norm statistics
     let pred = model.apply(tensor, {training: true}) as Tensor;
     pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
-    return pred.reshape([width, height, 3]) as Tensor3D;
+    pred = pred.reshape([width, height, 3]);
+    pred.dataSync(); // Slowest operation
+    return pred as Tensor3D;
   });
 
   const data = await tf.browser.toPixels(output);
   const cleanData = removeGreenScreen(data);
+
   return comlink.transfer(cleanData, [cleanData.buffer]);
 }
 
