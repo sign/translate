@@ -5,7 +5,8 @@
     "types": [
       "@types/dom-speech-recognition",
       "@types/node",
-      "@types/offscreencanvas"
+      "@types/offscreencanvas",
+      "@types/long"
     ]
   },
   "files": [

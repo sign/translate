@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {environment} from '../../../../environments/environment';
 import {TRANSLOCO_CONFIG, TranslocoConfig, TranslocoModule} from '@ngneat/transloco';
-import {TranslocoMessageFormatModule} from '@ngneat/transloco-messageformat';
 import {translocoLoader} from './transloco.loader';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -9,7 +8,6 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   imports: [
     HttpClientModule,
-    TranslocoMessageFormatModule.forRoot(),
   ],
   exports: [
     TranslocoModule,
