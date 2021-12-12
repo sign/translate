@@ -60,7 +60,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           lastTime = pose.currentTime;
 
           const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-          this.addCacheData(imageData);
+          await this.addCacheFrame(imageData);
 
           ctx.putImageData(imageData, 0, 0);
 
@@ -88,12 +88,17 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   }
 
   async drawCache(): Promise<void> {
+    if (this.videoEncoder) {
+      await this.createEncodedVideo();
+      return;
+    }
+
     if (this.cache.length === 0) {
       return;
     }
 
     const canvas = this.canvasEl.nativeElement;
-    this.startRecording(canvas as any);
+    await this.startRecording(canvas as any);
 
     const ctx = canvas.getContext('2d');
     const fps = await this.getFps();

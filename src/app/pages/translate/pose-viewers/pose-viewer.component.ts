@@ -20,11 +20,16 @@ const BPS = 2_000_000;
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
+  // Using cache and MediaRecorder for older browsers, and safari
   mimeTypes = ['video/webm; codecs=vp9', 'video/webm; codecs=vp8', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
 
   cache: ImageData[] = [];
   cacheSubscription: Subscription;
+
+  // Using the better, VideoEncoder for newer browsers
+  videoEncoder: VideoEncoder;
+  videoEncoderChunks: ArrayBuffer[] = [];
 
   static isCustomElementDefined = false;
 
@@ -50,11 +55,54 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     this.store.dispatch(new SetSignedLanguageVideo(url));
   }
 
+  async fps() {
+    const pose = await this.poseEl.nativeElement.getPose();
+    return pose.body.fps;
+  }
+
+  async createVideoEncoder(image: ImageData): Promise<VideoEncoder> {
+    let encoder = new VideoEncoder({
+      output: (chunk,metadata) => {
+        console.log(chunk, metadata)
+        const buffer = new ArrayBuffer(chunk.byteLength)
+        chunk.copyTo(buffer);
+        this.videoEncoderChunks.push(buffer);
+      },
+      error: (e) => console.error(e.message)
+    });
+
+    encoder.configure({
+      codec: 'vp8',
+      width: image.width,
+      height: image.height,
+      bitrate: BPS,
+      framerate: await this.fps()
+    });
+
+    return encoder;
+  }
+
+  async createEncodedVideo() {
+    if (this.videoEncoderChunks.length === 0) {
+      return;
+    }
+
+    await this.videoEncoder.flush();
+
+    const blob = new Blob(this.videoEncoderChunks, {type: "video/mp4"});
+    console.log({blob});
+    const url = URL.createObjectURL(blob);
+    console.log({url});
+    this.setVideo(url);
+
+    this.videoEncoder.close();
+    delete this.videoEncoder;
+  }
+
   async startRecording(canvas: CanvasElement): Promise<void> {
     const recordedChunks: Blob[] = [];
 
-    const pose = await this.poseEl.nativeElement.getPose();
-    const fps = pose.body.fps;
+    const fps = await this.fps();
 
     // Must get canvas context for FireFox
     // https://stackoverflow.com/questions/63140354/firefox-gives-irregular-initialization-error-when-trying-to-use-navigator-mediad
@@ -102,19 +150,31 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
   }
 
-  addCacheData(image: ImageData): void {
+  async addCacheFrame(image: ImageData): Promise<void> {
     if ('VideoEncoder' in window) {
-      // WebCodecs API is supported.
-      console.warn('VideoEncoder video creation is supported, but not implemented');
+      if (!this.videoEncoder) {
+        this.videoEncoder = await this.createVideoEncoder(image);
+      }
+      const frame = new VideoFrame(await createImageBitmap(image));
+      this.videoEncoder.encode(frame, {keyFrame: true});
+      frame.close();
+    } else {
+      this.cache.push(image);
     }
-
-    this.cache.push(image);
   }
 
   reset(): void {
+    // Reset cache
     if (this.cacheSubscription) {
       this.cacheSubscription.unsubscribe();
     }
     this.cache = [];
+
+    // Reset video encoder
+    if (this.videoEncoder) {
+      this.videoEncoder.close();
+      delete this.videoEncoder;
+    }
+    this.videoEncoderChunks = [];
   }
 }

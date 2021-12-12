@@ -6,7 +6,8 @@
       "@types/dom-speech-recognition",
       "@types/node",
       "@types/offscreencanvas",
-      "@types/long"
+      "@types/long",
+      "@types/dom-webcodecs"
     ]
   },
   "files": [
