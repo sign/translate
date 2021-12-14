@@ -20,19 +20,16 @@ async function loadModel(): Promise<void> {
 
 const RANGE_LIMIT = 17;
 
-function isWhitish(rgb): boolean {
-  const min = Math.min(...rgb);
-  return min > 130 && Math.max(...rgb) - min <= RANGE_LIMIT;
+function isWhitish(r: number, g: number, b: number) {
+  const min = Math.min(r, g, b);
+  return min > 255/2 && Math.max(r, g, b) - min <= RANGE_LIMIT;
 }
 
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
-  for (let i = 0; i < data.length; i += 4) {
-    const rgb = [data[i], data[i + 1], data[i + 2]];
-
-    // If its white-ish, change it
-    if (isWhitish(rgb)) {
-      data[i + 3] = 0;
+  for(let i = 0; i < data.length; i += 4) {
+    if(isWhitish(data[i], data[i+1], data[i+2])) {
+      data[i+3] = 0;
     }
   }
   return data;
@@ -60,10 +57,10 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
     return pred as Tensor3D;
   });
 
-  const data = await tf.browser.toPixels(output);
-  const cleanData = removeGreenScreen(data);
+  let data = await tf.browser.toPixels(output);
+  data = removeGreenScreen(data);
 
-  return comlink.transfer(cleanData, [cleanData.buffer]);
+  return comlink.transfer(data, [data.buffer]);
 }
 
 
