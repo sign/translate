@@ -26,6 +26,11 @@
                 "output": "./assets/models/holistic/"
               },
               {
+                "glob": "*.svg",
+                "input": "./node_modules/flag-icon-css/flags/1x1/",
+                "output": "./assets/flags/1x1/"
+              },
+              {
                 "glob": "*.ttf",
                 "input": "./node_modules/@sutton-signwriting/font-ttf/font",
                 "output": "./assets/fonts/signwriting/"
