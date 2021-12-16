@@ -54,7 +54,7 @@ import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-p
     SpeechToTextComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ReactiveFormsModule,
     AppRoutingModule,
     AppSharedModule,
