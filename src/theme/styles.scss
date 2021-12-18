@@ -14,10 +14,19 @@
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($app-theme);
+@mixin theme-components($theme) {
+  @include mat.toolbar-theme($theme);
+  @include mat.button-theme($theme);
+  @include mat.menu-theme($theme);
+  @include mat.progress-spinner-theme($theme);
+  @include mat.progress-bar-theme($theme);
+  @include mat.tooltip-theme($theme);
+}
+
+@include theme-components($app-theme);
 
 @media (prefers-color-scheme: dark) {
-  @include mat.all-component-themes($app-dark-theme);
+  @include theme-components($app-dark-theme);
 }
 
 @import "fonts/material-icons.css";
