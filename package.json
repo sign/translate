@@ -48,6 +48,7 @@
     "flag-icon-css": "^4.1.7",
     "material-components-web": "14.0.0-canary.7d8ea4624.0",
     "ngx-flag-icon-css": "^1.0.1",
+    "ngx-google-analytics": "^11.2.1",
     "pose-viewer": "^0.2.3",
     "rxjs": "~7.4.0",
     "seedrandom": "^2.4.3",

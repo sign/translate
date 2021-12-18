@@ -22,14 +22,14 @@ const RANGE_LIMIT = 17;
 
 function isWhitish(r: number, g: number, b: number) {
   const min = Math.min(r, g, b);
-  return min > 255/2 && Math.max(r, g, b) - min <= RANGE_LIMIT;
+  return min > 255 / 2 && Math.max(r, g, b) - min <= RANGE_LIMIT;
 }
 
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
-  for(let i = 0; i < data.length; i += 4) {
-    if(isWhitish(data[i], data[i+1], data[i+2])) {
-      data[i+3] = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    if (isWhitish(data[i], data[i + 1], data[i + 2])) {
+      data[i + 3] = 0;
     }
   }
   return data;

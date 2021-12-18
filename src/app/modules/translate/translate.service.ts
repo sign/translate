@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
+import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he'
@@ -24,13 +25,17 @@ export class TranslationService {
     'sk', 'sl', 'so', 'su', 'sw', 'sv', 'tg', 'ta', 'tt', 'te', 'th', 'tr', 'tk', 'uk', 'ur', 'ug', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'
   ];
 
+
+  constructor(private gaTiming: GoogleAnalyticsTimingService) {
+  }
+
   async initCld(): Promise<void> {
     if (this.cld) {
       return;
     }
-    const cld3 = await import(/* webpackChunkName: "cld3-asm" */ 'cld3-asm');
-    const cldFactory = await cld3.loadModule();
-    this.cld = cldFactory.create(1, 500);
+    const cld3 = await this.gaTiming.time('cld', 'import', () => import(/* webpackChunkName: "cld3-asm" */ 'cld3-asm'));
+    const cldFactory = await this.gaTiming.time('cld', 'load', () => cld3.loadModule());
+    this.cld = this.gaTiming.time('cld', 'create', () => cldFactory.create(1, 500));
   }
 
   detectSpokenLanguage(text: string): string {
@@ -38,7 +43,7 @@ export class TranslationService {
       return DEFAULT_SPOKEN_LANGUAGE;
     }
 
-    const language = this.cld.findLanguage(text);
+    const language = this.gaTiming.time('cld', 'find', () => this.cld.findLanguage(text));
     const languageCode = language.is_reliable ? language.language : DEFAULT_SPOKEN_LANGUAGE;
     const correctedCode = OBSOLETE_LANGUAGE_CODES[languageCode] ?? languageCode;
     return this.spokenLanguages.includes(correctedCode) ? correctedCode : DEFAULT_SPOKEN_LANGUAGE;
