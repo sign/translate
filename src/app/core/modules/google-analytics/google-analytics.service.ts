@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {GoogleAnalyticsService} from 'ngx-google-analytics';
+import {getCLS, getFID, getLCP} from 'web-vitals';
 
 declare var gtag;
 
@@ -11,8 +12,23 @@ function isPromise(promise) {
   providedIn: 'root'
 })
 export class GoogleAnalyticsTimingService {
-
   constructor(private ga: GoogleAnalyticsService) {
+    this.logPerformanceMetrics();
+  }
+
+  logPerformanceMetrics() {
+    const sendToGoogleAnalytics = ({name, delta, value, id}) => {
+      this.ga.gtag('event', name, {
+        value: delta,
+        metric_id: id,
+        metric_value: value,
+        metric_delta: delta,
+      });
+    };
+
+    getCLS(sendToGoogleAnalytics);
+    getFID(sendToGoogleAnalytics);
+    getLCP(sendToGoogleAnalytics);
   }
 
   time<T>(timingCategory: string, timingVar: string, callable: () => T): T {
@@ -20,14 +36,13 @@ export class GoogleAnalyticsTimingService {
     const done = () => {
       const time = performance.now() - start;
       if (gtag) {
-        this.ga.gtag('send', {
+        this.ga.gtag('event', {
           hitType: 'timing',
           timingCategory,
           timingVar,
           timingValue: Math.round(time)
         });
       }
-      console.log(timingCategory, timingVar, time);
     };
 
     let call = callable();
@@ -42,5 +57,4 @@ export class GoogleAnalyticsTimingService {
 
     return call;
   }
-
 }
