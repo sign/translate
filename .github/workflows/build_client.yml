@@ -51,7 +51,7 @@ jobs:
         run: npm run build
 
       - name: Copy 404 page
-        run: cp dist/sign-language-playground/index.html dist/sign-language-playground/404.html
+        run: cp dist/sign-translate/index.html dist/sign-translate/404.html
 
       - name: Generate Sitemap
         run: node tools/sitemap-generator.js
@@ -61,5 +61,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist/sign-language-playground/ # The folder the action should deploy.
+          FOLDER: dist/sign-translate/ # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch

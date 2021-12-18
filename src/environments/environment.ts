@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  ga: 'G-62VJPZ0542'
 };
 
 /*

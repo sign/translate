@@ -84,7 +84,7 @@ mat-toolbar {
   #translation-card {
     background-color: white;
     width: 100%;
-    transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+    transition: .6s width cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.37);
 
     @media (prefers-color-scheme: dark) {
@@ -97,6 +97,7 @@ mat-toolbar {
 
     @media #{$mat-gt-md} {
       border-radius: 8px;
+      overflow: hidden;
     }
 
     #language-selector {

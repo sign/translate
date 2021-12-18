@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sign-language-playground": {
+    "sign-translate": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sign-language-playground",
+            "outputPath": "dist/sign-translate",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,11 @@
                 "glob": "**/*",
                 "input": "./node_modules/@mediapipe/holistic/",
                 "output": "./assets/models/holistic/"
+              },
+              {
+                "glob": "*.svg",
+                "input": "./node_modules/flag-icon-css/flags/1x1/",
+                "output": "./assets/flags/1x1/"
               },
               {
                 "glob": "*.ttf",
@@ -96,18 +101,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sign-language-playground:build"
+            "browserTarget": "sign-translate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sign-language-playground:build:production"
+              "browserTarget": "sign-translate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sign-language-playground:build"
+            "browserTarget": "sign-translate:build"
           }
         },
         "test": {
@@ -141,7 +146,7 @@
       }
     }
   },
-  "defaultProject": "sign-language-playground",
+  "defaultProject": "sign-translate",
   "cli": {
     "analytics": "da7f7e1b-ea69-47b0-a971-5d7f28b86a48",
     "defaultCollection": "@angular-eslint/schematics"

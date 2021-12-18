@@ -1,7 +1,7 @@
 <ng-container *transloco="let t; read: 'translate.spoken-to-signed'">
   <div class="translation-text">
     <label id="spoken-language-label">{{t('text')}}</label>
-    <textarea [formControl]="text" [maxLength]="maxTextLength" dir="auto"
+    <textarea [formControl]="text" [maxLength]="maxTextLength" dir="auto" [lang]="spokenLanguage"
               aria-labelledby="spoken-language-label" autofocus data-gramm_editor="false"></textarea>
     <div>
       <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>

@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   /* https://fonts.gstatic.com/s/materialicons/v93/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2 */
-  src: url(../../assets/fonts/material-icons/material.woff2) format('woff2');
+  src: url(/assets/fonts/material-icons/material.woff2) format('woff2');
 }
 
 .material-icons {
