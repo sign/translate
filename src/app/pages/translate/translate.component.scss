@@ -97,6 +97,7 @@ mat-toolbar {
 
     @media #{$mat-gt-md} {
       border-radius: 8px;
+      overflow: hidden;
     }
 
     #language-selector {
