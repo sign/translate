@@ -43,17 +43,19 @@ describe('TextToSpeechComponent', () => {
     expect(component.isSpeaking).toBeFalse();
   });
 
-  it('voiceschanged event should select local service', () => {
-    component.lang = 'en';
-    window.speechSynthesis.dispatchEvent(new Event('voiceschanged'));
-    expect(getVoicesSpy).toHaveBeenCalled();
-    expect(voiceSpy).toHaveBeenCalled();
+  if ('dispatchEvent' in window.speechSynthesis) {
+    it('voiceschanged event should select local service', () => {
+      component.lang = 'en';
+      window.speechSynthesis.dispatchEvent(new Event('voiceschanged'));
+      expect(getVoicesSpy).toHaveBeenCalled();
+      expect(voiceSpy).toHaveBeenCalled();
 
-    expect(component.isSupported).toBeTrue();
-    const voice = voiceSpy.calls.first().args[0];
-    expect(voice.lang).toBe('en-US');
-    expect(voice.localService).toBe(true);
-  });
+      expect(component.isSupported).toBeTrue();
+      const voice = voiceSpy.calls.first().args[0];
+      expect(voice.lang).toBe('en-US');
+      expect(voice.localService).toBe(true);
+    });
+  }
 
   it('language change with no voices should not select service', () => {
     component.voices = [];
