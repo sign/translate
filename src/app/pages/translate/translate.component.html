@@ -1,13 +1,13 @@
 <ng-container *transloco="let t; read: 'translate'">
   <mat-drawer-container>
     <mat-drawer #appearance position="end" mode="over">
-      <app-appearance *ngIf="appearance.opened"></app-appearance>
+      <app-appearance *ngIf="loadAppearance"></app-appearance>
     </mat-drawer>
     <mat-drawer-content>
       <mat-toolbar>
         <mat-icon>waving_hand</mat-icon>
         <span>&nbsp;{{t('title')}}</span>
-        <button mat-icon-button [attr.aria-label]="'appearance.action' | transloco" (click)="appearance.open()">
+        <button mat-icon-button [attr.aria-label]="'appearance.action' | transloco" (click)="openAppearancePanel()">
           <mat-icon>account_box</mat-icon>
         </button>
       </mat-toolbar>
