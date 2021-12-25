@@ -4,15 +4,11 @@
              [attr.src]="src"
              [attr.autoplay]="false"
              [attr.loop]="false"
-             background="#ffc8c8"
+             [attr.background]="appearance$ | async"
              thickness="1"
              padding="10%"
              width="256px"
              height="256px"></pose-viewer>
-<!--
-c8c8ff
-ffc8c8
--->
 
 <mat-spinner *ngIf="!modelReady"></mat-spinner>
 

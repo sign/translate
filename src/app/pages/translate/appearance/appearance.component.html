@@ -1,0 +1,30 @@
+<ng-container *transloco="let t; read: 'appearance'">
+  <mat-toolbar>
+    <span>{{t('title')}}</span>
+  </mat-toolbar>
+
+  <div id="appearance-options" *ngIf="settingsState$ | async as settings">
+    <button mat-fab *ngFor="let appearance of appearances" class="image"
+            [style.backgroundImage]="'url(' + appearance.src + ')'"
+            [attr.aria-label]="appearance.title"
+            [matTooltip]="appearance.title"
+            [disabled]="appearance.disabled"
+            [class.selected]="settings.appearance === appearance.value"
+            (click)="applySetting('appearance', appearance.value)">
+    </button>
+    <!-- TODO "random" should open a dialog, using thispersondoesnotexist.com to create a random person -->
+    <button mat-fab [attr.aria-label]="t('random')" [matTooltip]="t('random')" [disabled]="true">
+      <mat-icon>casino</mat-icon>
+    </button>
+    <!-- TODO "random" should open file selection to select a file from the device -->
+    <button mat-fab [attr.aria-label]="t('upload')" [matTooltip]="t('upload')" [disabled]="true">
+      <mat-icon>add_a_photo</mat-icon>
+    </button>
+  </div>
+
+  <h5 style="padding:1.5em">
+    <u>Note</u>: Supporting custom photos is possible.<br>
+    However, not a current priority. <br>
+    <a href="https://github.com/sign-language-processing/sign-translate/issues/33">GitHub Issue</a>.
+  </h5>
+</ng-container>

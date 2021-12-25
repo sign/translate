@@ -185,6 +185,12 @@
       }
     }
   },
+  "appearance": {
+    "title": "Appearance",
+    "action": "Modify appearance",
+    "random": "Get a random photo",
+    "upload": "Upload your own photo"
+  },
   "video": {
     "errors": {
       "starting": "Camera starting",

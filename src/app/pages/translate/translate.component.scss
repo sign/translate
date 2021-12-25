@@ -14,6 +14,8 @@
 }
 
 :host {
+  min-height: 100vh;
+
   @media #{$mat-gt-xs} {
     &::before {
       background-color: map-get(mat.$grey-palette, 50);
@@ -33,12 +35,21 @@
   }
 }
 
+mat-drawer-container {
+  height: 100%;
+  background: transparent;
+}
+
 mat-toolbar {
   box-sizing: border-box;
   background-color: black;
   border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
   font-family: "Product Sans", Arial, sans-serif;
   font-weight: 400;
+
+  span {
+    flex: 1 1 auto;
+  }
 
   @media (prefers-color-scheme: light) {
     background-color: white;
@@ -63,14 +74,6 @@ mat-toolbar {
     align-items: center;
     display: flex;
     gap: .5em;
-
-    button {
-      transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1);
-
-      &.selected {
-        background-color: rgba(66, 133, 244, 0.12);
-      }
-    }
 
     @media #{$mat-lt-lg} {
       padding: 0 12px;

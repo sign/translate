@@ -91,10 +91,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     this.store.dispatch(new SetSpokenLanguage(lang));
   }
 
-  setInputMode(mode: InputMode): void {
-    this.store.dispatch(new SetInputMode(mode));
-  }
-
   swapLanguages(): void {
     this.store.dispatch(FlipTranslationDirection);
   }

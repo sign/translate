@@ -33,6 +33,8 @@ import {SkeletonPoseViewerComponent} from './pages/translate/pose-viewers/skelet
 import {SpeechToTextComponent} from './components/speech-to-text/speech-to-text.component';
 import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
 import {AppGoogleAnalyticsModule} from './core/modules/google-analytics/google-analytics.module';
+import { TranslateInputButtonComponent } from './pages/translate/input/button/button.component';
+import { AppearanceComponent } from './pages/translate/appearance/appearance.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import {AppGoogleAnalyticsModule} from './core/modules/google-analytics/google-a
     AvatarPoseViewerComponent,
     SkeletonPoseViewerComponent,
     SpeechToTextComponent,
+    TranslateInputButtonComponent,
+    AppearanceComponent,
   ],
   imports: [
     BrowserModule,
