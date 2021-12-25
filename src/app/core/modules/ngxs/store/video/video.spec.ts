@@ -3,6 +3,7 @@ import {NgxsModule, Store} from '@ngxs/store';
 import {VideoState, VideoStateModel} from './video.state';
 import {StartCamera, StopVideo} from './video.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
+import {firstValueFrom} from 'rxjs';
 
 
 describe('VideoState', () => {
@@ -72,14 +73,16 @@ describe('VideoState', () => {
     expect(error).toBe(testError);
   });
 
-  it('StartCamera error should update store', () => {
+  it('StartCamera error should update store', async () => {
     const testError = 'testError';
     const spy = spyOn(navigatorService, 'getCamera').and.throwError(new Error(testError));
 
     snapshot.video.error = null;
     store.reset(snapshot);
 
-    store.dispatch(new StartCamera());
+    await firstValueFrom(store.dispatch(StartCamera));
+
+    expect(spy).toHaveBeenCalled();
 
     const error = store.selectSnapshot(state => state.video.error);
     expect(error).toBe(testError);
@@ -91,7 +94,7 @@ describe('VideoState', () => {
     const cameraSpy = spyOn(navigatorService, 'getCamera').and.returnValue(Promise.resolve(mockCamera));
     const listenerSpy = spyOn(mockTrack, 'addEventListener');
 
-    await store.dispatch(new StartCamera()).toPromise();
+    await firstValueFrom(store.dispatch(StartCamera));
 
     expect(tracksSpy).toHaveBeenCalled();
     expect(cameraSpy).toHaveBeenCalled();
@@ -107,7 +110,7 @@ describe('VideoState', () => {
     const tracksSpy = spyOn(mockCamera, 'getVideoTracks').and.returnValue([mockTrack]);
     const cameraSpy = spyOn(navigatorService, 'getCamera').and.returnValue(Promise.resolve(mockCamera));
 
-    await store.dispatch(new StartCamera()).toPromise();
+    await firstValueFrom(store.dispatch(StartCamera));
 
     expect(tracksSpy).toHaveBeenCalled();
     expect(cameraSpy).toHaveBeenCalled();
@@ -120,4 +123,16 @@ describe('VideoState', () => {
     expect(videoSettings.width).toBe(mockSettings.width);
     expect(videoSettings.frameRate).toBe(mockSettings.frameRate);
   });
+
+  const aspectRatios = {
+    '2-1': {w: 2000, h: 1000},
+    '1-1': {w: 2000, h: 2000},
+    '4-3': {w: 2000, h: 1500},
+    '16-9': {w: 1920, h: 1080}
+  };
+  for(const [ratio, {w, h}] of Object.entries(aspectRatios)) {
+    it(`Resolution ${w}:${h} should be of ratio "${ratio}"`, () =>{
+      expect(VideoState.aspectRatio(w/h)).toEqual(ratio);
+    });
+  }
 });

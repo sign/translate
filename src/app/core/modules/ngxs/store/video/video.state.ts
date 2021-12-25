@@ -78,14 +78,11 @@ export class VideoState implements NgxsOnInit {
         width: {min: 1280},
         height: {min: 720}
       });
-      if (!camera) {
-        throw new Error('notConnected');
-      }
 
       const videoTrack = camera.getVideoTracks()[0];
       const trackSettings = videoTrack.getSettings();
       const videoSettings: VideoSettings = {
-        aspectRatio: this.aspectRatio(trackSettings.aspectRatio),
+        aspectRatio: VideoState.aspectRatio(trackSettings.aspectRatio),
         frameRate: trackSettings.frameRate,
         width: trackSettings.width,
         height: trackSettings.height
@@ -110,7 +107,7 @@ export class VideoState implements NgxsOnInit {
       const width = videoEl.videoWidth;
       const height = videoEl.videoHeight;
       const videoSettings: VideoSettings = {
-        aspectRatio: this.aspectRatio(width / height),
+        aspectRatio: VideoState.aspectRatio(width / height),
         frameRate: null,
         width,
         height
@@ -122,7 +119,7 @@ export class VideoState implements NgxsOnInit {
     videoEl.src = src;
   }
 
-  private aspectRatio(ratio: number): AspectRatio {
+  static aspectRatio(ratio: number): AspectRatio {
     return ratio > 1.9 ? '2-1' : ratio < 1.5 ? (ratio < 1.1 ? '1-1' : '4-3') : '16-9';
   }
 }
