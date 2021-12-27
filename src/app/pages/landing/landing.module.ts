@@ -10,11 +10,11 @@ import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module'
 import {LandingRoutingModule} from './landing-routing.module';
 import {LanguageSelectorComponent} from '../../components/language-selector/language-selector.component';
 import {StoresComponent} from '../../components/stores/stores.component';
-import { AboutHeroComponent } from './about/about-hero/about-hero.component';
-import { AboutDirectionComponent } from './about/about-direction/about-direction.component';
-import { AboutOfflineComponent } from './about/about-offline/about-offline.component';
-import { AboutAppearanceComponent } from './about/about-appearance/about-appearance.component';
-import { AboutSharingComponent } from './about/about-sharing/about-sharing.component';
+import {AboutHeroComponent} from './about/about-hero/about-hero.component';
+import {AboutDirectionComponent} from './about/about-direction/about-direction.component';
+import {AboutOfflineComponent} from './about/about-offline/about-offline.component';
+import {AboutAppearanceComponent} from './about/about-appearance/about-appearance.component';
+import {AboutSharingComponent} from './about/about-sharing/about-sharing.component';
 
 
 @NgModule({

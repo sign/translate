@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AboutSharingComponent } from './about-sharing.component';
+import {AboutSharingComponent} from './about-sharing.component';
 
 describe('AboutSharingComponent', () => {
   let component: AboutSharingComponent;
@@ -8,9 +8,9 @@ describe('AboutSharingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AboutSharingComponent ]
+      declarations: [AboutSharingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

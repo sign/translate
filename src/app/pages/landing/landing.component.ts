@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {TranslationService} from '../../modules/translate/translate.service';
 
 @Component({
   selector: 'app-landing',

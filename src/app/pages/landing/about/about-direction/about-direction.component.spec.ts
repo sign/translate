@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AboutDirectionComponent } from './about-direction.component';
+import {AboutDirectionComponent} from './about-direction.component';
 
 describe('AboutDirectionComponent', () => {
   let component: AboutDirectionComponent;
@@ -8,9 +8,9 @@ describe('AboutDirectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AboutDirectionComponent ]
+      declarations: [AboutDirectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
