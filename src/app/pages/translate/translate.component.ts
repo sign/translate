@@ -32,7 +32,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     this.store.dispatch([
       new SetSetting('receiveVideo', true),
       new SetSetting('detectSign', false),
-      new SetSetting('drawSignWriting', false),
+      new SetSetting('drawSignWriting', false), // This setting currently also controls loading the SignWriting models.
       new SetSetting('drawPose', true),
       new SetSetting('poseViewer', 'pose'),
     ]);

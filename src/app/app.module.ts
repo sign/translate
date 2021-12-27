@@ -35,6 +35,7 @@ import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-p
 import {AppGoogleAnalyticsModule} from './core/modules/google-analytics/google-analytics.module';
 import {TranslateInputButtonComponent} from './pages/translate/input/button/button.component';
 import {AppearanceComponent} from './pages/translate/appearance/appearance.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import {AppearanceComponent} from './pages/translate/appearance/appearance.compo
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     AppSharedModule,

@@ -19,7 +19,9 @@ async function loadModel(): Promise<void> {
 }
 
 function isGreen(r: number, g: number, b: number) {
-  return g > 255/2 && g > r * 1.5 && g > b * 1.5;
+  // This green screen algorithm returns disgusting results.
+  // return g > 255/2 && g > r * 1.5 && g > b * 1.5;
+  return false;
 }
 
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {

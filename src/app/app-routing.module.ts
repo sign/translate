@@ -6,6 +6,7 @@ import {TranslateComponent} from './pages/translate/translate.component';
 const routes: Routes = [
   {path: '', component: TranslateComponent},
   {path: 'playground', component: PlaygroundComponent},
+  {path: 'about', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
 ];
 
 @NgModule({

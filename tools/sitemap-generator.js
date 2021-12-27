@@ -3,15 +3,23 @@ const path = require("path")
 const fs = require("fs")
 
 const now = new Date();
-const urls = ['/'];
+const baseUrls = [
+  '/',
+  '/about', '/about/languages', '/about/contribute', '/about/tools',
+  // '/legal/terms', '/legal/privacy', '/legal/licenses'
+]
 
 const baseDir = __dirname + `${path.sep}..${path.sep}`;
+
+const urls = [];
 
 // Add language urls
 const langsDir = `${baseDir}src${path.sep}assets${path.sep}i18n`;
 for (const file of fs.readdirSync(langsDir)) {
   const [lang] = file.split('.');
-  urls.push(`/?lang=${lang}`)
+  for (const url of baseUrls) {
+    urls.push(url + `?lang=${lang}`)
+  }
 }
 
 // writes sitemaps and index out to the destination you provide.

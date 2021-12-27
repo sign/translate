@@ -1,18 +1,6 @@
 @use '@angular/material' as mat;
 @import "../../../theme/variables";
 
-::ng-deep {
-  body {
-    background-color: white;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-
-    @media (prefers-color-scheme: dark) {
-      background-color: black;
-    }
-  }
-}
-
 :host {
   min-height: 100vh;
 
@@ -35,28 +23,12 @@
   }
 }
 
-mat-drawer-container {
-  height: 100%;
-  background: transparent;
-}
-
 mat-toolbar {
-  box-sizing: border-box;
-  background-color: black;
-  border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
-  font-family: "Product Sans", Arial, sans-serif;
-  font-weight: 400;
-
   span {
     flex: 1 1 auto;
   }
-
-  @media (prefers-color-scheme: light) {
-    background-color: white;
-    border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
-    color: map-get(mat.$gray-palette, 800);
-  }
 }
+
 
 #container {
   width: auto;

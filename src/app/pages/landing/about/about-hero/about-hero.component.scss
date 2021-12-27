@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+@import "../../../../../theme/variables";
+
+:host {
+  @media #{$mat-gt-sm} {
+    padding: 200px 50px !important;
+  }
+}
+
+#grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 32px;
+
+  align-items: center;
+  margin: auto;
+
+  max-width: 1280px;
+
+  @media #{$mat-lt-md} {
+    grid-auto-flow: row;
+    div {
+      order: -1;
+    }
+  }
+}
+
+h1 {
+  font-size: 36px;
+}
+
+img {
+  width: 100%;
+  border-radius: 16px;
+}

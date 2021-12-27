@@ -185,6 +185,36 @@
       }
     }
   },
+  "landing": {
+    "try": "Try Translating!",
+    "about": {
+      "title": "About",
+      "hero": {
+        "title": "Translate between 40+ signed and spoken languages in real-time.",
+        "img": "Example of live translation between American Sign Language and English"
+      }
+    },
+    "languages": {
+      "title": "Languages"
+    },
+    "contribute": {
+      "title": "Contribute"
+    },
+    "tools": {
+      "title": "Tools"
+    }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Licenses"
+    }
+  },
   "appearance": {
     "title": "Appearance",
     "action": "Modify appearance",
@@ -207,6 +237,9 @@
   },
   "pose": {
     "loading": "Loading Pose Estimation..."
+  },
+  "language-selector": {
+    "label": "Change language or region"
   },
   "text-to-speech": {
     "play": "Listen",

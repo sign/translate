@@ -43,7 +43,13 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: mat.get-color-from-palette(mat.$gray-palette, 50);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: black;
+  }
 }
 
 app-root {
@@ -54,5 +60,34 @@ button[mat-icon-button] {
   color: map-get(mat.$light-theme-foreground-palette, icon);
   @media (prefers-color-scheme: dark) {
     color: map-get(mat.$dark-theme-foreground-palette, icon);
+  }
+}
+
+.mat-drawer-container {
+  height: 100%;
+  background: transparent;
+}
+
+.mat-toolbar {
+  box-sizing: border-box;
+  background-color: black;
+  border-color: map-get(mat.$dark-theme-foreground-palette, divider);
+  border-style: solid;
+  border-width: 0;
+  font-family: "Product Sans", Arial, sans-serif;
+  font-weight: 400;
+
+  &:first-child {
+    border-bottom-width: 1px;
+  }
+
+  &:last-child {
+    border-top-width: 1px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: white;
+    border-color: map-get(mat.$light-theme-foreground-palette, divider);
+    color: map-get(mat.$gray-palette, 800);
   }
 }
