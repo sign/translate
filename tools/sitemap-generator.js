@@ -11,7 +11,7 @@ const baseUrls = [
 
 const baseDir = __dirname + `${path.sep}..${path.sep}`;
 
-const urls = [];
+const urls = [...baseUrls];
 
 // Add language urls
 const langsDir = `${baseDir}src${path.sep}assets${path.sep}i18n`;
