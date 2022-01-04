@@ -2,8 +2,6 @@ import {Injectable} from '@angular/core';
 import {GoogleAnalyticsService} from 'ngx-google-analytics';
 import {getCLS, getFID, getLCP} from 'web-vitals';
 
-declare var gtag;
-
 function isPromise(promise) {
   return !!promise && typeof promise.then === 'function';
 }
@@ -35,12 +33,11 @@ export class GoogleAnalyticsTimingService {
     const start = performance.now();
     const done = () => {
       const time = performance.now() - start;
-      if (gtag) {
-        this.ga.gtag('event', {
-          hitType: 'timing',
-          timingCategory,
-          timingVar,
-          timingValue: Math.round(time)
+      if (this.ga.gtag) {
+        const intTime = Math.round(time);
+        this.ga.gtag('event', `${timingCategory}:${timingVar}`, {
+          value: intTime,
+          metric_value: intTime,
         });
       }
     };
