@@ -7,9 +7,9 @@ import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
   templateUrl: './benchmark.component.html',
   styleUrls: ['./benchmark.component.scss']
 })
-export class BenchmarkComponent implements OnInit {
+export class BenchmarkComponent {
 
-  categories = {
+  benchmarks = {
     'pix2pix': this.pix2pixBench.bind(this)
   };
 
@@ -18,11 +18,14 @@ export class BenchmarkComponent implements OnInit {
   constructor(private gaTiming: GoogleAnalyticsTimingService, private pix2pix: Pix2PixService) {
   }
 
-  ngOnInit(): void {
+  async bench() {
+    for(const bench of Object.values(this.benchmarks)) {
+      await bench();
+    }
   }
 
   buildStats() {
-    for (const category of Object.keys(this.categories)) {
+    for (const category of Object.keys(this.benchmarks)) {
       const events = this.gaTiming.events(category);
       const stats = {};
       for (const [_, name, args] of events) {

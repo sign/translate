@@ -3,7 +3,16 @@
     "title": "Sign Language Processing Playground"
   },
   "benchmark": {
-    "title": "Benchmark"
+    "title": "Benchmark",
+    "stats": {
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Worker Init",
+        "load": "Model Load",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
   },
   "translate": {
     "title": "Sign Translate",

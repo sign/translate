@@ -1,8 +1,22 @@
-<mat-toolbar *transloco="let t; read: 'benchmark'">
-  <mat-icon>analytics</mat-icon>
-  <span>{{t('title')}}</span>
-</mat-toolbar>
+<ng-container *transloco="let t; read: 'benchmark'">
+  <mat-toolbar>
+    <mat-icon>analytics</mat-icon>
+    <span>{{t('title')}}</span>
+  </mat-toolbar>
 
-<div id="container">
+  <div id="container">
+    <button mat-raised-button color="primary" (click)="bench()">Start Benchmarking!</button>
+    <br />
+    <br />
+    <br />
+    <br />
 
-</div>
+    <div *ngFor="let stat of stats | keyvalue">
+      <h2>{{t('stats.' + stat.key + '.title')}}</h2>
+      <app-benchmark-item *ngFor="let item of stat.value | keyvalue"
+                          [title]="t('stats.' + stat.key + '.' + item.key)"
+                          [timings]="item.value"></app-benchmark-item>
+    </div>
+
+  </div>
+</ng-container>
