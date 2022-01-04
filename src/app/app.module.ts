@@ -36,6 +36,7 @@ import {AppGoogleAnalyticsModule} from './core/modules/google-analytics/google-a
 import {TranslateInputButtonComponent} from './pages/translate/input/button/button.component';
 import {AppearanceComponent} from './pages/translate/appearance/appearance.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     SpeechToTextComponent,
     TranslateInputButtonComponent,
     AppearanceComponent,
+    BenchmarkComponent,
   ],
   imports: [
     BrowserModule,

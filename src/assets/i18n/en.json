@@ -2,6 +2,9 @@
   "playground": {
     "title": "Sign Language Processing Playground"
   },
+  "benchmark": {
+    "title": "Benchmark"
+  },
   "translate": {
     "title": "Sign Translate",
     "description": "A bi-directional multilingual sign language translation app for desktop and mobile",

@@ -54,4 +54,14 @@ export class GoogleAnalyticsTimingService {
 
     return call;
   }
+
+  events(timingCategory: string, timingVar?: string): [string, string, any][] {
+    const f = (name) => timingVar ? (name === `${timingCategory}.${timingVar}`) : name.startsWith(timingCategory);
+    return (window as any).dataLayer.filter(([_, name, args]) => f(name));
+  }
+
+  timingHistory(timingCategory: string, timingVar: string): number[] {
+    const events = this.events(timingCategory, timingVar);
+    return events.map(([_, name, args]) => args.value);
+  }
 }
