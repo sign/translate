@@ -31,9 +31,6 @@ mat-toolbar {
 
 
 #container {
-  width: auto;
-  max-width: 1280px;
-  margin: 0 auto;
   transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
 
   @media #{$mat-gt-md} {

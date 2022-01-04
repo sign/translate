@@ -22,6 +22,7 @@
   @include mat.progress-spinner-theme($theme);
   @include mat.progress-bar-theme($theme);
   @include mat.tooltip-theme($theme);
+  @include mat.card-theme($theme);
 }
 
 @include theme-components($app-theme);
@@ -54,6 +55,12 @@ body {
 
 app-root {
   height: 100%
+}
+
+#container {
+  width: auto;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 button[mat-icon-button] {

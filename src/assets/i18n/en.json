@@ -2,6 +2,18 @@
   "playground": {
     "title": "Sign Language Processing Playground"
   },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Worker Init",
+        "load": "Model Load",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
+  },
   "translate": {
     "title": "Sign Translate",
     "description": "A bi-directional multilingual sign language translation app for desktop and mobile",
