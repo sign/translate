@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class BenchmarkItemComponent {
 
   @Input() title: string;
-  @Input() timings: number[];
+  @Input() timings: number[] = [];
 
   fps(): string {
     return (1000 / (this.timings.reduce((a, b) => a + b, 0) / this.timings.length)).toFixed(1);
