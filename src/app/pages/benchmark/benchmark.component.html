@@ -7,16 +7,16 @@
   <div id="container">
     <button mat-raised-button color="primary" (click)="bench()">Start Benchmarking!</button>
     <br />
-    <br />
-    <br />
-    <br />
 
-    <div *ngFor="let stat of stats | keyvalue">
-      <h2>{{t('stats.' + stat.key + '.title')}}</h2>
-      <app-benchmark-item *ngFor="let item of stat.value | keyvalue"
-                          [title]="t('stats.' + stat.key + '.' + item.key)"
-                          [timings]="item.value"></app-benchmark-item>
-    </div>
+    <mat-card *ngFor="let stat of stats | keyvalue">
+      <mat-card-title>{{t('stats.' + stat.key + '.title')}}</mat-card-title>
+      <mat-card-content>
+        <app-benchmark-item *ngFor="let item of stat.value | keyvalue"
+                            [title]="t('stats.' + stat.key + '.' + item.key)"
+                            [timings]="item.value"></app-benchmark-item>
+      </mat-card-content>
+    </mat-card>
 
+    {{stats | json}}
   </div>
 </ng-container>

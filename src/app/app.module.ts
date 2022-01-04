@@ -37,8 +37,7 @@ import {TranslateInputButtonComponent} from './pages/translate/input/button/butt
 import {AppearanceComponent} from './pages/translate/appearance/appearance.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
-import { BenchmarkItemComponent } from './pages/benchmark/benchmark-item/benchmark-item.component';
-import {MatCardModule} from "@angular/material/card";
+import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
 
 @NgModule({
   declarations: [
@@ -64,28 +63,28 @@ import {MatCardModule} from "@angular/material/card";
     BenchmarkComponent,
     BenchmarkItemComponent,
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        AppRoutingModule,
-        AppSharedModule,
-        SettingsModule,
-        PoseModule,
-        SignWritingModule,
-        DetectorModule,
-        AnimationModule,
-        Pix2PixModule,
-        TranslateModule,
-        NgxFlagIconCssModule,
-        AppGoogleAnalyticsModule,
-        ServiceWorkerModule.register('ngsw-worker.js', {
-            enabled: environment.production,
-            // Register the ServiceWorker as soon as the app is stable
-            // or after 30 seconds (whichever comes first).
-            registrationStrategy: 'registerWhenStable:30000'
-        }),
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    AppSharedModule,
+    SettingsModule,
+    PoseModule,
+    SignWritingModule,
+    DetectorModule,
+    AnimationModule,
+    Pix2PixModule,
+    TranslateModule,
+    NgxFlagIconCssModule,
+    AppGoogleAnalyticsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
+  ],
   providers: [
     NavigatorService
   ],
