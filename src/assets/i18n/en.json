@@ -5,9 +5,22 @@
   "benchmark": {
     "title": "Benchmark",
     "stats": {
+      "cld": {
+        "title": "Spoken Language Identification",
+        "import": "Import Module",
+        "load": "Load Model",
+        "find": "Identify Text",
+        "create": "Create"
+      },
       "pix2pix": {
         "title": "Human Pose Viewer",
         "init": "Worker Init",
+        "load": "Load Model",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Full Body Pose Estimation",
         "load": "Model Load",
         "first-frame": "First Frame Inference",
         "frame": "Frame Inference"

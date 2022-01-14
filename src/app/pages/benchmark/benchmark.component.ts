@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
+import {TranslationService} from "../../modules/translate/translate.service";
+import {PoseService} from "../../modules/pose/pose.service";
 
 @Component({
   selector: 'app-benchmark',
@@ -10,32 +12,74 @@ import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
 export class BenchmarkComponent {
 
   benchmarks = {
-    'pix2pix': this.pix2pixBench.bind(this)
+    'cld': this.cldBench.bind(this),
+    'pix2pix': this.pix2pixBench.bind(this),
+    'pose': this.poseBench.bind(this),
   };
 
   stats = {};
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService, private pix2pix: Pix2PixService) {
+  constructor(private gaTiming: GoogleAnalyticsTimingService,
+              private pix2pix: Pix2PixService,
+              private translation: TranslationService,
+              private pose: PoseService) {
   }
 
   async bench() {
-    for(const bench of Object.values(this.benchmarks)) {
-      await bench();
+    for (const bench of Object.values(this.benchmarks)) {
+      try {
+        await bench();
+      } catch (e) {
+        alert(e.message);
+      }
     }
   }
 
   buildStats() {
     for (const category of Object.keys(this.benchmarks)) {
       const events = this.gaTiming.events(category);
+      if (events.length === 0) {
+        continue;
+      }
+
       const stats = {};
       for (const [_, name, args] of events) {
         const eVar = name.slice(category.length + 1);
         if (!(eVar in stats)) {
           stats[eVar] = [];
         }
-        stats[eVar].push(args.value);
+        stats[eVar].push(args.microseconds / 1000);
       }
       this.stats[category] = stats;
+    }
+  }
+
+  async poseBench() {
+    await this.pose.load();
+    this.buildStats();
+
+    // Set up an image of a person
+    const image = new Image();
+    await new Promise(resolve => {
+      image.addEventListener('load', resolve);
+      image.src = 'assets/tmp/example-image.png';
+    });
+
+    // Evaluate 30 frames
+    for (let i = 0; i < 30; i++) {
+      await this.pose.predict(image);
+      this.buildStats();
+    }
+  }
+
+  async cldBench() {
+    await this.translation.initCld();
+    this.buildStats();
+
+    // Evaluate 30 texts
+    for (let i = 0; i < 30; i++) {
+      this.translation.detectSpokenLanguage("Lorem ipsum dolor sit amet");
+      this.buildStats();
     }
   }
 

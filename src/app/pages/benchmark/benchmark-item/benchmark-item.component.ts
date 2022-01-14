@@ -11,6 +11,8 @@ export class BenchmarkItemComponent {
   @Input() timings: number[] = [];
 
   fps(): string {
-    return (1000 / (this.timings.reduce((a, b) => a + b, 0) / this.timings.length)).toFixed(1);
+    const sum = this.timings.reduce((a, b) => a + b, 0)
+    const mean =  sum / this.timings.length;
+    return (1000 / mean).toFixed(1);
   }
 }

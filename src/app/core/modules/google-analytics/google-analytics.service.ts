@@ -38,6 +38,7 @@ export class GoogleAnalyticsTimingService {
         this.ga.gtag('event', `${timingCategory}:${timingVar}`, {
           value: intTime,
           metric_value: intTime,
+          microseconds: Math.round(time * 1000)
         });
       }
     };
