@@ -1,7 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {BenchmarkComponent} from './benchmark.component';
-import {AppAngularMaterialModule} from "../../core/modules/angular-material/angular-material.module";
+import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('BenchmarkComponent', () => {
   let component: BenchmarkComponent;
@@ -10,7 +11,10 @@ describe('BenchmarkComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [BenchmarkComponent],
-      imports: [AppAngularMaterialModule]
+      imports: [
+        AppAngularMaterialModule,
+        HttpClientModule
+      ]
     }).compileComponents();
   });
 

@@ -4,7 +4,7 @@ import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
 import {ChangeTranslation, CopySignedLanguageVideo, DownloadSignedLanguageVideo, FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSignedLanguageVideo, SetSignWritingText, SetSpokenLanguage, SetSpokenLanguageText, ShareSignedLanguageVideo} from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 
@@ -113,7 +113,10 @@ export class TranslateState implements NgxsOnInit {
   }
 
   @Action(SetSignedLanguage)
-  async setSignedLanguage({patchState, dispatch}: StateContext<TranslateStateModel>, {language}: SetSignedLanguage): Promise<void> {
+  async setSignedLanguage({
+                            patchState,
+                            dispatch
+                          }: StateContext<TranslateStateModel>, {language}: SetSignedLanguage): Promise<void> {
     patchState({signedLanguage: language});
     dispatch(ChangeTranslation);
   }
@@ -124,36 +127,47 @@ export class TranslateState implements NgxsOnInit {
     const {spokenLanguage} = getState();
     patchState({
       spokenLanguageText: text,
-      signWriting: text ? ['M507x523S15a28494x496S26500493x477', 'M522x525S11541498x491S11549479x498S20600489x476', 'AS14c31S14c39S27102S27116S30300S30a00S36e00M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S27102539x545S27116445x545'] : [],
       detectedLanguage: (!text || spokenLanguage) ? null : this.service.detectSpokenLanguage(text)
     });
+
     dispatch(ChangeTranslation);
   }
 
   @Action(SetSignedLanguageVideo)
-  async setSignedLanguageVideo({patchState, dispatch}: StateContext<TranslateStateModel>, {url}: SetSignedLanguageVideo): Promise<void> {
+  async setSignedLanguageVideo({
+                                 patchState,
+                                 dispatch
+                               }: StateContext<TranslateStateModel>, {url}: SetSignedLanguageVideo): Promise<void> {
     patchState({signedLanguageVideo: url});
   }
 
   @Action(SetSignWritingText)
-  async setSignWritingText({patchState, dispatch}: StateContext<TranslateStateModel>, {text}: SetSignWritingText): Promise<void> {
+  async setSignWritingText({
+                             patchState,
+                             dispatch
+                           }: StateContext<TranslateStateModel>, {text}: SetSignWritingText): Promise<void> {
     patchState({signWriting: text});
   }
 
-  @Action(ChangeTranslation)
-  async changeTranslation({getState, patchState}: StateContext<TranslateStateModel>): Promise<void> {
+  @Action(ChangeTranslation, {cancelUncompleted: true})
+  changeTranslation({getState, patchState}: StateContext<TranslateStateModel>): Observable<any> {
     const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, spokenLanguageText} = getState();
     if (spokenToSigned) {
-      patchState({signedLanguageVideo: null}); // Always reset the signed language video
+      patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
 
       if (!spokenLanguageText) {
-        patchState({signedLanguagePose: null});
+        patchState({signedLanguagePose: null, signWriting: []});
       } else {
         const actualSpokenLanguage = spokenLanguage || detectedLanguage;
         const path = this.service.translateSpokenToSigned(spokenLanguageText, actualSpokenLanguage, signedLanguage);
         patchState({signedLanguagePose: path});
+        return this.service.translateSpokenToSignWriting(spokenLanguageText, actualSpokenLanguage, signedLanguage).pipe(
+          tap(signWriting => patchState({signWriting}))
+        );
       }
     }
+
+    return of();
   }
 
   @Action(CopySignedLanguageVideo)

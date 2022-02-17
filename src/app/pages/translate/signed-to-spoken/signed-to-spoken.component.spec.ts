@@ -8,6 +8,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('SignedToSpokenComponent', () => {
   let component: SignedToSpokenComponent;
@@ -20,7 +21,8 @@ describe('SignedToSpokenComponent', () => {
         TextToSpeechComponent
       ],
       imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig)
+        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
+        HttpClientModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();

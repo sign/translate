@@ -1,11 +1,24 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he'
 };
 const DEFAULT_SPOKEN_LANGUAGE = 'en';
+
+interface SpokenToSignWritingResponse {
+  country_code: string;
+  direction: string;
+  language_code: string,
+  n_best: string,
+  text: string,
+  translation_type: string,
+  translations: string[]
+}
 
 
 @Injectable({
@@ -26,7 +39,7 @@ export class TranslationService {
   ];
 
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService) {
+  constructor(private gaTiming: GoogleAnalyticsTimingService, private http: HttpClient) {
   }
 
   async initCld(): Promise<void> {
@@ -54,4 +67,15 @@ export class TranslationService {
     return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
   }
 
+  translateSpokenToSignWriting(text: string, spokenLanguage: string, signedLanguage: string): Observable<string[]> {
+    const api = 'https://pub.cl.uzh.ch/demo/signwriting/spoken2sign';
+    const body = {
+      country_code: signedLanguage,
+      language_code: spokenLanguage,
+      text,
+      translation_type: 'sent'
+    };
+    return this.http.post<SpokenToSignWritingResponse>(api, body)
+      .pipe(map(res => res.translations[0].split(' ')));
+  }
 }

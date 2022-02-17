@@ -10,6 +10,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {SetSpokenLanguageText} from '../../../modules/translate/translate.actions';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('SpokenToSignedComponent', () => {
   let component: SpokenToSignedComponent;
@@ -26,7 +27,8 @@ describe('SpokenToSignedComponent', () => {
       imports: [
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
