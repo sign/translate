@@ -35,9 +35,9 @@ based on state-of-the-art real-time client side models.
 - Text / Microphone inputs
 - Text-to-speech
 - Spoken Language identification (Detect Language)
-- [Spoken language text to SignWriting translation](https://github.com/sign-language-processing/playground/issues/11)
+- Spoken language text to SignWriting translation
 - [SignWriting to pose sequence](https://github.com/sign-language-processing/sign-translate/issues/15)
-- [Text to pose sequence fallback (server side)](https://github.com/sign-language-processing/sign-translate/issues/17)
+- Text to pose sequence fallback (server side)
 - Skeleton / [Avatar](https://github.com/sign-language-processing/sign-translate/issues/16) / Human Pose Viewers
 - Copy / share / download video
 
@@ -66,22 +66,3 @@ based on state-of-the-art real-time client side models.
 - [SignWriting to spoken language translation](https://github.com/sign-language-processing/sign-translate/issues/18)
 - Text-to-speech
 - [Copy / share translation](https://github.com/sign-language-processing/sign-translate/issues/19)
-
-
-## Repository Structure
-
-Currently, the repository contains the web application at the top level.
-
-We aim to structure it as follows:
-
-- `.github` - GitHub metadata and related files
-- `app` - Angular web application
-  - `ios` - iOS Capacitor application
-  - `android` - Android Capacitor application
-- `server` - Web servers capable of running the models, with a unified interface
-  - `python`
-  - `js`
-- `models` - Models, and tools to convert them to different formats for different distributions
-- `CNAME` - Hosted web page CNAME
-- `LICENCE` - MIT License
-- `README.md` - This file
