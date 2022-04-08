@@ -16,7 +16,7 @@ export class AppComponent {
     this.transloco.langChanges$.pipe(
       tap((lang) => {
         document.documentElement.lang = lang;
-        document.dir = lang === 'he' ? 'rtl' : 'ltr';
+        document.dir = ['he', 'ar'].includes(lang) ? 'rtl' : 'ltr';
       })
     ).subscribe();
 

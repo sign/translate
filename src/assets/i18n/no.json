@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Oversetter",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Gjenkjenn språk",
+      "more": "Flere språk"
+    },
+    "feedback": "Send tilbakemelding",
+    "input": {
+      "text": "Tekst",
+      "webcam": "Webkamera",
+      "upload": "Laste opp"
+    },
+    "swapLanguages": "Bytt språk",
+    "upload": {
+      "types": "Last opp en .mp4-, .ogv-- eller .webm-fil.",
+      "browse": "Bla gjennom datamaskinen din",
+      "title": "Velg en video"
+    },
+    "description": "En toveis flerspråklig tegnspråkoversettelsesapp for datamaskin og mobil",
+    "spoken-to-signed": {
+      "text": "Muntlig språktekst",
+      "actions": {
+        "download": "Last ned oversettelse",
+        "copy": "Kopier oversettelse",
+        "share": "Del oversettelse"
+      }
+    }
+  },
+  "landing": {
+    "try": "PRØV OVERSETTER",
+    "about": {
+      "title": "Info",
+      "hero": {
+        "title": "Oversett mellom 40+ tegnspråk og talespråk i sanntid.",
+        "img": "Eksempel på direkte oversettelse mellom amerikansk tegnspråk og engelsk"
+      }
+    },
+    "languages": {
+      "title": "Språk"
+    },
+    "contribute": {
+      "title": "Bidra"
+    },
+    "tools": {
+      "title": "Verktøy"
+    }
+  },
+  "text-to-speech": {
+    "play": "Lytt til",
+    "cancel": "Stoppe",
+    "unavailable": "Stemmeutdata er ikke tilgjengelig for det valgte språket"
+  },
+  "speech-to-text": {
+    "start": "Oversettelse via tale",
+    "stop": "Stopp oversettelsen med stemmen",
+    "not-allowed": "Trenger tillatelse for å bruke mikrofon",
+    "language-not-supported": "Det valgte språket støttes ikke",
+    "browser-not-supported": "Taleinndata støttes ikke i denne nettleseren"
+  },
+  "legal": {
+    "terms": {
+      "title": "Vilkår"
+    },
+    "privacy": {
+      "title": "Personvern"
+    },
+    "licenses": {
+      "title": "Programvare og lisenser"
+    }
+  },
+  "playground": {
+    "title": "Lekeplass for tegnspråkbehandling"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Talespråkidentifikasjon",
+        "import": "Importmodul",
+        "load": "Last modell",
+        "find": "Identifiser tekst",
+        "create": "Skape"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Arbeider Init",
+        "load": "Last modell",
+        "first-frame": "Første rammeslutning",
+        "frame": "Rammeslutning"
+      },
+      "pose": {
+        "title": "Estimering av helkroppsposisjon",
+        "load": "Modellbelastning",
+        "first-frame": "Første rammeslutning",
+        "frame": "Rammeslutning"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Utseende",
+    "action": "Endre utseende",
+    "random": "Få et tilfeldig bilde",
+    "upload": "Last opp ditt eget bilde"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera starter",
+      "turnedOff": "Kamera slått av",
+      "notConnected": "Kameraet er ikke tilkoblet",
+      "permissionDenied": "Kameratillatelse nektet"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Slå av kameraet",
+        "off": "Slå på kameraet"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Laster posisjonsestimat..."
+  },
+  "language-selector": {
+    "label": "Endre språk eller region"
+  },
+  "settings": {
+    "detectSign": "Oppdag tegn",
+    "drawVideo": "Tegn video",
+    "drawPose": "Tegn positur",
+    "drawSignWriting": "Tegne tegnskriving",
+    "animatePose": "Animer positur",
+    "poseViewer": {
+      "pose": "Skjelett",
+      "avatar": "Avatar",
+      "human": "Menneskelig"
+    }
+  }
+}

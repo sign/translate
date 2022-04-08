@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign 翻譯",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "偵測語言",
+      "more": "更多語言"
+    },
+    "feedback": "提供意見",
+    "input": {
+      "text": "文字",
+      "webcam": "攝像頭",
+      "upload": "上傳"
+    },
+    "swapLanguages": "語言對調",
+    "upload": {
+      "types": "上傳 .mp4, .ogv, 或 .webm。",
+      "browse": "瀏覽你的電腦",
+      "title": "選擇一個視頻"
+    },
+    "description": "適用於桌面和移動設備的雙向多語言手語翻譯應用程序",
+    "spoken-to-signed": {
+      "text": "口語文本",
+      "actions": {
+        "download": "下載翻譯",
+        "copy": "複製翻譯",
+        "share": "分享翻譯"
+      }
+    }
+  },
+  "landing": {
+    "try": "試用「翻譯」",
+    "about": {
+      "title": "關於",
+      "hero": {
+        "title": "實時翻譯 40 多種手語和口語。",
+        "img": "美國手語和英語之間的實時翻譯示例"
+      }
+    },
+    "languages": {
+      "title": "語言"
+    },
+    "contribute": {
+      "title": "提供翻譯"
+    },
+    "tools": {
+      "title": "工具"
+    }
+  },
+  "text-to-speech": {
+    "play": "聆聽",
+    "cancel": "停止",
+    "unavailable": "所選語言無法使用語音輸出"
+  },
+  "speech-to-text": {
+    "start": "語音翻譯",
+    "stop": "停止語音翻譯",
+    "not-allowed": "需要獲得使用麥克風的權限",
+    "language-not-supported": "不支持所選語言",
+    "browser-not-supported": "此瀏覽器不支持語音輸入"
+  },
+  "legal": {
+    "terms": {
+      "title": "條款"
+    },
+    "privacy": {
+      "title": "私隱權"
+    },
+    "licenses": {
+      "title": "軟件和授權"
+    }
+  },
+  "playground": {
+    "title": "手語處理遊樂場"
+  },
+  "benchmark": {
+    "title": "基準",
+    "stats": {
+      "cld": {
+        "title": "口語識別",
+        "import": "導入模塊",
+        "load": "加載模型",
+        "find": "識別文本",
+        "create": "創造"
+      },
+      "pix2pix": {
+        "title": "人體姿勢查看器",
+        "init": "工人初始化",
+        "load": "加載模型",
+        "first-frame": "第一幀推理",
+        "frame": "幀推斷"
+      },
+      "pose": {
+        "title": "全身姿勢估計",
+        "load": "模型加載",
+        "first-frame": "第一幀推理",
+        "frame": "幀推斷"
+      }
+    }
+  },
+  "appearance": {
+    "title": "外貌",
+    "action": "修改外觀",
+    "random": "獲取隨機照片",
+    "upload": "上傳您自己的照片"
+  },
+  "video": {
+    "errors": {
+      "starting": "相機啟動",
+      "turnedOff": "相機已關閉",
+      "notConnected": "相機未連接",
+      "permissionDenied": "相機權限被拒絕"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "關閉相機",
+        "off": "打開相機"
+      }
+    }
+  },
+  "pose": {
+    "loading": "正在加載姿勢估計..."
+  },
+  "language-selector": {
+    "label": "更改語言或地區"
+  },
+  "settings": {
+    "detectSign": "檢測標誌",
+    "drawVideo": "畫視頻",
+    "drawPose": "畫姿勢",
+    "drawSignWriting": "畫標誌寫作",
+    "animatePose": "動畫姿勢",
+    "poseViewer": {
+      "pose": "骨骼",
+      "avatar": "阿凡達",
+      "human": "人類"
+    }
+  }
+}

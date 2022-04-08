@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Tłumacz Sign",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Wykryj język",
+      "more": "Więcej języków"
+    },
+    "feedback": "Prześlij opinię",
+    "input": {
+      "text": "Tekst",
+      "webcam": "Kamerka internetowa",
+      "upload": "Wgrywać"
+    },
+    "swapLanguages": "Zamiana języków",
+    "upload": {
+      "types": "Prześlij plik .mp4, .ogv lub .webm.",
+      "browse": "Przeglądaj komputer",
+      "title": "Wybierz film"
+    },
+    "description": "Dwukierunkowa wielojęzyczna aplikacja do tłumaczenia języka migowego na komputery i urządzenia mobilne",
+    "spoken-to-signed": {
+      "text": "Tekst w języku mówionym",
+      "actions": {
+        "download": "Pobierz tłumaczenie",
+        "copy": "Kopiuj tłumaczenie",
+        "share": "Udostępnij tłumaczenie"
+      }
+    }
+  },
+  "landing": {
+    "try": "WYPRÓBUJ TŁUMACZA",
+    "about": {
+      "title": "Informacje",
+      "hero": {
+        "title": "Tłumacz w czasie rzeczywistym między ponad 40 językami migowymi i mówionymi.",
+        "img": "Przykład tłumaczenia na żywo między amerykańskim językiem migowym a angielskim"
+      }
+    },
+    "languages": {
+      "title": "Języki"
+    },
+    "contribute": {
+      "title": "Twój wkład"
+    },
+    "tools": {
+      "title": "Narzędzia"
+    }
+  },
+  "text-to-speech": {
+    "play": "Słuchaj",
+    "cancel": "Zatrzymać",
+    "unavailable": "Wyjście głosowe nie jest dostępne dla wybranego języka"
+  },
+  "speech-to-text": {
+    "start": "Tłumacz mowę",
+    "stop": "Zatrzymaj tłumaczenie głosowe",
+    "not-allowed": "Potrzebujesz pozwolenia na używanie mikrofonu",
+    "language-not-supported": "Wybrany język nie jest obsługiwany",
+    "browser-not-supported": "Wprowadzanie głosowe nie jest obsługiwane w tej przeglądarce"
+  },
+  "legal": {
+    "terms": {
+      "title": "Warunki"
+    },
+    "privacy": {
+      "title": "Prywatność"
+    },
+    "licenses": {
+      "title": "Oprogramowanie i licencje"
+    }
+  },
+  "playground": {
+    "title": "Plac zabaw przetwarzania języka migowego"
+  },
+  "benchmark": {
+    "title": "Reper",
+    "stats": {
+      "cld": {
+        "title": "Identyfikacja w języku mówionym",
+        "import": "Moduł importu",
+        "load": "Załaduj model",
+        "find": "Zidentyfikuj tekst",
+        "create": "Tworzyć"
+      },
+      "pix2pix": {
+        "title": "Przeglądarka ludzkiej pozy",
+        "init": "Pracownik początkowy",
+        "load": "Załaduj model",
+        "first-frame": "Wnioskowanie o pierwszej klatce",
+        "frame": "Wnioskowanie ramki"
+      },
+      "pose": {
+        "title": "Szacowanie pozycji całego ciała",
+        "load": "Obciążenie modelu",
+        "first-frame": "Wnioskowanie o pierwszej klatce",
+        "frame": "Wnioskowanie ramki"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Wygląd zewnętrzny",
+    "action": "Zmodyfikuj wygląd",
+    "random": "Zdobądź losowe zdjęcie",
+    "upload": "Prześlij własne zdjęcie"
+  },
+  "video": {
+    "errors": {
+      "starting": "Uruchamianie aparatu",
+      "turnedOff": "Aparat wyłączony",
+      "notConnected": "Kamera nie jest podłączona",
+      "permissionDenied": "Odmowa pozwolenia na aparat"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Wyłącz aparat",
+        "off": "Włącz aparat"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Wczytywanie oszacowania ułożenia..."
+  },
+  "language-selector": {
+    "label": "Zmień język lub region"
+  },
+  "settings": {
+    "detectSign": "Wykryj znak",
+    "drawVideo": "Rysuj wideo",
+    "drawPose": "Rysuj pozę",
+    "drawSignWriting": "Narysuj pisanie znakami",
+    "animatePose": "Animowana pozycja",
+    "poseViewer": {
+      "pose": "Szkielet",
+      "avatar": "Awatara",
+      "human": "Człowiek"
+    }
+  }
+}

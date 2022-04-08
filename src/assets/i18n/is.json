@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Greina tungumál",
+      "more": "Fleiri tungumál"
+    },
+    "feedback": "Senda ábendingu",
+    "input": {
+      "text": "Texti",
+      "webcam": "Vefmyndavél",
+      "upload": "Hlaða upp"
+    },
+    "swapLanguages": "Víxla tungumálum",
+    "upload": {
+      "types": "Hladdu upp .mp4, .ogv eða .webm.",
+      "browse": "Leita í tölvunni",
+      "title": "Veldu myndband"
+    },
+    "description": "Tvíátta fjöltyngt táknmálsþýðingarforrit fyrir skjáborð og farsíma",
+    "spoken-to-signed": {
+      "text": "Talað tungumál texti",
+      "actions": {
+        "download": "Sækja þýðingu",
+        "copy": "Afrita þýðing",
+        "share": "Deila þýðingu"
+      }
+    }
+  },
+  "landing": {
+    "try": "PRÓFAÐU AÐ ÞÝÐA",
+    "about": {
+      "title": "Um",
+      "hero": {
+        "title": "Þýddu á milli 40+ táknmál og talað tungumál í rauntíma.",
+        "img": "Dæmi um lifandi þýðingu á milli amerísks táknmáls og ensku"
+      }
+    },
+    "languages": {
+      "title": "Tungumál"
+    },
+    "contribute": {
+      "title": "Taka þátt"
+    },
+    "tools": {
+      "title": "Verkfæri"
+    }
+  },
+  "text-to-speech": {
+    "play": "Hlusta",
+    "cancel": "Hættu",
+    "unavailable": "Raddúttak er ekki tiltækt fyrir valið tungumál"
+  },
+  "speech-to-text": {
+    "start": "Þýða með rödd",
+    "stop": "Hættu að þýða með rödd",
+    "not-allowed": "Þarf leyfi til að nota hljóðnema",
+    "language-not-supported": "Valið tungumál er ekki stutt",
+    "browser-not-supported": "Raddinnsláttur er ekki stutt í þessum vafra"
+  },
+  "legal": {
+    "terms": {
+      "title": "Skilmálar"
+    },
+    "privacy": {
+      "title": "Persónuvernd"
+    },
+    "licenses": {
+      "title": "Hugbúnaður og leyfi"
+    }
+  },
+  "playground": {
+    "title": "Leikvöllur fyrir táknmálsvinnslu"
+  },
+  "benchmark": {
+    "title": "Viðmið",
+    "stats": {
+      "cld": {
+        "title": "Auðkenning talaðs tungumáls",
+        "import": "Innflutningseining",
+        "load": "Hlaða líkan",
+        "find": "Þekkja texta",
+        "create": "Búa til"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Verkamaður Init",
+        "load": "Hlaða líkan",
+        "first-frame": "Fyrsta ramma ályktun",
+        "frame": "Ályktun ramma"
+      },
+      "pose": {
+        "title": "Mat á fullri líkamsstöðu",
+        "load": "Fyrirmyndarhleðsla",
+        "first-frame": "Fyrsta ramma ályktun",
+        "frame": "Ályktun ramma"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Útlit",
+    "action": "Breyta útliti",
+    "random": "Fáðu handahófskennda mynd",
+    "upload": "Hladdu upp þinni eigin mynd"
+  },
+  "video": {
+    "errors": {
+      "starting": "Myndavél að byrja",
+      "turnedOff": "Slökkt á myndavélinni",
+      "notConnected": "Myndavél ekki tengd",
+      "permissionDenied": "Myndavélarleyfi hafnað"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Slökktu á myndavélinni",
+        "off": "Kveiktu á myndavélinni"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Hleður stöðumat..."
+  },
+  "language-selector": {
+    "label": "Breyta tungumáli eða svæði"
+  },
+  "settings": {
+    "detectSign": "Greina merki",
+    "drawVideo": "Teikna myndband",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Draw Sign Ritun",
+    "animatePose": "Hreyfanlegur stelling",
+    "poseViewer": {
+      "pose": "Beinagrind",
+      "avatar": "Avatar",
+      "human": "Mannlegur"
+    }
+  }
+}

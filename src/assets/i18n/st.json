@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Liphetolelo tsa Sign",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Fumana puo",
+      "more": "Lipuo Tse Eketsehileng"
+    },
+    "feedback": "Romela maikutlo a hau",
+    "input": {
+      "text": "Mongolo",
+      "webcam": "Webcam",
+      "upload": "Kenya"
+    },
+    "swapLanguages": "Fetola dipuo",
+    "upload": {
+      "types": "Aplouda a .mp4, .ogv, kapa .webm",
+      "browse": "Phenya khomphuta ya hao",
+      "title": "Khetha video"
+    },
+    "description": "Sesebelisoa sa phetolelo ea lipuo tse peli tsa lipuo tsa matsoho bakeng sa komporo ea khomphutha le ea selefouno",
+    "spoken-to-signed": {
+      "text": "Sengoloa sa Puo e Builoeng",
+      "actions": {
+        "download": "Khoasolla Phetolelo",
+        "copy": "Kopitsa Phetolelo",
+        "share": "Arolelana Phetolelo"
+      }
+    }
+  },
+  "landing": {
+    "try": "lLEKA HO FETOLELA",
+    "about": {
+      "title": "Mabapi le",
+      "hero": {
+        "title": "Fetolela lipakeng tsa 40+ lipuo tsa matsoho le tse buuoang ka nako ea sebele.",
+        "img": "Mohlala oa phetolelo e phelang lipakeng tsa Puo ea Matsoho ea Amerika le Senyesemane"
+      }
+    },
+    "languages": {
+      "title": "Lipuo"
+    },
+    "contribute": {
+      "title": "Tlatsetsa"
+    },
+    "tools": {
+      "title": "Ditshebediso"
+    }
+  },
+  "text-to-speech": {
+    "play": "Mamela",
+    "cancel": "Ema",
+    "unavailable": "Voice output ha e fumanehe bakeng sa puo e khethiloeng"
+  },
+  "speech-to-text": {
+    "start": "Toloka ka lentsoe",
+    "stop": "Emisa ho fetolela ka lentsoe",
+    "not-allowed": "U hloka tumello ea ho sebelisa maekrofounu",
+    "language-not-supported": "Puo e khethiloeng ha e tšehetsoe",
+    "browser-not-supported": "Voice input ha e sebetse ho porausara ena"
+  },
+  "legal": {
+    "terms": {
+      "title": "Melaoana"
+    },
+    "privacy": {
+      "title": "Lekunutu"
+    },
+    "licenses": {
+      "title": "Softewere le Lilaesense"
+    }
+  },
+  "playground": {
+    "title": "Lebala la ho Etsa Puo ea Matsoho"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Boitsebiso ba Puo e Builoeng",
+        "import": "Theha Mojule",
+        "load": "Laela Mohlala",
+        "find": "Lemoha Mongolo",
+        "create": "Theha"
+      },
+      "pix2pix": {
+        "title": "Motho Pose Viewer",
+        "init": "Sehlopha sa Basebetsi",
+        "load": "Laela Mohlala",
+        "first-frame": "Tlhahiso ea Pele ea Frame",
+        "frame": "Tlhaloso ea Frame"
+      },
+      "pose": {
+        "title": "Khakanyo ea Boemo ba 'mele o Feletseng",
+        "load": "Mojaro oa Mohlala",
+        "first-frame": "Tlhahiso ea Pele ea Frame",
+        "frame": "Tlhaloso ea Frame"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Ponahalo",
+    "action": "Fetola chebahalo",
+    "random": "Fumana foto e sa reroang",
+    "upload": "Kenya senepe sa hau"
+  },
+  "video": {
+    "errors": {
+      "starting": "Khamera e qala",
+      "turnedOff": "Khamera e timiloe",
+      "notConnected": "Khamera ha e ea hokahanngoa",
+      "permissionDenied": "Tumello ea khamera e hanetsoe"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Tima khamera",
+        "off": "Bulela khamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Loading Pose Estimation..."
+  },
+  "language-selector": {
+    "label": "Fetola puo kapa sebaka"
+  },
+  "settings": {
+    "detectSign": "Lemoha Letšoao",
+    "drawVideo": "Thala Video",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Thala Mongolo oa Letšoao",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Skeleton",
+      "avatar": "Avatar",
+      "human": "Motho"
+    }
+  }
+}

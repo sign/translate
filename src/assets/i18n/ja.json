@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign 翻訳",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "言語を検出する",
+      "more": "その他の言語"
+    },
+    "feedback": "フィードバックを送信",
+    "input": {
+      "text": "テキスト",
+      "webcam": "ウェブカメラ",
+      "upload": "アップロード"
+    },
+    "swapLanguages": "言語を入れ替え",
+    "upload": {
+      "types": ".mp4、.ogv、.webm のいずれかをアップロードしてください。",
+      "browse": "パソコンを参照",
+      "title": "ビデオを選択してください"
+    },
+    "description": "デスクトップとモバイル向けの双方向多言語手話翻訳アプリ",
+    "spoken-to-signed": {
+      "text": "口頭言語テキスト",
+      "actions": {
+        "download": "翻訳をダウンロード",
+        "copy": "コピー翻訳",
+        "share": "翻訳を共有する"
+      }
+    }
+  },
+  "landing": {
+    "try": "翻訳を試してみる",
+    "about": {
+      "title": "概要",
+      "hero": {
+        "title": "40以上の署名された言語と話された言語をリアルタイムで翻訳します。",
+        "img": "アメリカ手話と英語の間のライブ翻訳の例"
+      }
+    },
+    "languages": {
+      "title": "言語"
+    },
+    "contribute": {
+      "title": "改善に協力"
+    },
+    "tools": {
+      "title": "ツール"
+    }
+  },
+  "text-to-speech": {
+    "play": "音声を聞く",
+    "cancel": "止まる",
+    "unavailable": "選択した言語では音声出力を利用できません"
+  },
+  "speech-to-text": {
+    "start": "音声入力による翻訳",
+    "stop": "音声による翻訳を停止する",
+    "not-allowed": "マイクの使用許可が必要",
+    "language-not-supported": "選択した言語はサポートされていません",
+    "browser-not-supported": "このブラウザでは音声入力はサポートされていません"
+  },
+  "legal": {
+    "terms": {
+      "title": "利用規約"
+    },
+    "privacy": {
+      "title": "プライバシー"
+    },
+    "licenses": {
+      "title": "ソフトウェアとライセンス"
+    }
+  },
+  "playground": {
+    "title": "手話処理遊び場"
+  },
+  "benchmark": {
+    "title": "基準",
+    "stats": {
+      "cld": {
+        "title": "口頭言語の識別",
+        "import": "インポートモジュール",
+        "load": "荷重モデル",
+        "find": "テキストを特定する",
+        "create": "作成"
+      },
+      "pix2pix": {
+        "title": "人間のポーズビューア",
+        "init": "ワーカー初期化",
+        "load": "荷重モデル",
+        "first-frame": "最初のフレーム推論",
+        "frame": "フレーム推論"
+      },
+      "pose": {
+        "title": "全身ポーズ推定",
+        "load": "モデルのロード",
+        "first-frame": "最初のフレーム推論",
+        "frame": "フレーム推論"
+      }
+    }
+  },
+  "appearance": {
+    "title": "外観",
+    "action": "外観を変更する",
+    "random": "ランダムな写真を撮る",
+    "upload": "自分の写真をアップロードする"
+  },
+  "video": {
+    "errors": {
+      "starting": "カメラ始動",
+      "turnedOff": "カメラがオフになりました",
+      "notConnected": "カメラが接続されていません",
+      "permissionDenied": "カメラの許可が拒否されました"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "カメラの電源を切ります",
+        "off": "カメラの電源を入れます"
+      }
+    }
+  },
+  "pose": {
+    "loading": "負荷ポーズ推定..。"
+  },
+  "language-selector": {
+    "label": "言語または地域を変更する"
+  },
+  "settings": {
+    "detectSign": "サインを検出する",
+    "drawVideo": "ビデオを描く",
+    "drawPose": "ポーズを描く",
+    "drawSignWriting": "サインライティングを描く",
+    "animatePose": "ポーズをアニメートする",
+    "poseViewer": {
+      "pose": "スケルトン",
+      "avatar": "アバター",
+      "human": "人間"
+    }
+  }
+}

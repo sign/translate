@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign 翻译",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "检测语言",
+      "more": "更多语言"
+    },
+    "feedback": "发送反馈",
+    "input": {
+      "text": "文字",
+      "webcam": "摄像头",
+      "upload": "上传"
+    },
+    "swapLanguages": "交换源语言和目标语言",
+    "upload": {
+      "types": "请上传 .mp4、.ogv 或 .webm 文件。",
+      "browse": "浏览您的计算机",
+      "title": "选择一个视频"
+    },
+    "description": "适用于桌面和移动设备的双向多语言手语翻译应用程序",
+    "spoken-to-signed": {
+      "text": "口语文本",
+      "actions": {
+        "download": "下载翻译",
+        "copy": "复制翻译",
+        "share": "分享翻译"
+      }
+    }
+  },
+  "landing": {
+    "try": "试用 Google 翻译",
+    "about": {
+      "title": "简介",
+      "hero": {
+        "title": "实时翻译 40 多种手语和口语。",
+        "img": "美国手语和英语之间的实时翻译示例"
+      }
+    },
+    "languages": {
+      "title": "语言"
+    },
+    "contribute": {
+      "title": "参与"
+    },
+    "tools": {
+      "title": "工具"
+    }
+  },
+  "text-to-speech": {
+    "play": "朗读",
+    "cancel": "停止",
+    "unavailable": "所选语言无法使用语音输出"
+  },
+  "speech-to-text": {
+    "start": "语音翻译",
+    "stop": "停止语音翻译",
+    "not-allowed": "需要获得使用麦克风的权限",
+    "language-not-supported": "不支持所选语言",
+    "browser-not-supported": "此浏览器不支持语音输入"
+  },
+  "legal": {
+    "terms": {
+      "title": "条款"
+    },
+    "privacy": {
+      "title": "隐私权"
+    },
+    "licenses": {
+      "title": "软件和许可"
+    }
+  },
+  "playground": {
+    "title": "手语处理游乐场"
+  },
+  "benchmark": {
+    "title": "基准",
+    "stats": {
+      "cld": {
+        "title": "口语识别",
+        "import": "导入模块",
+        "load": "加载模型",
+        "find": "识别文本",
+        "create": "创造"
+      },
+      "pix2pix": {
+        "title": "人体姿势查看器",
+        "init": "工人初始化",
+        "load": "加载模型",
+        "first-frame": "第一帧推理",
+        "frame": "帧推断"
+      },
+      "pose": {
+        "title": "全身姿势估计",
+        "load": "模型加载",
+        "first-frame": "第一帧推理",
+        "frame": "帧推断"
+      }
+    }
+  },
+  "appearance": {
+    "title": "外貌",
+    "action": "修改外观",
+    "random": "获取随机照片",
+    "upload": "上传您自己的照片"
+  },
+  "video": {
+    "errors": {
+      "starting": "相机启动",
+      "turnedOff": "相机已关闭",
+      "notConnected": "相机未连接",
+      "permissionDenied": "相机权限被拒绝"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "关闭相机",
+        "off": "打开相机"
+      }
+    }
+  },
+  "pose": {
+    "loading": "正在加载姿势估计..."
+  },
+  "language-selector": {
+    "label": "更改语言或地区"
+  },
+  "settings": {
+    "detectSign": "检测标志",
+    "drawVideo": "画视频",
+    "drawPose": "画姿势",
+    "drawSignWriting": "画标志写作",
+    "animatePose": "动画姿势",
+    "poseViewer": {
+      "pose": "骨骼",
+      "avatar": "阿凡达",
+      "human": "人类"
+    }
+  }
+}

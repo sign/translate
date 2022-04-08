@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Ṣawari ede",
+      "more": "Awọn ede diẹ sii"
+    },
+    "feedback": "Fi ijabọ ranṣẹ",
+    "input": {
+      "text": "Àyọkà",
+      "webcam": "Kamẹra wẹẹbu",
+      "upload": "Gbee si"
+    },
+    "swapLanguages": "Yí àwọn èdè po",
+    "upload": {
+      "types": "Ṣe ìsègbàsóke .mp4, .ogv, or .webm kan",
+      "browse": "Ṣàwákiri kọ̀npútà rẹ",
+      "title": "Yan fidio kan"
+    },
+    "description": "Ìṣàfilọ́lẹ̀ ìtúmọ̀ èdè àfọwọ́sí onísọ̀rọ̀ onísọ̀rọ̀ onísọ̀nà méjì-méjì kan fún tabili àti alágbèéká",
+    "spoken-to-signed": {
+      "text": "Ọrọ Èdè Sọ",
+      "actions": {
+        "download": "Ṣe igbasilẹ Itumọ",
+        "copy": "Daakọ Itumọ",
+        "share": "Pin Itumọ"
+      }
+    }
+  },
+  "landing": {
+    "try": "GBÌYÀNJÚ TRANSLATE",
+    "about": {
+      "title": "Nípa",
+      "hero": {
+        "title": "Tumọ laarin 40+ ibuwọlu ati awọn ede ti a sọ ni akoko gidi.",
+        "img": "Apeere ti itumọ laaye laarin Ede Atẹle Amẹrika ati Gẹẹsi"
+      }
+    },
+    "languages": {
+      "title": "Àwọn èdè"
+    },
+    "contribute": {
+      "title": "Kópa"
+    },
+    "tools": {
+      "title": "Àwọn irinṣẹ́"
+    }
+  },
+  "text-to-speech": {
+    "play": "Tẹtisi",
+    "cancel": "Duro",
+    "unavailable": "Iṣẹjade ohun ko si fun ede ti o yan"
+  },
+  "speech-to-text": {
+    "start": "Túmọ̀ nípa ohùn",
+    "stop": "Duro itumọ nipasẹ ohun",
+    "not-allowed": "Nilo igbanilaaye lati lo gbohungbohun",
+    "language-not-supported": "Ede ti a yan ko ni atilẹyin",
+    "browser-not-supported": "Iṣagbewọle ohun ko ni atilẹyin lori ẹrọ aṣawakiri yii"
+  },
+  "legal": {
+    "terms": {
+      "title": "Àwọn Ìfẹnukò"
+    },
+    "privacy": {
+      "title": "Ìpamọ́"
+    },
+    "licenses": {
+      "title": "Ẹ̀yà àìrídìmú àti Àwọn Ìgbaniláyè"
+    }
+  },
+  "playground": {
+    "title": "Ibi ibi isere ti Ṣiṣe Èdè Afọwọṣe"
+  },
+  "benchmark": {
+    "title": "Aṣepari",
+    "stats": {
+      "cld": {
+        "title": "Sọ Language Idanimọ",
+        "import": "Gbe wọle Module",
+        "load": "Awoṣe fifuye",
+        "find": "Ṣe idanimọ Ọrọ",
+        "create": "Ṣẹda"
+      },
+      "pix2pix": {
+        "title": "Oluwo Iduro Eniyan",
+        "init": "Osise Init",
+        "load": "Awoṣe fifuye",
+        "first-frame": "Itọkasi fireemu akọkọ",
+        "frame": "Atọka fireemu"
+      },
+      "pose": {
+        "title": "Kikun Ara Iduro Ifoju",
+        "load": "Awoṣe fifuye",
+        "first-frame": "Itọkasi fireemu akọkọ",
+        "frame": "Atọka fireemu"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Ifarahan",
+    "action": "Ṣatunṣe irisi",
+    "random": "Gba fọto laileto",
+    "upload": "Po si ara rẹ Fọto"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamẹra bẹrẹ",
+      "turnedOff": "Kamẹra wa ni pipa",
+      "notConnected": "Kamẹra ko sopọ",
+      "permissionDenied": "Ti kọ igbanilaaye kamẹra"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Pa kamẹra",
+        "off": "Tan kamẹra"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Iṣiro Iṣiro Iduro..."
+  },
+  "language-selector": {
+    "label": "Yi ede tabi agbegbe pada"
+  },
+  "settings": {
+    "detectSign": "Wa Ami",
+    "drawVideo": "Fa Fidio",
+    "drawPose": "Fa Iduro",
+    "drawSignWriting": "Fa Ami kikọ",
+    "animatePose": "Iduro Animate",
+    "poseViewer": {
+      "pose": "Egungun",
+      "avatar": "Afata",
+      "human": "Eniyan"
+    }
+  }
+}

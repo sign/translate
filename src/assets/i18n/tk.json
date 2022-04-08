@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Переводчик",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Определить язык",
+      "more": "Has köp dil"
+    },
+    "feedback": "Отправить отзыв",
+    "input": {
+      "text": "Текст",
+      "webcam": "Web kamera",
+      "upload": "Uploadükle"
+    },
+    "swapLanguages": "Обратный перевод",
+    "upload": {
+      "types": "Загрузите файл MP4, OGV или WEBM.",
+      "browse": "Выбрать на компьютере",
+      "title": "Wideo saýlaň"
+    },
+    "description": "Iş stoly we ykjam üçin iki taraplaýyn köp dilli alamat dilini terjime etmek programmasy",
+    "spoken-to-signed": {
+      "text": "Gepleşik diliniň teksti",
+      "actions": {
+        "download": "Terjimäni göçürip al",
+        "copy": "Terjimäni göçüriň",
+        "share": "Terjimäni paýlaş"
+      }
+    }
+  },
+  "landing": {
+    "try": "TERJIME EDIP GÖRÜŇ",
+    "about": {
+      "title": "Hakynda",
+      "hero": {
+        "title": "40+ gol çekilen we gürlenýän dilleriň arasynda hakyky wagtda terjime ediň.",
+        "img": "Amerikan alamat dili bilen iňlis diliniň arasynda göni terjime edilmeginiň mysaly"
+      }
+    },
+    "languages": {
+      "title": "Diller"
+    },
+    "contribute": {
+      "title": "Goşant goş"
+    },
+    "tools": {
+      "title": "Gurallar"
+    }
+  },
+  "text-to-speech": {
+    "play": "Прослушать",
+    "cancel": "Dur",
+    "unavailable": "Saýlanan dil üçin ses çykaryjy elýeterli däl"
+  },
+  "speech-to-text": {
+    "start": "Начать перевод речи",
+    "stop": "Ses bilen terjime etmegi bes ediň",
+    "not-allowed": "Mikrofony ulanmak üçin rugsat gerek",
+    "language-not-supported": "Saýlanan dil goldanylmaýar",
+    "browser-not-supported": "Bu brauzerde ses girizmek goldanylmaýar"
+  },
+  "legal": {
+    "terms": {
+      "title": "Düzgünler"
+    },
+    "privacy": {
+      "title": "Gizlinlik"
+    },
+    "licenses": {
+      "title": "Programma üpjünçiligi we lisenziýalar"
+    }
+  },
+  "playground": {
+    "title": "Sözlük dilini gaýtadan işlemek meýdançasy"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Gepleşik dilini kesgitlemek",
+        "import": "Moduly import ediň",
+        "load": "Modelük modeli",
+        "find": "Teksti kesgitläň",
+        "create": "Dörediň"
+      },
+      "pix2pix": {
+        "title": "Adamyň pozisi",
+        "init": "Işçi Init",
+        "load": "Modelük modeli",
+        "first-frame": "Ilkinji çarçuwaly maglumat",
+        "frame": "Çarçuwaly maglumat"
+      },
+      "pose": {
+        "title": "Bedeniň doly bahasy",
+        "load": "Model ýük",
+        "first-frame": "Ilkinji çarçuwaly maglumat",
+        "frame": "Çarçuwaly maglumat"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Daş görnüşi",
+    "action": "Daş görnüşini üýtgediň",
+    "random": "Tötänleýin surat alyň",
+    "upload": "Öz suratyňyzy ýükläň"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera başlaýar",
+      "turnedOff": "Kamera öçürildi",
+      "notConnected": "Kamera birikdirilmedik",
+      "permissionDenied": "Kameranyň rugsady ret edildi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamerany öçüriň",
+        "off": "Kamerany açyň"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Pozanyň bahasyny ýüklemek ..."
+  },
+  "language-selector": {
+    "label": "Dili ýa-da sebiti üýtgediň"
+  },
+  "settings": {
+    "detectSign": "Belgini kesgitläň",
+    "drawVideo": "Wideo çyzyň",
+    "drawPose": "Surat çekiň",
+    "drawSignWriting": "Bellik ýazgyny çyzyň",
+    "animatePose": "Animasiýa pozasy",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Awatar",
+      "human": "Adam"
+    }
+  }
+}

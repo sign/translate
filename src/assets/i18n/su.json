@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Tarjamah",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Détéksi basa",
+      "more": "Langkung Basa"
+    },
+    "feedback": "Kintun dulang",
+    "input": {
+      "text": "Téks",
+      "webcam": "Kaméra wéb",
+      "upload": "unggah"
+    },
+    "swapLanguages": "Robah basa",
+    "upload": {
+      "types": "Punggah .mp4, .ogv, atanapi .webm.",
+      "browse": "Kotéktak komputer anjeun",
+      "title": "Pilih pidéo"
+    },
+    "description": "Aplikasi tarjamahan basa isyarat multi-arah dua arah pikeun desktop sareng mobile",
+    "spoken-to-signed": {
+      "text": "Téks Basa Sunda",
+      "actions": {
+        "download": "Unduh Tarjamahan",
+        "copy": "Salin Tarjamahan",
+        "share": "Bagikeun Tarjamahan"
+      }
+    }
+  },
+  "landing": {
+    "try": "COBA TARJAMAHKEUN",
+    "about": {
+      "title": "Perkawis",
+      "hero": {
+        "title": "Tarjamahkeun antara 40+ basa anu ditandatanganan sareng diucapkeun sacara real-time.",
+        "img": "Conto tarjamahan langsung antara Basa Isyarat Amérika sareng Inggris"
+      }
+    },
+    "languages": {
+      "title": "Basa"
+    },
+    "contribute": {
+      "title": "Maparin"
+    },
+    "tools": {
+      "title": "Pakakas"
+    }
+  },
+  "text-to-speech": {
+    "play": "Dangukeun",
+    "cancel": "Eureun",
+    "unavailable": "Kaluaran sora teu sadia pikeun basa nu dipilih"
+  },
+  "speech-to-text": {
+    "start": "Tarjamahkeun ku sora",
+    "stop": "Eureun tarjamahan ku sora",
+    "not-allowed": "Peryogi idin pikeun nganggo mikropon",
+    "language-not-supported": "Basa nu dipilih teu dirojong",
+    "browser-not-supported": "Input sora teu dirojong dina browser ieu"
+  },
+  "legal": {
+    "terms": {
+      "title": "Sarat"
+    },
+    "privacy": {
+      "title": "Pribadi"
+    },
+    "licenses": {
+      "title": "Software jeung Lisénsi"
+    }
+  },
+  "playground": {
+    "title": "Tanda kaulinan Processing Basa"
+  },
+  "benchmark": {
+    "title": "Patokan",
+    "stats": {
+      "cld": {
+        "title": "Idéntifikasi basa lisan",
+        "import": "Modul impor",
+        "load": "Modél beban",
+        "find": "Identipikasi téks",
+        "create": "Nyiptakeun"
+      },
+      "pix2pix": {
+        "title": "Manusa Pose Viewer",
+        "init": "Pagawe Init",
+        "load": "Modél beban",
+        "first-frame": "Inferensi pigura munggaran",
+        "frame": "Bingkai Inferensi"
+      },
+      "pose": {
+        "title": "Estimasi Pose Awak pinuh",
+        "load": "Modél Beban",
+        "first-frame": "Inferensi pigura munggaran",
+        "frame": "Bingkai Inferensi"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Penampilan",
+    "action": "Ngarobah penampilan",
+    "random": "Meunang poto acak",
+    "upload": "Unggah poto anjeun nyalira"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kaméra ngamimitian",
+      "turnedOff": "Kaméra dipareuman",
+      "notConnected": "Kaméra teu nyambung",
+      "permissionDenied": "Idin kaméra ditolak"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Pareuman kaméra",
+        "off": "Hurungkeun kaméra"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ngamuat Estimasi Pose..."
+  },
+  "language-selector": {
+    "label": "Ganti basa atanapi daérah"
+  },
+  "settings": {
+    "detectSign": "Ngadeteksi Tanda",
+    "drawVideo": "Ngagambar Video",
+    "drawPose": "Ngagambar Pose",
+    "drawSignWriting": "Ngagambar Tulisan Tanda",
+    "animatePose": "Ngahirupkeun Pose",
+    "poseViewer": {
+      "pose": "Rorongkong",
+      "avatar": "Avatar",
+      "human": "Manusa"
+    }
+  }
+}

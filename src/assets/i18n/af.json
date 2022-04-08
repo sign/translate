@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Vertaal",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Bespeur taal",
+      "more": "Meer tale"
+    },
+    "feedback": "Stuur terugvoer",
+    "input": {
+      "text": "Teks",
+      "webcam": "Webkamera",
+      "upload": "Laai op"
+    },
+    "swapLanguages": "Ruil tale om",
+    "upload": {
+      "types": "Laai &#39;n .mp4, .ogv of .webm op.",
+      "browse": "Blaai deur jou rekenaar",
+      "title": "Kies 'n video"
+    },
+    "description": "'n Tweerigting veeltalige gebaretaalvertalingstoepassing vir rekenaars en selfone",
+    "spoken-to-signed": {
+      "text": "Gesproke Taalteks",
+      "actions": {
+        "download": "Laai vertaling af",
+        "copy": "Kopieer vertaling",
+        "share": "Deel vertaling"
+      }
+    }
+  },
+  "landing": {
+    "try": "PROBEER GOOGLE VERTAAL",
+    "about": {
+      "title": "Meer oor",
+      "hero": {
+        "title": "Vertaal tussen 40+ gebare- en gesproke tale intyds.",
+        "img": "Voorbeeld van lewendige vertaling tussen Amerikaanse Gebaretaal en Engels"
+      }
+    },
+    "languages": {
+      "title": "Tale"
+    },
+    "contribute": {
+      "title": "Dra by"
+    },
+    "tools": {
+      "title": "Nutsgoed"
+    }
+  },
+  "text-to-speech": {
+    "play": "Luister",
+    "cancel": "Stop",
+    "unavailable": "Stemuitvoer is nie vir die geselekteerde taal beskikbaar nie"
+  },
+  "speech-to-text": {
+    "start": "Vertaal volgens stem",
+    "stop": "Stop vertaling per stem",
+    "not-allowed": "Benodig toestemming om mikrofoon te gebruik",
+    "language-not-supported": "Geselekteerde taal word nie ondersteun nie",
+    "browser-not-supported": "Steminvoer word nie op hierdie blaaier ondersteun nie"
+  },
+  "legal": {
+    "terms": {
+      "title": "Bepalings"
+    },
+    "privacy": {
+      "title": "Privaatheid"
+    },
+    "licenses": {
+      "title": "Sagteware en lisensies"
+    }
+  },
+  "playground": {
+    "title": "Gebaretaalverwerking speelgrond"
+  },
+  "benchmark": {
+    "title": "Maatstaf",
+    "stats": {
+      "cld": {
+        "title": "Gesproke Taal Identifikasie",
+        "import": "Invoer module",
+        "load": "Laai model",
+        "find": "Identifiseer teks",
+        "create": "Skep"
+      },
+      "pix2pix": {
+        "title": "Menslike pose-kyker",
+        "init": "Werker Init",
+        "load": "Laai model",
+        "first-frame": "Eerste raamafleiding",
+        "frame": "Raamafleiding"
+      },
+      "pose": {
+        "title": "Volle liggaamshouding skatting",
+        "load": "Modellading",
+        "first-frame": "Eerste raamafleiding",
+        "frame": "Raamafleiding"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Voorkoms",
+    "action": "Verander voorkoms",
+    "random": "Kry 'n ewekansige foto",
+    "upload": "Laai jou eie foto op"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera begin",
+      "turnedOff": "Kamera is afgeskakel",
+      "notConnected": "Kamera nie gekoppel nie",
+      "permissionDenied": "Kameratoestemming geweier"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Skakel kamera af",
+        "off": "Skakel kamera aan"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Laai tans houdingskatting..."
+  },
+  "language-selector": {
+    "label": "Verander taal of streek"
+  },
+  "settings": {
+    "detectSign": "Bespeur teken",
+    "drawVideo": "Teken video",
+    "drawPose": "Teken Posisie",
+    "drawSignWriting": "Teken Teken Skryf",
+    "animatePose": "Geanimeerde houding",
+    "poseViewer": {
+      "pose": "Geraamte",
+      "avatar": "Avatar",
+      "human": "Mens"
+    }
+  }
+}

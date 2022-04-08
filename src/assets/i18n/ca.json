@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Maj"
+  },
+  "translate": {
+    "title": "Traductor de Sign",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Detecta l’idioma",
+      "more": "Més Idiomes"
+    },
+    "feedback": "Envia suggeriments",
+    "input": {
+      "text": "Text",
+      "webcam": "Càmera web",
+      "upload": "Carrega"
+    },
+    "swapLanguages": "Intercanvia els idiomes",
+    "upload": {
+      "types": "Penja un .mp4, .ogv o .webm.",
+      "browse": "Cerca a l&#39;ordinador",
+      "title": "Tria un vídeo"
+    },
+    "description": "Una aplicació de traducció multilingüe bidireccional en llengua de signes per a ordinadors i mòbils",
+    "spoken-to-signed": {
+      "text": "Text en llengua parlada",
+      "actions": {
+        "download": "Descarrega Traducció",
+        "copy": "Copia Traducció",
+        "share": "Comparteix la traducció"
+      }
+    }
+  },
+  "landing": {
+    "try": "PROVEU EL TRADUCTOR",
+    "about": {
+      "title": "Funcionament",
+      "hero": {
+        "title": "Tradueix entre més de 40 idiomes parlats i de signes en temps real.",
+        "img": "Exemple de traducció en directe entre la llengua de signes americana i l'anglès"
+      }
+    },
+    "languages": {
+      "title": "Idiomes"
+    },
+    "contribute": {
+      "title": "Contribució"
+    },
+    "tools": {
+      "title": "Eines"
+    }
+  },
+  "text-to-speech": {
+    "play": "Escolta",
+    "cancel": "Atura",
+    "unavailable": "La sortida de veu no està disponible per a l'idioma seleccionat"
+  },
+  "speech-to-text": {
+    "start": "Tradueix per veu",
+    "stop": "Atura la traducció per veu",
+    "not-allowed": "Necessites permís per utilitzar el micròfon",
+    "language-not-supported": "L'idioma seleccionat no és compatible",
+    "browser-not-supported": "L'entrada de veu no és compatible amb aquest navegador"
+  },
+  "legal": {
+    "terms": {
+      "title": "Condicions"
+    },
+    "privacy": {
+      "title": "Privadesa"
+    },
+    "licenses": {
+      "title": "Programari i llicències"
+    }
+  },
+  "playground": {
+    "title": "Pati de processament de la llengua de signes"
+  },
+  "benchmark": {
+    "title": "Referent",
+    "stats": {
+      "cld": {
+        "title": "Identificació de la llengua parlada",
+        "import": "Mòdul d'importació",
+        "load": "Model de càrrega",
+        "find": "Identificar el text",
+        "create": "Crear"
+      },
+      "pix2pix": {
+        "title": "Visor de posicions humanes",
+        "init": "Treballador Init",
+        "load": "Model de càrrega",
+        "first-frame": "Inferència del primer fotograma",
+        "frame": "Inferència de marc"
+      },
+      "pose": {
+        "title": "Estimació de la postura del cos sencer",
+        "load": "Càrrega del model",
+        "first-frame": "Inferència del primer fotograma",
+        "frame": "Inferència de marc"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Aparença",
+    "action": "Modificar l'aparença",
+    "random": "Aconsegueix una foto aleatòria",
+    "upload": "Puja la teva pròpia foto"
+  },
+  "video": {
+    "errors": {
+      "starting": "S'està iniciant la càmera",
+      "turnedOff": "Càmera apagada",
+      "notConnected": "La càmera no està connectada",
+      "permissionDenied": "S'ha denegat el permís de la càmera"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Apagueu la càmera",
+        "off": "Enceneu la càmera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "S'està carregant l'estimació de la posició..."
+  },
+  "language-selector": {
+    "label": "Canvia l'idioma o la regió"
+  },
+  "settings": {
+    "detectSign": "Senyal de detecció",
+    "drawVideo": "Vídeo de dibuix",
+    "drawPose": "Dibuixa la postura",
+    "drawSignWriting": "Dibuixa l'escriptura de signes",
+    "animatePose": "Posa animada",
+    "poseViewer": {
+      "pose": "Esquelet",
+      "avatar": "Avatar",
+      "human": "Humans"
+    }
+  }
+}

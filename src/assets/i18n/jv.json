@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Terjemahan",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Deteksi basa",
+      "more": "Liyane Basa"
+    },
+    "feedback": "Kirim umpan balik",
+    "input": {
+      "text": "Teks",
+      "webcam": "Webcam",
+      "upload": "Upload"
+    },
+    "swapLanguages": "Ijolake basa",
+    "upload": {
+      "types": "Unggah .mp4, .ogv, utawa .webm.",
+      "browse": "Tlusuri komputer",
+      "title": "Pilih video"
+    },
+    "description": "Aplikasi terjemahan basa isyarat multi-arah bi-directional kanggo desktop lan seluler",
+    "spoken-to-signed": {
+      "text": "Teks Basa Jawi",
+      "actions": {
+        "download": "Download Terjemahan",
+        "copy": "Salin Terjemahan",
+        "share": "Nuduhake Terjemahan"
+      }
+    }
+  },
+  "landing": {
+    "try": "COBA TERJEMAHAN",
+    "about": {
+      "title": "Babagan",
+      "hero": {
+        "title": "Terjemahake antarane 40+ basa sing ditandatangani lan diucapake kanthi wektu nyata.",
+        "img": "Conto terjemahan langsung antarane American Sign Language lan Inggris"
+      }
+    },
+    "languages": {
+      "title": "Basa-basa"
+    },
+    "contribute": {
+      "title": "Kontribusi"
+    },
+    "tools": {
+      "title": "Piranti"
+    }
+  },
+  "text-to-speech": {
+    "play": "Rungokna",
+    "cancel": "mandeg",
+    "unavailable": "Output swara ora kasedhiya kanggo basa sing dipilih"
+  },
+  "speech-to-text": {
+    "start": "Terjemahake nganggo swara",
+    "stop": "Mungkasi terjemahan kanthi swara",
+    "not-allowed": "Perlu ijin kanggo nggunakake mikropon",
+    "language-not-supported": "Basa sing dipilih ora didhukung",
+    "browser-not-supported": "Input swara ora didhukung ing browser iki"
+  },
+  "legal": {
+    "terms": {
+      "title": "Katemtuan"
+    },
+    "privacy": {
+      "title": "Privasi"
+    },
+    "licenses": {
+      "title": "Perangkat Lunak lan Lisensi"
+    }
+  },
+  "playground": {
+    "title": "Papan Dolanan Pangolahan Basa Isyarat"
+  },
+  "benchmark": {
+    "title": "pathokan",
+    "stats": {
+      "cld": {
+        "title": "Identifikasi Basa Wicara",
+        "import": "Modul Import",
+        "load": "Model Muatan",
+        "find": "Ngenali Teks",
+        "create": "Nggawe"
+      },
+      "pix2pix": {
+        "title": "Manungsa Pose Viewer",
+        "init": "Buruh Iki",
+        "load": "Model Muatan",
+        "first-frame": "First Frame Inferensi",
+        "frame": "Rangka Inferensi"
+      },
+      "pose": {
+        "title": "Estimasi Pose Badan Lengkap",
+        "load": "Model Beban",
+        "first-frame": "First Frame Inferensi",
+        "frame": "Rangka Inferensi"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Penampilan",
+    "action": "Ngowahi tampilan",
+    "random": "Njupuk foto acak",
+    "upload": "Upload foto sampeyan dhewe"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera diwiwiti",
+      "turnedOff": "Kamera dipateni",
+      "notConnected": "Kamera ora nyambung",
+      "permissionDenied": "Idin kamera ditolak"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Pateni kamera",
+        "off": "Nguripake kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Memuat Estimasi Pose..."
+  },
+  "language-selector": {
+    "label": "Ganti basa utawa wilayah"
+  },
+  "settings": {
+    "detectSign": "Ndeteksi Tandha",
+    "drawVideo": "Nggambar Video",
+    "drawPose": "Nggambar Pose",
+    "drawSignWriting": "Draw Sign Nulis",
+    "animatePose": "Animasi Pose",
+    "poseViewer": {
+      "pose": "Balung",
+      "avatar": "Avatar",
+      "human": "Manungsa"
+    }
+  }
+}

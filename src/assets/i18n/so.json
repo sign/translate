@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Garo luuqada",
+      "more": "Luuqado badan"
+    },
+    "feedback": "Soo-dir ra&#39;yi-celin",
+    "input": {
+      "text": "Qoraal",
+      "webcam": "Webcam",
+      "upload": "Soo rar"
+    },
+    "swapLanguages": "Kala beddel luqaadaha",
+    "upload": {
+      "types": "Soo geli dhokumenti, .ogv, ama .webm",
+      "browse": "Dhex baadh kombuyuutarkaaga",
+      "title": "Dooro muuqaal"
+    },
+    "description": "App-ka tarjumaadda luqadaha dhegoolaha ee laba-jiho ah oo loogu talagalay miiska iyo mobilada",
+    "spoken-to-signed": {
+      "text": "Qoraalka Luuqadda Lagu Hadlo",
+      "actions": {
+        "download": "Soo deji Tarjumaadda",
+        "copy": "Koobi Turjumaada",
+        "share": "La wadaag Turjumaada"
+      }
+    }
+  },
+  "landing": {
+    "try": "ISKU DAY TARJUMIN",
+    "about": {
+      "title": "Ku saabsan",
+      "hero": {
+        "title": "Turjun inta u dhaxaysa 40+ luqadaha saxeexan iyo kuwa lagu hadlo wakhtiga dhabta ah.",
+        "img": "Tusaalaha turjumaada tooska ah ee u dhexeeya Luqadda Calaamadaha Ameerika iyo Ingiriisiga"
+      }
+    },
+    "languages": {
+      "title": "Luqadaha"
+    },
+    "contribute": {
+      "title": "Kudeeq"
+    },
+    "tools": {
+      "title": "Qalabka"
+    }
+  },
+  "text-to-speech": {
+    "play": "Dhageyso",
+    "cancel": "Jooji",
+    "unavailable": "Soo saarista codka looma hayo luqadda la doortay"
+  },
+  "speech-to-text": {
+    "start": "Ku tarjun cod",
+    "stop": "Jooji tarjumaada cod ahaan",
+    "not-allowed": "U baahan ogolaansho si aad u isticmaasho makarafoon",
+    "language-not-supported": "Luuqadda la doortay lama taageero",
+    "browser-not-supported": "Cod galinta lama taageero browserkan"
+  },
+  "legal": {
+    "terms": {
+      "title": "Shuruudaha"
+    },
+    "privacy": {
+      "title": "gaarka ah"
+    },
+    "licenses": {
+      "title": "Sooofti weerka iyo Ruqsahaha"
+    }
+  },
+  "playground": {
+    "title": "Garoonka Kubadda Cagta ee ka Hagaajinta Luqadda Calaamadaha"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Aqoonsiga Luuqadda lagu hadlo",
+        "import": "Soo dejinta Module",
+        "load": "Modelka Xamuulka",
+        "find": "Aqoonso Qoraalka",
+        "create": "Abuur"
+      },
+      "pix2pix": {
+        "title": "Daawashada Muuqaalka Aadanaha",
+        "init": "Shaqaale Init",
+        "load": "Modelka Xamuulka",
+        "first-frame": "Farqiga Qaabka Koowaad",
+        "frame": "Faragelinta Frame"
+      },
+      "pose": {
+        "title": "Qiyaasta Meesha Jirka oo Buuxa",
+        "load": "Xamuulka Model",
+        "first-frame": "Farqiga Qaabka Koowaad",
+        "frame": "Faragelinta Frame"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Muuqashada",
+    "action": "Wax ka beddel muuqaalka",
+    "random": "Hel sawir aan toos ahayn",
+    "upload": "Soo rar sawirkaaga"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamarada bilaabma",
+      "turnedOff": "Kamarada ayaa dansan",
+      "notConnected": "Kamarada kuma xidhna",
+      "permissionDenied": "Oggolaanshaha kamarada waa la diiday"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Dami kamarada",
+        "off": "Daar kamarada"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Soodejinaya Qiyaasta Meesha..."
+  },
+  "language-selector": {
+    "label": "Beddel luqadda ama gobolka"
+  },
+  "settings": {
+    "detectSign": "Calaamadee calaamad",
+    "drawVideo": "Sawir Video",
+    "drawPose": "Sawir Sawir",
+    "drawSignWriting": "Sawir Qoraalka Saxeexa",
+    "animatePose": "Joogsiga noole",
+    "poseViewer": {
+      "pose": "Qalfoofka",
+      "avatar": "Avatar",
+      "human": "Aadane"
+    }
+  }
+}
