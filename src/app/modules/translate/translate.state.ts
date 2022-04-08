@@ -7,6 +7,8 @@ import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/vi
 import {Observable, of} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
+import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
+import {font} from '@sutton-signwriting/font-ttf/index.js';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -146,11 +148,18 @@ export class TranslateState implements NgxsOnInit {
                              patchState,
                              dispatch
                            }: StateContext<TranslateStateModel>, {text}: SetSignWritingText): Promise<void> {
-    patchState({signWriting: text});
+    // signNormalize only works after the SignWriting font is loaded
+    font.cssLoaded(() => {
+      const signWriting: string[] = text.map(sign => {
+        const box = sign.startsWith('M') ? sign : 'M500x500' + sign;
+        return signNormalize(box);
+      });
+      patchState({signWriting});
+    });
   }
 
   @Action(ChangeTranslation, {cancelUncompleted: true})
-  changeTranslation({getState, patchState}: StateContext<TranslateStateModel>): Observable<any> {
+  changeTranslation({getState, patchState, dispatch}: StateContext<TranslateStateModel>): Observable<any> {
     const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, spokenLanguageText} = getState();
     if (spokenToSigned) {
       patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
@@ -162,7 +171,7 @@ export class TranslateState implements NgxsOnInit {
         const path = this.service.translateSpokenToSigned(spokenLanguageText, actualSpokenLanguage, signedLanguage);
         patchState({signedLanguagePose: path});
         return this.service.translateSpokenToSignWriting(spokenLanguageText, actualSpokenLanguage, signedLanguage).pipe(
-          tap(signWriting => patchState({signWriting}))
+          tap(signWriting => dispatch(new SetSignWritingText(signWriting)))
         );
       }
     }
