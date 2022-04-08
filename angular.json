@@ -39,6 +39,11 @@
                 "input": "./node_modules/@sutton-signwriting/font-ttf/font",
                 "output": "./assets/fonts/signwriting/"
               },
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/@sign/i18n/build/",
+                "output": "./assets/i18n/"
+              },
               "src/manifest.webmanifest"
             ],
             "styles": [

@@ -27,7 +27,7 @@
           <div id="language-selector">
             <app-language-selector [flags]="true" [hasLanguageDetection]="false"
                                    [languages]="translation.signedLanguages"
-                                   translationKey="translate.languages.signed"
+                                   translationKey="countries"
                                    (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
             <!-- disabled -->
@@ -37,7 +37,7 @@
             </button>
 
             <app-language-selector [hasLanguageDetection]="spokenToSigned" [languages]="translation.spokenLanguages"
-                                   translationKey="translate.languages.spoken"
+                                   translationKey="languages"
                                    (languageChange)="setSpokenLanguage($event)"></app-language-selector>
           </div>
 
