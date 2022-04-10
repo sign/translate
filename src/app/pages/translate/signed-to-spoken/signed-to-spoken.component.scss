@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@import "../../../../theme/variables";
+@import '../../../../theme/variables';
 
 :host {
   display: flex;
@@ -8,11 +8,11 @@
 .interface {
   display: grid;
   width: 100%;
-  grid-template-areas: "signed spoken signwriting";
+  grid-template-areas: 'signed spoken signwriting';
   grid-template-columns: 50% 100px auto;
 
   @media #{$mat-lt-sm} {
-    grid-template-areas: "signed signed" "spoken signwriting";
+    grid-template-areas: 'signed signed' 'spoken signwriting';
     grid-template-columns: 100px auto;
   }
 
@@ -48,7 +48,6 @@
     flex-grow: 1;
   }
 }
-
 
 app-upload {
   text-align: center;

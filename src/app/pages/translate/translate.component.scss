@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@import "../../../theme/variables";
+@import '../../../theme/variables';
 
 :host {
   min-height: 100vh;
@@ -29,9 +29,8 @@ mat-toolbar {
   }
 }
 
-
 #container {
-  transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 
   @media #{$mat-gt-md} {
     padding: 0 48px;
@@ -39,10 +38,10 @@ mat-toolbar {
 
   #input-mode-group {
     height: 68px;
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
     align-items: center;
     display: flex;
-    gap: .5em;
+    gap: 0.5em;
 
     @media #{$mat-lt-lg} {
       padding: 0 12px;
@@ -56,7 +55,7 @@ mat-toolbar {
   #translation-card {
     background-color: white;
     width: 100%;
-    transition: .6s width cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
 
     @media (prefers-color-scheme: dark) {
@@ -91,7 +90,6 @@ mat-toolbar {
   }
 }
 
-
 #feedback {
   float: right;
   color: map-get(mat.$light-theme-foreground-palette, text);
@@ -110,7 +108,7 @@ mat-toolbar {
   }
 }
 
-::ng-deep html[dir="rtl"] #feedback {
+::ng-deep html[dir='rtl'] #feedback {
   float: left;
 }
 

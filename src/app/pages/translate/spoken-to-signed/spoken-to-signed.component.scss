@@ -1,14 +1,14 @@
 @use '@angular/material' as mat;
-@import "../../../../theme/variables";
+@import '../../../../theme/variables';
 
 :host {
   display: grid;
   width: 100%;
-  grid-template-areas: "spoken signwriting signed";
+  grid-template-areas: 'spoken signwriting signed';
   grid-template-columns: auto 100px 50%;
 
   @media #{$mat-lt-sm} {
-    grid-template-areas: "spoken signwriting" "signed signed";
+    grid-template-areas: 'spoken signwriting' 'signed signed';
     grid-template-columns: auto 100px;
 
     .sign-language {
@@ -76,7 +76,7 @@ app-sign-writing {
 }
 
 // Numbers should always be left-to-right
-::ng-deep html[dir="rtl"] #char-count {
+::ng-deep html[dir='rtl'] #char-count {
   direction: ltr;
   text-align: start !important;
 }
