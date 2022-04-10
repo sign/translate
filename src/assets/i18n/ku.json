@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Dili algıla",
       "more": "Zêdetir Ziman"
     },

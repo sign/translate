@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Kääntäjä",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Tunnista kieli",
       "more": "Lisää kieliä"
     },

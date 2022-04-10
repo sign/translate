@@ -6,7 +6,7 @@
   "translate": {
     "title": "ترجمة Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "التعرّف التلقائي على اللغة",
       "more": "المزيد من اللغات"
     },

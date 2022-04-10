@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Dịch",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Phát hiện ngôn ngữ",
       "more": "Nhiều ngôn ngữ hơn"
     },

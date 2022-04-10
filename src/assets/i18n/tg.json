@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Тарҷумон",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Муайян кардани забон",
       "more": "Забонҳои бештар"
     },

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Преводач",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Разпознаване на езика",
       "more": "Още езици"
     },

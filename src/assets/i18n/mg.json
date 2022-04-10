@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Dikanteny",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Haminany fiteny",
       "more": "Fiteny bebe kokoa"
     },

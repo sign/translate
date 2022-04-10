@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Tarjamah",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Détéksi basa",
       "more": "Langkung Basa"
     },

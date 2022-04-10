@@ -6,7 +6,7 @@
   "translate": {
     "title": "Liphetolelo tsa Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Fumana puo",
       "more": "Lipuo Tse Eketsehileng"
     },

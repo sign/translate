@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Prevodilac",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Odredi jezik",
       "more": "Više jezika"
     },

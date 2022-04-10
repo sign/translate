@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Vertaal",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Bespeur taal",
       "more": "Meer tale"
     },

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign अनुवादक",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "भाषा पत्ता लगाउनुहोस्",
       "more": "थप भाषाहरू"
     },

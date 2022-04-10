@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Fordító",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Nyelvfelismerés",
       "more": "További nyelvek"
     },

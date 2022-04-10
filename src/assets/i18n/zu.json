@@ -6,7 +6,7 @@
   "translate": {
     "title": "I-Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Hlonza ulimi",
       "more": "Izilimi Eziningi"
     },

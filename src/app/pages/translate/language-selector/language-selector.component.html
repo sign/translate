@@ -6,8 +6,7 @@
       <ng-container *ngIf="detectedLanguage$ | async as detectedLanguage; else detectLanguage">
         <mat-tab>
           <ng-template mat-tab-label>
-            <!-- TODO Use a lightweight message formatter https://github.com/ngneat/transloco/issues/535 -->
-            {{t('detected').replace('{lang}', translationKey + '.' + detectedLanguage | transloco)}}
+            {{t('detected', {lang: translationKey + '.' + detectedLanguage | transloco})}}
           </ng-template>
         </mat-tab>
       </ng-container>
@@ -27,8 +26,8 @@
   <ng-container *ngIf="hasLanguageDetection && detectedLanguage$ | async as detectedLanguage; else detectLanguage">
     <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
       <flag-icon *ngIf="flags" [country]="detectLanguage" [squared]="true"></flag-icon>
-      <!-- TODO Use a lightweight message formatter https://github.com/ngneat/transloco/issues/535 -->
-      {{t('detected').replace('{lang}', translationKey + '.' + detectedLanguage | transloco)}}    </button>
+      {{t('detected', {lang: translationKey + '.' + detectedLanguage | transloco})}}
+    </button>
   </ng-container>
   <ng-template #detectLanguage>
     <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>

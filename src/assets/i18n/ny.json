@@ -6,7 +6,7 @@
   "translate": {
     "title": "Zomasulira za Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Fufuzani chilankhulo",
       "more": "Zinenero Zambiri"
     },

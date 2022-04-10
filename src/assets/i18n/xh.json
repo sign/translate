@@ -6,7 +6,7 @@
   "translate": {
     "title": "IToliki kaSign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Fumana ulwimi",
       "more": "Iilwimi ezingakumbi"
     },
