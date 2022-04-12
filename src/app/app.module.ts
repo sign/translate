@@ -32,6 +32,12 @@ import {ViewerSelectorComponent} from './pages/translate/spoken-to-signed/viewer
 import {SkeletonPoseViewerComponent} from './pages/translate/pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 import {SpeechToTextComponent} from './components/speech-to-text/speech-to-text.component';
 import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
+import {AppGoogleAnalyticsModule} from './core/modules/google-analytics/google-analytics.module';
+import {TranslateInputButtonComponent} from './pages/translate/input/button/button.component';
+import {AppearanceComponent} from './pages/translate/appearance/appearance.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
+import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
 
 @NgModule({
   declarations: [
@@ -52,9 +58,14 @@ import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-p
     AvatarPoseViewerComponent,
     SkeletonPoseViewerComponent,
     SpeechToTextComponent,
+    TranslateInputButtonComponent,
+    AppearanceComponent,
+    BenchmarkComponent,
+    BenchmarkItemComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     AppSharedModule,
@@ -66,6 +77,7 @@ import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-p
     Pix2PixModule,
     TranslateModule,
     NgxFlagIconCssModule,
+    AppGoogleAnalyticsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable

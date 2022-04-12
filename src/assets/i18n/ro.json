@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Traducere",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Selectați limba",
+      "more": "Mai multe limbi"
+    },
+    "feedback": "Trimiteți feedback",
+    "input": {
+      "text": "Mesaj text",
+      "webcam": "Cameră web",
+      "upload": "Încărcați"
+    },
+    "swapLanguages": "Comutați între limbi",
+    "upload": {
+      "types": "Încărcați un fișier .mp4, .ogv sau .webm.",
+      "browse": "Răsfoiți pe computer",
+      "title": "Alegeți un videoclip"
+    },
+    "description": "O aplicație de traducere bidirecțională în limbajul semnelor multilingv pentru desktop și mobil",
+    "spoken-to-signed": {
+      "text": "Text în limba vorbită",
+      "actions": {
+        "download": "Descărcați traducerea",
+        "copy": "Copiați traducerea",
+        "share": "Partajați traducerea"
+      }
+    }
+  },
+  "landing": {
+    "try": "ÎNCERCAȚI TRADUCERE",
+    "about": {
+      "title": "Despre",
+      "hero": {
+        "title": "Traduceți între peste 40 de limbi semnate și vorbite în timp real.",
+        "img": "Exemplu de traducere live între limbajul semnelor american și engleză"
+      }
+    },
+    "languages": {
+      "title": "Limbi"
+    },
+    "contribute": {
+      "title": "Contribuiți"
+    },
+    "tools": {
+      "title": "Instrumente"
+    }
+  },
+  "text-to-speech": {
+    "play": "Ascultați",
+    "cancel": "Stop",
+    "unavailable": "Ieșirea vocală nu este disponibilă pentru limba selectată"
+  },
+  "speech-to-text": {
+    "start": "Traduceți după introducerea vocală",
+    "stop": "Opriți traducerea prin voce",
+    "not-allowed": "Aveți nevoie de permisiunea de a folosi microfonul",
+    "language-not-supported": "Limba selectată nu este acceptată",
+    "browser-not-supported": "Introducerea vocală nu este acceptată de acest browser"
+  },
+  "legal": {
+    "terms": {
+      "title": "Termeni"
+    },
+    "privacy": {
+      "title": "Confidențialitate"
+    },
+    "licenses": {
+      "title": "Software și licențe"
+    }
+  },
+  "playground": {
+    "title": "Loc de joacă pentru procesarea limbajului semnelor"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identificarea limbajului vorbit",
+        "import": "Modul de import",
+        "load": "Încărcare model",
+        "find": "Identificați textul",
+        "create": "Crea"
+      },
+      "pix2pix": {
+        "title": "Vizualizator de poziție umană",
+        "init": "Muncitor Init",
+        "load": "Încărcare model",
+        "first-frame": "Inferența primului cadru",
+        "frame": "Inferență de cadru"
+      },
+      "pose": {
+        "title": "Estimarea poziției întregului corp",
+        "load": "Încărcare model",
+        "first-frame": "Inferența primului cadru",
+        "frame": "Inferență de cadru"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Aspect",
+    "action": "Modificați aspectul",
+    "random": "Obțineți o fotografie aleatorie",
+    "upload": "Încărcați propria fotografie"
+  },
+  "video": {
+    "errors": {
+      "starting": "Camera pornește",
+      "turnedOff": "Camera oprită",
+      "notConnected": "Camera nu este conectată",
+      "permissionDenied": "Permisiunea camerei a fost refuzată"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Opriți camera",
+        "off": "Aprinde camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Se încarcă estimarea pozitiei..."
+  },
+  "language-selector": {
+    "label": "Schimbați limba sau regiunea"
+  },
+  "settings": {
+    "detectSign": "Detectează semnul",
+    "drawVideo": "Desenați video",
+    "drawPose": "Desenează Poza",
+    "drawSignWriting": "Desenați scrierea semnelor",
+    "animatePose": "Poza animată",
+    "poseViewer": {
+      "pose": "Schelet",
+      "avatar": "Avatar",
+      "human": "Uman"
+    }
+  }
+}

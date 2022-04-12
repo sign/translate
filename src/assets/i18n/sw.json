@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Tafsiri",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Tambua lugha",
+      "more": "Lugha Zaidi"
+    },
+    "feedback": "Tuma maoni",
+    "input": {
+      "text": "Matini",
+      "webcam": "Kamera ya wavuti",
+      "upload": "Pakia"
+    },
+    "swapLanguages": "Badilisha lugha",
+    "upload": {
+      "types": "Pakia faili yenye muundo wa .mp4, .ogv au .webm.",
+      "browse": "Vinjari kompyuta yako",
+      "title": "Chagua video"
+    },
+    "description": "Programu ya tafsiri ya lugha ya ishara yenye mwelekeo mbili ya lugha ya ishara ya kompyuta ya mezani na simu ya mkononi",
+    "spoken-to-signed": {
+      "text": "Maandishi ya Lugha Iliyotamkwa",
+      "actions": {
+        "download": "Pakua Tafsiri",
+        "copy": "Nakili Tafsiri",
+        "share": "Shiriki Tafsiri"
+      }
+    }
+  },
+  "landing": {
+    "try": "IJARIBU TRANSLATE",
+    "about": {
+      "title": "Kuhusu",
+      "hero": {
+        "title": "Tafsiri kati ya lugha 40+ zilizotiwa sahihi na zinazozungumzwa katika muda halisi.",
+        "img": "Mfano wa tafsiri ya moja kwa moja kati ya Lugha ya Ishara ya Marekani na Kiingereza"
+      }
+    },
+    "languages": {
+      "title": "Lugha"
+    },
+    "contribute": {
+      "title": "Changia"
+    },
+    "tools": {
+      "title": "Zana"
+    }
+  },
+  "text-to-speech": {
+    "play": "Sikiliza",
+    "cancel": "Acha",
+    "unavailable": "Sauti ya kutoa sauti haipatikani kwa lugha iliyochaguliwa"
+  },
+  "speech-to-text": {
+    "start": "Tafsiri kwa kutamka",
+    "stop": "Acha kutafsiri kwa sauti",
+    "not-allowed": "Unahitaji ruhusa ya kutumia maikrofoni",
+    "language-not-supported": "Lugha iliyochaguliwa haitumiki",
+    "browser-not-supported": "Uingizaji data kwa kutamka hautumiki kwenye kivinjari hiki"
+  },
+  "legal": {
+    "terms": {
+      "title": "Sheria na Masharti"
+    },
+    "privacy": {
+      "title": "Faragha"
+    },
+    "licenses": {
+      "title": "Programu na Leseni"
+    }
+  },
+  "playground": {
+    "title": "Uwanja wa Kuchakata Lugha ya Ishara"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Utambulisho wa Lugha Inayozungumzwa",
+        "import": "Ingiza Moduli",
+        "load": "Mfano wa Kupakia",
+        "find": "Tambua Maandishi",
+        "create": "Unda"
+      },
+      "pix2pix": {
+        "title": "Mtazamaji wa Pozi la Binadamu",
+        "init": "Kiini cha Mfanyikazi",
+        "load": "Mfano wa Kupakia",
+        "first-frame": "Maelekezo ya Fremu ya Kwanza",
+        "frame": "Inference ya Fremu"
+      },
+      "pose": {
+        "title": "Ukadiriaji wa Pozi la Mwili Kamili",
+        "load": "Mzigo wa Mfano",
+        "first-frame": "Maelekezo ya Fremu ya Kwanza",
+        "frame": "Inference ya Fremu"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Mwonekano",
+    "action": "Rekebisha mwonekano",
+    "random": "Pata picha ya nasibu",
+    "upload": "Pakia picha yako mwenyewe"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera inaanza",
+      "turnedOff": "Kamera imezimwa",
+      "notConnected": "Kamera haijaunganishwa",
+      "permissionDenied": "Ruhusa ya kamera imekataliwa"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Zima kamera",
+        "off": "Washa kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Inapakia Makadirio ya Pozi..."
+  },
+  "language-selector": {
+    "label": "Badilisha lugha au eneo"
+  },
+  "settings": {
+    "detectSign": "Tambua Ishara",
+    "drawVideo": "Chora Video",
+    "drawPose": "Chora Pozi",
+    "drawSignWriting": "Chora Uandishi wa Ishara",
+    "animatePose": "Huisha Mkao",
+    "poseViewer": {
+      "pose": "Mifupa",
+      "avatar": "Avatar",
+      "human": "Binadamu"
+    }
+  }
+}

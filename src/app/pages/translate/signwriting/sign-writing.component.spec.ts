@@ -73,7 +73,7 @@ describe('SignWritingComponent', () => {
     expect(newColor).toBe(specialColor);
   }, 10000);
 
-  it('should unregister event listenr on destroy', () => {
+  it('should unregister event listener on destroy', () => {
     const spy = spyOn(component.colorSchemeMedia, 'removeEventListener');
     component.ngOnDestroy();
     expect(spy).toHaveBeenCalled();

@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Fordító",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Nyelvfelismerés",
+      "more": "További nyelvek"
+    },
+    "feedback": "Visszajelzés küldése",
+    "input": {
+      "text": "Szöveg",
+      "webcam": "Webkamera",
+      "upload": "Feltöltés"
+    },
+    "swapLanguages": "Nyelvek felcserélése",
+    "upload": {
+      "types": ".mp4, .ogv vagy .webm formátumú fájlt töltsön fel.",
+      "browse": "Tallózás a számítógépen",
+      "title": "Válassz egy videót"
+    },
+    "description": "Kétirányú, többnyelvű jelnyelvi fordítóalkalmazás asztali számítógépekre és mobileszközökre",
+    "spoken-to-signed": {
+      "text": "Beszélt nyelvű szöveg",
+      "actions": {
+        "download": "Fordítás letöltése",
+        "copy": "Fordítás másolása",
+        "share": "Fordítás megosztása"
+      }
+    }
+  },
+  "landing": {
+    "try": "PRÓBÁLJA KI A FORDÍTÓT",
+    "about": {
+      "title": "Névjegy",
+      "hero": {
+        "title": "Fordítson valós időben több mint 40 aláírt és beszélt nyelv között.",
+        "img": "Példa élő fordításra az amerikai jelnyelv és az angol között"
+      }
+    },
+    "languages": {
+      "title": "Nyelvek"
+    },
+    "contribute": {
+      "title": "Együttműködés"
+    },
+    "tools": {
+      "title": "Eszközök"
+    }
+  },
+  "text-to-speech": {
+    "play": "Meghallgatás",
+    "cancel": "Állj meg",
+    "unavailable": "A hangkimenet nem érhető el a kiválasztott nyelven"
+  },
+  "speech-to-text": {
+    "start": "Hangalapú fordítás",
+    "stop": "Hangos fordítás leállítása",
+    "not-allowed": "A mikrofon használatához engedély szükséges",
+    "language-not-supported": "A kiválasztott nyelv nem támogatott",
+    "browser-not-supported": "A hangbevitel nem támogatott ebben a böngészőben"
+  },
+  "legal": {
+    "terms": {
+      "title": "Szerződési feltételek"
+    },
+    "privacy": {
+      "title": "Adatvédelem"
+    },
+    "licenses": {
+      "title": "Szoftverek és licencek"
+    }
+  },
+  "playground": {
+    "title": "Jelnyelv-feldolgozó játszótér"
+  },
+  "benchmark": {
+    "title": "Viszonyítási alap",
+    "stats": {
+      "cld": {
+        "title": "Beszélt nyelvi azonosítás",
+        "import": "Import modul",
+        "load": "Betöltési modell",
+        "find": "Szöveg azonosítása",
+        "create": "Teremt"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Munkás Init",
+        "load": "Betöltési modell",
+        "first-frame": "Első képkocka következtetés",
+        "frame": "Keret következtetés"
+      },
+      "pose": {
+        "title": "Teljes testhelyzet becslés",
+        "load": "Modellterhelés",
+        "first-frame": "Első képkocka következtetés",
+        "frame": "Keret következtetés"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Kinézet",
+    "action": "Megjelenés módosítása",
+    "random": "Vegyél egy véletlenszerű fényképet",
+    "upload": "Töltsd fel saját fotódat"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera indul",
+      "turnedOff": "Kamera kikapcsolva",
+      "notConnected": "A kamera nincs csatlakoztatva",
+      "permissionDenied": "Kameraengedély megtagadva"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kapcsolja ki a kamerát",
+        "off": "Kapcsolja be a kamerát"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Pózbecslés betöltése..."
+  },
+  "language-selector": {
+    "label": "Nyelv vagy régió módosítása"
+  },
+  "settings": {
+    "detectSign": "Jel észlelése",
+    "drawVideo": "Rajzolj videót",
+    "drawPose": "Rajzolj pózt",
+    "drawSignWriting": "Rajzolj Jelírás",
+    "animatePose": "Animált póz",
+    "poseViewer": {
+      "pose": "Csontváz",
+      "avatar": "Avatar",
+      "human": "Emberi"
+    }
+  }
+}

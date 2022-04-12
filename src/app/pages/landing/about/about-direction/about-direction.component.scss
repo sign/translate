@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+@import "../../../../../theme/variables";
+
+#grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-areas: "img1 title title img2";
+  gap: 32px;
+
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+
+  max-width: 1920px;
+
+  @media #{$mat-lt-md} {
+    grid-template-areas: "title title"
+                       "img1 img2";
+  }
+
+  > div {
+    grid-area: title;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  width: 100%;
+
+  &:first-of-type {
+    text-align: start;
+  }
+
+  &:last-of-type {
+    text-align: end;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 350px;
+
+  &:first-of-type {
+    grid-area: img1;
+  }
+
+  &:last-of-type {
+    grid-area: img2;
+  }
+}

@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {Pose, PoseLandmark} from './pose.state';
+import {GoogleAnalyticsTimingService} from "../../core/modules/google-analytics/google-analytics.service";
 
 const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22];
 
@@ -11,21 +12,36 @@ const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18
 export class PoseService {
 
   model?: any;
+  isFirstFrame = true;
+
+  constructor(private gaTiming: GoogleAnalyticsTimingService) {
+  }
 
   async load(): Promise<void> {
-    this.model = new holistic.Holistic({locateFile: (file) => `assets/models/holistic/${file}`});
+    if (this.model) {
+      return;
+    }
 
-    this.model.setOptions({
-      upperBodyOnly: false,
-      modelComplexity: 1
+    this.gaTiming.time('pose', 'load', () => {
+      this.model = new holistic.Holistic({locateFile: (file) => `assets/models/holistic/${file}`});
+
+      this.model.setOptions({
+        upperBodyOnly: false,
+        modelComplexity: 1
+      });
     });
   }
 
-  async predict(video: HTMLVideoElement): Promise<void> {
+  async predict(video: HTMLVideoElement | HTMLImageElement): Promise<void> {
     if (!this.model) {
-      return Promise.resolve(null);
+      return;
     }
-    await this.model.send({image: video}); // This is void
+
+    const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
+    await this.gaTiming.time('pose', frameType, () => {
+      this.isFirstFrame = false;
+      return this.model.send({image: video})
+    });
   }
 
   drawBody(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D): void {

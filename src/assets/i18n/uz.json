@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Tarjimon",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Avtomatik aniqlash",
+      "more": "Ko'proq tillar"
+    },
+    "feedback": "Fikr-mulohaza",
+    "input": {
+      "text": "Matn",
+      "webcam": "Vebkamera",
+      "upload": "Yuklash"
+    },
+    "swapLanguages": "Tillarni almashtirish",
+    "upload": {
+      "types": "mp4, .ogv va .webm formatdagi fayllarni yuklang.",
+      "browse": "Kompyuter ichidan tanlash",
+      "title": "Videoni tanlang"
+    },
+    "description": "Ish stoli va mobil qurilmalar uchun ikki yoʻnalishli koʻp tilli imo-ishora tilini tarjima qilish ilovasi",
+    "spoken-to-signed": {
+      "text": "Og'zaki til matni",
+      "actions": {
+        "download": "Tarjima yuklab olish",
+        "copy": "Tarjimani nusxalash",
+        "share": "Tarjimani ulashish"
+      }
+    }
+  },
+  "landing": {
+    "try": "SINAB KO‘RISH",
+    "about": {
+      "title": "Xizmat haqida",
+      "hero": {
+        "title": "Real vaqt rejimida 40 dan ortiq imzo qoʻyilgan va ogʻzaki tillar oʻrtasida tarjima qiling.",
+        "img": "Amerika imo-ishora tili va ingliz tili o'rtasidagi jonli tarjimaga misol"
+      }
+    },
+    "languages": {
+      "title": "Tillar"
+    },
+    "contribute": {
+      "title": "Hissa qo‘shish"
+    },
+    "tools": {
+      "title": "Asbob va vositalar"
+    }
+  },
+  "text-to-speech": {
+    "play": "Tinglash",
+    "cancel": "STOP",
+    "unavailable": "Tanlangan til uchun ovozli chiqish mavjud emas"
+  },
+  "speech-to-text": {
+    "start": "Ovoz orqali tarjima qiling",
+    "stop": "Ovozli tarjimani to'xtating",
+    "not-allowed": "Mikrofondan foydalanish uchun ruxsat kerak",
+    "language-not-supported": "Tanlangan til qo‘llab-quvvatlanmaydi",
+    "browser-not-supported": "Bu brauzerda ovozli kiritish qo‘llab-quvvatlanmaydi"
+  },
+  "legal": {
+    "terms": {
+      "title": "Foydalanish shartlari"
+    },
+    "privacy": {
+      "title": "Maxfiylik siyosati"
+    },
+    "licenses": {
+      "title": "Litsenziyalar"
+    }
+  },
+  "playground": {
+    "title": "Imo-ishora tilini qayta ishlash maydonchasi"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Og'zaki tilni aniqlash",
+        "import": "Import moduli",
+        "load": "Modelni yuklash",
+        "find": "Matnni aniqlash",
+        "create": "Yaratmoq"
+      },
+      "pix2pix": {
+        "title": "Inson pozasini ko'ruvchi",
+        "init": "Ishchi Init",
+        "load": "Modelni yuklash",
+        "first-frame": "Birinchi ramka xulosasi",
+        "frame": "Ramka xulosasi"
+      },
+      "pose": {
+        "title": "To'liq tana holatini baholash",
+        "load": "Model yuki",
+        "first-frame": "Birinchi ramka xulosasi",
+        "frame": "Ramka xulosasi"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Tashqi ko'rinish",
+    "action": "Tashqi ko'rinishini o'zgartirish",
+    "random": "Tasodifiy fotosurat oling",
+    "upload": "O'zingizning rasmingizni yuklang"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera boshlanmoqda",
+      "turnedOff": "Kamera oʻchirilgan",
+      "notConnected": "Kamera ulanmagan",
+      "permissionDenied": "Kamera ruxsati rad etildi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamerani o'chiring",
+        "off": "Kamerani yoqing"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Joy taxmini yuklanmoqda..."
+  },
+  "language-selector": {
+    "label": "Til yoki mintaqani o'zgartiring"
+  },
+  "settings": {
+    "detectSign": "Belgini aniqlash",
+    "drawVideo": "Video chizish",
+    "drawPose": "Pozani chizish",
+    "drawSignWriting": "Belgilar yozuvini chizish",
+    "animatePose": "Animatsion poza",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Avatar",
+      "human": "Inson"
+    }
+  }
+}

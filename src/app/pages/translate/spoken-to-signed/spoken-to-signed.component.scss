@@ -31,7 +31,7 @@
 
 app-sign-writing {
   @media #{$mat-lt-sm} {
-    overflow-y: auto;
+    border: none !important;
     height: 195px;
   }
 }

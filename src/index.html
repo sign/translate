@@ -133,6 +133,15 @@
         media="(prefers-color-scheme: dark) and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
   <link rel="apple-touch-startup-image" href="assets/icons/generated/apple-splash-dark-1136-640.jpg"
         media="(prefers-color-scheme: dark) and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+  <!-- Inline style for body dark mode, to prevent a white blink on page start -->
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: black !important;
+      }
+    }
+  </style>
 </head>
 <body class="mat-typography">
 <app-root></app-root>

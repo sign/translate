@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Maj"
+  },
+  "translate": {
+    "title": "Sign Dikanteny",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Haminany fiteny",
+      "more": "Fiteny bebe kokoa"
+    },
+    "feedback": "Handefa valin-kevitra",
+    "input": {
+      "text": "Soratra",
+      "webcam": "Webcam",
+      "upload": "fampitana"
+    },
+    "swapLanguages": "Soloina ny fiteny",
+    "upload": {
+      "types": "Mampakara .mp4, .ogv, na .webm.",
+      "browse": "Hitety ny solosainao",
+      "title": "Mifidiana video"
+    },
+    "description": "Fampiharana fandikana amin'ny teny moana amin'ny fiteny roa tonta ho an'ny desktop sy finday",
+    "spoken-to-signed": {
+      "text": "Lahatsoratra amin'ny fiteny miteny",
+      "actions": {
+        "download": "Download Dikanteny",
+        "copy": "Adikao Dikanteny",
+        "share": "Mizara Dikanteny"
+      }
+    }
+  },
+  "landing": {
+    "try": "ANDRAMO ADIKA",
+    "about": {
+      "title": "Mombamomba",
+      "hero": {
+        "title": "Mandika teny eo anelanelan'ny fiteny 40+ voasonia sy tenenina amin'ny fotoana tena izy.",
+        "img": "Ohatra amin'ny fandikana mivantana eo amin'ny Tenin'ny Tanana Amerikana sy Anglisy"
+      }
+    },
+    "languages": {
+      "title": "Fitenim-pirenena"
+    },
+    "contribute": {
+      "title": "Handray anjara"
+    },
+    "tools": {
+      "title": "Fitaovana"
+    }
+  },
+  "text-to-speech": {
+    "play": "Hihaino",
+    "cancel": "Mijanòna",
+    "unavailable": "Tsy misy ny famoahana feo ho an'ny fiteny voafantina"
+  },
+  "speech-to-text": {
+    "start": "Handika am-peo",
+    "stop": "Atsaharo ny fandikana amin'ny feo",
+    "not-allowed": "Mila alalana hampiasa mikrô",
+    "language-not-supported": "Tsy tohana ny fiteny voafantina",
+    "browser-not-supported": "Tsy tohana amin'ity mpitety tranonkala ity ny fampidirana feo"
+  },
+  "legal": {
+    "terms": {
+      "title": "Fepetra fampiasana"
+    },
+    "privacy": {
+      "title": "Fepetra tsiambaratelo"
+    },
+    "licenses": {
+      "title": "Rindram-baiko sy fahazoan-dalana"
+    }
+  },
+  "playground": {
+    "title": "kianja filalaovana fanodinana ny tenin'ny tanana"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Famantarana ny fiteny miteny",
+        "import": "Import Module",
+        "load": "Load Model",
+        "find": "Fantaro ny soratra",
+        "create": "MANANGANA"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Mpiasa Init",
+        "load": "Load Model",
+        "first-frame": "Famintinana Frame voalohany",
+        "frame": "Frame Inferences"
+      },
+      "pose": {
+        "title": "Tombanana amin'ny vatana manontolo",
+        "load": "Model Load",
+        "first-frame": "Famintinana Frame voalohany",
+        "frame": "Frame Inferences"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Bika Aman 'endrika",
+    "action": "Manova endrika",
+    "random": "Makà sary kisendrasendra",
+    "upload": "Ampidiro ny sarinao manokana"
+  },
+  "video": {
+    "errors": {
+      "starting": "Manomboka ny fakan-tsary",
+      "turnedOff": "Neno ny fakan-tsary",
+      "notConnected": "Tsy mifandray ny fakan-tsary",
+      "permissionDenied": "Nolavina ny fakan-tsary"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Vonoy ny fakantsary",
+        "off": "Alefaso ny fakantsary"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Mametaka ny tombantombana pose..."
+  },
+  "language-selector": {
+    "label": "Hanova fiteny na faritra"
+  },
+  "settings": {
+    "detectSign": "Fantaro famantarana",
+    "drawVideo": "Manaova sary video",
+    "drawPose": "Manaova sary Pose",
+    "drawSignWriting": "Soraty ny sora-baventy",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "taolana",
+      "avatar": "Avatar",
+      "human": "OLONA"
+    }
+  }
+}

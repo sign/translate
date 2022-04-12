@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Prekladač Sign",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "rozpoznaný jazyk",
+      "more": "Viac jazykov"
+    },
+    "feedback": "Odoslať spätnú väzbu",
+    "input": {
+      "text": "Text",
+      "webcam": "Webkamera",
+      "upload": "Nahrať"
+    },
+    "swapLanguages": "Vymeniť jazyky",
+    "upload": {
+      "types": "Nahrajte súbor .mp4, .ogv alebo .webm.",
+      "browse": "Prehliadať počítač",
+      "title": "Vyberte video"
+    },
+    "description": "Obojsmerná viacjazyčná aplikácia na preklad posunkovej reči pre stolné počítače a mobilné zariadenia",
+    "spoken-to-signed": {
+      "text": "Text v hovorenom jazyku",
+      "actions": {
+        "download": "Stiahnuť Preklad",
+        "copy": "Kopírovať preklad",
+        "share": "Zdieľať preklad"
+      }
+    }
+  },
+  "landing": {
+    "try": "VYSKÚŠAŤ PREKLADAČ",
+    "about": {
+      "title": "O službe",
+      "hero": {
+        "title": "Prekladajte medzi 40+ podpísanými a hovorenými jazykmi v reálnom čase.",
+        "img": "Príklad živého prekladu medzi americkým posunkovým jazykom a angličtinou"
+      }
+    },
+    "languages": {
+      "title": "Jazyky"
+    },
+    "contribute": {
+      "title": "Prispieť"
+    },
+    "tools": {
+      "title": "Nástroje"
+    }
+  },
+  "text-to-speech": {
+    "play": "Vypočuť",
+    "cancel": "Stop",
+    "unavailable": "Hlasový výstup nie je dostupný pre vybratý jazyk"
+  },
+  "speech-to-text": {
+    "start": "Preložiť hlasom",
+    "stop": "Zastaviť preklad hlasom",
+    "not-allowed": "Na používanie mikrofónu potrebujete povolenie",
+    "language-not-supported": "Vybraný jazyk nie je podporovaný",
+    "browser-not-supported": "Tento prehliadač nepodporuje hlasový vstup"
+  },
+  "legal": {
+    "terms": {
+      "title": "Zmluvné podmienky"
+    },
+    "privacy": {
+      "title": "Ochrana súkromia"
+    },
+    "licenses": {
+      "title": "Softvér a licencie"
+    }
+  },
+  "playground": {
+    "title": "Ihrisko na spracovanie posunkovej reči"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identifikácia hovoreného jazyka",
+        "import": "Importovať modul",
+        "load": "Načítať model",
+        "find": "Identifikujte text",
+        "create": "Vytvorte"
+      },
+      "pix2pix": {
+        "title": "Prehliadač ľudskej pózy",
+        "init": "Worker Init",
+        "load": "Načítať model",
+        "first-frame": "Prvý rámcový záver",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Odhad polohy celého tela",
+        "load": "Modelové zaťaženie",
+        "first-frame": "Prvý rámcový záver",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Vzhľad",
+    "action": "Upravte vzhľad",
+    "random": "Získajte náhodnú fotografiu",
+    "upload": "Nahrajte svoju vlastnú fotografiu"
+  },
+  "video": {
+    "errors": {
+      "starting": "Spustenie fotoaparátu",
+      "turnedOff": "Kamera je vypnutá",
+      "notConnected": "Kamera nie je pripojená",
+      "permissionDenied": "Povolenie fotoaparátu bolo zamietnuté"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Vypnite fotoaparát",
+        "off": "Zapnite fotoaparát"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Načítava sa odhad pozície..."
+  },
+  "language-selector": {
+    "label": "Zmeňte jazyk alebo región"
+  },
+  "settings": {
+    "detectSign": "Rozpoznať znamenie",
+    "drawVideo": "Nakresliť video",
+    "drawPose": "Kresliť pózu",
+    "drawSignWriting": "Kresliť Znak Písanie",
+    "animatePose": "Animovaná póza",
+    "poseViewer": {
+      "pose": "Kostra",
+      "avatar": "Avatar",
+      "human": "Ľudské"
+    }
+  }
+}

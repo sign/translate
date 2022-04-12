@@ -8,6 +8,7 @@ import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {SettingsComponent} from '../../modules/settings/settings/settings.component';
 import {TranslateState} from '../../modules/translate/translate.state';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 
 describe('PlaygroundComponent', () => {
@@ -23,6 +24,7 @@ describe('PlaygroundComponent', () => {
       ],
       imports: [
         AppAngularMaterialModule,
+        NoopAnimationsModule,
         AppTranslocoModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
       ]

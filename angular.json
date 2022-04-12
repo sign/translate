@@ -5,7 +5,11 @@
   "projects": {
     "sign-translate": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -35,13 +39,14 @@
                 "input": "./node_modules/@sutton-signwriting/font-ttf/font",
                 "output": "./assets/fonts/signwriting/"
               },
+              {
+                "glob": "**/*.json",
+                "input": "node_modules/@sign/i18n/build/",
+                "output": "./assets/i18n/"
+              },
               "src/manifest.webmanifest"
             ],
             "styles": [
-              {
-                "input": "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-                "bundleName": "app"
-              },
               {
                 "input": "src/theme/styles.scss",
                 "bundleName": "app"
@@ -127,7 +132,6 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/theme/styles.scss"
             ],
             "scripts": [],

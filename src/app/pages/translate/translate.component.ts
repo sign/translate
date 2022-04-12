@@ -1,13 +1,14 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit, ViewChild} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {InputMode} from '../../modules/translate/translate.state';
-import {FlipTranslationDirection, SetInputMode, SetSignedLanguage, SetSpokenLanguage} from '../../modules/translate/translate.actions';
+import {FlipTranslationDirection, SetSignedLanguage, SetSpokenLanguage} from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
+import {MatDrawer} from '@angular/material/sidenav';
 
 
 @Component({
@@ -21,6 +22,8 @@ export class TranslateComponent extends BaseComponent implements OnInit {
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
+  @ViewChild('appearance') appearance: MatDrawer;
+  loadAppearance = false; // Appearance panel should be loaded at will, and then never unloaded
 
   constructor(private store: Store, private transloco: TranslocoService, public translation: TranslationService) {
     super();
@@ -29,7 +32,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     this.store.dispatch([
       new SetSetting('receiveVideo', true),
       new SetSetting('detectSign', false),
-      new SetSetting('drawSignWriting', false),
+      new SetSetting('drawSignWriting', false), // This setting currently also controls loading the SignWriting models.
       new SetSetting('drawPose', true),
       new SetSetting('poseViewer', 'pose'),
     ]);
@@ -82,6 +85,11 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     ).subscribe();
   }
 
+  openAppearancePanel() {
+    this.loadAppearance = true;
+    return this.appearance.open();
+  }
+
 
   setSignedLanguage(lang: string): void {
     this.store.dispatch(new SetSignedLanguage(lang));
@@ -89,10 +97,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
 
   setSpokenLanguage(lang: string): void {
     this.store.dispatch(new SetSpokenLanguage(lang));
-  }
-
-  setInputMode(mode: InputMode): void {
-    this.store.dispatch(new SetInputMode(mode));
   }
 
   swapLanguages(): void {

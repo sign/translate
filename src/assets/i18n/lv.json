@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign tulkotājs",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Noteikt valodu",
+      "more": "Vairāk valodu"
+    },
+    "feedback": "Sūtīt atsauksmes",
+    "input": {
+      "text": "Teksts",
+      "webcam": "Tīmekļa kamera",
+      "upload": "Augšupielādēt"
+    },
+    "swapLanguages": "Apmainīt valodas",
+    "upload": {
+      "types": "Augšupielādējiet .mp4, .ogv vai .webm failu.",
+      "browse": "Pārlūkot savu datoru",
+      "title": "Izvēlieties videoklipu"
+    },
+    "description": "Divvirzienu daudzvalodu zīmju valodas tulkošanas lietotne galddatoriem un mobilajām ierīcēm",
+    "spoken-to-signed": {
+      "text": "Runas valodas teksts",
+      "actions": {
+        "download": "Lejupielādēt tulkojumu",
+        "copy": "Kopēt tulkojumu",
+        "share": "Kopīgot tulkojumu"
+      }
+    }
+  },
+  "landing": {
+    "try": "IZMĒĢINIET TULKOTĀJU",
+    "about": {
+      "title": "Par",
+      "hero": {
+        "title": "Reāllaikā tulkojiet no 40+ zīmju valodām un runājiet.",
+        "img": "Tiešraides tulkojuma piemērs starp amerikāņu zīmju valodu un angļu valodu"
+      }
+    },
+    "languages": {
+      "title": "Valodas"
+    },
+    "contribute": {
+      "title": "Piedalīties"
+    },
+    "tools": {
+      "title": "Rīki"
+    }
+  },
+  "text-to-speech": {
+    "play": "Klausīties",
+    "cancel": "Stop",
+    "unavailable": "Balss izvade atlasītajai valodai nav pieejama"
+  },
+  "speech-to-text": {
+    "start": "Tulkot ar balsi",
+    "stop": "Pārtraukt tulkošanu ar balsi",
+    "not-allowed": "Nepieciešama atļauja lietot mikrofonu",
+    "language-not-supported": "Atlasītā valoda netiek atbalstīta",
+    "browser-not-supported": "Balss ievade šajā pārlūkprogrammā netiek atbalstīta"
+  },
+  "legal": {
+    "terms": {
+      "title": "Noteikumi"
+    },
+    "privacy": {
+      "title": "Konfidencialitāte"
+    },
+    "licenses": {
+      "title": "Programmatūra un licences"
+    }
+  },
+  "playground": {
+    "title": "Zīmju valodas apstrādes rotaļu laukums"
+  },
+  "benchmark": {
+    "title": "Etalons",
+    "stats": {
+      "cld": {
+        "title": "Runātās valodas identifikācija",
+        "import": "Importēšanas modulis",
+        "load": "Slodzes modelis",
+        "find": "Identificēt tekstu",
+        "create": "Izveidot"
+      },
+      "pix2pix": {
+        "title": "Cilvēka pozu skatītājs",
+        "init": "Strādnieks Init",
+        "load": "Slodzes modelis",
+        "first-frame": "Pirmā kadra secinājums",
+        "frame": "Rāmja secinājums"
+      },
+      "pose": {
+        "title": "Pilnas ķermeņa pozas novērtējums",
+        "load": "Modeļa slodze",
+        "first-frame": "Pirmā kadra secinājums",
+        "frame": "Rāmja secinājums"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Izskats",
+    "action": "Mainīt izskatu",
+    "random": "Iegūstiet nejaušu fotoattēlu",
+    "upload": "Augšupielādējiet savu fotoattēlu"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kameras palaišana",
+      "turnedOff": "Kamera izslēgta",
+      "notConnected": "Kamera nav pievienota",
+      "permissionDenied": "Kameras atļauja liegta"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Izslēdziet kameru",
+        "off": "Ieslēdziet kameru"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Notiek pozas aplēses ielāde..."
+  },
+  "language-selector": {
+    "label": "Mainiet valodu vai reģionu"
+  },
+  "settings": {
+    "detectSign": "Atklāt zīmi",
+    "drawVideo": "Zīmēt video",
+    "drawPose": "Zīmēt poza",
+    "drawSignWriting": "Zīmēt zīmju rakstīšana",
+    "animatePose": "Animēt poza",
+    "poseViewer": {
+      "pose": "Skelets",
+      "avatar": "Iemiesojums",
+      "human": "Cilvēks"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Traduction",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Détecter la langue",
+      "more": "Più Lingue"
+    },
+    "feedback": "Envoyer des commentaires",
+    "input": {
+      "text": "Testu",
+      "webcam": "Webcam",
+      "upload": "Caricà"
+    },
+    "swapLanguages": "Intervertì i lingui",
+    "upload": {
+      "types": "Scaricà un .mp4, .ogv, o .webm.",
+      "browse": "Circà nantu à u to urdinatori",
+      "title": "Sceglite un video"
+    },
+    "description": "Una app di traduzione bidirezionale in lingua di i segni multilingue per desktop è mobile",
+    "spoken-to-signed": {
+      "text": "Testu in lingua parlata",
+      "actions": {
+        "download": "Scaricate a traduzzione",
+        "copy": "Copy Translation",
+        "share": "Share Translation"
+      }
+    }
+  },
+  "landing": {
+    "try": "ESSAYEZ DE TRADUIRE",
+    "about": {
+      "title": "À propos de",
+      "hero": {
+        "title": "Traduce trà più di 40 lingue firmate è parlate in tempu reale.",
+        "img": "Esempiu di traduzzione in diretta trà Lingua di i Signi Americana è Inglese"
+      }
+    },
+    "languages": {
+      "title": "Langues"
+    },
+    "contribute": {
+      "title": "Contribuer"
+    },
+    "tools": {
+      "title": "Outils"
+    }
+  },
+  "text-to-speech": {
+    "play": "Écouter",
+    "cancel": "Stop",
+    "unavailable": "L'output di voce ùn hè micca dispunibule per a lingua scelta"
+  },
+  "speech-to-text": {
+    "start": "Traduzzioni urali",
+    "stop": "Arresta a traduzzione à voce",
+    "not-allowed": "Avete bisognu di permessu per aduprà u microfonu",
+    "language-not-supported": "A lingua scelta ùn hè micca supportata",
+    "browser-not-supported": "L'input di voce ùn hè micca supportatu in stu navigatore"
+  },
+  "legal": {
+    "terms": {
+      "title": "Conditions"
+    },
+    "privacy": {
+      "title": "Confidentialité"
+    },
+    "licenses": {
+      "title": "Lugiziali è Licenzi"
+    }
+  },
+  "playground": {
+    "title": "Playground di Trattamentu di a Lingua di i Signi"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identificazione di a lingua parlata",
+        "import": "Modulu Import",
+        "load": "Caricà u mudellu",
+        "find": "Identificà u testu",
+        "create": "Crià"
+      },
+      "pix2pix": {
+        "title": "Viseur di posa umana",
+        "init": "U travagliu Init",
+        "load": "Caricà u mudellu",
+        "first-frame": "Inferenza di u primu quadru",
+        "frame": "Inferenza di quadru"
+      },
+      "pose": {
+        "title": "Stima di a postura di u corpu tutale",
+        "load": "Carica di mudellu",
+        "first-frame": "Inferenza di u primu quadru",
+        "frame": "Inferenza di quadru"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Apparizione",
+    "action": "Mudificà l'apparenza",
+    "random": "Fate una foto casuale",
+    "upload": "Caricate a vostra propria foto"
+  },
+  "video": {
+    "errors": {
+      "starting": "A camera principia",
+      "turnedOff": "Camera spenta",
+      "notConnected": "Camera micca cunnessa",
+      "permissionDenied": "L'autorizazione di a camera hè denegata"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Spegne a camera",
+        "off": "Accende a camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Caricamentu di a stima di a pusizione..."
+  },
+  "language-selector": {
+    "label": "Cambia lingua o regione"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Disegnu Video",
+    "drawPose": "Disegnu Pose",
+    "drawSignWriting": "Disegnu a scrittura di segni",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "scheletru",
+      "avatar": "Avatar",
+      "human": "umanu"
+    }
+  }
+}

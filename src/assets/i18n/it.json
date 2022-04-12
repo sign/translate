@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "CTRL",
+    "shift": "MAIUSC"
+  },
+  "translate": {
+    "title": "Sign Traduttore",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Rileva lingua",
+      "more": "Più lingue"
+    },
+    "feedback": "Invia commenti",
+    "input": {
+      "text": "Testo",
+      "webcam": "Webcam",
+      "upload": "Caricamento"
+    },
+    "swapLanguages": "Cambia lingue",
+    "upload": {
+      "types": "Carica un file .mp4, .ogv o .webm.",
+      "browse": "Cerca sul computer",
+      "title": "Scegli un video"
+    },
+    "description": "Un'app di traduzione della lingua dei segni multilingue bidirezionale per desktop e dispositivi mobili",
+    "spoken-to-signed": {
+      "text": "Testo in lingua parlata",
+      "actions": {
+        "download": "Scarica traduzione",
+        "copy": "Copia traduzione",
+        "share": "Condividi traduzione"
+      }
+    }
+  },
+  "landing": {
+    "try": "PROVA TRADUTTORE",
+    "about": {
+      "title": "Informazioni",
+      "hero": {
+        "title": "Traduci tra oltre 40 lingue parlate e parlate in tempo reale.",
+        "img": "Esempio di traduzione dal vivo tra la lingua dei segni americana e l'inglese"
+      }
+    },
+    "languages": {
+      "title": "Lingue"
+    },
+    "contribute": {
+      "title": "Contribuisci"
+    },
+    "tools": {
+      "title": "Strumenti"
+    }
+  },
+  "text-to-speech": {
+    "play": "Ascolta",
+    "cancel": "Fermare",
+    "unavailable": "L'uscita vocale non è disponibile per la lingua selezionata"
+  },
+  "speech-to-text": {
+    "start": "Traduzione vocale",
+    "stop": "Interrompi la traduzione vocale",
+    "not-allowed": "È necessaria l'autorizzazione per utilizzare il microfono",
+    "language-not-supported": "La lingua selezionata non è supportata",
+    "browser-not-supported": "L'input vocale non è supportato su questo browser"
+  },
+  "legal": {
+    "terms": {
+      "title": "Termini"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software e licenze"
+    }
+  },
+  "playground": {
+    "title": "Parco giochi per l'elaborazione della lingua dei segni"
+  },
+  "benchmark": {
+    "title": "Segno di riferimento",
+    "stats": {
+      "cld": {
+        "title": "Identificazione della lingua parlata",
+        "import": "Modulo di importazione",
+        "load": "Carica modello",
+        "find": "Identifica il testo",
+        "create": "Creare"
+      },
+      "pix2pix": {
+        "title": "Visualizzatore di pose umane",
+        "init": "Iniz. lavoratore",
+        "load": "Carica modello",
+        "first-frame": "Inferenza del primo fotogramma",
+        "frame": "Inferenza telaio"
+      },
+      "pose": {
+        "title": "Stima della posa del corpo intero",
+        "load": "Carico del modello",
+        "first-frame": "Inferenza del primo fotogramma",
+        "frame": "Inferenza telaio"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Aspetto",
+    "action": "Modifica aspetto",
+    "random": "Ottieni una foto a caso",
+    "upload": "Carica la tua foto"
+  },
+  "video": {
+    "errors": {
+      "starting": "Fotocamera in partenza",
+      "turnedOff": "Fotocamera spenta",
+      "notConnected": "Fotocamera non collegata",
+      "permissionDenied": "Autorizzazione della fotocamera negata"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Spegni la fotocamera",
+        "off": "Accendi la fotocamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Caricamento della stima della posa..."
+  },
+  "language-selector": {
+    "label": "Cambia lingua o regione"
+  },
+  "settings": {
+    "detectSign": "Rileva segno",
+    "drawVideo": "Disegna video",
+    "drawPose": "Disegna la posa",
+    "drawSignWriting": "Disegna la scrittura del segno",
+    "animatePose": "Anima la posa",
+    "poseViewer": {
+      "pose": "Scheletro",
+      "avatar": "Avatar",
+      "human": "Umano"
+    }
+  }
+}

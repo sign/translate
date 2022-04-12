@@ -66,7 +66,8 @@ export class DetectorService {
       x: (newPose[holistic.POSE_LANDMARKS.LEFT_SHOULDER].x + newPose[holistic.POSE_LANDMARKS.RIGHT_SHOULDER].x) / 2,
       y: (newPose[holistic.POSE_LANDMARKS.LEFT_SHOULDER].y + newPose[holistic.POSE_LANDMARKS.RIGHT_SHOULDER].y) / 2,
     };
-    const newFakePose = [
+
+    return [
       newPose[holistic.POSE_LANDMARKS.NOSE],
       neck,
       newPose[holistic.POSE_LANDMARKS.RIGHT_SHOULDER],
@@ -93,8 +94,6 @@ export class DetectorService {
       EMPTY_LANDMARK,
       EMPTY_LANDMARK
     ];
-
-    return newFakePose;
   }
 
   isValidLandmark(l: PoseLandmark): boolean {
@@ -117,8 +116,8 @@ export class DetectorService {
   getSequentialConfidence(opticalFlow: Float32Array): number {
     return this.tf.tidy(() => {
       const pred: Tensor = this.sequentialModel.predict(this.tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])) as Tensor;
-      const probs = this.tf.softmax(pred).dataSync();
-      return probs[1];
+      const softmax = this.tf.softmax(pred).dataSync();
+      return softmax[1];
     });
   }
 

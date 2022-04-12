@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Terjemah",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Kesan bahasa",
+      "more": "Lebih Banyak Bahasa"
+    },
+    "feedback": "Hantar maklum balas",
+    "input": {
+      "text": "Teks",
+      "webcam": "Kamera web",
+      "upload": "Muat naik"
+    },
+    "swapLanguages": "Tukar bahasa",
+    "upload": {
+      "types": "Muat naik .mp4, .ogv atau .webm.",
+      "browse": "Semak imbas komputer anda",
+      "title": "Pilih video"
+    },
+    "description": "Apl terjemahan bahasa isyarat berbilang hala dua arah untuk desktop dan mudah alih",
+    "spoken-to-signed": {
+      "text": "Teks Bahasa Pertuturan",
+      "actions": {
+        "download": "Muat turun Terjemahan",
+        "copy": "Salin Terjemahan",
+        "share": "Kongsi Terjemahan"
+      }
+    }
+  },
+  "landing": {
+    "try": "CUBA TERJEMAH",
+    "about": {
+      "title": "Mengenai",
+      "hero": {
+        "title": "Terjemah antara 40+ bahasa yang ditandatangani dan dituturkan dalam masa nyata.",
+        "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggeris"
+      }
+    },
+    "languages": {
+      "title": "Bahasa"
+    },
+    "contribute": {
+      "title": "Sumbangkan"
+    },
+    "tools": {
+      "title": "Alatan"
+    }
+  },
+  "text-to-speech": {
+    "play": "Dengar",
+    "cancel": "Berhenti",
+    "unavailable": "Output suara tidak tersedia untuk bahasa yang dipilih"
+  },
+  "speech-to-text": {
+    "start": "Terjemahkan melalui suara",
+    "stop": "Hentikan terjemahan melalui suara",
+    "not-allowed": "Perlu kebenaran untuk menggunakan mikrofon",
+    "language-not-supported": "Bahasa yang dipilih tidak disokong",
+    "browser-not-supported": "Input suara tidak disokong pada penyemak imbas ini"
+  },
+  "legal": {
+    "terms": {
+      "title": "Syarat"
+    },
+    "privacy": {
+      "title": "Privasi"
+    },
+    "licenses": {
+      "title": "Perisian dan Lesen"
+    }
+  },
+  "playground": {
+    "title": "Taman Permainan Pemprosesan Bahasa Isyarat"
+  },
+  "benchmark": {
+    "title": "Penanda aras",
+    "stats": {
+      "cld": {
+        "title": "Pengenalan Bahasa Pertuturan",
+        "import": "Modul Import",
+        "load": "Muatkan Model",
+        "find": "Kenal pasti Teks",
+        "create": "Buat"
+      },
+      "pix2pix": {
+        "title": "Pemapar Pose Manusia",
+        "init": "Pekerja Init",
+        "load": "Muatkan Model",
+        "first-frame": "Inferens Bingkai Pertama",
+        "frame": "Inferens Bingkai"
+      },
+      "pose": {
+        "title": "Anggaran Pose Badan Penuh",
+        "load": "Beban Model",
+        "first-frame": "Inferens Bingkai Pertama",
+        "frame": "Inferens Bingkai"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Penampilan",
+    "action": "Ubah suai penampilan",
+    "random": "Dapatkan foto rawak",
+    "upload": "Muat naik foto anda sendiri"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera bermula",
+      "turnedOff": "Kamera dimatikan",
+      "notConnected": "Kamera tidak disambungkan",
+      "permissionDenied": "Kebenaran kamera ditolak"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Matikan kamera",
+        "off": "Hidupkan kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Memuatkan Anggaran Pose..."
+  },
+  "language-selector": {
+    "label": "Tukar bahasa atau wilayah"
+  },
+  "settings": {
+    "detectSign": "Tanda Kesan",
+    "drawVideo": "Lukis Video",
+    "drawPose": "Lukis Pose",
+    "drawSignWriting": "Lukis Tulisan Tanda",
+    "animatePose": "Animasikan Pose",
+    "poseViewer": {
+      "pose": "Rangka",
+      "avatar": "Avatar",
+      "human": "Manusia"
+    }
+  }
+}

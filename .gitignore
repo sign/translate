@@ -47,3 +47,6 @@ Thumbs.db
 
 # Angular
 .angular
+
+# Tools
+tools/cache

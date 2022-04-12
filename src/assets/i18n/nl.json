@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Taal herkennen",
+      "more": "Meer talen"
+    },
+    "feedback": "Feedback sturen",
+    "input": {
+      "text": "Tekst",
+      "webcam": "webcam",
+      "upload": "Uploaden"
+    },
+    "swapLanguages": "Talen omwisselen",
+    "upload": {
+      "types": "Upload een .mp4, .ogv, of .webm.",
+      "browse": "Browsen op uw computer",
+      "title": "Kies een video"
+    },
+    "description": "Een bidirectionele meertalige app voor gebarentaalvertaling voor desktop en mobiel",
+    "spoken-to-signed": {
+      "text": "Tekst in gesproken taal",
+      "actions": {
+        "download": "Vertaling downloaden",
+        "copy": "Vertaling kopiëren",
+        "share": "Vertaling delen"
+      }
+    }
+  },
+  "landing": {
+    "try": "PROBEER TRANSLATE",
+    "about": {
+      "title": "Over",
+      "hero": {
+        "title": "Vertaal in realtime tussen 40+ ondertekende en gesproken talen.",
+        "img": "Voorbeeld van live vertaling tussen Amerikaanse Gebarentaal en Engels"
+      }
+    },
+    "languages": {
+      "title": "Talen"
+    },
+    "contribute": {
+      "title": "Bijdragen"
+    },
+    "tools": {
+      "title": "Tools"
+    }
+  },
+  "text-to-speech": {
+    "play": "Luisteren",
+    "cancel": "Stop",
+    "unavailable": "Spraakuitvoer is niet beschikbaar voor de geselecteerde taal"
+  },
+  "speech-to-text": {
+    "start": "Ingesproken tekst vertalen",
+    "stop": "Vertalen met spraak stoppen",
+    "not-allowed": "Toestemming nodig om microfoon te gebruiken",
+    "language-not-supported": "Geselecteerde taal wordt niet ondersteund",
+    "browser-not-supported": "Spraakinvoer wordt niet ondersteund in deze browser"
+  },
+  "legal": {
+    "terms": {
+      "title": "Voorwaarden"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software en licenties"
+    }
+  },
+  "playground": {
+    "title": "Speeltuin voor gebarentaalverwerking"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Gesproken taalidentificatie",
+        "import": "Module importeren",
+        "load": "Laadmodel",
+        "find": "Identificeer tekst",
+        "create": "Creëren"
+      },
+      "pix2pix": {
+        "title": "Kijker naar menselijke poses",
+        "init": "Werknemer Init",
+        "load": "Laadmodel",
+        "first-frame": "Eerste frame-inferentie",
+        "frame": "Frame-inferentie"
+      },
+      "pose": {
+        "title": "Schatting van de volledige lichaamshouding",
+        "load": "Modelbelasting:",
+        "first-frame": "Eerste frame-inferentie",
+        "frame": "Frame-inferentie"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Verschijning",
+    "action": "Uiterlijk wijzigen",
+    "random": "Krijg een willekeurige foto",
+    "upload": "Upload je eigen foto"
+  },
+  "video": {
+    "errors": {
+      "starting": "Camera starten",
+      "turnedOff": "Camera uitgeschakeld",
+      "notConnected": "Camera niet aangesloten",
+      "permissionDenied": "Cameratoestemming geweigerd"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Camera uitschakelen",
+        "off": "Zet de camera aan"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Pose-schatting laden..."
+  },
+  "language-selector": {
+    "label": "Wijzig taal of regio"
+  },
+  "settings": {
+    "detectSign": "Teken detecteren",
+    "drawVideo": "Video tekenen",
+    "drawPose": "Teken pose",
+    "drawSignWriting": "Teken teken schrijven",
+    "animatePose": "Animeren pose",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Avatar",
+      "human": "Menselijk"
+    }
+  }
+}

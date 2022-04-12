@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SpeechToTextComponent} from './speech-to-text.component';
+import {SpeechRecognition, SpeechToTextComponent} from './speech-to-text.component';
 
 describe('SpeechToTextComponent', () => {
   let component: SpeechToTextComponent;
@@ -23,31 +23,33 @@ describe('SpeechToTextComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('start should start speech recognition', () => {
-    const startSpy = spyOn(component.speechRecognition, 'start').and.callFake(() => {
-      component.speechRecognition.dispatchEvent(new Event('start'));
-    });
-    const changeTextSpy = spyOn(component.changeText, 'emit');
+  if (SpeechRecognition) {
+    it('start should start speech recognition', () => {
+      const startSpy = spyOn(component.speechRecognition, 'start').and.callFake(() => {
+        component.speechRecognition.dispatchEvent(new Event('start'));
+      });
+      const changeTextSpy = spyOn(component.changeText, 'emit');
 
-    expect(component.isRecording).toBeFalse();
+      expect(component.isRecording).toBeFalse();
 
-    component.start();
+      component.start();
 
-    expect(startSpy).toHaveBeenCalled();
-    expect(changeTextSpy).toHaveBeenCalledWith('');
-    expect(component.isRecording).toBeTrue();
-  });
-
-  it('stop should stop speech recognition', () => {
-    component.isRecording = true;
-
-    const stopSpy = spyOn(component.speechRecognition, 'stop').and.callFake(() => {
-      component.speechRecognition.dispatchEvent(new Event('end'));
+      expect(startSpy).toHaveBeenCalled();
+      expect(changeTextSpy).toHaveBeenCalledWith('');
+      expect(component.isRecording).toBeTrue();
     });
 
-    component.stop();
+    it('stop should stop speech recognition', () => {
+      component.isRecording = true;
 
-    expect(stopSpy).toHaveBeenCalled();
-    expect(component.isRecording).toBeFalse();
-  });
+      const stopSpy = spyOn(component.speechRecognition, 'stop').and.callFake(() => {
+        component.speechRecognition.dispatchEvent(new Event('end'));
+      });
+
+      component.stop();
+
+      expect(stopSpy).toHaveBeenCalled();
+      expect(component.isRecording).toBeFalse();
+    });
+  }
 });

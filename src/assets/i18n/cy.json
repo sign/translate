@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Cyfieithu",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Synhwyro iaith",
+      "more": "Mwy o Ieithoedd"
+    },
+    "feedback": "Anfon adborth",
+    "input": {
+      "text": "Testun",
+      "webcam": "Gwegamera",
+      "upload": "Llwytho i fyny"
+    },
+    "swapLanguages": "Cyfnewid ieithoedd",
+    "upload": {
+      "types": "Uwchlwythwch .mp4, .ogv, neu .webm.",
+      "browse": "Pori eich cyfrifiadur",
+      "title": "Dewiswch fideo"
+    },
+    "description": "Ap cyfieithu iaith arwyddion dwy-gyfeiriadol ar gyfer bwrdd gwaith a ffôn symudol",
+    "spoken-to-signed": {
+      "text": "Testun Iaith Lafar",
+      "actions": {
+        "download": "Download Cyfieithiad",
+        "copy": "Copi Cyfieithiad",
+        "share": "Rhannu Cyfieithiad"
+      }
+    }
+  },
+  "landing": {
+    "try": "RHOWCH GYNNIG AR GOOGLE CYFIEITHU",
+    "about": {
+      "title": "Ynglŷn â",
+      "hero": {
+        "title": "Cyfieithwch rhwng 40+ o ieithoedd arwyddo a llafar mewn amser real.",
+        "img": "Enghraifft o gyfieithiad byw rhwng Iaith Arwyddion America a Saesneg"
+      }
+    },
+    "languages": {
+      "title": "Ieithoedd"
+    },
+    "contribute": {
+      "title": "Cyfrannu"
+    },
+    "tools": {
+      "title": "Offer"
+    }
+  },
+  "text-to-speech": {
+    "play": "Gwrando",
+    "cancel": "Stopio",
+    "unavailable": "Nid yw allbwn llais ar gael ar gyfer yr iaith a ddewiswyd"
+  },
+  "speech-to-text": {
+    "start": "Cyfieithu trwy lais",
+    "stop": "Stopiwch gyfieithu trwy lais",
+    "not-allowed": "Angen caniatâd i ddefnyddio meicroffon",
+    "language-not-supported": "Ni chefnogir yr iaith a ddewiswyd",
+    "browser-not-supported": "Nid yw mewnbwn llais yn cael ei gefnogi ar y porwr hwn"
+  },
+  "legal": {
+    "terms": {
+      "title": "Termau"
+    },
+    "privacy": {
+      "title": "Preifatrwydd"
+    },
+    "licenses": {
+      "title": "Meddalwedd a Thrwyddedau"
+    }
+  },
+  "playground": {
+    "title": "Maes Chwarae Prosesu Iaith Arwyddion"
+  },
+  "benchmark": {
+    "title": "Meincnod",
+    "stats": {
+      "cld": {
+        "title": "Adnabod Iaith Lafar",
+        "import": "Modiwl Mewnforio",
+        "load": "Model Llwyth",
+        "find": "Adnabod Testun",
+        "create": "Creu"
+      },
+      "pix2pix": {
+        "title": "Gwyliwr Ystumiau Dynol",
+        "init": "Init Gweithiwr",
+        "load": "Model Llwyth",
+        "first-frame": "Casgliad Ffrâm Cyntaf",
+        "frame": "Casgliad Ffrâm"
+      },
+      "pose": {
+        "title": "Amcangyfrif Safle Corff Llawn",
+        "load": "Llwyth Model",
+        "first-frame": "Casgliad Ffrâm Cyntaf",
+        "frame": "Casgliad Ffrâm"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Ymddangosiad",
+    "action": "Addasu ymddangosiad",
+    "random": "Cael llun ar hap",
+    "upload": "Llwythwch eich llun eich hun i fyny"
+  },
+  "video": {
+    "errors": {
+      "starting": "Camera yn dechrau",
+      "turnedOff": "Camera wedi'i ddiffodd",
+      "notConnected": "Camera heb ei gysylltu",
+      "permissionDenied": "Caniatâd camera wedi'i wrthod"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Trowch y camera i ffwrdd",
+        "off": "Trowch y camera ymlaen"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Wrthi'n llwytho amcangyfrif ystum..."
+  },
+  "language-selector": {
+    "label": "Newid iaith neu ranbarth"
+  },
+  "settings": {
+    "detectSign": "Canfod Arwydd",
+    "drawVideo": "Tynnu Fideo",
+    "drawPose": "Tynnu Pose",
+    "drawSignWriting": "Tynnwch Ysgrifennu Arwyddion",
+    "animatePose": "Animeiddio Pos",
+    "poseViewer": {
+      "pose": "sgerbwd",
+      "avatar": "Avatar",
+      "human": "Dynol"
+    }
+  }
+}

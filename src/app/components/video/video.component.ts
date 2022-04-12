@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
-import {combineLatest, Observable} from 'rxjs';
+import {combineLatest, firstValueFrom, Observable} from 'rxjs';
 import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
@@ -12,6 +12,7 @@ import {PoseService} from '../../modules/pose/pose.service';
 import {SignWritingStateModel} from '../../modules/sign-writing/sign-writing.state';
 import {SettingsStateModel} from '../../modules/settings/settings.state';
 import {SignWritingService} from '../../modules/sign-writing/sign-writing.service';
+import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 
 @Component({
   selector: 'app-video',
@@ -80,7 +81,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         lastTime = video.currentTime;
 
         // Get pose estimation
-        await this.store.dispatch(poseAction).toPromise();
+        await firstValueFrom(this.store.dispatch(poseAction));
       }
 
       // TODO await videoframe if supported

@@ -1,9 +1,15 @@
 {
-  "playground": {
-    "title": "Sign Language Processing Playground"
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
   },
   "translate": {
     "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{lang} - Detected",
+      "more": "More Languages",
+      "detect": "Detect language"
+    },
     "description": "A bi-directional multilingual sign language translation app for desktop and mobile",
     "feedback": "Send feedback",
     "input": {
@@ -12,11 +18,6 @@
       "text": "Text"
     },
     "swapLanguages": "Swap languages",
-    "language-selector": {
-      "more": "More Languages",
-      "detect": "Detect Language",
-      "detected": "{lang} - Detected"
-    },
     "spoken-to-signed": {
       "text": "Spoken Language Text",
       "actions": {
@@ -27,163 +28,73 @@
     },
     "upload": {
       "title": "Choose a video",
-      "types": "Upload a .mp4, .ogv, or .webm",
+      "types": "Upload a .mp4, .ogv, or .webm.",
       "browse": "Browse your computer"
+    }
+  },
+  "landing": {
+    "try": "Try Translating!",
+    "about": {
+      "title": "About",
+      "hero": {
+        "title": "Translate between 40+ signed and spoken languages in real-time.",
+        "img": "Example of live translation between American Sign Language and English"
+      }
     },
     "languages": {
-      "signed": {
-        "sy": "Syria",
-        "by": "Belarus",
-        "bg": "Bulgaria",
-        "cn": "China",
-        "hr": "Croatia",
-        "cz": "Czech",
-        "dk": "Denmark",
-        "in": "India",
-        "nz": "New Zealand",
-        "gb": "United Kingdom",
-        "us": "America",
-        "ee": "Estonia",
-        "fi": "Finland",
-        "fr": "France",
-        "at": "Austria",
-        "de": "Germany",
-        "cy": "Cyprus",
-        "gr": "Greece",
-        "is": "Iceland",
-        "isl": "International",
-        "it": "Italy",
-        "jp": "Japan",
-        "lv": "Latvia",
-        "lt": "Lithuania",
-        "ir": "Iran",
-        "pl": "Poland",
-        "br": "Brazil",
-        "pt": "Portugal",
-        "ro": "Romania",
-        "ru": "Russia",
-        "sk": "Slovakia",
-        "ar": "Argentina",
-        "cl": "Chile",
-        "cu": "Cuba",
-        "mx": "Mexico",
-        "es": "Spain",
-        "se": "Sweden",
-        "tr": "Turkey",
-        "ua": "Ukraine",
-        "pk": "Urdu"
+      "title": "Languages"
+    },
+    "contribute": {
+      "title": "Contribute"
+    },
+    "tools": {
+      "title": "Tools"
+    }
+  },
+  "playground": {
+    "title": "Sign Language Processing Playground"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Spoken Language Identification",
+        "import": "Import Module",
+        "load": "Load Model",
+        "find": "Identify Text",
+        "create": "Create"
       },
-      "spoken": {
-        "af": "Afrikaans",
-        "sq": "Albanian",
-        "am": "Amharic",
-        "ar": "Arabic",
-        "hy": "Armenian",
-        "az": "Azerbaijani",
-        "eu": "Basque",
-        "be": "Belarusian",
-        "bn": "Bengali",
-        "bs": "Bosnian",
-        "bg": "Bulgarian",
-        "ca": "Catalan",
-        "ceb": "Cebuano",
-        "ny": "Chichewa",
-        "zh-CN": "Chinese",
-        "co": "Corsican",
-        "hr": "Croatian",
-        "cs": "Czech",
-        "da": "Danish",
-        "nl": "Dutch",
-        "en": "English",
-        "eo": "Esperanto",
-        "et": "Estonian",
-        "tl": "Filipino",
-        "fi": "Finnish",
-        "fr": "French",
-        "fy": "Frisian",
-        "gl": "Galician",
-        "ka": "Georgian",
-        "de": "German",
-        "el": "Greek",
-        "gu": "Gujarati",
-        "ht": "Haitian Creole",
-        "ha": "Hausa",
-        "haw": "Hawaiian",
-        "he": "Hebrew",
-        "hi": "Hindi",
-        "hmn": "Hmong",
-        "hu": "Hungarian",
-        "is": "Icelandic",
-        "ig": "Igbo",
-        "id": "Indonesian",
-        "ga": "Irish",
-        "it": "Italian",
-        "ja": "Japanese",
-        "jw": "Javanese",
-        "kn": "Kannada",
-        "kk": "Kazakh",
-        "km": "Khmer",
-        "rw": "Kinyarwanda",
-        "ko": "Korean",
-        "ku": "Kurdish (Kurmanji)",
-        "ky": "Kyrgyz",
-        "lo": "Lao",
-        "la": "Latin",
-        "lv": "Latvian",
-        "lt": "Lithuanian",
-        "lb": "Luxembourgish",
-        "mk": "Macedonian",
-        "mg": "Malagasy",
-        "ms": "Malay",
-        "ml": "Malayalam",
-        "mt": "Maltese",
-        "mi": "Maori",
-        "mr": "Marathi",
-        "mn": "Mongolian",
-        "my": "Myanmar (Burmese)",
-        "ne": "Nepali",
-        "no": "Norwegian",
-        "or": "Odia (Oriya)",
-        "ps": "Pashto",
-        "fa": "Persian",
-        "pl": "Polish",
-        "pt": "Portuguese",
-        "pa": "Punjabi",
-        "ro": "Romanian",
-        "ru": "Russian",
-        "sm": "Samoan",
-        "gd": "Scots Gaelic",
-        "sr": "Serbian",
-        "st": "Sesotho",
-        "sn": "Shona",
-        "sd": "Sindhi",
-        "si": "Sinhala",
-        "sk": "Slovak",
-        "sl": "Slovenian",
-        "so": "Somali",
-        "es": "Spanish",
-        "su": "Sundanese",
-        "sw": "Swahili",
-        "sv": "Swedish",
-        "tg": "Tajik",
-        "ta": "Tamil",
-        "tt": "Tatar",
-        "te": "Telugu",
-        "th": "Thai",
-        "tr": "Turkish",
-        "tk": "Turkmen",
-        "uk": "Ukrainian",
-        "ur": "Urdu",
-        "ug": "Uyghur",
-        "uz": "Uzbek",
-        "vi": "Vietnamese",
-        "cy": "Welsh",
-        "xh": "Xhosa",
-        "yi": "Yiddish",
-        "yo": "Yoruba",
-        "zu": "Zulu"
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Worker Init",
+        "load": "Load Model",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Full Body Pose Estimation",
+        "load": "Model Load",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
       }
     }
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software and Licenses"
+    }
+  },
+  "appearance": {
+    "title": "Appearance",
+    "action": "Modify appearance",
+    "random": "Get a random photo",
+    "upload": "Upload your own photo"
   },
   "video": {
     "errors": {
@@ -201,6 +112,9 @@
   },
   "pose": {
     "loading": "Loading Pose Estimation..."
+  },
+  "language-selector": {
+    "label": "Change language or region"
   },
   "text-to-speech": {
     "play": "Listen",

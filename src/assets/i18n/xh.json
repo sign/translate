@@ -1,0 +1,143 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "IToliki kaSign",
+    "language-selector": {
+      "detected": "{lang}",
+      "detect": "Fumana ulwimi",
+      "more": "Iilwimi ezingakumbi"
+    },
+    "feedback": "Thumela ingxelo",
+    "input": {
+      "text": "Umbhalo",
+      "webcam": "Iwebcam",
+      "upload": "Layisha"
+    },
+    "swapLanguages": "Tshintsha iilwimi",
+    "upload": {
+      "types": "Layisha ifayili ye- .mp4, .ogv, okanye ye- .webm",
+      "browse": "Bhrawza ikhompyutha",
+      "title": "Khetha ividiyo"
+    },
+    "description": "Isixhobo sokuguqulela ulwimi lwezandla oluphindwe kabini kwi-desktop kunye neselfowuni",
+    "spoken-to-signed": {
+      "text": "Isicatshulwa solwimi oluthethwayo",
+      "actions": {
+        "download": "Khuphela Inguqulelo",
+        "copy": "Khuphela Inguqulelo",
+        "share": "Yabelana Ngenguqulelo"
+      }
+    }
+  },
+  "landing": {
+    "try": "ZAMA UKUGUQULELA",
+    "about": {
+      "title": "Malunga",
+      "hero": {
+        "title": "Guqulela phakathi kwe-40+ yeelwimi ezisayiniweyo nezithethwayo ngexesha lokwenyani.",
+        "img": "Umzekelo wenguqulelo ephilayo phakathi koLwimi lweZandla lwaseMelika kunye nesiNgesi"
+      }
+    },
+    "languages": {
+      "title": "Iilwimi"
+    },
+    "contribute": {
+      "title": "Nikela"
+    },
+    "tools": {
+      "title": "Izixhobo"
+    }
+  },
+  "text-to-speech": {
+    "play": "Mamela",
+    "cancel": "Yeka",
+    "unavailable": "Ukukhutshwa kwelizwi akufumaneki kulwimi olukhethiweyo"
+  },
+  "speech-to-text": {
+    "start": "Guqulela ngelizwi",
+    "stop": "Yeka ukuguqulela ngelizwi",
+    "not-allowed": "Udinga imvume yokusebenzisa imayikrofoni",
+    "language-not-supported": "Ulwimi olukhethiweyo aluxhaswanga",
+    "browser-not-supported": "Ungeniso lwelizwi aluxhaswanga kwesi sikhangeli"
+  },
+  "legal": {
+    "terms": {
+      "title": "Imimiselo"
+    },
+    "privacy": {
+      "title": "Yabucala"
+    },
+    "licenses": {
+      "title": "iSoftware kunye neMigaqo"
+    }
+  },
+  "playground": {
+    "title": "Ibala lokudlala lokuLungiselela uLwimi lweZandla"
+  },
+  "benchmark": {
+    "title": "Umlinganiselo",
+    "stats": {
+      "cld": {
+        "title": "Ukuchongwa kolwimi oluthethwayo",
+        "import": "Ngenisa Imodyuli",
+        "load": "Layisha iModeli",
+        "find": "Chonga Isiqendu",
+        "create": "Yenza"
+      },
+      "pix2pix": {
+        "title": "Umjongi wePose yoMntu",
+        "init": "Umsebenzi wokuqala",
+        "load": "Layisha iModeli",
+        "first-frame": "Ukungeniswa kwesakhelo sokuqala",
+        "frame": "Ukungeniswa kwesakhelo"
+      },
+      "pose": {
+        "title": "Uqikelelo lokuma komzimba ogcweleyo",
+        "load": "Umthwalo wemodeli",
+        "first-frame": "Ukungeniswa kwesakhelo sokuqala",
+        "frame": "Ukungeniswa kwesakhelo"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Imbonakalo",
+    "action": "Guqula inkangeleko",
+    "random": "Fumana ifoto engaqhelekanga",
+    "upload": "Layisha eyakho ifoto"
+  },
+  "video": {
+    "errors": {
+      "starting": "Ikhamera iyaqala",
+      "turnedOff": "Ikhamera icinyiwe",
+      "notConnected": "Ikhamera ayiqhagamshelwanga",
+      "permissionDenied": "Imvume yekhamera yaliwe"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Cima ikhamera",
+        "off": "Layita ikhamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ilayisha uqikelelo lweNdawo..."
+  },
+  "language-selector": {
+    "label": "Guqula ulwimi okanye ummandla"
+  },
+  "settings": {
+    "detectSign": "Khangela Uphawu",
+    "drawVideo": "Zoba iVidiyo",
+    "drawPose": "Zoba Ukuma",
+    "drawSignWriting": "Zoba uBhalo loMqondiso",
+    "animatePose": "Philisa Ukuma",
+    "poseViewer": {
+      "pose": "Amathambo",
+      "avatar": "IAvatar",
+      "human": "Umntu"
+    }
+  }
+}

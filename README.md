@@ -1,6 +1,6 @@
 [![Client Build Test Status](https://github.com/sign-language-processing/playground/actions/workflows/build_client.yml/badge.svg)](https://github.com/sign-language-processing/playground/actions/workflows/build_client.yml)
 [![Coverage Status](https://coveralls.io/repos/github/sign-language-processing/sign-translate/badge.svg?branch=master)](https://coveralls.io/github/sign-language-processing/sign-translate?branch=master)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/sign-language-processing/playground/blob/master/LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/sign-language-processing/playground/blob/master/LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sign-language-processing/playground/issues)
 
 
@@ -35,9 +35,9 @@ based on state-of-the-art real-time client side models.
 - Text / Microphone inputs
 - Text-to-speech
 - Spoken Language identification (Detect Language)
-- [Spoken language text to SignWriting translation](https://github.com/sign-language-processing/playground/issues/11)
+- Spoken language text to SignWriting translation
 - [SignWriting to pose sequence](https://github.com/sign-language-processing/sign-translate/issues/15)
-- [Text to pose sequence fallback (server side)](https://github.com/sign-language-processing/sign-translate/issues/17)
+- Text to pose sequence fallback (server side)
 - Skeleton / [Avatar](https://github.com/sign-language-processing/sign-translate/issues/16) / Human Pose Viewers
 - Copy / share / download video
 
