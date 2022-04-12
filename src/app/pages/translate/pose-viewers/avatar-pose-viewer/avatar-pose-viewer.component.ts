@@ -9,8 +9,6 @@ import {Store} from '@ngxs/store';
   styleUrls: ['./avatar-pose-viewer.component.scss']
 })
 export class AvatarPoseViewerComponent extends BasePoseViewerComponent {
-  @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
-
   @Input() src: string;
 
   constructor(store: Store) {

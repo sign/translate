@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {AboutAppearanceComponent} from './about-appearance.component';
+import {AppTranslocoModule} from '../../../../core/modules/transloco/transloco.module';
 
 describe('AboutAppearanceComponent', () => {
   let component: AboutAppearanceComponent;
@@ -8,7 +9,8 @@ describe('AboutAppearanceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutAppearanceComponent]
+      declarations: [AboutAppearanceComponent],
+      imports: [AppTranslocoModule]
     })
       .compileComponents();
   });

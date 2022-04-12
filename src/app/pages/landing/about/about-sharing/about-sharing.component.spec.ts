@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {AboutSharingComponent} from './about-sharing.component';
+import {AppTranslocoModule} from '../../../../core/modules/transloco/transloco.module';
 
 describe('AboutSharingComponent', () => {
   let component: AboutSharingComponent;
@@ -8,7 +9,8 @@ describe('AboutSharingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutSharingComponent]
+      declarations: [AboutSharingComponent],
+      imports: [AppTranslocoModule]
     })
       .compileComponents();
   });

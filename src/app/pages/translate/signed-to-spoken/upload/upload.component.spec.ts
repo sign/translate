@@ -64,7 +64,8 @@ describe('UploadComponent', () => {
   it('file upload should dispatch url', () => {
     const spy = spyOn(store, 'dispatch');
     const mockFile = createFileFromMockFile('test.mp4', '', 'video/mp4');
-    spyOnProperty(component.uploadEl, 'files', 'get').and.returnValue([mockFile]);
+    const mockFileList = [mockFile] as unknown as FileList;
+    spyOnProperty(component.uploadEl, 'files', 'get').and.returnValue(mockFileList);
 
     component.onFileUpload();
 
