@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {BaseComponent} from '../../../components/base/base.component';
-import {debounce, takeUntil, tap} from 'rxjs/operators';
+import {debounce, distinct, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
 import {Select, Store} from '@ngxs/store';
 import {CopySignedLanguageVideo, DownloadSignedLanguageVideo, SetSpokenLanguageText, ShareSignedLanguageVideo} from '../../../modules/translate/translate.actions';
@@ -41,6 +41,7 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
     // Local text changes
     this.text.valueChanges.pipe(
       debounce(() => interval(500)),
+      distinct(),
       tap((text) => this.store.dispatch(new SetSpokenLanguageText(text))),
       takeUntil(this.ngUnsubscribe)
     ).subscribe();
