@@ -15,7 +15,7 @@ const BPS = 2_000_000;
 @Component({
   selector: 'app-pose-viewer',
   template: ``,
-  styles: []
+  styles: [],
 })
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
@@ -76,21 +76,24 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       return;
     }
 
-    fromEvent(this.mediaRecorder, 'dataavailable').pipe(
-      tap((event: BlobEvent) => recordedChunks.push(event.data)),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    fromEvent(this.mediaRecorder, 'dataavailable')
+      .pipe(
+        tap((event: BlobEvent) => recordedChunks.push(event.data)),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
-    fromEvent(this.mediaRecorder, 'stop').pipe(
-      tap(() => {
-        stream.getTracks().forEach(track => track.stop());
-        const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
-        const url = URL.createObjectURL(blob);
-        this.setVideo(url);
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
-
+    fromEvent(this.mediaRecorder, 'stop')
+      .pipe(
+        tap(() => {
+          stream.getTracks().forEach(track => track.stop());
+          const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
+          const url = URL.createObjectURL(blob);
+          this.setVideo(url);
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
     const duration = this.poseEl.nativeElement.duration * 1000;
     this.mediaRecorder.start(duration);

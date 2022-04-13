@@ -13,10 +13,7 @@ describe('VideoControlsComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [VideoControlsComponent],
-      imports: [
-        AppTranslocoModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig)
-      ]
+      imports: [AppTranslocoModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
     }).compileComponents();
   }));
 

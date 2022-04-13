@@ -7,51 +7,43 @@ export class FlipTranslationDirection {
 export class SetInputMode {
   static readonly type = '[Translate] Set Input Mode';
 
-  constructor(public mode: InputMode) {
-  }
+  constructor(public mode: InputMode) {}
 }
-
 
 export class SetSpokenLanguage {
   static readonly type = '[Translate] Set Spoken Language';
 
-  constructor(public language: string) {
-  }
+  constructor(public language: string) {}
 }
 
 export class SetSignedLanguage {
   static readonly type = '[Translate] Set Signed Language';
 
-  constructor(public language: string) {
-  }
+  constructor(public language: string) {}
 }
 
 export class SetSpokenLanguageText {
   static readonly type = '[Translate] Set Spoken Language Text';
 
-  constructor(public text: string) {
-  }
+  constructor(public text: string) {}
 }
 
 export class SetSignedLanguageVideo {
   static readonly type = '[Translate] Set Signed Language Video';
 
-  constructor(public url: string) {
-  }
+  constructor(public url: string) {}
 }
 
 // TODO remove this action, this is a mock
 export class SetSignWritingText {
   static readonly type = '[Translate] SetSignWritingText';
 
-  constructor(public text: string[]) {
-  }
+  constructor(public text: string[]) {}
 }
 
 export class CopySignedLanguageVideo {
   static readonly type = '[Translate] Copy Signed Language Video';
 }
-
 
 export class ShareSignedLanguageVideo {
   static readonly type = '[Translate] Share Signed Language Video';
@@ -60,7 +52,6 @@ export class ShareSignedLanguageVideo {
 export class DownloadSignedLanguageVideo {
   static readonly type = '[Translate] Download Signed Language Video';
 }
-
 
 export class ChangeTranslation {
   static readonly type = '[Translate] Change Translation';

@@ -3,20 +3,18 @@ import * as comlink from 'comlink';
 import {transferableImage} from '../../core/helpers/image/transferable';
 import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Pix2PixService {
   worker: comlink.Remote<{
-    loadModel: () => Promise<void>,
-    translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>,
+    loadModel: () => Promise<void>;
+    translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
   }>;
 
   isFirstFrame = true;
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService) {
-  }
+  constructor(private gaTiming: GoogleAnalyticsTimingService) {}
 
   async loadModel(): Promise<void> {
     if (this.worker) {

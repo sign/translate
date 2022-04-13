@@ -5,11 +5,10 @@ import {StartCamera, StopVideo} from './video.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 import {firstValueFrom} from 'rxjs';
 
-
 describe('VideoState', () => {
   let store: Store;
   let navigatorService: NavigatorService;
-  let snapshot: { video: VideoStateModel };
+  let snapshot: {video: VideoStateModel};
 
   let mockCamera: MediaStream;
   let mockSettings: MediaTrackSettings;
@@ -22,19 +21,18 @@ describe('VideoState', () => {
       aspectRatio: 2,
       frameRate: 30,
       height: 720,
-      width: 1280
+      width: 1280,
     };
     mockTrack = {
       getSettings: () => mockSettings,
-      addEventListener: (() => {
-      }) as any
+      addEventListener: (() => {}) as any,
     } as MediaStreamTrack;
   });
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [NgxsModule.forRoot([VideoState])],
-      providers: [NavigatorService]
+      providers: [NavigatorService],
     });
 
     store = TestBed.inject(Store);
@@ -128,11 +126,11 @@ describe('VideoState', () => {
     '2-1': {w: 2000, h: 1000},
     '1-1': {w: 2000, h: 2000},
     '4-3': {w: 2000, h: 1500},
-    '16-9': {w: 1920, h: 1080}
+    '16-9': {w: 1920, h: 1080},
   };
-  for(const [ratio, {w, h}] of Object.entries(aspectRatios)) {
-    it(`Resolution ${w}:${h} should be of ratio "${ratio}"`, () =>{
-      expect(VideoState.aspectRatio(w/h)).toEqual(ratio);
+  for (const [ratio, {w, h}] of Object.entries(aspectRatios)) {
+    it(`Resolution ${w}:${h} should be of ratio "${ratio}"`, () => {
+      expect(VideoState.aspectRatio(w / h)).toEqual(ratio);
     });
   }
 });

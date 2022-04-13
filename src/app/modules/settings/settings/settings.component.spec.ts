@@ -15,11 +15,7 @@ describe('SettingsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsComponent],
-      imports: [
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-        FormsModule,
-        AppTranslocoModule
-      ]
+      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig), FormsModule, AppTranslocoModule],
     }).compileComponents();
   });
 

@@ -7,10 +7,9 @@ export const SpeechRecognition = (window as any).SpeechRecognition || (window as
 @Component({
   selector: 'app-speech-to-text',
   templateUrl: './speech-to-text.component.html',
-  styleUrls: ['./speech-to-text.component.css']
+  styleUrls: ['./speech-to-text.component.css'],
 })
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
-
   @Input() lang = 'en';
   @Output() changeText: EventEmitter<string> = new EventEmitter<string>();
 
@@ -45,7 +44,7 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
       this.changeText.emit('');
       this.isRecording = true;
     });
-    fromEvent(this.speechRecognition, 'end').subscribe(() => this.isRecording = false);
+    fromEvent(this.speechRecognition, 'end').subscribe(() => (this.isRecording = false));
 
     fromEvent(this.speechRecognition, 'speechend').subscribe(this.stop.bind(this));
   }
@@ -63,5 +62,4 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   stop(): void {
     this.speechRecognition.stop();
   }
-
 }

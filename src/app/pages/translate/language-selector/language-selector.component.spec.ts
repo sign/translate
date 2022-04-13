@@ -11,10 +11,7 @@ describe('LanguageSelectorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LanguageSelectorComponent],
-      imports: [
-        AppTranslocoModule,
-        AppAngularMaterialModule
-      ]
+      imports: [AppTranslocoModule, AppAngularMaterialModule],
     }).compileComponents();
   });
 

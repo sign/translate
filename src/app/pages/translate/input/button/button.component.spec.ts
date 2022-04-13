@@ -15,12 +15,7 @@ describe('TranslateInputButtonComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TranslateInputButtonComponent],
-      imports: [
-        MatButtonModule,
-        MatIconModule,
-        AppTranslocoModule,
-        NgxsModule.forRoot([TranslateState], ngxsConfig)
-      ]
+      imports: [MatButtonModule, MatIconModule, AppTranslocoModule, NgxsModule.forRoot([TranslateState], ngxsConfig)],
     }).compileComponents();
   });
 

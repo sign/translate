@@ -15,12 +15,8 @@ describe('HumanPoseViewerComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HumanPoseViewerComponent],
-      imports: [
-        Pix2PixModule,
-        MatProgressBarModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig)
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      imports: [Pix2PixModule, MatProgressBarModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

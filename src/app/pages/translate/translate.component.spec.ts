@@ -17,16 +17,13 @@ describe('TranslateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        TranslateComponent,
-        LanguageSelectorComponent
-      ],
+      declarations: [TranslateComponent, LanguageSelectorComponent],
       imports: [
         AppTranslocoModule,
         AppAngularMaterialModule,
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig)
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

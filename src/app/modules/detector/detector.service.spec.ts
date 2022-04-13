@@ -44,7 +44,7 @@ describe('DetectorService', () => {
       faceLandmarks: null,
       poseLandmarks: null,
       rightHandLandmarks: null,
-      leftHandLandmarks: null
+      leftHandLandmarks: null,
     } as Pose;
 
     const normalized = service.normalizePose(pose);
@@ -60,7 +60,7 @@ describe('DetectorService', () => {
       faceLandmarks: null,
       poseLandmarks: null,
       rightHandLandmarks: null,
-      leftHandLandmarks: null
+      leftHandLandmarks: null,
     } as Pose;
 
     const normalized = service.normalizePose(pose);
@@ -73,10 +73,18 @@ describe('DetectorService', () => {
   });
 
   describe('distance2DTensors', () => {
-    const p1: PoseLandmark[] = [{x: 1, y: 1, z: 2}, {x: 0, y: 1, z: 2}, {x: 7, y: 3, z: 5}];
-    const p2: PoseLandmark[] = [{x: 2, y: 3, z: 0}, {x: 0, y: 0, z: 0}, {x: 3, y: 4, z: 5}];
+    const p1: PoseLandmark[] = [
+      {x: 1, y: 1, z: 2},
+      {x: 0, y: 1, z: 2},
+      {x: 7, y: 3, z: 5},
+    ];
+    const p2: PoseLandmark[] = [
+      {x: 2, y: 3, z: 0},
+      {x: 0, y: 0, z: 0},
+      {x: 3, y: 4, z: 5},
+    ];
 
-    const distances = [2.23606, 0, 4.12310];
+    const distances = [2.23606, 0, 4.1231];
 
     it('should calculate distance between two poses', () => {
       const d = service.distance2DTensors(p1, p2);

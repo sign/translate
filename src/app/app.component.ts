@@ -5,7 +5,7 @@ import {tap} from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   constructor(private transloco: TranslocoService) {
@@ -13,12 +13,14 @@ export class AppComponent {
   }
 
   listenLanguageChange(): void {
-    this.transloco.langChanges$.pipe(
-      tap((lang) => {
-        document.documentElement.lang = lang;
-        document.dir = ['he', 'ar'].includes(lang) ? 'rtl' : 'ltr';
-      })
-    ).subscribe();
+    this.transloco.langChanges$
+      .pipe(
+        tap(lang => {
+          document.documentElement.lang = lang;
+          document.dir = ['he', 'ar'].includes(lang) ? 'rtl' : 'ltr';
+        })
+      )
+      .subscribe();
 
     const urlParams = new URLSearchParams(window.location.search);
     const urlParam = urlParams.get('lang');

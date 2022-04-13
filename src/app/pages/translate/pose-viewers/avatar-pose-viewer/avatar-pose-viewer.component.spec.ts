@@ -12,10 +12,8 @@ describe('AvatarPoseViewerComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AvatarPoseViewerComponent],
-      imports: [
-        NgxsModule.forRoot([SettingsState], ngxsConfig)
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

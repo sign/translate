@@ -11,10 +11,7 @@ describe('BenchmarkComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [BenchmarkComponent],
-      imports: [
-        AppAngularMaterialModule,
-        HttpClientModule
-      ]
+      imports: [AppAngularMaterialModule, HttpClientModule],
     }).compileComponents();
   });
 

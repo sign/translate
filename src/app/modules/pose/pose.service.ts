@@ -2,20 +2,18 @@ import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {Pose, PoseLandmark} from './pose.state';
-import {GoogleAnalyticsTimingService} from "../../core/modules/google-analytics/google-analytics.service";
+import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
 
 const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22];
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PoseService {
-
   model?: any;
   isFirstFrame = true;
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService) {
-  }
+  constructor(private gaTiming: GoogleAnalyticsTimingService) {}
 
   async load(): Promise<void> {
     if (this.model) {
@@ -23,11 +21,11 @@ export class PoseService {
     }
 
     this.gaTiming.time('pose', 'load', () => {
-      this.model = new holistic.Holistic({locateFile: (file) => `assets/models/holistic/${file}`});
+      this.model = new holistic.Holistic({locateFile: file => `assets/models/holistic/${file}`});
 
       this.model.setOptions({
         upperBodyOnly: false,
-        modelComplexity: 1
+        modelComplexity: 1,
       });
     });
   }
@@ -40,7 +38,7 @@ export class PoseService {
     const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
     await this.gaTiming.time('pose', frameType, () => {
       this.isFirstFrame = false;
-      return this.model.send({image: video})
+      return this.model.send({image: video});
     });
   }
 
@@ -54,15 +52,21 @@ export class PoseService {
     drawing.drawLandmarks(ctx, filteredLandmarks, {color: '#00FF00', fillColor: '#FF0000'});
   }
 
-  drawHand(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D, lineColor: string, dotColor: string, dotFillColor: string): void {
+  drawHand(
+    landmarks: PoseLandmark[],
+    ctx: CanvasRenderingContext2D,
+    lineColor: string,
+    dotColor: string,
+    dotFillColor: string
+  ): void {
     drawing.drawConnectors(ctx, landmarks, holistic.HAND_CONNECTIONS, {color: lineColor});
     drawing.drawLandmarks(ctx, landmarks, {
       color: dotColor,
       fillColor: dotFillColor,
       lineWidth: 2,
-      radius: (landmark) => {
-        return drawing.lerp(landmark.z, -0.15, .1, 10, 1);
-      }
+      radius: landmark => {
+        return drawing.lerp(landmark.z, -0.15, 0.1, 10, 1);
+      },
     });
   }
 
@@ -81,8 +85,7 @@ export class PoseService {
       const from = connector[0];
       const to = connector[1];
       if (from && to) {
-        if (from.visibility && to.visibility &&
-          (from.visibility < 0.1 || to.visibility < 0.1)) {
+        if (from.visibility && to.visibility && (from.visibility < 0.1 || to.visibility < 0.1)) {
           continue;
         }
         ctx.beginPath();

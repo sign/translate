@@ -4,16 +4,9 @@ import {NgxsModule} from '@ngxs/store';
 import {PoseState} from './pose.state';
 import {PoseNormalizationService} from './pose-normalization.service';
 
-
 @NgModule({
   declarations: [],
-  providers: [
-    PoseService,
-    PoseNormalizationService
-  ],
-  imports: [
-    NgxsModule.forFeature([PoseState])
-  ]
+  providers: [PoseService, PoseNormalizationService],
+  imports: [NgxsModule.forFeature([PoseState])],
 })
-export class PoseModule {
-}
+export class PoseModule {}

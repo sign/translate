@@ -4,25 +4,20 @@ import {NgxsModule, NgxsModuleOptions} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {VideoState} from './store/video/video.state';
 
-
-console.log('environment.production', environment.production)
 export const ngxsConfig: NgxsModuleOptions = {
   developmentMode: !environment.production,
   selectorOptions: {
     // These Selector Settings are recommended in preparation for NGXS v4
     // (See above for their effects)
     suppressErrors: false,
-    injectContainerState: false
+    injectContainerState: false,
   },
   compatibility: {
-    strictContentSecurityPolicy: true
-  }
+    strictContentSecurityPolicy: true,
+  },
 };
 
 @NgModule({
-  imports: [
-    NgxsModule.forRoot([SettingsState, VideoState], ngxsConfig)
-  ]
+  imports: [NgxsModule.forRoot([SettingsState, VideoState], ngxsConfig)],
 })
-export class AppNgxsModule {
-}
+export class AppNgxsModule {}

@@ -3,7 +3,7 @@ import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@an
 @Component({
   selector: 'app-text-to-speech',
   templateUrl: './text-to-speech.component.html',
-  styleUrls: ['./text-to-speech.component.scss']
+  styleUrls: ['./text-to-speech.component.scss'],
 })
 export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   @Input() lang = 'en';
@@ -15,7 +15,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
 
   speech = new SpeechSynthesisUtterance();
 
-  private listeners: { [key: string]: EventListener } = {};
+  private listeners: {[key: string]: EventListener} = {};
 
   ngOnInit(): void {
     const voicesLoaded = () => {
@@ -25,7 +25,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
     voicesLoaded(); // In case voices are already loaded
 
     // Safari does not support speechSynthesis events
-    if('addEventListener' in window.speechSynthesis) {
+    if ('addEventListener' in window.speechSynthesis) {
       this.listeners.voiceschanged = voicesLoaded;
 
       for (const [type, listener] of Object.entries(this.listeners)) {
@@ -33,8 +33,8 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
       }
     }
 
-    this.speech.addEventListener('start', () => this.isSpeaking = true);
-    this.speech.addEventListener('end', () => this.isSpeaking = false);
+    this.speech.addEventListener('start', () => (this.isSpeaking = true));
+    this.speech.addEventListener('end', () => (this.isSpeaking = false));
   }
 
   ngOnDestroy(): void {

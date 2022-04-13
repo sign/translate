@@ -14,7 +14,7 @@ describe('AnimationComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AnimationComponent],
-      imports: [NgxsModule.forRoot([AnimationState, SettingsState, PoseState], ngxsConfig)]
+      imports: [NgxsModule.forRoot([AnimationState, SettingsState, PoseState], ngxsConfig)],
     }).compileComponents();
   });
 

@@ -7,7 +7,7 @@ import {SetInputMode} from '../../../../modules/translate/translate.actions';
 @Component({
   selector: 'app-translate-input-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class TranslateInputButtonComponent {
   @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
@@ -15,8 +15,7 @@ export class TranslateInputButtonComponent {
   @Input() mode: InputMode;
   @Input() icon: string;
 
-  constructor(private store: Store) {
-  }
+  constructor(private store: Store) {}
 
   setInputMode(): void {
     this.store.dispatch(new SetInputMode(this.mode));

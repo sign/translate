@@ -2,7 +2,7 @@ import * as comlink from 'comlink';
 
 export async function transferableImage(image: HTMLCanvasElement | HTMLVideoElement): Promise<ImageBitmap | ImageData> {
   // createImageBitmap is supported in multiple browsers, but only Chrome supports WebGL in WebWorker
-  if (window.createImageBitmap && "chrome" in window) {
+  if (window.createImageBitmap && 'chrome' in window) {
     const bitmap = await createImageBitmap(image);
     return comlink.transfer(bitmap, [bitmap]);
   }

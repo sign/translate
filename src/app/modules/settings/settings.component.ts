@@ -11,7 +11,6 @@ export class BaseSettingsComponent extends BaseComponent {
     super();
   }
 
-
   applySetting(setting: keyof SettingsStateModel, value: any): void {
     this.store.dispatch(new SetSetting(setting, value));
   }

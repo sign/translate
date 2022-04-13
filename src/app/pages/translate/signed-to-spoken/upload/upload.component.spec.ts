@@ -22,10 +22,7 @@ describe('UploadComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [UploadComponent],
-      imports: [
-        AppTranslocoModule,
-        NgxsModule.forRoot([], ngxsConfig)
-      ]
+      imports: [AppTranslocoModule, NgxsModule.forRoot([], ngxsConfig)],
     }).compileComponents();
   });
 
@@ -42,7 +39,7 @@ describe('UploadComponent', () => {
   });
 
   it('upload button should click button', () => {
-    const spy = createSpy('click').and.callFake((e) => {
+    const spy = createSpy('click').and.callFake(e => {
       e.stopPropagation();
       e.preventDefault();
     });

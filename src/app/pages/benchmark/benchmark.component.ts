@@ -1,29 +1,29 @@
 import {Component} from '@angular/core';
 import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
-import {TranslationService} from "../../modules/translate/translate.service";
-import {PoseService} from "../../modules/pose/pose.service";
+import {TranslationService} from '../../modules/translate/translate.service';
+import {PoseService} from '../../modules/pose/pose.service';
 
 @Component({
   selector: 'app-benchmark',
   templateUrl: './benchmark.component.html',
-  styleUrls: ['./benchmark.component.scss']
+  styleUrls: ['./benchmark.component.scss'],
 })
 export class BenchmarkComponent {
-
   benchmarks = {
-    'cld': this.cldBench.bind(this),
-    'pix2pix': this.pix2pixBench.bind(this),
-    'pose': this.poseBench.bind(this),
+    cld: this.cldBench.bind(this),
+    pix2pix: this.pix2pixBench.bind(this),
+    pose: this.poseBench.bind(this),
   };
 
   stats = {};
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService,
-              private pix2pix: Pix2PixService,
-              private translation: TranslationService,
-              private pose: PoseService) {
-  }
+  constructor(
+    private gaTiming: GoogleAnalyticsTimingService,
+    private pix2pix: Pix2PixService,
+    private translation: TranslationService,
+    private pose: PoseService
+  ) {}
 
   async bench() {
     for (const bench of Object.values(this.benchmarks)) {
@@ -78,7 +78,7 @@ export class BenchmarkComponent {
 
     // Evaluate 30 texts
     for (let i = 0; i < 30; i++) {
-      this.translation.detectSpokenLanguage("Lorem ipsum dolor sit amet");
+      this.translation.detectSpokenLanguage('Lorem ipsum dolor sit amet');
       this.buildStats();
     }
   }
@@ -101,5 +101,4 @@ export class BenchmarkComponent {
       this.buildStats();
     }
   }
-
 }

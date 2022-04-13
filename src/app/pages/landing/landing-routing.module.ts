@@ -16,13 +16,12 @@ const routes: Routes = [
       {path: 'languages', component: LanguagesComponent},
       {path: 'contribute', component: ContributeComponent},
       {path: 'tools', component: ToolsComponent},
-    ]
-  }
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class LandingRoutingModule {
-}
+export class LandingRoutingModule {}
