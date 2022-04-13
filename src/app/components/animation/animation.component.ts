@@ -10,7 +10,7 @@ import {ThreeService} from '../../core/services/three.service';
 @Component({
   selector: 'app-animation',
   templateUrl: './animation.component.html',
-  styleUrls: ['./animation.component.css']
+  styleUrls: ['./animation.component.scss']
 })
 export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
@@ -50,13 +50,13 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     this.applyStyle(el);
 
     el.addEventListener('load', () => {
-      const scene = el[Object.getOwnPropertySymbols(el)[14]];
+      const scene = this.getScene();
 
       this.animationState$.pipe(
         map(a => a.tracks),
         tap((trackDict) => {
           const name = 'u' + (i++);
-          const tracks = [new this.three.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
+          const tracks = []; // new this.three.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])
           if (trackDict) {
             Object.entries(trackDict).forEach(([k, qs]) => {
               const times = qs.map((q, j) => j / this.fps);
@@ -75,6 +75,12 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         takeUntil(this.ngUnsubscribe)
       ).subscribe();
     });
+  }
+
+  getScene() {
+    const el = this.modelViewerEl.nativeElement;
+    const symbol = Object.getOwnPropertySymbols(el).find(symbol => String(symbol) === 'Symbol(scene)');
+    return el[symbol];
   }
 
   applyStyle(el: HTMLElement) {

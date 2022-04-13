@@ -87,7 +87,12 @@ export class TranslateState implements NgxsOnInit {
   }
 
   @Action(SetInputMode)
-  async setInputMode({patchState, dispatch}: StateContext<TranslateStateModel>, {mode}: SetInputMode): Promise<void> {
+  async setInputMode({patchState, getState, dispatch}: StateContext<TranslateStateModel>, {mode}: SetInputMode): Promise<void> {
+    const {inputMode} = getState();
+    if (inputMode === mode) {
+      return;
+    }
+
     patchState({inputMode: mode});
 
     dispatch([StopVideo, ChangeTranslation]);

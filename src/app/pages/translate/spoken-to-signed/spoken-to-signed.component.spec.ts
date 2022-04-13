@@ -52,6 +52,7 @@ describe('SpokenToSignedComponent', () => {
     tick(500);
 
     expect(spy).toHaveBeenCalledWith(new SetSpokenLanguageText('test'));
+    expect(spy).toHaveBeenCalledTimes(1);
   }));
 
   // TODO test state

@@ -5,6 +5,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {VideoState} from './store/video/video.state';
 
 
+console.log('environment.production', environment.production)
 export const ngxsConfig: NgxsModuleOptions = {
   developmentMode: !environment.production,
   selectorOptions: {
