@@ -1,6 +1,8 @@
-import {Component, ElementRef, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
+import {fromEvent} from 'rxjs';
+import {takeUntil, tap} from 'rxjs/operators';
 
 
 @Component({
@@ -8,12 +10,28 @@ import {Store} from '@ngxs/store';
   templateUrl: './avatar-pose-viewer.component.html',
   styleUrls: ['./avatar-pose-viewer.component.scss']
 })
-export class AvatarPoseViewerComponent extends BasePoseViewerComponent {
-  @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
-
+export class AvatarPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
+
+  fps: number = 1;
 
   constructor(store: Store) {
     super(store);
+  }
+
+  ngAfterViewInit(): void {
+    const poseEl = this.poseEl.nativeElement;
+    // TODO reset animation through the store
+    fromEvent(poseEl, 'firstRender$').pipe(
+      tap(async () => {
+        const pose = await poseEl.getPose();
+
+        this.fps = pose.body.fps;
+        console.log('FPS', this.fps);
+        console.log('Pose', pose);
+        // TODO send pose tensor to the animation service (through the store)
+      }),
+      takeUntil(this.ngUnsubscribe)
+    ).subscribe();
   }
 }

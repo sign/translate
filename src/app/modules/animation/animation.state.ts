@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 import {AnimatePose} from './animation.actions';
 
 export interface AnimationStateModel {
-  tracks: { [key: string]: [number, number, number, number] };
+  tracks: { [key: string]: [number, number, number, number][] };
 }
 
 const initialState: AnimationStateModel = {
@@ -45,7 +45,7 @@ export class AnimationState implements NgxsOnInit {
 
   @Action(AnimatePose)
   async animatePose({getState, patchState}: StateContext<AnimationStateModel>, {pose}: AnimatePose): Promise<void> {
-    const tracks = this.animation.estimate(pose);
+    const tracks = this.animation.estimate([pose]);
     patchState({tracks});
   }
 }

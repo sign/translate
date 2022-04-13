@@ -1,5 +1,9 @@
 <h2>Avatar not yet supported with OpenPose.</h2>
 
-<app-animation></app-animation>
+<app-animation [fps]="fps"></app-animation>
 
-<canvas #canvas width="256" height="256"></canvas>
+<pose-viewer #poseViewer [attr.src]="src"
+             [attr.autoplay]="false"
+             [attr.loop]="false"
+             width="10px"
+             height="10px"></pose-viewer>

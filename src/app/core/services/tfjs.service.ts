@@ -28,6 +28,10 @@ export class TensorflowService {
     return this.tf.tidy;
   }
 
+  get stack(): typeof tf.stack {
+    return this.tf.stack;
+  }
+
   get loadLayersModel(): typeof tf.loadLayersModel {
     return this.tf.loadLayersModel;
   }

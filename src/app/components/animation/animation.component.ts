@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
@@ -17,6 +17,8 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
   @Select(state => state.animation) animationState$: Observable<AnimationStateModel>;
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
+
+  @Input() fps = 1;
 
   static isCustomElementDefined = false;
 
@@ -56,8 +58,10 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
           const name = 'u' + (i++);
           const tracks = [new this.three.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])];
           if (trackDict) {
-            Object.entries(trackDict).forEach(([k, q]) => {
-              tracks.push(new this.three.QuaternionKeyframeTrack(k, [0], q));
+            Object.entries(trackDict).forEach(([k, qs]) => {
+              const times = qs.map((q, j) => j / this.fps);
+              const flatQs = [].concat(...qs);
+              tracks.push(new this.three.QuaternionKeyframeTrack(k, times, flatQs));
             });
           }
           const newAnimation = new this.three.AnimationClip(name, 0, tracks);

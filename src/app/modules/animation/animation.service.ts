@@ -75,15 +75,18 @@ export class AnimationService {
     return normTensor;
   }
 
-  estimate(pose: Pose): { [key: string]: [number, number, number, number] } {
+  estimate(poses: Pose[]): { [key: string]: [number, number, number, number][] } {
     if (!this.sequentialModel) {
       return null;
     }
 
     const quaternions = this.tf.tidy(() => {
-      const normalized = this.normalizePose(pose).reshape([1, 1, 75 * 3]);
-      const pred: Tensor = this.sequentialModel.predict(normalized) as Tensor;
-      return pred.reshape([ANIMATION_KEYS.length, 4]).arraySync();
+      const normalized = poses.map(pose => this.normalizePose(pose).reshape([1, 75 * 3]));
+      const stack = this.tf.stack(normalized, 1);
+      const pred: Tensor = this.sequentialModel.predict(stack) as Tensor;
+      const sequence = pred.reshape([normalized.length, ANIMATION_KEYS.length, 4]);
+      const keysSequence = sequence.transpose([1, 0, 2]);
+      return keysSequence.arraySync()
     });
 
     const tracks = {};
