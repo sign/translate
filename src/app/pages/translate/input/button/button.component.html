@@ -1,4 +1,4 @@
 <button (click)="setInputMode()" [class.selected]="(inputMode$ | async) === mode" color="primary" mat-stroked-button>
-  <mat-icon>{{icon}}</mat-icon>
-  {{'translate.input.' + mode | transloco}}
+  <mat-icon>{{ icon }}</mat-icon>
+  {{ 'translate.input.' + mode | transloco }}
 </button>

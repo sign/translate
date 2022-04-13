@@ -1,4 +1,6 @@
-<mat-selection-list (ngModelChange)="onSettingsChange($event)" *transloco="let t; read: 'settings'"
-                    [(ngModel)]="this.currentSettings">
-  <mat-list-option *ngFor="let s of availableSettings" [value]="s">{{t(s)}}</mat-list-option>
+<mat-selection-list
+  (ngModelChange)="onSettingsChange($event)"
+  *transloco="let t; read: 'settings'"
+  [(ngModel)]="this.currentSettings">
+  <mat-list-option *ngFor="let s of availableSettings" [value]="s">{{ t(s) }}</mat-list-option>
 </mat-selection-list>

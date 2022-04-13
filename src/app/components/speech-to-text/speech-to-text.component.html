@@ -1,13 +1,21 @@
 <ng-container *transloco="let t; read: 'speech-to-text'">
   <!-- As a single button it is uglier code, but nice ripple animation -->
-  <button mat-icon-button (click)="isRecording ? stop() : start()" *ngIf="!supportError"
-          [attr.aria-label]="t(isRecording ? 'stop' : 'start')"
-          [matTooltipPosition]="'above'" [matTooltip]="t(isRecording ? 'stop' : 'start')">
-    <mat-icon>{{isRecording ? 'stop' : 'mic'}}</mat-icon>
+  <button
+    mat-icon-button
+    (click)="isRecording ? stop() : start()"
+    *ngIf="!supportError"
+    [attr.aria-label]="t(isRecording ? 'stop' : 'start')"
+    [matTooltipPosition]="'above'"
+    [matTooltip]="t(isRecording ? 'stop' : 'start')">
+    <mat-icon>{{ isRecording ? 'stop' : 'mic' }}</mat-icon>
   </button>
   <!-- If language is not supported -->
-  <button mat-icon-button *ngIf="supportError" [attr.aria-label]="t(supportError)"
-          [matTooltipPosition]="'above'" [matTooltip]="t(supportError)">
+  <button
+    mat-icon-button
+    *ngIf="supportError"
+    [attr.aria-label]="t(supportError)"
+    [matTooltipPosition]="'above'"
+    [matTooltip]="t(supportError)">
     <mat-icon>mic_off</mat-icon>
   </button>
 </ng-container>

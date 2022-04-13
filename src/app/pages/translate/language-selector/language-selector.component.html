@@ -1,12 +1,13 @@
 <ng-container *transloco="let t; read: 'translate.language-selector'">
-  <mat-tab-group (selectedIndexChange)="selectLanguageIndex($event)"
-                 [(selectedIndex)]="selectedIndex"
-                 [disablePagination]="true">
+  <mat-tab-group
+    (selectedIndexChange)="selectLanguageIndex($event)"
+    [(selectedIndex)]="selectedIndex"
+    [disablePagination]="true">
     <ng-container *ngIf="hasLanguageDetection">
       <ng-container *ngIf="detectedLanguage$ | async as detectedLanguage; else detectLanguage">
         <mat-tab>
           <ng-template mat-tab-label>
-            {{t('detected', {lang: translationKey + '.' + detectedLanguage | transloco})}}
+            {{ t('detected', {lang: translationKey + '.' + detectedLanguage | transloco}) }}
           </ng-template>
         </mat-tab>
       </ng-container>
@@ -17,7 +18,7 @@
     <mat-tab (select)="selectLanguage(lang)" *ngFor="let lang of topLanguages">
       <ng-template mat-tab-label>
         <flag-icon *ngIf="flags" [country]="lang" [squared]="true"></flag-icon>
-        {{translationKey + '.' + lang | transloco}}
+        {{ translationKey + '.' + lang | transloco }}
       </ng-template>
     </mat-tab>
   </mat-tab-group>
@@ -26,33 +27,35 @@
   <ng-container *ngIf="hasLanguageDetection && detectedLanguage$ | async as detectedLanguage; else detectLanguage">
     <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
       <flag-icon *ngIf="flags" [country]="detectLanguage" [squared]="true"></flag-icon>
-      {{t('detected', {lang: translationKey + '.' + detectedLanguage | transloco})}}
+      {{ t('detected', {lang: translationKey + '.' + detectedLanguage | transloco}) }}
     </button>
   </ng-container>
   <ng-template #detectLanguage>
     <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
       <ng-container *ngIf="language; else noLanguage">
         <flag-icon *ngIf="flags" [country]="language" [squared]="true"></flag-icon>
-        {{translationKey + '.' + language | transloco}}
+        {{ translationKey + '.' + language | transloco }}
       </ng-container>
-      <ng-template #noLanguage>{{t('detect')}}</ng-template>
+      <ng-template #noLanguage>{{ t('detect') }}</ng-template>
     </button>
   </ng-template>
 
-
   <!-- Expand icon for large screens -->
-  <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-icon-button" mat-icon-button
-          [attr.aria-label]="t('more')">
+  <button
+    [matMenuTriggerFor]="signedLanguagesMenu"
+    class="menu-icon-button"
+    mat-icon-button
+    [attr.aria-label]="t('more')">
     <mat-icon>expand_more</mat-icon>
   </button>
   <mat-menu #signedLanguagesMenu class="language-selector-menu">
     <ng-template matMenuContent>
       <button (click)="selectLanguage(null)" mat-menu-item *ngIf="hasLanguageDetection">
-        {{t('detect')}}
+        {{ t('detect') }}
       </button>
       <button (click)="selectLanguage(language)" *ngFor="let language of languages" mat-menu-item>
         <flag-icon *ngIf="flags" [country]="language" [squared]="true"></flag-icon>
-        {{translationKey + '.' + language | transloco}}
+        {{ translationKey + '.' + language | transloco }}
       </button>
     </ng-template>
   </mat-menu>
