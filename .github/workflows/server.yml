@@ -9,6 +9,7 @@ on:
     branches: [ master ]
     paths:
       - 'functions/**'
+      - '.github/workflows/server.yml'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -49,7 +50,5 @@ jobs:
         run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}" > $HOME/gcloud.json
 
       - name: Deploy Cloud Functions
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: $HOME/gcloud.json
         working-directory: functions
-        run: npm run deploy
+        run: export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud.json && npm run deploy

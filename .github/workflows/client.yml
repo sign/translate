@@ -9,6 +9,7 @@ on:
     branches: [ master ]
     paths-ignore:
       - 'functions/**'
+      - '.github/workflows/server.yml'
   pull_request:
     branches: [ master ]
 
