@@ -11,6 +11,8 @@ mat-tab-group {
 
 // Make language expansion menu show the correct icon
 button.menu-icon-button {
+  margin-top: 2px;
+
   mat-icon {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
