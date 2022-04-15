@@ -50,3 +50,8 @@ Thumbs.db
 
 # Tools
 tools/cache
+
+# Firebase
+functions/lib
+functions/src/playground.ts
+.firebase

@@ -93,4 +93,4 @@ shape from an image can ignore the variation in rotation, view, and plane, and m
 to a fixed orientation.
 
 Thus, we go on a quest to find the best, accurate 3D hand pose estimation system, based on the 3D rotation consistency
-alone: [3D Hand Pose Benchmark](https://github.com/sign-language-processing/3d-hands-benchmark).
+alone: [3D Hand Pose Benchmark](https://github.com/sign/3d-hands-benchmark).

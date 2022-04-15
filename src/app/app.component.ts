@@ -17,6 +17,10 @@ export class AppComponent {
       tap((lang) => {
         document.documentElement.lang = lang;
         document.dir = ['he', 'ar'].includes(lang) ? 'rtl' : 'ltr';
+
+        // Set pre-rendered cloud function path with lang attribute
+        const openSearch = Array.from(document.head.children).find(t => t.getAttribute('rel') === 'search');
+        openSearch.setAttribute('href', `/opensearch.xml?lang=${lang}`);
       })
     ).subscribe();
 

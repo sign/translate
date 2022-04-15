@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Build
+name: Client
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -28,7 +28,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+          key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
 
       - name: Install Dependencies
         run: npm install
@@ -50,16 +50,22 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Copy 404 page
-        run: cp dist/sign-translate/index.html dist/sign-translate/404.html
-
       - name: Generate Sitemap
         run: node tools/sitemap-generator.js
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - name: Deploy Live Channel 🚀
+        if: github.ref == 'refs/heads/master'
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist/sign-translate/ # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
+          channelId: live
+          projectId: sign-mt
+
+      - name: Deploy Development Channel 🚀
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
+          projectId: sign-mt

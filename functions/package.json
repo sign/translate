@@ -1,0 +1,29 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions:translate",
+    "logs": "firebase functions:log",
+    "playground": "node lib/playground.js"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.20.1",
+    "http-errors": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/http-errors": "^1.8.2",
+    "firebase-functions-test": "^0.3.3",
+    "typescript": "^4.6.3"
+  },
+  "private": true
+}

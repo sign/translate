@@ -2,7 +2,7 @@
 
 Paper: https://arxiv.org/abs/2008.04637
 
-Training code: https://github.com/sign-language-processing/detection-train
+Training code: https://github.com/sign/detection-train
 
 Video: https://www.youtube.com/watch?v=nozz2pvbG_Q
 
