@@ -1,8 +1,6 @@
 {
   "functions": {
-    "predeploy": [
-      "cd functions && npm run build"
-    ],
+    "predeploy": ["cd functions && npm run build"],
     "source": "functions"
   },
   "hosting": {

@@ -3,21 +3,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": [
-      "jasmine",
-      "@types/dom-speech-recognition",
-      "@types/node",
-      "@types/offscreencanvas",
-      "@types/long"
-    ]
+    "types": ["jasmine", "@types/dom-speech-recognition", "@types/node", "@types/offscreencanvas", "@types/long"]
   },
-  "files": [
-    "src/test.ts",
-    "src/polyfills.ts",
-    "node_modules/pose-viewer/dist/types/components.d.ts"
-  ],
-  "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
-  ]
+  "files": ["src/test.ts", "src/polyfills.ts", "node_modules/pose-viewer/dist/types/components.d.ts"],
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }

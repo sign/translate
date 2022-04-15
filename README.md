@@ -3,11 +3,9 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/sign/translate/blob/master/LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sign/translate/issues)
 
-
-
 # [👋 Sign Translate](https://sign.mt/)
 
-A bi-directional multilingual translation app for desktop and mobile, 
+A bi-directional multilingual translation app for desktop and mobile,
 based on state-of-the-art real-time client side models.
 
 ### Key Features

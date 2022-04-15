@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const path = require("path")
+const path = require('path');
 const fs = require('fs');
 
 const DEFAULT_LANGUAGE = 'en';
@@ -14,13 +14,15 @@ for (const file of fs.readdirSync(langsDir)) {
   const filePath = langsDir + path.sep + file;
   languages[lang] = {
     filePath,
-    content: JSON.parse(String(fs.readFileSync(filePath)))
+    content: JSON.parse(String(fs.readFileSync(filePath))),
   };
 }
 
 async function translate(text, sourceLanguage, targetLanguage) {
-  console.log("translate", {text, sourceLanguage, targetLanguage})
-  const requestStr = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLanguage}&tl=${targetLanguage}&dt=t&q=${encodeURIComponent(text)}`;
+  console.log('translate', {text, sourceLanguage, targetLanguage});
+  const requestStr = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLanguage}&tl=${targetLanguage}&dt=t&q=${encodeURIComponent(
+    text
+  )}`;
 
   const req = await fetch(requestStr);
   const json = await req.json();
@@ -30,20 +32,19 @@ async function translate(text, sourceLanguage, targetLanguage) {
 async function translateMissingEntries(source, target, targetLanguage) {
   for (const [key, value] of Object.entries(source)) {
     if (!(key in target)) {
-      if (typeof value === "string") {
+      if (typeof value === 'string') {
         target[key] = await translate(value, DEFAULT_LANGUAGE, targetLanguage);
       } else {
         target[key] = {};
         await translateMissingEntries(value, target[key], targetLanguage);
       }
     } else {
-      if (typeof value !== "string") {
+      if (typeof value !== 'string') {
         await translateMissingEntries(value, target[key], targetLanguage);
       }
     }
   }
 }
-
 
 async function main() {
   // Iterate files and translate missing entries
@@ -55,8 +56,9 @@ async function main() {
   }
 }
 
-main().then(() => process.exit(0)).catch(() => process.exit(1));
-
+main()
+  .then(() => process.exit(0))
+  .catch(() => process.exit(1));
 
 /** NOTE!
  For spoken languages, go to Google Translate (https://translate.google.com/?hl=iw)
@@ -68,4 +70,3 @@ main().then(() => process.exit(0)).catch(() => process.exit(1));
  });
  JSON.stringify(langs);
  **/
-

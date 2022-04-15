@@ -22,11 +22,11 @@
     }
   ],
   "protocol_handlers": [
-      {
-        "protocol": "web+sign",
-        "url": "/?text=%s"
-      }
-    ],
+    {
+      "protocol": "web+sign",
+      "url": "/?text=%s"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Translate sign language",

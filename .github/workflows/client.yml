@@ -6,13 +6,12 @@ name: Client
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
     paths-ignore:
       - 'functions/**'
       - '.github/workflows/server.yml'
   pull_request:
-    branches: [ master ]
-
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

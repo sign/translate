@@ -1,4 +1,4 @@
-import { RequestHandler } from 'express';
+import {RequestHandler} from 'express';
 import * as functions from 'firebase-functions';
 
 export const optionalMiddleware = (middleware: RequestHandler) => {

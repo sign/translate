@@ -32,33 +32,33 @@ plane can - but not necessarily - create a distinction between two signs. For ex
 social or romantic appointment or engagement), and for "dessert", exhibit the same hand shape, view, rotation, contact,
 and movement, but differ by plane.
 
-**Date**  vs **Dessert**
+**Date** vs **Dessert**
 
 ![date](https://www.signbank.org/signpuddle2.0/glyphogram.php?text=AS10110S10118S20600M17x22S101101xn21S10118n17xn21S20600n11x11&pad=10&name=date)
 ![dessert](https://www.signbank.org/signpuddle2.0/glyphogram.php?text=AS10140S10148S20600M17x21S101401xn22S10148n17xn22S20600n11x10&pad=10&name=dessert)
 
-To analyze each hand's plane, we compare the *dy* and *dz* of the *middle finger metacarpal bone* (spanning from the *
-wrist* (or *sst*), to the *middle finger metacarpophalngeal joint* (or *mmcp*)). If $dy = |mmcp.y - sst.y|$ is greater
+To analyze each hand's plane, we compare the _dy_ and _dz_ of the _middle finger metacarpal bone_ (spanning from the _
+wrist_ (or _sst_), to the _middle finger metacarpophalngeal joint_ (or _mmcp_)). If $dy = |mmcp.y - sst.y|$ is greater
 than $dz = |mmcp.z - sst.z|$ we consider the hand parallel to the wall plane. Otherwise, we consider the hand parallel
 to the floor plane.
 
 ## Rotation
 
-Rotation is the *∠XY* angle of a hand in relation to the body. SignWriting groups the hand rotation into eight equal
+Rotation is the _∠XY_ angle of a hand in relation to the body. SignWriting groups the hand rotation into eight equal
 buckets, each spanning 45 degrees - $B_i = [-22.5 + 45*i, 22.5 + 45*i]$.
 
-To analyze each hand's rotation, we calculate the angle of the line created by the *middle finger metacarpal bone* -
+To analyze each hand's rotation, we calculate the angle of the line created by the _middle finger metacarpal bone_ -
 $tan^{-1}(mmcp.y - sst.y / mmcp.x - sst.x)$, and find the bucket it should be categorized to.
 
 ## View
 
-View is the distinction between the hand's various *y* rotations, grouped to four categories:
+View is the distinction between the hand's various _y_ rotations, grouped to four categories:
 
 1. Back - the signer can only observe the back of their hand.
 2. Palm - the signer can only observe the front of their hand.
 3. Sideways - the signer can observe both sides of their hand. The back of the hand on the same side as its handedness (
    e.g, the back of the hand on the right side, for the right hand).
-3. Other-sideways - the signer can observe both sides of their hand, but the hand is rotated to the other side than 3.
+4. Other-sideways - the signer can observe both sides of their hand, but the hand is rotated to the other side than 3.
 
 TODO - define these better.
 

@@ -57,9 +57,7 @@
               }
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules/"
-              ]
+              "includePaths": ["node_modules/"]
             },
             "scripts": [],
             "serviceWorker": true,
@@ -151,9 +149,7 @@
                 "output": "./assets/i18n/"
               }
             ],
-            "styles": [
-              "src/theme/styles.scss"
-            ],
+            "styles": ["src/theme/styles.scss"],
             "scripts": [],
             "webWorkerTsConfig": "tsconfig.worker.json"
           }
@@ -161,10 +157,7 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
         }
       }

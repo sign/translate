@@ -2,7 +2,6 @@ import * as express from 'express';
 import * as functions from 'firebase-functions';
 import {errorMiddleware} from '../middlewares/error.middleware';
 
-
 const app = express();
 
 app.get('/opensearch.xml', (req, res) => {
@@ -20,7 +19,6 @@ app.get('/opensearch.xml', (req, res) => {
   res.set('Cache-Control', 'public, max-age=86400'); // one day
   res.send(body);
 });
-
 
 app.use(errorMiddleware);
 
