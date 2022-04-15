@@ -5,7 +5,7 @@ import {errorMiddleware} from '../middlewares/error.middleware';
 
 const app = express();
 
-app.get('/opensearch.xml', async (req, res) => {
+app.get('/opensearch.xml', (req, res) => {
   // TODO support language selection - opensearch.xml?lang=he
 
   const body = `
@@ -17,25 +17,6 @@ app.get('/opensearch.xml', async (req, res) => {
 </OpenSearchDescription>`;
 
   res.set('Content-Type', 'text/xml');
-  res.set('Cache-Control', 'public, max-age=86400'); // one day
-  res.send(body);
-});
-
-app.get('/robots.txt', async (req, res) => {
-  // TODO make the URL dynamically?
-  functions.logger.log({
-    url: req.url,
-    baseUrl: req.baseUrl
-  });
-
-  const body = `
-User-agent: *
-Allow: /
-
-Sitemap: https://sign.mt/sitemap-index.xml
-`;
-
-  res.set('Content-Type', 'text/plain');
   res.set('Cache-Control', 'public, max-age=86400'); // one day
   res.send(body);
 });

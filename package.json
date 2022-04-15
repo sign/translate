@@ -13,7 +13,7 @@
     "test": "ng test --code-coverage",
     "test:chrome": "ng test --browsers=Chrome --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless,FirefoxHeadless --watch=false --code-coverage",
-    "deploy": "npm run build && firebase deploy --only=hosting",
+    "deploy": "npm run build && node tools/sitemap-generator.js && firebase deploy --only=hosting",
     "prepare:husky": "cp -r ./node_modules/@sign/configuration/.husky/ .husky/",
     "prepare": "husky install && npm run prepare:husky"
   },

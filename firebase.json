@@ -16,7 +16,7 @@
       },
       {
         "source": "/robots.txt",
-        "function": "translate-prerender"
+        "destination": "/assets/robots.txt"
       },
       {
         "source": "**",

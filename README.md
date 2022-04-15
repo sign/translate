@@ -1,7 +1,7 @@
-[![Client Build Test Status](https://github.com/sign/playground/actions/workflows/client.yml/badge.svg)](https://github.com/sign/playground/actions/workflows/client.yml)
+[![Client Build Test Status](https://github.com/sign/translate/actions/workflows/client.yml/badge.svg)](https://github.com/sign/translate/actions/workflows/client.yml)
 [![Coverage Status](https://coveralls.io/repos/github/sign/translate/badge.svg?branch=master)](https://coveralls.io/github/sign/translate?branch=master)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/sign/playground/blob/master/LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sign/playground/issues)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/sign/translate/blob/master/LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sign/translate/issues)
 
 
 
@@ -58,7 +58,7 @@ based on state-of-the-art real-time client side models.
 ```
 
 - Camera / File upload video inputs
-- SignWriting hand shape and [orientation](https://github.com/sign/playground/issues/1) estimation
+- SignWriting hand shape and [orientation](https://github.com/sign/translate/issues/1) estimation
 - SignWriting facial features estimation
 - [Signed Language identification (Detect Language)](https://github.com/sign/translate/issues/21)
 - [Segmentation]() - **TODO CREATE ISSUE**
