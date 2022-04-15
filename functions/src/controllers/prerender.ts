@@ -12,7 +12,7 @@ app.get('/opensearch.xml', async (req, res) => {
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>Sign Translate</ShortName>
   <Description>Get translations from Sign Translate.</Description>
-  <Url type="text/html" method="get" template="https://translate.sign.mt/?text={searchTerms}"/>
+  <Url type="text/html" method="get" template="https://sign.mt/?text={searchTerms}"/>
   <Image width="32" height="32" alt="">https://sign.mt/assets/icons/favicon.svg</Image>
 </OpenSearchDescription>`;
 
