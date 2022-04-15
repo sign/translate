@@ -44,7 +44,7 @@ jobs:
       #          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Service Account Key
-        run: echo ‘${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}’ > $HOME/gcloud.json
+        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}" > $HOME/gcloud.json
 
       - name: Deploy Cloud Functions
         env:
