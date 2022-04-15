@@ -51,6 +51,12 @@ body {
   @media (prefers-color-scheme: dark) {
     background-color: black;
   }
+
+  &.embed {
+    mat-toolbar, #input-mode-group, #feedback {
+      display: none !important;
+    }
+  }
 }
 
 app-root {

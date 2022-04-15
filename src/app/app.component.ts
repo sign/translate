@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {tap} from 'rxjs/operators';
+import {Store} from '@ngxs/store';
+import {SetSpokenLanguageText} from './modules/translate/translate.actions';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,12 @@ import {tap} from 'rxjs/operators';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private transloco: TranslocoService) {
+  urlParams = new URLSearchParams(window.location.search);
+
+  constructor(private transloco: TranslocoService, private store: Store) {
     this.listenLanguageChange();
+    this.checkURLEmbedding();
+    this.checkURLText();
   }
 
   listenLanguageChange(): void {
@@ -26,9 +32,22 @@ export class AppComponent {
       )
       .subscribe();
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlParam = urlParams.get('lang');
+    const urlParam = this.urlParams.get('lang');
     const [navigatorParam] = navigator.language.split('-');
     this.transloco.setActiveLang(urlParam || navigatorParam);
+  }
+
+  checkURLEmbedding(): void {
+    const urlParam = this.urlParams.get('embed');
+    if (urlParam !== null) {
+      document.body.classList.add('embed');
+    }
+  }
+
+  checkURLText(): void {
+    const urlParam = this.urlParams.get('text');
+    if (urlParam !== null) {
+      this.store.dispatch(new SetSpokenLanguageText(urlParam));
+    }
   }
 }
