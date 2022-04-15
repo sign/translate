@@ -5,10 +5,9 @@ import {BaseSettingsComponent} from '../../../modules/settings/settings.componen
 @Component({
   selector: 'app-appearance',
   templateUrl: './appearance.component.html',
-  styleUrls: ['./appearance.component.scss']
+  styleUrls: ['./appearance.component.scss'],
 })
 export class AppearanceComponent extends BaseSettingsComponent {
-
   appearances = [
     {src: 'assets/appearance/maayan.png', title: 'Maayan', value: '#ffc8c8', disabled: false},
     {src: 'assets/appearance/amit.png', title: 'Amit', value: '#c8c8ff', disabled: false},
@@ -16,9 +15,9 @@ export class AppearanceComponent extends BaseSettingsComponent {
     {src: 'assets/appearance/random-4.jpg', title: 'Random', value: '', disabled: true},
     {src: 'assets/appearance/random-5.jpg', title: 'Random', value: '', disabled: true},
     {src: 'assets/appearance/random-6.jpg', title: 'Random', value: '', disabled: true},
-    {src: 'assets/appearance/random-7.jpg', title: 'Random', value: '', disabled: true}
+    {src: 'assets/appearance/random-7.jpg', title: 'Random', value: '', disabled: true},
   ];
-  
+
   constructor(store: Store) {
     super(store);
   }

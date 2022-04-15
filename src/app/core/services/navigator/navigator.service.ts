@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NavigatorService {
   async getCamera(options: MediaTrackConstraints): Promise<MediaStream> {

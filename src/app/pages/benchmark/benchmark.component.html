@@ -1,19 +1,20 @@
 <ng-container *transloco="let t; read: 'benchmark'">
   <mat-toolbar>
     <mat-icon>analytics</mat-icon>
-    <span>{{t('title')}}</span>
+    <span>{{ t('title') }}</span>
   </mat-toolbar>
 
   <div id="container">
     <button mat-raised-button color="primary" (click)="bench()">Start Benchmarking!</button>
 
     <mat-card *ngFor="let stat of stats | keyvalue">
-      <mat-card-title>{{t('stats.' + stat.key + '.title')}}</mat-card-title>
+      <mat-card-title>{{ t('stats.' + stat.key + '.title') }}</mat-card-title>
       <mat-card-content>
         <br />
-        <app-benchmark-item *ngFor="let item of stat.value | keyvalue"
-                            [title]="t('stats.' + stat.key + '.' + item.key)"
-                            [timings]="item.value"></app-benchmark-item>
+        <app-benchmark-item
+          *ngFor="let item of stat.value | keyvalue"
+          [title]="t('stats.' + stat.key + '.' + item.key)"
+          [timings]="item.value"></app-benchmark-item>
       </mat-card-content>
     </mat-card>
   </div>

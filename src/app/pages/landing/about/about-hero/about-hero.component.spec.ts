@@ -10,9 +10,8 @@ describe('AboutHeroComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutHeroComponent],
-      imports: [AppTranslocoModule]
-    })
-      .compileComponents();
+      imports: [AppTranslocoModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

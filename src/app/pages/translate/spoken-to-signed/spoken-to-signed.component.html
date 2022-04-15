@@ -1,12 +1,18 @@
 <ng-container *transloco="let t; read: 'translate.spoken-to-signed'">
   <div class="translation-text">
-    <label id="spoken-language-label">{{t('text')}}</label>
-    <textarea [formControl]="text" [maxLength]="maxTextLength" dir="auto" [lang]="spokenLanguage"
-              aria-labelledby="spoken-language-label" autofocus data-gramm_editor="false"></textarea>
+    <label id="spoken-language-label">{{ t('text') }}</label>
+    <textarea
+      [formControl]="text"
+      [maxLength]="maxTextLength"
+      dir="auto"
+      [lang]="spokenLanguage"
+      aria-labelledby="spoken-language-label"
+      autofocus
+      data-gramm_editor="false"></textarea>
     <div>
       <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
       <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
-      <div id="char-count">{{text.value.length | number}} / {{maxTextLength | number}}</div>
+      <div id="char-count">{{ text.value.length | number }} / {{ maxTextLength | number }}</div>
     </div>
   </div>
   <app-sign-writing [signs]="signWriting$ | async"></app-sign-writing>
@@ -27,9 +33,12 @@
 
     <div id="actions" *ngIf="pose$ | async as pose">
       <ng-container *ngIf="videoUrl; else spinner">
-        <button mat-icon-button [attr.aria-label]="t('actions.download')"
-                (click)="downloadTranslation()"
-                [matTooltipPosition]="'above'" [matTooltip]="t('actions.download')">
+        <button
+          mat-icon-button
+          [attr.aria-label]="t('actions.download')"
+          (click)="downloadTranslation()"
+          [matTooltipPosition]="'above'"
+          [matTooltip]="t('actions.download')">
           <mat-icon>download</mat-icon>
         </button>
         <!-- Currently, no platform I know of allows copying video
@@ -38,10 +47,13 @@
                 [matTooltipPosition]="'above'" [matTooltip]="t('actions.copy')">
           <mat-icon>file_copy</mat-icon>
         </button> -->
-        <button mat-icon-button [attr.aria-label]="t('actions.share')"
-                (click)="shareTranslation()"
-                [matTooltipPosition]="'above'" [matTooltip]="t('actions.share')">
-          <mat-icon>{{shareIcon()}}</mat-icon>
+        <button
+          mat-icon-button
+          [attr.aria-label]="t('actions.share')"
+          (click)="shareTranslation()"
+          [matTooltipPosition]="'above'"
+          [matTooltip]="t('actions.share')">
+          <mat-icon>{{ shareIcon() }}</mat-icon>
         </button>
       </ng-container>
       <ng-template #spinner>

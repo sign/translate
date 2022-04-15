@@ -10,9 +10,8 @@ describe('AboutDirectionComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutDirectionComponent],
-      imports: [AppTranslocoModule]
-    })
-      .compileComponents();
+      imports: [AppTranslocoModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

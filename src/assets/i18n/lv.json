@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign tulkotājs",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Noteikt valodu",
       "more": "Vairāk valodu"
     },

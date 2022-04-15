@@ -1,7 +1,47 @@
-// Flags, Missing "isl" TODO read from en.json file
-$include: ('sy', 'by', 'bg', 'cn', 'hr', 'cz', 'dk', 'in', 'nz', 'gb', 'us', 'ee', 'fi', 'fr', 'at', 'de', 'cy', 'gr', 'is', 'it', 'jp', 'lv', 'lt', 'ir', 'pl', 'br', 'pt', 'ro', 'ru', 'sk', 'ar', 'cl', 'cu', 'mx', 'es', 'se', 'tr', 'ua', 'pk');
+// Flags, Missing "isl" TODO read from some file? supported languages
+$include: (
+  'sy',
+  'by',
+  'bg',
+  'cn',
+  'hr',
+  'cz',
+  'dk',
+  'in',
+  'nz',
+  'gb',
+  'us',
+  'ee',
+  'fi',
+  'fr',
+  'at',
+  'de',
+  'cy',
+  'gr',
+  'is',
+  'it',
+  'jp',
+  'lv',
+  'lt',
+  'ir',
+  'pl',
+  'br',
+  'pt',
+  'ro',
+  'ru',
+  'sk',
+  'ar',
+  'cl',
+  'cu',
+  'mx',
+  'es',
+  'se',
+  'tr',
+  'ua',
+  'pk'
+);
 $flag-icons-path: '/assets/flags';
 
-@import "flag-icon-css/sass/flag-icons";
+@import 'flag-icon-css/sass/flag-icons';
 // TODO This generates the following CSS for every flag which can be improved as we only need "squared":
 // .flag-icon-mm{background-image:url(mm.3e459345645bf834.svg)}.flag-icon-mm.flag-icon-squared{background-image:url(mm.88bcb5e02683d841.svg)}

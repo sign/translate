@@ -6,7 +6,7 @@
   "translate": {
     "title": "Shandura mutauro uchishandisa Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Ziva zita remutauro",
       "more": "More Mitauro"
     },

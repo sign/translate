@@ -10,7 +10,7 @@ describe('VideoComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [VideoComponent],
-      imports: [AppModule]
+      imports: [AppModule],
     }).compileComponents();
   }));
 

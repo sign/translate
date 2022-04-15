@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.scss']
+  styleUrls: ['./language-selector.component.scss'],
 })
 export class LanguageSelectorComponent implements OnInit {
   @Select(state => state.translate.detectedLanguage) detectedLanguage$: Observable<string>;

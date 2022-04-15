@@ -6,7 +6,7 @@
   "translate": {
     "title": "Whakamāori Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "tautuhi reo",
       "more": "Ētahi atu Reo"
     },

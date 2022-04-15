@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign ແປພາສາ",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ກວດສອບພາສາ",
       "more": "ພາສາເພີ່ມເຕີມ"
     },

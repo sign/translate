@@ -1,9 +1,8 @@
 import * as tf from '@tensorflow/tfjs';
 import {Injectable} from '@angular/core';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TensorflowService {
   private importPromise: Promise<typeof tf>;
@@ -11,8 +10,9 @@ export class TensorflowService {
 
   async load(): Promise<typeof tf> {
     if (!this.importPromise) {
-      this.importPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs')
-        .then(module => this.tf = module);
+      this.importPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs').then(
+        module => (this.tf = module)
+      );
     }
 
     return this.importPromise;
@@ -26,6 +26,10 @@ export class TensorflowService {
 
   get tidy(): typeof tf.tidy {
     return this.tf.tidy;
+  }
+
+  get stack(): typeof tf.stack {
+    return this.tf.stack;
   }
 
   get loadLayersModel(): typeof tf.loadLayersModel {

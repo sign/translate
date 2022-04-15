@@ -7,7 +7,7 @@ function isPromise(promise) {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GoogleAnalyticsTimingService {
   constructor(private ga: GoogleAnalyticsService) {
@@ -38,7 +38,7 @@ export class GoogleAnalyticsTimingService {
         this.ga.gtag('event', `${timingCategory}:${timingVar}`, {
           value: intTime,
           metric_value: intTime,
-          microseconds: Math.round(time * 1000)
+          microseconds: Math.round(time * 1000),
         });
       }
     };
@@ -57,8 +57,8 @@ export class GoogleAnalyticsTimingService {
   }
 
   events(timingCategory: string, timingVar?: string): [string, string, any][] {
-    const f = (name) => timingVar ? (name === `${timingCategory}.${timingVar}`) : name.startsWith(timingCategory);
-    return (window as any).dataLayer.filter(e => e.length === 3 && e[0] === "event" && f(e[1]));
+    const f = name => (timingVar ? name === `${timingCategory}.${timingVar}` : name.startsWith(timingCategory));
+    return (window as any).dataLayer.filter(e => e.length === 3 && e[0] === 'event' && f(e[1]));
   }
 
   timingHistory(timingCategory: string, timingVar: string): number[] {

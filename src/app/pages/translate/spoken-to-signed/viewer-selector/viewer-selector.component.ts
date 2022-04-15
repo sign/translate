@@ -15,7 +15,7 @@ export interface MatFabMenu {
 @Component({
   selector: 'app-viewer-selector',
   templateUrl: './viewer-selector.component.html',
-  styleUrls: ['./viewer-selector.component.scss']
+  styleUrls: ['./viewer-selector.component.scss'],
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {
   @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
@@ -34,18 +34,20 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
   }
 
   ngOnInit(): void {
-    this.poseViewerSetting$.pipe(
-      tap((setting) => {
-        this.fabButtons = [];
-        for (const button of this.buttons) {
-          if (button.id === setting) {
-            this.fab = button;
-          } else {
-            this.fabButtons.push(button);
+    this.poseViewerSetting$
+      .pipe(
+        tap(setting => {
+          this.fabButtons = [];
+          for (const button of this.buttons) {
+            if (button.id === setting) {
+              this.fab = button;
+            } else {
+              this.fabButtons.push(button);
+            }
           }
-        }
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 }

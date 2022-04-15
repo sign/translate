@@ -10,7 +10,6 @@ import {SettingsComponent} from '../../modules/settings/settings/settings.compon
 import {TranslateState} from '../../modules/translate/translate.state';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
-
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
   let fixture: ComponentFixture<PlaygroundComponent>;
@@ -18,16 +17,13 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        PlaygroundComponent,
-        SettingsComponent
-      ],
+      declarations: [PlaygroundComponent, SettingsComponent],
       imports: [
         AppAngularMaterialModule,
         NoopAnimationsModule,
         AppTranslocoModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
-      ]
+      ],
     }).compileComponents();
   });
 

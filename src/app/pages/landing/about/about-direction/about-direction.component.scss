@@ -1,10 +1,10 @@
 @use '@angular/material' as mat;
-@import "../../../../../theme/variables";
+@import '../../../../../theme/variables';
 
 #grid {
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "img1 title title img2";
+  grid-template-areas: 'img1 title title img2';
   gap: 32px;
 
   align-items: center;
@@ -14,8 +14,9 @@
   max-width: 1920px;
 
   @media #{$mat-lt-md} {
-    grid-template-areas: "title title"
-                       "img1 img2";
+    grid-template-areas:
+      'title title'
+      'img1 img2';
   }
 
   > div {

@@ -5,9 +5,7 @@ export class StartCamera {
 export class SetVideo {
   static readonly type = '[Video] Set Video';
 
-  constructor(public src: string) {
-  }
-
+  constructor(public src: string) {}
 }
 
 export class StopVideo {

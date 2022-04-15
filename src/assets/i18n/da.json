@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Oversæt",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Registrer sprog",
       "more": "Flere sprog"
     },

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Орчуулагч",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Хэл таних",
       "more": "Илүү олон хэл"
     },

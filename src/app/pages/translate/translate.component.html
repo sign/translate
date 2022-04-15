@@ -6,7 +6,7 @@
     <mat-drawer-content>
       <mat-toolbar>
         <mat-icon>waving_hand</mat-icon>
-        <span>&nbsp;{{t('title')}}</span>
+        <span>&nbsp;{{ t('title') }}</span>
         <button mat-icon-button [attr.aria-label]="'appearance.action' | transloco" (click)="openAppearancePanel()">
           <mat-icon>account_box</mat-icon>
         </button>
@@ -25,20 +25,28 @@
 
         <div id="translation-card">
           <div id="language-selector">
-            <app-language-selector [flags]="true" [hasLanguageDetection]="false"
-                                   [languages]="translation.signedLanguages"
-                                   translationKey="countries"
-                                   (languageChange)="setSignedLanguage($event)"></app-language-selector>
+            <app-language-selector
+              [flags]="true"
+              [hasLanguageDetection]="false"
+              [languages]="translation.signedLanguages"
+              translationKey="countries"
+              (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
             <!-- disabled -->
-            <button (click)="swapLanguages()" id="swap-languages" mat-icon-button
-                    [matTooltip]="t('swapLanguages')" [attr.aria-label]="t('swapLanguages')">
+            <button
+              (click)="swapLanguages()"
+              id="swap-languages"
+              mat-icon-button
+              [matTooltip]="t('swapLanguages')"
+              [attr.aria-label]="t('swapLanguages')">
               <mat-icon>swap_horiz</mat-icon>
             </button>
 
-            <app-language-selector [hasLanguageDetection]="spokenToSigned" [languages]="translation.spokenLanguages"
-                                   translationKey="languages"
-                                   (languageChange)="setSpokenLanguage($event)"></app-language-selector>
+            <app-language-selector
+              [hasLanguageDetection]="spokenToSigned"
+              [languages]="translation.spokenLanguages"
+              translationKey="languages"
+              (languageChange)="setSpokenLanguage($event)"></app-language-selector>
           </div>
 
           <div id="content">
@@ -50,7 +58,7 @@
         </div>
 
         <a id="feedback" href="https://github.com/sign/translate/issues" target="_blank">
-          {{t('feedback')}}
+          {{ t('feedback') }}
         </a>
       </div>
     </mat-drawer-content>

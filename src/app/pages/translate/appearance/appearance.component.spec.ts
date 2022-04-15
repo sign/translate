@@ -21,8 +21,8 @@ describe('AppearanceComponent', () => {
         MatIconModule,
         MatToolbarModule,
         AppTranslocoModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig)
-      ]
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+      ],
     }).compileComponents();
   });
 

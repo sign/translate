@@ -62,5 +62,4 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
   return comlink.transfer(data, [data.buffer]);
 }
 
-
 comlink.expose({loadModel, translate});

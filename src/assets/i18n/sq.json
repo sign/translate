@@ -6,7 +6,7 @@
   "translate": {
     "title": "Përkthe me Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Zbulo gjuhën",
       "more": "Më shumë gjuhë"
     },

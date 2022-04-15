@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Cyfieithu",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Synhwyro iaith",
       "more": "Mwy o Ieithoedd"
     },

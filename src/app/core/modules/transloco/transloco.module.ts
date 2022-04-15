@@ -5,14 +5,9 @@ import {translocoLoader, translocoScopes} from './transloco.loader';
 import {HttpClientModule} from '@angular/common/http';
 import {SITE_LANGUAGES} from '../../../components/language-selector/language-selector.component';
 
-
 @NgModule({
-  imports: [
-    HttpClientModule,
-  ],
-  exports: [
-    TranslocoModule,
-  ],
+  imports: [HttpClientModule],
+  exports: [TranslocoModule],
   providers: [
     {
       provide: TRANSLOCO_CONFIG,
@@ -21,11 +16,10 @@ import {SITE_LANGUAGES} from '../../../components/language-selector/language-sel
         defaultLang: 'en',
         fallbackLang: 'en',
         prodMode: environment.production,
-      } as TranslocoConfig
+      } as TranslocoConfig,
     },
     translocoLoader,
     translocoScopes,
   ],
 })
-export class AppTranslocoModule {
-}
+export class AppTranslocoModule {}

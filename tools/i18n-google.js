@@ -81,7 +81,7 @@ async function applyGoogleLanguage(language, filePath) {
     translate: {
       title: /<title>(.*?)<\/title>/g.exec(main)[1].replace('Google', 'Sign'),
       'language-selector': {
-        detected: '{lang}'
+        detected: '{{lang}}'
       },
     },
     landing: {

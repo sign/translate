@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Котормочу",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Тилди аныктоо",
       "more": "Көбүрөөк тилдер"
     },

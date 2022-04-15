@@ -13,36 +13,39 @@ export interface DetectorStateModel {
 
 const initialState: DetectorStateModel = {
   signingProbability: 0,
-  isSigning: false
+  isSigning: false,
 };
 
 @Injectable()
 @State<DetectorStateModel>({
   name: 'detector',
-  defaults: initialState
+  defaults: initialState,
 })
 export class DetectorState implements NgxsOnInit {
   detectSign = false;
   @Select(state => state.pose.pose) pose$: Observable<Pose>;
   @Select(state => state.settings.detectSign) detectSign$: Observable<boolean>;
 
-  constructor(private detector: DetectorService) {
-  }
+  constructor(private detector: DetectorService) {}
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
     // Load model once setting turns on
-    this.detectSign$.pipe(
-      filter(Boolean),
-      first(),
-      tap(() => this.detector.loadModel())
-    ).subscribe();
-    this.detectSign$.subscribe(detectSign => this.detectSign = detectSign);
+    this.detectSign$
+      .pipe(
+        filter(Boolean),
+        first(),
+        tap(() => this.detector.loadModel())
+      )
+      .subscribe();
+    this.detectSign$.subscribe(detectSign => (this.detectSign = detectSign));
 
-    this.pose$.pipe(
-      filter(Boolean),
-      filter(() => this.detectSign), // Only run if needed
-      tap((pose: Pose) => dispatch(new DetectSigning(pose)))
-    ).subscribe();
+    this.pose$
+      .pipe(
+        filter(Boolean),
+        filter(() => this.detectSign), // Only run if needed
+        tap((pose: Pose) => dispatch(new DetectSigning(pose)))
+      )
+      .subscribe();
   }
 
   @Action(DetectSigning)
@@ -50,7 +53,7 @@ export class DetectorState implements NgxsOnInit {
     const signingProbability = await this.detector.detect(pose);
     patchState({
       signingProbability,
-      isSigning: signingProbability > 0.5
+      isSigning: signingProbability > 0.5,
     });
   }
 }

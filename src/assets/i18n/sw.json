@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Tafsiri",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Tambua lugha",
       "more": "Lugha Zaidi"
     },

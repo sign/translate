@@ -10,9 +10,8 @@ describe('AboutSharingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutSharingComponent],
-      imports: [AppTranslocoModule]
-    })
-      .compileComponents();
+      imports: [AppTranslocoModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

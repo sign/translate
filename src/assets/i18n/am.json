@@ -6,7 +6,7 @@
   "translate": {
     "title": "የSign ተርጓሚ",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ቋንቋ  አግኝ",
       "more": "ተጨማሪ ቋንቋዎች"
     },

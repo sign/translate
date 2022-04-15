@@ -4,20 +4,18 @@ import {TensorflowService} from '../../core/services/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
 import {Vector3} from 'three';
 
-
 export interface PlaneNormal {
   center: Vector3;
   direction: Vector3;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PoseNormalizationService {
   model?: any;
 
-  constructor(public tf: TensorflowService, private three: ThreeService) {
-  }
+  constructor(public tf: TensorflowService, private three: ThreeService) {}
 
   normal(vectors: Vector3[], planeIdx: [number, number, number]): PlaneNormal {
     const triangle = planeIdx.map(i => vectors[i]);
@@ -25,7 +23,7 @@ export class PoseNormalizationService {
     const center = new this.three.Vector3(
       (triangle[0].x + triangle[1].x + triangle[2].x) / 3,
       (triangle[0].y + triangle[1].y + triangle[2].y) / 3,
-      (triangle[0].z + triangle[1].z + triangle[2].z) / 3,
+      (triangle[0].z + triangle[1].z + triangle[2].z) / 3
     );
 
     const plane = new this.three.Plane().setFromCoplanarPoints(triangle[0], triangle[1], triangle[2]);
@@ -35,12 +33,17 @@ export class PoseNormalizationService {
   }
 
   angle(n, d): number {
-    return (Math.atan2(n, d) * 180 / Math.PI + 360) % 360;
+    return ((Math.atan2(n, d) * 180) / Math.PI + 360) % 360;
   }
 
-  normalize(vectors: Vector3[], normal: PlaneNormal, line: [number, number], center: number, flip: boolean = false): Tensor {
+  normalize(
+    vectors: Vector3[],
+    normal: PlaneNormal,
+    line: [number, number],
+    center: number,
+    flip: boolean = false
+  ): Tensor {
     let matrix: Tensor = this.tf.tensor2d(vectors.map(v => [v.x, v.y, v.z]));
-
 
     // 1. Rotate vectors to normal
     const oldXAxis = new this.three.Vector3(1, 0, 0);
@@ -67,8 +70,8 @@ export class PoseNormalizationService {
     const p2 = matrix.slice(line[1], 1); // M_CMC
     const vec = p2.sub(p1).arraySync();
     const angle = 90 + this.angle(vec[0][1], vec[0][0]);
-    const sinAngle = Math.sin(angle * Math.PI / 180);
-    const cosAngle = Math.cos(angle * Math.PI / 180);
+    const sinAngle = Math.sin((angle * Math.PI) / 180);
+    const cosAngle = Math.cos((angle * Math.PI) / 180);
     const rotationMatrix = this.tf.tensor2d([
       [cosAngle, -sinAngle, 0],
       [sinAngle, cosAngle, 0],

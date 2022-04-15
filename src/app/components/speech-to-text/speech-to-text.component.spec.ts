@@ -8,9 +8,8 @@ describe('SpeechToTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SpeechToTextComponent]
-    })
-      .compileComponents();
+      declarations: [SpeechToTextComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

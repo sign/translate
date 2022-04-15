@@ -4,7 +4,7 @@ import {Subject} from 'rxjs';
 @Component({
   selector: 'app-base',
   template: ``,
-  styles: []
+  styles: [],
 })
 export abstract class BaseComponent implements OnDestroy {
   ngUnsubscribe: Subject<void> = new Subject<void>();

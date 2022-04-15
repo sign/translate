@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign ژباړونکی",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "د ژبې موندل",
       "more": "نورې ژبې"
     },

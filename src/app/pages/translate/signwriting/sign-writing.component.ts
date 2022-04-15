@@ -11,7 +11,7 @@ font.cssAppend('assets/fonts/signwriting/');
 @Component({
   selector: 'app-sign-writing',
   templateUrl: './sign-writing.component.html',
-  styleUrls: ['./sign-writing.component.scss']
+  styleUrls: ['./sign-writing.component.scss'],
 })
 export class SignWritingComponent extends BaseComponent implements OnInit, OnDestroy, OnChanges {
   @Input() signs: string[];
@@ -26,15 +26,17 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
   }
 
   ngOnInit(): void {
-    fromEvent(this.colorSchemeMedia, 'change').pipe(
-      tap(() => {
-        // Update signs to force re-rendering
-        const signs = this.signs;
-        this.signs = [];
-        requestAnimationFrame(() => this.signs = signs);
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    fromEvent(this.colorSchemeMedia, 'change')
+      .pipe(
+        tap(() => {
+          // Update signs to force re-rendering
+          const signs = this.signs;
+          this.signs = [];
+          requestAnimationFrame(() => (this.signs = signs));
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   ngOnChanges(changes: SimpleChanges): void {

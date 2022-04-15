@@ -10,9 +10,8 @@ describe('AboutOfflineComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutOfflineComponent],
-      imports: [AppTranslocoModule]
-    })
-      .compileComponents();
+      imports: [AppTranslocoModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {

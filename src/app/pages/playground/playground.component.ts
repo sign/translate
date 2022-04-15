@@ -9,7 +9,7 @@ import {TranslocoService} from '@ngneat/transloco';
 @Component({
   selector: 'app-playground',
   templateUrl: './playground.component.html',
-  styleUrls: ['./playground.component.scss']
+  styleUrls: ['./playground.component.scss'],
 })
 export class PlaygroundComponent extends BaseComponent implements OnInit {
   @Select(state => state.settings.receiveVideo) receiveVideo$: Observable<boolean>;
@@ -19,16 +19,20 @@ export class PlaygroundComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.translocoService.events$.pipe(
-      tap(() => document.title = this.translocoService.translate('playground.title')),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.translocoService.events$
+      .pipe(
+        tap(() => (document.title = this.translocoService.translate('playground.title'))),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
-    this.receiveVideo$.pipe(
-      filter(Boolean),
-      tap(() => this.store.dispatch(StartCamera)),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.receiveVideo$
+      .pipe(
+        filter(Boolean),
+        tap(() => this.store.dispatch(StartCamera)),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
     this.store.dispatch(new SetVideo('assets/tmp/example-sentence.mp4'));
   }

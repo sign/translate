@@ -14,7 +14,6 @@ describe('PoseService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(PoseService);
 
-
     canvas = document.createElement('canvas');
     ctx = canvas.getContext('2d');
 
@@ -47,7 +46,7 @@ describe('PoseService', () => {
   it('should drawConnect to visible landmarks', () => {
     const landmarks: PoseLandmark[] = [
       {x: 1, y: 2, z: 3, visibility: 0.8},
-      {x: 1, y: 2, z: 3, visibility: 0.8}
+      {x: 1, y: 2, z: 3, visibility: 0.8},
     ];
     service.drawConnect([landmarks], ctx);
   });
@@ -55,7 +54,7 @@ describe('PoseService', () => {
   it('should not drawConnect to invisible landmark', () => {
     const landmarks = [
       {x: 1, y: 2, z: 3, visibility: 0.8},
-      {x: 1, y: 2, z: 3, visibility: 0.01}
+      {x: 1, y: 2, z: 3, visibility: 0.01},
     ];
     service.drawConnect([landmarks], ctx);
   });

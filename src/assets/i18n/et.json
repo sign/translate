@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign&#39;i tõlge",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Tuvasta keel",
       "more": "Rohkem keeli"
     },

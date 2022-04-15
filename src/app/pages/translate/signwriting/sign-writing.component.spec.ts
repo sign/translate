@@ -4,7 +4,6 @@ import {SignWritingComponent} from './sign-writing.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {defineCustomElements as defineCustomElementsSW} from '@sutton-signwriting/sgnw-components/loader';
 
-
 describe('SignWritingComponent', () => {
   let component: SignWritingComponent;
   let fixture: ComponentFixture<SignWritingComponent>;
@@ -17,7 +16,7 @@ describe('SignWritingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SignWritingComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

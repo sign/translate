@@ -6,7 +6,7 @@
   "translate": {
     "title": "Eadar-theangadair Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Mothaich dhan chànan",
       "more": "Tuilleadh Chànanan"
     },

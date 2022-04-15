@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Tarjimon",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Avtomatik aniqlash",
       "more": "Ko'proq tillar"
     },

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign ترجمو",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ٻولي کوجيو",
       "more": "وڌيڪ ٻوليون"
     },

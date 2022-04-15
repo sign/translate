@@ -6,7 +6,7 @@
   "translate": {
     "title": "Μετάφραση Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Αναγνώριση γλώσσας",
       "more": "Περισσότερες γλώσσες"
     },

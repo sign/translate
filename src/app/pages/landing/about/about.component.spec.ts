@@ -20,11 +20,10 @@ describe('AboutComponent', () => {
         AboutDirectionComponent,
         AboutOfflineComponent,
         AboutSharingComponent,
-        StoresComponent
+        StoresComponent,
       ],
-      imports: [AppTranslocoModule]
-    })
-      .compileComponents();
+      imports: [AppTranslocoModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
