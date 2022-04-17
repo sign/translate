@@ -4,7 +4,7 @@
     [matMenuTriggerFor]="menu"
     [color]="fab.color"
     [attr.aria-label]="t(fab.id)"
-    [matTooltipPosition]="'after'"
+    [matTooltipPosition]="'above'"
     [matTooltip]="t(fab.id)">
     <mat-icon>{{ fab.icon }}</mat-icon>
   </button>
@@ -15,7 +15,7 @@
       *ngFor="let button of fabButtons"
       [color]="button.color"
       [attr.aria-label]="t(button.id)"
-      [matTooltipPosition]="'after'"
+      [matTooltipPosition]="'before'"
       [matTooltip]="t(button.id)"
       (click)="applySetting('poseViewer', button.id)">
       <mat-icon>{{ button.icon }}</mat-icon>

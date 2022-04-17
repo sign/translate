@@ -55,7 +55,7 @@ button.menu-language-button {
     }
 
     &[aria-selected='true'] {
-      color: mat.get-color-from-palette($app-primary);
+      color: mat.get-color-from-palette($app-primary, 600);
       transition: color 0.2s;
     }
   }
