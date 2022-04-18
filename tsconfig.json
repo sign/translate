@@ -23,7 +23,7 @@
     "strictInjectionParameters": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "strictInputAccessModifiers": false, /* ngx-flag-icon has "private" inputs */
+    "strictInputAccessModifiers": true,
     "strictTemplates": true,
     "fullTemplateTypeCheck": true
   }

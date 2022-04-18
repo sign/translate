@@ -1,3 +1,10 @@
+span {
+  background-size: cover;
+  border-radius: 50%;
+  width: 1em;
+  margin-inline-end: 0.5em;
+}
+
 // Flags, Missing "isl" TODO read from some file? supported languages
 $include: (
   'sy',

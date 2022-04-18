@@ -55,7 +55,6 @@
     "comlink": "^4.3.1",
     "flag-icon-css": "^4.1.7",
     "material-components-web": "14.0.0-canary.4e372fb49.0",
-    "ngx-flag-icon-css": "^1.0.1",
     "ngx-google-analytics": "^13.0.1",
     "pose-viewer": "^0.2.4",
     "rxjs": "~7.5.5",

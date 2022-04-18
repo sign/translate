@@ -15,7 +15,6 @@ import {AnimationComponent} from './components/animation/animation.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PlaygroundComponent} from './pages/playground/playground.component';
 import {TranslateComponent} from './pages/translate/translate.component';
-import {NgxFlagIconCssModule} from 'ngx-flag-icon-css';
 import {UploadComponent} from './pages/translate/signed-to-spoken/upload/upload.component';
 import {SpokenToSignedComponent} from './pages/translate/spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from './pages/translate/signed-to-spoken/signed-to-spoken.component';
@@ -38,6 +37,7 @@ import {AppearanceComponent} from './pages/translate/appearance/appearance.compo
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
+import { FlagIconComponent } from './components/flag-icon/flag-icon.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +51,7 @@ import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     LanguageSelectorComponent,
+    FlagIconComponent,
     SignWritingComponent,
     TextToSpeechComponent,
     ViewerSelectorComponent,
@@ -76,7 +77,6 @@ import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark
     AnimationModule,
     Pix2PixModule,
     TranslateModule,
-    NgxFlagIconCssModule,
     AppGoogleAnalyticsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

@@ -17,7 +17,7 @@
     </ng-container>
     <mat-tab (select)="selectLanguage(lang)" *ngFor="let lang of topLanguages">
       <ng-template mat-tab-label>
-        <flag-icon *ngIf="flags" [country]="lang" [squared]="true"></flag-icon>
+        <app-flag-icon *ngIf="flags" [country]="lang" [squared]="true"></app-flag-icon>
         {{ translationKey + '.' + lang | transloco }}
       </ng-template>
     </mat-tab>
@@ -26,14 +26,14 @@
   <!-- Language button for small screens -->
   <ng-container *ngIf="hasLanguageDetection && detectedLanguage$ | async as detectedLanguage; else detectLanguage">
     <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
-      <flag-icon *ngIf="flags" [country]="detectLanguage" [squared]="true"></flag-icon>
+      <app-flag-icon *ngIf="flags" [country]="detectedLanguage" [squared]="true"></app-flag-icon>
       {{ t('detected', {lang: translationKey + '.' + detectedLanguage | transloco}) }}
     </button>
   </ng-container>
   <ng-template #detectLanguage>
     <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
       <ng-container *ngIf="language; else noLanguage">
-        <flag-icon *ngIf="flags" [country]="language" [squared]="true"></flag-icon>
+        <app-flag-icon *ngIf="flags" [country]="language" [squared]="true"></app-flag-icon>
         {{ translationKey + '.' + language | transloco }}
       </ng-container>
       <ng-template #noLanguage>{{ t('detect') }}</ng-template>
@@ -54,7 +54,7 @@
         {{ t('detect') }}
       </button>
       <button (click)="selectLanguage(language)" *ngFor="let language of languages" mat-menu-item>
-        <flag-icon *ngIf="flags" [country]="language" [squared]="true"></flag-icon>
+        <app-flag-icon *ngIf="flags" [country]="language" [squared]="true"></app-flag-icon>
         {{ translationKey + '.' + language | transloco }}
       </button>
     </ng-template>

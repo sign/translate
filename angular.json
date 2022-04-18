@@ -50,10 +50,6 @@
               {
                 "input": "src/theme/styles.scss",
                 "bundleName": "app"
-              },
-              {
-                "input": "src/theme/flags.scss",
-                "bundleName": "flags"
               }
             ],
             "stylePreprocessorOptions": {
