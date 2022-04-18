@@ -53,7 +53,9 @@ body {
   }
 
   &.embed {
-    mat-toolbar, #input-mode-group, #feedback {
+    mat-toolbar,
+    #input-mode-group,
+    #feedback {
       display: none !important;
     }
   }

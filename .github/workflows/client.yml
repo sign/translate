@@ -2,12 +2,12 @@ name: Client
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
     paths-ignore:
       - 'functions/**'
       - '.github/workflows/server.yml'
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -114,5 +114,3 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
           projectId: sign-mt
-
-

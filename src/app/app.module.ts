@@ -37,7 +37,7 @@ import {AppearanceComponent} from './pages/translate/appearance/appearance.compo
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
-import { FlagIconComponent } from './components/flag-icon/flag-icon.component';
+import {FlagIconComponent} from './components/flag-icon/flag-icon.component';
 
 @NgModule({
   declarations: [

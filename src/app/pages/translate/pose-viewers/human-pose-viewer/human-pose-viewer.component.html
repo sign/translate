@@ -1,18 +1,24 @@
-<mat-progress-bar *ngIf="modelReady && !ready" mode="determinate" [value]="progress()"
-                  [attr.aria-label]="'translate.spoken-to-signed.human-pose-viewer.generating' | transloco"></mat-progress-bar>
+<ng-container *transloco="let t; read: 'translate.spoken-to-signed.progress-bars.human-pose-viewer'">
+  <mat-progress-bar
+    *ngIf="modelReady && !ready"
+    mode="determinate"
+    [value]="progress()"
+    [attr.aria-label]="t('generating')"></mat-progress-bar>
 
-<pose-viewer
-  #poseViewer
-  [attr.src]="src"
-  [attr.autoplay]="false"
-  [attr.loop]="false"
-  [attr.background]="appearance$ | async"
-  thickness="1"
-  padding="10%"
-  width="256px"
-  height="256px"></pose-viewer>
+  <pose-viewer
+    #poseViewer
+    [attr.src]="src"
+    [attr.autoplay]="false"
+    [attr.loop]="false"
+    [attr.background]="appearance$ | async"
+    thickness="1"
+    padding="10%"
+    width="256px"
+    height="256px"></pose-viewer>
 
-<mat-spinner *ngIf="!modelReady"
-             [attr.aria-label]="'translate.spoken-to-signed.human-pose-viewer.loading' | transloco"></mat-spinner>
+  <mat-spinner
+    *ngIf="!modelReady"
+    [attr.aria-label]="t('loading')"></mat-spinner>
 
-<canvas #canvas width="256" height="256"></canvas>
+  <canvas #canvas width="256" height="256"></canvas>
+</ng-container>

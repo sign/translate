@@ -4,7 +4,7 @@ import {SITE_LANGUAGES} from '../../../components/language-selector/language-sel
 const availableLangs = SITE_LANGUAGES.map(l => l.key.toLocaleLowerCase());
 
 const langs = {};
-availableLangs.forEach(lang => langs[lang] = require(`../../../../assets/i18n/${lang}.json`));
+availableLangs.forEach(lang => (langs[lang] = require(`../../../../assets/i18n/${lang}.json`)));
 
 export const AppTranslocoTestingModule = TranslocoTestingModule.forRoot({
   langs,

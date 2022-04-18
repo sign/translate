@@ -29,7 +29,8 @@
               [flags]="true"
               [hasLanguageDetection]="false"
               [languages]="translation.signedLanguages"
-              translationKey="countries" urlParameter="sil"
+              translationKey="countries"
+              urlParameter="sil"
               (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
             <!-- disabled -->
@@ -45,7 +46,8 @@
             <app-language-selector
               [hasLanguageDetection]="spokenToSigned"
               [languages]="translation.spokenLanguages"
-              translationKey="languages" urlParameter="spl"
+              translationKey="languages"
+              urlParameter="spl"
               (languageChange)="setSpokenLanguage($event)"></app-language-selector>
           </div>
 
