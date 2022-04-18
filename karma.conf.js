@@ -12,6 +12,7 @@ module.exports = function (config) {
       require('karma-safari-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
+      require('karma-spec-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
     ],
     client: {
@@ -31,7 +32,15 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [{type: 'html'}, {type: 'text-summary'}, {type: 'lcovonly'}],
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['spec', 'progress', 'kjhtml'],
+    specReporter: {
+      maxLogLines: 5,         // limit number of lines logged per test
+      suppressErrorSummary: true,  // do not print error summary
+      suppressFailed: false,  // do not print information about failed tests
+      suppressPassed: false,  // do not print information about passed tests
+      suppressSkipped: true,  // do not print information about skipped tests
+      showSpecTiming: false // print the time elapsed for each spec
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

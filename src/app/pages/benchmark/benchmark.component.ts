@@ -16,7 +16,7 @@ export class BenchmarkComponent {
     pose: this.poseBench.bind(this),
   };
 
-  stats = {};
+  stats: {[key: string]: {[key: string]: number[]}} = {};
 
   constructor(
     private gaTiming: GoogleAnalyticsTimingService,

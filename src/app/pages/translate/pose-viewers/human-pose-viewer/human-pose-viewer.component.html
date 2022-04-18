@@ -1,4 +1,5 @@
-<mat-progress-bar *ngIf="!ready" mode="determinate" [value]="progress()"></mat-progress-bar>
+<mat-progress-bar *ngIf="modelReady && !ready" mode="determinate" [value]="progress()"
+                  [attr.aria-label]="'translate.spoken-to-signed.human-pose-viewer.generating' | transloco"></mat-progress-bar>
 
 <pose-viewer
   #poseViewer
@@ -11,6 +12,7 @@
   width="256px"
   height="256px"></pose-viewer>
 
-<mat-spinner *ngIf="!modelReady"></mat-spinner>
+<mat-spinner *ngIf="!modelReady"
+             [attr.aria-label]="'translate.spoken-to-signed.human-pose-viewer.loading' | transloco"></mat-spinner>
 
 <canvas #canvas width="256" height="256"></canvas>

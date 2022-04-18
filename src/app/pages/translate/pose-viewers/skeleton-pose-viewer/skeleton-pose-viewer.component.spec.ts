@@ -1,4 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SkeletonPoseViewerComponent} from './skeleton-pose-viewer.component';
 import {Pix2PixModule} from '../../../../modules/pix2pix/pix2pix.module';
@@ -28,5 +29,11 @@ describe('SkeletonPoseViewerComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 });

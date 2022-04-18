@@ -4,6 +4,7 @@ import {VideoState, VideoStateModel} from './video.state';
 import {StartCamera, StopVideo} from './video.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 import {firstValueFrom} from 'rxjs';
+import {ngxsConfig} from '../../ngxs.module';
 
 describe('VideoState', () => {
   let store: Store;
@@ -31,13 +32,14 @@ describe('VideoState', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [NgxsModule.forRoot([VideoState])],
+      imports: [NgxsModule.forRoot([VideoState], ngxsConfig)],
       providers: [NavigatorService],
     });
 
     store = TestBed.inject(Store);
     navigatorService = TestBed.inject(NavigatorService);
-    snapshot = store.snapshot();
+    snapshot = {...store.snapshot()};
+    snapshot.video = {...snapshot.video};
   });
 
   it('StopVideo should stop camera', () => {

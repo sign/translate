@@ -24,6 +24,12 @@
         "download": "Download Translation",
         "copy": "Copy Translation",
         "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Loading human video model",
+          "generating": "Generating video"
+        }
       }
     },
     "upload": {

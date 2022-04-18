@@ -1,13 +1,12 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AppearanceComponent} from './appearance.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import {NgxsModule} from '@ngxs/store';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 
 describe('AppearanceComponent', () => {
   let component: AppearanceComponent;
@@ -16,13 +15,7 @@ describe('AppearanceComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppearanceComponent],
-      imports: [
-        MatButtonModule,
-        MatIconModule,
-        MatToolbarModule,
-        AppTranslocoModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-      ],
+      imports: [AppAngularMaterialModule, AppTranslocoTestingModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
     }).compileComponents();
   });
 
@@ -34,5 +27,11 @@ describe('AppearanceComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 });

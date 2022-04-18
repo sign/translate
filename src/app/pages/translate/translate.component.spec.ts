@@ -1,14 +1,17 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TranslateComponent} from './translate.component';
 import {NgxsModule, Store} from '@ngxs/store';
 import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
-import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {LanguageSelectorComponent} from './language-selector/language-selector.component';
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../modules/translate/translate.state';
 import {SettingsState} from '../../modules/settings/settings.state';
+import {HttpClientModule} from '@angular/common/http';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -19,9 +22,11 @@ describe('TranslateComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [TranslateComponent, LanguageSelectorComponent],
       imports: [
-        AppTranslocoModule,
+        AppTranslocoTestingModule,
         AppAngularMaterialModule,
+        NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        HttpClientModule,
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
@@ -37,6 +42,12 @@ describe('TranslateComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 
   // TODO test state

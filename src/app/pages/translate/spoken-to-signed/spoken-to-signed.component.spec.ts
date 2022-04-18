@@ -1,4 +1,5 @@
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SpokenToSignedComponent} from './spoken-to-signed.component';
 import {SignWritingComponent} from '../signwriting/sign-writing.component';
@@ -40,6 +41,12 @@ describe('SpokenToSignedComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 
   it('text change should dispatch action', fakeAsync(() => {
