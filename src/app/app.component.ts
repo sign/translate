@@ -27,7 +27,9 @@ export class AppComponent {
 
           // Set pre-rendered cloud function path with lang attribute
           const openSearch = Array.from(document.head.children).find(t => t.getAttribute('rel') === 'search');
-          openSearch.setAttribute('href', `/opensearch.xml?lang=${lang}`);
+          if (openSearch) { // not available in the test environment sometimes
+            openSearch.setAttribute('href', `/opensearch.xml?lang=${lang}`);
+          }
         })
       )
       .subscribe();
