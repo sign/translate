@@ -40,6 +40,10 @@
   },
   "landing": {
     "try": "Try Translating!",
+    "nav": {
+      "pages": "Navigate to other pages",
+      "legal": "Navigate to legal pages"
+    },
     "about": {
       "title": "About",
       "hero": {
@@ -135,6 +139,7 @@
     "browser-not-supported": "Voice input isn't supported on this browser"
   },
   "settings": {
+    "title": "Settings",
     "detectSign": "Detect Sign",
     "drawVideo": "Draw Video",
     "drawPose": "Draw Pose",

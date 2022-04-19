@@ -16,7 +16,7 @@
         <mat-icon (click)="menu.open()" id="menu-handler">menu</mat-icon>
         <mat-icon>waving_hand</mat-icon>
         <span>&nbsp;{{ 'translate.title' | transloco }}</span>
-        <nav>
+        <nav [attr.aria-label]="t('nav.pages')">
           <a mat-button *ngFor="let page of pages" [routerLink]="page">
             {{ t(page + '.title') }}
           </a>
@@ -27,7 +27,7 @@
       <router-outlet></router-outlet>
 
       <mat-toolbar>
-        <nav>
+        <nav [attr.aria-label]="t('nav.legal')">
           <a mat-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]">
             {{ 'legal.' + page + '.title' | transloco }}
           </a>

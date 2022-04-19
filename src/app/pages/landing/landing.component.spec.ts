@@ -7,6 +7,7 @@ import {AppAngularMaterialModule} from '../../core/modules/angular-material/angu
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {LanguageSelectorComponent} from '../../components/language-selector/language-selector.component';
+import {AboutComponent} from './about/about.component';
 
 describe('LandingComponent', () => {
   let component: LandingComponent;
@@ -15,7 +16,12 @@ describe('LandingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LandingComponent, LanguageSelectorComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, NoopAnimationsModule, RouterModule.forRoot([])],
+      imports: [
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
+        NoopAnimationsModule,
+        RouterModule.forRoot([{path: '', component: AboutComponent}]),
+      ],
     }).compileComponents();
   });
 

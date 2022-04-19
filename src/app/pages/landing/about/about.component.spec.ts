@@ -42,7 +42,14 @@ describe('AboutComponent', () => {
 
   it('should pass accessibility test', async () => {
     jasmine.addMatchers(toHaveNoViolations);
-    const a11y = await axe(fixture.nativeElement);
+    const a11y = await axe(fixture.nativeElement, {
+      // This component is not contained within a `mat-sidenav-content`, and thus has the wrong colors in dark mode
+      rules: {
+        'color-contrast': {
+          enabled: false,
+        },
+      },
+    });
     expect(a11y).toHaveNoViolations();
   });
 });

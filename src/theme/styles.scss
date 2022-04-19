@@ -106,3 +106,10 @@ button[mat-icon-button] {
     color: map-get(mat.$gray-palette, 800);
   }
 }
+
+a {
+  color: mat.get-color-from-palette($app-primary, 700);
+  @media (prefers-color-scheme: dark) {
+    color: mat.get-color-from-palette($app-primary, 300);
+  }
+}

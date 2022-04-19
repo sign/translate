@@ -17,7 +17,6 @@ describe('VideoState', () => {
 
   beforeAll(() => {
     // Setup mock camera
-    mockCamera = new MediaStream();
     mockSettings = {
       aspectRatio: 2,
       frameRate: 30,
@@ -35,6 +34,8 @@ describe('VideoState', () => {
       imports: [NgxsModule.forRoot([VideoState], ngxsConfig)],
       providers: [NavigatorService],
     });
+
+    mockCamera = new MediaStream();
 
     store = TestBed.inject(Store);
     navigatorService = TestBed.inject(NavigatorService);

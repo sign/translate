@@ -11,6 +11,8 @@ import {SettingsComponent} from '../../modules/settings/settings/settings.compon
 import {TranslateState} from '../../modules/translate/translate.state';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
+import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
+import {PoseState} from '../../modules/pose/pose.state';
 
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
@@ -24,7 +26,7 @@ describe('PlaygroundComponent', () => {
         AppAngularMaterialModule,
         NoopAnimationsModule,
         AppTranslocoTestingModule,
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        NgxsModule.forRoot([SettingsState, TranslateState, VideoState, PoseState], ngxsConfig),
         HttpClientModule,
       ],
     }).compileComponents();
@@ -33,6 +35,10 @@ describe('PlaygroundComponent', () => {
   beforeEach(() => {
     store = TestBed.inject(Store);
     store.reset({settings: {receiveVideo: false}});
+
+    fixture = TestBed.createComponent(PlaygroundComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('should create', () => {
