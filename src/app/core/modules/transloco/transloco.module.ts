@@ -16,6 +16,7 @@ import {SITE_LANGUAGES} from '../../../components/language-selector/language-sel
         defaultLang: 'en',
         fallbackLang: 'en',
         prodMode: environment.production,
+        reRenderOnLangChange: true
       } as TranslocoConfig,
     },
     translocoLoader,
