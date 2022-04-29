@@ -1,14 +1,55 @@
-[![Client Build Test Status](https://github.com/sign/translate/actions/workflows/client.yml/badge.svg)](https://github.com/sign/translate/actions/workflows/client.yml)
-[![Coverage Status](https://coveralls.io/repos/github/sign/translate/badge.svg?branch=master)](https://coveralls.io/github/sign/translate?branch=master)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/sign/translate/blob/master/LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/sign/translate/issues)
+<h1 align="center">👋 Sign Translate</h1>
 
-# [👋 Sign Translate](https://sign.mt/)
+<p align="center">
+  <i>
+    Sign Translate is a web-based application for real-time multilingual sign language translation.
+    <br>
+    Built for desktop and mobile, based on state-of-the-art client side models.
+  </i>
+</p>
 
-A bi-directional multilingual translation app for desktop and mobile,
-based on state-of-the-art real-time client side models.
+<p align="center">
+  <a href="https://sign.mt/"><strong>sign.mt</strong></a>
+  <br>
+</p>
 
-### Key Features
+<p align="center">
+  <a href="https://github.com/sign/.github/blob/main/CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/sign/translate/issues">Submit an Issue</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/sign/translate/actions/workflows/client.yml">
+    <img src="https://github.com/sign/translate/actions/workflows/client.yml/badge.svg" alt="Client Build Test Status" />
+  </a>
+  <a href="https://coveralls.io/github/sign/translate?branch=master">
+    <img src="https://coveralls.io/repos/github/sign/translate/badge.svg?branch=master" alt="Coverage Status" />
+  </a>
+  <a href="https://github.com/sign/translate/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/sign/translate/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/stars/sign/translate" alt="github Stars" />
+  </a>
+  <a href="https://github.com/sign/translate/network/members" target="_blank">
+    <img src="https://img.shields.io/github/forks/sign/translate" alt="github Forks" />
+  </a>
+  <a href="https://github.com/sign/translate/stargazers" target="_blank">
+    <img src="https://img.shields.io/github/contributors/sign/translate" alt="github Contributors" />
+  </a>
+  <a href="https://github.com/sign/translate/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/sign/translate" alt="github Issues" />
+  </a>
+</p>
+
+<hr>
+
+
+## Key Features
 
 (Hyperlinks to issues indicate the feature does not exist fully)
 
@@ -64,3 +105,45 @@ based on state-of-the-art real-time client side models.
 - [SignWriting to spoken language translation](https://github.com/sign/translate/issues/18)
 - Text-to-speech
 - [Copy / share translation](https://github.com/sign/translate/issues/19)
+
+
+## Development Setup
+
+### Prerequisites
+
+- Install [Node.js] which includes [Node Package Manager][npm]
+
+### Setting Up the Project
+
+Install dependencies locally:
+
+```
+npm install
+```
+
+Run the application:
+
+```
+npm start
+```
+
+Test the application:
+
+```
+npm test
+```
+
+### Want to Help?
+
+Want to report a bug, contribute some code, or improve documentation? Excellent!
+Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/sign/translate/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/sign/translate/labels/good%20first%20issue)</kbd>.
+
+
+**Find this useful? Give our repo a star :star: :arrow_up:.**
+
+[![Stargazers repo roster for @sign/translate](https://reporoster.com/stars/sign/translate)](https://github.com/sign/translate/stargazers)
+
+
+[node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/get-npm
+[contributing]: https://github.com/sign/.github/blob/main/CONTRIBUTING.md
