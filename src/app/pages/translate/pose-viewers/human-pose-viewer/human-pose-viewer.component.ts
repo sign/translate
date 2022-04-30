@@ -4,7 +4,6 @@ import {fromEvent, interval, Observable} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Select, Store} from '@ngxs/store';
-import {promiseRaf} from '../../../../core/helpers/raf/raf';
 
 @Component({
   selector: 'app-human-pose-viewer',
@@ -52,7 +51,8 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
               return;
             }
 
-            const uint8Array: Uint8ClampedArray = await promiseRaf(() => this.pix2pix.translate(poseCanvas));
+            await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
+            const uint8Array = await this.pix2pix.translate(poseCanvas);
             this.modelReady = true; // Stop loading after first model inference
 
             // If did not change the pose time

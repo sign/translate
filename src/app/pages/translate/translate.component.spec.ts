@@ -12,6 +12,7 @@ import {TranslateState} from '../../modules/translate/translate.state';
 import {SettingsState} from '../../modules/settings/settings.state';
 import {HttpClientModule} from '@angular/common/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {TranslocoService} from '@ngneat/transloco';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -48,6 +49,16 @@ describe('TranslateComponent', () => {
     jasmine.addMatchers(toHaveNoViolations);
     const a11y = await axe(fixture.nativeElement);
     expect(a11y).toHaveNoViolations();
+  });
+
+  it('language change should change title', async () => {
+    const transloco = TestBed.inject(TranslocoService);
+
+    transloco.setActiveLang('he');
+    expect(document.title).toEqual('תרגום סימנים');
+
+    transloco.setActiveLang('en');
+    expect(document.title).toEqual('Sign Translate');
   });
 
   // TODO test state

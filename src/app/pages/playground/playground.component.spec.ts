@@ -13,6 +13,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {PoseState} from '../../modules/pose/pose.state';
+import {TranslocoService} from '@ngneat/transloco';
 
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
@@ -55,5 +56,15 @@ describe('PlaygroundComponent', () => {
     const dispatchSpy = spyOn(store, 'dispatch');
     store.reset({settings: {receiveVideo: true}});
     expect(dispatchSpy).toHaveBeenCalledWith(StartCamera);
+  });
+
+  it('language change should change title', async () => {
+    const transloco = TestBed.inject(TranslocoService);
+
+    transloco.setActiveLang('he');
+    expect(document.title).toEqual('גן המשחקים לעיבוד שפת הסימנים');
+
+    transloco.setActiveLang('en');
+    expect(document.title).toEqual('Sign Language Processing Playground');
   });
 });
