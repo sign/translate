@@ -26,8 +26,8 @@
   <a href="https://coveralls.io/github/sign/translate?branch=master">
     <img src="https://coveralls.io/repos/github/sign/translate/badge.svg?branch=master" alt="Coverage Status" />
   </a>
-  <a href="https://github.com/sign/translate/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" />
+  <a href="https://github.com/sign/translate/blob/master/LICENSE.md">
+    <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License: CC BY-NC-SA 4.0" />
   </a>
 </p>
 
