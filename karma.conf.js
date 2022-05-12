@@ -48,5 +48,8 @@ module.exports = function (config) {
     browsers: ['Chrome', 'Firefox', 'Safari'],
     singleRun: false,
     restartOnFileChange: true,
+    files: [
+      { pattern: './src/manifest.webmanifest', included: false, watched: true, served: true }
+    ]
   });
 };

@@ -10,11 +10,11 @@
   "user_preferences": {
     "color_scheme_dark": {
       "theme_color": "#3F51B5",
-      "background_color": "#000",
+      "background_color": "#000"
     },
     "color_scheme_light": {
       "theme_color": "#3F51B5",
-      "background_color": "#FFF",
+      "background_color": "#FFF"
     }
   },
   "icons": [

@@ -1,12 +1,11 @@
 import * as comlink from 'comlink';
 
-export async function transferableImage(image: HTMLCanvasElement | HTMLVideoElement): Promise<ImageBitmap | ImageData> {
-  // createImageBitmap is supported in multiple browsers, but only Chrome supports WebGL in WebWorker
-  if (window.createImageBitmap && 'chrome' in window) {
-    const bitmap = await createImageBitmap(image);
-    return comlink.transfer(bitmap, [bitmap]);
-  }
+export async function transferableImageBitmap(image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement): Promise<ImageBitmap> {
+  const bitmap = await createImageBitmap(image);
+  return comlink.transfer(bitmap, [bitmap]);
+}
 
+export async function transferableImageData(image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement): Promise<ImageData> {
   let {width, height} = image;
   if (image instanceof HTMLVideoElement) {
     width = image.videoWidth;
@@ -26,4 +25,13 @@ export async function transferableImage(image: HTMLCanvasElement | HTMLVideoElem
 
   const data = ctx.getImageData(0, 0, width, height);
   return comlink.transfer(data, [data.data.buffer]);
+}
+
+export async function transferableImage(image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement): Promise<ImageBitmap | ImageData> {
+  // createImageBitmap is supported in multiple browsers, but only Chrome supports WebGL in WebWorker
+  if (window.createImageBitmap && 'chrome' in window) {
+    return transferableImageBitmap(image);
+  }
+
+  return transferableImageData(image);
 }
