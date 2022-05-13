@@ -49,7 +49,7 @@ body {
   background-color: white;
 
   @media (prefers-color-scheme: dark) {
-    background-color: black;
+    background-color: black !important;
   }
 
   &.embed {
