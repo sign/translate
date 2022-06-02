@@ -48,4 +48,12 @@ describe('transferableImage', () => {
     expect(canvasObj.data).toEqual(imgObj.data);
   });
 
+  it('should create the same data for canvas and for context', async () => {
+    const ctx = canvas.getContext('2d', {willReadFrequently: true});
+    const fakeCanvas = {width: canvas.width, height: canvas.height} as HTMLCanvasElement;
+    const canvasObj = await transferableImageData(canvas);
+    const ctxObj = await transferableImageData(fakeCanvas, ctx);
+
+    expect(canvasObj.data).toEqual(ctxObj.data);
+  });
 });

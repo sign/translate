@@ -87,7 +87,7 @@ export class BenchmarkComponent {
     // Set up an empty, white canvas
     const canvas = document.createElement('canvas');
     canvas.width = canvas.height = 256;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', {willReadFrequently: true});
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, 256, 256);
 
@@ -97,7 +97,7 @@ export class BenchmarkComponent {
 
     // Evaluate 30 frames
     for (let i = 0; i < 30; i++) {
-      await this.pix2pix.translate(canvas);
+      await this.pix2pix.translate(canvas, ctx);
       this.buildStats();
     }
   }

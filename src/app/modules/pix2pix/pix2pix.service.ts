@@ -27,11 +27,11 @@ export class Pix2PixService {
     await this.gaTiming.time('pix2pix', 'load', () => this.worker.loadModel());
   }
 
-  async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
+  async translate(canvas: HTMLCanvasElement, ctx?: CanvasRenderingContext2D): Promise<Uint8ClampedArray> {
     const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
     return this.gaTiming.time('pix2pix', frameType, async () => {
       this.isFirstFrame = false;
-      const image = await transferableImage(canvas);
+      const image = await transferableImage(canvas, ctx);
       return this.worker.translate(image);
     });
   }

@@ -1,11 +1,16 @@
 import * as comlink from 'comlink';
 
-export async function transferableImageBitmap(image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement): Promise<ImageBitmap> {
+export async function transferableImageBitmap(
+  image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement
+): Promise<ImageBitmap> {
   const bitmap = await createImageBitmap(image);
   return comlink.transfer(bitmap, [bitmap]);
 }
 
-export async function transferableImageData(image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement): Promise<ImageData> {
+export async function transferableImageData(
+  image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement,
+  imageCtx?: CanvasRenderingContext2D
+): Promise<ImageData> {
   let {width, height} = image;
   if (image instanceof HTMLVideoElement) {
     width = image.videoWidth;
@@ -13,7 +18,9 @@ export async function transferableImageData(image: HTMLCanvasElement | HTMLImage
   }
 
   let ctx: CanvasRenderingContext2D;
-  if (image instanceof HTMLCanvasElement) {
+  if (imageCtx) {
+    ctx = imageCtx; // Preferably, the context is using {willReadFrequently: true}
+  } else if (image instanceof HTMLCanvasElement) {
     ctx = image.getContext('2d');
   } else {
     const canvas = document.createElement('canvas');
@@ -27,11 +34,14 @@ export async function transferableImageData(image: HTMLCanvasElement | HTMLImage
   return comlink.transfer(data, [data.data.buffer]);
 }
 
-export async function transferableImage(image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement): Promise<ImageBitmap | ImageData> {
+export async function transferableImage(
+  image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement,
+  ctx?: CanvasRenderingContext2D
+): Promise<ImageBitmap | ImageData> {
   // createImageBitmap is supported in multiple browsers, but only Chrome supports WebGL in WebWorker
   if (window.createImageBitmap && 'chrome' in window) {
     return transferableImageBitmap(image);
   }
 
-  return transferableImageData(image);
+  return transferableImageData(image, ctx);
 }

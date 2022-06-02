@@ -43,6 +43,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           await this.pix2pix.loadModel();
 
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
+          const poseCtx = poseCanvas.getContext('2d', {willReadFrequently: true});
 
           let lastTime = -Infinity;
           while (!pose.ended) {
@@ -52,7 +53,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             }
 
             await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
-            const uint8Array = await this.pix2pix.translate(poseCanvas);
+            const uint8Array = await this.pix2pix.translate(poseCanvas, poseCtx);
             this.modelReady = true; // Stop loading after first model inference
 
             // If did not change the pose time
