@@ -11,7 +11,7 @@ export const AppTranslocoTestingModule = TranslocoTestingModule.forRoot({
   translocoConfig: {
     availableLangs,
     defaultLang: 'en',
-    reRenderOnLangChange: true
+    reRenderOnLangChange: true,
   },
   preloadLangs: true,
 });

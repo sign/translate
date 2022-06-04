@@ -1,4 +1,3 @@
-
 describe('manifest.webmanifest', () => {
   const filePath = 'src/manifest.webmanifest';
 

@@ -23,7 +23,7 @@ function updateServerPush(resources) {
   if (!rewrite.headers) {
     rewrite.headers = [];
   }
-  rewrite.headers.push({key: "Link", value: resources});
+  rewrite.headers.push({key: 'Link', value: resources});
   fs.writeFileSync('firebase.json', JSON.stringify(firebase, null, 2));
 }
 

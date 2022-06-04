@@ -48,7 +48,6 @@
 
 <hr>
 
-
 ## Key Features
 
 (Hyperlinks to issues indicate the feature does not exist fully)
@@ -106,7 +105,6 @@
 - Text-to-speech
 - [Copy / share translation](https://github.com/sign/translate/issues/19)
 
-
 ## Development Setup
 
 ### Prerequisites
@@ -138,11 +136,9 @@ npm test
 Want to report a bug, contribute some code, or improve documentation? Excellent!
 Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/sign/translate/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/sign/translate/labels/good%20first%20issue)</kbd>.
 
-
 **Find this useful? Give our repo a star :star: :arrow_up:.**
 
 [![Stargazers repo roster for @sign/translate](https://reporoster.com/stars/sign/translate)](https://github.com/sign/translate/stargazers)
-
 
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm

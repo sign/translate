@@ -8,7 +8,7 @@ describe('AppRoutingModule', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppRoutingModule],
-      teardown: {destroyAfterEach: false}
+      teardown: {destroyAfterEach: false},
     });
   });
 
@@ -21,4 +21,3 @@ describe('AppRoutingModule', () => {
     expect(String(route.extractedUrl)).toEqual('/about');
   });
 });
-
