@@ -13,6 +13,7 @@ import {
   SetSpokenLanguage,
   SetSpokenLanguageText,
   ShareSignedLanguageVideo,
+  UploadPoseFile,
 } from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
@@ -195,6 +196,14 @@ export class TranslateState implements NgxsOnInit {
     }
 
     return of();
+  }
+
+  @Action(UploadPoseFile)
+  uploadPoseFile({getState, patchState}: StateContext<TranslateStateModel>, {url}: UploadPoseFile): void {
+    const {spokenToSigned} = getState();
+    if (spokenToSigned) {
+      patchState({signedLanguagePose: url});
+    }
   }
 
   @Action(CopySignedLanguageVideo)

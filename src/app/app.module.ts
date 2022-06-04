@@ -38,6 +38,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
 import {FlagIconComponent} from './components/flag-icon/flag-icon.component';
+import {DropzoneDirective} from './directives/dropzone.directive';
+import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-file.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import {FlagIconComponent} from './components/flag-icon/flag-icon.component';
     AppearanceComponent,
     BenchmarkComponent,
     BenchmarkItemComponent,
+    DropzoneDirective,
+    DropPoseFileComponent,
   ],
   imports: [
     BrowserModule,
