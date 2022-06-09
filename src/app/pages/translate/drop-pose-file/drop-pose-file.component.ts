@@ -11,13 +11,28 @@ export class DropPoseFileComponent {
   @HostBinding('class.hovering')
   isHovering = false;
 
-  constructor(private store: Store) {}
+  constructor(private store: Store) {
+    this.listenExternalFileOpen();
+  }
+
+  listenExternalFileOpen() {
+    if ('launchQueue' in window) {
+      (window as any).launchQueue.setConsumer(async launchParams => {
+        if (!launchParams.files.length) {
+          return;
+        }
+
+        const files = await Promise.all(launchParams.files.map(f => f.getFile()));
+        await this.onDrop(files);
+      });
+    }
+  }
 
   toggleHover(event: boolean) {
     this.isHovering = event;
   }
 
-  onDrop(files: FileList) {
+  async onDrop(files: FileList | File[]) {
     const file = files[0];
     if (!file.name.endsWith('.pose')) {
       alert('Please select a .pose file');
