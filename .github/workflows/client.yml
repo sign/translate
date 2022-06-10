@@ -24,7 +24,7 @@ jobs:
           key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Lint code
         run: npm run lint
