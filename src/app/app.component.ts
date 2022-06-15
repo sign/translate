@@ -36,7 +36,11 @@ export class AppComponent {
       .subscribe();
 
     const urlParam = this.urlParams.get('lang');
-    const [navigatorParam] = navigator.language.split('-');
+    let [navigatorParam] = navigator.language.split('-');
+    if (navigatorParam === 'zh') {
+      // Handle simplified (china) vs traditional (hong kong, taiwan) chinese
+      navigatorParam = navigator.language === 'zh-CN' ? 'zh-CN' : 'zh-HK';
+    }
     this.transloco.setActiveLang(urlParam || navigatorParam);
   }
 
