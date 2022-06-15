@@ -38,7 +38,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     super.ngOnDestroy();
 
     if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {

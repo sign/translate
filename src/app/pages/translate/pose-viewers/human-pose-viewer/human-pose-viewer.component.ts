@@ -79,7 +79,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
       .subscribe();
   }
 
-  reset(): void {
+  override reset(): void {
     super.reset();
     this.ready = false;
   }

@@ -15,6 +15,7 @@
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @mixin theme-components($theme) {
+  @include mat.core-theme($theme);
   @include mat.sidenav-theme($theme);
   @include mat.toolbar-theme($theme);
   @include mat.button-theme($theme);
@@ -23,6 +24,7 @@
   @include mat.progress-bar-theme($theme);
   @include mat.tooltip-theme($theme);
   @include mat.card-theme($theme);
+  @include mat.tabs-theme($theme);
 }
 
 @include theme-components($app-theme);
