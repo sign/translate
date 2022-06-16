@@ -10,7 +10,7 @@ interface CanvasElement extends HTMLCanvasElement {
   captureStream(frameRate?: number): MediaStream;
 }
 
-const BPS = 2_000_000;
+const BPS = 1_000_000_000; // 1GBps, to act as infinity
 
 @Component({
   selector: 'app-pose-viewer',
@@ -24,12 +24,12 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   mimeTypes = ['video/webm; codecs=vp9', 'video/webm; codecs=vp8', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
 
+  // Use a writeable stream on supported browsers
+  streamWriter: WritableStreamDefaultWriter;
+  frameIndex = 0;
+
   cache: ImageData[] = [];
   cacheSubscription: Subscription;
-
-  // Using the better, VideoEncoder for newer browsers
-  videoEncoder: VideoEncoder;
-  videoEncoderChunks: ArrayBuffer[] = [];
 
   static isCustomElementDefined = false;
 
@@ -60,59 +60,13 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     return pose.body.fps;
   }
 
-  async createVideoEncoder(image: ImageData): Promise<VideoEncoder> {
-    let encoder = new VideoEncoder({
-      output: (chunk, metadata) => {
-        console.log(chunk, metadata);
-        const buffer = new ArrayBuffer(chunk.byteLength);
-        chunk.copyTo(buffer);
-        this.videoEncoderChunks.push(buffer);
-      },
-      error: e => console.error(e.message),
-    });
-
-    encoder.configure({
-      codec: 'vp8',
-      width: image.width,
-      height: image.height,
-      bitrate: BPS,
-      framerate: await this.fps(),
-    });
-
-    return encoder;
-  }
-
-  async createEncodedVideo() {
-    if (this.videoEncoderChunks.length === 0) {
-      return;
-    }
-
-    await this.videoEncoder.flush();
-
-    const blob = new Blob(this.videoEncoderChunks, {type: 'video/mp4'});
-    console.log({blob});
-    const url = URL.createObjectURL(blob);
-    console.log({url});
-    this.setVideo(url);
-
-    this.videoEncoder.close();
-    delete this.videoEncoder;
-  }
-
-  async startRecording(canvas: CanvasElement): Promise<void> {
+  initMediaRecorder(stream: MediaStream) {
     const recordedChunks: Blob[] = [];
-
-    const fps = await this.fps();
-
-    // Must get canvas context for FireFox
-    // https://stackoverflow.com/questions/63140354/firefox-gives-irregular-initialization-error-when-trying-to-use-navigator-mediad
-    canvas.getContext('2d');
-    const stream = canvas.captureStream(fps);
 
     let supportedMimeType: string;
     for (const mimeType of this.mimeTypes) {
       try {
-        this.mediaRecorder = new MediaRecorder(stream, {mimeType, bitsPerSecond: BPS});
+        this.mediaRecorder = new MediaRecorder(stream, {mimeType, videoBitsPerSecond: BPS});
         supportedMimeType = mimeType;
         break;
       } catch (e) {
@@ -147,23 +101,47 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     this.mediaRecorder.start(duration);
   }
 
+  async startRecording(canvas: CanvasElement): Promise<void> {
+    // Must get canvas context for FireFox
+    // https://stackoverflow.com/questions/63140354/firefox-gives-irregular-initialization-error-when-trying-to-use-navigator-mediad
+    canvas.getContext('2d');
+    const fps = await this.fps();
+    const stream = canvas.captureStream(fps);
+
+    this.initMediaRecorder(stream);
+  }
+
   stopRecording(): void {
     if (this.mediaRecorder) {
       this.mediaRecorder.stop();
     }
   }
 
+  createMediaGeneratorTrack() {
+    const generator = new MediaStreamTrackGenerator({kind: 'video'});
+    const writer = generator.writable.getWriter();
+    const stream = new MediaStream();
+    stream.addTrack(generator);
+    return {stream, writer};
+  }
+
   async addCacheFrame(image: ImageData): Promise<void> {
-    if ('VideoEncoder' in window) {
-      if (!this.videoEncoder) {
-        this.videoEncoder = await this.createVideoEncoder(image);
+    if ('MediaStreamTrackGenerator' in window) {
+      if (!this.mediaRecorder) {
+        const {stream, writer} = this.createMediaGeneratorTrack();
+        this.streamWriter = writer;
+        this.initMediaRecorder(stream);
       }
-      const frame = new VideoFrame(await createImageBitmap(image));
-      this.videoEncoder.encode(frame, {keyFrame: true});
+      const timestamp = this.frameIndex / (await this.fps());
+      console.log(timestamp);
+      const frame = new VideoFrame(await createImageBitmap(image), {timestamp});
+      await this.streamWriter.write(frame);
       frame.close();
     } else {
       this.cache.push(image);
     }
+
+    this.frameIndex++;
   }
 
   reset(): void {
@@ -172,12 +150,17 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       this.cacheSubscription.unsubscribe();
     }
     this.cache = [];
+    this.frameIndex = 0;
 
-    // Reset video encoder
-    if (this.videoEncoder) {
-      this.videoEncoder.close();
-      delete this.videoEncoder;
+    // Reset media recorder
+    if (this.mediaRecorder) {
+      this.mediaRecorder.stop();
+      delete this.mediaRecorder;
     }
-    this.videoEncoderChunks = [];
+
+    // Close stream writer
+    if (this.streamWriter) {
+      this.streamWriter.close().then().catch();
+    }
   }
 }

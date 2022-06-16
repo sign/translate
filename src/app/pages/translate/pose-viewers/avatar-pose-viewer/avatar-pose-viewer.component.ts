@@ -12,7 +12,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 export class AvatarPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
 
-  fps: number = 1;
+  effectiveFps: number = 1;
 
   constructor(store: Store) {
     super(store);
@@ -26,8 +26,8 @@ export class AvatarPoseViewerComponent extends BasePoseViewerComponent implement
         tap(async () => {
           const pose = await poseEl.getPose();
 
-          this.fps = pose.body.fps;
-          console.log('FPS', this.fps);
+          this.effectiveFps = pose.body.fps;
+          console.log('FPS', this.effectiveFps);
           console.log('Pose', pose);
           // TODO send pose tensor to the animation service (through the store)
         }),

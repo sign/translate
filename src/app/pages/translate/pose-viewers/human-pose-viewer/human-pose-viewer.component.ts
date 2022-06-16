@@ -63,7 +63,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             lastTime = pose.currentTime;
 
             const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-            this.addCacheFrame(imageData);
+            await this.addCacheFrame(imageData);
 
             ctx.putImageData(imageData, 0, 0);
 
@@ -92,9 +92,9 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   }
 
   async drawCache(): Promise<void> {
-    if (this.videoEncoder) {
-      await this.createEncodedVideo();
-      return;
+    // Supported in selected browsers https://caniuse.com/?search=MediaStreamTrackGenerator
+    if (this.streamWriter) {
+      return this.stopRecording();
     }
 
     if (this.cache.length === 0) {
