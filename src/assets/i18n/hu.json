@@ -29,6 +29,12 @@
         "download": "Fordítás letöltése",
         "copy": "Fordítás másolása",
         "share": "Fordítás megosztása"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Emberi videomodell betöltése",
+          "generating": "Videó generálása"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Eszközök"
+    },
+    "nav": {
+      "pages": "Navigáljon más oldalakra",
+      "legal": "Keresse meg a jogi oldalakat"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Csontváz",
       "avatar": "Avatar",
       "human": "Emberi"
-    }
+    },
+    "title": "Beállítások"
   }
 }

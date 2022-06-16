@@ -29,6 +29,12 @@
         "download": "Tải xuống bản dịch",
         "copy": "Sao chép bản dịch",
         "share": "Chia sẻ bản dịch"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Đang tải mô hình video của con người",
+          "generating": "Tạo video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Công cụ"
+    },
+    "nav": {
+      "pages": "Điều hướng đến các trang khác",
+      "legal": "Điều hướng đến các trang pháp lý"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Bộ xương",
       "avatar": "hình đại diện",
       "human": "Nhân loại"
-    }
+    },
+    "title": "Cài đặt"
   }
 }

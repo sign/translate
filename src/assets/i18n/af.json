@@ -29,6 +29,12 @@
         "download": "Laai vertaling af",
         "copy": "Kopieer vertaling",
         "share": "Deel vertaling"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laai tans menslike videomodel",
+          "generating": "Genereer video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Nutsgoed"
+    },
+    "nav": {
+      "pages": "Navigeer na ander bladsye",
+      "legal": "Gaan na wettige bladsye"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Geraamte",
       "avatar": "Avatar",
       "human": "Mens"
-    }
+    },
+    "title": "Instellings"
   }
 }

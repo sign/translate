@@ -29,6 +29,12 @@
         "download": "下载翻译",
         "copy": "复制翻译",
         "share": "分享翻译"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "加载人类视频模型",
+          "generating": "生成视频"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "工具"
+    },
+    "nav": {
+      "pages": "导航到其他页面",
+      "legal": "导航到法律页面"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "骨骼",
       "avatar": "阿凡达",
       "human": "人类"
-    }
+    },
+    "title": "设置"
   }
 }

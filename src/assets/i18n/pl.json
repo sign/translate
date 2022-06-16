@@ -29,6 +29,12 @@
         "download": "Pobierz tłumaczenie",
         "copy": "Kopiuj tłumaczenie",
         "share": "Udostępnij tłumaczenie"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ładowanie ludzkiego modelu wideo",
+          "generating": "Generowanie wideo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Narzędzia"
+    },
+    "nav": {
+      "pages": "Przejdź do innych stron",
+      "legal": "Przejdź do stron prawnych"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Szkielet",
       "avatar": "Awatara",
       "human": "Człowiek"
-    }
+    },
+    "title": "Ustawienia"
   }
 }

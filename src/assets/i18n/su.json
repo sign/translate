@@ -29,6 +29,12 @@
         "download": "Unduh Tarjamahan",
         "copy": "Salin Tarjamahan",
         "share": "Bagikeun Tarjamahan"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ngamuat modél pidéo manusa",
+          "generating": "Ngahasilkeun video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Pakakas"
+    },
+    "nav": {
+      "pages": "Arahkeun ka kaca séjén",
+      "legal": "Arahkeun ka kaca légal"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Rorongkong",
       "avatar": "Avatar",
       "human": "Manusa"
-    }
+    },
+    "title": "Setélan"
   }
 }

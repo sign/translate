@@ -29,6 +29,12 @@
         "download": "Preuzmite prevod",
         "copy": "Kopiraj prevod",
         "share": "Dijeli prevod"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Učitavanje ljudskog video modela",
+          "generating": "Generisanje video zapisa"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Alati"
+    },
+    "nav": {
+      "pages": "Idite na druge stranice",
+      "legal": "Idite na pravne stranice"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeleton",
       "avatar": "Avatar",
       "human": "Čovjek"
-    }
+    },
+    "title": "Postavke"
   }
 }

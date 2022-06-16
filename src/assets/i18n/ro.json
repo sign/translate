@@ -29,6 +29,12 @@
         "download": "Descărcați traducerea",
         "copy": "Copiați traducerea",
         "share": "Partajați traducerea"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Se încarcă modelul video uman",
+          "generating": "Generare video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Instrumente"
+    },
+    "nav": {
+      "pages": "Navigați la alte pagini",
+      "legal": "Navigați la paginile legale"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Schelet",
       "avatar": "Avatar",
       "human": "Uman"
-    }
+    },
+    "title": "Setări"
   }
 }

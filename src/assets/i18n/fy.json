@@ -29,6 +29,12 @@
         "download": "Download oersetting",
         "copy": "Kopiearje oersetting",
         "share": "Diele oersetting"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laden fan minsklik fideomodel",
+          "generating": "It generearjen fan fideo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Ark"
+    },
+    "nav": {
+      "pages": "Gean nei oare siden",
+      "legal": "Gean nei juridyske siden"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelet",
       "avatar": "Avatar",
       "human": "Minske"
-    }
+    },
+    "title": "Ynstellings"
   }
 }

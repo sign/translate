@@ -46,11 +46,25 @@ async function translateMissingEntries(source, target, targetLanguage) {
   }
 }
 
+function removeExtraEntries(source, target) {
+  for (const [key, value] of Object.entries(target)) {
+    if (!(key in source)) {
+      delete target[key];
+    } else {
+      if (typeof value !== 'string') {
+        removeExtraEntries(source[key], value);
+      }
+    }
+  }
+}
+
 async function main() {
   // Iterate files and translate missing entries
   for (const [lang, {content, filePath}] of Object.entries(languages)) {
     if (lang !== DEFAULT_LANGUAGE) {
-      await translateMissingEntries(languages[DEFAULT_LANGUAGE].content, content, lang);
+      const source = languages[DEFAULT_LANGUAGE].content;
+      await translateMissingEntries(source, content, lang);
+      removeExtraEntries(source, content);
       fs.writeFileSync(filePath, JSON.stringify(content, null, 2) + '\n');
     }
   }

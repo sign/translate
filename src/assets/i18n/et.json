@@ -29,6 +29,12 @@
         "download": "Laadige alla tõlge",
         "copy": "Kopeeri tõlge",
         "share": "Jaga tõlget"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Inimese videomudeli laadimine",
+          "generating": "Video genereerimine"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Tööriistad"
+    },
+    "nav": {
+      "pages": "Liikuge teistele lehtedele",
+      "legal": "Liikuge juriidilistele lehtedele"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelett",
       "avatar": "Avatar",
       "human": "Inimene"
-    }
+    },
+    "title": "Seaded"
   }
 }

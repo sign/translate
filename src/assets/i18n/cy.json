@@ -29,6 +29,12 @@
         "download": "Download Cyfieithiad",
         "copy": "Copi Cyfieithiad",
         "share": "Rhannu Cyfieithiad"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Llwytho model fideo dynol",
+          "generating": "Cynhyrchu fideo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Offer"
+    },
+    "nav": {
+      "pages": "Llywiwch i dudalennau eraill",
+      "legal": "Llywiwch i dudalennau cyfreithiol"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "sgerbwd",
       "avatar": "Avatar",
       "human": "Dynol"
-    }
+    },
+    "title": "Gosodiadau"
   }
 }

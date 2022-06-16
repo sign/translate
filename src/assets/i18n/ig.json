@@ -29,6 +29,12 @@
         "download": "Budata Ntụgharị asụsụ",
         "copy": "Detuo ntụgharị asụsụ",
         "share": "Kekọrịta ntụgharị asụsụ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Na-ebu ihe ngosi vidiyo mmadụ",
+          "generating": "Na-emepụta vidiyo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Ngwaọrụ"
+    },
+    "nav": {
+      "pages": "Gaa na ibe ndị ọzọ",
+      "legal": "Gaa na ibe iwu"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Ọkpụkpụ",
       "avatar": "Avatar",
       "human": "Mmadụ"
-    }
+    },
+    "title": "Ntọala"
   }
 }

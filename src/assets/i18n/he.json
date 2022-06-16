@@ -24,6 +24,12 @@
         "download": "הורדת תרגום",
         "copy": "העתקת תרגום",
         "share": "שיתוף תרגום"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "טוען דגם וידאו אנושי",
+          "generating": "יצירת וידאו"
+        }
       }
     },
     "upload": {
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "כלים"
+    },
+    "nav": {
+      "pages": "נווט לדפים אחרים",
+      "legal": "נווט לדפים משפטיים"
     }
   },
   "playground": {
@@ -79,7 +89,6 @@
   "speech-to-text": {
     "start": "תרגום באמצעות דיבור",
     "stop": "הפסקת התרגום באמצעות דיבור",
-    "unavailable": "נדרשת הרשאה להשתמש במיקרופון",
     "not-allowed": "צריך הרשאה להשתמש במיקרופון",
     "language-not-supported": "השפה שנבחרה אינה נתמכת",
     "browser-not-supported": "קלט קולי אינו נתמך בדפדפן זה"
@@ -94,7 +103,8 @@
       "pose": "שלד",
       "avatar": "אווטאר",
       "human": "אנושי"
-    }
+    },
+    "title": "הגדרות"
   },
   "legal": {
     "terms": {

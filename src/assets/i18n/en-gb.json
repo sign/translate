@@ -29,6 +29,12 @@
         "download": "Download Translation",
         "copy": "Copy Translation",
         "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Loading human video model",
+          "generating": "Generating video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Tools"
+    },
+    "nav": {
+      "pages": "Navigate to other pages",
+      "legal": "Navigate to legal pages"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeleton",
       "avatar": "Avatar",
       "human": "Human"
-    }
+    },
+    "title": "Settings"
   }
 }

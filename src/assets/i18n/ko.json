@@ -29,6 +29,12 @@
         "download": "번역 다운로드",
         "copy": "번역 복사",
         "share": "번역 공유"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "사람 비디오 모델 로드 중",
+          "generating": "비디오 생성"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "도구"
+    },
+    "nav": {
+      "pages": "다른 페이지로 이동",
+      "legal": "법률 페이지로 이동"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "해골",
       "avatar": "화신",
       "human": "인간"
-    }
+    },
+    "title": "설정"
   }
 }

@@ -29,6 +29,12 @@
         "download": "Khuphela Inguqulelo",
         "copy": "Khuphela Inguqulelo",
         "share": "Yabelana Ngenguqulelo"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ilayisha imodeli yevidiyo yomntu",
+          "generating": "Ukuvelisa ividiyo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Izixhobo"
+    },
+    "nav": {
+      "pages": "Yiya kwamanye amaphepha",
+      "legal": "Yiya kumaphepha asemthethweni"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Amathambo",
       "avatar": "IAvatar",
       "human": "Umntu"
-    }
+    },
+    "title": "Iisetingi"
   }
 }

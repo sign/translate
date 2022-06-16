@@ -29,6 +29,12 @@
         "download": "Íosluchtaigh aistriúchán béarla",
         "copy": "Cóipeáil Aistriúchán",
         "share": "Comhroinn Aistriúchán"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Íosluchtaigh físeán múnla daonna",
+          "generating": "Físeán a ghiniúint"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Uirlisí"
+    },
+    "nav": {
+      "pages": "Déan nascleanúint go leathanaigh eile",
+      "legal": "Déan nascleanúint chuig leathanaigh dhlíthiúla"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "creatlach",
       "avatar": "Avatar",
       "human": "Duine"
-    }
+    },
+    "title": "Socruithe"
   }
 }

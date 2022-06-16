@@ -29,6 +29,12 @@
         "download": "Landa Ukuhumusha",
         "copy": "Kopisha Ukuhumusha",
         "share": "Yabelana ngokuhumusha"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ilayisha imodeli yevidiyo yomuntu",
+          "generating": "Ikhiqiza ividiyo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Amathuluzi"
+    },
+    "nav": {
+      "pages": "Zulazulela kwamanye amakhasi",
+      "legal": "Zulazulela emakhasini asemthethweni"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Uhlaka lwamathambo",
       "avatar": "Isithombe",
       "human": "Umuntu"
-    }
+    },
+    "title": "Izilungiselelo"
   }
 }

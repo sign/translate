@@ -29,6 +29,12 @@
         "download": "Scarica traduzione",
         "copy": "Copia traduzione",
         "share": "Condividi traduzione"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Caricamento del modello video umano",
+          "generating": "Generazione video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Strumenti"
+    },
+    "nav": {
+      "pages": "Passa ad altre pagine",
+      "legal": "Vai alle pagine legali"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Scheletro",
       "avatar": "Avatar",
       "human": "Umano"
-    }
+    },
+    "title": "Impostazioni"
   }
 }

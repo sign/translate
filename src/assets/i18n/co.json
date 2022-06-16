@@ -29,6 +29,12 @@
         "download": "Scaricate a traduzzione",
         "copy": "Copy Translation",
         "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Caricà u mudellu di video umanu",
+          "generating": "Generazione di video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Outils"
+    },
+    "nav": {
+      "pages": "Navigate à altre pagine",
+      "legal": "Navigate à e pagine legali"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "scheletru",
       "avatar": "Avatar",
       "human": "umanu"
-    }
+    },
+    "title": "Settings"
   }
 }

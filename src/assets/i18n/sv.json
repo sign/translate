@@ -29,6 +29,12 @@
         "download": "Ladda ner översättning",
         "copy": "Kopiera översättning",
         "share": "Dela översättning"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laddar mänsklig videomodell",
+          "generating": "Genererar video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Verktyg"
+    },
+    "nav": {
+      "pages": "Navigera till andra sidor",
+      "legal": "Navigera till juridiska sidor"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelett",
       "avatar": "Avatar",
       "human": "Mänsklig"
-    }
+    },
+    "title": "inställningar"
   }
 }

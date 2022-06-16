@@ -29,6 +29,12 @@
         "download": "Hoʻoiho i ka unuhi",
         "copy": "E kope i ka unuhi",
         "share": "Kaʻana unuhi"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ke hoʻouka nei i ke kumu hoʻohālike wikiō kanaka",
+          "generating": "Hoʻopuka wikiō"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Nā meahana"
+    },
+    "nav": {
+      "pages": "E hoʻokele i nā ʻaoʻao ʻē aʻe",
+      "legal": "E hoʻokele i nā ʻaoʻao kānāwai"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Iwi",
       "avatar": "Avatar",
       "human": "Kanaka"
-    }
+    },
+    "title": "Nā hoʻonohonoho"
   }
 }

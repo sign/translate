@@ -29,6 +29,12 @@
         "download": "Lataa käännös",
         "copy": "Kopioi käännös",
         "share": "Jaa käännös"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ladataan ihmisvideomallia",
+          "generating": "Luodaan videota"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Työkalut"
+    },
+    "nav": {
+      "pages": "Siirry muille sivuille",
+      "legal": "Siirry juridisille sivuille"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Luuranko",
       "avatar": "hahmo",
       "human": "Ihmisen"
-    }
+    },
+    "title": "asetukset"
   }
 }

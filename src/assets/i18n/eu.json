@@ -29,6 +29,12 @@
         "download": "Deskargatu Itzulpena",
         "copy": "Kopiatu Itzulpena",
         "share": "Partekatu itzulpena"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Giza bideo eredua kargatzen",
+          "generating": "Bideoa sortzea"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Tresnak"
+    },
+    "nav": {
+      "pages": "Nabigatu beste orrietara",
+      "legal": "Nabigatu legezko orrietara"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Hezurdura",
       "avatar": "Avatarra",
       "human": "Gizakia"
-    }
+    },
+    "title": "Ezarpenak"
   }
 }

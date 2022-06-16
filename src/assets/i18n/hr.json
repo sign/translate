@@ -29,6 +29,12 @@
         "download": "Preuzmite prijevod",
         "copy": "Kopiraj prijevod",
         "share": "Dijeli prijevod"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Učitavanje ljudskog video modela",
+          "generating": "Generiranje videa"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Alati"
+    },
+    "nav": {
+      "pages": "Idite na druge stranice",
+      "legal": "Idite na pravne stranice"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kostur",
       "avatar": "Avatar",
       "human": "ljudski"
-    }
+    },
+    "title": "Postavke"
   }
 }

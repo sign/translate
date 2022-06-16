@@ -29,6 +29,12 @@
         "download": "Download oversættelse",
         "copy": "Kopi oversættelse",
         "share": "Del oversættelse"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Indlæser menneskelig videomodel",
+          "generating": "Generering af video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Værktøjer"
+    },
+    "nav": {
+      "pages": "Naviger til andre sider",
+      "legal": "Naviger til juridiske sider"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelet",
       "avatar": "Avatar",
       "human": "Human"
-    }
+    },
+    "title": "Indstillinger"
   }
 }

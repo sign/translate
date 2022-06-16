@@ -29,6 +29,12 @@
         "download": "Last ned oversettelse",
         "copy": "Kopier oversettelse",
         "share": "Del oversettelse"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laster inn menneskelig videomodell",
+          "generating": "Genererer video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Verktøy"
+    },
+    "nav": {
+      "pages": "Naviger til andre sider",
+      "legal": "Naviger til juridiske sider"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skjelett",
       "avatar": "Avatar",
       "human": "Menneskelig"
-    }
+    },
+    "title": "Innstillinger"
   }
 }

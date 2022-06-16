@@ -29,6 +29,12 @@
         "download": "Baixar tradução",
         "copy": "Copiar Tradução",
         "share": "Compartilhar tradução"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Carregando modelo de vídeo humano",
+          "generating": "Gerando vídeo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Ferramentas"
+    },
+    "nav": {
+      "pages": "Navegue para outras páginas",
+      "legal": "Navegue para páginas jurídicas"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Esqueleto",
       "avatar": "Avatar",
       "human": "Humano"
-    }
+    },
+    "title": "Definições"
   }
 }

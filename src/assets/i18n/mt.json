@@ -29,6 +29,12 @@
         "download": "Niżżel Traduzzjoni",
         "copy": "Kopja tat-Traduzzjoni",
         "share": "Share Traduzzjoni"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Tagħbija tal-mudell tal-vidjo uman",
+          "generating": "Ġenerazzjoni tal-vidjo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Għodod"
+    },
+    "nav": {
+      "pages": "Innaviga lejn paġni oħra",
+      "legal": "Innaviga lejn paġni legali"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeletru",
       "avatar": "Avatar",
       "human": "Bniedem"
-    }
+    },
+    "title": "Settings"
   }
 }

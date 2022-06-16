@@ -29,6 +29,12 @@
         "download": "Telechaje Tradiksyon",
         "copy": "Kopi Tradiksyon",
         "share": "Pataje tradiksyon"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Chaje modèl videyo imen",
+          "generating": "Jenere videyo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Zouti yo"
+    },
+    "nav": {
+      "pages": "Navige nan lòt paj",
+      "legal": "Navige nan paj legal yo"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kilè eskèlèt",
       "avatar": "Avatar",
       "human": "Moun"
-    }
+    },
+    "title": "Anviwònman"
   }
 }
