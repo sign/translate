@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Dịch",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Phát hiện ngôn ngữ",
+      "more": "Nhiều ngôn ngữ hơn"
+    },
+    "feedback": "Gửi phản hồi",
+    "input": {
+      "text": "Văn bản",
+      "webcam": "Webcam",
+      "upload": "Tải lên"
+    },
+    "swapLanguages": "Hoán đổi ngôn ngữ",
+    "upload": {
+      "types": "Tải một tệp .mp4, .ogv hoặc .webm lên.",
+      "browse": "Tìm tệp trên máy tính của bạn",
+      "title": "Chọn một video"
+    },
+    "description": "Ứng dụng dịch ngôn ngữ ký hiệu đa ngôn ngữ hai chiều dành cho máy tính để bàn và thiết bị di động",
+    "spoken-to-signed": {
+      "text": "Văn bản Ngôn ngữ Nói",
+      "actions": {
+        "download": "Tải xuống bản dịch",
+        "copy": "Sao chép bản dịch",
+        "share": "Chia sẻ bản dịch"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Đang tải mô hình video của con người",
+          "generating": "Tạo video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "THỬ DỊCH",
+    "about": {
+      "title": "Giới thiệu",
+      "hero": {
+        "title": "Dịch giữa hơn 40 ngôn ngữ được ký và nói trong thời gian thực.",
+        "img": "Ví dụ về bản dịch trực tiếp giữa Ngôn ngữ ký hiệu Mỹ và tiếng Anh"
+      }
+    },
+    "languages": {
+      "title": "Ngôn ngữ"
+    },
+    "contribute": {
+      "title": "Đóng góp"
+    },
+    "tools": {
+      "title": "Công cụ"
+    },
+    "nav": {
+      "pages": "Điều hướng đến các trang khác",
+      "legal": "Điều hướng đến các trang pháp lý"
+    }
+  },
+  "text-to-speech": {
+    "play": "Nghe",
+    "cancel": "Ngừng lại",
+    "unavailable": "Đầu ra bằng giọng nói không khả dụng cho ngôn ngữ đã chọn"
+  },
+  "speech-to-text": {
+    "start": "Dịch bằng giọng nói",
+    "stop": "Dừng dịch bằng giọng nói",
+    "not-allowed": "Cần quyền để sử dụng micrô",
+    "language-not-supported": "Ngôn ngữ đã chọn không được hỗ trợ",
+    "browser-not-supported": "Nhập liệu bằng giọng nói không được hỗ trợ trên trình duyệt này"
+  },
+  "legal": {
+    "terms": {
+      "title": "Điều khoản"
+    },
+    "privacy": {
+      "title": "Bảo mật"
+    },
+    "licenses": {
+      "title": "Phần mềm và giấy phép"
+    }
+  },
+  "playground": {
+    "title": "Sân chơi xử lý ngôn ngữ ký hiệu"
+  },
+  "benchmark": {
+    "title": "Điểm chuẩn",
+    "stats": {
+      "cld": {
+        "title": "Nhận dạng ngôn ngữ nói",
+        "import": "Nhập mô-đun",
+        "load": "Tải mô hình",
+        "find": "Xác định Văn bản",
+        "create": "Tạo ra"
+      },
+      "pix2pix": {
+        "title": "Người xem tư thế người",
+        "init": "Công nhân Init",
+        "load": "Tải mô hình",
+        "first-frame": "Suy luận khung đầu tiên",
+        "frame": "Suy luận khung"
+      },
+      "pose": {
+        "title": "Ước tính tư thế toàn thân",
+        "load": "Tải mô hình",
+        "first-frame": "Suy luận khung đầu tiên",
+        "frame": "Suy luận khung"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Xuất hiện",
+    "action": "Sửa đổi ngoại hình",
+    "random": "Nhận một bức ảnh ngẫu nhiên",
+    "upload": "Tải lên ảnh của riêng bạn"
+  },
+  "video": {
+    "errors": {
+      "starting": "Máy ảnh khởi động",
+      "turnedOff": "Máy ảnh đã tắt",
+      "notConnected": "Máy ảnh không được kết nối",
+      "permissionDenied": "Quyền đối với máy ảnh bị từ chối"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Tắt máy ảnh",
+        "off": "Bật máy ảnh"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Đang tải ước tính tư thế ..."
+  },
+  "language-selector": {
+    "label": "Thay đổi ngôn ngữ hoặc khu vực"
+  },
+  "settings": {
+    "detectSign": "Dấu hiệu phát hiện",
+    "drawVideo": "Vẽ video",
+    "drawPose": "Vẽ tư thế",
+    "drawSignWriting": "Vẽ Ký hiệu Viết",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Bộ xương",
+      "avatar": "hình đại diện",
+      "human": "Nhân loại"
+    },
+    "title": "Cài đặt"
+  }
+}

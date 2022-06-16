@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Terjemahan",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Deteksi bahasa",
+      "more": "Lebih Banyak Bahasa"
+    },
+    "feedback": "Kirim masukan",
+    "input": {
+      "text": "Teks",
+      "webcam": "Kamera web",
+      "upload": "Mengunggah"
+    },
+    "swapLanguages": "Tukar bahasa",
+    "upload": {
+      "types": "Upload .mp4, .ogv, atau .webm.",
+      "browse": "Jelajahi komputer",
+      "title": "Pilih video"
+    },
+    "description": "Aplikasi terjemahan bahasa isyarat multibahasa dua arah untuk desktop dan seluler",
+    "spoken-to-signed": {
+      "text": "Teks Bahasa Lisan",
+      "actions": {
+        "download": "Unduh Terjemahan",
+        "copy": "Salin Terjemahan",
+        "share": "Bagikan Terjemahan"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Memuat model video manusia",
+          "generating": "Membuat video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "COBA TERJEMAHAN",
+    "about": {
+      "title": "Tentang",
+      "hero": {
+        "title": "Terjemahkan antara 40+ bahasa isyarat dan bahasa lisan secara real-time.",
+        "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggris"
+      }
+    },
+    "languages": {
+      "title": "Bahasa"
+    },
+    "contribute": {
+      "title": "Beri kontribusi"
+    },
+    "tools": {
+      "title": "Peralatan"
+    },
+    "nav": {
+      "pages": "Navigasikan ke halaman lain",
+      "legal": "Arahkan ke halaman hukum"
+    }
+  },
+  "text-to-speech": {
+    "play": "Simak",
+    "cancel": "Berhenti",
+    "unavailable": "Keluaran suara tidak tersedia untuk bahasa yang dipilih"
+  },
+  "speech-to-text": {
+    "start": "Terjemahkan dengan suara",
+    "stop": "Hentikan terjemahan dengan suara",
+    "not-allowed": "Perlu izin untuk menggunakan mikrofon",
+    "language-not-supported": "Bahasa yang dipilih tidak didukung",
+    "browser-not-supported": "Masukan suara tidak didukung di browser ini"
+  },
+  "legal": {
+    "terms": {
+      "title": "Persyaratan"
+    },
+    "privacy": {
+      "title": "Privasi"
+    },
+    "licenses": {
+      "title": "Perangkat Lunak dan Lisensi"
+    }
+  },
+  "playground": {
+    "title": "Taman Bermain Pemrosesan Bahasa Isyarat"
+  },
+  "benchmark": {
+    "title": "Tolok ukur",
+    "stats": {
+      "cld": {
+        "title": "Identifikasi Bahasa Lisan",
+        "import": "Modul Impor",
+        "load": "Muat Model",
+        "find": "Identifikasi Teks",
+        "create": "Membuat"
+      },
+      "pix2pix": {
+        "title": "Penampil Pose Manusia",
+        "init": "Inisi Pekerja",
+        "load": "Muat Model",
+        "first-frame": "Inferensi Bingkai Pertama",
+        "frame": "Inferensi Bingkai"
+      },
+      "pose": {
+        "title": "Estimasi Pose Seluruh Tubuh",
+        "load": "Beban Model",
+        "first-frame": "Inferensi Bingkai Pertama",
+        "frame": "Inferensi Bingkai"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Penampilan",
+    "action": "Ubah penampilan",
+    "random": "Dapatkan foto acak",
+    "upload": "Unggah foto Anda sendiri"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera mulai",
+      "turnedOff": "Kamera dimatikan",
+      "notConnected": "Kamera tidak terhubung",
+      "permissionDenied": "Izin kamera ditolak"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Matikan kamera",
+        "off": "Nyalakan kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Memuat Estimasi Pose..."
+  },
+  "language-selector": {
+    "label": "Ubah bahasa atau wilayah"
+  },
+  "settings": {
+    "detectSign": "Deteksi Tanda",
+    "drawVideo": "Menggambar Video",
+    "drawPose": "Menggambar Pose",
+    "drawSignWriting": "Menggambar Tanda Menulis",
+    "animatePose": "Pose Animasi",
+    "poseViewer": {
+      "pose": "Kerangka",
+      "avatar": "Avatar",
+      "human": "Manusia"
+    },
+    "title": "Pengaturan"
+  }
+}

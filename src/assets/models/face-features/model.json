@@ -13,11 +13,7 @@
           {
             "class_name": "InputLayer",
             "config": {
-              "batch_input_shape": [
-                1,
-                1,
-                1404
-              ],
+              "batch_input_shape": [1, 1, 1404],
               "dtype": "float32",
               "sparse": false,
               "ragged": false,
@@ -32,9 +28,7 @@
               "name": "batch_normalization_17",
               "trainable": true,
               "dtype": "float32",
-              "axis": [
-                2
-              ],
+              "axis": [2],
               "momentum": 0.99,
               "epsilon": 0.001,
               "center": true,
@@ -61,16 +55,7 @@
               "gamma_constraint": null
             },
             "name": "batch_normalization_17",
-            "inbound_nodes": [
-              [
-                [
-                  "input_12",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["input_12", 0, 0, {}]]]
           },
           {
             "class_name": "SimpleRNN",
@@ -118,16 +103,7 @@
               "recurrent_dropout": 0.0
             },
             "name": "simple_rnn_25",
-            "inbound_nodes": [
-              [
-                [
-                  "batch_normalization_17",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["batch_normalization_17", 0, 0, {}]]]
           },
           {
             "class_name": "SimpleRNN",
@@ -175,16 +151,7 @@
               "recurrent_dropout": 0.0
             },
             "name": "simple_rnn_26",
-            "inbound_nodes": [
-              [
-                [
-                  "simple_rnn_25",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["simple_rnn_25", 0, 0, {}]]]
           },
           {
             "class_name": "Dense",
@@ -212,16 +179,7 @@
               "bias_constraint": null
             },
             "name": "dense_33",
-            "inbound_nodes": [
-              [
-                [
-                  "simple_rnn_26",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["simple_rnn_26", 0, 0, {}]]]
           },
           {
             "class_name": "Dense",
@@ -249,16 +207,7 @@
               "bias_constraint": null
             },
             "name": "dense_34",
-            "inbound_nodes": [
-              [
-                [
-                  "simple_rnn_26",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["simple_rnn_26", 0, 0, {}]]]
           },
           {
             "class_name": "Dense",
@@ -286,16 +235,7 @@
               "bias_constraint": null
             },
             "name": "dense_35",
-            "inbound_nodes": [
-              [
-                [
-                  "simple_rnn_26",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["simple_rnn_26", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -308,168 +248,100 @@
             "name": "concatenate_11",
             "inbound_nodes": [
               [
-                [
-                  "dense_33",
-                  0,
-                  0,
-                  {}
-                ],
-                [
-                  "dense_34",
-                  0,
-                  0,
-                  {}
-                ],
-                [
-                  "dense_35",
-                  0,
-                  0,
-                  {}
-                ]
+                ["dense_33", 0, 0, {}],
+                ["dense_34", 0, 0, {}],
+                ["dense_35", 0, 0, {}]
               ]
             ]
           }
         ],
-        "input_layers": [
-          [
-            "input_12",
-            0,
-            0
-          ]
-        ],
-        "output_layers": [
-          [
-            "concatenate_11",
-            0,
-            0
-          ]
-        ]
+        "input_layers": [["input_12", 0, 0]],
+        "output_layers": [["concatenate_11", 0, 0]]
       }
     }
   },
   "weightsManifest": [
     {
-      "paths": [
-        "group1-shard1of1.bin"
-      ],
+      "paths": ["group1-shard1of1.bin"],
       "weights": [
         {
           "name": "batch_normalization_17/gamma",
-          "shape": [
-            1404
-          ],
+          "shape": [1404],
           "dtype": "float32"
         },
         {
           "name": "batch_normalization_17/beta",
-          "shape": [
-            1404
-          ],
+          "shape": [1404],
           "dtype": "float32"
         },
         {
           "name": "batch_normalization_17/moving_mean",
-          "shape": [
-            1404
-          ],
+          "shape": [1404],
           "dtype": "float32"
         },
         {
           "name": "batch_normalization_17/moving_variance",
-          "shape": [
-            1404
-          ],
+          "shape": [1404],
           "dtype": "float32"
         },
         {
           "name": "dense_33/kernel",
-          "shape": [
-            128,
-            4
-          ],
+          "shape": [128, 4],
           "dtype": "float32"
         },
         {
           "name": "dense_33/bias",
-          "shape": [
-            4
-          ],
+          "shape": [4],
           "dtype": "float32"
         },
         {
           "name": "dense_34/kernel",
-          "shape": [
-            128,
-            3
-          ],
+          "shape": [128, 3],
           "dtype": "float32"
         },
         {
           "name": "dense_34/bias",
-          "shape": [
-            3
-          ],
+          "shape": [3],
           "dtype": "float32"
         },
         {
           "name": "dense_35/kernel",
-          "shape": [
-            128,
-            7
-          ],
+          "shape": [128, 7],
           "dtype": "float32"
         },
         {
           "name": "dense_35/bias",
-          "shape": [
-            7
-          ],
+          "shape": [7],
           "dtype": "float32"
         },
         {
           "name": "simple_rnn_25/simple_rnn_cell_31/kernel",
-          "shape": [
-            1404,
-            128
-          ],
+          "shape": [1404, 128],
           "dtype": "float32"
         },
         {
           "name": "simple_rnn_25/simple_rnn_cell_31/recurrent_kernel",
-          "shape": [
-            128,
-            128
-          ],
+          "shape": [128, 128],
           "dtype": "float32"
         },
         {
           "name": "simple_rnn_25/simple_rnn_cell_31/bias",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32"
         },
         {
           "name": "simple_rnn_26/simple_rnn_cell_32/kernel",
-          "shape": [
-            128,
-            128
-          ],
+          "shape": [128, 128],
           "dtype": "float32"
         },
         {
           "name": "simple_rnn_26/simple_rnn_cell_32/recurrent_kernel",
-          "shape": [
-            128,
-            128
-          ],
+          "shape": [128, 128],
           "dtype": "float32"
         },
         {
           "name": "simple_rnn_26/simple_rnn_cell_32/bias",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32"
         }
       ]

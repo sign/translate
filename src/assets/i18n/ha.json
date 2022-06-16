@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Tsinkayo harshe",
+      "more": "Ƙarin Harsuna"
+    },
+    "feedback": "Aika ta&#39;aliƙi",
+    "input": {
+      "text": "Rubutu",
+      "webcam": "Kamara ta yanar gizo",
+      "upload": "Loda"
+    },
+    "swapLanguages": "Musanya harsuna",
+    "upload": {
+      "types": "Ɗora wani .mp4, .ogv, ko .webm.",
+      "browse": "Binciki kwamfutarka",
+      "title": "Zaɓi bidiyo"
+    },
+    "description": "Ƙa'idar fassarar harshe na alamar harshe guda biyu don tebur da wayar hannu",
+    "spoken-to-signed": {
+      "text": "Rubutun Harshen Magana",
+      "actions": {
+        "download": "Zazzage Fassara",
+        "copy": "Kwafi Fassara",
+        "share": "Raba Fassarar"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ana loda samfurin bidiyo na ɗan adam",
+          "generating": "Samar da bidiyo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "GWADA FASSARA",
+    "about": {
+      "title": "Game da",
+      "hero": {
+        "title": "Fassara tsakanin 40+ sa hannu da harsunan magana a ainihin-lokaci.",
+        "img": "Misalin fassarar kai tsaye tsakanin Harshen Alamun Amurka da Ingilishi"
+      }
+    },
+    "languages": {
+      "title": "Harsuna"
+    },
+    "contribute": {
+      "title": "Ba da gudummuwa"
+    },
+    "tools": {
+      "title": "Kayan Aiki"
+    },
+    "nav": {
+      "pages": "Kewaya zuwa wasu shafuka",
+      "legal": "Kewaya zuwa shafukan doka"
+    }
+  },
+  "text-to-speech": {
+    "play": "Saurari",
+    "cancel": "Tsaya",
+    "unavailable": "Babu fitarwar murya don harshen da aka zaɓa"
+  },
+  "speech-to-text": {
+    "start": "Fassara da murya",
+    "stop": "Dakatar da fassara ta murya",
+    "not-allowed": "Bukatar izini don amfani da makirufo",
+    "language-not-supported": "Ba a tallafawa harshen da aka zaɓa",
+    "browser-not-supported": "Ba a tallafawa shigar da murya akan wannan mai binciken"
+  },
+  "legal": {
+    "terms": {
+      "title": "Sharuɗɗa"
+    },
+    "privacy": {
+      "title": "Keɓantuwa"
+    },
+    "licenses": {
+      "title": "Software da kuma Zanen Shafin"
+    }
+  },
+  "playground": {
+    "title": "Filin Wasan sarrafa Harshen Alama"
+  },
+  "benchmark": {
+    "title": "Alamar alama",
+    "stats": {
+      "cld": {
+        "title": "Fahimtar Harshen Magana",
+        "import": "Shigo Module",
+        "load": "Load Model",
+        "find": "Gane Rubutu",
+        "create": "Ƙirƙiri"
+      },
+      "pix2pix": {
+        "title": "Mai Kallon Matsayin Dan Adam",
+        "init": "Ma'aikacin Init",
+        "load": "Load Model",
+        "first-frame": "Fahimtar Tsarin Farko",
+        "frame": "Fitowar Firam"
+      },
+      "pose": {
+        "title": "Cikakkun Matsayin Jiki",
+        "load": "Model Load",
+        "first-frame": "Fahimtar Tsarin Farko",
+        "frame": "Fitowar Firam"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Bayyanar",
+    "action": "Gyara kamanni",
+    "random": "Samun hoto bazuwar",
+    "upload": "Sanya hoton ku"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamara tana farawa",
+      "turnedOff": "An kashe kamara",
+      "notConnected": "Ba a haɗa kamara ba",
+      "permissionDenied": "An ƙi izinin kyamara"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kashe kamara",
+        "off": "Kunna kamara"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ana Load da Ƙimar Matsayi..."
+  },
+  "language-selector": {
+    "label": "Canja harshe ko yanki"
+  },
+  "settings": {
+    "detectSign": "Gano Alamar",
+    "drawVideo": "Zana Bidiyo",
+    "drawPose": "Zana Matsayi",
+    "drawSignWriting": "Zana Rubutun Alamar",
+    "animatePose": "Matsayi mai rai",
+    "poseViewer": {
+      "pose": "kwarangwal",
+      "avatar": "Avatar",
+      "human": "Mutum"
+    },
+    "title": "Saituna"
+  }
+}

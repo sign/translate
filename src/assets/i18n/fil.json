@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Kilalanin ang Wika",
+      "more": "Higit pang mga Wika"
+    },
+    "feedback": "Ipadala ang feedback",
+    "input": {
+      "text": "Text",
+      "webcam": "Webcam",
+      "upload": "Mag-upload"
+    },
+    "swapLanguages": "Maglipat ng mga wika",
+    "upload": {
+      "types": "Mag-upload ng .mp4, .ogv, o .webm.",
+      "browse": "Mag-browse sa computer mo",
+      "title": "Pumili ng video"
+    },
+    "description": "Isang bi-directional multilingual sign language translation app para sa desktop at mobile",
+    "spoken-to-signed": {
+      "text": "Teksto ng Binigkas na Wika",
+      "actions": {
+        "download": "I-download ang Pagsasalin",
+        "copy": "Kopyahin ang Pagsasalin",
+        "share": "Ibahagi ang Pagsasalin"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nilo-load ang modelo ng video ng tao",
+          "generating": "Bumubuo ng video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "SUBUKAN ANG TRANSLATE",
+    "about": {
+      "title": "Tungkol sa",
+      "hero": {
+        "title": "Magsalin sa pagitan ng 40+ na nilagdaan at sinasalitang mga wika sa real-time.",
+        "img": "Halimbawa ng live na pagsasalin sa pagitan ng American Sign Language at English"
+      }
+    },
+    "languages": {
+      "title": "Mga Wika"
+    },
+    "contribute": {
+      "title": "Mag-contribute"
+    },
+    "tools": {
+      "title": "Mga tool"
+    },
+    "nav": {
+      "pages": "Mag-navigate sa iba pang mga pahina",
+      "legal": "Mag-navigate sa mga legal na pahina"
+    }
+  },
+  "text-to-speech": {
+    "play": "Makinig",
+    "cancel": "Tumigil ka",
+    "unavailable": "Hindi available ang output ng boses para sa napiling wika"
+  },
+  "speech-to-text": {
+    "start": "Magsalin sa pamamagitan ng boses",
+    "stop": "Ihinto ang pagsasalin sa pamamagitan ng boses",
+    "not-allowed": "Kailangan ng pahintulot na gumamit ng mikropono",
+    "language-not-supported": "Ang napiling wika ay hindi suportado",
+    "browser-not-supported": "Hindi sinusuportahan ang voice input sa browser na ito"
+  },
+  "legal": {
+    "terms": {
+      "title": "Mga Tuntunin"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software at Mga Lisensya"
+    }
+  },
+  "playground": {
+    "title": "Palaruan sa Pagproseso ng Sign Language"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Pagkilala sa Wikang Binibigkas",
+        "import": "Import Module",
+        "load": "I-load ang Modelo",
+        "find": "Kilalanin ang Teksto",
+        "create": "Lumikha"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Manggagawa Init",
+        "load": "I-load ang Modelo",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Pagtatantya ng Posisyon ng Buong Katawan",
+        "load": "Pag-load ng Modelo",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Hitsura",
+    "action": "Baguhin ang hitsura",
+    "random": "Kumuha ng random na larawan",
+    "upload": "Mag-upload ng sarili mong larawan"
+  },
+  "video": {
+    "errors": {
+      "starting": "Nagsisimula ang camera",
+      "turnedOff": "Naka-off ang camera",
+      "notConnected": "Hindi nakakonekta ang camera",
+      "permissionDenied": "Tinanggihan ang pahintulot sa camera"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "I-off ang camera",
+        "off": "I-on ang camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Nilo-load ang pagtatantya ng pose..."
+  },
+  "language-selector": {
+    "label": "Baguhin ang wika o rehiyon"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Gumuhit ng Video",
+    "drawPose": "Gumuhit ng Pose",
+    "drawSignWriting": "Gumuhit ng Pagsulat ng Palatandaan",
+    "animatePose": "Pagalawin Pose",
+    "poseViewer": {
+      "pose": "Kalansay",
+      "avatar": "Avatar",
+      "human": "Tao"
+    },
+    "title": "Mga setting"
+  }
+}

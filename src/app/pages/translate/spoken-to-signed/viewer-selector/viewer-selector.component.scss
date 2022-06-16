@@ -8,10 +8,3 @@
     margin: 10px 1px;
   }
 }
-
-
-// TODO: This is affecting ALL overlays, not just the fab overlay. Need to find a fix
-::ng-deep .cdk-overlay-pane {
-  // The difference between the size of a fab and a mini-fab
-  transform: translateX(calc((58px - 40px) / 2));
-}

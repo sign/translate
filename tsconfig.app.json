@@ -2,20 +2,8 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": [
-      "@types/dom-speech-recognition",
-      "@types/node",
-      "@types/offscreencanvas",
-      "@types/long",
-      "@types/dom-webcodecs"
-    ]
+    "types": ["@types/dom-speech-recognition", "@types/node", "@types/offscreencanvas", "@types/long"]
   },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts",
-    "node_modules/@types/chrome/index.d.ts"
-  ]
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/**/*.d.ts", "node_modules/@types/chrome/index.d.ts"]
 }

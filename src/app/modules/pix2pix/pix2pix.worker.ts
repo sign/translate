@@ -18,17 +18,16 @@ async function loadModel(): Promise<void> {
   model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
 }
 
-const RANGE_LIMIT = 17;
-
-function isWhitish(r: number, g: number, b: number) {
-  const min = Math.min(r, g, b);
-  return min > 255 / 2 && Math.max(r, g, b) - min <= RANGE_LIMIT;
+function isGreen(r: number, g: number, b: number) {
+  // This green screen algorithm returns disgusting results.
+  // return g > 255/2 && g > r * 1.5 && g > b * 1.5;
+  return false;
 }
 
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
   for (let i = 0; i < data.length; i += 4) {
-    if (isWhitish(data[i], data[i + 1], data[i + 2])) {
+    if (isGreen(data[i], data[i + 1], data[i + 2])) {
       data[i + 3] = 0;
     }
   }
@@ -62,6 +61,5 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
 
   return comlink.transfer(data, [data.buffer]);
 }
-
 
 comlink.expose({loadModel, translate});

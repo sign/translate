@@ -1,6 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-import {SpeechToTextComponent} from './speech-to-text.component';
+import {SpeechRecognition, SpeechToTextComponent} from './speech-to-text.component';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 
 describe('SpeechToTextComponent', () => {
   let component: SpeechToTextComponent;
@@ -8,9 +11,9 @@ describe('SpeechToTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SpeechToTextComponent]
-    })
-      .compileComponents();
+      declarations: [SpeechToTextComponent],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -23,31 +26,39 @@ describe('SpeechToTextComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('start should start speech recognition', () => {
-    const startSpy = spyOn(component.speechRecognition, 'start').and.callFake(() => {
-      component.speechRecognition.dispatchEvent(new Event('start'));
-    });
-    const changeTextSpy = spyOn(component.changeText, 'emit');
-
-    expect(component.isRecording).toBeFalse();
-
-    component.start();
-
-    expect(startSpy).toHaveBeenCalled();
-    expect(changeTextSpy).toHaveBeenCalledWith('');
-    expect(component.isRecording).toBeTrue();
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 
-  it('stop should stop speech recognition', () => {
-    component.isRecording = true;
+  if (SpeechRecognition) {
+    it('start should start speech recognition', () => {
+      const startSpy = spyOn(component.speechRecognition, 'start').and.callFake(() => {
+        component.speechRecognition.dispatchEvent(new Event('start'));
+      });
+      const changeTextSpy = spyOn(component.changeText, 'emit');
 
-    const stopSpy = spyOn(component.speechRecognition, 'stop').and.callFake(() => {
-      component.speechRecognition.dispatchEvent(new Event('end'));
+      expect(component.isRecording).toBeFalse();
+
+      component.start();
+
+      expect(startSpy).toHaveBeenCalled();
+      expect(changeTextSpy).toHaveBeenCalledWith('');
+      expect(component.isRecording).toBeTrue();
     });
 
-    component.stop();
+    it('stop should stop speech recognition', () => {
+      component.isRecording = true;
 
-    expect(stopSpy).toHaveBeenCalled();
-    expect(component.isRecording).toBeFalse();
-  });
+      const stopSpy = spyOn(component.speechRecognition, 'stop').and.callFake(() => {
+        component.speechRecognition.dispatchEvent(new Event('end'));
+      });
+
+      component.stop();
+
+      expect(stopSpy).toHaveBeenCalled();
+      expect(component.isRecording).toBeFalse();
+    });
+  }
 });

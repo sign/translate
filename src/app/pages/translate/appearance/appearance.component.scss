@@ -1,0 +1,29 @@
+#appearance-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+
+  button {
+    border: 0 solid white; // For the animation
+    border-radius: 4px;
+    width: 5em;
+    height: 5em;
+    transition: border 0.2s;
+
+    &.image {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    &.selected {
+      border: 0.3em solid white;
+    }
+
+    &[disabled] {
+      filter: grayscale(1);
+    }
+  }
+}

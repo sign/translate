@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Üst Karakter"
+  },
+  "translate": {
+    "title": "Sign Çeviri",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Dili algıla",
+      "more": "Zêdetir Ziman"
+    },
+    "feedback": "Geri bildirim gönder",
+    "input": {
+      "text": "Metin",
+      "webcam": "Webkamera",
+      "upload": "Barkirin"
+    },
+    "swapLanguages": "Dil değiştir",
+    "upload": {
+      "types": ".mp4, .ogv veya .webm dosyası yükleyin.",
+      "browse": "Bilgisayarınıza göz atın",
+      "title": "Vîdyoyek hilbijêrin"
+    },
+    "description": "Serlêdanek wergera zimanê îşaretek pirzimanî ya du-alî ji bo sermaseya û mobîl",
+    "spoken-to-signed": {
+      "text": "Nivîsara Ziman Axaftinê",
+      "actions": {
+        "download": "Download Translation",
+        "copy": "Wergerandinê kopî bikin",
+        "share": "Share Werger"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Modela vîdyoya mirovî tê barkirin",
+          "generating": "Vîdyoyê diafirîne"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "WERGERÊ BICERIBÎNE",
+    "about": {
+      "title": "ده‌رباره‌ی",
+      "hero": {
+        "title": "Di navbera 40+ zimanên îmzekirî û axaftinê de di dema rast de wergerînin.",
+        "img": "Nimûneya wergera zindî ya di navbera Zimanê îşaretek Amerîkî û Englishngilîzî de"
+      }
+    },
+    "languages": {
+      "title": "Ziman"
+    },
+    "contribute": {
+      "title": "Beşdar bibe"
+    },
+    "tools": {
+      "title": "Amraz"
+    },
+    "nav": {
+      "pages": "Biçe ser rûpelên din",
+      "legal": "Li ser rûpelên qanûnî bigerin"
+    }
+  },
+  "text-to-speech": {
+    "play": "Dinleyin",
+    "cancel": "Rawestan",
+    "unavailable": "Derketina deng ji bo zimanê hilbijartî peyda nabe"
+  },
+  "speech-to-text": {
+    "start": "Sesle çeviri",
+    "stop": "Wergera bi deng raweste",
+    "not-allowed": "Ji bo bikaranîna mîkrofonê destûr lazim e",
+    "language-not-supported": "Zimanê hilbijartî nayê piştgirî kirin",
+    "browser-not-supported": "Ketina deng li ser vê gerokê nayê piştgirî kirin"
+  },
+  "legal": {
+    "terms": {
+      "title": "Têgeh"
+    },
+    "privacy": {
+      "title": "Nepenî"
+    },
+    "licenses": {
+      "title": "Nivîsbarî û Lîsans"
+    }
+  },
+  "playground": {
+    "title": "Lîstika Pêvajoya Zimanê Îşaretê"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Nasnameya Zimanê axaftinê",
+        "import": "Import Module",
+        "load": "Modela barkirinê",
+        "find": "Nasnameya Nivîsar",
+        "create": "Xûliqandin"
+      },
+      "pix2pix": {
+        "title": "Dîmenderê Pozê Mirovan",
+        "init": "Karker Init",
+        "load": "Modela barkirinê",
+        "first-frame": "Encama Çarçoveya Yekem",
+        "frame": "Encama çarçoveyê"
+      },
+      "pose": {
+        "title": "Texmîna Pozê Tevahiya Body",
+        "load": "Model Load",
+        "first-frame": "Encama Çarçoveya Yekem",
+        "frame": "Encama çarçoveyê"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Xuyabûnî",
+    "action": "Dîmenê biguherînin",
+    "random": "Wêneyek rasthatî bistînin",
+    "upload": "Wêneya xwe barkirin"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera dest pê dike",
+      "turnedOff": "Kamera girt",
+      "notConnected": "Kamera ne girêdayî ye",
+      "permissionDenied": "Destûra kamerayê hat redkirin"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamera vemirînin",
+        "off": "Kamera veke"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Barkirina Texmîna Pozê..."
+  },
+  "language-selector": {
+    "label": "Ziman an herêmê biguherînin"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Vîdyoyê Draw",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Draw Sign Writing",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Hestî",
+      "avatar": "Avatar",
+      "human": "Mirov"
+    },
+    "title": "Settings"
+  }
+}

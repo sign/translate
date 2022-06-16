@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Aimsigh teanga",
+      "more": "Tuilleadh Teangacha"
+    },
+    "feedback": "Seol aiseolas",
+    "input": {
+      "text": "Téacs",
+      "webcam": "Ceamara gréasáin",
+      "upload": "Uaslódáil"
+    },
+    "swapLanguages": "Babhtáil teangacha",
+    "upload": {
+      "types": "Uaslódáil .mp4, .ogv nó .webm.",
+      "browse": "Brabhsáil do ríomhaire",
+      "title": "Roghnaigh físeán"
+    },
+    "description": "Aip déthreorach ilteangach aistriúcháin teanga chomharthaíochta do ríomhaire deisce agus do shoghluaiste",
+    "spoken-to-signed": {
+      "text": "Téacs Teanga Labhartha",
+      "actions": {
+        "download": "Íosluchtaigh aistriúchán béarla",
+        "copy": "Cóipeáil Aistriúchán",
+        "share": "Comhroinn Aistriúchán"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Íosluchtaigh físeán múnla daonna",
+          "generating": "Físeán a ghiniúint"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "BAIN TRIAIL AS AISTRIÚCHÁN",
+    "about": {
+      "title": "Eolas",
+      "hero": {
+        "title": "Aistrigh idir 40+ teanga sínithe agus labhartha i bhfíor-am.",
+        "img": "Sampla d’aistriúchán beo idir Teanga Chomharthaíochta Mheiriceá agus Béarla"
+      }
+    },
+    "languages": {
+      "title": "Teangacha"
+    },
+    "contribute": {
+      "title": "Déan do chuid"
+    },
+    "tools": {
+      "title": "Uirlisí"
+    },
+    "nav": {
+      "pages": "Déan nascleanúint go leathanaigh eile",
+      "legal": "Déan nascleanúint chuig leathanaigh dhlíthiúla"
+    }
+  },
+  "text-to-speech": {
+    "play": "Éist",
+    "cancel": "Stop",
+    "unavailable": "Níl aschur gutha ar fáil don teanga roghnaithe"
+  },
+  "speech-to-text": {
+    "start": "Aistrigh le do ghuth",
+    "stop": "Cuir stop leis an aistriúchán trí ghuth",
+    "not-allowed": "Teastaíonn cead chun micreafón a úsáid",
+    "language-not-supported": "Ní thacaítear leis an teanga roghnaithe",
+    "browser-not-supported": "Ní thacaítear le hionchur gutha ar an mbrabhsálaí seo"
+  },
+  "legal": {
+    "terms": {
+      "title": "Téarmaí"
+    },
+    "privacy": {
+      "title": "Príobháideachas"
+    },
+    "licenses": {
+      "title": "Bogearraí agus Ceadúnais"
+    }
+  },
+  "playground": {
+    "title": "Clós Súgartha Próiseála Teanga Chomharthaíochta"
+  },
+  "benchmark": {
+    "title": "Tagarmharc",
+    "stats": {
+      "cld": {
+        "title": "Aitheantas Teanga Labhartha",
+        "import": "Modúl Iompórtála",
+        "load": "Samhail Luchtaigh",
+        "find": "Téacs a aithint",
+        "create": "Cruthaigh"
+      },
+      "pix2pix": {
+        "title": "Amharcóir Staid an Duine",
+        "init": "Init Oibrithe",
+        "load": "Samhail Luchtaigh",
+        "first-frame": "Tátal an Chéad Fhráma",
+        "frame": "Tátal Fráma"
+      },
+      "pose": {
+        "title": "Meastachán Seasamh an Choirp Iomlán",
+        "load": "Ualach Múnla",
+        "first-frame": "Tátal an Chéad Fhráma",
+        "frame": "Tátal Fráma"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Dealramh",
+    "action": "Athraigh an chuma",
+    "random": "Faigh grianghraf randamach",
+    "upload": "Íoslódáil an pictiúr ar do dheasc féin"
+  },
+  "video": {
+    "errors": {
+      "starting": "Ceamara ag tosú",
+      "turnedOff": "Tá an ceamara múchta",
+      "notConnected": "Níl an ceamara ceangailte",
+      "permissionDenied": "Diúltaíodh cead ceamara"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Múch an ceamara",
+        "off": "Cuir an ceamara ar siúl"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Meastachán Staidéir á Luchtú..."
+  },
+  "language-selector": {
+    "label": "Athraigh teanga nó réigiún"
+  },
+  "settings": {
+    "detectSign": "Braith Comhartha",
+    "drawVideo": "Tarraing Físeán",
+    "drawPose": "Tarraing Pose",
+    "drawSignWriting": "Tarraing Scríobh Comhartha",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "creatlach",
+      "avatar": "Avatar",
+      "human": "Duine"
+    },
+    "title": "Socruithe"
+  }
+}

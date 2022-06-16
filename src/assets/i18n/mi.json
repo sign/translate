@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Whakamāori Sign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "tautuhi reo",
+      "more": "Ētahi atu Reo"
+    },
+    "feedback": "Tuku urupare",
+    "input": {
+      "text": "Kuputuhi",
+      "webcam": "Tukutuku",
+      "upload": "Tukuake"
+    },
+    "swapLanguages": "Whakawhiti reo",
+    "upload": {
+      "types": "Tukuna atu he .mp4, .ogv, .webm rānei",
+      "browse": "Pūtirotirotia tō rorohiko",
+      "title": "Kōwhiria he ataata"
+    },
+    "description": "He taupānga whakamaori reo tohu reo-a-rua mo te papamahi me te pūkoro",
+    "spoken-to-signed": {
+      "text": "Kuputuhi Reo Korero",
+      "actions": {
+        "download": "Tikiake Whakamaori",
+        "copy": "Tārua Whakamāoritanga",
+        "share": "Tiri Whakamaori"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Uta ana tauira ataata tangata",
+          "generating": "Te whakaputa ataata"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "WHAKAMĀTAURIA A WHAKAMĀORI",
+    "about": {
+      "title": "Mō",
+      "hero": {
+        "title": "Whakamāoritia i waenganui i te 40+ reo hainatia me te reo korero i te wa-tūturu.",
+        "img": "He tauira o te whakamaoritanga ora i waenga i te Reo Waitohu Amerika me te reo Ingarihi"
+      }
+    },
+    "languages": {
+      "title": "Ngā reo"
+    },
+    "contribute": {
+      "title": "Whai wāhi ki"
+    },
+    "tools": {
+      "title": "Ngā utauta"
+    },
+    "nav": {
+      "pages": "Whakatere ki etahi atu wharangi",
+      "legal": "Whakatere ki nga wharangi ture"
+    }
+  },
+  "text-to-speech": {
+    "play": "Whakarongo",
+    "cancel": "Kati",
+    "unavailable": "Ko te putanga reo kaore i te waatea mo te reo kua tohua"
+  },
+  "speech-to-text": {
+    "start": "Whakamāori ā-waha",
+    "stop": "Kati te whakamaoritanga ma te reo",
+    "not-allowed": "Me whakaae ki te whakamahi hopuoro",
+    "language-not-supported": "Kaore i te tautokohia te reo kua tohua",
+    "browser-not-supported": "Kaore i te tautokohia te whakauru reo i runga i tenei tirotiro"
+  },
+  "legal": {
+    "terms": {
+      "title": "Ngā ture"
+    },
+    "privacy": {
+      "title": "Tūmataitinga"
+    },
+    "licenses": {
+      "title": "Ngā Pūmanawa me ngā Raihana"
+    }
+  },
+  "playground": {
+    "title": "Papa takaro Tukatuka Reo Waitohu"
+  },
+  "benchmark": {
+    "title": "Tohu Paerewa",
+    "stats": {
+      "cld": {
+        "title": "Tautuhi Reo Korero",
+        "import": "Kawemai Kōwae",
+        "load": "Tauira Uta",
+        "find": "Tautuhi Kuputuhi",
+        "create": "Waihanga"
+      },
+      "pix2pix": {
+        "title": "Kaitirohanga Pose Tangata",
+        "init": "Kaimahi Init",
+        "load": "Tauira Uta",
+        "first-frame": "Whakataunga Tāpare Tuatahi",
+        "frame": "Tāpare Inference"
+      },
+      "pose": {
+        "title": "Te Whakatau Whakatau Tino Tino",
+        "load": "Tauira Uta",
+        "first-frame": "Whakataunga Tāpare Tuatahi",
+        "frame": "Tāpare Inference"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Te ahua",
+    "action": "Whakarerekē ahua",
+    "random": "Tikina he whakaahua matapōkere",
+    "upload": "Tukuna ake to whakaahua"
+  },
+  "video": {
+    "errors": {
+      "starting": "Ka timata te kamera",
+      "turnedOff": "Kua weto te kamera",
+      "notConnected": "Kāre i tūhono te kāmera",
+      "permissionDenied": "Kua whakakorehia te whakaaetanga kamera"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Whakawetohia te kamera",
+        "off": "Whakakāhia te kāmera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Uta ana i te whakatau tata..."
+  },
+  "language-selector": {
+    "label": "Hurihia te reo, rohe ranei"
+  },
+  "settings": {
+    "detectSign": "Rapu Waitohu",
+    "drawVideo": "Tuhia Ataata",
+    "drawPose": "Tuhia Pose",
+    "drawSignWriting": "Tuhia te Tuhi Tohu",
+    "animatePose": "Whakaora Pose",
+    "poseViewer": {
+      "pose": "Koiwi",
+      "avatar": "Avatar",
+      "human": "Tangata"
+    },
+    "title": "Tautuhinga"
+  }
+}

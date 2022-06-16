@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Maj"
+  },
+  "translate": {
+    "title": "Sign Traduction",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Détecter la langue",
+      "more": "Plus de langues"
+    },
+    "feedback": "Envoyer des commentaires",
+    "input": {
+      "text": "Texte",
+      "webcam": "Webcam",
+      "upload": "Télécharger"
+    },
+    "swapLanguages": "Intervertir les langues",
+    "upload": {
+      "types": "Importez un .mp4, .ogv ou .webm.",
+      "browse": "Parcourir les fichiers sur votre ordinateur",
+      "title": "Choisissez une vidéo"
+    },
+    "description": "Une application de traduction en langue des signes multilingue bidirectionnelle pour ordinateur et mobile",
+    "spoken-to-signed": {
+      "text": "Texte en langue parlée",
+      "actions": {
+        "download": "Télécharger la traduction",
+        "copy": "Copier la traduction",
+        "share": "Partager la traduction"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Chargement du modèle vidéo humain",
+          "generating": "Génération de vidéo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ESSAYER GOOGLE TRADUCTION",
+    "about": {
+      "title": "À propos",
+      "hero": {
+        "title": "Traduisez entre plus de 40 langues signées et parlées en temps réel.",
+        "img": "Exemple de traduction en direct entre la langue des signes américaine et l'anglais"
+      }
+    },
+    "languages": {
+      "title": "Langues"
+    },
+    "contribute": {
+      "title": "Contribuer"
+    },
+    "tools": {
+      "title": "Outils"
+    },
+    "nav": {
+      "pages": "Naviguer vers d'autres pages",
+      "legal": "Naviguer vers les pages légales"
+    }
+  },
+  "text-to-speech": {
+    "play": "Écouter",
+    "cancel": "Arrêt",
+    "unavailable": "La sortie vocale n'est pas disponible pour la langue sélectionnée"
+  },
+  "speech-to-text": {
+    "start": "Traduire avec la voix",
+    "stop": "Arrêter la traduction vocale",
+    "not-allowed": "Besoin d'une autorisation pour utiliser le microphone",
+    "language-not-supported": "La langue sélectionnée n'est pas prise en charge",
+    "browser-not-supported": "La saisie vocale n'est pas prise en charge sur ce navigateur"
+  },
+  "legal": {
+    "terms": {
+      "title": "Modalités"
+    },
+    "privacy": {
+      "title": "Confidentialité"
+    },
+    "licenses": {
+      "title": "Logiciels et licences"
+    }
+  },
+  "playground": {
+    "title": "Terrain de jeu pour le traitement de la langue des signes"
+  },
+  "benchmark": {
+    "title": "Référence",
+    "stats": {
+      "cld": {
+        "title": "Identification de la langue parlée",
+        "import": "Module d'importation",
+        "load": "Charger le modèle",
+        "find": "Identifier le texte",
+        "create": "Créer"
+      },
+      "pix2pix": {
+        "title": "Visionneuse de pose humaine",
+        "init": "Init du travailleur",
+        "load": "Charger le modèle",
+        "first-frame": "Inférence de la première image",
+        "frame": "Inférence de cadre"
+      },
+      "pose": {
+        "title": "Estimation de la pose complète du corps",
+        "load": "Charge du modèle",
+        "first-frame": "Inférence de la première image",
+        "frame": "Inférence de cadre"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Apparence",
+    "action": "Modifier l'apparence",
+    "random": "Obtenez une photo au hasard",
+    "upload": "Téléchargez votre propre photo"
+  },
+  "video": {
+    "errors": {
+      "starting": "Démarrage de la caméra",
+      "turnedOff": "Caméra éteinte",
+      "notConnected": "Caméra non connectée",
+      "permissionDenied": "Autorisation de caméra refusée"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Éteindre la caméra",
+        "off": "Allumer la caméra"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Chargement de l'estimation de la pose..."
+  },
+  "language-selector": {
+    "label": "Changer de langue ou de région"
+  },
+  "settings": {
+    "detectSign": "Détecter le signe",
+    "drawVideo": "Dessiner une vidéo",
+    "drawPose": "Dessiner la pose",
+    "drawSignWriting": "Dessiner l'écriture de signe",
+    "animatePose": "Animer la pose",
+    "poseViewer": {
+      "pose": "Squelette",
+      "avatar": "Avatar",
+      "human": "Humain"
+    },
+    "title": "Réglages"
+  }
+}

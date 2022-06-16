@@ -1,9 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SignWritingComponent} from './sign-writing.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {defineCustomElements as defineCustomElementsSW} from '@sutton-signwriting/sgnw-components/loader';
-
 
 describe('SignWritingComponent', () => {
   let component: SignWritingComponent;
@@ -17,7 +17,7 @@ describe('SignWritingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SignWritingComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
@@ -30,6 +30,12 @@ describe('SignWritingComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 
   it('should change color when prefers-color-scheme changes', async () => {
@@ -73,7 +79,7 @@ describe('SignWritingComponent', () => {
     expect(newColor).toBe(specialColor);
   }, 10000);
 
-  it('should unregister event listenr on destroy', () => {
+  it('should unregister event listener on destroy', () => {
     const spy = spyOn(component.colorSchemeMedia, 'removeEventListener');
     component.ngOnDestroy();
     expect(spy).toHaveBeenCalled();

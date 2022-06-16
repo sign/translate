@@ -7,11 +7,16 @@ import {SettingsStateModel} from '../settings.state';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css']
+  styleUrls: ['./settings.component.css'],
 })
 export class SettingsComponent extends BaseSettingsComponent implements OnInit {
-
-  availableSettings: Array<keyof SettingsStateModel> = ['detectSign', 'drawVideo', 'drawPose', 'drawSignWriting', 'animatePose'];
+  availableSettings: Array<keyof SettingsStateModel> = [
+    'detectSign',
+    'drawVideo',
+    'drawPose',
+    'drawSignWriting',
+    'animatePose',
+  ];
   lastSettings = [];
   currentSettings = [];
 
@@ -20,12 +25,14 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.settingsState$.pipe(
-      tap((settings) => {
-        this.currentSettings = this.lastSettings = this.availableSettings.filter(s => settings[s]);
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.settingsState$
+      .pipe(
+        tap(settings => {
+          this.currentSettings = this.lastSettings = this.availableSettings.filter(s => settings[s]);
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   onSettingsChange(currentSettings: Array<keyof SettingsStateModel>): void {
@@ -37,5 +44,4 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
       }
     });
   }
-
 }

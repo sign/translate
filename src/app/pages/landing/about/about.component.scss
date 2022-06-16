@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+@import '../../../../theme/variables';
+
+:host {
+  & > * {
+    display: block;
+    width: calc(100% - 100px);
+    padding: 50px;
+
+    &:nth-child(2n + 1) {
+      background-color: map-get(mat.$grey-palette, 50);
+      @media (prefers-color-scheme: dark) {
+        background-color: #151515;
+      }
+    }
+  }
+}
+
+app-stores {
+  text-align: center;
+}

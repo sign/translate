@@ -1,0 +1,6 @@
+select {
+  border: none;
+  &:focus-visible {
+    outline: none;
+  }
+}

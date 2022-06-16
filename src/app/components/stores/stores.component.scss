@@ -1,0 +1,16 @@
+img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.light {
+  @media (prefers-color-scheme: dark) {
+    display: none;
+  }
+}
+
+.dark {
+  @media (prefers-color-scheme: light) {
+    display: none;
+  }
+}

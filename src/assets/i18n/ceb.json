@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Gimatikud ang sinultian",
+      "more": "Dugang Pinulongan"
+    },
+    "feedback": "Padal-i og ikasulti",
+    "input": {
+      "text": "Teksto",
+      "webcam": "webcam",
+      "upload": "Pag-upload"
+    },
+    "swapLanguages": "Pag-swap og mga lengguwahe",
+    "upload": {
+      "types": "Pag-upload og .mp4, .ogv, o .webm",
+      "browse": "I-browse ang imong computer",
+      "title": "Pagpili og video"
+    },
+    "description": "Usa ka bi-directional multilingual nga sign language nga paghubad nga app para sa desktop ug mobile",
+    "spoken-to-signed": {
+      "text": "Gisulti nga Pinulongan nga Teksto",
+      "actions": {
+        "download": "Pag-download sa Hubad",
+        "copy": "Kopyaha ang Hubad",
+        "share": "Ipakigbahin ang Hubad"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nag-load sa modelo sa video sa tawo",
+          "generating": "Paghimo og video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "SULAYI ANG TRANSLATE",
+    "about": {
+      "title": "Mahitungod Niini",
+      "hero": {
+        "title": "Paghubad tali sa 40+ nga gipirmahan ug gisulti nga mga sinultian sa tinuud nga oras.",
+        "img": "Pananglitan sa live nga paghubad tali sa American Sign Language ug English"
+      }
+    },
+    "languages": {
+      "title": "Mga Lengguwahe"
+    },
+    "contribute": {
+      "title": "Pag-ambag"
+    },
+    "tools": {
+      "title": "Mga Galamiton"
+    },
+    "nav": {
+      "pages": "Pag-navigate sa ubang mga panid",
+      "legal": "Pagdala ngadto sa legal nga mga panid"
+    }
+  },
+  "text-to-speech": {
+    "play": "Pamati",
+    "cancel": "Hunong",
+    "unavailable": "Ang output sa tingog dili magamit alang sa pinili nga pinulongan"
+  },
+  "speech-to-text": {
+    "start": "Ihubad pinaagi sa tingog",
+    "stop": "Hunonga ang paghubad pinaagi sa tingog",
+    "not-allowed": "Nagkinahanglan og pagtugot sa paggamit sa mikropono",
+    "language-not-supported": "Ang pinili nga pinulongan wala gisuportahan",
+    "browser-not-supported": "Ang input sa tingog wala gisuportahan sa kini nga browser"
+  },
+  "legal": {
+    "terms": {
+      "title": "Mga Termino"
+    },
+    "privacy": {
+      "title": "Pagkapribado"
+    },
+    "licenses": {
+      "title": "Software ug Mga Lisensya"
+    }
+  },
+  "playground": {
+    "title": "Dulaanan sa Pagproseso sa Sign Language"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identipikasyon sa Gisulti nga Pinulongan",
+        "import": "Import nga Module",
+        "load": "Modelo sa Pagkarga",
+        "find": "Ilha ang Teksto",
+        "create": "Paghimo"
+      },
+      "pix2pix": {
+        "title": "Tawo nga Pose Viewer",
+        "init": "Trabaho Init",
+        "load": "Modelo sa Pagkarga",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Pagbanabana sa Tibuok Lawas nga Posisyon",
+        "load": "Model Load",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Panagway",
+    "action": "Usba ang hitsura",
+    "random": "Pagkuha ug random nga litrato",
+    "upload": "Pag-upload sa imong kaugalingon nga litrato"
+  },
+  "video": {
+    "errors": {
+      "starting": "Nagsugod ang camera",
+      "turnedOff": "Gipalong ang camera",
+      "notConnected": "Ang camera dili konektado",
+      "permissionDenied": "Gidili ang pagtugot sa camera"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "I-off ang camera",
+        "off": "I-on ang camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Nagkarga sa Pagbanabana sa Posisyon..."
+  },
+  "language-selector": {
+    "label": "Usba ang pinulongan o rehiyon"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Pagdrowing og Video",
+    "drawPose": "Pagdrowing og Pose",
+    "drawSignWriting": "Pagdibuho sa Pagsulat sa Timailhan",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Kalabera",
+      "avatar": "Avatar",
+      "human": "Tawo"
+    },
+    "title": "Mga setting"
+  }
+}

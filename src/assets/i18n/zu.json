@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "I-Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Hlonza ulimi",
+      "more": "Izilimi Eziningi"
+    },
+    "feedback": "Thumela impendulo",
+    "input": {
+      "text": "Umbhalo",
+      "webcam": "Ikhamera yewebhu",
+      "upload": "Layisha"
+    },
+    "swapLanguages": "Shintsha izilimi",
+    "upload": {
+      "types": "Layisha i-.mp4, .ogv, noma i-.webm",
+      "browse": "Phequlula ikhompyutha yakho",
+      "title": "Khetha ividiyo"
+    },
+    "description": "Uhlelo lokusebenza lokuhumusha ulimi lwezandla oluneziqondiso ezimbili lwedeskithophu neselula",
+    "spoken-to-signed": {
+      "text": "Umbhalo Wolimi Olukhulunywayo",
+      "actions": {
+        "download": "Landa Ukuhumusha",
+        "copy": "Kopisha Ukuhumusha",
+        "share": "Yabelana ngokuhumusha"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ilayisha imodeli yevidiyo yomuntu",
+          "generating": "Ikhiqiza ividiyo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ZAMA I-TRANSLATE",
+    "about": {
+      "title": "Mayelana",
+      "hero": {
+        "title": "Humusha phakathi kwezilimi ezingu-40+ ezisayiniwe nezikhulunywayo ngesikhathi sangempela.",
+        "img": "Isibonelo sokuhumusha bukhoma phakathi koLimi Lwezandla LwaseMelika kanye nesiNgisi"
+      }
+    },
+    "languages": {
+      "title": "Izilwimi"
+    },
+    "contribute": {
+      "title": "Nikela"
+    },
+    "tools": {
+      "title": "Amathuluzi"
+    },
+    "nav": {
+      "pages": "Zulazulela kwamanye amakhasi",
+      "legal": "Zulazulela emakhasini asemthethweni"
+    }
+  },
+  "text-to-speech": {
+    "play": "Lalela",
+    "cancel": "Ima",
+    "unavailable": "Okukhiphayo kwezwi akutholakali ngolimi olukhethiwe"
+  },
+  "speech-to-text": {
+    "start": "Humusha ngezwi",
+    "stop": "Misa ukuhumusha ngezwi",
+    "not-allowed": "Udinga imvume yokusebenzisa imakrofoni",
+    "language-not-supported": "Ulimi olukhethiwe alusekelwe",
+    "browser-not-supported": "Okufakwayo ngezwi akusekelwa kulesi siphequluli"
+  },
+  "legal": {
+    "terms": {
+      "title": "Imigomo"
+    },
+    "privacy": {
+      "title": "Ubumfihlo"
+    },
+    "licenses": {
+      "title": "Isofthiwe namalayisense"
+    }
+  },
+  "playground": {
+    "title": "Inkundla Yokucubungula Ulimi Lwezandla"
+  },
+  "benchmark": {
+    "title": "Ibhentshimakhi",
+    "stats": {
+      "cld": {
+        "title": "Ukuhlonza Ulimi Olukhulunywayo",
+        "import": "Ngenisa Imojuli",
+        "load": "Layisha Imodeli",
+        "find": "Thola Umbhalo",
+        "create": "Dala"
+      },
+      "pix2pix": {
+        "title": "Isibukeli Sesimo Somuntu",
+        "init": "I-Worker Init",
+        "load": "Layisha Imodeli",
+        "first-frame": "I-Inference Yohlaka Lokuqala",
+        "frame": "Ukuchazwa kozimele"
+      },
+      "pose": {
+        "title": "Ukulinganisa Ukuma Komzimba Ogcwele",
+        "load": "Umthwalo Wemodeli",
+        "first-frame": "I-Inference Yohlaka Lokuqala",
+        "frame": "Ukuchazwa kozimele"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Ukubukeka",
+    "action": "Lungisa ukubukeka",
+    "random": "Thola isithombe esingahleliwe",
+    "upload": "Layisha esakho isithombe"
+  },
+  "video": {
+    "errors": {
+      "starting": "Ikhamera iyaqala",
+      "turnedOff": "Ikhamera ivaliwe",
+      "notConnected": "Ikhamera ayixhunyiwe",
+      "permissionDenied": "Imvume yekhamera inqatshiwe"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Vala ikhamera",
+        "off": "Vula ikhamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ilayisha Ukulinganisa Ukuma..."
+  },
+  "language-selector": {
+    "label": "Shintsha ulimi noma isifunda"
+  },
+  "settings": {
+    "detectSign": "Thola Uphawu",
+    "drawVideo": "Dweba Ividiyo",
+    "drawPose": "Dweba Ukuma",
+    "drawSignWriting": "Dweba Ukubhalwa Kwezimpawu",
+    "animatePose": "I-Animate Pose",
+    "poseViewer": {
+      "pose": "Uhlaka lwamathambo",
+      "avatar": "Isithombe",
+      "human": "Umuntu"
+    },
+    "title": "Izilungiselelo"
+  }
+}

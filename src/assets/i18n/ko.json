@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign 번역",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "언어 감지",
+      "more": "더 많은 언어"
+    },
+    "feedback": "의견 보내기",
+    "input": {
+      "text": "텍스트",
+      "webcam": "웹캠",
+      "upload": "업로드"
+    },
+    "swapLanguages": "언어 전환",
+    "upload": {
+      "types": ".mp4, .ogv 또는 .webm 파일을 업로드하세요.",
+      "browse": "컴퓨터에서 찾아보기",
+      "title": "동영상 선택"
+    },
+    "description": "데스크톱 및 모바일용 양방향 다국어 수화 번역 앱",
+    "spoken-to-signed": {
+      "text": "구어체 텍스트",
+      "actions": {
+        "download": "번역 다운로드",
+        "copy": "번역 복사",
+        "share": "번역 공유"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "사람 비디오 모델 로드 중",
+          "generating": "비디오 생성"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "번역 사용해 보기",
+    "about": {
+      "title": "정보",
+      "hero": {
+        "title": "40개 이상의 수화 및 구어를 실시간으로 번역합니다.",
+        "img": "미국 수화와 영어의 실시간 번역 예"
+      }
+    },
+    "languages": {
+      "title": "언어"
+    },
+    "contribute": {
+      "title": "번역 제안하기"
+    },
+    "tools": {
+      "title": "도구"
+    },
+    "nav": {
+      "pages": "다른 페이지로 이동",
+      "legal": "법률 페이지로 이동"
+    }
+  },
+  "text-to-speech": {
+    "play": "듣기",
+    "cancel": "중지",
+    "unavailable": "선택한 언어에서는 음성 출력을 사용할 수 없습니다."
+  },
+  "speech-to-text": {
+    "start": "음성 번역",
+    "stop": "음성 번역 중지",
+    "not-allowed": "마이크 사용 권한 필요",
+    "language-not-supported": "선택한 언어는 지원되지 않습니다",
+    "browser-not-supported": "이 브라우저에서는 음성 입력이 지원되지 않습니다."
+  },
+  "legal": {
+    "terms": {
+      "title": "약관"
+    },
+    "privacy": {
+      "title": "개인정보 보호"
+    },
+    "licenses": {
+      "title": "소프트웨어 및 라이선스"
+    }
+  },
+  "playground": {
+    "title": "수화 처리 놀이터"
+  },
+  "benchmark": {
+    "title": "기준",
+    "stats": {
+      "cld": {
+        "title": "구어 식별",
+        "import": "모듈 가져오기",
+        "load": "모델 로드",
+        "find": "텍스트 식별",
+        "create": "창조하다"
+      },
+      "pix2pix": {
+        "title": "인간 포즈 뷰어",
+        "init": "작업자 초기화",
+        "load": "모델 로드",
+        "first-frame": "첫 번째 프레임 추론",
+        "frame": "프레임 추론"
+      },
+      "pose": {
+        "title": "전신 포즈 추정",
+        "load": "모델 로드",
+        "first-frame": "첫 번째 프레임 추론",
+        "frame": "프레임 추론"
+      }
+    }
+  },
+  "appearance": {
+    "title": "모습",
+    "action": "모양 수정",
+    "random": "무작위 사진 얻기",
+    "upload": "나만의 사진 업로드"
+  },
+  "video": {
+    "errors": {
+      "starting": "카메라 시작",
+      "turnedOff": "카메라가 꺼짐",
+      "notConnected": "카메라가 연결되지 않음",
+      "permissionDenied": "카메라 권한이 거부되었습니다."
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "카메라 끄기",
+        "off": "카메라 켜기"
+      }
+    }
+  },
+  "pose": {
+    "loading": "포즈 추정 로드 중..."
+  },
+  "language-selector": {
+    "label": "언어 또는 지역 변경"
+  },
+  "settings": {
+    "detectSign": "징후 감지",
+    "drawVideo": "비디오 그리기",
+    "drawPose": "포즈 그리기",
+    "drawSignWriting": "사인 쓰기 그리기",
+    "animatePose": "애니메이션 포즈",
+    "poseViewer": {
+      "pose": "해골",
+      "avatar": "화신",
+      "human": "인간"
+    },
+    "title": "설정"
+  }
+}

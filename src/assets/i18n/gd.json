@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Eadar-theangadair Sign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Mothaich dhan chànan",
+      "more": "Tuilleadh Chànanan"
+    },
+    "feedback": "Innis dhuinn dè do bheachd",
+    "input": {
+      "text": "Teacs",
+      "webcam": "Camara-lìn",
+      "upload": "Luchdaich suas"
+    },
+    "swapLanguages": "Cuir na cànain an àite a chèile",
+    "upload": {
+      "types": "Luchdaich suas .mp4, .ogv no .webm.",
+      "browse": "Rùraich an coimpiutair agad",
+      "title": "Tagh bhidio"
+    },
+    "description": "Aplacaid eadar-theangachadh cànan soidhnidh dà-stiùiridh airson deasg is fòn-làimhe",
+    "spoken-to-signed": {
+      "text": "Teacs Cànain Labhairt",
+      "actions": {
+        "download": "Luchdaich a-nuas eadar-theangachadh",
+        "copy": "Dèan lethbhreac den eadar-theangachadh",
+        "share": "Co-roinn eadar-theangachadh"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Luchdaich a-nuas video duine model",
+          "generating": "A ' cruthachadh bhidio"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "FEUCH AN t-EADAR-THEANGADAIR",
+    "about": {
+      "title": "Mu dhèidhinn",
+      "hero": {
+        "title": "Eadar-theangaich eadar 40+ cànan soidhnichte agus labhairteach ann an àm fìor.",
+        "img": "Eisimpleir de eadar-theangachadh beò eadar Cànan Soidhnidh Ameireagaidh agus Beurla"
+      }
+    },
+    "languages": {
+      "title": "Cànain"
+    },
+    "contribute": {
+      "title": "Gabh pàirt"
+    },
+    "tools": {
+      "title": "Innealan"
+    },
+    "nav": {
+      "pages": "Seòl gu duilleagan eile",
+      "legal": "Seòl gu duilleagan laghail"
+    }
+  },
+  "text-to-speech": {
+    "play": "Èist ris",
+    "cancel": "Stad",
+    "unavailable": "Chan eil toradh guth ri fhaighinn airson a’ chànain a thagh thu"
+  },
+  "speech-to-text": {
+    "start": "Eadar-theangach guth",
+    "stop": "Cuir stad air eadar-theangachadh le guth",
+    "not-allowed": "Feum air cead airson microfòn a chleachdadh",
+    "language-not-supported": "Chan eil taic ris a' chànan a thagh thu",
+    "browser-not-supported": "Chan eil taic ri cuir a-steach gutha sa bhrobhsair seo"
+  },
+  "legal": {
+    "terms": {
+      "title": "Teirmichean"
+    },
+    "privacy": {
+      "title": "Prìobhaideachd"
+    },
+    "licenses": {
+      "title": "Bathar-bog is ceadachasan"
+    }
+  },
+  "playground": {
+    "title": "Raon-cluiche Giullachd Cànain Soidhnidh"
+  },
+  "benchmark": {
+    "title": "Slat-tomhais",
+    "stats": {
+      "cld": {
+        "title": "Aithneachadh Cànain Labhairt",
+        "import": "Modal ion-phortadh",
+        "load": "Modail luchdachadh",
+        "find": "Comharraich Teacsa",
+        "create": "Cruthaich"
+      },
+      "pix2pix": {
+        "title": "Sealladair suidheachadh daonna",
+        "init": "Init neach-obrach",
+        "load": "Modail luchdachadh",
+        "first-frame": "Co-dhùnadh a’ chiad fhrèam",
+        "frame": "Co-dhùnadh frèam"
+      },
+      "pose": {
+        "title": "Measadh Seasamh Corporra Làn",
+        "load": "Luchdaich a-nuas modail",
+        "first-frame": "Co-dhùnadh a’ chiad fhrèam",
+        "frame": "Co-dhùnadh frèam"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Coltas",
+    "action": "Atharraich coltas",
+    "random": "Faigh dealbh air thuaiream",
+    "upload": "Luchdaich a-nuas an dealbh fhèin"
+  },
+  "video": {
+    "errors": {
+      "starting": "Camara a' tòiseachadh",
+      "turnedOff": "Chaidh an camara a chuir dheth",
+      "notConnected": "Chan eil an camara ceangailte",
+      "permissionDenied": "Chaidh cead camara a dhiùltadh"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Cuir dheth an camara",
+        "off": "Tionndaidh air a 'chamara"
+      }
+    }
+  },
+  "pose": {
+    "loading": "A’ luchdachadh tuairmse suidheachadh..."
+  },
+  "language-selector": {
+    "label": "Atharraich cànan no sgìre"
+  },
+  "settings": {
+    "detectSign": "Soidhne lorg",
+    "drawVideo": "Tarraing bhidio",
+    "drawPose": "Tarraing Pose",
+    "drawSignWriting": "Tarraing Sgrìobhadh Soidhne",
+    "animatePose": "Beothachadh Pose",
+    "poseViewer": {
+      "pose": "cnàimhneach",
+      "avatar": "Avatar",
+      "human": "Duine"
+    },
+    "title": "Suidhichidhean"
+  }
+}

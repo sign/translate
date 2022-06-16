@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Zomasulira za Sign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Fufuzani chilankhulo",
+      "more": "Zinenero Zambiri"
+    },
+    "feedback": "Tumizani maganizo anu",
+    "input": {
+      "text": "Malemba",
+      "webcam": "Webukamu",
+      "upload": "Kwezani"
+    },
+    "swapLanguages": "Sinthani zinenero",
+    "upload": {
+      "types": "Lowetsani .mp4, .ogv, kapena .webm.",
+      "browse": "Chitani burauzi kompyuta",
+      "title": "Sankhani kanema"
+    },
+    "description": "Pulogalamu yomasulira zinenero zambiri m'zinenero zambiri zamakompyuta ndi mafoni",
+    "spoken-to-signed": {
+      "text": "Mawu a Chinenero Cholankhulidwa",
+      "actions": {
+        "download": "Koperani Zomasulira",
+        "copy": "Koperani Kumasulira",
+        "share": "Gawani Zomasulira"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Kutsegula chitsanzo chamavidiyo amunthu",
+          "generating": "Kupanga kanema"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "TAYESANI ZOMASULIRA",
+    "about": {
+      "title": "Zokhudza",
+      "hero": {
+        "title": "Masulirani pakati pa 40+ zilankhulo zosayinidwa ndi zoyankhulidwa munthawi yeniyeni.",
+        "img": "Chitsanzo cha kumasulira kwamoyo pakati pa Chinenero Chamanja cha ku America ndi Chingerezi"
+      }
+    },
+    "languages": {
+      "title": "Ziyankhulo"
+    },
+    "contribute": {
+      "title": "Thandizirani"
+    },
+    "tools": {
+      "title": "Zipangizo"
+    },
+    "nav": {
+      "pages": "Yendetsani kumasamba ena",
+      "legal": "Pitani kumasamba ovomerezeka"
+    }
+  },
+  "text-to-speech": {
+    "play": "Mverani",
+    "cancel": "Imani",
+    "unavailable": "Kutulutsa mawu kulibe m'chinenero chomwe mwasankha"
+  },
+  "speech-to-text": {
+    "start": "Masulirani mawu olankhulidwa",
+    "stop": "Siyani kumasulira ndi mawu",
+    "not-allowed": "Mukufuna chilolezo kuti mugwiritse ntchito cholankhulira",
+    "language-not-supported": "Chiyankhulo chosankhidwa sichimatheka",
+    "browser-not-supported": "Kuyika mawu sikutheka pa msakatuliwu"
+  },
+  "legal": {
+    "terms": {
+      "title": "Mgwirizano"
+    },
+    "privacy": {
+      "title": "Zazinsinsi"
+    },
+    "licenses": {
+      "title": "Mapulogalamu ndi Malaisensi"
+    }
+  },
+  "playground": {
+    "title": "Malo Osewerera Chinenero Chamanja"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Chizindikiritso cha Chinenero Cholankhulidwa",
+        "import": "Import Module",
+        "load": "Katundu Model",
+        "find": "Dziwani Malemba",
+        "create": "Pangani"
+      },
+      "pix2pix": {
+        "title": "Munthu Pose Viewer",
+        "init": "Woyamba Wogwira Ntchito",
+        "load": "Katundu Model",
+        "first-frame": "Chiyambi cha Frame Inference",
+        "frame": "Kufotokozera kwa Frame"
+      },
+      "pose": {
+        "title": "Kuyerekeza Kwamaonekedwe a Thupi Lonse",
+        "load": "Katundu Wachitsanzo",
+        "first-frame": "Chiyambi cha Frame Inference",
+        "frame": "Kufotokozera kwa Frame"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Maonekedwe",
+    "action": "Sinthani maonekedwe",
+    "random": "Pezani chithunzi mwachisawawa",
+    "upload": "Kwezani chithunzi chanu"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera ikuyamba",
+      "turnedOff": "Kamera yazimitsidwa",
+      "notConnected": "Kamera sinalumikizidwe",
+      "permissionDenied": "Chilolezo cha kamera chatsutsidwa"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Zimitsani kamera",
+        "off": "Yatsani kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Tikuyesa Pose Estimation..."
+  },
+  "language-selector": {
+    "label": "Sinthani chinenero kapena dera"
+  },
+  "settings": {
+    "detectSign": "Dziwani Chizindikiro",
+    "drawVideo": "Jambulani Kanema",
+    "drawPose": "Jambulani Maonekedwe",
+    "drawSignWriting": "Jambulani Kulemba kwa Chizindikiro",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Chigoba",
+      "avatar": "Avatar",
+      "human": "Munthu"
+    },
+    "title": "Zokonda"
+  }
+}

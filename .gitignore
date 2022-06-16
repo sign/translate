@@ -47,3 +47,11 @@ Thumbs.db
 
 # Angular
 .angular
+
+# Tools
+tools/cache
+
+# Firebase
+functions/lib
+functions/src/playground.ts
+.firebase

@@ -12,7 +12,6 @@ export interface PoseLandmark {
 
 export const EMPTY_LANDMARK: PoseLandmark = {x: 0, y: 0, z: 0};
 
-
 export interface Pose {
   faceLandmarks: PoseLandmark[];
   poseLandmarks: PoseLandmark[];
@@ -34,11 +33,10 @@ const initialState: PoseStateModel = {
 @Injectable()
 @State<PoseStateModel>({
   name: 'pose',
-  defaults: initialState
+  defaults: initialState,
 })
 export class PoseState implements NgxsOnInit {
-  constructor(private poseService: PoseService, private store: Store) {
-  }
+  constructor(private poseService: PoseService, private store: Store) {}
 
   ngxsOnInit(ctx?: StateContext<any>): void {
     this.store.dispatch(LoadPoseModel);
@@ -48,7 +46,7 @@ export class PoseState implements NgxsOnInit {
   async load({patchState, dispatch}: StateContext<PoseStateModel>): Promise<void> {
     patchState({isLoaded: false});
     await this.poseService.load();
-    this.poseService.model.onResults((results) => {
+    this.poseService.model.onResults(results => {
       // TODO: passing the `image` canvas through NGXS bugs the pose.
       // https://github.com/google/mediapipe/issues/2422
       const fakeImage = document.createElement('canvas');
@@ -58,13 +56,15 @@ export class PoseState implements NgxsOnInit {
       ctx.drawImage(results.image, 0, 0, fakeImage.width, fakeImage.height);
 
       // Since v0.4, "results" include additional parameters
-      this.store.dispatch(new StoreFramePose({
-        faceLandmarks: results.faceLandmarks,
-        poseLandmarks: results.poseLandmarks,
-        leftHandLandmarks: results.leftHandLandmarks,
-        rightHandLandmarks: results.rightHandLandmarks,
-        image: fakeImage
-      }));
+      this.store.dispatch(
+        new StoreFramePose({
+          faceLandmarks: results.faceLandmarks,
+          poseLandmarks: results.poseLandmarks,
+          leftHandLandmarks: results.leftHandLandmarks,
+          rightHandLandmarks: results.rightHandLandmarks,
+          image: fakeImage,
+        })
+      );
     });
   }
 

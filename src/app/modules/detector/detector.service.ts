@@ -8,7 +8,7 @@ import {TensorflowService} from '../../core/services/tfjs.service';
 const WINDOW_SIZE = 20;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DetectorService {
   lastPose: PoseLandmark[];
@@ -19,13 +19,13 @@ export class DetectorService {
 
   sequentialModel: LayersModel;
 
-  constructor(public tf: TensorflowService) {
-  }
+  constructor(public tf: TensorflowService) {}
 
   async loadModel(): Promise<LayersModel> {
     await this.tf.load();
-    return this.tf.loadLayersModel('assets/models/sign-detector/model.json')
-      .then(model => this.sequentialModel = model as unknown as LayersModel);
+    return this.tf
+      .loadLayersModel('assets/models/sign-detector/model.json')
+      .then(model => (this.sequentialModel = model as unknown as LayersModel));
   }
 
   distance(p1: PoseLandmark, p2: PoseLandmark): number {
@@ -35,10 +35,13 @@ export class DetectorService {
   }
 
   normalizePose(pose: Pose): PoseLandmark[] {
-    const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
+    const bodyLandmarks =
+      pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const rightHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
-    const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks).map(l => this.isValidLandmark(l) ? l : EMPTY_LANDMARK);
+    const landmarks = bodyLandmarks
+      .concat(leftHandLandmarks, rightHandLandmarks)
+      .map(l => (this.isValidLandmark(l) ? l : EMPTY_LANDMARK));
 
     const p1 = landmarks[holistic.POSE_LANDMARKS.LEFT_SHOULDER];
     const p2 = landmarks[holistic.POSE_LANDMARKS.RIGHT_SHOULDER];
@@ -66,7 +69,8 @@ export class DetectorService {
       x: (newPose[holistic.POSE_LANDMARKS.LEFT_SHOULDER].x + newPose[holistic.POSE_LANDMARKS.RIGHT_SHOULDER].x) / 2,
       y: (newPose[holistic.POSE_LANDMARKS.LEFT_SHOULDER].y + newPose[holistic.POSE_LANDMARKS.RIGHT_SHOULDER].y) / 2,
     };
-    const newFakePose = [
+
+    return [
       newPose[holistic.POSE_LANDMARKS.NOSE],
       neck,
       newPose[holistic.POSE_LANDMARKS.RIGHT_SHOULDER],
@@ -91,10 +95,8 @@ export class DetectorService {
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
-      EMPTY_LANDMARK
+      EMPTY_LANDMARK,
     ];
-
-    return newFakePose;
   }
 
   isValidLandmark(l: PoseLandmark): boolean {
@@ -116,9 +118,11 @@ export class DetectorService {
 
   getSequentialConfidence(opticalFlow: Float32Array): number {
     return this.tf.tidy(() => {
-      const pred: Tensor = this.sequentialModel.predict(this.tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])) as Tensor;
-      const probs = this.tf.softmax(pred).dataSync();
-      return probs[1];
+      const pred: Tensor = this.sequentialModel.predict(
+        this.tf.tensor(opticalFlow).reshape([1, 1, opticalFlow.length])
+      ) as Tensor;
+      const softmax = this.tf.softmax(pred).dataSync();
+      return softmax[1];
     });
   }
 
@@ -139,5 +143,4 @@ export class DetectorService {
 
     return confidence;
   }
-
 }

@@ -15,7 +15,7 @@ const BPS = 2_000_000;
 @Component({
   selector: 'app-pose-viewer',
   template: ``,
-  styles: []
+  styles: [],
 })
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
@@ -43,7 +43,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
   }
 
-  ngOnDestroy(): void {
+  override ngOnDestroy(): void {
     super.ngOnDestroy();
 
     if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
@@ -62,13 +62,13 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
   async createVideoEncoder(image: ImageData): Promise<VideoEncoder> {
     let encoder = new VideoEncoder({
-      output: (chunk,metadata) => {
-        console.log(chunk, metadata)
-        const buffer = new ArrayBuffer(chunk.byteLength)
+      output: (chunk, metadata) => {
+        console.log(chunk, metadata);
+        const buffer = new ArrayBuffer(chunk.byteLength);
         chunk.copyTo(buffer);
         this.videoEncoderChunks.push(buffer);
       },
-      error: (e) => console.error(e.message)
+      error: e => console.error(e.message),
     });
 
     encoder.configure({
@@ -76,7 +76,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       width: image.width,
       height: image.height,
       bitrate: BPS,
-      framerate: await this.fps()
+      framerate: await this.fps(),
     });
 
     return encoder;
@@ -89,7 +89,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
     await this.videoEncoder.flush();
 
-    const blob = new Blob(this.videoEncoderChunks, {type: "video/mp4"});
+    const blob = new Blob(this.videoEncoderChunks, {type: 'video/mp4'});
     console.log({blob});
     const url = URL.createObjectURL(blob);
     console.log({url});
@@ -124,21 +124,24 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       return;
     }
 
-    fromEvent(this.mediaRecorder, 'dataavailable').pipe(
-      tap((event: BlobEvent) => recordedChunks.push(event.data)),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    fromEvent(this.mediaRecorder, 'dataavailable')
+      .pipe(
+        tap((event: BlobEvent) => recordedChunks.push(event.data)),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
-    fromEvent(this.mediaRecorder, 'stop').pipe(
-      tap(() => {
-        stream.getTracks().forEach(track => track.stop());
-        const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
-        const url = URL.createObjectURL(blob);
-        this.setVideo(url);
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
-
+    fromEvent(this.mediaRecorder, 'stop')
+      .pipe(
+        tap(() => {
+          stream.getTracks().forEach(track => track.stop());
+          const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
+          const url = URL.createObjectURL(blob);
+          this.setVideo(url);
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
     const duration = this.poseEl.nativeElement.duration * 1000;
     this.mediaRecorder.start(duration);

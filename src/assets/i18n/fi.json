@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "vaihto"
+  },
+  "translate": {
+    "title": "Sign Kääntäjä",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Tunnista kieli",
+      "more": "Lisää kieliä"
+    },
+    "feedback": "Lähetä palautetta",
+    "input": {
+      "text": "Teksti",
+      "webcam": "Verkkokamera",
+      "upload": "Lataa"
+    },
+    "swapLanguages": "Vaihda kieliä",
+    "upload": {
+      "types": "Lataa .mp4, .ogv tai .webm.",
+      "browse": "Selaa tietokonetta",
+      "title": "Valitse video"
+    },
+    "description": "Kaksisuuntainen monikielinen viittomakielen käännössovellus pöytäkoneille ja mobiililaitteille",
+    "spoken-to-signed": {
+      "text": "Puhutun kielen teksti",
+      "actions": {
+        "download": "Lataa käännös",
+        "copy": "Kopioi käännös",
+        "share": "Jaa käännös"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ladataan ihmisvideomallia",
+          "generating": "Luodaan videota"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "KOKEILE KÄÄNTÄJÄÄ",
+    "about": {
+      "title": "Tietoja",
+      "hero": {
+        "title": "Käännä yli 40 viittomakielen ja puhutun kielen välillä reaaliajassa.",
+        "img": "Esimerkki live-käännöksestä amerikkalaisen viittomakielen ja englannin välillä"
+      }
+    },
+    "languages": {
+      "title": "Kielet"
+    },
+    "contribute": {
+      "title": "Avusta"
+    },
+    "tools": {
+      "title": "Työkalut"
+    },
+    "nav": {
+      "pages": "Siirry muille sivuille",
+      "legal": "Siirry juridisille sivuille"
+    }
+  },
+  "text-to-speech": {
+    "play": "Kuuntele",
+    "cancel": "Lopettaa",
+    "unavailable": "Äänilähtö ei ole käytettävissä valitulla kielellä"
+  },
+  "speech-to-text": {
+    "start": "Käännä puhe",
+    "stop": "Pysäytä äänikääntäminen",
+    "not-allowed": "Mikrofonin käyttöön tarvitaan lupa",
+    "language-not-supported": "Valittua kieltä ei tueta",
+    "browser-not-supported": "Äänisyöttöä ei tueta tässä selaimessa"
+  },
+  "legal": {
+    "terms": {
+      "title": "Käyttöehdot"
+    },
+    "privacy": {
+      "title": "Tietosuoja"
+    },
+    "licenses": {
+      "title": "Ohjelmistot ja käyttöluvat"
+    }
+  },
+  "playground": {
+    "title": "Viittomakielen käsittelyn leikkikenttä"
+  },
+  "benchmark": {
+    "title": "Vertailuarvo",
+    "stats": {
+      "cld": {
+        "title": "Puhutun kielen tunnistus",
+        "import": "Tuo moduuli",
+        "load": "Lataa malli",
+        "find": "Tunnista teksti",
+        "create": "Luoda"
+      },
+      "pix2pix": {
+        "title": "Ihmisasennon katseluohjelma",
+        "init": "Työntekijä Init",
+        "load": "Lataa malli",
+        "first-frame": "Ensimmäisen kehyksen päättely",
+        "frame": "Frame johtopäätös"
+      },
+      "pose": {
+        "title": "Koko kehon asentoarvio",
+        "load": "Mallin kuormitus",
+        "first-frame": "Ensimmäisen kehyksen päättely",
+        "frame": "Frame johtopäätös"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Ulkomuoto",
+    "action": "Muokkaa ulkonäköä",
+    "random": "Ota satunnainen valokuva",
+    "upload": "Lataa oma valokuvasi"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera käynnistyy",
+      "turnedOff": "Kamera sammutettu",
+      "notConnected": "Kameraa ei ole kytketty",
+      "permissionDenied": "Kameran lupa evätty"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Sammuta kamera",
+        "off": "Kytke kamera päälle"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ladataan asentoarviota..."
+  },
+  "language-selector": {
+    "label": "Vaihda kieli tai alue"
+  },
+  "settings": {
+    "detectSign": "Tunnista merkki",
+    "drawVideo": "Piirrä video",
+    "drawPose": "Piirrä Pose",
+    "drawSignWriting": "Piirrä merkkien kirjoittaminen",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Luuranko",
+      "avatar": "hahmo",
+      "human": "Ihmisen"
+    },
+    "title": "asetukset"
+  }
+}

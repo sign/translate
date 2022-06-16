@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "„Sign“ vertėjas",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Nustatyti kalbą",
+      "more": "Daugiau kalbų"
+    },
+    "feedback": "Siųsti atsiliepimą",
+    "input": {
+      "text": "Tekstas",
+      "webcam": "Internetinė kamera",
+      "upload": "Įkelti"
+    },
+    "swapLanguages": "Sukeisti kalbas",
+    "upload": {
+      "types": "Įkelkite .mp4, .ogv arba .webm failus.",
+      "browse": "Naršykite kompiuteryje",
+      "title": "Pasirinkite vaizdo įrašą"
+    },
+    "description": "Dviejų krypčių daugiakalbė gestų kalbos vertimo programa, skirta staliniams kompiuteriams ir mobiliesiems telefonams",
+    "spoken-to-signed": {
+      "text": "Šnekamosios kalbos tekstas",
+      "actions": {
+        "download": "Atsisiųskite vertimą",
+        "copy": "Kopijuoti vertimą",
+        "share": "Pasidalinti vertimu"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Įkeliamas žmogaus vaizdo modelis",
+          "generating": "Kuriamas vaizdo įrašas"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "IŠBANDYKITE VERTĖJĄ",
+    "about": {
+      "title": "Apie",
+      "hero": {
+        "title": "Realiuoju laiku verskite iš daugiau nei 40 kalbų su gestais ir kalbomis.",
+        "img": "Tiesioginio vertimo iš Amerikos gestų kalbos į anglų kalbą pavyzdys"
+      }
+    },
+    "languages": {
+      "title": "Kalbos"
+    },
+    "contribute": {
+      "title": "Bendradarbiauti"
+    },
+    "tools": {
+      "title": "Įrankiai"
+    },
+    "nav": {
+      "pages": "Eikite į kitus puslapius",
+      "legal": "Eikite į teisinius puslapius"
+    }
+  },
+  "text-to-speech": {
+    "play": "Klausyti",
+    "cancel": "Sustabdyti",
+    "unavailable": "Balso išvestis nepasiekiama pasirinkta kalba"
+  },
+  "speech-to-text": {
+    "start": "Vertimas balsu",
+    "stop": "Sustabdyti vertimą balsu",
+    "not-allowed": "Reikia leidimo naudoti mikrofoną",
+    "language-not-supported": "Pasirinkta kalba nepalaikoma",
+    "browser-not-supported": "Balso įvestis nepalaikoma šioje naršyklėje"
+  },
+  "legal": {
+    "terms": {
+      "title": "Sąlygos"
+    },
+    "privacy": {
+      "title": "Privatumas"
+    },
+    "licenses": {
+      "title": "Programinė įranga ir licencijos"
+    }
+  },
+  "playground": {
+    "title": "Gestų kalbos apdorojimo žaidimų aikštelė"
+  },
+  "benchmark": {
+    "title": "Etalonas",
+    "stats": {
+      "cld": {
+        "title": "Šnekamosios kalbos identifikavimas",
+        "import": "Importavimo modulis",
+        "load": "Krovinio modelis",
+        "find": "Identifikuokite tekstą",
+        "create": "Sukurti"
+      },
+      "pix2pix": {
+        "title": "Žmogaus pozų žiūrovas",
+        "init": "Darbuotojas Initas",
+        "load": "Krovinio modelis",
+        "first-frame": "Pirmojo kadro išvada",
+        "frame": "Rėmo išvada"
+      },
+      "pose": {
+        "title": "Viso kūno pozos įvertinimas",
+        "load": "Modelio apkrova",
+        "first-frame": "Pirmojo kadro išvada",
+        "frame": "Rėmo išvada"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Išvaizda",
+    "action": "Keisti išvaizdą",
+    "random": "Gaukite atsitiktinę nuotrauką",
+    "upload": "Įkelk savo nuotrauką"
+  },
+  "video": {
+    "errors": {
+      "starting": "Fotoaparato paleidimas",
+      "turnedOff": "Kamera išjungta",
+      "notConnected": "Kamera neprijungta",
+      "permissionDenied": "Fotoaparato leidimas atmestas"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Išjunkite kamerą",
+        "off": "Įjunkite kamerą"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Įkeliamas pozos įvertinimas..."
+  },
+  "language-selector": {
+    "label": "Pakeiskite kalbą arba regioną"
+  },
+  "settings": {
+    "detectSign": "Aptikti ženklą",
+    "drawVideo": "Nupiešti vaizdo įrašą",
+    "drawPose": "Pieškite pozą",
+    "drawSignWriting": "Pieškite ženklų rašymą",
+    "animatePose": "Animuoti poza",
+    "poseViewer": {
+      "pose": "Skeletas",
+      "avatar": "Avataras",
+      "human": "Žmogus"
+    },
+    "title": "Nustatymai"
+  }
+}

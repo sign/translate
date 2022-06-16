@@ -3,13 +3,9 @@ import {NgxsModule} from '@ngxs/store';
 import {DetectorState} from './detector.state';
 import {DetectorService} from './detector.service';
 
-
 @NgModule({
   declarations: [],
   providers: [DetectorService],
-  imports: [
-    NgxsModule.forFeature([DetectorState])
-  ]
+  imports: [NgxsModule.forFeature([DetectorState])],
 })
-export class DetectorModule {
-}
+export class DetectorModule {}

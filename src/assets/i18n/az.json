@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Tərcümə",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Dili seç",
+      "more": "Daha çox dil"
+    },
+    "feedback": "Rəy göndər",
+    "input": {
+      "text": "Mətn",
+      "webcam": "Vebkamera",
+      "upload": "Yükləmək"
+    },
+    "swapLanguages": "Dilləri dəyişin",
+    "upload": {
+      "types": "Bu faylları yükləyin: .mp4, .ogv və ya .webm.",
+      "browse": "Kompüterinizə nəzər salın",
+      "title": "Video seçin"
+    },
+    "description": "Masaüstü və mobil cihazlar üçün iki istiqamətli çoxdilli işarə dili tərcümə proqramı",
+    "spoken-to-signed": {
+      "text": "Danışıq Dili Mətni",
+      "actions": {
+        "download": "Tərcüməni yükləyin",
+        "copy": "Tərcüməni Kopyalayın",
+        "share": "Tərcüməni Paylaşın"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "İnsan video modeli yüklənir",
+          "generating": "Videonun yaradılması"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "TƏRCÜMƏNİ SINAYIN",
+    "about": {
+      "title": "Haqqında",
+      "hero": {
+        "title": "Real vaxt rejimində 40+ imzalanmış və danışıq dili arasında tərcümə edin.",
+        "img": "Amerika işarə dili və ingilis dili arasında canlı tərcümə nümunəsi"
+      }
+    },
+    "languages": {
+      "title": "Dillər"
+    },
+    "contribute": {
+      "title": "Töhfə verin"
+    },
+    "tools": {
+      "title": "Alətlər"
+    },
+    "nav": {
+      "pages": "Digər səhifələrə keçin",
+      "legal": "Hüquqi səhifələrə keçin"
+    }
+  },
+  "text-to-speech": {
+    "play": "Qulaq asın",
+    "cancel": "Dayan",
+    "unavailable": "Seçilmiş dil üçün səs çıxışı mövcud deyil"
+  },
+  "speech-to-text": {
+    "start": "Səsli tərcümə edin",
+    "stop": "Səslə tərcüməni dayandırın",
+    "not-allowed": "Mikrofondan istifadə etmək üçün icazə lazımdır",
+    "language-not-supported": "Seçilmiş dil dəstəklənmir",
+    "browser-not-supported": "Səslə daxiletmə bu brauzerdə dəstəklənmir"
+  },
+  "legal": {
+    "terms": {
+      "title": "Şərtlər"
+    },
+    "privacy": {
+      "title": "Məxfilik"
+    },
+    "licenses": {
+      "title": "Proqram və Lisenziya"
+    }
+  },
+  "playground": {
+    "title": "İşarə Dili Emalı Oyun Meydançası"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Danışıq dilinin identifikasiyası",
+        "import": "İdxal Modulu",
+        "load": "Yükləmə Modeli",
+        "find": "Mətni müəyyənləşdirin",
+        "create": "Yaradın"
+      },
+      "pix2pix": {
+        "title": "İnsan Poza Baxıcı",
+        "init": "İşçi Init",
+        "load": "Yükləmə Modeli",
+        "first-frame": "İlk Çərçivə Nəticəsi",
+        "frame": "Çərçivə Nəticəsi"
+      },
+      "pose": {
+        "title": "Tam Bədən Pozunun Qiymətləndirilməsi",
+        "load": "Model yükü",
+        "first-frame": "İlk Çərçivə Nəticəsi",
+        "frame": "Çərçivə Nəticəsi"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Görünüş",
+    "action": "Görünüşü dəyişdirin",
+    "random": "Təsadüfi bir şəkil alın",
+    "upload": "Öz şəklinizi yükləyin"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera başlayır",
+      "turnedOff": "Kamera söndürüldü",
+      "notConnected": "Kamera qoşulmayıb",
+      "permissionDenied": "Kamera icazəsi rədd edildi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kameranı söndürün",
+        "off": "Kameranı yandırın"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Duruş Təxmini Yüklənir..."
+  },
+  "language-selector": {
+    "label": "Dili və ya bölgəni dəyişdirin"
+  },
+  "settings": {
+    "detectSign": "İşarəni aşkarla",
+    "drawVideo": "Video çəkmək",
+    "drawPose": "Poza çəkin",
+    "drawSignWriting": "İşarə yazısını çəkin",
+    "animatePose": "Animasiya pozası",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Avatar",
+      "human": "İnsan"
+    },
+    "title": "Parametrlər"
+  }
+}

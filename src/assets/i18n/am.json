@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "የSign ተርጓሚ",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "ቋንቋ  አግኝ",
+      "more": "ተጨማሪ ቋንቋዎች"
+    },
+    "feedback": "ግብረ-መልስ ላክ",
+    "input": {
+      "text": "ጽሑፍ",
+      "webcam": "የድረገፅ ካሜራ",
+      "upload": "ስቀል"
+    },
+    "swapLanguages": "ቋንቋዎች ቀያይር",
+    "upload": {
+      "types": ".Docx፣ .ogv፣ ወይም .webm ይስቀሉ",
+      "browse": "ኮምፒውተርዎን ያስሱ",
+      "title": "ቪዲዮ ይምረጡ"
+    },
+    "description": "ለዴስክቶፕ እና ሞባይል ባለሁለት አቅጣጫ ባለ ብዙ ቋንቋ የምልክት ቋንቋ ትርጉም መተግበሪያ",
+    "spoken-to-signed": {
+      "text": "የንግግር ቋንቋ ጽሑፍ",
+      "actions": {
+        "download": "ትርጉም አውርድ",
+        "copy": "ትርጉም ቅዳ",
+        "share": "አጋራ ትርጉም"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "የሰው ቪዲዮ ሞዴል በመጫን ላይ",
+          "generating": "ቪዲዮ በማመንጨት ላይ"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ለመተርጎም ይሞክሩ",
+    "about": {
+      "title": "ስለ",
+      "hero": {
+        "title": "ከ40+ በላይ የተፈረሙ እና የሚነገሩ ቋንቋዎችን በቅጽበት ይተርጉሙ።",
+        "img": "በአሜሪካ የምልክት ቋንቋ እና በእንግሊዝኛ መካከል የቀጥታ ትርጉም ምሳሌ"
+      }
+    },
+    "languages": {
+      "title": "ቋንቋዎች"
+    },
+    "contribute": {
+      "title": "ያበርክቱ"
+    },
+    "tools": {
+      "title": "መሳሪያዎች"
+    },
+    "nav": {
+      "pages": "ወደ ሌሎች ገጾች ይሂዱ",
+      "legal": "ወደ ህጋዊ ገጾች ይሂዱ"
+    }
+  },
+  "text-to-speech": {
+    "play": "ያዳምጡ",
+    "cancel": "ተወ",
+    "unavailable": "ለተመረጠው ቋንቋ የድምጽ ውፅዓት አይገኝም"
+  },
+  "speech-to-text": {
+    "start": "በድምፅ ተርጉም",
+    "stop": "በድምጽ መተርጎም አቁም",
+    "not-allowed": "ማይክሮፎን ለመጠቀም ፍቃድ ያስፈልጋል",
+    "language-not-supported": "የተመረጠ ቋንቋ አይደገፍም።",
+    "browser-not-supported": "የድምጽ ግቤት በዚህ አሳሽ ላይ አይደገፍም።"
+  },
+  "legal": {
+    "terms": {
+      "title": "ውል"
+    },
+    "privacy": {
+      "title": "ግላዊነት"
+    },
+    "licenses": {
+      "title": "ሶፍትዌር እና ፈቃዶች"
+    }
+  },
+  "playground": {
+    "title": "የምልክት ቋንቋ ሂደት የመጫወቻ ሜዳ"
+  },
+  "benchmark": {
+    "title": "ቤንችማርክ",
+    "stats": {
+      "cld": {
+        "title": "የንግግር ቋንቋ መለያ",
+        "import": "ሞጁል አስመጣ",
+        "load": "የመጫኛ ሞዴል",
+        "find": "ጽሑፍን መለየት",
+        "create": "ፍጠር"
+      },
+      "pix2pix": {
+        "title": "የሰው አቀማመጥ ተመልካች",
+        "init": "የሰራተኛ ኢኒት",
+        "load": "የመጫኛ ሞዴል",
+        "first-frame": "የመጀመሪያ ፍሬም ኢንፈረንስ",
+        "frame": "የፍሬም ኢንፈረንስ"
+      },
+      "pose": {
+        "title": "የሙሉ የሰውነት አቀማመጥ ግምት",
+        "load": "የሞዴል ጭነት",
+        "first-frame": "የመጀመሪያ ፍሬም ኢንፈረንስ",
+        "frame": "የፍሬም ኢንፈረንስ"
+      }
+    }
+  },
+  "appearance": {
+    "title": "መልክ",
+    "action": "መልክን ቀይር",
+    "random": "የዘፈቀደ ፎቶ ያግኙ",
+    "upload": "የራስዎን ፎቶ ይስቀሉ"
+  },
+  "video": {
+    "errors": {
+      "starting": "ካሜራ ይጀምራል",
+      "turnedOff": "ካሜራ ጠፍቷል",
+      "notConnected": "ካሜራ አልተገናኘም።",
+      "permissionDenied": "የካሜራ ፍቃድ ተከልክሏል።"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "ካሜራን ያጥፉ",
+        "off": "ካሜራን ያብሩ"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Pose ግምትን በመጫን ላይ..."
+  },
+  "language-selector": {
+    "label": "ቋንቋ ወይም ክልል ቀይር"
+  },
+  "settings": {
+    "detectSign": "ምልክትን ፈልግ",
+    "drawVideo": "ቪዲዮ ይሳሉ",
+    "drawPose": "አቀማመጥ ይሳሉ",
+    "drawSignWriting": "የምልክት ጽሑፍ ይሳሉ",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "አጽም",
+      "avatar": "አምሳያ",
+      "human": "ሰው"
+    },
+    "title": "ቅንብሮች"
+  }
+}

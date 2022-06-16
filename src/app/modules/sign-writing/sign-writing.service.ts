@@ -5,15 +5,11 @@ import {BodyService} from './body.service';
 import {FaceService} from './face.service';
 import {Vector2, Vector3} from 'three';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SignWritingService {
-  constructor(private bodyService: BodyService,
-              private faceService: FaceService,
-              private handsService: HandsService) {
-  }
+  constructor(private bodyService: BodyService, private faceService: FaceService, private handsService: HandsService) {}
 
   static textFontSize(text: string, width: number, ctx: CanvasRenderingContext2D): number {
     ctx.font = '100px SuttonSignWritingOneD';
@@ -24,8 +20,13 @@ export class SignWritingService {
     return 100 * scale;
   }
 
-  static drawSWText(text: string, center: Vector2 | Vector3, fontSize: number,
-                    ctx: CanvasRenderingContext2D, isNormalized = true): void {
+  static drawSWText(
+    text: string,
+    center: Vector2 | Vector3,
+    fontSize: number,
+    ctx: CanvasRenderingContext2D,
+    isNormalized = true
+  ): void {
     ctx.font = fontSize + 'px SuttonSignWritingOneD';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -35,7 +36,6 @@ export class SignWritingService {
     const y = isNormalized ? center.y * ctx.canvas.height : center.y;
     ctx.fillText(text, x, y);
   }
-
 
   draw(swState: SignWritingStateModel, ctx: CanvasRenderingContext2D): void {
     this.bodyService.draw(swState.body, ctx);

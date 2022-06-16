@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Taal werkenne",
+      "more": "Mear talen"
+    },
+    "feedback": "Stjoer weromkeppeling",
+    "input": {
+      "text": "Tekst",
+      "webcam": "Webcam",
+      "upload": "Upload"
+    },
+    "swapLanguages": "Talen omwikselje",
+    "upload": {
+      "types": "Laad in .mp4, .ogv, of .webm op.",
+      "browse": "Op dyn kompjûter sykje",
+      "title": "Kies in fideo"
+    },
+    "description": "In bidirectionele meartalige oersettingsapp foar gebeartetaal foar buroblêd en mobyl",
+    "spoken-to-signed": {
+      "text": "Sprektaal Tekst",
+      "actions": {
+        "download": "Download oersetting",
+        "copy": "Kopiearje oersetting",
+        "share": "Diele oersetting"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laden fan minsklik fideomodel",
+          "generating": "It generearjen fan fideo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "BESYKJE TRANSLATE",
+    "about": {
+      "title": "Oer",
+      "hero": {
+        "title": "Oersette tusken 40+ ûndertekene en sprutsen talen yn real-time.",
+        "img": "Foarbyld fan live oersetting tusken American Sign Language en Ingelsk"
+      }
+    },
+    "languages": {
+      "title": "Talen"
+    },
+    "contribute": {
+      "title": "Meihelpe"
+    },
+    "tools": {
+      "title": "Ark"
+    },
+    "nav": {
+      "pages": "Gean nei oare siden",
+      "legal": "Gean nei juridyske siden"
+    }
+  },
+  "text-to-speech": {
+    "play": "Harkje",
+    "cancel": "Ophâlde",
+    "unavailable": "Stimútfier is net beskikber foar de selektearre taal"
+  },
+  "speech-to-text": {
+    "start": "Oersetten fan ynsprutsen tekst",
+    "stop": "Stopje oersetting mei stim",
+    "not-allowed": "Tastimming nedich om mikrofoan te brûken",
+    "language-not-supported": "Selekteare taal wurdt net stipe",
+    "browser-not-supported": "Stimynfier wurdt net stipe yn dizze browser"
+  },
+  "legal": {
+    "terms": {
+      "title": "Betingsten"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software en lisinsjes"
+    }
+  },
+  "playground": {
+    "title": "Gebeartetaalferwurkingsboarterstún"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Spoken Language Identification",
+        "import": "Ymportearje Module",
+        "load": "Laden Model",
+        "find": "Tekst identifisearje",
+        "create": "Meitsje"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Arbeider Init",
+        "load": "Laden Model",
+        "first-frame": "Earste Frame Inference",
+        "frame": "Frame konklúzje"
+      },
+      "pose": {
+        "title": "Skatting fan folsleine lichemsposysje",
+        "load": "Model Load",
+        "first-frame": "Earste Frame Inference",
+        "frame": "Frame konklúzje"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Ferskining",
+    "action": "Feroarje uterlik",
+    "random": "Krij in willekeurige foto",
+    "upload": "Upload dyn eigen foto"
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera begjint",
+      "turnedOff": "Kamera útskeakele",
+      "notConnected": "Kamera net ferbûn",
+      "permissionDenied": "Kameratastimming wegere"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamera útsette",
+        "off": "Kamera oansette"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Poseskatting laden..."
+  },
+  "language-selector": {
+    "label": "Feroarje taal of regio"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Fideo tekenje",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Teken teken skriuwen",
+    "animatePose": "Animearje Pose",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Avatar",
+      "human": "Minske"
+    },
+    "title": "Ynstellings"
+  }
+}

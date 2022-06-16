@@ -1,19 +1,9 @@
 @use '@angular/material' as mat;
-@import "../../../theme/variables";
-
-::ng-deep {
-  body {
-    background-color: white;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-
-    @media (prefers-color-scheme: dark) {
-      background-color: black;
-    }
-  }
-}
+@import '../../../theme/variables';
 
 :host {
+  min-height: 100vh;
+
   @media #{$mat-gt-xs} {
     &::before {
       background-color: map-get(mat.$grey-palette, 50);
@@ -34,24 +24,13 @@
 }
 
 mat-toolbar {
-  box-sizing: border-box;
-  background-color: black;
-  border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
-  font-family: "Product Sans", Arial, sans-serif;
-  font-weight: 400;
-
-  @media (prefers-color-scheme: light) {
-    background-color: white;
-    border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
-    color: map-get(mat.$gray-palette, 800);
+  span {
+    flex: 1 1 auto;
   }
 }
 
 #container {
-  width: auto;
-  max-width: 1280px;
-  margin: 0 auto;
-  transition: .6s all cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 
   @media #{$mat-gt-md} {
     padding: 0 48px;
@@ -59,18 +38,10 @@ mat-toolbar {
 
   #input-mode-group {
     height: 68px;
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
     align-items: center;
     display: flex;
-    gap: .5em;
-
-    button {
-      transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1);
-
-      &.selected {
-        background-color: rgba(66, 133, 244, 0.12);
-      }
-    }
+    gap: 0.5em;
 
     @media #{$mat-lt-lg} {
       padding: 0 12px;
@@ -84,15 +55,15 @@ mat-toolbar {
   #translation-card {
     background-color: white;
     width: 100%;
-    transition: .6s width cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.37);
+    transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
 
     @media (prefers-color-scheme: dark) {
       background-color: #101010;
     }
 
     @media #{$mat-gt-xs} {
-      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
     }
 
     @media #{$mat-gt-md} {
@@ -114,11 +85,10 @@ mat-toolbar {
     }
 
     #swap-languages {
-      margin-top: 3px;
+      margin: 4px 0;
     }
   }
 }
-
 
 #feedback {
   float: right;
@@ -138,7 +108,7 @@ mat-toolbar {
   }
 }
 
-::ng-deep html[dir="rtl"] #feedback {
+::ng-deep html[dir='rtl'] #feedback {
   float: left;
 }
 
