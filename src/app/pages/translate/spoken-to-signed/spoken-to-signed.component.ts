@@ -91,4 +91,11 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   shareTranslation(): void {
     this.store.dispatch(ShareSignedLanguageVideo);
   }
+
+  playVideoIfPaused(event: MouseEvent): void {
+    const video = event.target as HTMLPoseViewerElement;
+    if (video.paused) {
+      video.play().then().catch();
+    }
+  }
 }

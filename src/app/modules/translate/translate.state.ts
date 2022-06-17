@@ -202,7 +202,7 @@ export class TranslateState implements NgxsOnInit {
   uploadPoseFile({getState, patchState}: StateContext<TranslateStateModel>, {url}: UploadPoseFile): void {
     const {spokenToSigned} = getState();
     if (spokenToSigned) {
-      patchState({signedLanguagePose: url});
+      patchState({signedLanguagePose: url, signedLanguageVideo: initialState.signedLanguageVideo});
     }
   }
 

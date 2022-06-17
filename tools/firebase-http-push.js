@@ -24,7 +24,9 @@ function updateServerPush(resources) {
     rewrite.headers = [];
   }
   rewrite.headers.push({key: 'Link', value: resources});
-  fs.writeFileSync('firebase.json', JSON.stringify(firebase, null, 2));
+  const content = JSON.stringify(firebase, null, 2);
+  console.log(content);
+  fs.writeFileSync('firebase.json', content);
 }
 
 const resources = [...getResources('dist/sign-translate/index.html')].join(',');
