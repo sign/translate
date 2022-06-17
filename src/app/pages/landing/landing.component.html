@@ -6,7 +6,7 @@
           {{ t(page + '.title') }}
         </a>
         <mat-divider></mat-divider>
-        <a mat-list-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]">
+        <a mat-list-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
           {{ 'legal.' + page + '.title' | transloco }}
         </a>
       </mat-nav-list>
@@ -17,18 +17,18 @@
         <mat-icon>waving_hand</mat-icon>
         <span>&nbsp;{{ 'translate.title' | transloco }}</span>
         <nav [attr.aria-label]="t('nav.pages')">
-          <a mat-button *ngFor="let page of pages" [routerLink]="page">
+          <a mat-button *ngFor="let page of pages" [routerLink]="page" queryParamsHandling="preserve">
             {{ t(page + '.title') }}
           </a>
         </nav>
-        <a mat-raised-button routerLink="/" color="primary">{{ t('try') }}</a>
+        <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">{{ t('try') }}</a>
       </mat-toolbar>
 
       <router-outlet></router-outlet>
 
       <mat-toolbar>
         <nav [attr.aria-label]="t('nav.legal')">
-          <a mat-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]">
+          <a mat-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
             {{ 'legal.' + page + '.title' | transloco }}
           </a>
         </nav>
