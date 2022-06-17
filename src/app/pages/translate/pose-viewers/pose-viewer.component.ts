@@ -133,7 +133,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
         this.initMediaRecorder(stream);
       }
       const timestamp = this.frameIndex / (await this.fps());
-      console.log(timestamp);
       const frame = new VideoFrame(await createImageBitmap(image), {timestamp});
       await this.streamWriter.write(frame);
       frame.close();

@@ -7,11 +7,10 @@ import {Directive} from '@angular/core';
 
 @Directive()
 export abstract class BaseSettingsComponent extends BaseComponent {
-  settingsState$: Observable<SettingsStateModel>;
+  @Select(state => state.settings) settingsState$: Observable<SettingsStateModel>;
 
   protected constructor(private store: Store) {
     super();
-    this.settingsState$ = store.select(state => state.settings);
   }
 
   applySetting(setting: keyof SettingsStateModel, value: any): void {

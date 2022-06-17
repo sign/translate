@@ -61,7 +61,7 @@ button.menu-language-button {
     }
 
     &.mat-tab-label-active {
-      color: mat.get-color-from-palette($app-primary, 600);
+      color: mat.get-color-from-palette($app-primary, 700);
       transition: color 0.2s;
     }
   }

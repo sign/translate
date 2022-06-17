@@ -13,7 +13,7 @@ describe('VideoState', () => {
 
   let mockCamera: MediaStream;
   let mockSettings: MediaTrackSettings;
-  let mockTrack: MediaStreamTrack;
+  let mockTrack: MediaStreamVideoTrack;
 
   beforeAll(() => {
     // Setup mock camera
@@ -26,7 +26,7 @@ describe('VideoState', () => {
     mockTrack = {
       getSettings: () => mockSettings,
       addEventListener: (() => {}) as any,
-    } as MediaStreamTrack;
+    } as MediaStreamVideoTrack;
   });
 
   beforeEach(() => {

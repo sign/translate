@@ -2,6 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LanguagesComponent} from './languages.component';
+import {LandingModule} from '../landing.module';
 
 describe('LanguagesComponent', () => {
   let component: LanguagesComponent;
@@ -9,7 +10,7 @@ describe('LanguagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LanguagesComponent],
+      imports: [LandingModule],
     }).compileComponents();
   });
 
