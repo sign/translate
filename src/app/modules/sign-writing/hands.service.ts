@@ -6,7 +6,7 @@ import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Tensor} from '@tensorflow/tfjs';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
 import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
 
 export type HandPlane = 'wall' | 'floor';

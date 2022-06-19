@@ -47,6 +47,8 @@
     "@sutton-signwriting/sgnw-components": "0.10.0",
     "@tensorflow/tfjs": "3.18.0",
     "@tensorflow/tfjs-backend-webgl": "3.18.0",
+    "@tensorflow/tfjs-backend-wasm": "3.18.0",
+    "@tensorflow/tfjs-backend-webgpu": "0.0.1-alpha.11",
     "@tensorflow/tfjs-converter": "3.18.0",
     "@tensorflow/tfjs-core": "3.18.0",
     "@tensorflow/tfjs-layers": "3.18.0",
@@ -84,10 +86,10 @@
     "@typescript-eslint/eslint-plugin": "5.28.0",
     "@typescript-eslint/parser": "5.28.0",
     "deepmerge": "^4.2.2",
-    "eslint": "^8.17.0",
+    "eslint": "^8.18.0",
     "fuzzy": "^0.1.3",
     "husky": "^8.0.1",
-    "inquirer": "^8.2.4",
+    "inquirer": "^9.0.0",
     "inquirer-autocomplete-prompt": "^2.0.0",
     "jasmine-axe": "^1.1.0",
     "jasmine-core": "~4.2.0",
@@ -106,7 +108,7 @@
     "pwa-asset-generator": "^6.1.0",
     "sitemap": "^7.1.1",
     "ts-node": "~10.8.1",
-    "typescript": "~4.7.3",
+    "typescript": "~4.7.4",
     "webpack-bundle-analyzer": "^4.5.0"
   }
 }

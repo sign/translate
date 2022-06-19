@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {AnimationService} from './animation.service';
 import {Pose} from '../pose/pose.state';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 
 describe('AnimationService', () => {
   let service: AnimationService;

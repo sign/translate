@@ -3,6 +3,7 @@
 import * as comlink from 'comlink';
 import {Tensor, Tensor3D} from '@tensorflow/tfjs';
 import {LayersModel} from '@tensorflow/tfjs-layers';
+import {loadTFDS} from '../../core/services/tfjs/tfjs.loader';
 
 class ModelNotLoadedError extends Error {
   constructor() {
@@ -10,7 +11,7 @@ class ModelNotLoadedError extends Error {
   }
 }
 
-const tfPromise = import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs');
+const tfPromise = loadTFDS();
 let model: LayersModel;
 
 async function loadModel(): Promise<void> {
@@ -43,7 +44,7 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
   const {width, height} = image;
   const pixels = tf.browser.fromPixels(image);
 
-  const output = tf.tidy(() => {
+  const output = await tf.tidy(() => {
     const pixelsTensor = pixels.toFloat();
     const input = tf.sub(tf.div(pixelsTensor, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
     const tensor = input.reshape([1, width, height, 3]);
@@ -52,11 +53,12 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
     let pred = model.apply(tensor, {training: true}) as Tensor;
     pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
     pred = pred.reshape([width, height, 3]);
-    pred.dataSync(); // Slowest operation
-    return pred as Tensor3D;
+    return pred;
   });
 
-  let data = await tf.browser.toPixels(output);
+  const outputArray = await output.array(); // Slowest operation
+  const outputImg = tf.tensor(outputArray).reshape([width, height, 3]) as Tensor3D;
+  let data = await tf.browser.toPixels(outputImg);
   data = removeGreenScreen(data);
 
   return comlink.transfer(data, [data.buffer]);

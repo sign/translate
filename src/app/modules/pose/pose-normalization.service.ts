@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Tensor} from '@tensorflow/tfjs-core';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
 import {Vector3} from 'three';
 

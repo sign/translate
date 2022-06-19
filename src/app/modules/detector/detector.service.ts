@@ -3,7 +3,7 @@ import {EMPTY_LANDMARK, Pose, PoseLandmark} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import * as holistic from '@mediapipe/holistic/holistic.js';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 
 const WINDOW_SIZE = 20;
 

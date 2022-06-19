@@ -11,9 +11,9 @@ import {PoseService} from '../../modules/pose/pose.service';
 })
 export class BenchmarkComponent {
   benchmarks = {
-    cld: this.cldBench.bind(this),
+    // cld: this.cldBench.bind(this),
     pix2pix: this.pix2pixBench.bind(this),
-    pose: this.poseBench.bind(this),
+    // pose: this.poseBench.bind(this),
   };
 
   stats: {[key: string]: {[key: string]: number[]}} = {};

@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 import {HandsService} from './hands.service';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
 
 describe('HandsService', () => {

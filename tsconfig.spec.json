@@ -6,6 +6,7 @@
     "types": [
       "jasmine",
       "@types/dom-speech-recognition",
+      "@types/emscripten",
       "@types/node",
       "@types/offscreencanvas",
       "@types/dom-mediacapture-transform",

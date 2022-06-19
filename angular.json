@@ -31,6 +31,11 @@
                 "output": "./assets/models/holistic/"
               },
               {
+                "glob": "*.wasm",
+                "input": "./node_modules/@tensorflow/tfjs-backend-wasm/dist/",
+                "output": "./assets/models/tfjs-backend-wasm/"
+              },
+              {
                 "glob": "*.svg",
                 "input": "./node_modules/flag-icon-css/flags/1x1/",
                 "output": "./assets/flags/1x1/"
@@ -128,6 +133,11 @@
                 "glob": "**/*",
                 "input": "./node_modules/@mediapipe/holistic/",
                 "output": "./assets/models/holistic/"
+              },
+              {
+                "glob": "*.wasm",
+                "input": "./node_modules/@tensorflow/tfjs-backend-wasm/dist",
+                "output": "./assets/models/tfjs-backend-wasm/"
               },
               {
                 "glob": "*.svg",
