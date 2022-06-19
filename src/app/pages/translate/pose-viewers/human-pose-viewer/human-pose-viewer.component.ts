@@ -4,6 +4,7 @@ import {fromEvent, interval, Observable} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Select, Store} from '@ngxs/store';
+import {transferableImage} from '../../../../core/helpers/image/transferable';
 
 @Component({
   selector: 'app-human-pose-viewer',
@@ -45,50 +46,57 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
           const poseCtx = poseCanvas.getContext('2d', {willReadFrequently: true});
 
-          let lastTime = -Infinity;
-          while (!pose.ended) {
+          // To avoid communication time losses, we create a queue sent to be translated
+          let queued = 0;
+
+          const iterFrame = async () => {
             // Verify element is not destroyed
             if (destroyed) {
               return;
             }
 
-            await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
-            const uint8Array = await this.pix2pix.translate(poseCanvas, poseCtx);
-            this.modelReady = true; // Stop loading after first model inference
-
-            // If did not change the pose time
-            if (lastTime > pose.currentTime) {
+            if (pose.ended) {
+              if (queued === 0) {
+                // Reset the pose-viewer drawing
+                this.ready = true;
+                await this.drawCache();
+              }
               return;
             }
-            lastTime = pose.currentTime;
 
-            const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-            await this.addCacheFrame(imageData);
-
-            ctx.putImageData(imageData, 0, 0);
-
+            queued++;
+            // await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
+            const image = await transferableImage(poseCanvas, poseCtx);
             await pose.nextFrame();
-          }
+            const time = pose.currentTime;
+            this.translateFrame(image, canvas, ctx).then(() => {
+              queued--;
+              iterFrame();
+            });
+          };
 
-          // Reset the pose-viewer drawing
-          this.ready = true;
-          await this.drawCache();
+          // The more frames in parallel, the more GPU util (1=~40%, 2=~75%, 5=~90%), but inconsistent frame rate
+          await iterFrame();
+          await iterFrame();
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
   }
 
+  async translateFrame(image: ImageBitmap | ImageData, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
+    const uint8Array = await this.pix2pix.translate(image);
+    this.modelReady = true; // Stop loading after first model inference
+
+    const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
+    await this.addCacheFrame(imageData);
+
+    ctx.putImageData(imageData, 0, 0);
+  }
+
   override reset(): void {
     super.reset();
     this.ready = false;
-  }
-
-  async getFps(): Promise<number> {
-    const poseEl = this.poseEl.nativeElement;
-    const pose = await poseEl.getPose();
-
-    return pose.body.fps;
   }
 
   async drawCache(): Promise<void> {
@@ -105,7 +113,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     await this.startRecording(canvas as any);
 
     const ctx = canvas.getContext('2d');
-    const fps = await this.getFps();
+    const fps = await this.fps();
 
     let i = -1;
     this.cacheSubscription = interval(1000 / fps)
