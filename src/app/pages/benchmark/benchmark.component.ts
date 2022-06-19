@@ -3,6 +3,7 @@ import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {PoseService} from '../../modules/pose/pose.service';
+import {transferableImage} from '../../core/helpers/image/transferable';
 
 @Component({
   selector: 'app-benchmark',
@@ -11,9 +12,9 @@ import {PoseService} from '../../modules/pose/pose.service';
 })
 export class BenchmarkComponent {
   benchmarks = {
-    // cld: this.cldBench.bind(this),
+    cld: this.cldBench.bind(this),
     pix2pix: this.pix2pixBench.bind(this),
-    // pose: this.poseBench.bind(this),
+    pose: this.poseBench.bind(this),
   };
 
   stats: {[key: string]: {[key: string]: number[]}} = {};
@@ -97,7 +98,8 @@ export class BenchmarkComponent {
 
     // Evaluate 30 frames
     for (let i = 0; i < 30; i++) {
-      await this.pix2pix.translate(canvas, ctx);
+      const image = await transferableImage(canvas, ctx);
+      await this.pix2pix.translate(image);
       this.buildStats();
     }
   }

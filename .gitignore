@@ -55,3 +55,5 @@ tools/cache
 functions/lib
 functions/src/playground.ts
 .firebase
+
+.env
