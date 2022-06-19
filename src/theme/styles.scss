@@ -43,12 +43,17 @@ body {
   overscroll-behavior-y: none;
 }
 
+html {
+  // Only on iOS, in case of viewport cover
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
 body {
-  margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-color: white;
+  margin: 0;
 
   @media (prefers-color-scheme: dark) {
     background-color: black !important;
