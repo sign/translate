@@ -40,7 +40,9 @@
   "file_handlers": [
     {
       "action": "/",
-      "accept": {"application/*": [".pose"]},
+      "accept": {
+        "application/*": [".pose"]
+      },
       "icons": [],
       "launch_type": "multiple-clients"
     }

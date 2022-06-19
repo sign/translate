@@ -1,0 +1,6 @@
+{
+  "appId": "mt.sign.translate",
+  "appName": "Sign Translate",
+  "webDir": "dist/sign-translate",
+  "bundledWebRuntime": false
+}
