@@ -4,6 +4,7 @@ import * as comlink from 'comlink';
 import {Tensor, Tensor3D} from '@tensorflow/tfjs';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {loadTFDS} from '../../core/services/tfjs/tfjs.loader';
+import {Dropout} from '@tensorflow/tfjs-layers/dist/layers/core';
 
 class ModelNotLoadedError extends Error {
   constructor() {
@@ -14,9 +15,22 @@ class ModelNotLoadedError extends Error {
 const tfPromise = loadTFDS();
 let model: LayersModel;
 
+function resetDropout(layers: any[]) {
+  for (const layer of layers) {
+    if (layer.layers) {
+      resetDropout(layer.layers);
+    }
+
+    if (layer instanceof Dropout) {
+      (layer as any).rate = 0;
+    }
+  }
+}
+
 async function loadModel(): Promise<void> {
   const tf = await tfPromise;
   model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
+  resetDropout(model.layers); // Extremely important, as we are performing inference in training mode
 }
 
 function isGreen(r: number, g: number, b: number) {
