@@ -9,7 +9,10 @@ android {
 
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
-
+    implementation project(':capacitor-firebase-analytics')
+    implementation project(':capacitor-firebase-app')
+    implementation project(':capacitor-firebase-crashlytics')
+    implementation project(':capacitor-firebase-performance')
 
 }
 

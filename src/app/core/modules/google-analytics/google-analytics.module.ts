@@ -4,7 +4,7 @@ import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from 'ngx-goog
 import {GoogleAnalyticsTimingService} from './google-analytics.service';
 
 @NgModule({
-  imports: [NgxGoogleAnalyticsModule.forRoot(environment.ga), NgxGoogleAnalyticsRouterModule],
+  imports: [NgxGoogleAnalyticsModule.forRoot(environment.firebase.measurementId), NgxGoogleAnalyticsRouterModule],
   exports: [],
   providers: [GoogleAnalyticsTimingService],
 })
