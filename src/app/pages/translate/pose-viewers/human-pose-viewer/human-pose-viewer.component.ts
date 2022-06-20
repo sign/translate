@@ -65,10 +65,9 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             }
 
             queued++;
-            // await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
+            await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
             const image = await transferableImage(poseCanvas, poseCtx);
             await pose.nextFrame();
-            const time = pose.currentTime;
             this.translateFrame(image, canvas, ctx).then(() => {
               queued--;
               iterFrame();
@@ -76,8 +75,10 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           };
 
           // The more frames in parallel, the more GPU util (1=~40%, 2=~75%, 5=~90%), but inconsistent frame rate
-          await iterFrame();
-          await iterFrame();
+          for (let i = 0; i < 1; i++) {
+            // Leaving at 1, need to fix VideoEncoder timestamps
+            await iterFrame();
+          }
         }),
         takeUntil(this.ngUnsubscribe)
       )

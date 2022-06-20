@@ -65,11 +65,11 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
     let supportedMimeType: string;
     for (const mimeType of this.mimeTypes) {
-      try {
+      if (MediaRecorder.isTypeSupported(mimeType)) {
         this.mediaRecorder = new MediaRecorder(stream, {mimeType, videoBitsPerSecond: BPS});
         supportedMimeType = mimeType;
         break;
-      } catch (e) {
+      } else {
         console.warn(mimeType, 'not supported');
       }
     }
@@ -132,9 +132,13 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
         this.streamWriter = writer;
         this.initMediaRecorder(stream);
       }
-      const timestamp = (1_000_000 * this.frameIndex) / (await this.fps()); // Timestamp in µs
-      // TODO timestamp is not actually respected!
-      const frame = new VideoFrame(await createImageBitmap(image), {timestamp});
+      const ms = 1_000_000; // 1µs
+      const fps = await this.fps();
+      const frame = new VideoFrame(await createImageBitmap(image), {
+        // TODO timestamp is not actually respected!
+        timestamp: (ms * this.frameIndex) / fps,
+        duration: ms / fps,
+      });
       await this.streamWriter.write(frame);
       frame.close();
     } else {

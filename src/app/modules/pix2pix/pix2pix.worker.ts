@@ -34,9 +34,7 @@ async function loadModel(): Promise<void> {
 }
 
 function isGreen(r: number, g: number, b: number) {
-  // This green screen algorithm returns disgusting results.
-  // return g > 255/2 && g > r * 1.5 && g > b * 1.5;
-  return false;
+  return g > 255 / 2 && g > r * 1.5 && g > b * 1.5;
 }
 
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
@@ -56,9 +54,9 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
   const tf = await tfPromise;
 
   const {width, height} = image;
-  const pixels = tf.browser.fromPixels(image);
 
   const output = await tf.tidy(() => {
+    const pixels = tf.browser.fromPixels(image);
     const pixelsTensor = pixels.toFloat();
     const input = tf.sub(tf.div(pixelsTensor, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
     const tensor = input.reshape([1, width, height, 3]);
@@ -73,7 +71,7 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
   const outputArray = await output.array(); // Slowest operation
   const outputImg = tf.tensor(outputArray).reshape([width, height, 3]) as Tensor3D;
   let data = await tf.browser.toPixels(outputImg);
-  data = removeGreenScreen(data);
+  // data = removeGreenScreen(data);
 
   return comlink.transfer(data, [data.buffer]);
 }

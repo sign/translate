@@ -3,6 +3,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LanguageSelectorComponent} from './language-selector.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {RouterModule} from '@angular/router';
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -11,7 +12,7 @@ describe('LanguageSelectorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LanguageSelectorComponent],
-      imports: [AppTranslocoTestingModule],
+      imports: [AppTranslocoTestingModule, RouterModule.forRoot([])],
     }).compileComponents();
   });
 
