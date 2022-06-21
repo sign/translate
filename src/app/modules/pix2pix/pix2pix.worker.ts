@@ -71,7 +71,7 @@ async function translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedAr
   const outputArray = await output.array(); // Slowest operation
   const outputImg = tf.tensor(outputArray).reshape([width, height, 3]) as Tensor3D;
   let data = await tf.browser.toPixels(outputImg);
-  // data = removeGreenScreen(data);
+  data = removeGreenScreen(data);
 
   return comlink.transfer(data, [data.buffer]);
 }

@@ -12,7 +12,6 @@ import {
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
-import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-translate',
@@ -24,9 +23,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
-
-  @ViewChild('appearance') appearance: MatDrawer;
-  loadAppearance = false; // Appearance panel should be loaded at will, and then never unloaded
 
   constructor(private store: Store, private transloco: TranslocoService, public translation: TranslationService) {
     super();
@@ -91,11 +87,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
-  }
-
-  openAppearancePanel() {
-    this.loadAppearance = true;
-    return this.appearance.open();
   }
 
   setSignedLanguage(lang: string): void {
