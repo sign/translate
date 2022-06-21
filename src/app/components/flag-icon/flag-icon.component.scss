@@ -49,6 +49,4 @@ $include: (
 );
 $flag-icons-path: '/assets/flags';
 
-@import 'flag-icon-css/sass/flag-icons';
-// TODO This generates the following CSS for every flag which can be improved as we only need "squared":
-// .flag-icon-mm{background-image:url(mm.3e459345645bf834.svg)}.flag-icon-mm.flag-icon-squared{background-image:url(mm.88bcb5e02683d841.svg)}
+@import 'flag-icons/sass/flag-icons';

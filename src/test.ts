@@ -3,6 +3,9 @@
 import 'zone.js/testing';
 import {getTestBed} from '@angular/core/testing';
 import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular/platform-browser-dynamic/testing';
+import {Capacitor} from '@capacitor/core';
+import {initializeApp} from 'firebase/app';
+import {environment} from './environments/environment';
 
 declare const require: {
   context(
@@ -14,6 +17,10 @@ declare const require: {
     <T>(id: string): T;
   };
 };
+
+if (!Capacitor.isNativePlatform()) {
+  initializeApp(environment.firebase);
+}
 
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());

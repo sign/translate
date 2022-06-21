@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {PoseService} from '../../modules/pose/pose.service';
@@ -20,7 +20,7 @@ export class BenchmarkComponent {
   stats: {[key: string]: {[key: string]: number[]}} = {};
 
   constructor(
-    private gaTiming: GoogleAnalyticsTimingService,
+    private ga: GoogleAnalyticsService,
     private pix2pix: Pix2PixService,
     private translation: TranslationService,
     private pose: PoseService
@@ -38,18 +38,18 @@ export class BenchmarkComponent {
 
   buildStats() {
     for (const category of Object.keys(this.benchmarks)) {
-      const events = this.gaTiming.events(category);
-      if (events.length === 0) {
+      const traces = this.ga.traces.filter(({name}) => name.startsWith(category));
+      if (traces.length === 0) {
         continue;
       }
 
       const stats = {};
-      for (const [_, name, args] of events) {
+      for (const {name, time} of traces) {
         const eVar = name.slice(category.length + 1);
         if (!(eVar in stats)) {
           stats[eVar] = [];
         }
-        stats[eVar].push(args.microseconds / 1000);
+        stats[eVar].push(time);
       }
       this.stats[category] = stats;
     }

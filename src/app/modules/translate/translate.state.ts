@@ -124,7 +124,8 @@ export class TranslateState implements NgxsOnInit {
       await this.service.initCld();
       const {spokenLanguageText} = getState();
       if (spokenLanguageText) {
-        patchState({detectedLanguage: this.service.detectSpokenLanguage(spokenLanguageText)});
+        const detectedLanguage = await this.service.detectSpokenLanguage(spokenLanguageText);
+        patchState({detectedLanguage});
       }
     }
 
@@ -148,7 +149,7 @@ export class TranslateState implements NgxsOnInit {
     const {spokenLanguage} = getState();
     patchState({
       spokenLanguageText: text,
-      detectedLanguage: !text || spokenLanguage ? null : this.service.detectSpokenLanguage(text),
+      detectedLanguage: !text || spokenLanguage ? null : await this.service.detectSpokenLanguage(text),
     });
 
     dispatch(ChangeTranslation);

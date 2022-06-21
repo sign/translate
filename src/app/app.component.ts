@@ -1,8 +1,16 @@
 import {Component} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
-import {tap} from 'rxjs/operators';
+import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';
+import {Platform} from '@angular/cdk/platform';
+import {Capacitor} from '@capacitor/core';
+import {initializeApp} from 'firebase/app';
+import {environment} from '../environments/environment';
+import {firstValueFrom} from 'rxjs';
+import {NavigationEnd, Route, Router} from '@angular/router';
+import {FirebaseAnalytics} from '@capacitor-firebase/analytics';
+import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +20,36 @@ import {SetSpokenLanguageText} from './modules/translate/translate.actions';
 export class AppComponent {
   urlParams = new URLSearchParams(window.location.search);
 
-  constructor(private transloco: TranslocoService, private store: Store) {
+  constructor(
+    private platform: Platform,
+    private ga: GoogleAnalyticsService,
+    private transloco: TranslocoService,
+    private router: Router,
+    private store: Store
+  ) {
     this.listenLanguageChange();
+    this.logRouterNavigation();
     this.checkURLEmbedding();
     this.checkURLText();
   }
 
-  listenLanguageChange(): void {
+  logRouterNavigation() {
+    const isLanguageLoaded = firstValueFrom(
+      this.transloco.events$.pipe(filter(e => e.type === 'translationLoadSuccess'))
+    );
+
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        tap(async (event: NavigationEnd) => {
+          await isLanguageLoaded; // Before triggering page view, wait for language to be loaded
+          await this.ga.setCurrentScreen(event.urlAfterRedirects);
+        })
+      )
+      .subscribe();
+  }
+
+  listenLanguageChange() {
     this.transloco.langChanges$
       .pipe(
         tap(lang => {

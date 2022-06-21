@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
-import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
@@ -180,23 +180,23 @@ export class TranslationService {
     'zu',
   ];
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService, private http: HttpClient) {}
+  constructor(private ga: GoogleAnalyticsService, private http: HttpClient) {}
 
   async initCld(): Promise<void> {
     if (this.cld) {
       return;
     }
-    const cld3 = await this.gaTiming.time('cld', 'import', () => import(/* webpackChunkName: "cld3-asm" */ 'cld3-asm'));
-    const cldFactory = await this.gaTiming.time('cld', 'load', () => cld3.loadModule());
-    this.cld = this.gaTiming.time('cld', 'create', () => cldFactory.create(1, 500));
+    const cld3 = await this.ga.trace('cld', 'import', () => import(/* webpackChunkName: "cld3-asm" */ 'cld3-asm'));
+    const cldFactory = await this.ga.trace('cld', 'load', () => cld3.loadModule());
+    this.cld = await this.ga.trace('cld', 'create', () => cldFactory.create(1, 500));
   }
 
-  detectSpokenLanguage(text: string): string {
+  async detectSpokenLanguage(text: string): Promise<string> {
     if (!this.cld) {
       return DEFAULT_SPOKEN_LANGUAGE;
     }
 
-    const language = this.gaTiming.time('cld', 'find', () => this.cld.findLanguage(text));
+    const language = await this.ga.trace('cld', 'find', () => this.cld.findLanguage(text));
     const languageCode = language.is_reliable ? language.language : DEFAULT_SPOKEN_LANGUAGE;
     const correctedCode = OBSOLETE_LANGUAGE_CODES[languageCode] ?? languageCode;
     return this.spokenLanguages.includes(correctedCode) ? correctedCode : DEFAULT_SPOKEN_LANGUAGE;
