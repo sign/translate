@@ -19,6 +19,10 @@ export class TensorflowService {
 
   // TODO implement a global getter to get all properties from tf
 
+  get setBackend(): typeof tf.setBackend {
+    return this.tf.setBackend;
+  }
+
   get softmax(): typeof tf.softmax {
     return this.tf.softmax;
   }

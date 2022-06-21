@@ -5,10 +5,16 @@ import {ThreeService} from '../../core/services/three.service';
 
 describe('HandsService', () => {
   let service: HandsService;
+  let tf: TensorflowService;
+  let three: ThreeService;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({providers: [TensorflowService, ThreeService]});
     service = TestBed.inject(HandsService);
+    tf = TestBed.inject(TensorflowService);
+    three = TestBed.inject(ThreeService);
+
+    await Promise.all([tf.load(), three.load()]);
   });
 
   it('should create', () => {
@@ -16,6 +22,8 @@ describe('HandsService', () => {
   });
 
   it('model weights should not contain NaN', async () => {
+    await tf.setBackend('cpu'); // only cpu has `isNaN` properly
+
     await service.loadModel();
     const model = service.leftHandSequentialModel;
 
@@ -23,14 +31,12 @@ describe('HandsService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
 
   it('should normalize hands correctly', async () => {
-    await Promise.all([service.tf.load(), service.three.load()]);
-
     const handNormalizations = [
       [
         // eslint-disable-next-line max-len
@@ -185,7 +191,7 @@ describe('HandsService', () => {
     ];
 
     for (const [x, y] of handNormalizations) {
-      const vectors = x.map(v => new service.three.Vector3(v[0], v[1], v[2]));
+      const vectors = x.map(v => new three.Vector3(v[0], v[1], v[2]));
       const normal = service.normal(vectors); // TODO maybe need to flip normal?
       const yHat = service.normalizeHand(vectors, normal, false).arraySync();
       // This is evaluated one item at a time because of negative zeros

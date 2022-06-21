@@ -5,10 +5,14 @@ import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 
 describe('AnimationService', () => {
   let service: AnimationService;
+  let tf: TensorflowService;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({providers: [TensorflowService]});
     service = TestBed.inject(AnimationService);
+    tf = TestBed.inject(TensorflowService);
+
+    await tf.load();
   });
 
   it('should create', () => {
@@ -16,6 +20,8 @@ describe('AnimationService', () => {
   });
 
   it('model weights should not contain NaN', async () => {
+    await tf.setBackend('cpu'); // only cpu has `isNaN` properly
+
     await service.loadModel();
     const model = service.sequentialModel;
 
@@ -23,14 +29,12 @@ describe('AnimationService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
 
   it('should normalize pose correctly', async () => {
-    await service.tf.load();
-
     // eslint-disable-next-line max-len
     const body = [
       [676.8400573730469, 240.16031742095947, -540.0334548950195],

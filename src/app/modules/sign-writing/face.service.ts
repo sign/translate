@@ -40,8 +40,8 @@ export class FaceService {
 
   constructor(
     private poseNormalization: PoseNormalizationService,
-    public tf: TensorflowService,
-    public three: ThreeService
+    private tf: TensorflowService,
+    private three: ThreeService
   ) {}
 
   async loadModel(): Promise<LayersModel> {

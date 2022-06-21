@@ -7,10 +7,14 @@ import createSpy = jasmine.createSpy;
 
 describe('DetectorService', () => {
   let service: DetectorService;
+  let tf: TensorflowService;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({providers: [TensorflowService]});
     service = TestBed.inject(DetectorService);
+    tf = TestBed.inject(TensorflowService);
+
+    await tf.load();
   });
 
   it('should create', () => {
@@ -18,6 +22,8 @@ describe('DetectorService', () => {
   });
 
   it('model weights should not contain NaN', async () => {
+    await tf.setBackend('cpu'); // only cpu has `isNaN` properly
+
     await service.loadModel();
     const model = service.sequentialModel;
 
@@ -25,7 +31,7 @@ describe('DetectorService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
@@ -105,9 +111,7 @@ describe('DetectorService', () => {
   });
 
   it('should use model to get confidence', async () => {
-    await service.tf.load();
-
-    const spy = createSpy('predict').and.returnValue(service.tf.tensor([1, 2]));
+    const spy = createSpy('predict').and.returnValue(tf.tensor([1, 2]));
     service.sequentialModel = {predict: spy} as any;
 
     const confidence = service.getSequentialConfidence(new Float32Array(25).fill(0));

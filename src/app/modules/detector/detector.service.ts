@@ -19,7 +19,7 @@ export class DetectorService {
 
   sequentialModel: LayersModel;
 
-  constructor(public tf: TensorflowService) {}
+  constructor(private tf: TensorflowService) {}
 
   async loadModel(): Promise<LayersModel> {
     await this.tf.load();
