@@ -6,7 +6,7 @@
   </mat-toolbar>
 
   <div id="container">
-    <div id="input-mode-group" *ngIf="inputMode$ | async as inputMode">
+    <div id="input-mode-group">
       <ng-container *ngIf="spokenToSigned">
         <app-translate-input-button mode="text" icon="translate"></app-translate-input-button>
       </ng-container>

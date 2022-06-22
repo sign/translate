@@ -13,11 +13,16 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   isSupported = false;
   isSpeaking = false;
 
-  speech = new SpeechSynthesisUtterance();
+  // SpeechSynthesisUtterance is not supported on Android native build
+  speech: SpeechSynthesisUtterance = 'SpeechSynthesisUtterance' in window ? new SpeechSynthesisUtterance() : null;
 
   private listeners: {[key: string]: EventListener} = {};
 
   ngOnInit(): void {
+    if (!this.speech) {
+      return;
+    }
+
     const voicesLoaded = () => {
       this.voices = window.speechSynthesis.getVoices();
       this.setVoice();
@@ -38,12 +43,20 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnDestroy(): void {
+    if (!this.speech) {
+      return;
+    }
+
     for (const [type, listener] of Object.entries(this.listeners)) {
       window.speechSynthesis.removeEventListener(type, listener);
     }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    if (!this.speech) {
+      return;
+    }
+
     if (changes.lang) {
       this.speech.lang = this.lang;
       this.setVoice();

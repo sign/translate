@@ -1,10 +1,9 @@
-import {Component, HostBinding, OnInit, ViewChild} from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {Select, Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
-import {InputMode} from '../../modules/translate/translate.state';
 import {
   FlipTranslationDirection,
   SetSignedLanguage,
@@ -12,6 +11,7 @@ import {
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
+import {FirebaseCrashlytics} from '@capacitor-firebase/crashlytics';
 
 @Component({
   selector: 'app-translate',
@@ -20,7 +20,6 @@ import {TranslationService} from '../../modules/translate/translate.service';
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
   @Select(state => state.translate.spokenToSigned) spokenToSigned$: Observable<boolean>;
-  @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 

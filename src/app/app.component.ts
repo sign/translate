@@ -4,12 +4,8 @@ import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';
 import {Platform} from '@angular/cdk/platform';
-import {Capacitor} from '@capacitor/core';
-import {initializeApp} from 'firebase/app';
-import {environment} from '../environments/environment';
 import {firstValueFrom} from 'rxjs';
-import {NavigationEnd, Route, Router} from '@angular/router';
-import {FirebaseAnalytics} from '@capacitor-firebase/analytics';
+import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
 
 @Component({
