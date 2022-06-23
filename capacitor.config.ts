@@ -8,7 +8,12 @@ const config: CapacitorConfig = {
   webDir: 'dist/sign-translate',
   bundledWebRuntime: false,
   server: getServer(),
-  plugins: {},
+  plugins: {
+    SplashScreen: {
+      androidScaleType: 'CENTER_CROP',
+      launchAutoHide: false,
+    },
+  },
   ios: {
     path: 'ios',
   },

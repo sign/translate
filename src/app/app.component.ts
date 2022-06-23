@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
@@ -7,13 +7,15 @@ import {Platform} from '@angular/cdk/platform';
 import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
+import {Capacitor} from '@capacitor/core';
+import {SplashScreen} from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   urlParams = new URLSearchParams(window.location.search);
 
   constructor(
@@ -27,6 +29,12 @@ export class AppComponent {
     this.logRouterNavigation();
     this.checkURLEmbedding();
     this.checkURLText();
+  }
+
+  async ngAfterViewInit() {
+    if (Capacitor.isNativePlatform()) {
+      await SplashScreen.hide();
+    }
   }
 
   logRouterNavigation() {
