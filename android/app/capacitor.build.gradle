@@ -13,6 +13,8 @@ dependencies {
     implementation project(':capacitor-firebase-app')
     implementation project(':capacitor-firebase-crashlytics')
     implementation project(':capacitor-firebase-performance')
+    implementation project(':capacitor-filesystem')
+    implementation project(':capacitor-share')
     implementation project(':capacitor-splash-screen')
 
 }

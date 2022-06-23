@@ -22,6 +22,7 @@ import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
 import {font} from '@sutton-signwriting/font-ttf/index.js';
+import {Capacitor} from '@capacitor/core';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -222,21 +223,39 @@ export class TranslateState implements NgxsOnInit {
     }
   }
 
-  @Action(ShareSignedLanguageVideo)
-  async shareSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
-    const {signedLanguageVideo} = getState();
+  async shareNative(file: File) {
+    const toBase64 = (file): Promise<string> =>
+      new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(String(reader.result));
+        reader.onerror = error => reject(error);
+      });
 
+    // Save video to file system
+    const {Directory, Filesystem} = await import('@capacitor/filesystem');
+    const data = await toBase64(file);
+    const fileOptions = {directory: Directory.Cache, path: 'video.mp4'};
+    await Filesystem.writeFile({...fileOptions, data});
+    const {uri} = await Filesystem.getUri(fileOptions);
+
+    // Share video
+    const {Share} = await import('@capacitor/share');
+    await Share.share({
+      title: fileOptions.path,
+      text: fileOptions.path,
+      url: uri,
+    });
+  }
+
+  async shareWeb(file: File) {
     if (!('share' in navigator)) {
       // For example in non-HTTPS on iOS
       alert(`Share functionality is not available`);
       return;
     }
 
-    const data = await fetch(signedLanguageVideo);
-    const blob = await data.blob();
-    const ext = blob.type.split('/').pop();
-
-    const files: File[] = [new File([blob], 'video.' + ext, {type: blob.type})];
+    const files: File[] = [file];
 
     const url = window.location.href;
     const title = 'Signed Language Video for text';
@@ -248,6 +267,23 @@ export class TranslateState implements NgxsOnInit {
       // TODO convert the video to GIF, try to share the GIF.
       await navigator.share({text: title, title, url});
     }
+  }
+
+  @Action(ShareSignedLanguageVideo)
+  async shareSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
+    const {signedLanguageVideo} = getState();
+
+    const data = await fetch(signedLanguageVideo);
+    const blob = await data.blob();
+    const ext = blob.type.split('/').pop();
+
+    const file = new File([blob], 'video.' + ext, {type: blob.type});
+
+    if (Capacitor.isNativePlatform()) {
+      return this.shareNative(file);
+    }
+
+    return this.shareWeb(file);
   }
 
   @Action(DownloadSignedLanguageVideo)

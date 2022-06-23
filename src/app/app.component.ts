@@ -8,7 +8,6 @@ import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
 import {Capacitor} from '@capacitor/core';
-import {SplashScreen} from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
@@ -33,6 +32,7 @@ export class AppComponent implements AfterViewInit {
 
   async ngAfterViewInit() {
     if (Capacitor.isNativePlatform()) {
+      const {SplashScreen} = await import('@capacitor/splash-screen');
       await SplashScreen.hide();
     }
   }
