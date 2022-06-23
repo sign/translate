@@ -34,10 +34,15 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     });
 
     fromEvent(this.speechRecognition, 'error').subscribe((event: SpeechRecognitionErrorEvent) => {
-      if (['not-allowed', 'language-not-supported'].includes(event.error)) {
+      if (['not-allowed', 'language-not-supported', 'service-not-allowed'].includes(event.error)) {
         this.supportError = event.error;
       } else {
         this.supportError = null;
+      }
+
+      // Try accessing microphone, to request permission
+      if (event.error === 'not-allowed') {
+        this.requestPermission();
       }
     });
 
@@ -56,11 +61,18 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     }
   }
 
-  start(): void {
+  requestPermission() {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then(stream => {
+      stream.getTracks().forEach(track => track.stop());
+      this.supportError = null;
+    });
+  }
+
+  start() {
     this.speechRecognition.start();
   }
 
-  stop(): void {
+  stop() {
     this.speechRecognition.stop();
   }
 }

@@ -126,7 +126,8 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   async addCacheFrame(image: ImageData): Promise<void> {
-    if ('MediaStreamTrackGenerator' in window) {
+    if ('MediaStreamTrackGenerator' in window && false) {
+      // Not ready for use: https://stackoverflow.com/questions/72693091/mediarecorder-ignoring-videoframe-timestamp
       if (!this.mediaRecorder) {
         const {stream, writer} = this.createMediaGeneratorTrack();
         this.streamWriter = writer;

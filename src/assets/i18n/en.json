@@ -135,6 +135,7 @@
     "start": "Translate by voice",
     "stop": "Stop translation by voice",
     "not-allowed": "Need permission to use microphone",
+    "service-not-allowed": "Need permission to use speech recognition",
     "language-not-supported": "Selected language is not supported",
     "browser-not-supported": "Voice input isn't supported on this browser"
   },

@@ -29,6 +29,7 @@ function resetDropout(layers: any[]) {
 
 async function loadModel(): Promise<void> {
   const tf = await tfPromise;
+  tf.env().set('WEBGL_FORCE_F16_TEXTURES', false);
   model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
   resetDropout(model.layers); // Extremely important, as we are performing inference in training mode
 }
