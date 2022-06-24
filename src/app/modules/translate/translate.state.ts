@@ -241,11 +241,7 @@ export class TranslateState implements NgxsOnInit {
 
     // Share video
     const {Share} = await import('@capacitor/share');
-    await Share.share({
-      title: fileOptions.path,
-      text: fileOptions.path,
-      url: uri,
-    });
+    await Share.share({url: uri});
   }
 
   async shareWeb(file: File) {
@@ -274,7 +270,7 @@ export class TranslateState implements NgxsOnInit {
     const {signedLanguageVideo} = getState();
 
     const data = await fetch(signedLanguageVideo);
-    const blob = await data.blob();
+    let blob = await data.blob();
     const ext = blob.type.split('/').pop();
 
     const file = new File([blob], 'video.' + ext, {type: blob.type});
