@@ -11,7 +11,7 @@ import {
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
-import {FirebaseCrashlytics} from '@capacitor-firebase/crashlytics';
+import {Keyboard} from '@capacitor/keyboard';
 
 @Component({
   selector: 'app-translate',
@@ -22,6 +22,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   @Select(state => state.translate.spokenToSigned) spokenToSigned$: Observable<boolean>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
+  @HostBinding('class.keyboard-open') keyboardOpen: boolean;
 
   constructor(private store: Store, private transloco: TranslocoService, public translation: TranslationService) {
     super();
@@ -63,7 +64,14 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       )
       .subscribe();
 
+    this.initKeyboardListeners();
+
     this.playVideos();
+  }
+
+  initKeyboardListeners() {
+    Keyboard.addListener('keyboardWillShow', () => (this.keyboardOpen = true));
+    Keyboard.addListener('keyboardWillHide', () => (this.keyboardOpen = false));
   }
 
   async playVideos(): Promise<void> {

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {BaseComponent} from '../../../components/base/base.component';
-import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
+import {debounce, distinctUntilChanged, map, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
 import {Select, Store} from '@ngxs/store';
 import {
@@ -49,8 +49,9 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
     this.text.valueChanges
       .pipe(
         debounce(() => interval(500)),
-        distinctUntilChanged(),
         skipWhile(text => !text), // Don't run on empty text, on app launch
+        map(text => text.trim()),
+        distinctUntilChanged(),
         tap(text => this.store.dispatch(new SetSpokenLanguageText(text))),
         takeUntil(this.ngUnsubscribe)
       )

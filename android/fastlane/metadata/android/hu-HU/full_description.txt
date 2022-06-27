@@ -1,0 +1,1 @@
+Kétirányú, többnyelvű jelnyelvi fordítóalkalmazás asztali számítógépekre és mobileszközökre
