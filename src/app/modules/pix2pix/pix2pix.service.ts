@@ -10,13 +10,18 @@ export class Pix2PixService {
   worker: comlink.Remote<{
     loadModel: () => Promise<void>;
     translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
+    translateQueue: (queueId: number, image: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
   }>;
 
   isFirstFrame = true;
 
+  queueId = 0;
+
   constructor(private ga: GoogleAnalyticsService) {}
 
   async loadModel(): Promise<void> {
+    this.queueId++;
+
     if (this.worker) {
       return;
     }
@@ -31,7 +36,7 @@ export class Pix2PixService {
     const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
     return this.ga.trace('pix2pix', frameType, async () => {
       this.isFirstFrame = false;
-      return this.worker.translate(image);
+      return this.worker.translateQueue(this.queueId, image);
     });
   }
 }

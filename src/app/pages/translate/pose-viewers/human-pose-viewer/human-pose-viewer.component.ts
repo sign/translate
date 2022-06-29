@@ -23,6 +23,8 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   ready = false;
   modelReady = false;
 
+  totalFrames = 1;
+
   constructor(store: Store, private pix2pix: Pix2PixService) {
     super(store);
   }
@@ -40,6 +42,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
       .pipe(
         tap(async () => {
           this.reset();
+          this.totalFrames = (await this.fps()) * pose.duration;
 
           await this.pix2pix.loadModel();
 
@@ -74,8 +77,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             });
           };
 
-          // The more frames in parallel, the more GPU util (1=~40%, 2=~75%, 5=~90%), but inconsistent frame rate
-          for (let i = 0; i < 1; i++) {
+          for (let i = 0; i < 3; i++) {
             // Leaving at 1, need to fix VideoEncoder timestamps
             await iterFrame();
           }
@@ -142,6 +144,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     if (!pose.duration) {
       return 0;
     }
-    return (100 * pose.currentTime) / pose.duration;
+
+    return (100 * this.frameIndex) / this.totalFrames;
   }
 }

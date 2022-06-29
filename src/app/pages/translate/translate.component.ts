@@ -11,6 +11,7 @@ import {
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
+import {Capacitor} from '@capacitor/core';
 import {Keyboard} from '@capacitor/keyboard';
 
 @Component({
@@ -69,9 +70,12 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     this.playVideos();
   }
 
-  initKeyboardListeners() {
-    Keyboard.addListener('keyboardWillShow', () => (this.keyboardOpen = true));
-    Keyboard.addListener('keyboardWillHide', () => (this.keyboardOpen = false));
+  async initKeyboardListeners() {
+    if (Capacitor.isNativePlatform()) {
+      const {Keyboard} = await import('@capacitor/keyboard');
+      Keyboard.addListener('keyboardWillShow', () => (this.keyboardOpen = true));
+      Keyboard.addListener('keyboardWillHide', () => (this.keyboardOpen = false));
+    }
   }
 
   async playVideos(): Promise<void> {

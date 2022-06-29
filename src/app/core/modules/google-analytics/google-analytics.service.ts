@@ -46,17 +46,17 @@ export class GoogleAnalyticsService {
     await FirebasePerformance.startTrace({traceName});
     const stopTrace = () => {
       this.traces.push({name: traceName, time: performance.now() - startTime});
-      return FirebasePerformance.stopTrace({traceName});
+      FirebasePerformance.stopTrace({traceName}).then().catch();
     };
 
     let call = callable();
     if (isPromise(call)) {
       call = (call as any).then(async res => {
-        await stopTrace();
+        stopTrace();
         return res;
       }) as any;
     } else {
-      await stopTrace();
+      stopTrace();
     }
 
     return call;
