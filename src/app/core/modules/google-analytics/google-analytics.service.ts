@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {getCLS, getFID, getLCP} from 'web-vitals';
 import {FirebaseAnalytics} from '@capacitor-firebase/analytics';
 import {FirebasePerformance} from '@capacitor-firebase/performance';
-import {SetCurrentScreenOptions} from '@capacitor-firebase/analytics/dist/esm/definitions';
+import {environment} from '../../../../environments/environment';
 
 function isPromise(promise) {
   return !!promise && typeof promise.then === 'function';
@@ -43,10 +43,14 @@ export class GoogleAnalyticsService {
   async trace<T>(timingCategory: string, timingVar: string, callable: () => T): Promise<T> {
     const startTime = performance.now();
     const traceName = `${timingCategory}:${timingVar}`;
-    await FirebasePerformance.startTrace({traceName});
+    if (environment.firebase.measurementId) {
+      await FirebasePerformance.startTrace({traceName});
+    }
     const stopTrace = () => {
       this.traces.push({name: traceName, time: performance.now() - startTime});
-      FirebasePerformance.stopTrace({traceName}).then().catch();
+      if (environment.firebase.measurementId) {
+        FirebasePerformance.stopTrace({traceName}).then().catch();
+      }
     };
 
     let call = callable();
