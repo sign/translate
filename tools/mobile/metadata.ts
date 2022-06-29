@@ -1,4 +1,4 @@
-import {webkit, devices} from '@playwright/test';
+import {devices, webkit} from '@playwright/test';
 import asyncPool from 'tiny-async-pool';
 import * as fs from 'fs';
 import {promisify} from 'util';
@@ -102,6 +102,7 @@ async function main() {
   const screenCapture = async contextOptions => {
     const context = await browser.newContext(contextOptions);
     const page = await context.newPage();
+    await page.route('https://**/*', route => route.abort()); // disallow external traffic
     await page.goto('http://localhost:4200/', {waitUntil: 'networkidle'});
 
     const title = await page.title();
