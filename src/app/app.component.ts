@@ -76,6 +76,10 @@ export class AppComponent implements AfterViewInit {
       // Handle simplified (china) vs traditional (hong kong, taiwan) chinese
       navigatorParam = navigator.language === 'zh-CN' ? 'zh-CN' : 'zh-HK';
     }
+    if (navigatorParam === 'pt') {
+      // Handle brazilian vs european portuguese
+      navigatorParam = navigator.language;
+    }
     if (navigatorParam === 'iw') {
       // Handle Hebrew
       navigatorParam = 'he';

@@ -7,7 +7,7 @@
     "title": "Sign Prevodilac",
     "language-selector": {
       "detected": "{{lang}}",
-      "detect": "Odredi jezik",
+      "detect": "Otkrij jezik",
       "more": "Više jezika"
     },
     "feedback": "Slanje povratnih informacija",

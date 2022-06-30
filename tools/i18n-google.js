@@ -87,7 +87,7 @@ async function applyGoogleLanguage(language, filePath) {
       shift: shift.trim(),
     },
     translate: {
-      title: /<title>(.*?)<\/title>/g.exec(main)[1].replace('Google', 'Sign'),
+      title: /<title>(.*?)<\/title>/g.exec(main)[1].replace('Google', 'Sign').replace('&#39;', "'"),
       'language-selector': {
         detected: '{{lang}}',
       },
@@ -105,7 +105,7 @@ async function applyGoogleLanguage(language, filePath) {
       swapLanguages: swapLanguages.trim(),
 
       'language-selector': {
-        detect: /,\["auto","(.*?)"\]/g.exec(main)[1],
+        detect: /\[\[\["auto","(.*?)"\]/g.exec(main)[1],
         // "detected": "{lang} - Detected" // TODO get from a js file?
       },
       // "spoken-to-signed": {

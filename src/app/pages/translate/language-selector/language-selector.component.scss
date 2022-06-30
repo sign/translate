@@ -32,6 +32,8 @@ button.menu-language-button {
   width: 100%;
   height: 100%;
   text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media #{$mat-lt-md} {
@@ -78,5 +80,11 @@ button.menu-language-button {
 
   .language-selector-menu {
     margin-top: 5px;
+  }
+
+  button.menu-language-button span.mat-button-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

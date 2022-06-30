@@ -7,7 +7,7 @@
     "title": "Sign Tradutor",
     "language-selector": {
       "detected": "{{lang}}",
-      "detect": "Detectar idioma",
+      "detect": "Detetar idioma",
       "more": "Mais idiomas"
     },
     "feedback": "Enviar feedback e opiniões",
