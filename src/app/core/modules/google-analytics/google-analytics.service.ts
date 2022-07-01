@@ -52,7 +52,7 @@ export class GoogleAnalyticsService {
   }
 
   async trace<T>(timingCategory: string, timingVar: string, callable: () => T): Promise<T> {
-    if (this.isSupported) {
+    if (!this.isSupported) {
       return callable();
     }
 
@@ -61,7 +61,7 @@ export class GoogleAnalyticsService {
     await FirebasePerformance.startTrace({traceName});
     const stopTrace = () => {
       this.traces.push({name: traceName, time: performance.now() - startTime});
-      FirebasePerformance.stopTrace({traceName}).then().catch();
+      FirebasePerformance.stopTrace({traceName}).catch().then();
     };
 
     let call = callable();

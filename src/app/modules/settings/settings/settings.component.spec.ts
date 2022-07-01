@@ -7,7 +7,6 @@ import {SettingsState} from '../settings.state';
 import {FormsModule} from '@angular/forms';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {MatSelectModule} from '@angular/material/select';
 import {MatListModule} from '@angular/material/list';
 
 describe('SettingsComponent', () => {

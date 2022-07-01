@@ -14,27 +14,31 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
 
   static isCustomElementDefined = false;
 
+  colorSchemeMedia = this.matchMedia();
+
   constructor() {
     super();
   }
 
-  ngOnInit(): void {
+  matchMedia() {
     if ('matchMedia' in globalThis) {
-      // Rerender when scheme changes
-      const colorSchemeMedia = globalThis.matchMedia('(prefers-color-scheme: dark)');
-
-      fromEvent(colorSchemeMedia, 'change')
-        .pipe(
-          tap(() => {
-            // Update signs to force re-rendering
-            const signs = this.signs;
-            this.signs = [];
-            requestAnimationFrame(() => (this.signs = signs));
-          }),
-          takeUntil(this.ngUnsubscribe)
-        )
-        .subscribe();
+      return globalThis.matchMedia('(prefers-color-scheme: dark)');
     }
+    return new EventTarget();
+  }
+
+  ngOnInit(): void {
+    fromEvent(this.colorSchemeMedia, 'change')
+      .pipe(
+        tap(() => {
+          // Update signs to force re-rendering
+          const signs = this.signs;
+          this.signs = [];
+          requestAnimationFrame(() => (this.signs = signs));
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
