@@ -29,5 +29,5 @@ function updateServerPush(resources) {
   fs.writeFileSync('firebase.json', content);
 }
 
-const resources = [...getResources('dist/sign-translate/index.html')].join(',');
+const resources = [...getResources('dist/sign-translate/browser/index.html')].join(',');
 updateServerPush(resources);

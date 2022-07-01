@@ -1,3 +1,5 @@
+import {InitialNavigation} from '@angular/router';
+
 export const environment = {
   production: true,
   firebase: {
@@ -9,4 +11,5 @@ export const environment = {
     appId: '1:665830225099:web:18e0669d5847a4b047974e',
     measurementId: 'G-1LXY5W5Z9H',
   },
+  initialNavigation: 'enabledBlocking' as InitialNavigation,
 };

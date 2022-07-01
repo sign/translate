@@ -27,7 +27,8 @@ export class LanguageSelectorComponent implements OnInit {
   ngOnInit(): void {
     this.topLanguages = this.languages.slice(0, 3);
 
-    const urlParams = new URLSearchParams(window.location.search);
+    const searchParams = 'window' in globalThis ? window.location.search : '';
+    const urlParams = new URLSearchParams(searchParams);
     const initial = urlParams.get(this.urlParameter) || this.languages[0];
     this.selectLanguage(initial);
   }

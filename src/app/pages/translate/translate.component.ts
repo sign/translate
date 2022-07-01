@@ -13,6 +13,7 @@ import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Capacitor} from '@capacitor/core';
 import {Keyboard} from '@capacitor/keyboard';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-translate',
@@ -25,7 +26,13 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
   @HostBinding('class.keyboard-open') keyboardOpen: boolean;
 
-  constructor(private store: Store, private transloco: TranslocoService, public translation: TranslationService) {
+  constructor(
+    private store: Store,
+    private transloco: TranslocoService,
+    public translation: TranslationService,
+    private meta: Meta,
+    private title: Title
+  ) {
     super();
 
     // Default settings
@@ -42,12 +49,8 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     this.transloco.events$
       .pipe(
         tap(() => {
-          document.title = this.transloco.translate('translate.title');
-
-          const descriptionEl = document.head.children.namedItem('description');
-          if (descriptionEl) {
-            descriptionEl.setAttribute('content', this.transloco.translate('translate.description'));
-          }
+          this.title.setTitle(this.transloco.translate('translate.title'));
+          this.meta.addTags([{name: 'description', content: this.transloco.translate('translate.description')}]);
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -79,6 +82,10 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   }
 
   async playVideos(): Promise<void> {
+    if (!('window' in globalThis)) {
+      return;
+    }
+
     // Autoplay videos don't play before page interaction, or after re-opening PWA without refresh
     fromEvent(window, 'click')
       .pipe(

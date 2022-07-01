@@ -40,6 +40,8 @@ import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark
 import {FlagIconComponent} from './components/flag-icon/flag-icon.component';
 import {DropzoneDirective} from './directives/dropzone.directive';
 import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-file.component';
+import {TRANSLOCO_LOADER} from '@ngneat/transloco';
+import {HttpLoader} from './core/modules/transloco/transloco.loader';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,7 @@ import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-
     DropPoseFileComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
@@ -89,7 +91,7 @@ import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-
       registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
-  providers: [NavigatorService],
+  providers: [NavigatorService, {provide: TRANSLOCO_LOADER, useClass: HttpLoader}],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

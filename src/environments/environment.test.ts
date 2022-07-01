@@ -15,7 +15,7 @@ export const environment = {
     appId: '1:665830225099:web:18e0669d5847a4b047974e',
     measurementId: null,
   },
-  initialNavigation: 'enabledBlocking' as InitialNavigation,
+  initialNavigation: 'enabledNonBlocking' as InitialNavigation,
 };
 
 /*

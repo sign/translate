@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {InitialNavigation, RouterModule, Routes} from '@angular/router';
 import {PlaygroundComponent} from './pages/playground/playground.component';
 import {TranslateComponent} from './pages/translate/translate.component';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
+import {environment} from '../environments/environment';
 
 const routes: Routes = [
   {path: '', component: TranslateComponent},
@@ -12,7 +13,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: environment.initialNavigation,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

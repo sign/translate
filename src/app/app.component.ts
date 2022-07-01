@@ -1,5 +1,5 @@
 import {AfterViewInit, Component} from '@angular/core';
-import {TranslocoService} from '@ngneat/transloco';
+import {getBrowserLang, TranslocoService} from '@ngneat/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';
@@ -15,7 +15,7 @@ import {Capacitor} from '@capacitor/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  urlParams = new URLSearchParams(window.location.search);
+  urlParams = this.getUrlParams();
 
   constructor(
     private platform: Platform,
@@ -53,7 +53,18 @@ export class AppComponent implements AfterViewInit {
       .subscribe();
   }
 
+  getUrlParams() {
+    if (!('window' in globalThis)) {
+      return new URLSearchParams();
+    }
+    return new URLSearchParams(window.location.search);
+  }
+
   listenLanguageChange() {
+    if (!('navigator' in globalThis) || !('document' in globalThis)) {
+      return;
+    }
+
     this.transloco.langChanges$
       .pipe(
         tap(lang => {
@@ -70,7 +81,7 @@ export class AppComponent implements AfterViewInit {
       )
       .subscribe();
 
-    const urlParam = this.urlParams.get('lang');
+    const urlParam = this.urlParams.get('lang') || getBrowserLang();
     let [navigatorParam] = navigator.language.split('-');
     if (navigatorParam === 'zh') {
       // Handle simplified (china) vs traditional (hong kong, taiwan) chinese

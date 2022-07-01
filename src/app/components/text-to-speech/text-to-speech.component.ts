@@ -14,7 +14,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   isSpeaking = false;
 
   // SpeechSynthesisUtterance is not supported on Android native build
-  speech: SpeechSynthesisUtterance = 'SpeechSynthesisUtterance' in window ? new SpeechSynthesisUtterance() : null;
+  speech: SpeechSynthesisUtterance = 'SpeechSynthesisUtterance' in globalThis ? new SpeechSynthesisUtterance() : null;
 
   private listeners: {[key: string]: EventListener} = {};
 
@@ -24,17 +24,17 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
     }
 
     const voicesLoaded = () => {
-      this.voices = window.speechSynthesis.getVoices();
+      this.voices = globalThis.speechSynthesis.getVoices();
       this.setVoice();
     };
     voicesLoaded(); // In case voices are already loaded
 
     // Safari does not support speechSynthesis events
-    if ('addEventListener' in window.speechSynthesis) {
+    if ('addEventListener' in globalThis.speechSynthesis) {
       this.listeners.voiceschanged = voicesLoaded;
 
       for (const [type, listener] of Object.entries(this.listeners)) {
-        window.speechSynthesis.addEventListener(type, listener);
+        globalThis.speechSynthesis.addEventListener(type, listener);
       }
     }
 
@@ -48,7 +48,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
     }
 
     for (const [type, listener] of Object.entries(this.listeners)) {
-      window.speechSynthesis.removeEventListener(type, listener);
+      globalThis.speechSynthesis.removeEventListener(type, listener);
     }
   }
 
@@ -88,10 +88,10 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
 
   play(): void {
     this.speech.text = this.text;
-    window.speechSynthesis.speak(this.speech);
+    globalThis.speechSynthesis.speak(this.speech);
   }
 
   cancel(): void {
-    window.speechSynthesis.cancel();
+    globalThis.speechSynthesis.cancel();
   }
 }

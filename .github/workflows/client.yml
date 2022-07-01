@@ -41,7 +41,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
-        run: npm run build
+        run: npm run prerender
 
       - name: Generate Sitemap
         run: node tools/sitemap-generator.js
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: build-dist
-          path: dist/sign-translate/
+          path: dist/sign-translate/browser/
 
   lighthouse:
     name: Lighthouse Test
@@ -63,7 +63,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-dist
-          path: dist/sign-translate/
+          path: dist/sign-translate/browser/
 
       - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v9
@@ -84,7 +84,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-dist
-          path: dist/sign-translate/
+          path: dist/sign-translate/browser/
 
       - name: Create HTTP/2 Server Push Headers
         run: node tools/firebase-http-push.js
@@ -109,7 +109,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-dist
-          path: dist/sign-translate/
+          path: dist/sign-translate/browser/
 
       - name: Deploy Development Channel 🚀
         uses: FirebaseExtended/action-hosting-deploy@v0

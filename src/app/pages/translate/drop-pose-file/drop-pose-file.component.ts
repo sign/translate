@@ -16,7 +16,7 @@ export class DropPoseFileComponent {
   }
 
   listenExternalFileOpen() {
-    if ('launchQueue' in window) {
+    if ('window' in globalThis && 'launchQueue' in window) {
       (window as any).launchQueue.setConsumer(async launchParams => {
         if (!launchParams.files.length) {
           return;

@@ -25,7 +25,7 @@ for (const file of fs.readdirSync(langsDir)) {
 // writes sitemaps and index out to the destination you provide.
 simpleSitemapAndIndex({
   hostname: 'https://sign.mt',
-  destinationDir: `${baseDir}dist/sign-translate/`,
+  destinationDir: `${baseDir}dist/sign-translate/browser/`,
   sourceData: urls.map(url => ({url, lastmod: now})),
   gzip: false,
 })

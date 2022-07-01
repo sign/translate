@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-import {SpeechRecognition, SpeechToTextComponent} from './speech-to-text.component';
+import {SpeechToTextComponent} from './speech-to-text.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 
@@ -32,7 +32,7 @@ describe('SpeechToTextComponent', () => {
     expect(a11y).toHaveNoViolations();
   });
 
-  if (SpeechRecognition) {
+  if ('SpeechRecognition' in globalThis) {
     it('start should start speech recognition', () => {
       const startSpy = spyOn(component.speechRecognition, 'start').and.callFake(() => {
         component.speechRecognition.dispatchEvent(new Event('start'));

@@ -18,11 +18,22 @@ export class GoogleAnalyticsService {
     this.logPerformanceMetrics();
   }
 
-  setCurrentScreen(screenName: string) {
-    return FirebaseAnalytics.setCurrentScreen({screenName});
+  get isSupported() {
+    return environment.firebase.measurementId && 'window' in globalThis && 'document' in globalThis;
+  }
+
+  async setCurrentScreen(screenName: string) {
+    if (!this.isSupported) {
+      return;
+    }
+    await FirebaseAnalytics.setCurrentScreen({screenName});
   }
 
   logPerformanceMetrics() {
+    if (!this.isSupported) {
+      return;
+    }
+
     const sendToGoogleAnalytics = ({name, delta, value, id}) => {
       return FirebaseAnalytics.logEvent({
         name,
@@ -41,16 +52,16 @@ export class GoogleAnalyticsService {
   }
 
   async trace<T>(timingCategory: string, timingVar: string, callable: () => T): Promise<T> {
+    if (!this.isSupported) {
+      return callable();
+    }
+
     const startTime = performance.now();
     const traceName = `${timingCategory}:${timingVar}`;
-    if (environment.firebase.measurementId) {
-      await FirebasePerformance.startTrace({traceName});
-    }
+    await FirebasePerformance.startTrace({traceName});
     const stopTrace = () => {
       this.traces.push({name: traceName, time: performance.now() - startTime});
-      if (environment.firebase.measurementId) {
-        FirebasePerformance.stopTrace({traceName}).then().catch();
-      }
+      FirebasePerformance.stopTrace({traceName}).catch().then();
     };
 
     let call = callable();
