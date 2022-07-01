@@ -1,11 +1,11 @@
 import {HttpClient} from '@angular/common/http';
 import {Translation, TRANSLOCO_SCOPE, TranslocoLoader} from '@ngneat/transloco';
-import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class HttpLoader implements TranslocoLoader {
-  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: string) {}
+  constructor(private http: HttpClient) {}
 
   getTranslation(langPath: string): Observable<Translation> {
     const fName = langPath.toLowerCase();

@@ -2,9 +2,7 @@
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/server",
-    "resolveJsonModule": true,
-    "moduleResolution": "node"
+    "outDir": "./out-tsc/server"
   },
   "files": ["src/main.server.ts", "server.ts"],
   "angularCompilerOptions": {

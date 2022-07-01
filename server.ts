@@ -15,11 +15,6 @@ export function app(): Express {
   const distFolder = join(process.cwd(), 'dist/sign-translate/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
-  server.use((req, res, next) => {
-    console.log('REQUEST', req.url);
-    next();
-  });
-
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine(
     'html',
