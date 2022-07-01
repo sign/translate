@@ -5,7 +5,7 @@
   },
   "hosting": {
     "target": "translate",
-    "public": "dist/sign-translate",
+    "public": "dist/sign-translate/browser",
     "ignore": [],
     "rewrites": [
       {

@@ -1,4 +1,6 @@
 <button (click)="setInputMode()" [class.selected]="(inputMode$ | async) === mode" color="primary" mat-stroked-button>
   <mat-icon>{{ icon }}</mat-icon>
-  {{ 'translate.input.' + mode | transloco }}
+  <!-- if the language file takes time to load, the button is first treated as an icon only button.
+  To avoid layout shift for the icon, we use &nbsp; in that case -->
+  {{ ('translate.input.' + mode | transloco) || '&nbsp;' }}
 </button>

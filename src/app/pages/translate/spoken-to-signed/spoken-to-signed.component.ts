@@ -76,8 +76,9 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   }
 
   shareIcon(): string {
-    const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
-    const isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
+    const platform = 'navigator' in globalThis ? navigator.platform : '';
+    const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(platform);
+    const isIOS = /(iPhone|iPod|iPad)/i.test(platform);
     return isIOS || isMacLike ? 'ios_share' : 'share';
   }
 
