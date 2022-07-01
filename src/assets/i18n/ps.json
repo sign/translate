@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign ژباړونکی",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "د ژبې موندل",
       "more": "نورې ژبې"
     },
@@ -29,6 +29,12 @@
         "download": "ژباړه ډاونلوډ کړئ",
         "copy": "کاپي ژباړه",
         "share": "ژباړه شریک کړئ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "د انسان ویډیو ماډل پورته کول",
+          "generating": "ویډیو جوړول"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "توکي"
+    },
+    "nav": {
+      "pages": "نورو پاڼو ته لاړ شئ",
+      "legal": "قانوني پاڼو ته لاړ شئ"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "کنکال",
       "avatar": "اوتار",
       "human": "انسان"
-    }
+    },
+    "title": "ترتیبات"
   }
 }

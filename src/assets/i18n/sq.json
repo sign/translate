@@ -6,7 +6,7 @@
   "translate": {
     "title": "Përkthe me Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Zbulo gjuhën",
       "more": "Më shumë gjuhë"
     },
@@ -29,6 +29,12 @@
         "download": "Shkarko Përkthimin",
         "copy": "Kopjo Përkthim",
         "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Po ngarkohet modeli i videos njerëzore",
+          "generating": "Gjenerimi i videos"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Veglat"
+    },
+    "nav": {
+      "pages": "Navigoni në faqet e tjera",
+      "legal": "Navigoni në faqet ligjore"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeleti",
       "avatar": "Avatari",
       "human": "Njerëzore"
-    }
+    },
+    "title": "Cilësimet"
   }
 }

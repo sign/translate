@@ -1,29 +1,30 @@
 import {Component} from '@angular/core';
-import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
-import {TranslationService} from "../../modules/translate/translate.service";
-import {PoseService} from "../../modules/pose/pose.service";
+import {TranslationService} from '../../modules/translate/translate.service';
+import {PoseService} from '../../modules/pose/pose.service';
+import {transferableImage} from '../../core/helpers/image/transferable';
 
 @Component({
   selector: 'app-benchmark',
   templateUrl: './benchmark.component.html',
-  styleUrls: ['./benchmark.component.scss']
+  styleUrls: ['./benchmark.component.scss'],
 })
 export class BenchmarkComponent {
-
   benchmarks = {
-    'cld': this.cldBench.bind(this),
-    'pix2pix': this.pix2pixBench.bind(this),
-    'pose': this.poseBench.bind(this),
+    cld: this.cldBench.bind(this),
+    pix2pix: this.pix2pixBench.bind(this),
+    pose: this.poseBench.bind(this),
   };
 
-  stats = {};
+  stats: {[key: string]: {[key: string]: number[]}} = {};
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService,
-              private pix2pix: Pix2PixService,
-              private translation: TranslationService,
-              private pose: PoseService) {
-  }
+  constructor(
+    private ga: GoogleAnalyticsService,
+    private pix2pix: Pix2PixService,
+    private translation: TranslationService,
+    private pose: PoseService
+  ) {}
 
   async bench() {
     for (const bench of Object.values(this.benchmarks)) {
@@ -37,18 +38,18 @@ export class BenchmarkComponent {
 
   buildStats() {
     for (const category of Object.keys(this.benchmarks)) {
-      const events = this.gaTiming.events(category);
-      if (events.length === 0) {
+      const traces = this.ga.traces.filter(({name}) => name.startsWith(category));
+      if (traces.length === 0) {
         continue;
       }
 
       const stats = {};
-      for (const [_, name, args] of events) {
+      for (const {name, time} of traces) {
         const eVar = name.slice(category.length + 1);
         if (!(eVar in stats)) {
           stats[eVar] = [];
         }
-        stats[eVar].push(args.microseconds / 1000);
+        stats[eVar].push(time);
       }
       this.stats[category] = stats;
     }
@@ -78,7 +79,7 @@ export class BenchmarkComponent {
 
     // Evaluate 30 texts
     for (let i = 0; i < 30; i++) {
-      this.translation.detectSpokenLanguage("Lorem ipsum dolor sit amet");
+      this.translation.detectSpokenLanguage('Lorem ipsum dolor sit amet');
       this.buildStats();
     }
   }
@@ -87,7 +88,7 @@ export class BenchmarkComponent {
     // Set up an empty, white canvas
     const canvas = document.createElement('canvas');
     canvas.width = canvas.height = 256;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', {willReadFrequently: true});
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, 256, 256);
 
@@ -97,9 +98,9 @@ export class BenchmarkComponent {
 
     // Evaluate 30 frames
     for (let i = 0; i < 30; i++) {
-      await this.pix2pix.translate(canvas);
+      const image = await transferableImage(canvas, ctx);
+      await this.pix2pix.translate(image);
       this.buildStats();
     }
   }
-
 }

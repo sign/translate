@@ -6,7 +6,7 @@
   "translate": {
     "title": "Prekladač Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "rozpoznaný jazyk",
       "more": "Viac jazykov"
     },
@@ -29,6 +29,12 @@
         "download": "Stiahnuť Preklad",
         "copy": "Kopírovať preklad",
         "share": "Zdieľať preklad"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Načítava sa model ľudského videa",
+          "generating": "Generovanie videa"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Nástroje"
+    },
+    "nav": {
+      "pages": "Prejdite na iné stránky",
+      "legal": "Prejdite na právne stránky"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kostra",
       "avatar": "Avatar",
       "human": "Ľudské"
-    }
+    },
+    "title": "nastavenie"
   }
 }

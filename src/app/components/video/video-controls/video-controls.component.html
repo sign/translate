@@ -1,26 +1,28 @@
 <ng-container *transloco="let t; read: 'video.controls'">
   <ng-container *ngIf="settingsState$ | async as settings">
-
     <!-- Video -->
     <ng-container [ngSwitch]="settings.receiveVideo">
-      <button (click)="applySetting('receiveVideo', false)" *ngSwitchCase="true"
-              [attr.aria-label]="t('receiveVideo.on')"
-              [matTooltipPosition]="'above'"
-              [matTooltip]="t('receiveVideo.on')"
-              class="transparent"
-              mat-fab>
+      <button
+        (click)="applySetting('receiveVideo', false)"
+        *ngSwitchCase="true"
+        [attr.aria-label]="t('receiveVideo.on')"
+        [matTooltipPosition]="'above'"
+        [matTooltip]="t('receiveVideo.on')"
+        class="transparent"
+        mat-fab>
         <mat-icon>videocam</mat-icon>
       </button>
 
-      <button (click)="applySetting('receiveVideo', true)" *ngSwitchCase="false"
-              [attr.aria-label]="t('receiveVideo.off')"
-              [matTooltipPosition]="'above'"
-              [matTooltip]="t('receiveVideo.off')"
-              color="warn"
-              mat-fab>
+      <button
+        (click)="applySetting('receiveVideo', true)"
+        *ngSwitchCase="false"
+        [attr.aria-label]="t('receiveVideo.off')"
+        [matTooltipPosition]="'above'"
+        [matTooltip]="t('receiveVideo.off')"
+        color="warn"
+        mat-fab>
         <mat-icon>videocam_off</mat-icon>
       </button>
     </ng-container>
-
   </ng-container>
 </ng-container>

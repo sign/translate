@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Ṣawari ede",
       "more": "Awọn ede diẹ sii"
     },
@@ -29,6 +29,12 @@
         "download": "Ṣe igbasilẹ Itumọ",
         "copy": "Daakọ Itumọ",
         "share": "Pin Itumọ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ikojọpọ awoṣe fidio eniyan",
+          "generating": "Ti o npese fidio"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Àwọn irinṣẹ́"
+    },
+    "nav": {
+      "pages": "Lilö kiri si awọn oju-iwe miiran",
+      "legal": "Lilö kiri si awọn oju-iwe ofin"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Egungun",
       "avatar": "Afata",
       "human": "Eniyan"
-    }
+    },
+    "title": "Ètò"
   }
 }

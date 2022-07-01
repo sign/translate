@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Taal herkennen",
       "more": "Meer talen"
     },
@@ -29,6 +29,12 @@
         "download": "Vertaling downloaden",
         "copy": "Vertaling kopiëren",
         "share": "Vertaling delen"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Menselijk videomodel laden",
+          "generating": "Video genereren"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Tools"
+    },
+    "nav": {
+      "pages": "Navigeer naar andere pagina's",
+      "legal": "Navigeer naar juridische pagina's"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelet",
       "avatar": "Avatar",
       "human": "Menselijk"
-    }
+    },
+    "title": "Instellingen"
   }
 }

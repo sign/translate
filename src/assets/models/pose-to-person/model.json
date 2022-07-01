@@ -13,12 +13,7 @@
           {
             "class_name": "InputLayer",
             "config": {
-              "batch_input_shape": [
-                null,
-                256,
-                256,
-                3
-              ],
+              "batch_input_shape": [null, 256, 256, 3],
               "dtype": "float32",
               "sparse": false,
               "ragged": false,
@@ -35,12 +30,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      256,
-                      256,
-                      3
-                    ],
+                    "batch_input_shape": [null, 256, 256, 3],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -54,20 +44,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 64,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -102,16 +83,7 @@
               ]
             },
             "name": "sequential_2",
-            "inbound_nodes": [
-              [
-                [
-                  "input_1",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["input_1", 0, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -121,12 +93,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      128,
-                      128,
-                      64
-                    ],
+                    "batch_input_shape": [null, 128, 128, 64],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -140,20 +107,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 128,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -182,9 +140,7 @@
                     "name": "batch_normalization_2",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -223,16 +179,7 @@
               ]
             },
             "name": "sequential_3",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_2",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_2", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -242,12 +189,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      64,
-                      64,
-                      128
-                    ],
+                    "batch_input_shape": [null, 64, 64, 128],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -261,20 +203,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 256,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -303,9 +236,7 @@
                     "name": "batch_normalization_3",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -344,16 +275,7 @@
               ]
             },
             "name": "sequential_4",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_3",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_3", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -363,12 +285,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      32,
-                      32,
-                      256
-                    ],
+                    "batch_input_shape": [null, 32, 32, 256],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -382,20 +299,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -424,9 +332,7 @@
                     "name": "batch_normalization_4",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -465,16 +371,7 @@
               ]
             },
             "name": "sequential_5",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_4",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_4", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -484,12 +381,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      16,
-                      16,
-                      512
-                    ],
+                    "batch_input_shape": [null, 16, 16, 512],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -503,20 +395,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -545,9 +428,7 @@
                     "name": "batch_normalization_5",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -586,16 +467,7 @@
               ]
             },
             "name": "sequential_6",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_5",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_5", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -605,12 +477,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      8,
-                      8,
-                      512
-                    ],
+                    "batch_input_shape": [null, 8, 8, 512],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -624,20 +491,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -666,9 +524,7 @@
                     "name": "batch_normalization_6",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -707,16 +563,7 @@
               ]
             },
             "name": "sequential_7",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_6",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_6", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -726,12 +573,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      4,
-                      4,
-                      512
-                    ],
+                    "batch_input_shape": [null, 4, 4, 512],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -745,20 +587,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -787,9 +620,7 @@
                     "name": "batch_normalization_7",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -828,16 +659,7 @@
               ]
             },
             "name": "sequential_8",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_7",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_7", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -847,12 +669,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      2,
-                      2,
-                      512
-                    ],
+                    "batch_input_shape": [null, 2, 2, 512],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -866,20 +683,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -908,9 +716,7 @@
                     "name": "batch_normalization_8",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -949,16 +755,7 @@
               ]
             },
             "name": "sequential_9",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_8",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_8", 1, 0, {}]]]
           },
           {
             "class_name": "Sequential",
@@ -968,12 +765,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      1,
-                      1,
-                      512
-                    ],
+                    "batch_input_shape": [null, 1, 1, 512],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -987,20 +779,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1030,9 +813,7 @@
                     "name": "batch_normalization_9",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -1084,16 +865,7 @@
               ]
             },
             "name": "sequential_10",
-            "inbound_nodes": [
-              [
-                [
-                  "sequential_9",
-                  1,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["sequential_9", 1, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -1106,18 +878,8 @@
             "name": "concatenate",
             "inbound_nodes": [
               [
-                [
-                  "sequential_10",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_8",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_10", 1, 0, {}],
+                ["sequential_8", 1, 0, {}]
               ]
             ]
           },
@@ -1129,12 +891,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      2,
-                      2,
-                      1024
-                    ],
+                    "batch_input_shape": [null, 2, 2, 1024],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -1148,20 +905,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1191,9 +939,7 @@
                     "name": "batch_normalization_10",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -1245,16 +991,7 @@
               ]
             },
             "name": "sequential_11",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -1267,18 +1004,8 @@
             "name": "concatenate_1",
             "inbound_nodes": [
               [
-                [
-                  "sequential_11",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_7",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_11", 1, 0, {}],
+                ["sequential_7", 1, 0, {}]
               ]
             ]
           },
@@ -1290,12 +1017,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      4,
-                      4,
-                      1024
-                    ],
+                    "batch_input_shape": [null, 4, 4, 1024],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -1309,20 +1031,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1352,9 +1065,7 @@
                     "name": "batch_normalization_11",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -1406,16 +1117,7 @@
               ]
             },
             "name": "sequential_12",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate_1",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate_1", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -1428,18 +1130,8 @@
             "name": "concatenate_2",
             "inbound_nodes": [
               [
-                [
-                  "sequential_12",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_6",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_12", 1, 0, {}],
+                ["sequential_6", 1, 0, {}]
               ]
             ]
           },
@@ -1451,12 +1143,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      8,
-                      8,
-                      1024
-                    ],
+                    "batch_input_shape": [null, 8, 8, 1024],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -1470,20 +1157,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 512,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1513,9 +1191,7 @@
                     "name": "batch_normalization_12",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -1556,16 +1232,7 @@
               ]
             },
             "name": "sequential_13",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate_2",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate_2", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -1578,18 +1245,8 @@
             "name": "concatenate_3",
             "inbound_nodes": [
               [
-                [
-                  "sequential_13",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_5",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_13", 1, 0, {}],
+                ["sequential_5", 1, 0, {}]
               ]
             ]
           },
@@ -1601,12 +1258,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      16,
-                      16,
-                      1024
-                    ],
+                    "batch_input_shape": [null, 16, 16, 1024],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -1620,20 +1272,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 256,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1663,9 +1306,7 @@
                     "name": "batch_normalization_13",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -1706,16 +1347,7 @@
               ]
             },
             "name": "sequential_14",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate_3",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate_3", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -1728,18 +1360,8 @@
             "name": "concatenate_4",
             "inbound_nodes": [
               [
-                [
-                  "sequential_14",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_4",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_14", 1, 0, {}],
+                ["sequential_4", 1, 0, {}]
               ]
             ]
           },
@@ -1751,12 +1373,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      32,
-                      32,
-                      512
-                    ],
+                    "batch_input_shape": [null, 32, 32, 512],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -1770,20 +1387,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 128,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1813,9 +1421,7 @@
                     "name": "batch_normalization_14",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -1856,16 +1462,7 @@
               ]
             },
             "name": "sequential_15",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate_4",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate_4", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -1878,18 +1475,8 @@
             "name": "concatenate_5",
             "inbound_nodes": [
               [
-                [
-                  "sequential_15",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_3",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_15", 1, 0, {}],
+                ["sequential_3", 1, 0, {}]
               ]
             ]
           },
@@ -1901,12 +1488,7 @@
                 {
                   "class_name": "InputLayer",
                   "config": {
-                    "batch_input_shape": [
-                      null,
-                      64,
-                      64,
-                      256
-                    ],
+                    "batch_input_shape": [null, 64, 64, 256],
                     "dtype": "float32",
                     "sparse": false,
                     "ragged": false,
@@ -1920,20 +1502,11 @@
                     "trainable": true,
                     "dtype": "float32",
                     "filters": 64,
-                    "kernel_size": [
-                      4,
-                      4
-                    ],
-                    "strides": [
-                      2,
-                      2
-                    ],
+                    "kernel_size": [4, 4],
+                    "strides": [2, 2],
                     "padding": "same",
                     "data_format": "channels_last",
-                    "dilation_rate": [
-                      1,
-                      1
-                    ],
+                    "dilation_rate": [1, 1],
                     "groups": 1,
                     "activation": "linear",
                     "use_bias": false,
@@ -1963,9 +1536,7 @@
                     "name": "batch_normalization_15",
                     "trainable": true,
                     "dtype": "float32",
-                    "axis": [
-                      3
-                    ],
+                    "axis": [3],
                     "momentum": 0.99,
                     "epsilon": 0.001,
                     "center": true,
@@ -2006,16 +1577,7 @@
               ]
             },
             "name": "sequential_16",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate_5",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate_5", 0, 0, {}]]]
           },
           {
             "class_name": "Concatenate",
@@ -2028,18 +1590,8 @@
             "name": "concatenate_6",
             "inbound_nodes": [
               [
-                [
-                  "sequential_16",
-                  1,
-                  0,
-                  {}
-                ],
-                [
-                  "sequential_2",
-                  1,
-                  0,
-                  {}
-                ]
+                ["sequential_16", 1, 0, {}],
+                ["sequential_2", 1, 0, {}]
               ]
             ]
           },
@@ -2050,20 +1602,11 @@
               "trainable": true,
               "dtype": "float32",
               "filters": 3,
-              "kernel_size": [
-                4,
-                4
-              ],
-              "strides": [
-                2,
-                2
-              ],
+              "kernel_size": [4, 4],
+              "strides": [2, 2],
               "padding": "same",
               "data_format": "channels_last",
-              "dilation_rate": [
-                1,
-                1
-              ],
+              "dilation_rate": [1, 1],
               "groups": 1,
               "activation": "tanh",
               "use_bias": true,
@@ -2087,32 +1630,11 @@
               "output_padding": null
             },
             "name": "conv2d_transpose_8",
-            "inbound_nodes": [
-              [
-                [
-                  "concatenate_6",
-                  0,
-                  0,
-                  {}
-                ]
-              ]
-            ]
+            "inbound_nodes": [[["concatenate_6", 0, 0, {}]]]
           }
         ],
-        "input_layers": [
-          [
-            "input_1",
-            0,
-            0
-          ]
-        ],
-        "output_layers": [
-          [
-            "conv2d_transpose_8",
-            0,
-            0
-          ]
-        ]
+        "input_layers": [["input_1", 0, 0]],
+        "output_layers": [["conv2d_transpose_8", 0, 0]]
       }
     }
   },
@@ -2136,12 +1658,7 @@
       "weights": [
         {
           "name": "conv2d_transpose_8/kernel",
-          "shape": [
-            4,
-            4,
-            3,
-            128
-          ],
+          "shape": [4, 4, 3, 128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2150,9 +1667,7 @@
         },
         {
           "name": "conv2d_transpose_8/bias",
-          "shape": [
-            3
-          ],
+          "shape": [3],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2161,12 +1676,7 @@
         },
         {
           "name": "conv2d_transpose_1/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            512
-          ],
+          "shape": [4, 4, 512, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2175,9 +1685,7 @@
         },
         {
           "name": "batch_normalization_9/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2186,9 +1694,7 @@
         },
         {
           "name": "batch_normalization_9/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2197,9 +1703,7 @@
         },
         {
           "name": "batch_normalization_9/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2208,9 +1712,7 @@
         },
         {
           "name": "batch_normalization_9/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2219,12 +1721,7 @@
         },
         {
           "name": "conv2d_transpose_2/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            1024
-          ],
+          "shape": [4, 4, 512, 1024],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2233,9 +1730,7 @@
         },
         {
           "name": "batch_normalization_10/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2244,9 +1739,7 @@
         },
         {
           "name": "batch_normalization_10/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2255,9 +1748,7 @@
         },
         {
           "name": "batch_normalization_10/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2266,9 +1757,7 @@
         },
         {
           "name": "batch_normalization_10/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2277,12 +1766,7 @@
         },
         {
           "name": "conv2d_transpose_3/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            1024
-          ],
+          "shape": [4, 4, 512, 1024],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2291,9 +1775,7 @@
         },
         {
           "name": "batch_normalization_11/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2302,9 +1784,7 @@
         },
         {
           "name": "batch_normalization_11/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2313,9 +1793,7 @@
         },
         {
           "name": "batch_normalization_11/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2324,9 +1802,7 @@
         },
         {
           "name": "batch_normalization_11/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2335,12 +1811,7 @@
         },
         {
           "name": "conv2d_transpose_4/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            1024
-          ],
+          "shape": [4, 4, 512, 1024],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2349,9 +1820,7 @@
         },
         {
           "name": "batch_normalization_12/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2360,9 +1829,7 @@
         },
         {
           "name": "batch_normalization_12/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2371,9 +1838,7 @@
         },
         {
           "name": "batch_normalization_12/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2382,9 +1847,7 @@
         },
         {
           "name": "batch_normalization_12/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2393,12 +1856,7 @@
         },
         {
           "name": "conv2d_transpose_5/kernel",
-          "shape": [
-            4,
-            4,
-            256,
-            1024
-          ],
+          "shape": [4, 4, 256, 1024],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2407,9 +1865,7 @@
         },
         {
           "name": "batch_normalization_13/gamma",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2418,9 +1874,7 @@
         },
         {
           "name": "batch_normalization_13/beta",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2429,9 +1883,7 @@
         },
         {
           "name": "batch_normalization_13/moving_mean",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2440,9 +1892,7 @@
         },
         {
           "name": "batch_normalization_13/moving_variance",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2451,12 +1901,7 @@
         },
         {
           "name": "conv2d_transpose_6/kernel",
-          "shape": [
-            4,
-            4,
-            128,
-            512
-          ],
+          "shape": [4, 4, 128, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2465,9 +1910,7 @@
         },
         {
           "name": "batch_normalization_14/gamma",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2476,9 +1919,7 @@
         },
         {
           "name": "batch_normalization_14/beta",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2487,9 +1928,7 @@
         },
         {
           "name": "batch_normalization_14/moving_mean",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2498,9 +1937,7 @@
         },
         {
           "name": "batch_normalization_14/moving_variance",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2509,12 +1946,7 @@
         },
         {
           "name": "conv2d_transpose_7/kernel",
-          "shape": [
-            4,
-            4,
-            64,
-            256
-          ],
+          "shape": [4, 4, 64, 256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2523,9 +1955,7 @@
         },
         {
           "name": "batch_normalization_15/gamma",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2534,9 +1964,7 @@
         },
         {
           "name": "batch_normalization_15/beta",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2545,9 +1973,7 @@
         },
         {
           "name": "batch_normalization_15/moving_mean",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2556,9 +1982,7 @@
         },
         {
           "name": "batch_normalization_15/moving_variance",
-          "shape": [
-            64
-          ],
+          "shape": [64],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2567,12 +1991,7 @@
         },
         {
           "name": "conv2d_1/kernel",
-          "shape": [
-            4,
-            4,
-            3,
-            64
-          ],
+          "shape": [4, 4, 3, 64],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2581,12 +2000,7 @@
         },
         {
           "name": "conv2d_2/kernel",
-          "shape": [
-            4,
-            4,
-            64,
-            128
-          ],
+          "shape": [4, 4, 64, 128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2595,9 +2009,7 @@
         },
         {
           "name": "batch_normalization_2/gamma",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2606,9 +2018,7 @@
         },
         {
           "name": "batch_normalization_2/beta",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2617,9 +2027,7 @@
         },
         {
           "name": "batch_normalization_2/moving_mean",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2628,9 +2036,7 @@
         },
         {
           "name": "batch_normalization_2/moving_variance",
-          "shape": [
-            128
-          ],
+          "shape": [128],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2639,12 +2045,7 @@
         },
         {
           "name": "conv2d_3/kernel",
-          "shape": [
-            4,
-            4,
-            128,
-            256
-          ],
+          "shape": [4, 4, 128, 256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2653,9 +2054,7 @@
         },
         {
           "name": "batch_normalization_3/gamma",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2664,9 +2063,7 @@
         },
         {
           "name": "batch_normalization_3/beta",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2675,9 +2072,7 @@
         },
         {
           "name": "batch_normalization_3/moving_mean",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2686,9 +2081,7 @@
         },
         {
           "name": "batch_normalization_3/moving_variance",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2697,12 +2090,7 @@
         },
         {
           "name": "conv2d_4/kernel",
-          "shape": [
-            4,
-            4,
-            256,
-            512
-          ],
+          "shape": [4, 4, 256, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2711,9 +2099,7 @@
         },
         {
           "name": "batch_normalization_4/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2722,9 +2108,7 @@
         },
         {
           "name": "batch_normalization_4/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2733,9 +2117,7 @@
         },
         {
           "name": "batch_normalization_4/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2744,9 +2126,7 @@
         },
         {
           "name": "batch_normalization_4/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2755,12 +2135,7 @@
         },
         {
           "name": "conv2d_5/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            512
-          ],
+          "shape": [4, 4, 512, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2769,9 +2144,7 @@
         },
         {
           "name": "batch_normalization_5/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2780,9 +2153,7 @@
         },
         {
           "name": "batch_normalization_5/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2791,9 +2162,7 @@
         },
         {
           "name": "batch_normalization_5/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2802,9 +2171,7 @@
         },
         {
           "name": "batch_normalization_5/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2813,12 +2180,7 @@
         },
         {
           "name": "conv2d_6/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            512
-          ],
+          "shape": [4, 4, 512, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2827,9 +2189,7 @@
         },
         {
           "name": "batch_normalization_6/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2838,9 +2198,7 @@
         },
         {
           "name": "batch_normalization_6/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2849,9 +2207,7 @@
         },
         {
           "name": "batch_normalization_6/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2860,9 +2216,7 @@
         },
         {
           "name": "batch_normalization_6/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2871,12 +2225,7 @@
         },
         {
           "name": "conv2d_7/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            512
-          ],
+          "shape": [4, 4, 512, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2885,9 +2234,7 @@
         },
         {
           "name": "batch_normalization_7/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2896,9 +2243,7 @@
         },
         {
           "name": "batch_normalization_7/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2907,9 +2252,7 @@
         },
         {
           "name": "batch_normalization_7/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2918,9 +2261,7 @@
         },
         {
           "name": "batch_normalization_7/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2929,12 +2270,7 @@
         },
         {
           "name": "conv2d_8/kernel",
-          "shape": [
-            4,
-            4,
-            512,
-            512
-          ],
+          "shape": [4, 4, 512, 512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2943,9 +2279,7 @@
         },
         {
           "name": "batch_normalization_8/gamma",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2954,9 +2288,7 @@
         },
         {
           "name": "batch_normalization_8/beta",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2965,9 +2297,7 @@
         },
         {
           "name": "batch_normalization_8/moving_mean",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",
@@ -2976,9 +2306,7 @@
         },
         {
           "name": "batch_normalization_8/moving_variance",
-          "shape": [
-            512
-          ],
+          "shape": [512],
           "dtype": "float32",
           "quantization": {
             "dtype": "float16",

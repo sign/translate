@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Terjemahan",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Deteksi bahasa",
       "more": "Lebih Banyak Bahasa"
     },
@@ -29,6 +29,12 @@
         "download": "Unduh Terjemahan",
         "copy": "Salin Terjemahan",
         "share": "Bagikan Terjemahan"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Memuat model video manusia",
+          "generating": "Membuat video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Peralatan"
+    },
+    "nav": {
+      "pages": "Navigasikan ke halaman lain",
+      "legal": "Arahkan ke halaman hukum"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kerangka",
       "avatar": "Avatar",
       "human": "Manusia"
-    }
+    },
+    "title": "Pengaturan"
   }
 }

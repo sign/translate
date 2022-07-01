@@ -6,7 +6,7 @@
   "translate": {
     "title": "Traductor de Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Detecta l’idioma",
       "more": "Més Idiomes"
     },
@@ -29,6 +29,12 @@
         "download": "Descarrega Traducció",
         "copy": "Copia Traducció",
         "share": "Comparteix la traducció"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "S'està carregant el model de vídeo humà",
+          "generating": "Generació de vídeo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Eines"
+    },
+    "nav": {
+      "pages": "Navegueu a altres pàgines",
+      "legal": "Navegueu a pàgines legals"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Esquelet",
       "avatar": "Avatar",
       "human": "Humans"
-    }
+    },
+    "title": "Configuració"
   }
 }

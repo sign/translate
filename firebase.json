@@ -1,0 +1,25 @@
+{
+  "functions": {
+    "predeploy": ["cd functions && npm run build"],
+    "source": "functions"
+  },
+  "hosting": {
+    "target": "translate",
+    "public": "dist/sign-translate",
+    "ignore": [],
+    "rewrites": [
+      {
+        "source": "/opensearch.xml",
+        "function": "translate-prerender"
+      },
+      {
+        "source": "/robots.txt",
+        "destination": "/assets/robots.txt"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

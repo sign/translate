@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Terjemahan",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Deteksi basa",
       "more": "Liyane Basa"
     },
@@ -29,6 +29,12 @@
         "download": "Download Terjemahan",
         "copy": "Salin Terjemahan",
         "share": "Nuduhake Terjemahan"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Loading model video manungsa",
+          "generating": "Nggawe video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Piranti"
+    },
+    "nav": {
+      "pages": "Navigasi menyang kaca liyane",
+      "legal": "Navigasi menyang kaca legal"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Balung",
       "avatar": "Avatar",
       "human": "Manungsa"
-    }
+    },
+    "title": "Setelan"
   }
 }

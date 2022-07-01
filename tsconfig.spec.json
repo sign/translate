@@ -6,18 +6,13 @@
     "types": [
       "jasmine",
       "@types/dom-speech-recognition",
+      "@types/emscripten",
       "@types/node",
       "@types/offscreencanvas",
+      "@types/dom-mediacapture-transform",
       "@types/long"
     ]
   },
-  "files": [
-    "src/test.ts",
-    "src/polyfills.ts",
-    "node_modules/pose-viewer/dist/types/components.d.ts"
-  ],
-  "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
-  ]
+  "files": ["src/test.ts", "src/polyfills.ts", "node_modules/pose-viewer/dist/types/components.d.ts"],
+  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }

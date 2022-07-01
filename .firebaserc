@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "sign-mt"
+  },
+  "targets": {
+    "sign-mt": {
+      "hosting": {
+        "translate": [
+          "translate-sign-mt"
+        ]
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign ແປພາສາ",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ກວດສອບພາສາ",
       "more": "ພາສາເພີ່ມເຕີມ"
     },
@@ -29,6 +29,12 @@
         "download": "ດາວໂຫຼດການແປ",
         "copy": "ສຳເນົາການແປ",
         "share": "ແບ່ງປັນການແປ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "ກຳລັງໂຫຼດຕົວແບບວິດີໂອຂອງມະນຸດ",
+          "generating": "ກຳລັງສ້າງວິດີໂອ"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "ເຄື່ອງມື"
+    },
+    "nav": {
+      "pages": "ທ່ອງໄປຫາໜ້າອື່ນ",
+      "legal": "ທ່ອງໄປຫາໜ້າກົດໝາຍ"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "ໂຄງກະດູກ",
       "avatar": "ຮູບແທນຕົວ",
       "human": "ມະນຸດ"
-    }
+    },
+    "title": "ການຕັ້ງຄ່າ"
   }
 }

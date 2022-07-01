@@ -6,7 +6,7 @@
   "translate": {
     "title": "Shandura mutauro uchishandisa Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Ziva zita remutauro",
       "more": "More Mitauro"
     },
@@ -29,6 +29,12 @@
         "download": "Dhaunirodha Shanduro",
         "copy": "Copy Translation",
         "share": "Goverana Shanduro"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Kurodha modhi yevhidhiyo yemunhu",
+          "generating": "Kugadzira vhidhiyo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Zvibatiso"
+    },
+    "nav": {
+      "pages": "Enda kune mamwe mapeji",
+      "legal": "Enda kumapeji emutemo"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeleton",
       "avatar": "Avatar",
       "human": "Munhu"
-    }
+    },
+    "title": "Settings"
   }
 }

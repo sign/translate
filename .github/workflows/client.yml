@@ -1,0 +1,119 @@
+name: Client
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - 'functions/**'
+      - '.github/workflows/server.yml'
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+          key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Test code
+        run: npm run test:ci
+
+      #- name: Verify all translations exist
+      #  run: npx transloco-keys-manager find --emit-error-on-extra-keys
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build project
+        run: npm run prerender
+
+      - name: Generate Sitemap
+        run: node tools/sitemap-generator.js
+
+      - name: Archive dist
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-dist
+          path: dist/sign-translate/browser/
+
+  lighthouse:
+    name: Lighthouse Test
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download built dist artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-dist
+          path: dist/sign-translate/browser/
+
+      - name: Run Lighthouse against a static dist dir
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          configPath: .github/workflows/lighthouse/lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+  website-deploy:
+    name: Deploy to Firebase
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download built dist artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-dist
+          path: dist/sign-translate/browser/
+
+      - name: Create HTTP/2 Server Push Headers
+        run: node tools/firebase-http-push.js
+
+      - name: Deploy Live Channel 🚀
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
+          channelId: live
+          projectId: sign-mt
+
+  website-deploy-dev:
+    name: Deploy to Firebase
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download built dist artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build-dist
+          path: dist/sign-translate/browser/
+
+      - name: Deploy Development Channel 🚀
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
+          projectId: sign-mt

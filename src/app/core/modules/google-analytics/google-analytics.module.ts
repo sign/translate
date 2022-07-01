@@ -1,18 +1,8 @@
 import {NgModule} from '@angular/core';
-import {environment} from '../../../../environments/environment';
-import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from 'ngx-google-analytics';
-import {GoogleAnalyticsTimingService} from './google-analytics.service';
-
+import {GoogleAnalyticsService} from './google-analytics.service';
 
 @NgModule({
-  imports: [
-    NgxGoogleAnalyticsModule.forRoot(environment.ga),
-    NgxGoogleAnalyticsRouterModule
-  ],
-  exports: [],
-  providers: [
-    GoogleAnalyticsTimingService
-  ],
+  imports: [],
+  providers: [GoogleAnalyticsService],
 })
-export class AppGoogleAnalyticsModule {
-}
+export class AppGoogleAnalyticsModule {}

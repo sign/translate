@@ -33,13 +33,13 @@ const initialState: SettingsStateModel = {
 
   poseViewer: 'pose',
 
-  appearance: '#ffc8c8'
+  appearance: '#ffc8c8',
 };
 
 @Injectable()
 @State<SettingsStateModel>({
   name: 'settings',
-  defaults: initialState
+  defaults: initialState,
 })
 export class SettingsState {
   @Action(SetSetting)

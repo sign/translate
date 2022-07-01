@@ -2,15 +2,19 @@ import {TestBed} from '@angular/core/testing';
 
 import {DetectorService} from './detector.service';
 import {Pose, PoseLandmark} from '../pose/pose.state';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import createSpy = jasmine.createSpy;
 
 describe('DetectorService', () => {
   let service: DetectorService;
+  let tf: TensorflowService;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({providers: [TensorflowService]});
     service = TestBed.inject(DetectorService);
+    tf = TestBed.inject(TensorflowService);
+
+    await tf.load();
   });
 
   it('should create', () => {
@@ -18,6 +22,8 @@ describe('DetectorService', () => {
   });
 
   it('model weights should not contain NaN', async () => {
+    await tf.setBackend('cpu'); // only cpu has `isNaN` properly
+
     await service.loadModel();
     const model = service.sequentialModel;
 
@@ -25,7 +31,7 @@ describe('DetectorService', () => {
 
     const weights = await Promise.all(model.getWeights().map(w => w.data()));
     for (const weight of weights) {
-      const isNaN = Boolean(service.tf.isNaN(weight).any().dataSync()[0]);
+      const isNaN = Boolean(tf.isNaN(weight).any().dataSync()[0]);
       expect(isNaN).toBeFalse();
     }
   });
@@ -44,7 +50,7 @@ describe('DetectorService', () => {
       faceLandmarks: null,
       poseLandmarks: null,
       rightHandLandmarks: null,
-      leftHandLandmarks: null
+      leftHandLandmarks: null,
     } as Pose;
 
     const normalized = service.normalizePose(pose);
@@ -60,7 +66,7 @@ describe('DetectorService', () => {
       faceLandmarks: null,
       poseLandmarks: null,
       rightHandLandmarks: null,
-      leftHandLandmarks: null
+      leftHandLandmarks: null,
     } as Pose;
 
     const normalized = service.normalizePose(pose);
@@ -73,10 +79,18 @@ describe('DetectorService', () => {
   });
 
   describe('distance2DTensors', () => {
-    const p1: PoseLandmark[] = [{x: 1, y: 1, z: 2}, {x: 0, y: 1, z: 2}, {x: 7, y: 3, z: 5}];
-    const p2: PoseLandmark[] = [{x: 2, y: 3, z: 0}, {x: 0, y: 0, z: 0}, {x: 3, y: 4, z: 5}];
+    const p1: PoseLandmark[] = [
+      {x: 1, y: 1, z: 2},
+      {x: 0, y: 1, z: 2},
+      {x: 7, y: 3, z: 5},
+    ];
+    const p2: PoseLandmark[] = [
+      {x: 2, y: 3, z: 0},
+      {x: 0, y: 0, z: 0},
+      {x: 3, y: 4, z: 5},
+    ];
 
-    const distances = [2.23606, 0, 4.12310];
+    const distances = [2.23606, 0, 4.1231];
 
     it('should calculate distance between two poses', () => {
       const d = service.distance2DTensors(p1, p2);
@@ -97,9 +111,7 @@ describe('DetectorService', () => {
   });
 
   it('should use model to get confidence', async () => {
-    await service.tf.load();
-
-    const spy = createSpy('predict').and.returnValue(service.tf.tensor([1, 2]));
+    const spy = createSpy('predict').and.returnValue(tf.tensor([1, 2]));
     service.sequentialModel = {predict: spy} as any;
 
     const confidence = service.getSequentialConfidence(new Float32Array(25).fill(0));

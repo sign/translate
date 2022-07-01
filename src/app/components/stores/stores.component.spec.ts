@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-import { StoresComponent } from './stores.component';
+import {StoresComponent} from './stores.component';
 
 describe('StoresComponent', () => {
   let component: StoresComponent;
@@ -8,9 +9,8 @@ describe('StoresComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StoresComponent ]
-    })
-    .compileComponents();
+      declarations: [StoresComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +21,11 @@ describe('StoresComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 });

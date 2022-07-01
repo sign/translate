@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Tsinkayo harshe",
       "more": "Ƙarin Harsuna"
     },
@@ -29,6 +29,12 @@
         "download": "Zazzage Fassara",
         "copy": "Kwafi Fassara",
         "share": "Raba Fassarar"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ana loda samfurin bidiyo na ɗan adam",
+          "generating": "Samar da bidiyo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Kayan Aiki"
+    },
+    "nav": {
+      "pages": "Kewaya zuwa wasu shafuka",
+      "legal": "Kewaya zuwa shafukan doka"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "kwarangwal",
       "avatar": "Avatar",
       "human": "Mutum"
-    }
+    },
+    "title": "Saituna"
   }
 }

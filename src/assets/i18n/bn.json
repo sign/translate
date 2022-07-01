@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ভাষা শনাক্ত করুন",
       "more": "আরও ভাষা"
     },
@@ -29,6 +29,12 @@
         "download": "অনুবাদ ডাউনলোড করুন",
         "copy": "অনুলিপি অনুবাদ",
         "share": "অনুবাদ শেয়ার করুন"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "মানুষের ভিডিও মডেল লোড হচ্ছে",
+          "generating": "ভিডিও তৈরি করা হচ্ছে"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "সরঞ্জামগুলি"
+    },
+    "nav": {
+      "pages": "অন্যান্য পৃষ্ঠাগুলিতে নেভিগেট করুন",
+      "legal": "আইনি পৃষ্ঠাগুলিতে নেভিগেট করুন"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "কঙ্কাল",
       "avatar": "অবতার",
       "human": "মানব"
-    }
+    },
+    "title": "সেটিংস"
   }
 }

@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.scss']
+  styleUrls: ['./language-selector.component.scss'],
 })
 export class LanguageSelectorComponent implements OnInit {
   @Select(state => state.translate.detectedLanguage) detectedLanguage$: Observable<string>;
@@ -14,6 +14,7 @@ export class LanguageSelectorComponent implements OnInit {
   @Input() hasLanguageDetection = false;
   @Input() languages: string[];
   @Input() translationKey: string;
+  @Input() urlParameter: string;
 
   @Input() language: string;
 
@@ -25,7 +26,11 @@ export class LanguageSelectorComponent implements OnInit {
 
   ngOnInit(): void {
     this.topLanguages = this.languages.slice(0, 3);
-    this.selectLanguage(this.languages[0]);
+
+    const searchParams = 'window' in globalThis ? window.location.search : '';
+    const urlParams = new URLSearchParams(searchParams);
+    const initial = urlParams.get(this.urlParameter) || this.languages[0];
+    this.selectLanguage(initial);
   }
 
   selectLanguage(lang: string): void {

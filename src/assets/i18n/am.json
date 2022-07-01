@@ -6,7 +6,7 @@
   "translate": {
     "title": "የSign ተርጓሚ",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ቋንቋ  አግኝ",
       "more": "ተጨማሪ ቋንቋዎች"
     },
@@ -29,6 +29,12 @@
         "download": "ትርጉም አውርድ",
         "copy": "ትርጉም ቅዳ",
         "share": "አጋራ ትርጉም"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "የሰው ቪዲዮ ሞዴል በመጫን ላይ",
+          "generating": "ቪዲዮ በማመንጨት ላይ"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "መሳሪያዎች"
+    },
+    "nav": {
+      "pages": "ወደ ሌሎች ገጾች ይሂዱ",
+      "legal": "ወደ ህጋዊ ገጾች ይሂዱ"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "አጽም",
       "avatar": "አምሳያ",
       "human": "ሰው"
-    }
+    },
+    "title": "ቅንብሮች"
   }
 }

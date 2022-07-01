@@ -6,7 +6,7 @@
   "translate": {
     "title": "Whakamāori Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "tautuhi reo",
       "more": "Ētahi atu Reo"
     },
@@ -29,6 +29,12 @@
         "download": "Tikiake Whakamaori",
         "copy": "Tārua Whakamāoritanga",
         "share": "Tiri Whakamaori"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Uta ana tauira ataata tangata",
+          "generating": "Te whakaputa ataata"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Ngā utauta"
+    },
+    "nav": {
+      "pages": "Whakatere ki etahi atu wharangi",
+      "legal": "Whakatere ki nga wharangi ture"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Koiwi",
       "avatar": "Avatar",
       "human": "Tangata"
-    }
+    },
+    "title": "Tautuhinga"
   }
 }

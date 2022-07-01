@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Dili algıla",
       "more": "Zêdetir Ziman"
     },
@@ -29,6 +29,12 @@
         "download": "Download Translation",
         "copy": "Wergerandinê kopî bikin",
         "share": "Share Werger"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Modela vîdyoya mirovî tê barkirin",
+          "generating": "Vîdyoyê diafirîne"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Amraz"
+    },
+    "nav": {
+      "pages": "Biçe ser rûpelên din",
+      "legal": "Li ser rûpelên qanûnî bigerin"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Hestî",
       "avatar": "Avatar",
       "human": "Mirov"
-    }
+    },
+    "title": "Settings"
   }
 }

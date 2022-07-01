@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Dili algıla",
       "more": "Diğer Diller"
     },
@@ -29,6 +29,12 @@
         "download": "Çeviriyi İndir",
         "copy": "Çeviriyi Kopyala",
         "share": "Çeviriyi Paylaş"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "İnsan video modeli yükleniyor",
+          "generating": "Video oluşturuluyor"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Araçlar"
+    },
+    "nav": {
+      "pages": "Diğer sayfalara gidin",
+      "legal": "Yasal sayfalara gidin"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "iskelet",
       "avatar": "avatar",
       "human": "İnsan"
-    }
+    },
+    "title": "Ayarlar"
   }
 }

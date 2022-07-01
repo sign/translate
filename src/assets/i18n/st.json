@@ -6,7 +6,7 @@
   "translate": {
     "title": "Liphetolelo tsa Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Fumana puo",
       "more": "Lipuo Tse Eketsehileng"
     },
@@ -29,6 +29,12 @@
         "download": "Khoasolla Phetolelo",
         "copy": "Kopitsa Phetolelo",
         "share": "Arolelana Phetolelo"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "E kenya mofuta oa video oa motho",
+          "generating": "Ho hlahisa video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Ditshebediso"
+    },
+    "nav": {
+      "pages": "E ea maqepheng a mang",
+      "legal": "E ea maqepheng a molao"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeleton",
       "avatar": "Avatar",
       "human": "Motho"
-    }
+    },
+    "title": "Litlhophiso"
   }
 }

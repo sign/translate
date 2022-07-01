@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign tulkotājs",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Noteikt valodu",
       "more": "Vairāk valodu"
     },
@@ -29,6 +29,12 @@
         "download": "Lejupielādēt tulkojumu",
         "copy": "Kopēt tulkojumu",
         "share": "Kopīgot tulkojumu"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Notiek cilvēka video modeļa ielāde",
+          "generating": "Notiek video ģenerēšana"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Rīki"
+    },
+    "nav": {
+      "pages": "Pārejiet uz citām lapām",
+      "legal": "Pārejiet uz juridiskajām lapām"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelets",
       "avatar": "Iemiesojums",
       "human": "Cilvēks"
-    }
+    },
+    "title": "Iestatījumi"
   }
 }

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign 翻訳",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "言語を検出する",
       "more": "その他の言語"
     },
@@ -29,6 +29,12 @@
         "download": "翻訳をダウンロード",
         "copy": "コピー翻訳",
         "share": "翻訳を共有する"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "人間のビデオモデルを読み込んでいます",
+          "generating": "ビデオの生成"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "ツール"
+    },
+    "nav": {
+      "pages": "他のページに移動",
+      "legal": "法定ページに移動"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "スケルトン",
       "avatar": "アバター",
       "human": "人間"
-    }
+    },
+    "title": "設定"
   }
 }

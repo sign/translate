@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ભાષા શોધો",
       "more": "વધુ ભાષાઓ"
     },
@@ -29,6 +29,12 @@
         "download": "અનુવાદ ડાઉનલોડ કરો",
         "copy": "અનુવાદની નકલ કરો",
         "share": "અનુવાદ શેર કરો"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "માનવ વિડિઓ મૉડલ લોડ કરી રહ્યું છે",
+          "generating": "વિડિયો જનરેટ કરી રહ્યાં છીએ"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "સાધનો"
+    },
+    "nav": {
+      "pages": "અન્ય પૃષ્ઠો પર નેવિગેટ કરો",
+      "legal": "કાનૂની પૃષ્ઠો પર નેવિગેટ કરો"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "હાડપિંજર",
       "avatar": "અવતાર",
       "human": "માનવ"
-    }
+    },
+    "title": "સેટિંગ્સ"
   }
 }

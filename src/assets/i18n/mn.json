@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Орчуулагч",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Хэл таних",
       "more": "Илүү олон хэл"
     },
@@ -29,6 +29,12 @@
         "download": "Орчуулга татаж авах",
         "copy": "Орчуулга хуулах",
         "share": "Орчуулга хуваалцах"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Хүний видео загварыг ачаалж байна",
+          "generating": "Видео үүсгэж байна"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Багаж"
+    },
+    "nav": {
+      "pages": "Бусад хуудас руу шилжих",
+      "legal": "Хуулийн хуудас руу шилжих"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Араг яс",
       "avatar": "Аватар",
       "human": "Хүн"
-    }
+    },
+    "title": "Тохиргоо"
   }
 }

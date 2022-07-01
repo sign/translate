@@ -9,12 +9,13 @@
 @include mat.core();
 
 /* You can add global styles to this file, and also import other style files */
-@import "./variables";
+@import './variables';
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @mixin theme-components($theme) {
+  @include mat.core-theme($theme);
   @include mat.sidenav-theme($theme);
   @include mat.toolbar-theme($theme);
   @include mat.button-theme($theme);
@@ -23,6 +24,7 @@
   @include mat.progress-bar-theme($theme);
   @include mat.tooltip-theme($theme);
   @include mat.card-theme($theme);
+  @include mat.tabs-theme($theme);
 }
 
 @include theme-components($app-theme);
@@ -31,30 +33,44 @@
   @include theme-components($app-dark-theme);
 }
 
-@import "fonts/material-icons.css";
-@import "fonts/roboto.css";
+@import 'fonts/material-icons.css';
+@import 'fonts/roboto.css';
 
-
-html, body {
+html,
+body {
   height: 100%;
   // Does not work in iOS PWA, requires hijacking javascript
   overscroll-behavior-y: none;
 }
 
+html {
+  // Only on iOS, in case of viewport cover
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  height: calc(100% - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-color: white;
+  margin: 0;
 
   @media (prefers-color-scheme: dark) {
-    background-color: black;
+    background-color: black !important;
+  }
+
+  &.embed {
+    mat-toolbar,
+    #input-mode-group,
+    #feedback {
+      display: none !important;
+    }
   }
 }
 
 app-root {
-  height: 100%
+  height: 100%;
 }
 
 #container {
@@ -81,7 +97,7 @@ button[mat-icon-button] {
   border-color: map-get(mat.$dark-theme-foreground-palette, divider);
   border-style: solid;
   border-width: 0;
-  font-family: "Product Sans", Arial, sans-serif;
+  font-family: 'Product Sans', Arial, sans-serif;
   font-weight: 400;
 
   &:first-child {
@@ -96,5 +112,12 @@ button[mat-icon-button] {
     background-color: white;
     border-color: map-get(mat.$light-theme-foreground-palette, divider);
     color: map-get(mat.$gray-palette, 800);
+  }
+}
+
+a {
+  color: mat.get-color-from-palette($app-primary, 700);
+  @media (prefers-color-scheme: dark) {
+    color: mat.get-color-from-palette($app-primary, 300);
   }
 }

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign បកប្រែ",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "កំណត់\\u200bភាសា\\u200bដោយ\\u200bស្វ័យ\\u200bប្រវត្តិ",
       "more": "ភាសាច្រើនទៀត"
     },
@@ -29,6 +29,12 @@
         "download": "ទាញយកការបកប្រែ",
         "copy": "ចម្លងការបកប្រែ",
         "share": "ចែករំលែកការបកប្រែ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "កំពុងផ្ទុកគំរូវីដេអូរបស់មនុស្ស",
+          "generating": "ការបង្កើតវីដេអូ"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "ឧបករណ៍"
+    },
+    "nav": {
+      "pages": "រុករកទៅទំព័រផ្សេងទៀត។",
+      "legal": "រុករកទៅទំព័រច្បាប់"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "គ្រោងឆ្អឹង",
       "avatar": "Avatar",
       "human": "មនុស្ស"
-    }
+    },
+    "title": "ការកំណត់"
   }
 }

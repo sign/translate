@@ -1,0 +1,154 @@
+{
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Tradutor",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Detectar idioma",
+      "more": "Mais idiomas"
+    },
+    "feedback": "Enviar feedback",
+    "input": {
+      "text": "Texto",
+      "webcam": "Webcam",
+      "upload": "Carregar"
+    },
+    "swapLanguages": "Alternar idiomas",
+    "upload": {
+      "types": "Faça upload de um arquivo .mp4, .ogv ou .webm.",
+      "browse": "Procurar no computador",
+      "title": "Escolha um vídeo"
+    },
+    "description": "Um aplicativo de tradução de linguagem de sinais multilíngue bidirecional para desktop e dispositivos móveis",
+    "spoken-to-signed": {
+      "text": "Texto em idioma falado",
+      "actions": {
+        "download": "Baixar tradução",
+        "copy": "Copiar Tradução",
+        "share": "Compartilhar tradução"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Carregando modelo de vídeo humano",
+          "generating": "Gerando vídeo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "TESTAR O TRADUTOR",
+    "about": {
+      "title": "Faça o treinamento",
+      "hero": {
+        "title": "Traduza entre mais de 40 idiomas sinalizados e falados em tempo real.",
+        "img": "Exemplo de tradução ao vivo entre American Sign Language e Inglês"
+      }
+    },
+    "languages": {
+      "title": "Idiomas"
+    },
+    "contribute": {
+      "title": "Contribuir"
+    },
+    "tools": {
+      "title": "Ferramentas"
+    },
+    "nav": {
+      "pages": "Navegue para outras páginas",
+      "legal": "Navegue para páginas jurídicas"
+    }
+  },
+  "text-to-speech": {
+    "play": "Ouvir",
+    "cancel": "Pare",
+    "unavailable": "A saída de voz não está disponível para o idioma selecionado"
+  },
+  "speech-to-text": {
+    "start": "Traduzir por voz",
+    "stop": "Parar tradução por voz",
+    "not-allowed": "Precisa de permissão para usar o microfone",
+    "language-not-supported": "O idioma selecionado não é compatível",
+    "browser-not-supported": "A entrada de voz não é compatível com este navegador"
+  },
+  "legal": {
+    "terms": {
+      "title": "Termos"
+    },
+    "privacy": {
+      "title": "Privacidade"
+    },
+    "licenses": {
+      "title": "Software e licenças"
+    }
+  },
+  "playground": {
+    "title": "Playground de processamento de linguagem de sinais"
+  },
+  "benchmark": {
+    "title": "Referência",
+    "stats": {
+      "cld": {
+        "title": "Identificação do idioma falado",
+        "import": "Módulo de importação",
+        "load": "Carregar modelo",
+        "find": "Identificar texto",
+        "create": "Criar"
+      },
+      "pix2pix": {
+        "title": "Visualizador de pose humana",
+        "init": "Inicialização do trabalhador",
+        "load": "Carregar modelo",
+        "first-frame": "Inferência do primeiro quadro",
+        "frame": "Inferência de quadros"
+      },
+      "pose": {
+        "title": "Estimativa de pose de corpo inteiro",
+        "load": "Carga do modelo",
+        "first-frame": "Inferência do primeiro quadro",
+        "frame": "Inferência de quadros"
+      }
+    }
+  },
+  "appearance": {
+    "title": "Aparência",
+    "action": "Modificar aparência",
+    "random": "Obter uma foto aleatória",
+    "upload": "Carregue sua própria foto"
+  },
+  "video": {
+    "errors": {
+      "starting": "Câmera inicializando",
+      "turnedOff": "Câmera desligada",
+      "notConnected": "Câmera não conectada",
+      "permissionDenied": "Permissão da câmera negada"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Desligue a câmera",
+        "off": "Ligue a câmera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Carregando estimativa de pose..."
+  },
+  "language-selector": {
+    "label": "Alterar idioma ou região"
+  },
+  "settings": {
+    "detectSign": "Detectar sinal",
+    "drawVideo": "Desenhar vídeo",
+    "drawPose": "Desenhar Pose",
+    "drawSignWriting": "Desenhar Escrita de Sinal",
+    "animatePose": "Animar pose",
+    "poseViewer": {
+      "pose": "Esqueleto",
+      "avatar": "Avatar",
+      "human": "Humano"
+    },
+    "title": "Definições"
+  }
+}

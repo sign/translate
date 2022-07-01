@@ -1,4 +1,4 @@
-@import "../../../theme/variables";
+@import '../../../theme/variables';
 
 mat-toolbar {
   &#header {
@@ -7,7 +7,7 @@ mat-toolbar {
   }
 
   nav {
-    margin-left: 3em;
+    margin-inline-start: 3em;
     flex: 1 1 auto;
   }
 

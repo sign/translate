@@ -15,7 +15,6 @@ import {AnimationComponent} from './components/animation/animation.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PlaygroundComponent} from './pages/playground/playground.component';
 import {TranslateComponent} from './pages/translate/translate.component';
-import {NgxFlagIconCssModule} from 'ngx-flag-icon-css';
 import {UploadComponent} from './pages/translate/signed-to-spoken/upload/upload.component';
 import {SpokenToSignedComponent} from './pages/translate/spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from './pages/translate/signed-to-spoken/signed-to-spoken.component';
@@ -38,6 +37,11 @@ import {AppearanceComponent} from './pages/translate/appearance/appearance.compo
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
+import {FlagIconComponent} from './components/flag-icon/flag-icon.component';
+import {DropzoneDirective} from './directives/dropzone.directive';
+import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-file.component';
+import {TRANSLOCO_LOADER} from '@ngneat/transloco';
+import {HttpLoader} from './core/modules/transloco/transloco.loader';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,7 @@ import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     LanguageSelectorComponent,
+    FlagIconComponent,
     SignWritingComponent,
     TextToSpeechComponent,
     ViewerSelectorComponent,
@@ -62,9 +67,11 @@ import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark
     AppearanceComponent,
     BenchmarkComponent,
     BenchmarkItemComponent,
+    DropzoneDirective,
+    DropPoseFileComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
@@ -76,20 +83,16 @@ import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark
     AnimationModule,
     Pix2PixModule,
     TranslateModule,
-    NgxFlagIconCssModule,
     AppGoogleAnalyticsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
-  providers: [
-    NavigatorService
-  ],
+  providers: [NavigatorService, {provide: TRANSLOCO_LOADER, useClass: HttpLoader}],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {
-}
+export class AppModule {}

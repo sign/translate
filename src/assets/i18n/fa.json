@@ -6,7 +6,7 @@
   "translate": {
     "title": "‏‫ترجمه Sign‬",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "شناسایی زبان",
       "more": "زبان های بیشتر"
     },
@@ -29,6 +29,12 @@
         "download": "دانلود ترجمه",
         "copy": "ترجمه کپی",
         "share": "ترجمه را به اشتراک بگذارید"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "در حال بارگیری مدل ویدیویی انسانی",
+          "generating": "در حال تولید ویدیو"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "ابزارها"
+    },
+    "nav": {
+      "pages": "به صفحات دیگر بروید",
+      "legal": "به صفحات قانونی بروید"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "اسکلت",
       "avatar": "آواتار",
       "human": "انسان"
-    }
+    },
+    "title": "تنظیمات"
   }
 }

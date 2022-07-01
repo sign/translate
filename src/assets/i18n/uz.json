@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Tarjimon",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Avtomatik aniqlash",
       "more": "Ko'proq tillar"
     },
@@ -29,6 +29,12 @@
         "download": "Tarjima yuklab olish",
         "copy": "Tarjimani nusxalash",
         "share": "Tarjimani ulashish"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Inson video modeli yuklanmoqda",
+          "generating": "Video yaratish"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Asbob va vositalar"
+    },
+    "nav": {
+      "pages": "Boshqa sahifalarga o'ting",
+      "legal": "Yuridik sahifalarga o'ting"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelet",
       "avatar": "Avatar",
       "human": "Inson"
-    }
+    },
+    "title": "Sozlamalar"
   }
 }

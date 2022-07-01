@@ -6,7 +6,7 @@
   "translate": {
     "title": "„Sign“ vertėjas",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Nustatyti kalbą",
       "more": "Daugiau kalbų"
     },
@@ -29,6 +29,12 @@
         "download": "Atsisiųskite vertimą",
         "copy": "Kopijuoti vertimą",
         "share": "Pasidalinti vertimu"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Įkeliamas žmogaus vaizdo modelis",
+          "generating": "Kuriamas vaizdo įrašas"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Įrankiai"
+    },
+    "nav": {
+      "pages": "Eikite į kitus puslapius",
+      "legal": "Eikite į teisinius puslapius"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skeletas",
       "avatar": "Avataras",
       "human": "Žmogus"
-    }
+    },
+    "title": "Nustatymai"
   }
 }

@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Garo luuqada",
       "more": "Luuqado badan"
     },
@@ -29,6 +29,12 @@
         "download": "Soo deji Tarjumaadda",
         "copy": "Koobi Turjumaada",
         "share": "La wadaag Turjumaada"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Soodejinaya qaabka muuqaalka dadka",
+          "generating": "Soo saarista muuqaal"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Qalabka"
+    },
+    "nav": {
+      "pages": "U gudub bogag kale",
+      "legal": "U gudub boggaga sharciga ah"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Qalfoofka",
       "avatar": "Avatar",
       "human": "Aadane"
-    }
+    },
+    "title": "Dejinta"
   }
 }

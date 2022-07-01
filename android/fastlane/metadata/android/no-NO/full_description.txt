@@ -1,0 +1,1 @@
+Sign language translator app for desktop and mobile

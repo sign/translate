@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Dikanteny",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Haminany fiteny",
       "more": "Fiteny bebe kokoa"
     },
@@ -29,6 +29,12 @@
         "download": "Download Dikanteny",
         "copy": "Adikao Dikanteny",
         "share": "Mizara Dikanteny"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Loading modely video olombelona",
+          "generating": "Mamorona video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Fitaovana"
+    },
+    "nav": {
+      "pages": "Mandehana mankany amin'ny pejy hafa",
+      "legal": "Mandehana mankany amin'ny pejy ara-dalàna"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "taolana",
       "avatar": "Avatar",
       "human": "OLONA"
-    }
+    },
+    "title": "Fikirana"
   }
 }

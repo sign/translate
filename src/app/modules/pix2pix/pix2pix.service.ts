@@ -1,40 +1,40 @@
 import {Injectable} from '@angular/core';
 import * as comlink from 'comlink';
-import {transferableImage} from '../../core/helpers/image/transferable';
-import {GoogleAnalyticsTimingService} from '../../core/modules/google-analytics/google-analytics.service';
-
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Pix2PixService {
   worker: comlink.Remote<{
-    loadModel: () => Promise<void>,
-    translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>,
+    loadModel: () => Promise<void>;
+    translateQueue: (queueId: number, image: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
   }>;
 
   isFirstFrame = true;
 
-  constructor(private gaTiming: GoogleAnalyticsTimingService) {
-  }
+  queueId = 0;
+
+  constructor(private ga: GoogleAnalyticsService) {}
 
   async loadModel(): Promise<void> {
+    this.queueId++;
+
     if (this.worker) {
       return;
     }
 
-    await this.gaTiming.time('pix2pix', 'init', () => {
+    await this.ga.trace('pix2pix', 'init', () => {
       this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
     });
-    await this.gaTiming.time('pix2pix', 'load', () => this.worker.loadModel());
+    await this.ga.trace('pix2pix', 'load', () => this.worker.loadModel());
   }
 
-  async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
+  async translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedArray> {
     const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
-    return this.gaTiming.time('pix2pix', frameType, async () => {
+    return this.ga.trace('pix2pix', frameType, async () => {
       this.isFirstFrame = false;
-      const image = await transferableImage(canvas);
-      return this.worker.translate(image);
+      return this.worker.translateQueue(this.queueId, image);
     });
   }
 }

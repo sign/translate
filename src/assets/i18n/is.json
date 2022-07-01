@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Greina tungumál",
       "more": "Fleiri tungumál"
     },
@@ -29,6 +29,12 @@
         "download": "Sækja þýðingu",
         "copy": "Afrita þýðing",
         "share": "Deila þýðingu"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Hleður mannlegt myndbandslíkan",
+          "generating": "Búa til myndband"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Verkfæri"
+    },
+    "nav": {
+      "pages": "Farðu á aðrar síður",
+      "legal": "Farðu á löglegar síður"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Beinagrind",
       "avatar": "Avatar",
       "human": "Mannlegur"
-    }
+    },
+    "title": "Stillingar"
   }
 }

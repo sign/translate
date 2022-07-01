@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign 翻譯",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "偵測語言",
       "more": "更多語言"
     },
@@ -29,6 +29,12 @@
         "download": "下載翻譯",
         "copy": "複製翻譯",
         "share": "分享翻譯"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "加載人類視頻模型",
+          "generating": "生成視頻"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "工具"
+    },
+    "nav": {
+      "pages": "導航到其他頁面",
+      "legal": "導航到法律頁面"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "骨骼",
       "avatar": "阿凡達",
       "human": "人類"
-    }
+    },
+    "title": "設置"
   }
 }

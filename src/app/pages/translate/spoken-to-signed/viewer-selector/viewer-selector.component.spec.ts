@@ -1,11 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {ViewerSelectorComponent} from './viewer-selector.component';
-import {AppTranslocoModule} from '../../../../core/modules/transloco/transloco.module';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
 
 describe('ViewerSelectorComponent', () => {
   let component: ViewerSelectorComponent;
@@ -15,10 +17,11 @@ describe('ViewerSelectorComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ViewerSelectorComponent],
       imports: [
-        AppTranslocoModule,
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
         NoopAnimationsModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig)
-      ]
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+      ],
     }).compileComponents();
   });
 
@@ -30,5 +33,11 @@ describe('ViewerSelectorComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 });

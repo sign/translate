@@ -1,9 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {UploadComponent} from './upload.component';
 import {NgxsModule, Store} from '@ngxs/store';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
-import {AppTranslocoModule} from '../../../../core/modules/transloco/transloco.module';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
 import createSpy = jasmine.createSpy;
 
@@ -22,10 +23,7 @@ describe('UploadComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [UploadComponent],
-      imports: [
-        AppTranslocoModule,
-        NgxsModule.forRoot([], ngxsConfig)
-      ]
+      imports: [AppTranslocoTestingModule, NgxsModule.forRoot([], ngxsConfig)],
     }).compileComponents();
   });
 
@@ -41,8 +39,14 @@ describe('UploadComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
+  });
+
   it('upload button should click button', () => {
-    const spy = createSpy('click').and.callFake((e) => {
+    const spy = createSpy('click').and.callFake(e => {
       e.stopPropagation();
       e.preventDefault();
     });
@@ -64,7 +68,8 @@ describe('UploadComponent', () => {
   it('file upload should dispatch url', () => {
     const spy = spyOn(store, 'dispatch');
     const mockFile = createFileFromMockFile('test.mp4', '', 'video/mp4');
-    spyOnProperty(component.uploadEl, 'files', 'get').and.returnValue([mockFile]);
+    const mockFileList = [mockFile] as unknown as FileList;
+    spyOnProperty(component.uploadEl, 'files', 'get').and.returnValue(mockFileList);
 
     component.onFileUpload();
 

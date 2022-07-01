@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
+import {ActivatedRoute, Router} from '@angular/router';
 
 export const SITE_LANGUAGES = [
   {key: 'af', value: 'Afrikaans'},
@@ -105,26 +106,32 @@ export const SITE_LANGUAGES = [
   {key: 'zh-CN', value: '中文（简体中文)'},
   {key: 'zh-HK', value: '中文（繁體中文)'},
   {key: 'ja', value: '日本語'},
-  {key: 'ko', value: '한국어'}
+  {key: 'ko', value: '한국어'},
 ];
 
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.scss']
+  styleUrls: ['./language-selector.component.scss'],
 })
 export class LanguageSelectorComponent {
   current: string;
 
   languages = SITE_LANGUAGES;
 
-  constructor(private transloco: TranslocoService) {
+  constructor(private router: Router, private route: ActivatedRoute, private transloco: TranslocoService) {
     this.current = transloco.getActiveLang();
   }
 
-  change(event: Event) {
+  async change(event: Event) {
     const lang = (event.target as HTMLSelectElement).value;
     console.log('New Active Language', lang);
     this.transloco.setActiveLang(lang);
+
+    await this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {lang},
+      queryParamsHandling: 'merge',
+    });
   }
 }

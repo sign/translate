@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "ਭਾਸ਼ਾ ਖੋਜੋ",
       "more": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ"
     },
@@ -29,6 +29,12 @@
         "download": "ਅਨੁਵਾਦ ਡਾਊਨਲੋਡ ਕਰੋ",
         "copy": "ਅਨੁਵਾਦ ਕਾਪੀ ਕਰੋ",
         "share": "ਅਨੁਵਾਦ ਸਾਂਝਾ ਕਰੋ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "ਮਨੁੱਖੀ ਵੀਡੀਓ ਮਾਡਲ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+          "generating": "ਵੀਡੀਓ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "ਔਜ਼ਾਰ"
+    },
+    "nav": {
+      "pages": "ਹੋਰ ਪੰਨਿਆਂ 'ਤੇ ਨੈਵੀਗੇਟ ਕਰੋ",
+      "legal": "ਕਾਨੂੰਨੀ ਪੰਨਿਆਂ 'ਤੇ ਨੈਵੀਗੇਟ ਕਰੋ"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "ਪਿੰਜਰ",
       "avatar": "ਅਵਤਾਰ",
       "human": "ਮਨੁੱਖੀ"
-    }
+    },
+    "title": "ਸੈਟਿੰਗਾਂ"
   }
 }

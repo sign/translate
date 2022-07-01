@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Traduction",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Détecter la langue",
       "more": "Plus de langues"
     },
@@ -29,6 +29,12 @@
         "download": "Télécharger la traduction",
         "copy": "Copier la traduction",
         "share": "Partager la traduction"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Chargement du modèle vidéo humain",
+          "generating": "Génération de vidéo"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Outils"
+    },
+    "nav": {
+      "pages": "Naviguer vers d'autres pages",
+      "legal": "Naviguer vers les pages légales"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Squelette",
       "avatar": "Avatar",
       "human": "Humain"
-    }
+    },
+    "title": "Réglages"
   }
 }

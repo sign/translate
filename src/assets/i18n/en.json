@@ -6,11 +6,11 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang} - Detected",
+      "detected": "{{lang}} - Detected",
       "more": "More Languages",
       "detect": "Detect language"
     },
-    "description": "A bi-directional multilingual sign language translation app for desktop and mobile",
+    "description": "Sign language translator app for desktop and mobile",
     "feedback": "Send feedback",
     "input": {
       "webcam": "Webcam",
@@ -24,6 +24,12 @@
         "download": "Download Translation",
         "copy": "Copy Translation",
         "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Loading human video model",
+          "generating": "Generating video"
+        }
       }
     },
     "upload": {
@@ -34,6 +40,10 @@
   },
   "landing": {
     "try": "Try Translating!",
+    "nav": {
+      "pages": "Navigate to other pages",
+      "legal": "Navigate to legal pages"
+    },
     "about": {
       "title": "About",
       "hero": {
@@ -125,10 +135,12 @@
     "start": "Translate by voice",
     "stop": "Stop translation by voice",
     "not-allowed": "Need permission to use microphone",
+    "service-not-allowed": "Need permission to use speech recognition",
     "language-not-supported": "Selected language is not supported",
     "browser-not-supported": "Voice input isn't supported on this browser"
   },
   "settings": {
+    "title": "Settings",
     "detectSign": "Detect Sign",
     "drawVideo": "Draw Video",
     "drawPose": "Draw Pose",

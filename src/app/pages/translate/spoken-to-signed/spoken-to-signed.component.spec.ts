@@ -1,4 +1,5 @@
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SpokenToSignedComponent} from './spoken-to-signed.component';
 import {SignWritingComponent} from '../signwriting/sign-writing.component';
@@ -19,18 +20,14 @@ describe('SpokenToSignedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        SpokenToSignedComponent,
-        SignWritingComponent,
-        TextToSpeechComponent
-      ],
+      declarations: [SpokenToSignedComponent, SignWritingComponent, TextToSpeechComponent],
       imports: [
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
@@ -46,12 +43,19 @@ describe('SpokenToSignedComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
+  });
+
   it('text change should dispatch action', fakeAsync(() => {
     const spy = spyOn(store, 'dispatch');
     component.text.patchValue('test');
     tick(500);
 
     expect(spy).toHaveBeenCalledWith(new SetSpokenLanguageText('test'));
+    expect(spy).toHaveBeenCalledTimes(1);
   }));
 
   // TODO test state

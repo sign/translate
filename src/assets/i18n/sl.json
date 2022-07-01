@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Prevajalnik",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Zaznaj jezik",
       "more": "Več jezikov"
     },
@@ -29,6 +29,12 @@
         "download": "Prenesite prevod",
         "copy": "Kopiraj prevod",
         "share": "Delite prevod"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nalaganje človeškega video modela",
+          "generating": "Ustvarjanje videa"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Orodja"
+    },
+    "nav": {
+      "pages": "Pomaknite se na druge strani",
+      "legal": "Pomaknite se na pravne strani"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Okostje",
       "avatar": "Avatar",
       "human": "Človek"
-    }
+    },
+    "title": "Nastavitve"
   }
 }

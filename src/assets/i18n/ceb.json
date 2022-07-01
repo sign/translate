@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Gimatikud ang sinultian",
       "more": "Dugang Pinulongan"
     },
@@ -29,6 +29,12 @@
         "download": "Pag-download sa Hubad",
         "copy": "Kopyaha ang Hubad",
         "share": "Ipakigbahin ang Hubad"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nag-load sa modelo sa video sa tawo",
+          "generating": "Paghimo og video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Mga Galamiton"
+    },
+    "nav": {
+      "pages": "Pag-navigate sa ubang mga panid",
+      "legal": "Pagdala ngadto sa legal nga mga panid"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kalabera",
       "avatar": "Avatar",
       "human": "Tawo"
-    }
+    },
+    "title": "Mga setting"
   }
 }

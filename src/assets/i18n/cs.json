@@ -6,7 +6,7 @@
   "translate": {
     "title": "Překladač Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Rozpoznat jazyk",
       "more": "Více jazyků"
     },
@@ -29,6 +29,12 @@
         "download": "Stáhnout Překlad",
         "copy": "Kopírovat překlad",
         "share": "Sdílet překlad"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Načítání modelu lidského videa",
+          "generating": "Generování videa"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Nástroje"
+    },
+    "nav": {
+      "pages": "Přejděte na další stránky",
+      "legal": "Přejděte na právní stránky"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kostra",
       "avatar": "Avatar",
       "human": "Člověk"
-    }
+    },
+    "title": "Nastavení"
   }
 }

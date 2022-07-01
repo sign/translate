@@ -29,8 +29,7 @@ fsw-sign {
   -ms-user-select: none; /* Edge*/
   -webkit-touch-callout: none; /* Safari Touch */
 
-  ::ng-deep text[font-size="0"] {
+  ::ng-deep text[font-size='0'] {
     //display: none;
   }
 }
-

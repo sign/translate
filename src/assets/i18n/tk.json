@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Переводчик",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Определить язык",
       "more": "Has köp dil"
     },
@@ -29,6 +29,12 @@
         "download": "Terjimäni göçürip al",
         "copy": "Terjimäni göçüriň",
         "share": "Terjimäni paýlaş"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Adam wideo modelini ýüklemek",
+          "generating": "Wideo döretmek"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Gurallar"
+    },
+    "nav": {
+      "pages": "Beýleki sahypalara geçiň",
+      "legal": "Hukuk sahypalaryna geçiň"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelet",
       "avatar": "Awatar",
       "human": "Adam"
-    }
+    },
+    "title": "Sazlamalar"
   }
 }

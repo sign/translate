@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Tafsiri",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Tambua lugha",
       "more": "Lugha Zaidi"
     },
@@ -29,6 +29,12 @@
         "download": "Pakua Tafsiri",
         "copy": "Nakili Tafsiri",
         "share": "Shiriki Tafsiri"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Inapakia muundo wa video wa binadamu",
+          "generating": "Inazalisha video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Zana"
+    },
+    "nav": {
+      "pages": "Nenda kwenye kurasa zingine",
+      "legal": "Nenda kwenye kurasa za kisheria"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Mifupa",
       "avatar": "Avatar",
       "human": "Binadamu"
-    }
+    },
+    "title": "Mipangilio"
   }
 }

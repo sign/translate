@@ -6,7 +6,7 @@
   "translate": {
     "title": "Eadar-theangadair Sign",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Mothaich dhan chànan",
       "more": "Tuilleadh Chànanan"
     },
@@ -29,6 +29,12 @@
         "download": "Luchdaich a-nuas eadar-theangachadh",
         "copy": "Dèan lethbhreac den eadar-theangachadh",
         "share": "Co-roinn eadar-theangachadh"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Luchdaich a-nuas video duine model",
+          "generating": "A ' cruthachadh bhidio"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Innealan"
+    },
+    "nav": {
+      "pages": "Seòl gu duilleagan eile",
+      "legal": "Seòl gu duilleagan laghail"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "cnàimhneach",
       "avatar": "Avatar",
       "human": "Duine"
-    }
+    },
+    "title": "Suidhichidhean"
   }
 }

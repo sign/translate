@@ -16,7 +16,6 @@ import {AboutOfflineComponent} from './about/about-offline/about-offline.compone
 import {AboutAppearanceComponent} from './about/about-appearance/about-appearance.component';
 import {AboutSharingComponent} from './about/about-sharing/about-sharing.component';
 
-
 @NgModule({
   declarations: [
     LandingComponent,
@@ -30,15 +29,9 @@ import {AboutSharingComponent} from './about/about-sharing/about-sharing.compone
     AboutDirectionComponent,
     AboutOfflineComponent,
     AboutAppearanceComponent,
-    AboutSharingComponent
+    AboutSharingComponent,
   ],
-  imports: [
-    CommonModule,
-    AppAngularMaterialModule,
-    AppTranslocoModule,
-    LandingRoutingModule
-  ],
+  imports: [CommonModule, AppAngularMaterialModule, AppTranslocoModule, LandingRoutingModule],
   bootstrap: [LandingComponent],
 })
-export class LandingModule {
-}
+export class LandingModule {}

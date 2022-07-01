@@ -1,58 +1,61 @@
 <ng-container *transloco="let t; read: 'translate'">
-  <mat-drawer-container>
-    <mat-drawer #appearance position="end" mode="over">
-      <app-appearance *ngIf="loadAppearance"></app-appearance>
-    </mat-drawer>
-    <mat-drawer-content>
-      <mat-toolbar>
-        <mat-icon>waving_hand</mat-icon>
-        <span>&nbsp;{{t('title')}}</span>
-        <button mat-icon-button [attr.aria-label]="'appearance.action' | transloco" (click)="openAppearancePanel()">
-          <mat-icon>account_box</mat-icon>
-        </button>
-      </mat-toolbar>
+  <!--<app-appearance *ngIf="loadAppearance"></app-appearance>-->
+  <mat-toolbar>
+    <mat-icon>waving_hand</mat-icon>
+    <span>&nbsp;{{ t('title') }}</span>
+  </mat-toolbar>
 
-      <div id="container">
-        <div id="input-mode-group" *ngIf="inputMode$ | async as inputMode">
-          <ng-container *ngIf="spokenToSigned">
-            <app-translate-input-button mode="text" icon="translate"></app-translate-input-button>
-          </ng-container>
-          <ng-container *ngIf="!spokenToSigned">
-            <app-translate-input-button mode="webcam" icon="videocam"></app-translate-input-button>
-            <app-translate-input-button mode="upload" icon="upload"></app-translate-input-button>
-          </ng-container>
+  <div id="container">
+    <div id="input-mode-group">
+      <ng-container *ngIf="spokenToSigned">
+        <app-translate-input-button mode="text" icon="translate"></app-translate-input-button>
+      </ng-container>
+      <ng-container *ngIf="!spokenToSigned">
+        <app-translate-input-button mode="webcam" icon="videocam"></app-translate-input-button>
+        <app-translate-input-button mode="upload" icon="upload"></app-translate-input-button>
+      </ng-container>
+    </div>
+
+    <app-drop-pose-file>
+      <div id="translation-card">
+        <div id="language-selector">
+          <app-language-selector
+            [flags]="true"
+            [hasLanguageDetection]="false"
+            [languages]="translation.signedLanguages"
+            translationKey="countries"
+            urlParameter="sil"
+            (languageChange)="setSignedLanguage($event)"></app-language-selector>
+
+          <!-- disabled -->
+          <button
+            (click)="swapLanguages()"
+            id="swap-languages"
+            mat-icon-button
+            [matTooltip]="t('swapLanguages')"
+            [attr.aria-label]="t('swapLanguages')">
+            <mat-icon>swap_horiz</mat-icon>
+          </button>
+
+          <app-language-selector
+            [hasLanguageDetection]="spokenToSigned"
+            [languages]="translation.spokenLanguages"
+            translationKey="languages"
+            urlParameter="spl"
+            (languageChange)="setSpokenLanguage($event)"></app-language-selector>
         </div>
 
-        <div id="translation-card">
-          <div id="language-selector">
-            <app-language-selector [flags]="true" [hasLanguageDetection]="false"
-                                   [languages]="translation.signedLanguages"
-                                   translationKey="countries"
-                                   (languageChange)="setSignedLanguage($event)"></app-language-selector>
-
-            <!-- disabled -->
-            <button (click)="swapLanguages()" id="swap-languages" mat-icon-button
-                    [matTooltip]="t('swapLanguages')" [attr.aria-label]="t('swapLanguages')">
-              <mat-icon>swap_horiz</mat-icon>
-            </button>
-
-            <app-language-selector [hasLanguageDetection]="spokenToSigned" [languages]="translation.spokenLanguages"
-                                   translationKey="languages"
-                                   (languageChange)="setSpokenLanguage($event)"></app-language-selector>
-          </div>
-
-          <div id="content">
-            <!-- Spoken to sign requires a text input and video output -->
-            <app-spoken-to-signed *ngIf="spokenToSigned"></app-spoken-to-signed>
-            <!-- Sign to spoken requires a video input and text output -->
-            <app-signed-to-spoken *ngIf="!spokenToSigned"></app-signed-to-spoken>
-          </div>
+        <div id="content">
+          <!-- Spoken to sign requires a text input and video output -->
+          <app-spoken-to-signed *ngIf="spokenToSigned"></app-spoken-to-signed>
+          <!-- Sign to spoken requires a video input and text output -->
+          <app-signed-to-spoken *ngIf="!spokenToSigned"></app-signed-to-spoken>
         </div>
-
-        <a id="feedback" href="https://github.com/sign-language-processing/sign-translate/issues" target="_blank">
-          {{t('feedback')}}
-        </a>
       </div>
-    </mat-drawer-content>
-  </mat-drawer-container>
+    </app-drop-pose-file>
+
+    <a id="feedback" href="https://github.com/sign/translate/issues" target="_blank">
+      {{ t('feedback') }}
+    </a>
+  </div>
 </ng-container>

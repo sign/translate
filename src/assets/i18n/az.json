@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Tərcümə",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Dili seç",
       "more": "Daha çox dil"
     },
@@ -29,6 +29,12 @@
         "download": "Tərcüməni yükləyin",
         "copy": "Tərcüməni Kopyalayın",
         "share": "Tərcüməni Paylaşın"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "İnsan video modeli yüklənir",
+          "generating": "Videonun yaradılması"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Alətlər"
+    },
+    "nav": {
+      "pages": "Digər səhifələrə keçin",
+      "legal": "Hüquqi səhifələrə keçin"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Skelet",
       "avatar": "Avatar",
       "human": "İnsan"
-    }
+    },
+    "title": "Parametrlər"
   }
 }

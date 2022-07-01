@@ -13,11 +13,7 @@
           {
             "class_name": "Dropout",
             "config": {
-              "batch_input_shape": [
-                1,
-                1,
-                25
-              ],
+              "batch_input_shape": [1, 1, 25],
               "name": "dropout",
               "trainable": true,
               "dtype": "float32",
@@ -99,56 +95,37 @@
             }
           }
         ],
-        "build_input_shape": [
-          1,
-          1,
-          25
-        ]
+        "build_input_shape": [1, 1, 25]
       }
     }
   },
   "weightsManifest": [
     {
-      "paths": [
-        "group1-shard1of1.bin"
-      ],
+      "paths": ["group1-shard1of1.bin"],
       "weights": [
         {
           "name": "dense/kernel",
-          "shape": [
-            64,
-            2
-          ],
+          "shape": [64, 2],
           "dtype": "float32"
         },
         {
           "name": "dense/bias",
-          "shape": [
-            2
-          ],
+          "shape": [2],
           "dtype": "float32"
         },
         {
           "name": "lstm/lstm_cell/kernel",
-          "shape": [
-            25,
-            256
-          ],
+          "shape": [25, 256],
           "dtype": "float32"
         },
         {
           "name": "lstm/lstm_cell/recurrent_kernel",
-          "shape": [
-            64,
-            256
-          ],
+          "shape": [64, 256],
           "dtype": "float32"
         },
         {
           "name": "lstm/lstm_cell/bias",
-          "shape": [
-            256
-          ],
+          "shape": [256],
           "dtype": "float32"
         }
       ]

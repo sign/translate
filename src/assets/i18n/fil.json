@@ -6,7 +6,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{lang}",
+      "detected": "{{lang}}",
       "detect": "Kilalanin ang Wika",
       "more": "Higit pang mga Wika"
     },
@@ -29,6 +29,12 @@
         "download": "I-download ang Pagsasalin",
         "copy": "Kopyahin ang Pagsasalin",
         "share": "Ibahagi ang Pagsasalin"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nilo-load ang modelo ng video ng tao",
+          "generating": "Bumubuo ng video"
+        }
       }
     }
   },
@@ -49,6 +55,10 @@
     },
     "tools": {
       "title": "Mga tool"
+    },
+    "nav": {
+      "pages": "Mag-navigate sa iba pang mga pahina",
+      "legal": "Mag-navigate sa mga legal na pahina"
     }
   },
   "text-to-speech": {
@@ -138,6 +148,7 @@
       "pose": "Kalansay",
       "avatar": "Avatar",
       "human": "Tao"
-    }
+    },
+    "title": "Mga setting"
   }
 }
