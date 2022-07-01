@@ -21,8 +21,8 @@ import {Observable, of} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
-import {font} from '@sutton-signwriting/font-ttf/index.js';
 import {Capacitor} from '@capacitor/core';
+import {SignWritingService} from '../sign-writing/sign-writing.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -170,13 +170,14 @@ export class TranslateState implements NgxsOnInit {
     {text}: SetSignWritingText
   ): Promise<void> {
     // signNormalize only works after the SignWriting font is loaded
-    font.cssLoaded(() => {
-      const signWriting: string[] = text.map(sign => {
-        const box = sign.startsWith('M') ? sign : 'M500x500' + sign;
-        return signNormalize(box);
-      });
-      patchState({signWriting});
+    await SignWritingService.loadFonts();
+    await SignWritingService.cssLoaded();
+
+    const signWriting: string[] = text.map(sign => {
+      const box = sign.startsWith('M') ? sign : 'M500x500' + sign;
+      return signNormalize(box);
     });
+    patchState({signWriting});
   }
 
   @Action(ChangeTranslation, {cancelUncompleted: true})

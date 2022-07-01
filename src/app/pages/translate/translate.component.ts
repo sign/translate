@@ -50,7 +50,13 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       .pipe(
         tap(() => {
           this.title.setTitle(this.transloco.translate('translate.title'));
-          this.meta.addTags([{name: 'description', content: this.transloco.translate('translate.description')}]);
+          this.meta.updateTag(
+            {
+              name: 'description',
+              content: this.transloco.translate('translate.description'),
+            },
+            'name=description'
+          );
         }),
         takeUntil(this.ngUnsubscribe)
       )

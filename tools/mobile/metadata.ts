@@ -103,7 +103,10 @@ async function main() {
     const context = await browser.newContext(contextOptions);
     const page = await context.newPage();
     await page.route('https://**/*', route => route.abort()); // disallow external traffic
-    await page.goto('http://localhost:4200/', {waitUntil: 'networkidle'});
+    await Promise.all([
+      page.goto('http://localhost:4200/', {waitUntil: 'networkidle'}),
+      page.waitForSelector('mat-tab-group', {state: 'attached'}), // Wait until language file is loaded
+    ]);
 
     const title = await page.title();
     const description = await (await page.$('meta[name="description"]')).getAttribute('content');

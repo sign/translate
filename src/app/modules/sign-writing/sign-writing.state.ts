@@ -6,9 +6,10 @@ import {filter, first, tap} from 'rxjs/operators';
 import {HandsService, HandStateModel} from './hands.service';
 import {CalculateBodyFactors, EstimateFaceShape, EstimateHandShape} from './sign-writing.actions';
 import {BodyService, BodyStateModel} from './body.service';
-import * as holistic from '@mediapipe/holistic/holistic';
 import {FaceService, FaceStateModel} from './face.service';
 import {ThreeService} from '../../core/services/three.service';
+import {MediapipeHolisticService} from '../../core/services/holistic.service';
+import {SignWritingService} from './sign-writing.service';
 
 export interface SignWritingStateModel {
   timestamp: number;
@@ -40,7 +41,8 @@ export class SignWritingState implements NgxsOnInit {
     private bodyService: BodyService,
     private faceService: FaceService,
     private handsService: HandsService,
-    private three: ThreeService
+    private three: ThreeService,
+    private holistic: MediapipeHolisticService
   ) {}
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
@@ -50,8 +52,11 @@ export class SignWritingState implements NgxsOnInit {
         filter(Boolean),
         first(),
         tap(() => {
-          this.handsService.loadModel();
-          this.faceService.loadModel();
+          return Promise.all([
+            this.handsService.loadModel(),
+            this.faceService.loadModel(),
+            SignWritingService.loadFonts(),
+          ]);
         })
       )
       .subscribe();
@@ -98,12 +103,12 @@ export class SignWritingState implements NgxsOnInit {
       body: {
         shoulders: this.bodyService.shoulders(pose.poseLandmarks),
         elbows: [
-          pose.poseLandmarks[holistic.POSE_LANDMARKS.LEFT_ELBOW],
-          pose.poseLandmarks[holistic.POSE_LANDMARKS.RIGHT_ELBOW],
+          pose.poseLandmarks[this.holistic.POSE_LANDMARKS.LEFT_ELBOW],
+          pose.poseLandmarks[this.holistic.POSE_LANDMARKS.RIGHT_ELBOW],
         ],
         wrists: [
-          pose.poseLandmarks[holistic.POSE_LANDMARKS.LEFT_WRIST],
-          pose.poseLandmarks[holistic.POSE_LANDMARKS.RIGHT_WRIST],
+          pose.poseLandmarks[this.holistic.POSE_LANDMARKS.LEFT_WRIST],
+          pose.poseLandmarks[this.holistic.POSE_LANDMARKS.RIGHT_WRIST],
         ],
       },
     });

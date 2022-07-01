@@ -1,9 +1,5 @@
 import {Pose} from './pose.state';
 
-export class LoadPoseModel {
-  static readonly type = '[Pose] Load Pose Model';
-}
-
 export class PoseVideoFrame {
   static readonly type = '[Pose] Pose Video Frame';
 

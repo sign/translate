@@ -4,12 +4,34 @@ import {SignWritingStateModel} from './sign-writing.state';
 import {BodyService} from './body.service';
 import {FaceService} from './face.service';
 import {Vector2, Vector3} from 'three';
+import {font} from '@sutton-signwriting/font-ttf';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SignWritingService {
+  static font: Promise<font>;
+
   constructor(private bodyService: BodyService, private faceService: FaceService, private handsService: HandsService) {}
+
+  static get fontsModule() {
+    if (!SignWritingService.font) {
+      SignWritingService.font = import('@sutton-signwriting/font-ttf/font/font.min') as Promise<font>;
+    }
+    return SignWritingService.font;
+  }
+
+  static async cssLoaded() {
+    const fontModule = await SignWritingService.fontsModule;
+    return new Promise(resolve => fontModule.cssLoaded(resolve));
+  }
+
+  static async loadFonts() {
+    const fontModule = await SignWritingService.fontsModule;
+
+    // Set local font directory, copied from @sutton-signwriting/font-ttf
+    fontModule.cssAppend('assets/fonts/signwriting/');
+  }
 
   static textFontSize(text: string, width: number, ctx: CanvasRenderingContext2D): number {
     ctx.font = '100px SuttonSignWritingOneD';

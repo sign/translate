@@ -2,6 +2,7 @@ import {TestBed} from '@angular/core/testing';
 
 import {PoseService} from './pose.service';
 import {Pose, PoseLandmark} from './pose.state';
+import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
 describe('PoseService', () => {
   let service: PoseService;
@@ -10,9 +11,12 @@ describe('PoseService', () => {
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
+  beforeEach(async () => {
+    TestBed.configureTestingModule({providers: [MediapipeHolisticService]});
     service = TestBed.inject(PoseService);
+
+    const holistic = TestBed.inject(MediapipeHolisticService);
+    await holistic.load();
 
     canvas = document.createElement('canvas');
     ctx = canvas.getContext('2d');

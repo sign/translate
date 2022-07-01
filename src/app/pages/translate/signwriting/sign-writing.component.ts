@@ -1,8 +1,8 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
-import {font} from '@sutton-signwriting/font-ttf';
 import {BaseComponent} from '../../../components/base/base.component';
 import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
+import {SignWritingService} from '../../../modules/sign-writing/sign-writing.service';
 
 @Component({
   selector: 'app-sign-writing',
@@ -43,12 +43,12 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
 
   ngOnChanges(changes: SimpleChanges): void {
     const signs = changes.signs.currentValue;
+    console.log({signs});
     if (signs && signs.length > 0) {
       if (!SignWritingComponent.isCustomElementDefined) {
         SignWritingComponent.isCustomElementDefined = true;
 
-        // Set local font directory, copied from @sutton-signwriting/font-ttf
-        font.cssAppend('assets/fonts/signwriting/');
+        SignWritingService.loadFonts();
 
         // Load the SignWriting custom elements
         import('@sutton-signwriting/sgnw-components/loader')

@@ -2,8 +2,8 @@ import {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, Pose} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
-import * as holistic from '@mediapipe/holistic/holistic.js';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
+import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
 const ANIMATION_KEYS = [
   'mixamorigHead.quaternion',
@@ -70,7 +70,7 @@ const ANIMATION_KEYS = [
 export class AnimationService {
   sequentialModel: LayersModel;
 
-  constructor(private tf: TensorflowService) {}
+  constructor(private tf: TensorflowService, private holistic: MediapipeHolisticService) {}
 
   async loadModel(): Promise<LayersModel> {
     await this.tf.load();
@@ -81,7 +81,7 @@ export class AnimationService {
 
   normalizePose(pose: Pose): Tensor {
     const bodyLandmarks =
-      pose.poseLandmarks || new Array(Object.keys(holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
+      pose.poseLandmarks || new Array(Object.keys(this.holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
@@ -90,8 +90,8 @@ export class AnimationService {
       .tensor(landmarks.map(l => [l.x, l.y, l.z]))
       .mul(this.tf.tensor([pose.image.width, pose.image.height, pose.image.width]));
 
-    const p1 = tensor.slice(holistic.POSE_LANDMARKS.LEFT_SHOULDER, 1);
-    const p2 = tensor.slice(holistic.POSE_LANDMARKS.RIGHT_SHOULDER, 1);
+    const p1 = tensor.slice(this.holistic.POSE_LANDMARKS.LEFT_SHOULDER, 1);
+    const p2 = tensor.slice(this.holistic.POSE_LANDMARKS.RIGHT_SHOULDER, 1);
 
     const d = this.tf.sqrt(this.tf.pow(p2.sub(p1), 2).sum());
     let normTensor = this.tf.sub(tensor, p1.add(p2).div(2)).div(d);

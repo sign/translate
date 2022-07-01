@@ -2,17 +2,21 @@ import {TestBed} from '@angular/core/testing';
 import {AnimationService} from './animation.service';
 import {Pose} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
+import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
 describe('AnimationService', () => {
   let service: AnimationService;
   let tf: TensorflowService;
+  let holistic: MediapipeHolisticService;
 
   beforeEach(async () => {
-    TestBed.configureTestingModule({providers: [TensorflowService]});
+    TestBed.configureTestingModule({providers: [TensorflowService, MediapipeHolisticService]});
     service = TestBed.inject(AnimationService);
     tf = TestBed.inject(TensorflowService);
+    holistic = TestBed.inject(MediapipeHolisticService);
 
     await tf.load();
+    await holistic.load();
   });
 
   it('should create', () => {

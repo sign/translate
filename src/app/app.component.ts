@@ -81,7 +81,7 @@ export class AppComponent implements AfterViewInit {
       )
       .subscribe();
 
-    const urlParam = this.urlParams.get('lang') || getBrowserLang();
+    const urlParam = this.urlParams.get('lang');
     let [navigatorParam] = navigator.language.split('-');
     if (navigatorParam === 'zh') {
       // Handle simplified (china) vs traditional (hong kong, taiwan) chinese

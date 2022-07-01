@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {PoseService} from './pose.service';
-import {LoadPoseModel, PoseVideoFrame, StoreFramePose} from './pose.actions';
+import {PoseVideoFrame, StoreFramePose} from './pose.actions';
 
 export interface PoseLandmark {
   x: number;
@@ -39,14 +39,7 @@ export class PoseState implements NgxsOnInit {
   constructor(private poseService: PoseService, private store: Store) {}
 
   ngxsOnInit(ctx?: StateContext<any>): void {
-    this.store.dispatch(LoadPoseModel);
-  }
-
-  @Action(LoadPoseModel)
-  async load({patchState, dispatch}: StateContext<PoseStateModel>): Promise<void> {
-    patchState({isLoaded: false});
-    await this.poseService.load();
-    this.poseService.model.onResults(results => {
+    this.poseService.onResults(results => {
       // TODO: passing the `image` canvas through NGXS bugs the pose.
       // https://github.com/google/mediapipe/issues/2422
       const fakeImage = document.createElement('canvas');

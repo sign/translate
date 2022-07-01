@@ -4,17 +4,21 @@ import {DetectorService} from './detector.service';
 import {Pose, PoseLandmark} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import createSpy = jasmine.createSpy;
+import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
 describe('DetectorService', () => {
   let service: DetectorService;
   let tf: TensorflowService;
+  let holistic: MediapipeHolisticService;
 
   beforeEach(async () => {
-    TestBed.configureTestingModule({providers: [TensorflowService]});
+    TestBed.configureTestingModule({providers: [TensorflowService, MediapipeHolisticService]});
     service = TestBed.inject(DetectorService);
     tf = TestBed.inject(TensorflowService);
+    holistic = TestBed.inject(MediapipeHolisticService);
 
     await tf.load();
+    await holistic.load();
   });
 
   it('should create', () => {
