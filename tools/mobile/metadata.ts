@@ -124,6 +124,11 @@ async function main() {
 
   const concurrency = 20;
   await asyncPoolAll(concurrency, contexts, screenCapture);
+
+  // TODO: take screenshots in light and dark mode
+  // TODO: generate a video, typing "What is your name"
+  // TODO: generate a video, uploaded file to "What is your name" example, about page
+  //
 }
 
 main()

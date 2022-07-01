@@ -55,19 +55,37 @@ async function translateQueue(queueId: number, image: ImageBitmap | ImageData): 
   globalQueueId = queueId;
 
   const tensor = await translate(image); // Lazy tensor evaluation
+  const tf = await tfPromise;
 
+  // Chain the model evaluation per frame
   queuePromise = queuePromise.then(() => {
     if (globalQueueId !== queueId) {
       return null;
     }
 
-    return tensorToImage(tensor);
+    return tensor.buffer(); // 60-70ms
   });
 
-  return queuePromise;
+  const imageBuffer = await queuePromise;
+  let outputImage = await tf.browser.toPixels(imageBuffer.toTensor()); // ~1-3ms
+  outputImage = removeGreenScreen(outputImage); // ~0.1-0.2ms
+
+  return comlink.transfer(outputImage, [outputImage.buffer]);
 }
 
+const frameTimes = [];
+let lastFrameTime = null;
+
 async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
+  if (lastFrameTime) {
+    frameTimes.push(Date.now() - lastFrameTime);
+    if (frameTimes.length > 20) {
+      const totalTime = frameTimes.slice(frameTimes.length - 20).reduce((a, b) => a + b, 0);
+      console.log('average', (totalTime / 20).toFixed(1), 'ms');
+    }
+  }
+  lastFrameTime = Date.now();
+
   if (!model) {
     throw new ModelNotLoadedError();
   }
@@ -90,14 +108,4 @@ async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
   });
 }
 
-async function tensorToImage(tensor: Tensor3D): Promise<Uint8ClampedArray> {
-  const tf = await tfPromise;
-
-  // TODO: draw on canvas directly
-  let data = await tf.browser.toPixels(tensor); // 1-3ms by itself, 60-70ms with evaluation
-  data = removeGreenScreen(data); // 0.1-0.2ms
-
-  return comlink.transfer(data, [data.buffer]);
-}
-
-comlink.expose({loadModel, translate, translateQueue});
+comlink.expose({loadModel, translateQueue});

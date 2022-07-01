@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import * as comlink from 'comlink';
-import {transferableImage} from '../../core/helpers/image/transferable';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 
 @Injectable({
@@ -9,7 +8,6 @@ import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google
 export class Pix2PixService {
   worker: comlink.Remote<{
     loadModel: () => Promise<void>;
-    translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
     translateQueue: (queueId: number, image: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
   }>;
 
