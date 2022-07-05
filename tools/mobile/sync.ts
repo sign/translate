@@ -4,18 +4,29 @@ import {project} from './project';
 import * as fs from 'fs';
 import {WebAppManifest} from 'web-app-manifest';
 
-await project.android.setPackageName(capacitorConfig.appId);
-await project.android.setVersionName(xpackage.version);
+async function main() {
+  await project.load();
 
-for (const build of ['Debug', 'Release']) {
-  await project.ios.setBundleId('App', build, capacitorConfig.appId);
-  await project.ios.setVersion('App', build, xpackage.version);
+  await project.android.setPackageName(capacitorConfig.appId);
+  await project.android.setVersionName(xpackage.version);
+
+  for (const build of ['Debug', 'Release']) {
+    await project.ios.setBundleId('App', build, capacitorConfig.appId);
+    await project.ios.setVersion('App', build, xpackage.version);
+  }
+
+  await project.commit();
+
+  // Web config
+  const webManifestPath = 'src/manifest.webmanifest';
+  const webManifest: WebAppManifest = JSON.parse(String(fs.readFileSync(webManifestPath)));
+  webManifest.name = capacitorConfig.appName;
+  fs.writeFileSync(webManifestPath, JSON.stringify(webManifest, null, 2));
 }
 
-await project.commit();
-
-// Web config
-const webManifestPath = 'src/manifest.webmanifest';
-const webManifest: WebAppManifest = JSON.parse(String(fs.readFileSync(webManifestPath)));
-webManifest.name = capacitorConfig.appName;
-fs.writeFileSync(webManifestPath, JSON.stringify(webManifest, null, 2));
+main()
+  .then(() => process.exit(0))
+  .catch(e => {
+    console.error(e);
+    process.exit(1);
+  });

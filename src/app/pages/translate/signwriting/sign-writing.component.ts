@@ -43,7 +43,6 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
 
   ngOnChanges(changes: SimpleChanges): void {
     const signs = changes.signs.currentValue;
-    console.log({signs});
     if (signs && signs.length > 0) {
       if (!SignWritingComponent.isCustomElementDefined) {
         SignWritingComponent.isCustomElementDefined = true;

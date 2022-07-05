@@ -50,4 +50,4 @@ jobs:
 
       - name: Deploy Cloud Functions
         working-directory: functions
-        run: export GOOGLE_APPLICATION_CREDENTIALS="$HOME/gcloud.json" && npm run deploy
+        run: export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud.json && npm run deploy

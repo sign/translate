@@ -10,4 +10,3 @@ export const config: MobileProjectConfig = {
 };
 
 export const project = new MobileProject('./', config);
-await project.load();

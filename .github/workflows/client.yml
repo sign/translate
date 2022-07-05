@@ -68,6 +68,8 @@ jobs:
       - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v9
         with:
+          urls: |
+            index.html
           configPath: .github/workflows/lighthouse/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
