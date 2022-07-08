@@ -97,3 +97,7 @@ capacitor-cordova-android-plugins
 # Copied web assets
 app/src/main/assets/public
 app/src/main/assets/capacitor.config.json
+
+# Screenshots
+fastlane/metadata/**/*.png
+!fastlane/metadata/**/*_framed.png

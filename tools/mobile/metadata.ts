@@ -1,7 +1,8 @@
-import {devices, Page, webkit} from '@playwright/test';
+import {chromium, devices, Page, webkit} from '@playwright/test';
 import asyncPool from 'tiny-async-pool';
 import * as fs from 'fs';
 import {promisify} from 'util';
+import {execSync} from 'child_process';
 
 // https://support.google.com/googleplay/android-developer/answer/9844778?hl=en#zippy=%2Cview-list-of-available-languages
 const googlePlayLocales = [
@@ -126,7 +127,21 @@ const iOSLocales = [
   'zh-Hans',
   'zh-Hant',
 ];
-// TODO pt-BR works, pt-PT doesn't
+
+// https://help.apple.com/app-store-connect/#/devd274dd925
+const iosDevices = ['iPhone 13 Pro Max', 'iPhone 13 Pro', 'iPhone 8 Plus', 'iPhone 8'];
+const iPhone8Plus = devices['iPhone 8 Plus'];
+(iPhone8Plus as any).screen = {
+  width: 1242 / iPhone8Plus.deviceScaleFactor,
+  height: 2208 / iPhone8Plus.deviceScaleFactor,
+};
+const iPhone8 = devices['iPhone 8'];
+(iPhone8 as any).screen = {
+  width: 750 / iPhone8.deviceScaleFactor,
+  height: 1334 / iPhone8.deviceScaleFactor,
+};
+
+const androidDevices = ['Pixel 5'];
 
 async function asyncPoolAll(...args) {
   const results = [];
@@ -136,16 +151,24 @@ async function asyncPoolAll(...args) {
   return results;
 }
 
-async function makeAndroid(locale: string, page: Page, title: string, description: string) {
+async function screenshot(page: Page, viewport, path: string, background = 'white') {
+  await page.screenshot({path, fullPage: false});
+  const res = `${viewport.width}x${viewport.height}`;
+  const cmd = `convert ${path} -resize ${res} -background ${background} -gravity center -extent ${res} ${path}`;
+  console.log(execSync(cmd, {encoding: 'utf8'}).toString());
+}
+
+async function makeAndroid(locale: string, device: string, page: Page, title: string, description: string) {
   const filePath = (locale, file) => `android/fastlane/metadata/android/${locale}/${file}`;
   const imgPath = (locale, {width, height}, name) =>
     filePath(locale, `images/phoneScreenshots/${name}_${width}x${height}.png`);
 
-  for (const device of ['Pixel 5', 'Galaxy S9+']) {
-    const viewport = devices[device].viewport;
-    await page.setViewportSize(viewport);
-    await page.screenshot({path: imgPath(locale, viewport, 'main')});
-  }
+  const {deviceScaleFactor, screen} = devices[device] as any;
+  const cViewport = {
+    height: Math.floor(screen.height * deviceScaleFactor),
+    width: Math.floor(screen.width * deviceScaleFactor),
+  };
+  await screenshot(page, cViewport, imgPath(locale, cViewport, 'main'));
 
   await Promise.all([
     promisify(fs.writeFile)(filePath(locale, 'title.txt'), title),
@@ -155,7 +178,7 @@ async function makeAndroid(locale: string, page: Page, title: string, descriptio
   ]);
 }
 
-async function makeIOS(locale: string, page: Page, title: string, description: string) {
+async function makeIOS(locale: string, device: string, page: Page, title: string, description: string) {
   const dirs = [`ios/App/fastlane/metadata/${locale}`, `ios/App/fastlane/screenshots/${locale}`];
   for (const dir of dirs) {
     if (!fs.existsSync(dir)) {
@@ -165,32 +188,52 @@ async function makeIOS(locale: string, page: Page, title: string, description: s
   const filePath = (locale, file, base = 'metadata') => `ios/App/fastlane/${base}/${locale}/${file}`;
   const imgPath = (locale, {width, height}, name) => filePath(locale, `${name}_${width}x${height}.png`, 'screenshots');
 
-  for (const device of ['iPhone 13', 'iPhone 13 Pro Max', 'iPhone 13 Mini']) {
-    const viewport = devices[device].viewport;
-    await page.setViewportSize(viewport);
-    await page.screenshot({path: imgPath(locale, viewport, 'main')});
-  }
+  const {deviceScaleFactor, screen} = devices[device] as any;
+  const cViewport = {
+    height: Math.floor(screen.height * deviceScaleFactor),
+    width: Math.floor(screen.width * deviceScaleFactor),
+  };
+  await screenshot(page, cViewport, imgPath(locale, cViewport, 'main'));
 
   await Promise.all([
     promisify(fs.writeFile)(filePath(locale, 'name.txt'), title),
     promisify(fs.writeFile)(filePath(locale, 'description.txt'), description),
-    // TODO apple_tv_privacy_policy
+    promisify(fs.writeFile)(filePath(locale, 'apple_tv_privacy_policy.txt'), ''),
+    promisify(fs.writeFile)(filePath(locale, 'privacy_url.txt'), `https://sign.mt/legal/privacy?lang=${locale}`),
+    promisify(fs.writeFile)(filePath(locale, 'marketing_url.txt'), `https://sign.mt/about?lang=${locale}`),
+    promisify(fs.writeFile)(filePath(locale, 'support_url.txt'), `https://github.com/sign/translate/issues`),
     // TODO keywords
-    // TODO marketing_url
-    // TODO privacy_url
     // TODO promotional_text
     // TODO release_notes
-    // TODO support_url
   ]);
 }
 
 async function main() {
-  const browser = await webkit.launch({headless: false});
+  const webkitBrowser = await webkit.launch({headless: false});
+  const chromiumBrowser = await chromium.launch({headless: false});
 
-  const allLocales = Array.from(new Set(googlePlayLocales.concat(iOSLocales)));
-  const contexts = allLocales.map(l => ({locale: l, ...devices['Pixel 5']}));
-  const screenCapture = async contextOptions => {
-    const context = await browser.newContext(contextOptions);
+  for (const device of androidDevices.concat(iosDevices)) {
+    if (!('screen' in devices[device])) {
+      throw new Error(`Device ${device} is missing screen values`);
+    }
+  }
+
+  // One optimization can be to group these contexts by deviceScaleFactor
+  const androidContexts = googlePlayLocales
+    .map(locale => androidDevices.map(device => ({locale, device, platform: 'android'})))
+    .reduce((a, b) => a.concat(b), []);
+
+  const iosContexts = iOSLocales
+    .map(locale => iosDevices.map(device => ({locale, device, platform: 'ios'})))
+    .reduce((a, b) => a.concat(b), []);
+
+  const screenCapture = async ({locale, device, platform}) => {
+    const options = {
+      locale,
+      ...devices[device],
+    };
+    const browser = options.defaultBrowserType === 'webkit' ? webkitBrowser : chromiumBrowser;
+    const context = await browser.newContext(options);
     const page = await context.newPage();
     await page.route('https://**/*', route => route.abort()); // disallow external traffic
     await Promise.all([
@@ -200,18 +243,11 @@ async function main() {
 
     const title = await page.title();
     const description = await (await page.$('meta[name="description"]')).getAttribute('content');
-    if (googlePlayLocales.includes(contextOptions.locale)) {
-      await makeAndroid(contextOptions.locale, page, title, description);
+    if (platform === 'android') {
+      await makeAndroid(locale, device, page, title, description);
     }
-    if (iOSLocales.includes(contextOptions.locale)) {
-      // TODO copyright.txt
-      // TODO primary_category.txt
-      // TODO primary_first_sub_category.txt
-      // TODO primary_second_sub_category.txt
-      // TODO secondary_category.txt
-      // TODO secondary_first_sub_category.txt
-      // TODO secondary_second_sub_category.txt
-      await makeIOS(contextOptions.locale, page, title, description);
+    if (platform === 'ios') {
+      await makeIOS(locale, device, page, title, description);
     }
 
     await page.close();
@@ -219,12 +255,27 @@ async function main() {
   };
 
   const concurrency = 20;
-  await asyncPoolAll(concurrency, contexts, screenCapture);
+  const allContexts = androidContexts.concat(iosContexts).sort((a, b) => (Math.random() > 0.5 ? 1 : -1));
+  await asyncPoolAll(concurrency, allContexts, screenCapture);
 
-  // TODO: take screenshots in light and dark mode
+  const IOS_META = 'ios/App/fastlane/metadata';
+  await Promise.all([
+    promisify(fs.writeFile)(`${IOS_META}/copyright.txt`, 'https://sign.mt/legal/licenses'),
+    promisify(fs.writeFile)(`${IOS_META}/primary_category.txt`, 'UTILITIES'),
+    promisify(fs.writeFile)(`${IOS_META}/primary_first_sub_category.txt`, ''),
+    promisify(fs.writeFile)(`${IOS_META}/primary_second_sub_category.txt`, ''),
+    promisify(fs.writeFile)(`${IOS_META}/secondary_category.txt`, 'EDUCATION'),
+    promisify(fs.writeFile)(`${IOS_META}/secondary_first_sub_category.txt`, ''),
+    promisify(fs.writeFile)(`${IOS_META}/secondary_second_sub_category.txt`, ''),
+  ]);
+
+  // TODO: take screenshots in light and dark mode    // await page.emulateMedia({ colorScheme: 'dark' });
   // TODO: generate a video, typing "What is your name"
   // TODO: generate a video, uploaded file to "What is your name" example, about page
   //
+
+  console.log(execSync('fastlane frameit_screenshots', {cwd: 'android', encoding: 'utf8'}).toString());
+  console.log(execSync('fastlane frameit_screenshots', {cwd: 'ios/App', encoding: 'utf8'}).toString());
 }
 
 main()

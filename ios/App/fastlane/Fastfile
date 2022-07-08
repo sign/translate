@@ -20,4 +20,20 @@ platform :ios do
   lane :custom_lane do
     # add actions here: https://docs.fastlane.tools/actions
   end
+
+  lane :frameit_screenshots do
+    # It frames the screenshots in landscape right whenever the filename contains `landscape` word
+    frameit(
+      silver: true,
+      path: "./fastlane/screenshots",
+      force_orientation_block: proc do |filename|
+        f = filename.downcase
+        if f.include?("landscape")
+          :landscape_right
+        end
+      end
+    )
+  end
 end
+
+

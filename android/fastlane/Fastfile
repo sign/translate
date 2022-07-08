@@ -331,3 +331,17 @@ lane :deploy do
 gradle(task: "clean assembleRelease")
 upload_to_play_store
 end
+
+lane :frameit_screenshots do
+  # It frames the screenshots in landscape right whenever the filename contains `landscape` word
+  frameit(
+    use_platform: 'ANDROID',
+    path: "./fastlane/metadata",
+    force_orientation_block: proc do |filename|
+      f = filename.downcase
+      if f.include?("landscape")
+        :landscape_right
+      end
+    end
+  )
+end
