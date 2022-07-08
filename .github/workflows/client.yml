@@ -65,11 +65,12 @@ jobs:
           name: build-dist
           path: dist/sign-translate/browser/
 
+      - name: Remove original html file from before prerendering
+      - run: rm -f dist/sign-translate/browser/index.original.html || true
+
       - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v9
         with:
-          urls: |
-            index.html
           configPath: .github/workflows/lighthouse/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true

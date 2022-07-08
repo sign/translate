@@ -1,1 +1,1 @@
-Sign language translator app for desktop and mobile
+Isang bi-directional multilingual sign language translation app para sa desktop at mobile

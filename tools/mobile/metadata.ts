@@ -1,4 +1,4 @@
-import {devices, webkit} from '@playwright/test';
+import {devices, Page, webkit} from '@playwright/test';
 import asyncPool from 'tiny-async-pool';
 import * as fs from 'fs';
 import {promisify} from 'util';
@@ -84,6 +84,50 @@ const googlePlayLocales = [
   'zu',
 ];
 
+// https://docs.fastlane.tools/actions/deliver/#available-language-codes
+const iOSLocales = [
+  'ar-SA',
+  'ca',
+  'cs',
+  'da',
+  'de-DE',
+  'el',
+  'en-AU',
+  'en-CA',
+  'en-GB',
+  'en-US',
+  'es-ES',
+  'es-MX',
+  'fi',
+  'fr-CA',
+  'fr-FR',
+  'he',
+  'hi',
+  'hr',
+  'hu',
+  'id',
+  'it',
+  'ja',
+  'ko',
+  'ms',
+  'nl-NL',
+  'no',
+  'pl',
+  'pt-BR',
+  'pt-PT',
+  'ro',
+  'ru',
+  'sk',
+  'sv',
+  'th',
+  'tr',
+  'uk',
+  'vi',
+  'zh-Hans',
+  'zh-Hant',
+];
+// TODO pt-BR works, pt-PT doesn't
+
 async function asyncPoolAll(...args) {
   const results = [];
   for await (const result of asyncPool(...args)) {
@@ -92,13 +136,59 @@ async function asyncPoolAll(...args) {
   return results;
 }
 
+async function makeAndroid(locale: string, page: Page, title: string, description: string) {
+  const filePath = (locale, file) => `android/fastlane/metadata/android/${locale}/${file}`;
+  const imgPath = (locale, {width, height}, name) =>
+    filePath(locale, `images/phoneScreenshots/${name}_${width}x${height}.png`);
+
+  for (const device of ['Pixel 5', 'Galaxy S9+']) {
+    const viewport = devices[device].viewport;
+    await page.setViewportSize(viewport);
+    await page.screenshot({path: imgPath(locale, viewport, 'main')});
+  }
+
+  await Promise.all([
+    promisify(fs.writeFile)(filePath(locale, 'title.txt'), title),
+    promisify(fs.writeFile)(filePath(locale, 'short_description.txt'), description),
+    promisify(fs.writeFile)(filePath(locale, 'full_description.txt'), description),
+    promisify(fs.writeFile)(filePath(locale, 'video.txt'), ''),
+  ]);
+}
+
+async function makeIOS(locale: string, page: Page, title: string, description: string) {
+  const dirs = [`ios/App/fastlane/metadata/${locale}`, `ios/App/fastlane/screenshots/${locale}`];
+  for (const dir of dirs) {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, {recursive: true});
+    }
+  }
+  const filePath = (locale, file, base = 'metadata') => `ios/App/fastlane/${base}/${locale}/${file}`;
+  const imgPath = (locale, {width, height}, name) => filePath(locale, `${name}_${width}x${height}.png`, 'screenshots');
+
+  for (const device of ['iPhone 13', 'iPhone 13 Pro Max', 'iPhone 13 Mini']) {
+    const viewport = devices[device].viewport;
+    await page.setViewportSize(viewport);
+    await page.screenshot({path: imgPath(locale, viewport, 'main')});
+  }
+
+  await Promise.all([
+    promisify(fs.writeFile)(filePath(locale, 'name.txt'), title),
+    promisify(fs.writeFile)(filePath(locale, 'description.txt'), description),
+    // TODO apple_tv_privacy_policy
+    // TODO keywords
+    // TODO marketing_url
+    // TODO privacy_url
+    // TODO promotional_text
+    // TODO release_notes
+    // TODO support_url
+  ]);
+}
+
 async function main() {
   const browser = await webkit.launch({headless: false});
 
-  const filePath = (locale, file) => `android/fastlane/metadata/android/${locale}/${file}`;
-  const imgPath = (locale, name) => filePath(locale, `images/phoneScreenshots/${name}.png`);
-
-  const contexts = googlePlayLocales.map(l => ({locale: l, ...devices['Pixel 5']}));
+  const allLocales = Array.from(new Set(googlePlayLocales.concat(iOSLocales)));
+  const contexts = allLocales.map(l => ({locale: l, ...devices['Pixel 5']}));
   const screenCapture = async contextOptions => {
     const context = await browser.newContext(contextOptions);
     const page = await context.newPage();
@@ -110,17 +200,20 @@ async function main() {
 
     const title = await page.title();
     const description = await (await page.$('meta[name="description"]')).getAttribute('content');
-
     if (googlePlayLocales.includes(contextOptions.locale)) {
-      await page.screenshot({path: imgPath(contextOptions.locale, 'main')});
-
-      await Promise.all([
-        promisify(fs.writeFile)(filePath(contextOptions.locale, 'title.txt'), title),
-        promisify(fs.writeFile)(filePath(contextOptions.locale, 'short_description.txt'), description),
-        promisify(fs.writeFile)(filePath(contextOptions.locale, 'full_description.txt'), description),
-        promisify(fs.writeFile)(filePath(contextOptions.locale, 'video.txt'), ''),
-      ]);
+      await makeAndroid(contextOptions.locale, page, title, description);
     }
+    if (iOSLocales.includes(contextOptions.locale)) {
+      // TODO copyright.txt
+      // TODO primary_category.txt
+      // TODO primary_first_sub_category.txt
+      // TODO primary_second_sub_category.txt
+      // TODO secondary_category.txt
+      // TODO secondary_first_sub_category.txt
+      // TODO secondary_second_sub_category.txt
+      await makeIOS(contextOptions.locale, page, title, description);
+    }
+
     await page.close();
     await context.close();
   };

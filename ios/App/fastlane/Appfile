@@ -1,0 +1,8 @@
+app_identifier("mt.sign.translate") # The bundle identifier of your app
+apple_id("amit@sign.mt") # Your Apple email address
+
+itc_team_id("125279535") # App Store Connect Team ID
+team_id("M8ACAQF4GJ") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

@@ -1,1 +1,1 @@
-Sign language translator app for desktop and mobile
+डेस्कटप र मोबाइलको लागि द्वि-दिशात्मक बहुभाषी सांकेतिक भाषा अनुवाद एप

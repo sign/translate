@@ -1,1 +1,1 @@
-Sign language translator app for desktop and mobile
+ორმხრივი მრავალენოვანი ჟესტების ენის თარგმნის აპლიკაცია დესკტოპისთვის და მობილურისთვის
