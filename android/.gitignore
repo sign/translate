@@ -100,4 +100,6 @@ app/src/main/assets/capacitor.config.json
 
 # Screenshots
 fastlane/metadata/**/*.png
+fastlane/metadata/android/background.jpeg
+fastlane/metadata/android/Framefile.json
 !fastlane/metadata/**/*_framed.png

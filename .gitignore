@@ -59,3 +59,7 @@ functions/src/playground.ts
 .firebase
 
 .env
+
+
+src/assets/promotional/about/iphone/*.png
+src/assets/promotional/about/android/*.png
