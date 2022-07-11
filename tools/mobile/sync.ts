@@ -9,6 +9,8 @@ async function main() {
 
   await project.android.setPackageName(capacitorConfig.appId);
   await project.android.setVersionName(xpackage.version);
+  const [major, minor, patch] = xpackage.version.split('.').map(Number);
+  await project.android.setVersionCode(major * 10000 + minor * 100 + patch);
 
   for (const build of ['Debug', 'Release']) {
     await project.ios.setBundleId('App', build, capacitorConfig.appId);
