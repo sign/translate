@@ -49,6 +49,10 @@
       "hero": {
         "title": "Translate between 40+ signed and spoken languages in real-time.",
         "img": "Example of live translation between American Sign Language and English"
+      },
+      "direction": {
+        "spoken-to-signed": "Translate from spoken to signed languages",
+        "signed-to-spoken": "Or from signed to spoken languages"
       }
     },
     "languages": {

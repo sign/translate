@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tarjamahkeun antara 40+ basa anu ditandatanganan sareng diucapkeun sacara real-time.",
         "img": "Conto tarjamahan langsung antara Basa Isyarat Amérika sareng Inggris"
+      },
+      "direction": {
+        "spoken-to-signed": "Tarjamahkeun tina basa lisan ka basa anu ditandatanganan",
+        "signed-to-spoken": "Atawa tina ditandatanganan kana basa lisan"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Eureun tarjamahan ku sora",
     "not-allowed": "Peryogi idin pikeun nganggo mikropon",
     "language-not-supported": "Basa nu dipilih teu dirojong",
-    "browser-not-supported": "Input sora teu dirojong dina browser ieu"
+    "browser-not-supported": "Input sora teu dirojong dina browser ieu",
+    "service-not-allowed": "Peryogi idin pikeun ngagunakeun pangakuan ucapan"
   },
   "legal": {
     "terms": {

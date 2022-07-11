@@ -45,6 +45,10 @@
       "hero": {
         "title": "ከ40+ በላይ የተፈረሙ እና የሚነገሩ ቋንቋዎችን በቅጽበት ይተርጉሙ።",
         "img": "በአሜሪካ የምልክት ቋንቋ እና በእንግሊዝኛ መካከል የቀጥታ ትርጉም ምሳሌ"
+      },
+      "direction": {
+        "spoken-to-signed": "ከተነገረ ወደ ፊርማ ቋንቋዎች ተርጉም።",
+        "signed-to-spoken": "ወይም ከተፈረመበት እስከ የንግግር ቋንቋዎች"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "በድምጽ መተርጎም አቁም",
     "not-allowed": "ማይክሮፎን ለመጠቀም ፍቃድ ያስፈልጋል",
     "language-not-supported": "የተመረጠ ቋንቋ አይደገፍም።",
-    "browser-not-supported": "የድምጽ ግቤት በዚህ አሳሽ ላይ አይደገፍም።"
+    "browser-not-supported": "የድምጽ ግቤት በዚህ አሳሽ ላይ አይደገፍም።",
+    "service-not-allowed": "የንግግር ማወቂያን ለመጠቀም ፈቃድ ያስፈልጋል"
   },
   "legal": {
     "terms": {

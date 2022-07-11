@@ -45,6 +45,10 @@
       "hero": {
         "title": "Vertaal tussen 40+ gebare- en gesproke tale intyds.",
         "img": "Voorbeeld van lewendige vertaling tussen Amerikaanse Gebaretaal en Engels"
+      },
+      "direction": {
+        "spoken-to-signed": "Vertaal van gesproke na gebaretale",
+        "signed-to-spoken": "Of van gebare- tot gesproke tale"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stop vertaling per stem",
     "not-allowed": "Benodig toestemming om mikrofoon te gebruik",
     "language-not-supported": "Geselekteerde taal word nie ondersteun nie",
-    "browser-not-supported": "Steminvoer word nie op hierdie blaaier ondersteun nie"
+    "browser-not-supported": "Steminvoer word nie op hierdie blaaier ondersteun nie",
+    "service-not-allowed": "Benodig toestemming om spraakherkenning te gebruik"
   },
   "legal": {
     "terms": {

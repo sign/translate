@@ -45,6 +45,10 @@
       "hero": {
         "title": "Překládejte mezi 40+ podepsanými a mluvenými jazyky v reálném čase.",
         "img": "Příklad živého překladu mezi americkým znakovým jazykem a angličtinou"
+      },
+      "direction": {
+        "spoken-to-signed": "Překlad z mluveného do znakového jazyka",
+        "signed-to-spoken": "Nebo ze znakového jazyka do mluveného jazyka"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Zastavit překlad hlasem",
     "not-allowed": "Potřebujete povolení k použití mikrofonu",
     "language-not-supported": "Vybraný jazyk není podporován",
-    "browser-not-supported": "Tento prohlížeč nepodporuje hlasový vstup"
+    "browser-not-supported": "Tento prohlížeč nepodporuje hlasový vstup",
+    "service-not-allowed": "K použití rozpoznávání řeči potřebujete oprávnění"
   },
   "legal": {
     "terms": {

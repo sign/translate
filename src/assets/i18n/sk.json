@@ -45,6 +45,10 @@
       "hero": {
         "title": "Prekladajte medzi 40+ podpísanými a hovorenými jazykmi v reálnom čase.",
         "img": "Príklad živého prekladu medzi americkým posunkovým jazykom a angličtinou"
+      },
+      "direction": {
+        "spoken-to-signed": "Preklad z hovoreného do posunkového jazyka",
+        "signed-to-spoken": "Alebo od podpísaných po hovorené jazyky"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Zastaviť preklad hlasom",
     "not-allowed": "Na používanie mikrofónu potrebujete povolenie",
     "language-not-supported": "Vybraný jazyk nie je podporovaný",
-    "browser-not-supported": "Tento prehliadač nepodporuje hlasový vstup"
+    "browser-not-supported": "Tento prehliadač nepodporuje hlasový vstup",
+    "service-not-allowed": "Na používanie rozpoznávania reči potrebujete povolenie"
   },
   "legal": {
     "terms": {

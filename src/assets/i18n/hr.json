@@ -45,6 +45,10 @@
       "hero": {
         "title": "Prevodite između 40+ znakovnih i govornih jezika u stvarnom vremenu.",
         "img": "Primjer prijevoda uživo između američkog znakovnog jezika i engleskog"
+      },
+      "direction": {
+        "spoken-to-signed": "Prevodite s govornog na znakovni jezik",
+        "signed-to-spoken": "Ili sa znakovnog na govorni jezik"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Zaustavite prijevod glasom",
     "not-allowed": "Potrebno je dopuštenje za korištenje mikrofona",
     "language-not-supported": "Odabrani jezik nije podržan",
-    "browser-not-supported": "Glasovni unos nije podržan u ovom pregledniku"
+    "browser-not-supported": "Glasovni unos nije podržan u ovom pregledniku",
+    "service-not-allowed": "Trebam dopuštenje za korištenje prepoznavanja govora"
   },
   "legal": {
     "terms": {

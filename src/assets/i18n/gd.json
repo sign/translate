@@ -45,6 +45,10 @@
       "hero": {
         "title": "Eadar-theangaich eadar 40+ cànan soidhnichte agus labhairteach ann an àm fìor.",
         "img": "Eisimpleir de eadar-theangachadh beò eadar Cànan Soidhnidh Ameireagaidh agus Beurla"
+      },
+      "direction": {
+        "spoken-to-signed": "Eadar-theangaich bho chànanan labhairteach gu cànanan soidhnichte",
+        "signed-to-spoken": "No bho shoidhnichean gu cànanan labhairteach"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Cuir stad air eadar-theangachadh le guth",
     "not-allowed": "Feum air cead airson microfòn a chleachdadh",
     "language-not-supported": "Chan eil taic ris a' chànan a thagh thu",
-    "browser-not-supported": "Chan eil taic ri cuir a-steach gutha sa bhrobhsair seo"
+    "browser-not-supported": "Chan eil taic ri cuir a-steach gutha sa bhrobhsair seo",
+    "service-not-allowed": "Feum air cead gus aithne cainnte a chleachdadh"
   },
   "legal": {
     "terms": {

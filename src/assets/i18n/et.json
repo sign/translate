@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tõlkige reaalajas enam kui 40 viipe- ja kõnekeele vahel.",
         "img": "Näide otsetõlkest Ameerika viipekeele ja inglise keele vahel"
+      },
+      "direction": {
+        "spoken-to-signed": "Tõlkige kõnekeeltest viipekeeltesse",
+        "signed-to-spoken": "Või viipekeelest kõnekeeleni"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Peatage häältõlge",
     "not-allowed": "Mikrofoni kasutamiseks on vaja luba",
     "language-not-supported": "Valitud keelt ei toetata",
-    "browser-not-supported": "Selles brauseris häälsisendit ei toetata"
+    "browser-not-supported": "Selles brauseris häälsisendit ei toetata",
+    "service-not-allowed": "Kõnetuvastuse kasutamiseks on vaja luba"
   },
   "legal": {
     "terms": {

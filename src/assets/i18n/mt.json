@@ -45,6 +45,10 @@
       "hero": {
         "title": "Ittraduċi bejn aktar minn 40 lingwa ffirmata u mitkellma f'ħin reali.",
         "img": "Eżempju ta' traduzzjoni diretta bejn il-Lingwa tas-Sinjali Amerikana u l-Ingliż"
+      },
+      "direction": {
+        "spoken-to-signed": "Ittraduċi minn lingwi mitkellma għal lingwi tas-sinjali",
+        "signed-to-spoken": "Jew minn lingwi ffirmati għal lingwi mitkellma"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Waqqaf it-traduzzjoni bil-vuċi",
     "not-allowed": "Jeħtieġ permess biex tuża mikrofonu",
     "language-not-supported": "Il-lingwa magħżula mhix appoġġjata",
-    "browser-not-supported": "Id-dħul tal-vuċi mhuwiex appoġġjat fuq dan il-browser"
+    "browser-not-supported": "Id-dħul tal-vuċi mhuwiex appoġġjat fuq dan il-browser",
+    "service-not-allowed": "Jeħtieġ permess biex tuża r-rikonoxximent tad-diskors"
   },
   "legal": {
     "terms": {

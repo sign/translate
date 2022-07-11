@@ -1,6 +1,12 @@
 select {
   border: none;
+  background: transparent;
+
   &:focus-visible {
     outline: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
   }
 }

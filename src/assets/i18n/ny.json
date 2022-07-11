@@ -45,6 +45,10 @@
       "hero": {
         "title": "Masulirani pakati pa 40+ zilankhulo zosayinidwa ndi zoyankhulidwa munthawi yeniyeni.",
         "img": "Chitsanzo cha kumasulira kwamoyo pakati pa Chinenero Chamanja cha ku America ndi Chingerezi"
+      },
+      "direction": {
+        "spoken-to-signed": "Masulirani kuchokera ku zilankhulo zoyankhulidwa ndi manja",
+        "signed-to-spoken": "Kapena kuchokera ku zilankhulo zoyankhulidwa ndi manja mpaka zolankhulidwa"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Siyani kumasulira ndi mawu",
     "not-allowed": "Mukufuna chilolezo kuti mugwiritse ntchito cholankhulira",
     "language-not-supported": "Chiyankhulo chosankhidwa sichimatheka",
-    "browser-not-supported": "Kuyika mawu sikutheka pa msakatuliwu"
+    "browser-not-supported": "Kuyika mawu sikutheka pa msakatuliwu",
+    "service-not-allowed": "Mukufuna chilolezo kuti mugwiritse ntchito kuzindikira mawu"
   },
   "legal": {
     "terms": {

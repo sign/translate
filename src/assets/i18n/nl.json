@@ -45,6 +45,10 @@
       "hero": {
         "title": "Vertaal in realtime tussen 40+ ondertekende en gesproken talen.",
         "img": "Voorbeeld van live vertaling tussen Amerikaanse Gebarentaal en Engels"
+      },
+      "direction": {
+        "spoken-to-signed": "Vertalen van gesproken naar gebarentalen",
+        "signed-to-spoken": "Of van gebarentaal naar gesproken talen"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Vertalen met spraak stoppen",
     "not-allowed": "Toestemming nodig om microfoon te gebruiken",
     "language-not-supported": "Geselecteerde taal wordt niet ondersteund",
-    "browser-not-supported": "Spraakinvoer wordt niet ondersteund in deze browser"
+    "browser-not-supported": "Spraakinvoer wordt niet ondersteund in deze browser",
+    "service-not-allowed": "Toestemming nodig om spraakherkenning te gebruiken"
   },
   "legal": {
     "terms": {

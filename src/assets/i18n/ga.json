@@ -45,6 +45,10 @@
       "hero": {
         "title": "Aistrigh idir 40+ teanga sínithe agus labhartha i bhfíor-am.",
         "img": "Sampla d’aistriúchán beo idir Teanga Chomharthaíochta Mheiriceá agus Béarla"
+      },
+      "direction": {
+        "spoken-to-signed": "Aistrigh ó theangacha labhartha go teangacha sínithe",
+        "signed-to-spoken": "Nó ó theangacha sínithe go teanga labhartha"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Cuir stop leis an aistriúchán trí ghuth",
     "not-allowed": "Teastaíonn cead chun micreafón a úsáid",
     "language-not-supported": "Ní thacaítear leis an teanga roghnaithe",
-    "browser-not-supported": "Ní thacaítear le hionchur gutha ar an mbrabhsálaí seo"
+    "browser-not-supported": "Ní thacaítear le hionchur gutha ar an mbrabhsálaí seo",
+    "service-not-allowed": "Teastaíonn cead chun aithint cainte a úsáid"
   },
   "legal": {
     "terms": {

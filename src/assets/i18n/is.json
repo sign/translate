@@ -45,6 +45,10 @@
       "hero": {
         "title": "Þýddu á milli 40+ táknmál og talað tungumál í rauntíma.",
         "img": "Dæmi um lifandi þýðingu á milli amerísks táknmáls og ensku"
+      },
+      "direction": {
+        "spoken-to-signed": "Þýða úr töluðu yfir á táknmál",
+        "signed-to-spoken": "Eða frá táknmáli yfir í talað tungumál"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Hættu að þýða með rödd",
     "not-allowed": "Þarf leyfi til að nota hljóðnema",
     "language-not-supported": "Valið tungumál er ekki stutt",
-    "browser-not-supported": "Raddinnsláttur er ekki stutt í þessum vafra"
+    "browser-not-supported": "Raddinnsláttur er ekki stutt í þessum vafra",
+    "service-not-allowed": "Þarftu leyfi til að nota talgreiningu"
   },
   "legal": {
     "terms": {

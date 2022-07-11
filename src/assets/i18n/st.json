@@ -45,6 +45,10 @@
       "hero": {
         "title": "Fetolela lipakeng tsa 40+ lipuo tsa matsoho le tse buuoang ka nako ea sebele.",
         "img": "Mohlala oa phetolelo e phelang lipakeng tsa Puo ea Matsoho ea Amerika le Senyesemane"
+      },
+      "direction": {
+        "spoken-to-signed": "Fetolela ho tloha lipuong tse buuoang ho ea ho lipuo tsa matsoho",
+        "signed-to-spoken": "Kapa ho tloha lipuong tsa matsoho ho ea ho tse buuoang"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Emisa ho fetolela ka lentsoe",
     "not-allowed": "U hloka tumello ea ho sebelisa maekrofounu",
     "language-not-supported": "Puo e khethiloeng ha e tšehetsoe",
-    "browser-not-supported": "Voice input ha e sebetse ho porausara ena"
+    "browser-not-supported": "Voice input ha e sebetse ho porausara ena",
+    "service-not-allowed": "U hloka tumello ea ho sebelisa temoho ea puo"
   },
   "legal": {
     "terms": {

@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tumọ laarin 40+ ibuwọlu ati awọn ede ti a sọ ni akoko gidi.",
         "img": "Apeere ti itumọ laaye laarin Ede Atẹle Amẹrika ati Gẹẹsi"
+      },
+      "direction": {
+        "spoken-to-signed": "Tumọ lati sisọ si awọn ede ibuwọlu",
+        "signed-to-spoken": "Tabi lati ibuwọlu si awọn ede sisọ"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Duro itumọ nipasẹ ohun",
     "not-allowed": "Nilo igbanilaaye lati lo gbohungbohun",
     "language-not-supported": "Ede ti a yan ko ni atilẹyin",
-    "browser-not-supported": "Iṣagbewọle ohun ko ni atilẹyin lori ẹrọ aṣawakiri yii"
+    "browser-not-supported": "Iṣagbewọle ohun ko ni atilẹyin lori ẹrọ aṣawakiri yii",
+    "service-not-allowed": "Nilo igbanilaaye lati lo idanimọ ọrọ"
   },
   "legal": {
     "terms": {

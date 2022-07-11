@@ -45,6 +45,10 @@
       "hero": {
         "title": "Traduza entre mais de 40 idiomas sinalizados e falados em tempo real.",
         "img": "Exemplo de tradução ao vivo entre American Sign Language e Inglês"
+      },
+      "direction": {
+        "spoken-to-signed": "Traduzir de línguas faladas para línguas sinalizadas",
+        "signed-to-spoken": "Ou de línguas sinalizadas para línguas faladas"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Parar tradução por voz",
     "not-allowed": "Precisa de permissão para usar o microfone",
     "language-not-supported": "O idioma selecionado não é compatível",
-    "browser-not-supported": "A entrada de voz não é compatível com este navegador"
+    "browser-not-supported": "A entrada de voz não é compatível com este navegador",
+    "service-not-allowed": "Precisa de permissão para usar o reconhecimento de fala"
   },
   "legal": {
     "terms": {

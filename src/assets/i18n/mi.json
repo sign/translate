@@ -45,6 +45,10 @@
       "hero": {
         "title": "Whakamāoritia i waenganui i te 40+ reo hainatia me te reo korero i te wa-tūturu.",
         "img": "He tauira o te whakamaoritanga ora i waenga i te Reo Waitohu Amerika me te reo Ingarihi"
+      },
+      "direction": {
+        "spoken-to-signed": "Whakamaori mai i nga reo korero ki nga reo hainatia",
+        "signed-to-spoken": "Mai i haina ranei ki nga reo korero"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Kati te whakamaoritanga ma te reo",
     "not-allowed": "Me whakaae ki te whakamahi hopuoro",
     "language-not-supported": "Kaore i te tautokohia te reo kua tohua",
-    "browser-not-supported": "Kaore i te tautokohia te whakauru reo i runga i tenei tirotiro"
+    "browser-not-supported": "Kaore i te tautokohia te whakauru reo i runga i tenei tirotiro",
+    "service-not-allowed": "Me whai whakaaetanga ki te whakamahi i te tohu korero"
   },
   "legal": {
     "terms": {

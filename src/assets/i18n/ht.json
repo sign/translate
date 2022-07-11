@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tradwi ant plis pase 40 lang ki pale ak siyen an tan reyèl.",
         "img": "Egzanp tradiksyon an dirèk ant Lang siy Ameriken ak Angle"
+      },
+      "direction": {
+        "spoken-to-signed": "Tradui soti nan lang pale ak siyen",
+        "signed-to-spoken": "Oswa soti nan lang siyen yo pale"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Sispann tradiksyon pa vwa",
     "not-allowed": "Bezwen pèmisyon pou itilize mikwofòn",
     "language-not-supported": "Lang chwazi pa sipòte",
-    "browser-not-supported": "Antre vwa pa sipòte sou navigatè sa a"
+    "browser-not-supported": "Antre vwa pa sipòte sou navigatè sa a",
+    "service-not-allowed": "Bezwen pèmisyon pou itilize rekonesans lapawòl"
   },
   "legal": {
     "terms": {

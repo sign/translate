@@ -45,6 +45,10 @@
       "hero": {
         "title": "Itzuli sinatutako eta ahozko 40 hizkuntza baino gehiago denbora errealean.",
         "img": "Amerikako zeinu hizkuntzaren eta ingelesaren arteko zuzeneko itzulpenaren adibidea"
+      },
+      "direction": {
+        "spoken-to-signed": "Itzuli ahozko hizkuntzetatik zeinu hizkuntzetara",
+        "signed-to-spoken": "Edo zeinudunetatik ahozko hizkuntzetara"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Gelditu ahots bidezko itzulpena",
     "not-allowed": "Mikrofonoa erabiltzeko baimena behar da",
     "language-not-supported": "Hautatutako hizkuntza ez da onartzen",
-    "browser-not-supported": "Arakatzaile honetan ez da ahots bidezko idazketa onartzen"
+    "browser-not-supported": "Arakatzaile honetan ez da ahots bidezko idazketa onartzen",
+    "service-not-allowed": "Ahots-ezagutza erabiltzeko baimena behar da"
   },
   "legal": {
     "terms": {

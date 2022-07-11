@@ -45,6 +45,10 @@
       "hero": {
         "title": "Di navbera 40+ zimanên îmzekirî û axaftinê de di dema rast de wergerînin.",
         "img": "Nimûneya wergera zindî ya di navbera Zimanê îşaretek Amerîkî û Englishngilîzî de"
+      },
+      "direction": {
+        "spoken-to-signed": "Ji zimanên axaftinê wergerînin zimanên îşaretan",
+        "signed-to-spoken": "An jî ji zimanên îmzekirî ber bi zimanên axaftinê ve"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Wergera bi deng raweste",
     "not-allowed": "Ji bo bikaranîna mîkrofonê destûr lazim e",
     "language-not-supported": "Zimanê hilbijartî nayê piştgirî kirin",
-    "browser-not-supported": "Ketina deng li ser vê gerokê nayê piştgirî kirin"
+    "browser-not-supported": "Ketina deng li ser vê gerokê nayê piştgirî kirin",
+    "service-not-allowed": "Ji bo bikaranîna naskirina axaftinê destûr lazim e"
   },
   "legal": {
     "terms": {

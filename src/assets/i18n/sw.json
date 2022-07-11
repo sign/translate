@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tafsiri kati ya lugha 40+ zilizotiwa sahihi na zinazozungumzwa katika muda halisi.",
         "img": "Mfano wa tafsiri ya moja kwa moja kati ya Lugha ya Ishara ya Marekani na Kiingereza"
+      },
+      "direction": {
+        "spoken-to-signed": "Tafsiri kutoka lugha zinazozungumzwa hadi lugha za ishara",
+        "signed-to-spoken": "Au kutoka kwa lugha zilizotiwa sahihi hadi zinazozungumzwa"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Acha kutafsiri kwa sauti",
     "not-allowed": "Unahitaji ruhusa ya kutumia maikrofoni",
     "language-not-supported": "Lugha iliyochaguliwa haitumiki",
-    "browser-not-supported": "Uingizaji data kwa kutamka hautumiki kwenye kivinjari hiki"
+    "browser-not-supported": "Uingizaji data kwa kutamka hautumiki kwenye kivinjari hiki",
+    "service-not-allowed": "Unahitaji ruhusa ya kutumia utambuzi wa usemi"
   },
   "legal": {
     "terms": {

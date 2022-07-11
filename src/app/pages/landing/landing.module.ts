@@ -15,6 +15,7 @@ import {AboutDirectionComponent} from './about/about-direction/about-direction.c
 import {AboutOfflineComponent} from './about/about-offline/about-offline.component';
 import {AboutAppearanceComponent} from './about/about-appearance/about-appearance.component';
 import {AboutSharingComponent} from './about/about-sharing/about-sharing.component';
+import {LazyMapComponent} from './languages/lazy-map/lazy-map.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {AboutSharingComponent} from './about/about-sharing/about-sharing.compone
     AboutOfflineComponent,
     AboutAppearanceComponent,
     AboutSharingComponent,
+    LazyMapComponent,
   ],
   imports: [CommonModule, AppAngularMaterialModule, AppTranslocoModule, LandingRoutingModule],
   bootstrap: [LandingComponent],

@@ -45,6 +45,10 @@
       "hero": {
         "title": "Paghubad tali sa 40+ nga gipirmahan ug gisulti nga mga sinultian sa tinuud nga oras.",
         "img": "Pananglitan sa live nga paghubad tali sa American Sign Language ug English"
+      },
+      "direction": {
+        "spoken-to-signed": "Paghubad gikan sa sinultihan ngadto sa signed nga mga pinulongan",
+        "signed-to-spoken": "O gikan sa gipirmahan ngadto sa gisulti nga mga pinulongan"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Hunonga ang paghubad pinaagi sa tingog",
     "not-allowed": "Nagkinahanglan og pagtugot sa paggamit sa mikropono",
     "language-not-supported": "Ang pinili nga pinulongan wala gisuportahan",
-    "browser-not-supported": "Ang input sa tingog wala gisuportahan sa kini nga browser"
+    "browser-not-supported": "Ang input sa tingog wala gisuportahan sa kini nga browser",
+    "service-not-allowed": "Nagkinahanglan og pagtugot sa paggamit sa speech recognition"
   },
   "legal": {
     "terms": {

@@ -45,6 +45,10 @@
       "hero": {
         "title": "Översätt mellan 40+ teckenspråk och talade språk i realtid.",
         "img": "Exempel på liveöversättning mellan amerikanskt teckenspråk och engelska"
+      },
+      "direction": {
+        "spoken-to-signed": "Översätt från talat till teckenspråk",
+        "signed-to-spoken": "Eller från teckenspråk till talade språk"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stoppa översättning med röst",
     "not-allowed": "Behöver tillstånd för att använda mikrofon",
     "language-not-supported": "Det valda språket stöds inte",
-    "browser-not-supported": "Röstinmatning stöds inte i den här webbläsaren"
+    "browser-not-supported": "Röstinmatning stöds inte i den här webbläsaren",
+    "service-not-allowed": "Behöver tillstånd för att använda taligenkänning"
   },
   "legal": {
     "terms": {

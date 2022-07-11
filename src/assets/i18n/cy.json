@@ -45,6 +45,10 @@
       "hero": {
         "title": "Cyfieithwch rhwng 40+ o ieithoedd arwyddo a llafar mewn amser real.",
         "img": "Enghraifft o gyfieithiad byw rhwng Iaith Arwyddion America a Saesneg"
+      },
+      "direction": {
+        "spoken-to-signed": "Cyfieithu o ieithoedd llafar i iaith arwyddion",
+        "signed-to-spoken": "Neu o ieithoedd arwyddo i siarad"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stopiwch gyfieithu trwy lais",
     "not-allowed": "Angen caniatâd i ddefnyddio meicroffon",
     "language-not-supported": "Ni chefnogir yr iaith a ddewiswyd",
-    "browser-not-supported": "Nid yw mewnbwn llais yn cael ei gefnogi ar y porwr hwn"
+    "browser-not-supported": "Nid yw mewnbwn llais yn cael ei gefnogi ar y porwr hwn",
+    "service-not-allowed": "Angen caniatâd i ddefnyddio adnabod lleferydd"
   },
   "legal": {
     "terms": {

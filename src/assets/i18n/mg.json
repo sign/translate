@@ -45,6 +45,10 @@
       "hero": {
         "title": "Mandika teny eo anelanelan'ny fiteny 40+ voasonia sy tenenina amin'ny fotoana tena izy.",
         "img": "Ohatra amin'ny fandikana mivantana eo amin'ny Tenin'ny Tanana Amerikana sy Anglisy"
+      },
+      "direction": {
+        "spoken-to-signed": "Adikao avy amin'ny fiteny ampiasaina amin'ny teny sonia",
+        "signed-to-spoken": "Na avy amin'ny sonia mankany amin'ny fiteny ampiasaina"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Atsaharo ny fandikana amin'ny feo",
     "not-allowed": "Mila alalana hampiasa mikrô",
     "language-not-supported": "Tsy tohana ny fiteny voafantina",
-    "browser-not-supported": "Tsy tohana amin'ity mpitety tranonkala ity ny fampidirana feo"
+    "browser-not-supported": "Tsy tohana amin'ity mpitety tranonkala ity ny fampidirana feo",
+    "service-not-allowed": "Mila fahazoan-dalana hampiasa ny famantarana ny kabary"
   },
   "legal": {
     "terms": {

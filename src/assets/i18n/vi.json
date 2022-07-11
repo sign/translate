@@ -45,6 +45,10 @@
       "hero": {
         "title": "Dịch giữa hơn 40 ngôn ngữ được ký và nói trong thời gian thực.",
         "img": "Ví dụ về bản dịch trực tiếp giữa Ngôn ngữ ký hiệu Mỹ và tiếng Anh"
+      },
+      "direction": {
+        "spoken-to-signed": "Dịch từ ngôn ngữ nói sang ngôn ngữ đã ký",
+        "signed-to-spoken": "Hoặc từ ngôn ngữ đã ký sang ngôn ngữ nói"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Dừng dịch bằng giọng nói",
     "not-allowed": "Cần quyền để sử dụng micrô",
     "language-not-supported": "Ngôn ngữ đã chọn không được hỗ trợ",
-    "browser-not-supported": "Nhập liệu bằng giọng nói không được hỗ trợ trên trình duyệt này"
+    "browser-not-supported": "Nhập liệu bằng giọng nói không được hỗ trợ trên trình duyệt này",
+    "service-not-allowed": "Cần quyền sử dụng nhận dạng giọng nói"
   },
   "legal": {
     "terms": {

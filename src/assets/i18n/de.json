@@ -45,6 +45,10 @@
       "hero": {
         "title": "Übersetzen Sie in Echtzeit zwischen mehr als 40 Gebärden- und Lautsprachen.",
         "img": "Beispiel einer Live-Übersetzung zwischen Amerikanischer Gebärdensprache und Englisch"
+      },
+      "direction": {
+        "spoken-to-signed": "Übersetzen Sie von gesprochenen in Gebärdensprachen",
+        "signed-to-spoken": "Oder von Gebärden- zu Lautsprachen"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stoppen Sie die Sprachübersetzung",
     "not-allowed": "Benötigen Sie die Erlaubnis, das Mikrofon zu verwenden",
     "language-not-supported": "Ausgewählte Sprache wird nicht unterstützt",
-    "browser-not-supported": "Die Spracheingabe wird in diesem Browser nicht unterstützt"
+    "browser-not-supported": "Die Spracheingabe wird in diesem Browser nicht unterstützt",
+    "service-not-allowed": "Benötigen Sie eine Berechtigung zur Verwendung der Spracherkennung"
   },
   "legal": {
     "terms": {

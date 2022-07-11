@@ -45,6 +45,10 @@
       "hero": {
         "title": "Fassara tsakanin 40+ sa hannu da harsunan magana a ainihin-lokaci.",
         "img": "Misalin fassarar kai tsaye tsakanin Harshen Alamun Amurka da Ingilishi"
+      },
+      "direction": {
+        "spoken-to-signed": "Fassara daga magana zuwa harsunan sa hannu",
+        "signed-to-spoken": "Ko daga sa hannu zuwa harsunan magana"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Dakatar da fassara ta murya",
     "not-allowed": "Bukatar izini don amfani da makirufo",
     "language-not-supported": "Ba a tallafawa harshen da aka zaɓa",
-    "browser-not-supported": "Ba a tallafawa shigar da murya akan wannan mai binciken"
+    "browser-not-supported": "Ba a tallafawa shigar da murya akan wannan mai binciken",
+    "service-not-allowed": "Bukatar izini don amfani da tantance magana"
   },
   "legal": {
     "terms": {

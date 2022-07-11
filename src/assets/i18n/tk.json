@@ -45,6 +45,10 @@
       "hero": {
         "title": "40+ gol çekilen we gürlenýän dilleriň arasynda hakyky wagtda terjime ediň.",
         "img": "Amerikan alamat dili bilen iňlis diliniň arasynda göni terjime edilmeginiň mysaly"
+      },
+      "direction": {
+        "spoken-to-signed": "Gepleşiklerden gol çekilen dillere terjime ediň",
+        "signed-to-spoken": "Ora-da gol çekilen dillerden başlap"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Ses bilen terjime etmegi bes ediň",
     "not-allowed": "Mikrofony ulanmak üçin rugsat gerek",
     "language-not-supported": "Saýlanan dil goldanylmaýar",
-    "browser-not-supported": "Bu brauzerde ses girizmek goldanylmaýar"
+    "browser-not-supported": "Bu brauzerde ses girizmek goldanylmaýar",
+    "service-not-allowed": "Söz tanamak üçin rugsat gerek"
   },
   "legal": {
     "terms": {

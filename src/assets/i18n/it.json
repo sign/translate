@@ -45,6 +45,10 @@
       "hero": {
         "title": "Traduci tra oltre 40 lingue parlate e parlate in tempo reale.",
         "img": "Esempio di traduzione dal vivo tra la lingua dei segni americana e l'inglese"
+      },
+      "direction": {
+        "spoken-to-signed": "Traduci dalle lingue parlate a quelle dei segni",
+        "signed-to-spoken": "O dalle lingue dei segni a quelle parlate"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Interrompi la traduzione vocale",
     "not-allowed": "È necessaria l'autorizzazione per utilizzare il microfono",
     "language-not-supported": "La lingua selezionata non è supportata",
-    "browser-not-supported": "L'input vocale non è supportato su questo browser"
+    "browser-not-supported": "L'input vocale non è supportato su questo browser",
+    "service-not-allowed": "È necessaria l'autorizzazione per utilizzare il riconoscimento vocale"
   },
   "legal": {
     "terms": {

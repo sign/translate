@@ -45,6 +45,10 @@
       "hero": {
         "title": "Oversæt mellem 40+ tegnsprog og talte sprog i realtid.",
         "img": "Eksempel på liveoversættelse mellem amerikansk tegnsprog og engelsk"
+      },
+      "direction": {
+        "spoken-to-signed": "Oversæt fra talte til tegnsprog",
+        "signed-to-spoken": "Eller fra tegnsprog til talesprog"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stop oversættelse med stemmen",
     "not-allowed": "Har brug for tilladelse til at bruge mikrofon",
     "language-not-supported": "Det valgte sprog understøttes ikke",
-    "browser-not-supported": "Stemmeinput understøttes ikke i denne browser"
+    "browser-not-supported": "Stemmeinput understøttes ikke i denne browser",
+    "service-not-allowed": "Har brug for tilladelse til at bruge talegenkendelse"
   },
   "legal": {
     "terms": {

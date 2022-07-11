@@ -45,6 +45,10 @@
       "hero": {
         "title": "Fordítson valós időben több mint 40 aláírt és beszélt nyelv között.",
         "img": "Példa élő fordításra az amerikai jelnyelv és az angol között"
+      },
+      "direction": {
+        "spoken-to-signed": "Fordítás beszélt nyelvről jelnyelvre",
+        "signed-to-spoken": "Vagy a jelzett nyelvektől a beszélt nyelvekig"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Hangos fordítás leállítása",
     "not-allowed": "A mikrofon használatához engedély szükséges",
     "language-not-supported": "A kiválasztott nyelv nem támogatott",
-    "browser-not-supported": "A hangbevitel nem támogatott ebben a böngészőben"
+    "browser-not-supported": "A hangbevitel nem támogatott ebben a böngészőben",
+    "service-not-allowed": "Engedély kell a beszédfelismerés használatához"
   },
   "legal": {
     "terms": {

@@ -45,6 +45,10 @@
       "hero": {
         "title": "Unuhi ma waena o 40+ mau ʻōlelo pūlima a ʻōlelo ʻia i ka manawa maoli.",
         "img": "Ka laʻana o ka unuhi ola ma waena o ka ʻōlelo hōʻailona ʻAmelika a me ka ʻōlelo Pelekania"
+      },
+      "direction": {
+        "spoken-to-signed": "Unuhi mai ka ʻōlelo ʻōlelo i nā ʻōlelo pūlima",
+        "signed-to-spoken": "A i ʻole mai i pūlima ʻia i nā ʻōlelo ʻōlelo"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "E hooki i ka unuhi ma ka leo",
     "not-allowed": "Pono ka ʻae e hoʻohana i ka microphone",
     "language-not-supported": "ʻAʻole kākoʻo ʻia ka ʻōlelo i koho ʻia",
-    "browser-not-supported": "ʻAʻole kākoʻo ʻia ka hoʻokomo leo ma kēia polokalamu kele pūnaewele"
+    "browser-not-supported": "ʻAʻole kākoʻo ʻia ka hoʻokomo leo ma kēia polokalamu kele pūnaewele",
+    "service-not-allowed": "Pono ka ʻae e hoʻohana i ka ʻike ʻōlelo"
   },
   "legal": {
     "terms": {

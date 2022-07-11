@@ -55,6 +55,11 @@
               {
                 "input": "src/theme/styles.scss",
                 "bundleName": "app"
+              },
+              {
+                "input": "./node_modules/leaflet/dist/leaflet.css",
+                "bundleName": "map",
+                "inject": false
               }
             ],
             "stylePreprocessorOptions": {

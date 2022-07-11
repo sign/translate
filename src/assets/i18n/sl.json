@@ -45,6 +45,10 @@
       "hero": {
         "title": "Prevajajte med 40+ podpisanimi in govorjenimi jeziki v realnem času.",
         "img": "Primer prevoda v živo med ameriškim znakovnim jezikom in angleščino"
+      },
+      "direction": {
+        "spoken-to-signed": "Prevajajte iz govorjenih v znakovne jezike",
+        "signed-to-spoken": "Ali iz znakovnih v govorjene jezike"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Ustavi prevajanje z glasom",
     "not-allowed": "Potrebujem dovoljenje za uporabo mikrofona",
     "language-not-supported": "Izbrani jezik ni podprt",
-    "browser-not-supported": "Ta brskalnik ne podpira glasovnega vnosa"
+    "browser-not-supported": "Ta brskalnik ne podpira glasovnega vnosa",
+    "service-not-allowed": "Potrebujem dovoljenje za uporabo prepoznavanja govora"
   },
   "legal": {
     "terms": {

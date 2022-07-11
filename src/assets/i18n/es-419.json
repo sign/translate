@@ -45,6 +45,10 @@
       "hero": {
         "title": "Traduce entre más de 40 idiomas de señas y hablados en tiempo real.",
         "img": "Ejemplo de traducción en vivo entre el lenguaje de señas americano y el inglés"
+      },
+      "direction": {
+        "spoken-to-signed": "Traducir de lenguajes hablados a lenguajes de señas",
+        "signed-to-spoken": "O de lenguajes de señas a lenguajes hablados"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Detener la traducción por voz",
     "not-allowed": "Necesito permiso para usar el micrófono",
     "language-not-supported": "El idioma seleccionado no es compatible",
-    "browser-not-supported": "La entrada de voz no es compatible con este navegador"
+    "browser-not-supported": "La entrada de voz no es compatible con este navegador",
+    "service-not-allowed": "Necesita permiso para usar el reconocimiento de voz"
   },
   "legal": {
     "terms": {

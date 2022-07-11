@@ -45,6 +45,10 @@
       "hero": {
         "title": "Käännä yli 40 viittomakielen ja puhutun kielen välillä reaaliajassa.",
         "img": "Esimerkki live-käännöksestä amerikkalaisen viittomakielen ja englannin välillä"
+      },
+      "direction": {
+        "spoken-to-signed": "Käännä puhutuista viittomakielistä",
+        "signed-to-spoken": "Tai viittomakielistä puhuttuihin kieliin"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Pysäytä äänikääntäminen",
     "not-allowed": "Mikrofonin käyttöön tarvitaan lupa",
     "language-not-supported": "Valittua kieltä ei tueta",
-    "browser-not-supported": "Äänisyöttöä ei tueta tässä selaimessa"
+    "browser-not-supported": "Äänisyöttöä ei tueta tässä selaimessa",
+    "service-not-allowed": "Tarvitset luvan käyttää puheentunnistusta"
   },
   "legal": {
     "terms": {

@@ -45,6 +45,10 @@
       "hero": {
         "title": "Real vaqt rejimida 40 dan ortiq imzo qoʻyilgan va ogʻzaki tillar oʻrtasida tarjima qiling.",
         "img": "Amerika imo-ishora tili va ingliz tili o'rtasidagi jonli tarjimaga misol"
+      },
+      "direction": {
+        "spoken-to-signed": "Og'zaki tillardan imlo tillariga tarjima qiling",
+        "signed-to-spoken": "Yoki imo-ishorali tillardan og'zaki tillarga"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Ovozli tarjimani to'xtating",
     "not-allowed": "Mikrofondan foydalanish uchun ruxsat kerak",
     "language-not-supported": "Tanlangan til qo‘llab-quvvatlanmaydi",
-    "browser-not-supported": "Bu brauzerda ovozli kiritish qo‘llab-quvvatlanmaydi"
+    "browser-not-supported": "Bu brauzerda ovozli kiritish qo‘llab-quvvatlanmaydi",
+    "service-not-allowed": "Nutqni aniqlashdan foydalanish uchun ruxsat kerak"
   },
   "legal": {
     "terms": {

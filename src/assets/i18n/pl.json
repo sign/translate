@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tłumacz w czasie rzeczywistym między ponad 40 językami migowymi i mówionymi.",
         "img": "Przykład tłumaczenia na żywo między amerykańskim językiem migowym a angielskim"
+      },
+      "direction": {
+        "spoken-to-signed": "Tłumacz z języka mówionego na język migowy",
+        "signed-to-spoken": "Lub z języka migowego na język mówiony"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Zatrzymaj tłumaczenie głosowe",
     "not-allowed": "Potrzebujesz pozwolenia na używanie mikrofonu",
     "language-not-supported": "Wybrany język nie jest obsługiwany",
-    "browser-not-supported": "Wprowadzanie głosowe nie jest obsługiwane w tej przeglądarce"
+    "browser-not-supported": "Wprowadzanie głosowe nie jest obsługiwane w tej przeglądarce",
+    "service-not-allowed": "Potrzebujesz pozwolenia na korzystanie z rozpoznawania mowy"
   },
   "legal": {
     "terms": {

@@ -45,6 +45,10 @@
       "hero": {
         "title": "Guqulela phakathi kwe-40+ yeelwimi ezisayiniweyo nezithethwayo ngexesha lokwenyani.",
         "img": "Umzekelo wenguqulelo ephilayo phakathi koLwimi lweZandla lwaseMelika kunye nesiNgesi"
+      },
+      "direction": {
+        "spoken-to-signed": "Guqulela ukusuka kwiilwimi ezithethwa ngezandla",
+        "signed-to-spoken": "Okanye ukusuka kwiilwimi zezandla ukuya kwiilwimi ezithethwayo"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Yeka ukuguqulela ngelizwi",
     "not-allowed": "Udinga imvume yokusebenzisa imayikrofoni",
     "language-not-supported": "Ulwimi olukhethiweyo aluxhaswanga",
-    "browser-not-supported": "Ungeniso lwelizwi aluxhaswanga kwesi sikhangeli"
+    "browser-not-supported": "Ungeniso lwelizwi aluxhaswanga kwesi sikhangeli",
+    "service-not-allowed": "Udinga imvume yokusebenzisa ukuqondwa kwentetho"
   },
   "legal": {
     "terms": {

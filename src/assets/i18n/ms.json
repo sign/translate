@@ -45,6 +45,10 @@
       "hero": {
         "title": "Terjemah antara 40+ bahasa yang ditandatangani dan dituturkan dalam masa nyata.",
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggeris"
+      },
+      "direction": {
+        "spoken-to-signed": "Terjemah daripada bahasa pertuturan kepada bahasa isyarat",
+        "signed-to-spoken": "Atau daripada bahasa yang ditandatangani kepada bahasa yang dituturkan"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Hentikan terjemahan melalui suara",
     "not-allowed": "Perlu kebenaran untuk menggunakan mikrofon",
     "language-not-supported": "Bahasa yang dipilih tidak disokong",
-    "browser-not-supported": "Input suara tidak disokong pada penyemak imbas ini"
+    "browser-not-supported": "Input suara tidak disokong pada penyemak imbas ini",
+    "service-not-allowed": "Perlu kebenaran untuk menggunakan pengecaman pertuturan"
   },
   "legal": {
     "terms": {

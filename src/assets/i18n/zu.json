@@ -45,6 +45,10 @@
       "hero": {
         "title": "Humusha phakathi kwezilimi ezingu-40+ ezisayiniwe nezikhulunywayo ngesikhathi sangempela.",
         "img": "Isibonelo sokuhumusha bukhoma phakathi koLimi Lwezandla LwaseMelika kanye nesiNgisi"
+      },
+      "direction": {
+        "spoken-to-signed": "Humusha usuka ezilimini ezikhulunywayo uye ezilimini zezandla",
+        "signed-to-spoken": "Noma kusuka ezilimini ezisayiniwe kuye kwezikhulunywayo"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Misa ukuhumusha ngezwi",
     "not-allowed": "Udinga imvume yokusebenzisa imakrofoni",
     "language-not-supported": "Ulimi olukhethiwe alusekelwe",
-    "browser-not-supported": "Okufakwayo ngezwi akusekelwa kulesi siphequluli"
+    "browser-not-supported": "Okufakwayo ngezwi akusekelwa kulesi siphequluli",
+    "service-not-allowed": "Udinga imvume yokusebenzisa ukuqaphela inkulumo"
   },
   "legal": {
     "terms": {

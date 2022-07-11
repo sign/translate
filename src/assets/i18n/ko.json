@@ -45,6 +45,10 @@
       "hero": {
         "title": "40개 이상의 수화 및 구어를 실시간으로 번역합니다.",
         "img": "미국 수화와 영어의 실시간 번역 예"
+      },
+      "direction": {
+        "spoken-to-signed": "음성에서 수화로 번역",
+        "signed-to-spoken": "또는 수화에서 음성 언어로"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "음성 번역 중지",
     "not-allowed": "마이크 사용 권한 필요",
     "language-not-supported": "선택한 언어는 지원되지 않습니다",
-    "browser-not-supported": "이 브라우저에서는 음성 입력이 지원되지 않습니다."
+    "browser-not-supported": "이 브라우저에서는 음성 입력이 지원되지 않습니다.",
+    "service-not-allowed": "음성 인식을 사용하려면 권한이 필요합니다."
   },
   "legal": {
     "terms": {

@@ -82,7 +82,9 @@
     "three": "^0.142.0",
     "tslib": "^2.4.0",
     "web-vitals": "^2.1.4",
-    "zone.js": "~0.11.6"
+    "zone.js": "~0.11.6",
+    "leaflet": "^1.8.0",
+    "@asymmetrik/ngx-leaflet": "^13.0.2"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.1400.5",

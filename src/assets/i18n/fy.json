@@ -45,6 +45,10 @@
       "hero": {
         "title": "Oersette tusken 40+ ûndertekene en sprutsen talen yn real-time.",
         "img": "Foarbyld fan live oersetting tusken American Sign Language en Ingelsk"
+      },
+      "direction": {
+        "spoken-to-signed": "Oersette fan sprutsen nei ûndertekene talen",
+        "signed-to-spoken": "Of fan tekentalen nei sprektalen"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stopje oersetting mei stim",
     "not-allowed": "Tastimming nedich om mikrofoan te brûken",
     "language-not-supported": "Selekteare taal wurdt net stipe",
-    "browser-not-supported": "Stimynfier wurdt net stipe yn dizze browser"
+    "browser-not-supported": "Stimynfier wurdt net stipe yn dizze browser",
+    "service-not-allowed": "Tastimming nedich om spraakherkenning te brûken"
   },
   "legal": {
     "terms": {

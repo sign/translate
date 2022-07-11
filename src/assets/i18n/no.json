@@ -45,6 +45,10 @@
       "hero": {
         "title": "Oversett mellom 40+ tegnspråk og talespråk i sanntid.",
         "img": "Eksempel på direkte oversettelse mellom amerikansk tegnspråk og engelsk"
+      },
+      "direction": {
+        "spoken-to-signed": "Oversett fra talespråk til tegnspråk",
+        "signed-to-spoken": "Eller fra tegnspråk til talespråk"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Stopp oversettelsen med stemmen",
     "not-allowed": "Trenger tillatelse for å bruke mikrofon",
     "language-not-supported": "Det valgte språket støttes ikke",
-    "browser-not-supported": "Taleinndata støttes ikke i denne nettleseren"
+    "browser-not-supported": "Taleinndata støttes ikke i denne nettleseren",
+    "service-not-allowed": "Trenger tillatelse for å bruke talegjenkjenning"
   },
   "legal": {
     "terms": {

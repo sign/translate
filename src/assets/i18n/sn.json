@@ -45,6 +45,10 @@
       "hero": {
         "title": "Shandura pakati pe40+ mitauro yemasaini uye inotaurwa munguva chaiyo.",
         "img": "Muenzaniso weshanduro iripo pakati peMutauro Wemasaini wekuAmerica neChirungu"
+      },
+      "direction": {
+        "spoken-to-signed": "Shandura kubva mumitauro yekutaura kuenda kumasaini",
+        "signed-to-spoken": "Kana kuti kubva kumitauro yemasaini kuenda kune inotaurika"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Mira kushandura nezwi",
     "not-allowed": "Unoda mvumo yekushandisa maikorofoni",
     "language-not-supported": "Mutauro wakasarudzwa hautsigirwe",
-    "browser-not-supported": "Kuisa mazwi hakushandi pabrowser ino"
+    "browser-not-supported": "Kuisa mazwi hakushandi pabrowser ino",
+    "service-not-allowed": "Unoda mvumo yekushandisa kucherechedzwa kwekutaura"
   },
   "legal": {
     "terms": {

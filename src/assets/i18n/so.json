@@ -45,6 +45,10 @@
       "hero": {
         "title": "Turjun inta u dhaxaysa 40+ luqadaha saxeexan iyo kuwa lagu hadlo wakhtiga dhabta ah.",
         "img": "Tusaalaha turjumaada tooska ah ee u dhexeeya Luqadda Calaamadaha Ameerika iyo Ingiriisiga"
+      },
+      "direction": {
+        "spoken-to-signed": "Ka soo tarjun luqadaha lagu hadlo oo saxeex",
+        "signed-to-spoken": "Ama laga bilaabo saxeexa ilaa luqadaha lagu hadlo"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Jooji tarjumaada cod ahaan",
     "not-allowed": "U baahan ogolaansho si aad u isticmaasho makarafoon",
     "language-not-supported": "Luuqadda la doortay lama taageero",
-    "browser-not-supported": "Cod galinta lama taageero browserkan"
+    "browser-not-supported": "Cod galinta lama taageero browserkan",
+    "service-not-allowed": "U baahan ogolaansho si aad u isticmaasho aqoonsiga hadalka"
   },
   "legal": {
     "terms": {

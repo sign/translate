@@ -13,8 +13,10 @@ lane :beta do
     groups: "developoers"
   )
   upload_to_play_store(
+  package_name: "mt.sign.translate",
   track: 'beta',
-  skip_upload_apk: true
+  skip_upload_apk: true,
+  skip_upload_changelogs: true
   )
 end
 

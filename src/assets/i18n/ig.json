@@ -45,6 +45,10 @@
       "hero": {
         "title": "Tụgharịa asụsụ n'etiti 40+ mbinye aka na asụsụ a na-asụ ozugbo.",
         "img": "Ọmụmaatụ nke ntụgharị asụsụ dị ndụ n'etiti Asụsụ ogbi nke America na Bekee"
+      },
+      "direction": {
+        "spoken-to-signed": "Tụgharịa asụsụ site na asụ ka ọ bụrụ asụsụ ndị mbinye aka",
+        "signed-to-spoken": "Ma ọ bụ site na mbinye aka gaa na asụsụ ndị a na-asụ"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Kwụsị ntụgharị asụsụ site n'olu",
     "not-allowed": "Achọrọ ikike iji igweokwu",
     "language-not-supported": "Akwadoghi asusu ahọpụtara",
-    "browser-not-supported": "Akwadoghi ntinye olu na ihe nchọgharị a"
+    "browser-not-supported": "Akwadoghi ntinye olu na ihe nchọgharị a",
+    "service-not-allowed": "Achọrọ ikike iji njirimara okwu"
   },
   "legal": {
     "terms": {

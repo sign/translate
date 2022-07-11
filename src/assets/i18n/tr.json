@@ -45,6 +45,10 @@
       "hero": {
         "title": "40'tan fazla işaretli ve konuşulan dil arasında gerçek zamanlı çeviri yapın.",
         "img": "Amerikan İşaret Dili ile İngilizce arasındaki canlı çeviri örneği"
+      },
+      "direction": {
+        "spoken-to-signed": "Konuşulan dillerden işaretli dillere çeviri yapın",
+        "signed-to-spoken": "Veya işaretli dillerden konuşulan dillere"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Sesle çeviriyi durdur",
     "not-allowed": "Mikrofon kullanmak için izne ihtiyacınız var",
     "language-not-supported": "Seçilen dil desteklenmiyor",
-    "browser-not-supported": "Bu tarayıcıda ses girişi desteklenmiyor"
+    "browser-not-supported": "Bu tarayıcıda ses girişi desteklenmiyor",
+    "service-not-allowed": "Konuşma tanımayı kullanmak için izne ihtiyacınız var"
   },
   "legal": {
     "terms": {

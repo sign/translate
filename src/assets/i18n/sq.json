@@ -45,6 +45,10 @@
       "hero": {
         "title": "Përkthe midis 40+ gjuhëve të nënshkruara dhe të folura në kohë reale.",
         "img": "Shembull i përkthimit të drejtpërdrejtë midis gjuhës amerikane të shenjave dhe anglishtes"
+      },
+      "direction": {
+        "spoken-to-signed": "Përktheni nga gjuhët e folura në gjuhët e shenjave",
+        "signed-to-spoken": "Ose nga gjuhët e nënshkruara në të folur"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Ndalo përkthimin me zë",
     "not-allowed": "Duhet leje për të përdorur mikrofonin",
     "language-not-supported": "Gjuha e zgjedhur nuk mbështetet",
-    "browser-not-supported": "Hyrja zanore nuk mbështetet në këtë shfletues"
+    "browser-not-supported": "Hyrja zanore nuk mbështetet në këtë shfletues",
+    "service-not-allowed": "Duhet leje për të përdorur njohjen e të folurit"
   },
   "legal": {
     "terms": {

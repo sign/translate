@@ -45,6 +45,10 @@
       "hero": {
         "title": "Traduceți între peste 40 de limbi semnate și vorbite în timp real.",
         "img": "Exemplu de traducere live între limbajul semnelor american și engleză"
+      },
+      "direction": {
+        "spoken-to-signed": "Traduceți din limbile vorbite în limbile semnate",
+        "signed-to-spoken": "Sau de la limbile semnate la cele vorbite"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Opriți traducerea prin voce",
     "not-allowed": "Aveți nevoie de permisiunea de a folosi microfonul",
     "language-not-supported": "Limba selectată nu este acceptată",
-    "browser-not-supported": "Introducerea vocală nu este acceptată de acest browser"
+    "browser-not-supported": "Introducerea vocală nu este acceptată de acest browser",
+    "service-not-allowed": "Aveți nevoie de permisiunea pentru a utiliza recunoașterea vorbirii"
   },
   "legal": {
     "terms": {

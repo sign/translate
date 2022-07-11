@@ -45,6 +45,10 @@
       "hero": {
         "title": "Real vaxt rejimində 40+ imzalanmış və danışıq dili arasında tərcümə edin.",
         "img": "Amerika işarə dili və ingilis dili arasında canlı tərcümə nümunəsi"
+      },
+      "direction": {
+        "spoken-to-signed": "Danışıq dillərindən işarəli dillərə tərcümə edin",
+        "signed-to-spoken": "Və ya imzalanmış dillərdən danışıq dillərinə"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Səslə tərcüməni dayandırın",
     "not-allowed": "Mikrofondan istifadə etmək üçün icazə lazımdır",
     "language-not-supported": "Seçilmiş dil dəstəklənmir",
-    "browser-not-supported": "Səslə daxiletmə bu brauzerdə dəstəklənmir"
+    "browser-not-supported": "Səslə daxiletmə bu brauzerdə dəstəklənmir",
+    "service-not-allowed": "Nitqin tanınmasından istifadə etmək üçün icazə lazımdır"
   },
   "legal": {
     "terms": {

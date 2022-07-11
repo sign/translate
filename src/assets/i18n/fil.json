@@ -45,6 +45,10 @@
       "hero": {
         "title": "Magsalin sa pagitan ng 40+ na nilagdaan at sinasalitang mga wika sa real-time.",
         "img": "Halimbawa ng live na pagsasalin sa pagitan ng American Sign Language at English"
+      },
+      "direction": {
+        "spoken-to-signed": "Isalin mula sa sinasalita patungo sa mga sign na wika",
+        "signed-to-spoken": "O mula sa nilagdaan hanggang sa mga sinasalitang wika"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Ihinto ang pagsasalin sa pamamagitan ng boses",
     "not-allowed": "Kailangan ng pahintulot na gumamit ng mikropono",
     "language-not-supported": "Ang napiling wika ay hindi suportado",
-    "browser-not-supported": "Hindi sinusuportahan ang voice input sa browser na ito"
+    "browser-not-supported": "Hindi sinusuportahan ang voice input sa browser na ito",
+    "service-not-allowed": "Kailangan ng pahintulot na gumamit ng speech recognition"
   },
   "legal": {
     "terms": {

@@ -45,6 +45,10 @@
       "hero": {
         "title": "實時翻譯 40 多種手語和口語。",
         "img": "美國手語和英語之間的實時翻譯示例"
+      },
+      "direction": {
+        "spoken-to-signed": "從口語翻譯成手語",
+        "signed-to-spoken": "或從手語到口語"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "停止語音翻譯",
     "not-allowed": "需要獲得使用麥克風的權限",
     "language-not-supported": "不支持所選語言",
-    "browser-not-supported": "此瀏覽器不支持語音輸入"
+    "browser-not-supported": "此瀏覽器不支持語音輸入",
+    "service-not-allowed": "需要許可才能使用語音識別"
   },
   "legal": {
     "terms": {

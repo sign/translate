@@ -45,6 +45,10 @@
       "hero": {
         "title": "Traduce trà più di 40 lingue firmate è parlate in tempu reale.",
         "img": "Esempiu di traduzzione in diretta trà Lingua di i Signi Americana è Inglese"
+      },
+      "direction": {
+        "spoken-to-signed": "Traduce da lingua parlata à lingua signata",
+        "signed-to-spoken": "O da i segni à e lingue parlate"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Arresta a traduzzione à voce",
     "not-allowed": "Avete bisognu di permessu per aduprà u microfonu",
     "language-not-supported": "A lingua scelta ùn hè micca supportata",
-    "browser-not-supported": "L'input di voce ùn hè micca supportatu in stu navigatore"
+    "browser-not-supported": "L'input di voce ùn hè micca supportatu in stu navigatore",
+    "service-not-allowed": "Avete bisognu di permessu per aduprà u ricunniscenza di voce"
   },
   "legal": {
     "terms": {

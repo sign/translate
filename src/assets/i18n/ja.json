@@ -45,6 +45,10 @@
       "hero": {
         "title": "40以上の署名された言語と話された言語をリアルタイムで翻訳します。",
         "img": "アメリカ手話と英語の間のライブ翻訳の例"
+      },
+      "direction": {
+        "spoken-to-signed": "話し言葉から手話への翻訳",
+        "signed-to-spoken": "または署名された言語から話された言語へ"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "音声による翻訳を停止する",
     "not-allowed": "マイクの使用許可が必要",
     "language-not-supported": "選択した言語はサポートされていません",
-    "browser-not-supported": "このブラウザでは音声入力はサポートされていません"
+    "browser-not-supported": "このブラウザでは音声入力はサポートされていません",
+    "service-not-allowed": "音声認識を使用するには許可が必要です"
   },
   "legal": {
     "terms": {

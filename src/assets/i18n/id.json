@@ -45,6 +45,10 @@
       "hero": {
         "title": "Terjemahkan antara 40+ bahasa isyarat dan bahasa lisan secara real-time.",
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggris"
+      },
+      "direction": {
+        "spoken-to-signed": "Terjemahkan dari bahasa lisan ke bahasa isyarat",
+        "signed-to-spoken": "Atau dari bahasa isyarat ke bahasa lisan"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Hentikan terjemahan dengan suara",
     "not-allowed": "Perlu izin untuk menggunakan mikrofon",
     "language-not-supported": "Bahasa yang dipilih tidak didukung",
-    "browser-not-supported": "Masukan suara tidak didukung di browser ini"
+    "browser-not-supported": "Masukan suara tidak didukung di browser ini",
+    "service-not-allowed": "Perlu izin untuk menggunakan pengenalan suara"
   },
   "legal": {
     "terms": {

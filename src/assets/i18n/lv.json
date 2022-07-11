@@ -45,6 +45,10 @@
       "hero": {
         "title": "Reāllaikā tulkojiet no 40+ zīmju valodām un runājiet.",
         "img": "Tiešraides tulkojuma piemērs starp amerikāņu zīmju valodu un angļu valodu"
+      },
+      "direction": {
+        "spoken-to-signed": "Tulkot no sarunvalodas uz zīmju valodu",
+        "signed-to-spoken": "Vai no zīmju valodas līdz runātajām valodām"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Pārtraukt tulkošanu ar balsi",
     "not-allowed": "Nepieciešama atļauja lietot mikrofonu",
     "language-not-supported": "Atlasītā valoda netiek atbalstīta",
-    "browser-not-supported": "Balss ievade šajā pārlūkprogrammā netiek atbalstīta"
+    "browser-not-supported": "Balss ievade šajā pārlūkprogrammā netiek atbalstīta",
+    "service-not-allowed": "Nepieciešama atļauja izmantot runas atpazīšanu"
   },
   "legal": {
     "terms": {

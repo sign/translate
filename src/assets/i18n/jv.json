@@ -45,6 +45,10 @@
       "hero": {
         "title": "Terjemahake antarane 40+ basa sing ditandatangani lan diucapake kanthi wektu nyata.",
         "img": "Conto terjemahan langsung antarane American Sign Language lan Inggris"
+      },
+      "direction": {
+        "spoken-to-signed": "Terjemahake saka basa lisan menyang basa teken",
+        "signed-to-spoken": "Utawa saka mlebu menyang basa lisan"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Mungkasi terjemahan kanthi swara",
     "not-allowed": "Perlu ijin kanggo nggunakake mikropon",
     "language-not-supported": "Basa sing dipilih ora didhukung",
-    "browser-not-supported": "Input swara ora didhukung ing browser iki"
+    "browser-not-supported": "Input swara ora didhukung ing browser iki",
+    "service-not-allowed": "Perlu ijin kanggo nggunakake pangenalan wicara"
   },
   "legal": {
     "terms": {

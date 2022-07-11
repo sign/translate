@@ -45,6 +45,10 @@
       "hero": {
         "title": "Realiuoju laiku verskite iš daugiau nei 40 kalbų su gestais ir kalbomis.",
         "img": "Tiesioginio vertimo iš Amerikos gestų kalbos į anglų kalbą pavyzdys"
+      },
+      "direction": {
+        "spoken-to-signed": "Versti iš šnekamųjų į gestų kalbas",
+        "signed-to-spoken": "Arba nuo gestų iki šnekamųjų kalbų"
       }
     },
     "languages": {
@@ -71,7 +75,8 @@
     "stop": "Sustabdyti vertimą balsu",
     "not-allowed": "Reikia leidimo naudoti mikrofoną",
     "language-not-supported": "Pasirinkta kalba nepalaikoma",
-    "browser-not-supported": "Balso įvestis nepalaikoma šioje naršyklėje"
+    "browser-not-supported": "Balso įvestis nepalaikoma šioje naršyklėje",
+    "service-not-allowed": "Reikia leidimo naudoti kalbos atpažinimą"
   },
   "legal": {
     "terms": {
