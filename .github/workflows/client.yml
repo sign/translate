@@ -19,14 +19,14 @@ jobs:
       - name: Setup Bun Runtime
         uses: antongolub/action-setup-bun@v1 # or @v1.x.x
         with:
-          cache: true
-
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        with:
-          path: |
-            node_modules
-          key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
+          cache: false
+      #
+      #      - name: Cache node_modules
+      #        uses: actions/cache@v2
+      #        with:
+      #          path: |
+      #            node_modules
+      #          key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
 
       - name: Install Dependencies
         run: npm install --legacy-peer-deps # https://github.com/oven-sh/bun/issues/82
