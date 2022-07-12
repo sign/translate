@@ -10,7 +10,6 @@
     "analyze": "webpack-bundle-analyzer dist/sign-translate/browser/stats.json",
     "pwa:assets": "pwa-asset-generator src/assets/icons/dark-logo.svg src/assets/icons/generated/ -i src/index.html -m src/manifest.webmanifest --background white --favicon --mstile && pwa-asset-generator src/assets/icons/light-logo.svg --dark-mode src/assets/icons/generated/ -i src/index.html --background black --splash-only",
     "assets": "capacitor-assets generate --verbose --ios --android --assetPath src/assets/icons --iconBackgroundColor=white --iconBackgroundColorDark=black --splashBackgroundColor=white --splashBackgroundColorDark=black",
-    "i18n:find": "transloco-keys-manager find",
     "test": "ng test --code-coverage",
     "test:chrome": "ng test --browsers=Chrome --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless,FirefoxHeadless --watch=false --code-coverage",
@@ -22,7 +21,7 @@
     "dev:ssr": "ng run sign-translate:serve-ssr",
     "serve:ssr": "node dist/sign-translate/server/main.js",
     "build:ssr": "ng build && ng run sign-translate:server",
-    "prerender": "ng run sign-translate:prerender:production --routes /"
+    "prerender": "ng run sign-translate:prerender:production"
   },
   "engines": {
     "node": "16",
@@ -57,8 +56,8 @@
     "@capacitor/share": "^1.1.2",
     "@capacitor/splash-screen": "^1.2.2",
     "@google/model-viewer": "^1.12.0",
-    "@mediapipe/drawing_utils": "^0.3.1657299202",
-    "@mediapipe/holistic": "^0.5.1657300018",
+    "@mediapipe/drawing_utils": "^0.3.1620248257",
+    "@mediapipe/holistic": "^0.5.1635989137",
     "@ngneat/transloco": "^4.1.0",
     "@nguniversal/express-engine": "^14.0.3",
     "@ngxs/store": "3.7.3",
@@ -77,14 +76,14 @@
     "firebase": "^9.8.4",
     "flag-icons": "^6.6.3",
     "pose-viewer": "^0.5.1",
-    "rxjs": "~7.5.5",
+    "rxjs": "~7.5.6",
     "stats.js": "^0.17.0",
     "three": "^0.142.0",
     "tslib": "^2.4.0",
     "web-vitals": "^2.1.4",
     "zone.js": "~0.11.6",
     "leaflet": "^1.8.0",
-    "@asymmetrik/ngx-leaflet": "^13.0.2"
+    "@asymmetrik/ngx-leaflet": "^14.0.0"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.1400.5",
@@ -98,7 +97,6 @@
     "@angular/compiler-cli": "^14.0.5",
     "@capacitor/assets": "^1.0.0-next.5",
     "@capacitor/cli": "4.0.0-beta.2",
-    "@ngneat/transloco-keys-manager": "^3.4.1",
     "@nguniversal/builders": "^14.0.3",
     "@playwright/test": "^1.23.1",
     "@sign/configuration": "git://github.com/sign/.github.git",
@@ -111,8 +109,8 @@
     "@types/three": "^0.141.0",
     "@types/web-app-manifest": "^1.0.2",
     "@types/webgl2": "0.0.6",
-    "@typescript-eslint/eslint-plugin": "5.30.5",
-    "@typescript-eslint/parser": "5.30.5",
+    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/parser": "5.30.6",
     "deepmerge": "^4.2.2",
     "eslint": "^8.19.0",
     "fuzzy": "^0.1.3",

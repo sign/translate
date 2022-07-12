@@ -1,7 +1,7 @@
-<ng-container *transloco="let t; read: 'landing.about.direction'">
-  <div id="direction-grid">
-    <img [src]="this.androidScreenshot" aria-labelledby="translate-spoken-signed" />
-    <div>
+<div id="direction-grid">
+  <img [src]="this.androidScreenshot" aria-labelledby="translate-spoken-signed" />
+  <div>
+    <ng-container *transloco="let t; read: 'landing.about.direction'">
       <h2 id="translate-spoken-signed">
         <mat-icon class="rtl-flip">chevron_left</mat-icon>
         {{ t('spoken-to-signed') }}
@@ -11,7 +11,7 @@
         {{ t('signed-to-spoken') }}
         <mat-icon class="rtl-flip">chevron_right</mat-icon>
       </h2>
-    </div>
-    <img [src]="this.iOSScreenshot" aria-labelledby="translate-signed-spoken" />
+    </ng-container>
   </div>
-</ng-container>
+  <img [src]="this.iOSScreenshot" aria-labelledby="translate-signed-spoken" />
+</div>

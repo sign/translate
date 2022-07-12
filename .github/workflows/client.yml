@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup Bun Runtime
+        uses: antongolub/action-setup-bun@v1 # or @v1.x.x
+        with:
+          cache: true
+
       - name: Cache node_modules
         uses: actions/cache@v2
         with:
@@ -24,16 +29,13 @@ jobs:
           key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install --legacy-peer-deps # https://github.com/oven-sh/bun/issues/82
 
       - name: Lint code
-        run: npm run lint
+        run: bun run lint
 
       - name: Test code
-        run: npm run test:ci
-
-      #- name: Verify all translations exist
-      #  run: npx transloco-keys-manager find --emit-error-on-extra-keys
+        run: bun run test:ci
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
@@ -41,10 +43,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
-        run: npm run prerender
+        run: bun run prerender
 
       - name: Generate Sitemap
-        run: node tools/sitemap-generator.js
+        run: node tools/sitemap-generator.js # https://github.com/oven-sh/bun/issues/311
 
       - name: Archive dist
         uses: actions/upload-artifact@v2
