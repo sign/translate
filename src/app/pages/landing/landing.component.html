@@ -15,18 +15,20 @@
       <mat-icon (click)="menu.open()" id="menu-handler">menu</mat-icon>
       <mat-icon>waving_hand</mat-icon>
       <span>&nbsp;{{ 'translate.title' | transloco }}</span>
-      <nav [attr.aria-label]="'landing.nav.pages' | translate">
+      <nav [attr.aria-label]="'landing.nav.pages' | transloco">
         <a mat-button *ngFor="let page of pages" [routerLink]="page" queryParamsHandling="preserve">
           {{ 'landing.' + page + '.title' | transloco }}
         </a>
       </nav>
-      <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">{{ t('try') }}</a>
+      <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">{{
+        'landing.try' | transloco
+      }}</a>
     </mat-toolbar>
 
     <router-outlet></router-outlet>
 
     <mat-toolbar>
-      <nav [attr.aria-label]="'landing.nav.legal' | translate">
+      <nav [attr.aria-label]="'landing.nav.legal' | transloco">
         <a mat-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
           {{ 'legal.' + page + '.title' | transloco }}
         </a>
