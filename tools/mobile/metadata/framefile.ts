@@ -46,8 +46,6 @@ async function generateFrameFiles() {
 
 export async function frameScreenshots() {
   await generateFrameFiles();
-  // execSync('fastlane frameit_screenshots', {cwd: 'android', encoding: 'utf8', stdio: 'inherit'});
-  // execSync('fastlane frameit_screenshots', {cwd: 'ios/App', encoding: 'utf8', stdio: 'inherit'});
   // Frame about screenshots
   execSync('fastlane run frameit path:"../src/assets/promotional/about/android" use_platform:"ANDROID"', {
     cwd: 'android',
@@ -59,6 +57,9 @@ export async function frameScreenshots() {
     encoding: 'utf8',
     stdio: 'inherit',
   });
+  // Frame store screenshots
+  execSync('fastlane frameit_screenshots', {cwd: 'android', encoding: 'utf8', stdio: 'inherit'});
+  execSync('fastlane frameit_screenshots', {cwd: 'ios/App', encoding: 'utf8', stdio: 'inherit'});
 }
 
 export async function screenshotFrameLocales(fResolver: any) {
