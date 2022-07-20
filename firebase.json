@@ -7,6 +7,17 @@
     "target": "translate",
     "public": "dist/sign-translate/browser",
     "ignore": [],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|ttf|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+          }
+        ]
+      }
+    ],
     "rewrites": [
       {
         "source": "/opensearch.xml",

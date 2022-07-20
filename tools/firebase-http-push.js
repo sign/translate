@@ -19,7 +19,11 @@ function* getResources(htmlPath) {
 
 function updateServerPush(resources) {
   const firebase = JSON.parse(String(fs.readFileSync('firebase.json')));
-  const rewrite = firebase.hosting.rewrites.find(({source}) => source === '**');
+  let rewrite = firebase.hosting.headers.find(({source}) => source === '/');
+  if (!rewrite) {
+    rewrite = {source: '/'};
+    firebase.hosting.headers.push(rewrite);
+  }
   if (!rewrite.headers) {
     rewrite.headers = [];
   }
