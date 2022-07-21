@@ -46,6 +46,13 @@
   </a>
 </p>
 
+<p align="center">
+
+  <a href="https://sign.mt" target="_blank">
+    <img src="src/assets/promotional/about/hero.webp" alt="Translation Demo" />
+  </a>
+</p>
+
 <hr>
 
 ## Key Features
