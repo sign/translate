@@ -57,6 +57,7 @@ tools/cache
 functions/lib
 functions/src/playground.ts
 .firebase
+firebase-debug.log
 
 .env
 

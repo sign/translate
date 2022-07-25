@@ -142,7 +142,6 @@ export class LanguageSelectorComponent {
 
   async change(event: Event) {
     const lang = (event.target as HTMLSelectElement).value;
-    console.log('New Active Language', lang);
     this.transloco.setActiveLang(lang);
 
     await this.router.navigate([], {

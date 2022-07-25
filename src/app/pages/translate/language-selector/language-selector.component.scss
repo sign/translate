@@ -87,4 +87,16 @@ button.menu-language-button {
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
+  @media #{$mat-lt-lg} {
+    .language-selector-menu {
+      max-width: none !important;
+      width: 100vw;
+
+      .mat-menu-content div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 130px);
+      }
+    }
+  }
 }
