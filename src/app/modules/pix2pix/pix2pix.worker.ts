@@ -14,6 +14,7 @@ class ModelNotLoadedError extends Error {
 
 const tfPromise = loadTFDS();
 let model: LayersModel;
+let upscaler: LayersModel;
 
 function resetDropout(layers: any[]) {
   for (const layer of layers) {
@@ -30,7 +31,10 @@ function resetDropout(layers: any[]) {
 async function loadModel(): Promise<void> {
   const tf = await tfPromise;
   tf.env().set('WEBGL_FORCE_F16_TEXTURES', false);
-  model = await tf.loadLayersModel('assets/models/pose-to-person/model.json');
+  [model, upscaler] = await Promise.all([
+    await tf.loadLayersModel('assets/models/pose-to-person/generator/model.json'),
+    await tf.loadLayersModel('assets/models/pose-to-person/upscaler/model.json'),
+  ]);
   resetDropout(model.layers); // Extremely important, as we are performing inference in training mode
 }
 
@@ -39,6 +43,11 @@ function isGreen(r: number, g: number, b: number) {
 }
 
 function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
+  // TODO consider
+  //  https://github.com/bhj/gl-chromakey
+  //  https://github.com/Sean-Bradley/Three.js-TypeScript-Boilerplate/blob/webcam/src/client/client.ts
+  //  (easiest) https://developer.vonage.com/blog/2020/06/24/use-a-green-screen-in-javascript-with-vonage-video
+
   // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
   for (let i = 0; i < data.length; i += 4) {
     if (isGreen(data[i], data[i + 1], data[i + 2])) {
@@ -76,6 +85,12 @@ async function translateQueue(queueId: number, image: ImageBitmap | ImageData): 
 const frameTimes = [];
 let lastFrameTime = null;
 
+function upscale(tensor: Tensor) {
+  return (upscaler.predict(tensor) as Tensor)
+    .depthToSpace(3, 'NHWC') // Could not convert the depthToSpace operation to tfjs, must use this instead
+    .clipByValue(0, 1); // Clipping to [0, 1] as upscale model may output values greater than 1
+}
+
 async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
   if (lastFrameTime) {
     frameTimes.push(Date.now() - lastFrameTime);
@@ -102,6 +117,8 @@ async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
     let pred = model.apply(tensor, {training: true}) as Tensor; //6-8ms, but works
     // let pred = model.predict(tensor) as Tensor; // 3-4ms, but returns black screen
     pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
+
+    pred = upscale(pred);
 
     pred = tf.squeeze(pred); // Remove batch dimension
     return pred as Tensor3D;
