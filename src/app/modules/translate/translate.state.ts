@@ -23,6 +23,7 @@ import {tap} from 'rxjs/operators';
 import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
 import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
+import {blobToBase64} from 'base64-blob';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -225,17 +226,9 @@ export class TranslateState implements NgxsOnInit {
   }
 
   async shareNative(file: File) {
-    const toBase64 = (file): Promise<string> =>
-      new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => resolve(String(reader.result));
-        reader.onerror = error => reject(error);
-      });
-
     // Save video to file system
     const {Directory, Filesystem} = await import('@capacitor/filesystem');
-    const data = await toBase64(file);
+    const data = await blobToBase64(file);
     const fileOptions = {directory: Directory.Cache, path: 'video.mp4'};
     await Filesystem.writeFile({...fileOptions, data});
     const {uri} = await Filesystem.getUri(fileOptions);

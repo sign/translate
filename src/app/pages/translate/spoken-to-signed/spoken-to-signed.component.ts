@@ -13,6 +13,7 @@ import {
 import {PoseViewerSetting} from '../../../modules/settings/settings.state';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {TranslateStateModel} from '../../../modules/translate/translate.state';
+import {isIOS, isMacLike} from 'src/app/core/constants';
 
 @Component({
   selector: 'app-spoken-to-signed',
@@ -76,9 +77,6 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   }
 
   shareIcon(): string {
-    const platform = 'navigator' in globalThis ? navigator.platform : '';
-    const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(platform);
-    const isIOS = /(iPhone|iPod|iPad)/i.test(platform);
     return isIOS || isMacLike ? 'ios_share' : 'share';
   }
 

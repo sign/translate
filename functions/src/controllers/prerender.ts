@@ -10,12 +10,13 @@ app.get('/opensearch.xml', (req, res) => {
   const body = `
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>Sign Translate</ShortName>
-  <Description>Get translations from Sign Translate.</Description>
-  <Url type="text/html" method="get" template="https://sign.mt/?text={searchTerms}"/>
-  <Image width="32" height="32" alt="">https://sign.mt/assets/icons/favicon.svg</Image>
+  <Description>Translate on Sign Translate</Description>
+  <Image height="16" type="image/icon" width="16">https://sign.mt/assets/icons/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://sign.mt/?text={searchTerms}&amp;utm_source=opensearch"/>
+  <Query role="example" searchTerms="Hello"></Query>
 </OpenSearchDescription>`;
 
-  res.set('Content-Type', 'text/xml');
+  res.set('Content-Type', 'application/opensearchdescription+xml; charset=UTF-8');
   res.set('Cache-Control', 'public, max-age=86400'); // one day
   res.send(body);
 });

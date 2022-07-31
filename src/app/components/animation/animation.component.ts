@@ -1,10 +1,12 @@
-import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
 import {map, takeUntil, tap} from 'rxjs/operators';
 import {ThreeService} from '../../core/services/three.service';
+import {isIOS} from '../../core/constants';
+import {AssetsService} from 'src/app/core/services/assets/assets.service';
 
 @Component({
   selector: 'app-animation',
@@ -20,7 +22,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   static isCustomElementDefined = false;
 
-  constructor(private three: ThreeService) {
+  constructor(private three: ThreeService, private assets: AssetsService) {
     super();
 
     // Load the `model-viewer` custom element
@@ -31,7 +33,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
   }
 
   async ngAfterViewInit(): Promise<void> {
-    await this.three.load();
+    await Promise.all([this.three.load(), this.attach3DCharacter()]);
 
     // Wait for element to be defined
     if (!customElements.get('model-viewer')) {
@@ -95,5 +97,18 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         left: 16px;
       }`;
     el.shadowRoot.appendChild(style);
+  }
+
+  async attach3DCharacter() {
+    const attributes: {[key: string]: string} = {src: '3d/character.glb'};
+    if (isIOS) {
+      attributes['ios-src'] = '3d/character.usdz';
+    }
+
+    // Download the files serially
+    for (const [attribute, assetName] of Object.entries(attributes)) {
+      const uri = await this.assets.getFileUri(assetName);
+      this.modelViewerEl.nativeElement.setAttribute(attribute, uri);
+    }
   }
 }

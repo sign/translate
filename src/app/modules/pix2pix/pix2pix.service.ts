@@ -1,13 +1,14 @@
 import {Injectable} from '@angular/core';
 import * as comlink from 'comlink';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
+import {AssetsService} from '../../core/services/assets/assets.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Pix2PixService {
   worker: comlink.Remote<{
-    loadModel: () => Promise<void>;
+    loadModel: (generator: Map<string, string>, upscaler: Map<string, string>) => Promise<void>;
     translateQueue: (queueId: number, image: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
   }>;
 
@@ -15,7 +16,7 @@ export class Pix2PixService {
 
   queueId = 0;
 
-  constructor(private ga: GoogleAnalyticsService) {}
+  constructor(private ga: GoogleAnalyticsService, private assets: AssetsService) {}
 
   async loadModel(): Promise<void> {
     this.queueId++;
@@ -27,7 +28,12 @@ export class Pix2PixService {
     await this.ga.trace('pix2pix', 'init', () => {
       this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
     });
-    await this.ga.trace('pix2pix', 'load', () => this.worker.loadModel());
+
+    const [generator, upscaler] = await Promise.all([
+      this.assets.getDirectory('models/generator/model.h5.layers16/'),
+      this.assets.getDirectory('models/upscaler/model.h5.layers/'),
+    ]);
+    await this.ga.trace('pix2pix', 'load', () => this.worker.loadModel(generator, upscaler));
   }
 
   async translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedArray> {
