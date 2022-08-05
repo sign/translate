@@ -2,6 +2,11 @@ import {Injectable} from '@angular/core';
 import {Capacitor} from '@capacitor/core';
 import write_blob from 'capacitor-blob-writer';
 
+/**
+ * Navigator.storage is used as iOS service worker cache is limited to 50MB.
+ * Capacitor.Filesystem is used as a fallback.
+ */
+
 @Injectable({
   providedIn: 'root',
 })
@@ -87,11 +92,22 @@ export class AssetsService {
     }
 
     const file = await fileHandle.getFile();
-    if (file.size === 0) {
-      // In case of corrupt file
+
+    // Verify file is not corrupted
+    const statStr = localStorage.getItem(path);
+    let isCorrupt = !statStr || file.size === 0;
+    if (statStr) {
+      const stat = JSON.parse(statStr);
+      if (Number(stat.size) !== file.size) {
+        console.error('Size mismatch', stat, file);
+        isCorrupt = true;
+      }
+    }
+    if (isCorrupt) {
       await fileHandle.remove();
       return this.navigatorStorageFileUri(path, download);
     }
+
     return URL.createObjectURL(file);
   }
 

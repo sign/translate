@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
-// eslint-disable-next-line max-len
 import {
   ChangeTranslation,
   CopySignedLanguageVideo,
