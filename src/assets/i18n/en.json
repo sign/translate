@@ -104,12 +104,6 @@
       "title": "Software and Licenses"
     }
   },
-  "appearance": {
-    "title": "Appearance",
-    "action": "Modify appearance",
-    "random": "Get a random photo",
-    "upload": "Upload your own photo"
-  },
   "video": {
     "errors": {
       "starting": "Camera starting",
@@ -145,6 +139,36 @@
   },
   "settings": {
     "title": "Settings",
+    "support": {
+      "title": "Support",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "About"
+      }
+    },
+    "voice": {
+      "title": "Voice",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Other",
+      "offline": {
+        "title": "Offline"
+      },
+      "appearance": {
+        "title": "Appearance",
+        "action": "Modify appearance",
+        "random": "Get a random photo",
+        "upload": "Upload your own photo"
+      }
+    },
     "detectSign": "Detect Sign",
     "drawVideo": "Draw Video",
     "drawPose": "Draw Pose",

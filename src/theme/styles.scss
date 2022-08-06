@@ -25,6 +25,7 @@
   @include mat.tooltip-theme($theme);
   @include mat.card-theme($theme);
   @include mat.tabs-theme($theme);
+  @include mat.dialog-theme($theme);
 }
 
 @include theme-components($app-theme);
@@ -86,9 +87,13 @@ button[mat-icon-button] {
   }
 }
 
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
 .mat-drawer-container {
   height: 100%;
-  background: transparent;
+  //background: transparent;
 }
 
 .mat-toolbar {
