@@ -95,15 +95,16 @@ export class AssetsService {
 
     // Build a combined progress callback for all files
     let totalLength = 0;
-    let receivedLength = 0;
+    const received = new Array(files.length).fill(0);
     const progressSet = new Set<number>();
     const fileProgressCallback = (i, fileReceivedLength, fileTotalLength) => {
       if (!progressSet.has(i)) {
         progressSet.add(i);
         totalLength += fileTotalLength;
       }
-      receivedLength += fileReceivedLength;
+      received[i] = fileReceivedLength;
       if (progressCallback) {
+        const receivedLength = received.reduce((acc, r) => acc + r, 0);
         progressCallback(receivedLength, totalLength);
       }
     };
@@ -124,7 +125,7 @@ export class AssetsService {
       const metadata = await this.statRemoteFile(path);
       localStorage.setItem(path, JSON.stringify(metadata));
       if (asBlob) {
-        return this.getRemoteFileAsBlob(path);
+        return this.getRemoteFileAsBlob(path, progressCallback);
       }
       return this.getRemoteFile(path, progressCallback);
     };
@@ -146,9 +147,7 @@ export class AssetsService {
 
   async deleteFile(path: string) {
     return Promise.all([
-      this.deleteNavigatorStorageFile(path).catch(e => {
-        console.error(e);
-      }),
+      this.deleteNavigatorStorageFile(path).catch(e => {}),
       this.deleteCapacitorGetFileUri(path).catch(() => {}),
     ]);
   }
@@ -292,9 +291,24 @@ export class AssetsService {
     return request.json();
   }
 
-  async getRemoteFileAsBlob(path: string) {
-    const response = await fetch(`${this.buildRemotePath(path)}?alt=media`);
-    return response.blob();
+  async getRemoteFileAsBlob(path: string, progressCallback?: ProgressCallback) {
+    let array: Uint8Array = null;
+    let arrayIndex = 0;
+
+    const chunks = await this.getRemoteFile(path, (loaded, total) => {
+      if (!array) {
+        array = new Uint8Array(total);
+      }
+      if (progressCallback) {
+        progressCallback(loaded, total);
+      }
+    });
+    for await (const chunk of chunks) {
+      array.set(chunk, arrayIndex);
+      arrayIndex += chunk.length;
+    }
+
+    return new Blob([array]);
   }
 
   async *getRemoteFile(path: string, progressCallback?: ProgressCallback) {
@@ -321,8 +335,4 @@ export class AssetsService {
       yield value;
     }
   }
-
-  // async clearCache() {
-  //   const directory = await navigator.storage.getDirectory();
-  // }
 }

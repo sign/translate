@@ -59,7 +59,7 @@ export class SettingsOfflineComponent implements OnInit {
   }
 
   async download(node: AssetState) {
-    node.progress = 0.01; // show progress bar, with non-falsey value
+    node.progress = 0.0001; // show progress bar, with non-falsey value
     await this.assets.download(node.path, (n, d) => (node.progress = n / d));
 
     // Update node after download
