@@ -2,23 +2,28 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SettingsRoutingModule} from './settings-routing.module';
 import {SettingsPageComponent} from './settings.component';
-import {SettingsOfflineComponent} from './offline/offline.component';
-import {SettingsAppearanceComponent} from './appearance/appearance.component';
-import {SettingsModule} from '../../modules/settings/settings.module';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
+import {SettingsFeedbackComponent} from './settings-feedback/settings-feedback.component';
+import {SettingsAboutComponent} from './settings-about/settings-about.component';
+import {SettingsVoiceInputComponent} from './settings-voice-input/settings-voice-input.component';
+import {SettingsVoiceOutputComponent} from './settings-voice-output/settings-voice-output.component';
+import {SettingsOfflineComponent} from './settings-offline/settings-offline.component';
+import {SettingsAppearanceComponent} from './settings-appearance/settings-appearance.component';
 
 export {SettingsPageComponent};
 
 @NgModule({
-  declarations: [SettingsPageComponent, SettingsOfflineComponent, SettingsAppearanceComponent],
-  imports: [
-    CommonModule,
-    AppTranslocoModule,
-    AppAngularMaterialModule,
-    SettingsRoutingModule,
-    // SettingsModule,
+  declarations: [
+    SettingsPageComponent,
+    SettingsOfflineComponent,
+    SettingsAppearanceComponent,
+    SettingsFeedbackComponent,
+    SettingsAboutComponent,
+    SettingsVoiceInputComponent,
+    SettingsVoiceOutputComponent,
   ],
+  imports: [CommonModule, AppTranslocoModule, AppAngularMaterialModule, SettingsRoutingModule],
   bootstrap: [SettingsPageComponent],
 })
 export class SettingsPageModule {}

@@ -60,7 +60,7 @@ export class SettingsPageComponent implements OnInit {
 
   updateContentPage() {
     const settingsRoute = this.route.children.find(c => c.outlet === 'settings');
-    if (settingsRoute.children.length === 0) {
+    if (!settingsRoute || settingsRoute.children.length === 0) {
       this.contentPage = null;
       return;
     }

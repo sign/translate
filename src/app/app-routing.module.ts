@@ -13,8 +13,8 @@ const routes: Routes = [
     children: [
       {
         path: 'settings',
-        component: LazyDialogEntryComponent,
         outlet: 'dialog',
+        component: LazyDialogEntryComponent,
       },
     ],
   },

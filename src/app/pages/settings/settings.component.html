@@ -1,8 +1,8 @@
 <ng-template #settingsMenu>
   <ng-container *transloco="let t; read: 'settings'">
-    <mat-toolbar>
+    <mat-toolbar *ngIf="!contentPage">
       <span>{{ t('title') }}</span>
-      <button mat-icon-button *ngIf="!contentPage" (click)="dismiss()">
+      <button mat-icon-button (click)="dismiss()">
         <mat-icon>close</mat-icon>
       </button>
     </mat-toolbar>

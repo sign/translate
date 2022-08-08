@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import {Store} from '@ngxs/store';
 import {BaseSettingsComponent} from '../../../modules/settings/settings.component';
+import {Store} from '@ngxs/store';
 
 @Component({
-  templateUrl: './appearance.component.html',
-  styleUrls: ['./appearance.component.scss'],
+  templateUrl: './settings-appearance.component.html',
+  styleUrls: ['./settings-appearance.component.scss'],
 })
 export class SettingsAppearanceComponent extends BaseSettingsComponent {
   appearances = [
