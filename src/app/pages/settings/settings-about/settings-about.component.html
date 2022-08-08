@@ -1,1 +1,5 @@
-<p>settings-about works!</p>
+<mat-nav-list>
+  <a mat-list-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+    {{ 'legal.' + page + '.title' | transloco }}
+  </a>
+</mat-nav-list>

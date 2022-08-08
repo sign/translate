@@ -5,4 +5,6 @@ import {Component} from '@angular/core';
   templateUrl: './settings-about.component.html',
   styleUrls: ['./settings-about.component.scss'],
 })
-export class SettingsAboutComponent {}
+export class SettingsAboutComponent {
+  legalPages: string[] = ['terms', 'privacy', 'licenses'];
+}
