@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Verschijning",
-    "action": "Uiterlijk wijzigen",
-    "random": "Krijg een willekeurige foto",
-    "upload": "Upload je eigen foto"
-  },
   "video": {
     "errors": {
       "starting": "Camera starten",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Menselijk"
     },
-    "title": "Instellingen"
+    "title": "Instellingen",
+    "close": "Instellingen sluiten",
+    "support": {
+      "title": "Steun",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Over"
+      }
+    },
+    "voice": {
+      "title": "Stem",
+      "input": {
+        "title": "Invoer"
+      },
+      "output": {
+        "title": "Uitgang:"
+      }
+    },
+    "other": {
+      "title": "Ander",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealistische menselijke generator",
+          "pix2pixUpscaler": "Fotorealistische menselijke upscaler",
+          "avatarGlb": "3D-avatar",
+          "avatarUsdz": "3D-avatar voor AR op iOS"
+        }
+      },
+      "appearance": {
+        "title": "Uiterlijk",
+        "action": "Uiterlijk wijzigen",
+        "random": "Krijg een willekeurige foto",
+        "upload": "Upload je eigen foto"
+      }
+    }
   }
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "外貌",
-    "action": "修改外观",
-    "random": "获取随机照片",
-    "upload": "上传您自己的照片"
-  },
   "video": {
     "errors": {
       "starting": "相机启动",
@@ -154,6 +148,43 @@
       "avatar": "阿凡达",
       "human": "人类"
     },
-    "title": "设置"
+    "title": "设置",
+    "close": "关闭设置",
+    "support": {
+      "title": "支持",
+      "feedback": {
+        "title": "反馈"
+      },
+      "about": {
+        "title": "关于"
+      }
+    },
+    "voice": {
+      "title": "嗓音",
+      "input": {
+        "title": "输入"
+      },
+      "output": {
+        "title": "输出"
+      }
+    },
+    "other": {
+      "title": "其他",
+      "offline": {
+        "title": "离线",
+        "files": {
+          "pix2pixGenerator": "逼真的人体发电机",
+          "pix2pixUpscaler": "逼真的人体放大镜",
+          "avatarGlb": "3D头像",
+          "avatarUsdz": "iOS 上的 AR 3D 头像"
+        }
+      },
+      "appearance": {
+        "title": "外貌",
+        "action": "修改外观",
+        "random": "获取随机照片",
+        "upload": "上传您自己的照片"
+      }
+    }
   }
 }

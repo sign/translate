@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "مظهر",
-    "action": "تعديل المظهر",
-    "random": "احصل على صورة عشوائية",
-    "upload": "قم بتحميل صورتك الخاصة"
-  },
   "video": {
     "errors": {
       "starting": "بدء الكاميرا",
@@ -154,6 +148,43 @@
       "avatar": "الصورة الرمزية",
       "human": "بشري"
     },
-    "title": "إعدادات"
+    "title": "إعدادات",
+    "close": "أغلق الإعدادات",
+    "support": {
+      "title": "الدعم",
+      "feedback": {
+        "title": "استجابة"
+      },
+      "about": {
+        "title": "حول"
+      }
+    },
+    "voice": {
+      "title": "صوت",
+      "input": {
+        "title": "إدخال"
+      },
+      "output": {
+        "title": "انتاج |"
+      }
+    },
+    "other": {
+      "title": "آخر",
+      "offline": {
+        "title": "غير متصل على الانترنت",
+        "files": {
+          "pix2pixGenerator": "مولد بشري واقعي للصور",
+          "pix2pixUpscaler": "المرقي البشري للصور الواقعية",
+          "avatarGlb": "3D الصورة الرمزية",
+          "avatarUsdz": "3D Avatar لـ AR على iOS"
+        }
+      },
+      "appearance": {
+        "title": "مظهر",
+        "action": "تعديل المظهر",
+        "random": "احصل على صورة عشوائية",
+        "upload": "قم بتحميل صورتك الخاصة"
+      }
+    }
   }
 }

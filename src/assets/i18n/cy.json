@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ymddangosiad",
-    "action": "Addasu ymddangosiad",
-    "random": "Cael llun ar hap",
-    "upload": "Llwythwch eich llun eich hun i fyny"
-  },
   "video": {
     "errors": {
       "starting": "Camera yn dechrau",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Dynol"
     },
-    "title": "Gosodiadau"
+    "title": "Gosodiadau",
+    "close": "Cau gosodiadau",
+    "support": {
+      "title": "Cefnogaeth",
+      "feedback": {
+        "title": "Adborth"
+      },
+      "about": {
+        "title": "Ynghylch"
+      }
+    },
+    "voice": {
+      "title": "Llais",
+      "input": {
+        "title": "Mewnbwn"
+      },
+      "output": {
+        "title": "Allbwn"
+      }
+    },
+    "other": {
+      "title": "Arall",
+      "offline": {
+        "title": "All-lein",
+        "files": {
+          "pix2pixGenerator": "Generadur dynol ffoto-realistig",
+          "pix2pixUpscaler": "Ffoto-realistig upscaler dynol",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D ar gyfer AR ar iOS"
+        }
+      },
+      "appearance": {
+        "title": "Ymddangosiad",
+        "action": "Addasu ymddangosiad",
+        "random": "Cael llun ar hap",
+        "upload": "Llwythwch eich llun eich hun i fyny"
+      }
+    }
   }
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Bika Aman 'endrika",
-    "action": "Manova endrika",
-    "random": "Makà sary kisendrasendra",
-    "upload": "Ampidiro ny sarinao manokana"
-  },
   "video": {
     "errors": {
       "starting": "Manomboka ny fakan-tsary",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "OLONA"
     },
-    "title": "Fikirana"
+    "title": "Fikirana",
+    "close": "Akatona ny fika",
+    "support": {
+      "title": "MANAMPY",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "About"
+      }
+    },
+    "voice": {
+      "title": "feon'ny",
+      "input": {
+        "title": "fahan'ny"
+      },
+      "output": {
+        "title": "Fivoahana"
+      }
+    },
+    "other": {
+      "title": "Hafa",
+      "offline": {
+        "title": "ivelan'ny aterineto",
+        "files": {
+          "pix2pixGenerator": "Mpamokatra olombelona sary-zava-misy",
+          "pix2pixUpscaler": "Photo-realistic olombelona upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar ho an'ny AR amin'ny iOS"
+        }
+      },
+      "appearance": {
+        "title": "Bika Aman 'endrika",
+        "action": "Manova endrika",
+        "random": "Makà sary kisendrasendra",
+        "upload": "Ampidiro ny sarinao manokana"
+      }
+    }
   }
 }

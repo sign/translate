@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Voorkoms",
-    "action": "Verander voorkoms",
-    "random": "Kry 'n ewekansige foto",
-    "upload": "Laai jou eie foto op"
-  },
   "video": {
     "errors": {
       "starting": "Kamera begin",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Mens"
     },
-    "title": "Instellings"
+    "title": "Instellings",
+    "close": "Maak instellings toe",
+    "support": {
+      "title": "Ondersteuning",
+      "feedback": {
+        "title": "Terugvoer"
+      },
+      "about": {
+        "title": "Oor"
+      }
+    },
+    "voice": {
+      "title": "Stem",
+      "input": {
+        "title": "Invoer"
+      },
+      "output": {
+        "title": "Uitset"
+      }
+    },
+    "other": {
+      "title": "Ander",
+      "offline": {
+        "title": "Vanlyn",
+        "files": {
+          "pix2pixGenerator": "Foto-realistiese menslike kragopwekker",
+          "pix2pixUpscaler": "Foto-realistiese menslike opgradering",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar vir AR op iOS"
+        }
+      },
+      "appearance": {
+        "title": "Voorkoms",
+        "action": "Verander voorkoms",
+        "random": "Kry 'n ewekansige foto",
+        "upload": "Laai jou eie foto op"
+      }
+    }
   }
 }

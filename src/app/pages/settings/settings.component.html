@@ -2,7 +2,7 @@
   <ng-container *transloco="let t; read: 'settings'">
     <mat-toolbar *ngIf="!contentPage">
       <span>{{ t('title') }}</span>
-      <button mat-icon-button (click)="dismiss()">
+      <button mat-icon-button (click)="dismiss()" [attr.aria-label]="t('close')">
         <mat-icon>close</mat-icon>
       </button>
     </mat-toolbar>

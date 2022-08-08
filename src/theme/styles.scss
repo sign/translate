@@ -26,6 +26,7 @@
   @include mat.card-theme($theme);
   @include mat.tabs-theme($theme);
   @include mat.dialog-theme($theme);
+  @include mat.tree-theme($theme);
 }
 
 @include theme-components($app-theme);

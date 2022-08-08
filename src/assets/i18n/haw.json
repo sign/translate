@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ka nana aku",
-    "action": "Hoʻololi i ka helehelena",
-    "random": "E kiʻi i kiʻi kiʻi ʻole",
-    "upload": "Hoʻouka i kāu kiʻi ponoʻī"
-  },
   "video": {
     "errors": {
       "starting": "Hoʻomaka ka pahupaʻikiʻi",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Kanaka"
     },
-    "title": "Nā hoʻonohonoho"
+    "title": "Nā hoʻonohonoho",
+    "close": "Pani i nā hoʻonohonoho",
+    "support": {
+      "title": "Kākoʻo",
+      "feedback": {
+        "title": "Manaʻo manaʻo"
+      },
+      "about": {
+        "title": "E pili ana"
+      }
+    },
+    "voice": {
+      "title": "Leo",
+      "input": {
+        "title": "Hookomo"
+      },
+      "output": {
+        "title": "Hoʻopuka"
+      }
+    },
+    "other": {
+      "title": "'ē aʻe",
+      "offline": {
+        "title": "Pahemo",
+        "files": {
+          "pix2pixGenerator": "Photo-realistic kanaka mīkini hana wāwahie",
+          "pix2pixUpscaler": "Kiʻi-ʻoiaʻiʻo kanaka upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar no AR ma iOS"
+        }
+      },
+      "appearance": {
+        "title": "Ka nana aku",
+        "action": "Hoʻololi i ka helehelena",
+        "random": "E kiʻi i kiʻi kiʻi ʻole",
+        "upload": "Hoʻouka i kāu kiʻi ponoʻī"
+      }
+    }
   }
 }

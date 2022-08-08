@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ọdịdị",
-    "action": "Gbanwee ọdịdị",
-    "random": "Nweta foto enweghị usoro",
-    "upload": "Bulite foto nke gị"
-  },
   "video": {
     "errors": {
       "starting": "Igwefoto na-amalite",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Mmadụ"
     },
-    "title": "Ntọala"
+    "title": "Ntọala",
+    "close": "Mechie ntọala",
+    "support": {
+      "title": "Nkwado",
+      "feedback": {
+        "title": "Nzaghachi"
+      },
+      "about": {
+        "title": "Ihe gbasara"
+      }
+    },
+    "voice": {
+      "title": "Olu",
+      "input": {
+        "title": "Ntinye"
+      },
+      "output": {
+        "title": "Mpụta"
+      }
+    },
+    "other": {
+      "title": "Ndị ọzọ",
+      "offline": {
+        "title": "Na-anọghị n'ịntanetị",
+        "files": {
+          "pix2pixGenerator": "Foto-ezitere mmadụ generator",
+          "pix2pixUpscaler": "Foto-ezigbo mmadụ upscaler",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D maka AR na iOS"
+        }
+      },
+      "appearance": {
+        "title": "Ọdịdị",
+        "action": "Gbanwee ọdịdị",
+        "random": "Nweta foto enweghị usoro",
+        "upload": "Bulite foto nke gị"
+      }
+    }
   }
 }

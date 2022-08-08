@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Panagway",
-    "action": "Usba ang hitsura",
-    "random": "Pagkuha ug random nga litrato",
-    "upload": "Pag-upload sa imong kaugalingon nga litrato"
-  },
   "video": {
     "errors": {
       "starting": "Nagsugod ang camera",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Tawo"
     },
-    "title": "Mga setting"
+    "title": "Mga setting",
+    "close": "Isira ang mga setting",
+    "support": {
+      "title": "Suporta",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Mahitungod sa"
+      }
+    },
+    "voice": {
+      "title": "Tingog",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Ang uban",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-realistiko nga generator sa tawo",
+          "pix2pixUpscaler": "Photo-realistiko nga tawo nga upscaler",
+          "avatarGlb": "3D nga Avatar",
+          "avatarUsdz": "3D Avatar alang sa AR sa iOS"
+        }
+      },
+      "appearance": {
+        "title": "Panagway",
+        "action": "Usba ang hitsura",
+        "random": "Pagkuha ug random nga litrato",
+        "upload": "Pag-upload sa imong kaugalingon nga litrato"
+      }
+    }
   }
 }

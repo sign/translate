@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Kinézet",
-    "action": "Megjelenés módosítása",
-    "random": "Vegyél egy véletlenszerű fényképet",
-    "upload": "Töltsd fel saját fotódat"
-  },
   "video": {
     "errors": {
       "starting": "Kamera indul",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Emberi"
     },
-    "title": "Beállítások"
+    "title": "Beállítások",
+    "close": "Zárja be a beállításokat",
+    "support": {
+      "title": "Támogatás",
+      "feedback": {
+        "title": "Visszacsatolás"
+      },
+      "about": {
+        "title": "Ról ről"
+      }
+    },
+    "voice": {
+      "title": "Hang",
+      "input": {
+        "title": "Bemenet"
+      },
+      "output": {
+        "title": "Kimenet"
+      }
+    },
+    "other": {
+      "title": "Egyéb",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealisztikus emberi generátor",
+          "pix2pixUpscaler": "Fotórealisztikus emberi feljavító",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar AR-hez iOS rendszeren"
+        }
+      },
+      "appearance": {
+        "title": "Megjelenés",
+        "action": "Módosítsa a megjelenést",
+        "random": "Vegyél egy véletlenszerű fényképet",
+        "upload": "Töltsd fel saját fotódat"
+      }
+    }
   }
 }

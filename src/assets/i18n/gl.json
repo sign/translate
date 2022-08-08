@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Aparencia",
-    "action": "Modificar a aparencia",
-    "random": "Obtén unha foto aleatoria",
-    "upload": "Carga a túa propia foto"
-  },
   "video": {
     "errors": {
       "starting": "Inicio da cámara",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Humano"
     },
-    "title": "Configuración"
+    "title": "Configuración",
+    "close": "Pecha a configuración",
+    "support": {
+      "title": "Apoiar",
+      "feedback": {
+        "title": "Comentarios"
+      },
+      "about": {
+        "title": "Sobre"
+      }
+    },
+    "voice": {
+      "title": "Voz",
+      "input": {
+        "title": "Entrada"
+      },
+      "output": {
+        "title": "Saída"
+      }
+    },
+    "other": {
+      "title": "Outra",
+      "offline": {
+        "title": "Sen conexión",
+        "files": {
+          "pix2pixGenerator": "Xerador humano fotorrealista",
+          "pix2pixUpscaler": "Escalador humano fotorrealista",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D para AR en iOS"
+        }
+      },
+      "appearance": {
+        "title": "Aparición",
+        "action": "Modificar a aparencia",
+        "random": "Obtén unha foto aleatoria",
+        "upload": "Carga a túa propia foto"
+      }
+    }
   }
 }

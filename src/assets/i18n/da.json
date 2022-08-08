@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Udseende",
-    "action": "Ændre udseende",
-    "random": "Få et tilfældigt billede",
-    "upload": "Upload dit eget billede"
-  },
   "video": {
     "errors": {
       "starting": "Kamera starter",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Human"
     },
-    "title": "Indstillinger"
+    "title": "Indstillinger",
+    "close": "Luk indstillinger",
+    "support": {
+      "title": "Support",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Om"
+      }
+    },
+    "voice": {
+      "title": "Stemme",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Produktion"
+      }
+    },
+    "other": {
+      "title": "Andet",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealistisk menneskelig generator",
+          "pix2pixUpscaler": "Fotorealistisk menneskelig opskalerer",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar til AR på iOS"
+        }
+      },
+      "appearance": {
+        "title": "Udseende",
+        "action": "Ændre udseende",
+        "random": "Få et tilfældigt billede",
+        "upload": "Upload dit eget billede"
+      }
+    }
   }
 }

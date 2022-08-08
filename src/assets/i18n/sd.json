@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "ظاهر",
-    "action": "ظاهر تبديل ڪريو",
-    "random": "هڪ بي ترتيب تصوير حاصل ڪريو",
-    "upload": "اپلوڊ ڪريو پنھنجو فوٽو"
-  },
   "video": {
     "errors": {
       "starting": "ڪئميرا شروع ٿي",
@@ -154,6 +148,43 @@
       "avatar": "اوتار",
       "human": "انسان"
     },
-    "title": "سيٽنگون"
+    "title": "سيٽنگون",
+    "close": "سيٽنگون بند ڪريو",
+    "support": {
+      "title": "حمايت",
+      "feedback": {
+        "title": "راءِ"
+      },
+      "about": {
+        "title": "بابت"
+      }
+    },
+    "voice": {
+      "title": "آواز",
+      "input": {
+        "title": "ان پٽ"
+      },
+      "output": {
+        "title": "پيداوار"
+      }
+    },
+    "other": {
+      "title": "ٻيو",
+      "offline": {
+        "title": "آف لائن",
+        "files": {
+          "pix2pixGenerator": "ڦوٽو-حقيقت پسند انساني جنريٽر",
+          "pix2pixUpscaler": "ڦوٽو-حقيقت پسند انسان اپ اسڪيلر",
+          "avatarGlb": "3D اوتار",
+          "avatarUsdz": "iOS تي AR لاءِ 3D اوتار"
+        }
+      },
+      "appearance": {
+        "title": "ظاهر",
+        "action": "ظاهر تبديل ڪريو",
+        "random": "هڪ بي ترتيب تصوير حاصل ڪريو",
+        "upload": "اپلوڊ ڪريو پنھنجو فوٽو"
+      }
+    }
   }
 }

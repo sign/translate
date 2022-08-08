@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "उपस्थिति",
-    "action": "उपस्थिति संशोधित करें",
-    "random": "एक यादृच्छिक फोटो प्राप्त करें",
-    "upload": "अपनी खुद की फोटो अपलोड करें"
-  },
   "video": {
     "errors": {
       "starting": "कैमरा शुरू",
@@ -154,6 +148,43 @@
       "avatar": "अवतार",
       "human": "इंसान"
     },
-    "title": "समायोजन"
+    "title": "समायोजन",
+    "close": "सेटिंग बंद करें",
+    "support": {
+      "title": "सहायता",
+      "feedback": {
+        "title": "प्रतिपुष्टि"
+      },
+      "about": {
+        "title": "के बारे में"
+      }
+    },
+    "voice": {
+      "title": "आवाज़",
+      "input": {
+        "title": "इनपुट"
+      },
+      "output": {
+        "title": "उत्पादन"
+      }
+    },
+    "other": {
+      "title": "अन्य",
+      "offline": {
+        "title": "ऑफलाइन",
+        "files": {
+          "pix2pixGenerator": "फोटो-यथार्थवादी मानव जनरेटर",
+          "pix2pixUpscaler": "फोटो-यथार्थवादी मानव upscaler",
+          "avatarGlb": "3डी अवतार",
+          "avatarUsdz": "iOS पर AR के लिए 3D अवतार"
+        }
+      },
+      "appearance": {
+        "title": "दिखावट",
+        "action": "उपस्थिति संशोधित करें",
+        "random": "एक यादृच्छिक फोटो प्राप्त करें",
+        "upload": "अपनी खुद की फोटो अपलोड करें"
+      }
+    }
   }
 }

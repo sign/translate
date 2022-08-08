@@ -10,6 +10,9 @@ import {SettingsVoiceInputComponent} from './settings-voice-input/settings-voice
 import {SettingsVoiceOutputComponent} from './settings-voice-output/settings-voice-output.component';
 import {SettingsOfflineComponent} from './settings-offline/settings-offline.component';
 import {SettingsAppearanceComponent} from './settings-appearance/settings-appearance.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {CdkTreeModule} from '@angular/cdk/tree';
+import {NgxFilesizeModule} from 'ngx-filesize';
 
 export {SettingsPageComponent};
 
@@ -23,7 +26,15 @@ export {SettingsPageComponent};
     SettingsVoiceInputComponent,
     SettingsVoiceOutputComponent,
   ],
-  imports: [CommonModule, AppTranslocoModule, AppAngularMaterialModule, SettingsRoutingModule],
+  imports: [
+    CommonModule,
+    AppTranslocoModule,
+    AppAngularMaterialModule,
+    SettingsRoutingModule,
+    NgxFilesizeModule,
+    MatTreeModule,
+    CdkTreeModule,
+  ],
   bootstrap: [SettingsPageComponent],
 })
 export class SettingsPageModule {}

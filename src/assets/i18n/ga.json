@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Dealramh",
-    "action": "Athraigh an chuma",
-    "random": "Faigh grianghraf randamach",
-    "upload": "Íoslódáil an pictiúr ar do dheasc féin"
-  },
   "video": {
     "errors": {
       "starting": "Ceamara ag tosú",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Duine"
     },
-    "title": "Socruithe"
+    "title": "Socruithe",
+    "close": "Dún socruithe",
+    "support": {
+      "title": "Tacaíocht",
+      "feedback": {
+        "title": "Aiseolas"
+      },
+      "about": {
+        "title": "Faoi"
+      }
+    },
+    "voice": {
+      "title": "Guth",
+      "input": {
+        "title": "Ionchur"
+      },
+      "output": {
+        "title": "Aschur"
+      }
+    },
+    "other": {
+      "title": "Eile",
+      "offline": {
+        "title": "As líne",
+        "files": {
+          "pix2pixGenerator": "Gineadóir daonna grianghraf-réalaíoch",
+          "pix2pixUpscaler": "Ardaitheoir daonna grianghraf-réalaíoch",
+          "avatarGlb": "Cluiche avatar 3D",
+          "avatarUsdz": "Íosluchtaigh avatar 3d le haghaidh ios"
+        }
+      },
+      "appearance": {
+        "title": "Dealramh",
+        "action": "Athraigh an chuma",
+        "random": "Faigh grianghraf randamach",
+        "upload": "Íoslódáil an pictiúr ar do dheasc féin"
+      }
+    }
   }
 }

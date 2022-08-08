@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ifarahan",
-    "action": "Ṣatunṣe irisi",
-    "random": "Gba fọto laileto",
-    "upload": "Po si ara rẹ Fọto"
-  },
   "video": {
     "errors": {
       "starting": "Kamẹra bẹrẹ",
@@ -154,6 +148,43 @@
       "avatar": "Afata",
       "human": "Eniyan"
     },
-    "title": "Ètò"
+    "title": "Ètò",
+    "close": "Pa awọn eto",
+    "support": {
+      "title": "Atilẹyin",
+      "feedback": {
+        "title": "Esi"
+      },
+      "about": {
+        "title": "Nipa"
+      }
+    },
+    "voice": {
+      "title": "Ohùn",
+      "input": {
+        "title": "Iṣawọle"
+      },
+      "output": {
+        "title": "Abajade"
+      }
+    },
+    "other": {
+      "title": "Omiiran",
+      "offline": {
+        "title": "Aisinipo",
+        "files": {
+          "pix2pixGenerator": "Photo-bojumu eda eniyan monomono",
+          "pix2pixUpscaler": "Photo-bojumu eda eniyan upscaler",
+          "avatarGlb": "3D Afata",
+          "avatarUsdz": "Afata 3D fun AR lori iOS"
+        }
+      },
+      "appearance": {
+        "title": "Ifarahan",
+        "action": "Ṣatunṣe irisi",
+        "random": "Gba fọto laileto",
+        "upload": "Ṣe agbejade fọto tirẹ"
+      }
+    }
   }
 }

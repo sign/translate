@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Chitarisiko",
-    "action": "Chinja chitarisiko",
-    "random": "Tora mufananidzo wakasarudzika",
-    "upload": "Isa mufananidzo wako"
-  },
   "video": {
     "errors": {
       "starting": "Kamera inotanga",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Munhu"
     },
-    "title": "Settings"
+    "title": "Settings",
+    "close": "Vhara zvigadziriso",
+    "support": {
+      "title": "Support",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "About"
+      }
+    },
+    "voice": {
+      "title": "Voice",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Zvimwe",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-chaiyo yemunhu jenareta",
+          "pix2pixUpscaler": "Photo-chaiyo yemunhu upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar yeAR paIOS"
+        }
+      },
+      "appearance": {
+        "title": "Chitarisiko",
+        "action": "Chinja chitarisiko",
+        "random": "Tora mufananidzo wakasarudzika",
+        "upload": "Isa mufananidzo wako"
+      }
+    }
   }
 }

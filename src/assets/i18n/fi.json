@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ulkomuoto",
-    "action": "Muokkaa ulkonäköä",
-    "random": "Ota satunnainen valokuva",
-    "upload": "Lataa oma valokuvasi"
-  },
   "video": {
     "errors": {
       "starting": "Kamera käynnistyy",
@@ -154,6 +148,43 @@
       "avatar": "hahmo",
       "human": "Ihmisen"
     },
-    "title": "asetukset"
+    "title": "asetukset",
+    "close": "Sulje asetukset",
+    "support": {
+      "title": "Tuki",
+      "feedback": {
+        "title": "Palaute"
+      },
+      "about": {
+        "title": "Noin"
+      }
+    },
+    "voice": {
+      "title": "Ääni",
+      "input": {
+        "title": "Syöte"
+      },
+      "output": {
+        "title": "Lähtö"
+      }
+    },
+    "other": {
+      "title": "muu",
+      "offline": {
+        "title": "Offline-tilassa",
+        "files": {
+          "pix2pixGenerator": "Valokuvarealistinen ihmisgeneraattori",
+          "pix2pixUpscaler": "Valokuvarealistinen ihmisparannus",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar AR:lle iOS:ssä"
+        }
+      },
+      "appearance": {
+        "title": "Ulkomuoto",
+        "action": "Muokkaa ulkonäköä",
+        "random": "Ota satunnainen valokuva",
+        "upload": "Lataa oma valokuvasi"
+      }
+    }
   }
 }

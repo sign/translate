@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "រូបរាង",
-    "action": "កែប្រែរូបរាង",
-    "random": "ទទួលបានរូបថតចៃដន្យ",
-    "upload": "បង្ហោះរូបថតផ្ទាល់ខ្លួនរបស់អ្នក។"
-  },
   "video": {
     "errors": {
       "starting": "កាមេរ៉ាចាប់ផ្តើម",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "មនុស្ស"
     },
-    "title": "ការកំណត់"
+    "title": "ការកំណត់",
+    "close": "បិទការកំណត់",
+    "support": {
+      "title": "គាំទ្រ",
+      "feedback": {
+        "title": "មតិកែលម្អ"
+      },
+      "about": {
+        "title": "អំពី"
+      }
+    },
+    "voice": {
+      "title": "សំឡេង",
+      "input": {
+        "title": "បញ្ចូល"
+      },
+      "output": {
+        "title": "ទិន្នផល"
+      }
+    },
+    "other": {
+      "title": "ផ្សេងទៀត",
+      "offline": {
+        "title": "ក្រៅបណ្តាញ",
+        "files": {
+          "pix2pixGenerator": "ម៉ាស៊ីនបង្កើតរូបភាពមនុស្សពិត",
+          "pix2pixUpscaler": "រូបថត - ការកើនឡើងមនុស្សជាក់ស្តែង",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "3D Avatar សម្រាប់ AR នៅលើ iOS"
+        }
+      },
+      "appearance": {
+        "title": "រូបរាង",
+        "action": "កែប្រែរូបរាង",
+        "random": "ទទួលបានរូបថតចៃដន្យ",
+        "upload": "បង្ហោះរូបថតផ្ទាល់ខ្លួនរបស់អ្នក។"
+      }
+    }
   }
 }

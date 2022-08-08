@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "ਦਿੱਖ",
-    "action": "ਦਿੱਖ ਨੂੰ ਸੋਧੋ",
-    "random": "ਇੱਕ ਬੇਤਰਤੀਬ ਫੋਟੋ ਪ੍ਰਾਪਤ ਕਰੋ",
-    "upload": "ਆਪਣੀ ਖੁਦ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ"
-  },
   "video": {
     "errors": {
       "starting": "ਕੈਮਰਾ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ",
@@ -154,6 +148,43 @@
       "avatar": "ਅਵਤਾਰ",
       "human": "ਮਨੁੱਖੀ"
     },
-    "title": "ਸੈਟਿੰਗਾਂ"
+    "title": "ਸੈਟਿੰਗਾਂ",
+    "close": "ਸੈਟਿੰਗਾਂ ਬੰਦ ਕਰੋ",
+    "support": {
+      "title": "ਸਪੋਰਟ",
+      "feedback": {
+        "title": "ਸੁਝਾਅ"
+      },
+      "about": {
+        "title": "ਬਾਰੇ"
+      }
+    },
+    "voice": {
+      "title": "ਆਵਾਜ਼",
+      "input": {
+        "title": "ਇੰਪੁੱਟ"
+      },
+      "output": {
+        "title": "ਆਉਟਪੁੱਟ"
+      }
+    },
+    "other": {
+      "title": "ਹੋਰ",
+      "offline": {
+        "title": "ਔਫਲਾਈਨ",
+        "files": {
+          "pix2pixGenerator": "ਫੋਟੋ-ਯਥਾਰਥਵਾਦੀ ਮਨੁੱਖੀ ਜਨਰੇਟਰ",
+          "pix2pixUpscaler": "ਫੋਟੋ-ਯਥਾਰਥਵਾਦੀ ਮਨੁੱਖੀ ਅੱਪਸਕੇਲਰ",
+          "avatarGlb": "3D ਅਵਤਾਰ",
+          "avatarUsdz": "iOS 'ਤੇ AR ਲਈ 3D ਅਵਤਾਰ"
+        }
+      },
+      "appearance": {
+        "title": "ਦਿੱਖ",
+        "action": "ਦਿੱਖ ਨੂੰ ਸੋਧੋ",
+        "random": "ਇੱਕ ਬੇਤਰਤੀਬ ਫੋਟੋ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "upload": "ਆਪਣੀ ਖੁਦ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ"
+      }
+    }
   }
 }

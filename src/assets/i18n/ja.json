@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "外観",
-    "action": "外観を変更する",
-    "random": "ランダムな写真を撮る",
-    "upload": "自分の写真をアップロードする"
-  },
   "video": {
     "errors": {
       "starting": "カメラ始動",
@@ -154,6 +148,43 @@
       "avatar": "アバター",
       "human": "人間"
     },
-    "title": "設定"
+    "title": "設定",
+    "close": "設定を閉じる",
+    "support": {
+      "title": "サポート",
+      "feedback": {
+        "title": "フィードバック"
+      },
+      "about": {
+        "title": "約"
+      }
+    },
+    "voice": {
+      "title": "声",
+      "input": {
+        "title": "入力"
+      },
+      "output": {
+        "title": "出力"
+      }
+    },
+    "other": {
+      "title": "他の",
+      "offline": {
+        "title": "オフライン",
+        "files": {
+          "pix2pixGenerator": "フォトリアリスティックなヒューマン ジェネレーター",
+          "pix2pixUpscaler": "写真のようにリアルな人間のアップスケーラー",
+          "avatarGlb": "3Dアバター",
+          "avatarUsdz": "iOS の AR 用 3D アバター"
+        }
+      },
+      "appearance": {
+        "title": "外観",
+        "action": "外観を変更する",
+        "random": "ランダムに写真を取得する",
+        "upload": "自分の写真をアップロードする"
+      }
+    }
   }
 }

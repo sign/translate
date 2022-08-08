@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Apparizione",
-    "action": "Mudificà l'apparenza",
-    "random": "Fate una foto casuale",
-    "upload": "Caricate a vostra propria foto"
-  },
   "video": {
     "errors": {
       "starting": "A camera principia",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "umanu"
     },
-    "title": "Settings"
+    "title": "Settings",
+    "close": "Chiudi i paràmetri",
+    "support": {
+      "title": "Supportu",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "À propositu"
+      }
+    },
+    "voice": {
+      "title": "Voce",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Altru",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Generatore umanu foto-realisticu",
+          "pix2pixUpscaler": "Upscaler umanu foto-realisticu",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D per AR in iOS"
+        }
+      },
+      "appearance": {
+        "title": "Apparizione",
+        "action": "Mudificà l'apparenza",
+        "random": "Fate una foto casuale",
+        "upload": "Caricate a vostra propria foto"
+      }
+    }
   }
 }

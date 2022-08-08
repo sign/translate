@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Utseende",
-    "action": "Ändra utseende",
-    "random": "Få ett slumpmässigt foto",
-    "upload": "Ladda upp ditt eget foto"
-  },
   "video": {
     "errors": {
       "starting": "Kameran startar",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Mänsklig"
     },
-    "title": "inställningar"
+    "title": "inställningar",
+    "close": "Stäng inställningarna",
+    "support": {
+      "title": "Stöd",
+      "feedback": {
+        "title": "Respons"
+      },
+      "about": {
+        "title": "Handla om"
+      }
+    },
+    "voice": {
+      "title": "Röst",
+      "input": {
+        "title": "Inmatning"
+      },
+      "output": {
+        "title": "Produktion"
+      }
+    },
+    "other": {
+      "title": "Övrig",
+      "offline": {
+        "title": "Off-line",
+        "files": {
+          "pix2pixGenerator": "Fotorealistisk mänsklig generator",
+          "pix2pixUpscaler": "Fotorealistisk mänsklig uppskalare",
+          "avatarGlb": "3D-avatar",
+          "avatarUsdz": "3D Avatar för AR på iOS"
+        }
+      },
+      "appearance": {
+        "title": "Utseende",
+        "action": "Ändra utseende",
+        "random": "Få ett slumpmässigt foto",
+        "upload": "Ladda upp ditt eget foto"
+      }
+    }
   }
 }

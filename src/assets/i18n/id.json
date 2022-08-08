@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Penampilan",
-    "action": "Ubah penampilan",
-    "random": "Dapatkan foto acak",
-    "upload": "Unggah foto Anda sendiri"
-  },
   "video": {
     "errors": {
       "starting": "Kamera mulai",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Manusia"
     },
-    "title": "Pengaturan"
+    "title": "Pengaturan",
+    "close": "Tutup pengaturan",
+    "support": {
+      "title": "Mendukung",
+      "feedback": {
+        "title": "Masukan"
+      },
+      "about": {
+        "title": "Tentang"
+      }
+    },
+    "voice": {
+      "title": "Suara",
+      "input": {
+        "title": "Memasukkan"
+      },
+      "output": {
+        "title": "Keluaran"
+      }
+    },
+    "other": {
+      "title": "Lainnya",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Generator manusia foto-realistis",
+          "pix2pixUpscaler": "Upscaler manusia foto-realistis",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D untuk AR di iOS"
+        }
+      },
+      "appearance": {
+        "title": "Penampilan",
+        "action": "Ubah penampilan",
+        "random": "Dapatkan foto acak",
+        "upload": "Unggah foto Anda sendiri"
+      }
+    }
   }
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Te ahua",
-    "action": "Whakarerekē ahua",
-    "random": "Tikina he whakaahua matapōkere",
-    "upload": "Tukuna ake to whakaahua"
-  },
   "video": {
     "errors": {
       "starting": "Ka timata te kamera",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Tangata"
     },
-    "title": "Tautuhinga"
+    "title": "Tautuhinga",
+    "close": "Katia nga tautuhinga",
+    "support": {
+      "title": "Tautoko",
+      "feedback": {
+        "title": "Urupare"
+      },
+      "about": {
+        "title": "Mō"
+      }
+    },
+    "voice": {
+      "title": "Reo",
+      "input": {
+        "title": "Whakauru"
+      },
+      "output": {
+        "title": "Putanga"
+      }
+    },
+    "other": {
+      "title": "Ētahi atu",
+      "offline": {
+        "title": "Tuimotu",
+        "files": {
+          "pix2pixGenerator": "Kaihanga tangata-whakaahua",
+          "pix2pixUpscaler": "Tangata-whakaahua teitei ake",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D mo AR i runga iOS"
+        }
+      },
+      "appearance": {
+        "title": "Te ahua",
+        "action": "Whakarerekē ahua",
+        "random": "Tikina he whakaahua matapōkere",
+        "upload": "Tukuna ake to whakaahua"
+      }
+    }
   }
 }

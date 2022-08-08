@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Muuqashada",
-    "action": "Wax ka beddel muuqaalka",
-    "random": "Hel sawir aan toos ahayn",
-    "upload": "Soo rar sawirkaaga"
-  },
   "video": {
     "errors": {
       "starting": "Kamarada bilaabma",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Aadane"
     },
-    "title": "Dejinta"
+    "title": "Dejinta",
+    "close": "Xir dejinta",
+    "support": {
+      "title": "Taageero",
+      "feedback": {
+        "title": "Jawaab celin"
+      },
+      "about": {
+        "title": "Ku saabsan"
+      }
+    },
+    "voice": {
+      "title": "Codka",
+      "input": {
+        "title": "Gelida"
+      },
+      "output": {
+        "title": "Wax soo saarka"
+      }
+    },
+    "other": {
+      "title": "Mid kale",
+      "offline": {
+        "title": "offline",
+        "files": {
+          "pix2pixGenerator": "Sawir-dhaliyaha aadanaha ee dhabta ah",
+          "pix2pixUpscaler": "Sawir-qaade bini'aadminimo oo dhab ah",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar ee AR ee iOS"
+        }
+      },
+      "appearance": {
+        "title": "Muuqashada",
+        "action": "Wax ka beddel muuqaalka",
+        "random": "Hel sawir aan toos ahayn",
+        "upload": "Soo rar sawirkaaga"
+      }
+    }
   }
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Aspect",
-    "action": "Modificați aspectul",
-    "random": "Obțineți o fotografie aleatorie",
-    "upload": "Încărcați propria fotografie"
-  },
   "video": {
     "errors": {
       "starting": "Camera pornește",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Uman"
     },
-    "title": "Setări"
+    "title": "Setări",
+    "close": "Închideți setările",
+    "support": {
+      "title": "A sustine",
+      "feedback": {
+        "title": "Părere"
+      },
+      "about": {
+        "title": "Despre"
+      }
+    },
+    "voice": {
+      "title": "Voce",
+      "input": {
+        "title": "Intrare"
+      },
+      "output": {
+        "title": "Ieșire"
+      }
+    },
+    "other": {
+      "title": "Alte",
+      "offline": {
+        "title": "Deconectat",
+        "files": {
+          "pix2pixGenerator": "Generator uman foto-realist",
+          "pix2pixUpscaler": "Upscaler uman foto-realist",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D pentru AR pe iOS"
+        }
+      },
+      "appearance": {
+        "title": "Aspect",
+        "action": "Modificați aspectul",
+        "random": "Obțineți o fotografie aleatorie",
+        "upload": "Încărcați propria fotografie"
+      }
+    }
   }
 }

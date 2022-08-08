@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Imbonakalo",
-    "action": "Guqula inkangeleko",
-    "random": "Fumana ifoto engaqhelekanga",
-    "upload": "Layisha eyakho ifoto"
-  },
   "video": {
     "errors": {
       "starting": "Ikhamera iyaqala",
@@ -154,6 +148,43 @@
       "avatar": "IAvatar",
       "human": "Umntu"
     },
-    "title": "Iisetingi"
+    "title": "Iisetingi",
+    "close": "Vala iisetingi",
+    "support": {
+      "title": "Inkxaso",
+      "feedback": {
+        "title": "Ingxelo"
+      },
+      "about": {
+        "title": "Malunga"
+      }
+    },
+    "voice": {
+      "title": "Ilizwi",
+      "input": {
+        "title": "Igalelo"
+      },
+      "output": {
+        "title": "Isiphumo"
+      }
+    },
+    "other": {
+      "title": "Okunye",
+      "offline": {
+        "title": "Ngaphandle kweintanethi",
+        "files": {
+          "pix2pixGenerator": "Ifoto-eyinyani yejenereyitha yomntu",
+          "pix2pixUpscaler": "Ifoto-eyinyani yomntu upscaler",
+          "avatarGlb": "IAvatar ye3D",
+          "avatarUsdz": "I-Avatar ye-3D ye-AR kwi-iOS"
+        }
+      },
+      "appearance": {
+        "title": "Imbonakalo",
+        "action": "Guqula inkangeleko",
+        "random": "Fumana ifoto engaqhelekanga",
+        "upload": "Layisha eyakho ifoto"
+      }
+    }
   }
 }

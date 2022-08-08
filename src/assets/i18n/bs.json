@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Izgled",
-    "action": "Izmijenite izgled",
-    "random": "Uzmite nasumično odabranu fotografiju",
-    "upload": "Otpremite vlastitu fotografiju"
-  },
   "video": {
     "errors": {
       "starting": "Kamera se pokreće",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Čovjek"
     },
-    "title": "Postavke"
+    "title": "Postavke",
+    "close": "Zatvorite postavke",
+    "support": {
+      "title": "Podrška",
+      "feedback": {
+        "title": "Povratne informacije"
+      },
+      "about": {
+        "title": "O"
+      }
+    },
+    "voice": {
+      "title": "Glas",
+      "input": {
+        "title": "Unos"
+      },
+      "output": {
+        "title": "Izlaz"
+      }
+    },
+    "other": {
+      "title": "Ostalo",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealističan ljudski generator",
+          "pix2pixUpscaler": "Foto-realističan ljudski upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar za AR na iOS-u"
+        }
+      },
+      "appearance": {
+        "title": "Izgled",
+        "action": "Izmijenite izgled",
+        "random": "Uzmite nasumično odabranu fotografiju",
+        "upload": "Otpremite vlastitu fotografiju"
+      }
+    }
   }
 }

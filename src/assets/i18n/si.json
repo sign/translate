@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "පෙනුම",
-    "action": "පෙනුම වෙනස් කරන්න",
-    "random": "අහඹු ඡායාරූපයක් ලබා ගන්න",
-    "upload": "ඔබේම ඡායාරූපයක් උඩුගත කරන්න"
-  },
   "video": {
     "errors": {
       "starting": "කැමරාව ආරම්භ වේ",
@@ -154,6 +148,43 @@
       "avatar": "අවතාරය",
       "human": "මානව"
     },
-    "title": "සැකසුම්"
+    "title": "සැකසුම්",
+    "close": "සැකසුම් වසන්න",
+    "support": {
+      "title": "සහාය",
+      "feedback": {
+        "title": "ප්රතිපෝෂණ"
+      },
+      "about": {
+        "title": "ගැන"
+      }
+    },
+    "voice": {
+      "title": "හඬ",
+      "input": {
+        "title": "ආදානය"
+      },
+      "output": {
+        "title": "ප්රතිදානය"
+      }
+    },
+    "other": {
+      "title": "වෙනත්",
+      "offline": {
+        "title": "නොබැඳි",
+        "files": {
+          "pix2pixGenerator": "ඡායාරූප යථාර්ථවාදී මානව උත්පාදක යන්ත්රය",
+          "pix2pixUpscaler": "ඡායාරූප-යථාර්ථවාදී මානව උත්පාදකයා",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "iOS මත AR සඳහා 3D Avatar"
+        }
+      },
+      "appearance": {
+        "title": "පෙනුම",
+        "action": "පෙනුම වෙනස් කරන්න",
+        "random": "අහඹු ඡායාරූපයක් ලබා ගන්න",
+        "upload": "ඔබේම ඡායාරූපයක් උඩුගත කරන්න"
+      }
+    }
   }
 }

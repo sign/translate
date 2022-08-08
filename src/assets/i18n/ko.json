@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "모습",
-    "action": "모양 수정",
-    "random": "무작위 사진 얻기",
-    "upload": "나만의 사진 업로드"
-  },
   "video": {
     "errors": {
       "starting": "카메라 시작",
@@ -154,6 +148,43 @@
       "avatar": "화신",
       "human": "인간"
     },
-    "title": "설정"
+    "title": "설정",
+    "close": "설정 닫기",
+    "support": {
+      "title": "지원하다",
+      "feedback": {
+        "title": "피드백"
+      },
+      "about": {
+        "title": "에 대한"
+      }
+    },
+    "voice": {
+      "title": "목소리",
+      "input": {
+        "title": "입력"
+      },
+      "output": {
+        "title": "산출"
+      }
+    },
+    "other": {
+      "title": "다른",
+      "offline": {
+        "title": "오프라인",
+        "files": {
+          "pix2pixGenerator": "사실적인 인간 생성기",
+          "pix2pixUpscaler": "사실적인 인간 업스케일러",
+          "avatarGlb": "3D 아바타",
+          "avatarUsdz": "iOS의 AR용 3D 아바타"
+        }
+      },
+      "appearance": {
+        "title": "모습",
+        "action": "모양 수정",
+        "random": "무작위 사진 얻기",
+        "upload": "나만의 사진 업로드"
+      }
+    }
   }
 }

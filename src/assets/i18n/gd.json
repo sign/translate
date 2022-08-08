@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Coltas",
-    "action": "Atharraich coltas",
-    "random": "Faigh dealbh air thuaiream",
-    "upload": "Luchdaich a-nuas an dealbh fhèin"
-  },
   "video": {
     "errors": {
       "starting": "Camara a' tòiseachadh",
@@ -154,6 +148,43 @@
       "avatar": "Avatar",
       "human": "Duine"
     },
-    "title": "Suidhichidhean"
+    "title": "Suidhichidhean",
+    "close": "Dùin roghainnean",
+    "support": {
+      "title": "Taic",
+      "feedback": {
+        "title": "Fios air ais"
+      },
+      "about": {
+        "title": "Mu dheidhinn"
+      }
+    },
+    "voice": {
+      "title": "Guth",
+      "input": {
+        "title": "Cuir a-steach"
+      },
+      "output": {
+        "title": "Toradh"
+      }
+    },
+    "other": {
+      "title": "Eile",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Gineadair daonna dealbh-reusanta",
+          "pix2pixUpscaler": "Àrdachadh daonna dealbh-reusanta",
+          "avatarGlb": "Avatar ann an 3d a",
+          "avatarUsdz": "Avatar 3d a airson ios"
+        }
+      },
+      "appearance": {
+        "title": "Coltas",
+        "action": "Atharraich coltas",
+        "random": "Faigh dealbh air thuaiream",
+        "upload": "Luchdaich a-nuas an dealbh fhèin"
+      }
+    }
   }
 }

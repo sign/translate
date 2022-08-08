@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Izskats",
-    "action": "Mainīt izskatu",
-    "random": "Iegūstiet nejaušu fotoattēlu",
-    "upload": "Augšupielādējiet savu fotoattēlu"
-  },
   "video": {
     "errors": {
       "starting": "Kameras palaišana",
@@ -154,6 +148,43 @@
       "avatar": "Iemiesojums",
       "human": "Cilvēks"
     },
-    "title": "Iestatījumi"
+    "title": "Iestatījumi",
+    "close": "Aizveriet iestatījumus",
+    "support": {
+      "title": "Atbalsts",
+      "feedback": {
+        "title": "Atsauksmes"
+      },
+      "about": {
+        "title": "Par"
+      }
+    },
+    "voice": {
+      "title": "Balss",
+      "input": {
+        "title": "Ievade"
+      },
+      "output": {
+        "title": "Izvade"
+      }
+    },
+    "other": {
+      "title": "Cits",
+      "offline": {
+        "title": "Bezsaistē",
+        "files": {
+          "pix2pixGenerator": "Fotoreālistisks cilvēka ģenerators",
+          "pix2pixUpscaler": "Fotoreālistisks, cilvēka uzlabotājs",
+          "avatarGlb": "3D iemiesojums",
+          "avatarUsdz": "3D iemiesojums AR operētājsistēmā iOS"
+        }
+      },
+      "appearance": {
+        "title": "Izskats",
+        "action": "Mainīt izskatu",
+        "random": "Iegūstiet nejaušu fotoattēlu",
+        "upload": "Augšupielādējiet savu fotoattēlu"
+      }
+    }
   }
 }

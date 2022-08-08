@@ -7,33 +7,118 @@ import write_blob from 'capacitor-blob-writer';
  * Capacitor.Filesystem is used as a fallback.
  */
 
+export type AssetState = {
+  name?: string;
+  path: string;
+  exists: boolean;
+  size?: number;
+  progress?: number; // Download progress in percentage
+  modified?: Date;
+  children?: AssetState[];
+};
+
+type ProgressCallback = (receivedLength: number, totalLength: number) => void;
+
 @Injectable({
   providedIn: 'root',
 })
 export class AssetsService {
   static BUCKET_URL = 'https://firebasestorage.googleapis.com/v0/b/sign-mt-assets/o/';
 
-  async getDirectory(path: string): Promise<Map<string, string>> {
+  async stat(path: string): Promise<AssetState> {
+    if (path.endsWith('/')) {
+      const files = this.getLocalStorageDirectory(path);
+      if (!files) {
+        return {path, exists: false, children: []};
+      }
+      const filesStat = await Promise.all(files.map(f => this.stat(path + f)));
+      return {
+        path,
+        exists: true,
+        size: filesStat.reduce((acc, f) => acc + f.size, 0),
+        children: filesStat,
+      };
+    }
+
+    const fileStatStr = localStorage.getItem(path);
+    if (!fileStatStr) {
+      return {path, exists: false};
+    }
+    const fileStat = JSON.parse(fileStatStr);
+
+    return {
+      path,
+      exists: true,
+      size: Number(fileStat.size),
+      modified: new Date(fileStat.updated),
+    };
+  }
+
+  async deleteCache(path: string) {
+    if (path.endsWith('/')) {
+      const files = this.getLocalStorageDirectory(path);
+      if (files) {
+        await Promise.all(files.map(f => this.deleteCache(path + f)));
+      }
+    } else {
+      await this.deleteFile(path);
+    }
+
+    localStorage.removeItem(path);
+  }
+
+  getLocalStorageDirectory(path: string) {
+    const filesStr = localStorage.getItem(path);
+    if (!filesStr) {
+      return null;
+    }
+    return filesStr.split(',');
+  }
+
+  async download(path: string, progressCallback?: ProgressCallback) {
+    if (path.endsWith('/')) {
+      return this.getDirectory(path, progressCallback);
+    }
+    return this.getFileUri(path, progressCallback);
+  }
+
+  async getDirectory(path: string, progressCallback?: ProgressCallback): Promise<Map<string, string>> {
     if (!path.endsWith('/')) {
       throw new Error('Directory path must end with /');
     }
-    const filesStr = localStorage.getItem(path);
-    let files: string[];
-    if (!filesStr) {
+    let files = this.getLocalStorageDirectory(path);
+    if (!files) {
       // Directory is not cached
       files = Array.from(await this.listDirectory(path));
       localStorage.setItem(path, files.join(','));
-    } else {
-      files = filesStr.split(',');
     }
 
-    const localFiles = await Promise.all(files.map(f => this.getFileUri(path + f)));
+    // Build a combined progress callback for all files
+    let totalLength = 0;
+    let receivedLength = 0;
+    const progressSet = new Set<number>();
+    const fileProgressCallback = (i, fileReceivedLength, fileTotalLength) => {
+      if (!progressSet.has(i)) {
+        progressSet.add(i);
+        totalLength += fileTotalLength;
+      }
+      receivedLength += fileReceivedLength;
+      if (progressCallback) {
+        progressCallback(receivedLength, totalLength);
+      }
+    };
+
+    const localFiles = await Promise.all(
+      files.map((f, i) => {
+        return this.getFileUri(path + f, (n, d) => fileProgressCallback(i, n, d));
+      })
+    );
     const map = new Map<string, string>();
     files.forEach((f, i) => map.set(f, localFiles[i]));
     return map;
   }
 
-  async getFileUri(path: string) {
+  async getFileUri(path: string, progressCallback?: ProgressCallback): Promise<string> {
     const download = async (asBlob = false) => {
       // Save metadata, so we can check for updates later
       const metadata = await this.statRemoteFile(path);
@@ -41,7 +126,7 @@ export class AssetsService {
       if (asBlob) {
         return this.getRemoteFileAsBlob(path);
       }
-      return this.getRemoteFile(path);
+      return this.getRemoteFile(path, progressCallback);
     };
 
     try {
@@ -59,7 +144,25 @@ export class AssetsService {
     return this.buildRemotePath(path);
   }
 
-  async navigatorStorageFileUri(path: string, download: CallableFunction) {
+  async deleteFile(path: string) {
+    return Promise.all([
+      this.deleteNavigatorStorageFile(path).catch(e => {
+        console.error(e);
+      }),
+      this.deleteCapacitorGetFileUri(path).catch(() => {}),
+    ]);
+  }
+
+  async deleteNavigatorStorageFile(path: string) {
+    const [directory, fileName] = await this.navigatorStorageDirectory(path);
+
+    try {
+      const fileHandle = await directory.getFileHandle(fileName);
+      await fileHandle.remove();
+    } catch (e) {}
+  }
+
+  async navigatorStorageDirectory(path: string): Promise<[any, string]> {
     let directory = await navigator.storage.getDirectory();
     const route = path.split('/');
     const fileName = route.pop();
@@ -67,12 +170,15 @@ export class AssetsService {
       directory = await directory.getDirectoryHandle(dir, {create: true});
     }
 
-    let fileHandle;
-    try {
-      fileHandle = await directory.getFileHandle(fileName);
-    } catch (e) {
-      // File does not exist
-      fileHandle = await directory.getFileHandle(fileName, {create: true});
+    return [directory, fileName];
+  }
+
+  async navigatorStorageFileUri(path: string, download: CallableFunction) {
+    const [directory, fileName] = await this.navigatorStorageDirectory(path);
+
+    const downloadAndWrite = async () => {
+      const fileHandle = await directory.getFileHandle(fileName, {create: true});
+
       if (!('createWritable' in fileHandle)) {
         await fileHandle.remove();
         throw new Error('Web storage not supported');
@@ -82,33 +188,54 @@ export class AssetsService {
       const wtr = await fileHandle.createWritable();
       try {
         const chunks = await download();
-        for await (const [chunk, progress] of chunks) {
-          // console.log('Progress', Math.floor(progress * 100) + '%');
+        for await (const chunk of chunks) {
           await wtr.write(chunk);
         }
       } finally {
         await wtr.close();
       }
-    }
+    };
 
-    const file = await fileHandle.getFile();
-
-    // Verify file is not corrupted
-    const statStr = localStorage.getItem(path);
-    let isCorrupt = !statStr || file.size === 0;
-    if (statStr) {
-      const stat = JSON.parse(statStr);
-      if (Number(stat.size) !== file.size) {
-        console.error('Size mismatch', stat, file);
-        isCorrupt = true;
+    const getFile = async () => {
+      // File stat does not exist
+      const statStr = localStorage.getItem(path);
+      if (!statStr) {
+        console.log('File stat does not exist in localStorage');
+        return null;
       }
-    }
-    if (isCorrupt) {
-      await fileHandle.remove();
-      return this.navigatorStorageFileUri(path, download);
+      const stat = JSON.parse(statStr);
+
+      // File does not exist
+      let fileHandle;
+      try {
+        fileHandle = await directory.getFileHandle(fileName);
+      } catch (e) {
+        console.log('File handle does not exist in navigator.storage');
+        return null;
+      }
+
+      const file = await fileHandle.getFile();
+      if (Number(stat.size) !== file.size) {
+        console.error('File size mismatch', stat, file);
+        return null;
+      }
+
+      return file;
+    };
+
+    let file = await getFile();
+    while (!file) {
+      await downloadAndWrite();
+      file = await getFile();
     }
 
     return URL.createObjectURL(file);
+  }
+
+  async deleteCapacitorGetFileUri(path: string) {
+    const {Directory, Filesystem} = await import('@capacitor/filesystem');
+    const fileOptions = {directory: Directory.External, path};
+    await Filesystem.deleteFile(fileOptions);
   }
 
   async capacitorGetFileUri(path: string, download: CallableFunction) {
@@ -170,7 +297,7 @@ export class AssetsService {
     return response.blob();
   }
 
-  async *getRemoteFile(path: string) {
+  async *getRemoteFile(path: string, progressCallback?: ProgressCallback) {
     const response = await fetch(`${this.buildRemotePath(path)}?alt=media`);
 
     const reader = response.body.getReader();
@@ -188,7 +315,10 @@ export class AssetsService {
       }
 
       receivedLength += value.length;
-      yield [value, receivedLength / contentLength];
+      if (progressCallback) {
+        progressCallback(receivedLength, contentLength);
+      }
+      yield value;
     }
   }
 
