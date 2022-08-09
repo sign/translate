@@ -34,7 +34,7 @@ export class AssetsService {
       const filesStat = await Promise.all(files.map(f => this.stat(path + f)));
       return {
         path,
-        exists: true,
+        exists: filesStat.every(f => f.exists),
         size: filesStat.reduce((acc, f) => acc + f.size, 0),
         children: filesStat,
       };
@@ -121,23 +121,26 @@ export class AssetsService {
 
   async getFileUri(path: string, progressCallback?: ProgressCallback): Promise<string> {
     const download = async (asBlob = false) => {
-      // Save metadata, so we can check for updates later
-      const metadata = await this.statRemoteFile(path);
-      localStorage.setItem(path, JSON.stringify(metadata));
       if (asBlob) {
         return this.getRemoteFileAsBlob(path, progressCallback);
       }
       return this.getRemoteFile(path, progressCallback);
     };
 
+    const downloadDone = async () => {
+      // Save metadata, so we can check for updates later
+      const metadata = await this.statRemoteFile(path);
+      localStorage.setItem(path, JSON.stringify(metadata));
+    };
+
     try {
-      return await this.navigatorStorageFileUri(path, download);
+      return await this.navigatorStorageFileUri(path, download, downloadDone);
     } catch (e) {
       console.log('Navigator storage api not supported', e);
     }
 
     try {
-      return await this.capacitorGetFileUri(path, download);
+      return await this.capacitorGetFileUri(path, download, downloadDone);
     } catch (e) {
       console.log('Capacitor file API not supported', e);
     }
@@ -172,7 +175,7 @@ export class AssetsService {
     return [directory, fileName];
   }
 
-  async navigatorStorageFileUri(path: string, download: CallableFunction) {
+  async navigatorStorageFileUri(path: string, download: CallableFunction, downloadDone: CallableFunction) {
     const [directory, fileName] = await this.navigatorStorageDirectory(path);
 
     const downloadAndWrite = async () => {
@@ -193,6 +196,8 @@ export class AssetsService {
       } finally {
         await wtr.close();
       }
+
+      await downloadDone();
     };
 
     const getFile = async () => {
@@ -237,7 +242,7 @@ export class AssetsService {
     await Filesystem.deleteFile(fileOptions);
   }
 
-  async capacitorGetFileUri(path: string, download: CallableFunction) {
+  async capacitorGetFileUri(path: string, download: CallableFunction, downloadDone: CallableFunction) {
     const {Directory, Filesystem} = await import('@capacitor/filesystem');
 
     const fileOptions = {directory: Directory.External, path};
@@ -246,7 +251,7 @@ export class AssetsService {
       if (stat.size === 0) {
         // In case of corrupt file
         await Filesystem.deleteFile(fileOptions);
-        return this.capacitorGetFileUri(path, download);
+        return this.capacitorGetFileUri(path, download, downloadDone);
       }
     } catch (e) {
       // File does not exist
@@ -258,6 +263,7 @@ export class AssetsService {
         fast_mode: true,
         recursive: true,
       });
+      await downloadDone();
     }
 
     if (Capacitor.getPlatform() !== 'web') {
