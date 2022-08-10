@@ -23,6 +23,7 @@ import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
 import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {blobToBase64} from 'base64-blob';
+import {SignWritingTranslationService} from './signwriting-translation.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -62,7 +63,7 @@ const initialState: TranslateStateModel = {
 export class TranslateState implements NgxsOnInit {
   @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
 
-  constructor(private service: TranslationService) {}
+  constructor(private service: TranslationService, private swService: SignWritingTranslationService) {}
 
   ngxsOnInit({dispatch}: StateContext<TranslateStateModel>): any {
     dispatch(ChangeTranslation);
@@ -192,9 +193,9 @@ export class TranslateState implements NgxsOnInit {
         const actualSpokenLanguage = spokenLanguage || detectedLanguage;
         const path = this.service.translateSpokenToSigned(spokenLanguageText, actualSpokenLanguage, signedLanguage);
         patchState({signedLanguagePose: path});
-        return this.service
+        return this.swService
           .translateSpokenToSignWriting(spokenLanguageText, actualSpokenLanguage, signedLanguage)
-          .pipe(tap(signWriting => dispatch(new SetSignWritingText(signWriting))));
+          .pipe(tap(({text}) => dispatch(new SetSignWritingText(text.split(' ')))));
       }
     }
 

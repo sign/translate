@@ -49,6 +49,11 @@
                 "glob": "**/*.json",
                 "input": "node_modules/@sign/i18n/build/",
                 "output": "./assets/i18n/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@sign-mt/browsermt/artifacts/",
+                "output": "./browsermt/"
               }
             ],
             "styles": [
