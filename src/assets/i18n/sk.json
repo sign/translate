@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Vzhľad",
-    "action": "Upravte vzhľad",
-    "random": "Získajte náhodnú fotografiu",
-    "upload": "Nahrajte svoju vlastnú fotografiu"
-  },
   "video": {
     "errors": {
       "starting": "Spustenie fotoaparátu",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Ľudské"
     },
-    "title": "nastavenie"
-  }
+    "title": "nastavenie",
+    "close": "Zatvorte nastavenia",
+    "support": {
+      "title": "podpora",
+      "feedback": {
+        "title": "Spätná väzba"
+      },
+      "about": {
+        "title": "O"
+      }
+    },
+    "voice": {
+      "title": "Hlas",
+      "input": {
+        "title": "Vstup"
+      },
+      "output": {
+        "title": "Výkon"
+      }
+    },
+    "other": {
+      "title": "Iné",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealistický ľudský generátor",
+          "pix2pixUpscaler": "Fotorealistický ľudský upscaler",
+          "avatarGlb": "3D avatar",
+          "avatarUsdz": "3D Avatar pre AR na iOS"
+        }
+      },
+      "appearance": {
+        "title": "Vzhľad",
+        "action": "Upravte vzhľad",
+        "random": "Získajte náhodnú fotografiu",
+        "upload": "Nahrajte svoju vlastnú fotografiu"
+      }
+    }
+  },
+  "countries.isl": "International"
 }

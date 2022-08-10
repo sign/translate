@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "መልክ",
-    "action": "መልክን ቀይር",
-    "random": "የዘፈቀደ ፎቶ ያግኙ",
-    "upload": "የራስዎን ፎቶ ይስቀሉ"
-  },
   "video": {
     "errors": {
       "starting": "ካሜራ ይጀምራል",
@@ -154,6 +148,44 @@
       "avatar": "አምሳያ",
       "human": "ሰው"
     },
-    "title": "ቅንብሮች"
-  }
+    "title": "ቅንብሮች",
+    "close": "ቅንብሮችን ዝጋ",
+    "support": {
+      "title": "ድጋፍ",
+      "feedback": {
+        "title": "ግብረ መልስ"
+      },
+      "about": {
+        "title": "ስለ"
+      }
+    },
+    "voice": {
+      "title": "ድምጽ",
+      "input": {
+        "title": "ግቤት"
+      },
+      "output": {
+        "title": "ውፅዓት"
+      }
+    },
+    "other": {
+      "title": "ሌላ",
+      "offline": {
+        "title": "ከመስመር ውጭ",
+        "files": {
+          "pix2pixGenerator": "ፎቶ-ተጨባጭ የሰው ጀነሬተር",
+          "pix2pixUpscaler": "ፎቶ-ተጨባጭ የሰው አሻሽል",
+          "avatarGlb": "3D አምሳያ",
+          "avatarUsdz": "3D Avatar ለ AR በ iOS ላይ"
+        }
+      },
+      "appearance": {
+        "title": "መልክ",
+        "action": "መልክን ቀይር",
+        "random": "የዘፈቀደ ፎቶ ያግኙ",
+        "upload": "የራስዎን ፎቶ ይስቀሉ"
+      }
+    }
+  },
+  "countries.isl": "ዓለም አቀፍ"
 }

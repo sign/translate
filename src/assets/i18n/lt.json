@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Išvaizda",
-    "action": "Keisti išvaizdą",
-    "random": "Gaukite atsitiktinę nuotrauką",
-    "upload": "Įkelk savo nuotrauką"
-  },
   "video": {
     "errors": {
       "starting": "Fotoaparato paleidimas",
@@ -154,6 +148,44 @@
       "avatar": "Avataras",
       "human": "Žmogus"
     },
-    "title": "Nustatymai"
-  }
+    "title": "Nustatymai",
+    "close": "Uždaryti nustatymus",
+    "support": {
+      "title": "Palaikymas",
+      "feedback": {
+        "title": "Atsiliepimas"
+      },
+      "about": {
+        "title": "Apie"
+      }
+    },
+    "voice": {
+      "title": "Balsas",
+      "input": {
+        "title": "Įvestis"
+      },
+      "output": {
+        "title": "Išvestis"
+      }
+    },
+    "other": {
+      "title": "Kita",
+      "offline": {
+        "title": "Neprisijungus",
+        "files": {
+          "pix2pixGenerator": "Fotorealistiškas žmogaus generatorius",
+          "pix2pixUpscaler": "Realistiška, tikroviška, žmogaus nuotrauka",
+          "avatarGlb": "3D avataras",
+          "avatarUsdz": "3D avataras, skirtas AR sistemoje „iOS“."
+        }
+      },
+      "appearance": {
+        "title": "Išvaizda",
+        "action": "Keisti išvaizdą",
+        "random": "Gaukite atsitiktinę nuotrauką",
+        "upload": "Įkelk savo nuotrauką"
+      }
+    }
+  },
+  "countries.isl": "Tarptautinė"
 }

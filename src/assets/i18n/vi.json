@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Xuất hiện",
-    "action": "Sửa đổi ngoại hình",
-    "random": "Nhận một bức ảnh ngẫu nhiên",
-    "upload": "Tải lên ảnh của riêng bạn"
-  },
   "video": {
     "errors": {
       "starting": "Máy ảnh khởi động",
@@ -154,6 +148,44 @@
       "avatar": "hình đại diện",
       "human": "Nhân loại"
     },
-    "title": "Cài đặt"
-  }
+    "title": "Cài đặt",
+    "close": "Đóng cài đặt",
+    "support": {
+      "title": "Ủng hộ",
+      "feedback": {
+        "title": "Nhận xét"
+      },
+      "about": {
+        "title": "Về"
+      }
+    },
+    "voice": {
+      "title": "Tiếng nói",
+      "input": {
+        "title": "Đầu vào"
+      },
+      "output": {
+        "title": "Đầu ra"
+      }
+    },
+    "other": {
+      "title": "Khác",
+      "offline": {
+        "title": "Ngoại tuyến",
+        "files": {
+          "pix2pixGenerator": "Máy tạo hình ảnh chân thực của con người",
+          "pix2pixUpscaler": "Bộ nâng cấp hình ảnh thực tế của con người",
+          "avatarGlb": "Hình đại diện 3D",
+          "avatarUsdz": "Hình đại diện 3D cho AR trên iOS"
+        }
+      },
+      "appearance": {
+        "title": "Vẻ bề ngoài",
+        "action": "Sửa đổi ngoại hình",
+        "random": "Nhận một bức ảnh ngẫu nhiên",
+        "upload": "Tải lên ảnh của riêng bạn"
+      }
+    }
+  },
+  "countries.isl": "Quốc tế"
 }

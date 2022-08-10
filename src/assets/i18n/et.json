@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Välimus",
-    "action": "Muutke välimust",
-    "random": "Tehke juhuslik foto",
-    "upload": "Laadige üles oma foto"
-  },
   "video": {
     "errors": {
       "starting": "Kaamera käivitus",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Inimene"
     },
-    "title": "Seaded"
-  }
+    "title": "Seaded",
+    "close": "Sulge seaded",
+    "support": {
+      "title": "Toetus",
+      "feedback": {
+        "title": "Tagasiside"
+      },
+      "about": {
+        "title": "Umbes"
+      }
+    },
+    "voice": {
+      "title": "Hääl",
+      "input": {
+        "title": "Sisend"
+      },
+      "output": {
+        "title": "Väljund"
+      }
+    },
+    "other": {
+      "title": "muud",
+      "offline": {
+        "title": "Võrguühenduseta",
+        "files": {
+          "pix2pixGenerator": "Fotorealistlik inimgeneraator",
+          "pix2pixUpscaler": "Fotorealistlik inimlik upscale",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D-avatar AR jaoks iOS-is"
+        }
+      },
+      "appearance": {
+        "title": "Välimus",
+        "action": "Muutke välimust",
+        "random": "Tehke juhuslik foto",
+        "upload": "Laadige üles oma foto"
+      }
+    }
+  },
+  "countries.isl": "Rahvusvaheline"
 }

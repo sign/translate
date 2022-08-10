@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Maonekedwe",
-    "action": "Sinthani maonekedwe",
-    "random": "Pezani chithunzi mwachisawawa",
-    "upload": "Kwezani chithunzi chanu"
-  },
   "video": {
     "errors": {
       "starting": "Kamera ikuyamba",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Munthu"
     },
-    "title": "Zokonda"
-  }
+    "title": "Zokonda",
+    "close": "Tsekani zokonda",
+    "support": {
+      "title": "Thandizo",
+      "feedback": {
+        "title": "Ndemanga"
+      },
+      "about": {
+        "title": "Za"
+      }
+    },
+    "voice": {
+      "title": "Mawu",
+      "input": {
+        "title": "Zolowetsa"
+      },
+      "output": {
+        "title": "Zotulutsa"
+      }
+    },
+    "other": {
+      "title": "Zina",
+      "offline": {
+        "title": "Zopanda intaneti",
+        "files": {
+          "pix2pixGenerator": "Jenereta yamunthu yowoneka bwino",
+          "pix2pixUpscaler": "Photo-zenizeni upscaler munthu",
+          "avatarGlb": "Avatar ya 3D",
+          "avatarUsdz": "3D avatar ya AR pa iOS"
+        }
+      },
+      "appearance": {
+        "title": "Maonekedwe",
+        "action": "Sinthani maonekedwe",
+        "random": "Pezani chithunzi mwachisawawa",
+        "upload": "Kwezani chithunzi chanu"
+      }
+    }
+  },
+  "countries.isl": "Mayiko"
 }

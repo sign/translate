@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "ظاهر",
-    "action": "ظاهر را اصلاح کنید",
-    "random": "یک عکس تصادفی بگیرید",
-    "upload": "عکس خود را آپلود کنید"
-  },
   "video": {
     "errors": {
       "starting": "دوربین شروع می شود",
@@ -154,6 +148,44 @@
       "avatar": "آواتار",
       "human": "انسان"
     },
-    "title": "تنظیمات"
-  }
+    "title": "تنظیمات",
+    "close": "تنظیمات را ببندید",
+    "support": {
+      "title": "پشتیبانی",
+      "feedback": {
+        "title": "بازخورد"
+      },
+      "about": {
+        "title": "در باره"
+      }
+    },
+    "voice": {
+      "title": "صدا",
+      "input": {
+        "title": "ورودی"
+      },
+      "output": {
+        "title": "خروجی"
+      }
+    },
+    "other": {
+      "title": "دیگر",
+      "offline": {
+        "title": "آفلاین",
+        "files": {
+          "pix2pixGenerator": "مولد انسان عکس واقع گرایانه",
+          "pix2pixUpscaler": "ارتقاء دهنده انسان با عکس واقع گرایانه",
+          "avatarGlb": "آواتار سه بعدی",
+          "avatarUsdz": "آواتار سه بعدی برای AR در iOS"
+        }
+      },
+      "appearance": {
+        "title": "ظاهر",
+        "action": "ظاهر را اصلاح کنید",
+        "random": "یک عکس تصادفی بگیرید",
+        "upload": "عکس خود را آپلود کنید"
+      }
+    }
+  },
+  "countries.isl": "بین المللی"
 }

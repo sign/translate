@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Görünüm",
-    "action": "Görünümü değiştir",
-    "random": "Rastgele bir fotoğraf çekin",
-    "upload": "Kendi fotoğrafınızı yükleyin"
-  },
   "video": {
     "errors": {
       "starting": "Kamera başlatılıyor",
@@ -154,6 +148,44 @@
       "avatar": "avatar",
       "human": "İnsan"
     },
-    "title": "Ayarlar"
-  }
+    "title": "Ayarlar",
+    "close": "Ayarları kapat",
+    "support": {
+      "title": "Destek",
+      "feedback": {
+        "title": "Geri bildirim"
+      },
+      "about": {
+        "title": "Hakkında"
+      }
+    },
+    "voice": {
+      "title": "Ses",
+      "input": {
+        "title": "Giriş"
+      },
+      "output": {
+        "title": "Çıktı"
+      }
+    },
+    "other": {
+      "title": "Başka",
+      "offline": {
+        "title": "Çevrimdışı",
+        "files": {
+          "pix2pixGenerator": "Foto-gerçekçi insan üreteci",
+          "pix2pixUpscaler": "Foto-gerçekçi insan ölçekleyici",
+          "avatarGlb": "3D avatar",
+          "avatarUsdz": "iOS'ta AR için 3D Avatar"
+        }
+      },
+      "appearance": {
+        "title": "Dış görünüş",
+        "action": "Görünümü değiştir",
+        "random": "Rastgele bir fotoğraf çekin",
+        "upload": "Kendi fotoğrafınızı yükleyin"
+      }
+    }
+  },
+  "countries.isl": "Uluslararası"
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Dehra",
-    "action": "Ibdel id-dehra",
-    "random": "Ikseb ritratt bl-addoċċ",
-    "upload": "Ittella r-ritratt tiegħek"
-  },
   "video": {
     "errors": {
       "starting": "Kamera tal-bidu",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Bniedem"
     },
-    "title": "Settings"
-  }
+    "title": "Settings",
+    "close": "Agħlaq is-settings",
+    "support": {
+      "title": "Appoġġ",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Dwar"
+      }
+    },
+    "voice": {
+      "title": "Leħen",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Oħrajn",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Ġeneratur uman foto-realistiku",
+          "pix2pixUpscaler": "Upscaler uman foto-realistiku",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar għal AR fuq iOS"
+        }
+      },
+      "appearance": {
+        "title": "Dehra",
+        "action": "Ibdel id-dehra",
+        "random": "Ikseb ritratt bl-addoċċ",
+        "upload": "Ittella r-ritratt tiegħek"
+      }
+    }
+  },
+  "countries.isl": "Internazzjonali"
 }

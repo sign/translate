@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Itxura",
-    "action": "Aldatu itxura",
-    "random": "Lortu ausaz argazki bat",
-    "upload": "Kargatu zure argazkia"
-  },
   "video": {
     "errors": {
       "starting": "Kamera martxan",
@@ -154,6 +148,44 @@
       "avatar": "Avatarra",
       "human": "Gizakia"
     },
-    "title": "Ezarpenak"
-  }
+    "title": "Ezarpenak",
+    "close": "Itxi ezarpenak",
+    "support": {
+      "title": "Laguntza",
+      "feedback": {
+        "title": "Iritzia"
+      },
+      "about": {
+        "title": "Buruz"
+      }
+    },
+    "voice": {
+      "title": "Ahotsa",
+      "input": {
+        "title": "Sarrera"
+      },
+      "output": {
+        "title": "Irteera"
+      }
+    },
+    "other": {
+      "title": "Bestela",
+      "offline": {
+        "title": "Lineaz kanpo",
+        "files": {
+          "pix2pixGenerator": "Giza sorgailu foto-errealista",
+          "pix2pixUpscaler": "Foto-errealista giza upscaler",
+          "avatarGlb": "3D avatarra",
+          "avatarUsdz": "3D Avatar ARrako iOS-n"
+        }
+      },
+      "appearance": {
+        "title": "Itxura",
+        "action": "Aldatu itxura",
+        "random": "Lortu ausaz argazki bat",
+        "upload": "Kargatu zure argazkia"
+      }
+    }
+  },
+  "countries.isl": "Nazioartekoa"
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "بڼه",
-    "action": "بڼه بدله کړئ",
-    "random": "یو تصادفي عکس ترلاسه کړئ",
-    "upload": "خپل عکس اپلوډ کړئ"
-  },
   "video": {
     "errors": {
       "starting": "کیمره پیل کیږي",
@@ -154,6 +148,44 @@
       "avatar": "اوتار",
       "human": "انسان"
     },
-    "title": "ترتیبات"
-  }
+    "title": "ترتیبات",
+    "close": "تنظیمات بند کړئ",
+    "support": {
+      "title": "ملاتړ",
+      "feedback": {
+        "title": "فیډبیک"
+      },
+      "about": {
+        "title": "په اړه"
+      }
+    },
+    "voice": {
+      "title": "غږ",
+      "input": {
+        "title": "داخلول"
+      },
+      "output": {
+        "title": "محصول"
+      }
+    },
+    "other": {
+      "title": "نور",
+      "offline": {
+        "title": "آفلاین",
+        "files": {
+          "pix2pixGenerator": "د عکس حقیقي انسان جنراتور",
+          "pix2pixUpscaler": "د عکس حقیقت لرونکی انسان لوړ پوړی",
+          "avatarGlb": "3D اوتار",
+          "avatarUsdz": "په iOS کې د AR لپاره 3D اوتار"
+        }
+      },
+      "appearance": {
+        "title": "بڼه",
+        "action": "بڼه بدله کړئ",
+        "random": "یو ناڅاپي عکس ترلاسه کړئ",
+        "upload": "خپل عکس اپلوډ کړئ"
+      }
+    }
+  },
+  "countries.isl": "نړیوال"
 }

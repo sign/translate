@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Apparence",
-    "action": "Modifier l'apparence",
-    "random": "Obtenez une photo au hasard",
-    "upload": "Téléchargez votre propre photo"
-  },
   "video": {
     "errors": {
       "starting": "Démarrage de la caméra",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Humain"
     },
-    "title": "Réglages"
-  }
+    "title": "Réglages",
+    "close": "Fermer les paramètres",
+    "support": {
+      "title": "Soutien",
+      "feedback": {
+        "title": "Retour d'information"
+      },
+      "about": {
+        "title": "À propos de"
+      }
+    },
+    "voice": {
+      "title": "Voix",
+      "input": {
+        "title": "Saisir"
+      },
+      "output": {
+        "title": "Production"
+      }
+    },
+    "other": {
+      "title": "Autre",
+      "offline": {
+        "title": "Hors ligne",
+        "files": {
+          "pix2pixGenerator": "Générateur humain photo-réaliste",
+          "pix2pixUpscaler": "Upscaler humain photo-réaliste",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D pour AR sur iOS"
+        }
+      },
+      "appearance": {
+        "title": "Apparence",
+        "action": "Modifier l'apparence",
+        "random": "Obtenez une photo au hasard",
+        "upload": "Téléchargez votre propre photo"
+      }
+    }
+  },
+  "countries.isl": "International"
 }

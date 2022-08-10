@@ -1,7 +1,12 @@
-<!--<app-appearance *ngIf="loadAppearance"></app-appearance>-->
 <mat-toolbar>
   <mat-icon>waving_hand</mat-icon>
   <span>&nbsp;{{ 'translate.title' | transloco }}</span>
+  <button
+    mat-icon-button
+    [attr.aria-label]="'settings.title' | transloco"
+    [routerLink]="[{outlets: {settings: ['s'], dialog: ['settings']}}]">
+    <mat-icon>settings</mat-icon>
+  </button>
 </mat-toolbar>
 
 <div id="container">
@@ -57,3 +62,6 @@
     {{ 'translate.feedback' | transloco }}
   </a>
 </div>
+
+<!-- Router outlet for the settings dialog -->
+<router-outlet name="dialog"></router-outlet>

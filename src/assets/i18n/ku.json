@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Xuyabûnî",
-    "action": "Dîmenê biguherînin",
-    "random": "Wêneyek rasthatî bistînin",
-    "upload": "Wêneya xwe barkirin"
-  },
   "video": {
     "errors": {
       "starting": "Kamera dest pê dike",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Mirov"
     },
-    "title": "Settings"
-  }
+    "title": "Settings",
+    "close": "Mîhengan bigire",
+    "support": {
+      "title": "Alîkarî",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Ji dor"
+      }
+    },
+    "voice": {
+      "title": "Deng",
+      "input": {
+        "title": "Beyan"
+      },
+      "output": {
+        "title": "Karûabr"
+      }
+    },
+    "other": {
+      "title": "Yên din",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Hilberînerê mirovî yê wêne-realîst",
+          "pix2pixUpscaler": "Upscaler mirovê wêne-realîst",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar ji bo AR li ser iOS"
+        }
+      },
+      "appearance": {
+        "title": "Xuyabûnî",
+        "action": "Dîmenê biguherînin",
+        "random": "Wêneyek rasthatî bistînin",
+        "upload": "Wêneya xwe barkirin"
+      }
+    }
+  },
+  "countries.isl": "Navnetewî"
 }

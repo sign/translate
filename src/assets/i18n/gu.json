@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "દેખાવ",
-    "action": "દેખાવમાં ફેરફાર કરો",
-    "random": "રેન્ડમ ફોટો મેળવો",
-    "upload": "તમારો પોતાનો ફોટો અપલોડ કરો"
-  },
   "video": {
     "errors": {
       "starting": "કૅમેરો શરૂ થઈ રહ્યો છે",
@@ -154,6 +148,44 @@
       "avatar": "અવતાર",
       "human": "માનવ"
     },
-    "title": "સેટિંગ્સ"
-  }
+    "title": "સેટિંગ્સ",
+    "close": "સેટિંગ્સ બંધ કરો",
+    "support": {
+      "title": "આધાર",
+      "feedback": {
+        "title": "પ્રતિભાવ"
+      },
+      "about": {
+        "title": "વિશે"
+      }
+    },
+    "voice": {
+      "title": "અવાજ",
+      "input": {
+        "title": "ઇનપુટ"
+      },
+      "output": {
+        "title": "આઉટપુટ"
+      }
+    },
+    "other": {
+      "title": "અન્ય",
+      "offline": {
+        "title": "ઑફલાઇન",
+        "files": {
+          "pix2pixGenerator": "ફોટો-વાસ્તવિક માનવ જનરેટર",
+          "pix2pixUpscaler": "ફોટો-વાસ્તવિક માનવ અપસ્કેલર",
+          "avatarGlb": "3D અવતાર",
+          "avatarUsdz": "iOS પર AR માટે 3D અવતાર"
+        }
+      },
+      "appearance": {
+        "title": "દેખાવ",
+        "action": "દેખાવમાં ફેરફાર કરો",
+        "random": "રેન્ડમ ફોટો મેળવો",
+        "upload": "તમારો પોતાનો ફોટો અપલોડ કરો"
+      }
+    }
+  },
+  "countries.isl": "આંતરરાષ્ટ્રીય"
 }

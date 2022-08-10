@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Pamja e jashtme",
-    "action": "Ndryshoni pamjen",
-    "random": "Merrni një foto të rastësishme",
-    "upload": "Ngarkoni foton tuaj"
-  },
   "video": {
     "errors": {
       "starting": "Fillimi i kamerës",
@@ -154,6 +148,44 @@
       "avatar": "Avatari",
       "human": "Njerëzore"
     },
-    "title": "Cilësimet"
-  }
+    "title": "Cilësimet",
+    "close": "Mbyll cilësimet",
+    "support": {
+      "title": "Mbështetje",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Rreth"
+      }
+    },
+    "voice": {
+      "title": "Zëri",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Prodhimi"
+      }
+    },
+    "other": {
+      "title": "Të tjera",
+      "offline": {
+        "title": "Jashtë linje",
+        "files": {
+          "pix2pixGenerator": "Gjenerator fotorealist njerëzor",
+          "pix2pixUpscaler": "Përmirësues foto-realist njerëzor",
+          "avatarGlb": "Avatari 3D",
+          "avatarUsdz": "Avatar 3D për AR në iOS"
+        }
+      },
+      "appearance": {
+        "title": "Pamja e jashtme",
+        "action": "Ndrysho pamjen",
+        "random": "Merrni një foto të rastësishme",
+        "upload": "Ngarkoni foton tuaj"
+      }
+    }
+  },
+  "countries.isl": "Ndërkombëtare"
 }

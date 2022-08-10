@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Tashqi ko'rinish",
-    "action": "Tashqi ko'rinishini o'zgartirish",
-    "random": "Tasodifiy fotosurat oling",
-    "upload": "O'zingizning rasmingizni yuklang"
-  },
   "video": {
     "errors": {
       "starting": "Kamera boshlanmoqda",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Inson"
     },
-    "title": "Sozlamalar"
-  }
+    "title": "Sozlamalar",
+    "close": "Sozlamalarni yoping",
+    "support": {
+      "title": "Qo'llab-quvvatlash",
+      "feedback": {
+        "title": "Fikr-mulohaza"
+      },
+      "about": {
+        "title": "Haqida"
+      }
+    },
+    "voice": {
+      "title": "Ovoz",
+      "input": {
+        "title": "Kiritish"
+      },
+      "output": {
+        "title": "Chiqish"
+      }
+    },
+    "other": {
+      "title": "Boshqa",
+      "offline": {
+        "title": "Oflayn",
+        "files": {
+          "pix2pixGenerator": "Fotorealistik inson generatori",
+          "pix2pixUpscaler": "Fotorealistik insoniy yuksaluvchi",
+          "avatarGlb": "3D avatar",
+          "avatarUsdz": "iOS uchun AR uchun 3D Avatar"
+        }
+      },
+      "appearance": {
+        "title": "Tashqi ko'rinish",
+        "action": "Tashqi ko'rinishini o'zgartirish",
+        "random": "Tasodifiy fotosurat oling",
+        "upload": "O'zingizning rasmingizni yuklang"
+      }
+    }
+  },
+  "countries.isl": "Xalqaro"
 }

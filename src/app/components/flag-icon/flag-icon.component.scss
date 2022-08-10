@@ -5,7 +5,7 @@ span {
   margin-inline-end: 0.5em;
 }
 
-// Flags, Missing "isl" TODO read from some file? supported languages
+// TODO read from some file? supported languages
 $flag-icons-included-countries: (
   'sy',
   'by',
@@ -45,7 +45,8 @@ $flag-icons-included-countries: (
   'se',
   'tr',
   'ua',
-  'pk'
+  'pk',
+  'isl'
 );
 $flag-icons-path: '/assets/flags';
 

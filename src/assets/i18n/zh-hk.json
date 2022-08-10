@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "外貌",
-    "action": "修改外觀",
-    "random": "獲取隨機照片",
-    "upload": "上傳您自己的照片"
-  },
   "video": {
     "errors": {
       "starting": "相機啟動",
@@ -154,6 +148,44 @@
       "avatar": "阿凡達",
       "human": "人類"
     },
-    "title": "設置"
-  }
+    "title": "設置",
+    "close": "關閉設置",
+    "support": {
+      "title": "支持",
+      "feedback": {
+        "title": "反饋"
+      },
+      "about": {
+        "title": "關於"
+      }
+    },
+    "voice": {
+      "title": "嗓音",
+      "input": {
+        "title": "輸入"
+      },
+      "output": {
+        "title": "輸出"
+      }
+    },
+    "other": {
+      "title": "其他",
+      "offline": {
+        "title": "離線",
+        "files": {
+          "pix2pixGenerator": "逼真的人體發電機",
+          "pix2pixUpscaler": "逼真的人體放大鏡",
+          "avatarGlb": "3D頭像",
+          "avatarUsdz": "iOS 上的 AR 3D 頭像"
+        }
+      },
+      "appearance": {
+        "title": "外貌",
+        "action": "修改外觀",
+        "random": "獲取隨機照片",
+        "upload": "上傳您自己的照片"
+      }
+    }
+  },
+  "countries.isl": "國際的"
 }

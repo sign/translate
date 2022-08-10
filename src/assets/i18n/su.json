@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Penampilan",
-    "action": "Ngarobah penampilan",
-    "random": "Meunang poto acak",
-    "upload": "Unggah poto anjeun nyalira"
-  },
   "video": {
     "errors": {
       "starting": "Kaméra ngamimitian",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Manusa"
     },
-    "title": "Setélan"
-  }
+    "title": "Setélan",
+    "close": "Tutup setélan",
+    "support": {
+      "title": "Ngarojong",
+      "feedback": {
+        "title": "Eupan balik"
+      },
+      "about": {
+        "title": "Ngeunaan"
+      }
+    },
+    "voice": {
+      "title": "Sora",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Kaluaran"
+      }
+    },
+    "other": {
+      "title": "Lain",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Generator manusa poto-realistis",
+          "pix2pixUpscaler": "Poto-realistis upscaler manusa",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D pikeun AR dina ios"
+        }
+      },
+      "appearance": {
+        "title": "Penampilan",
+        "action": "Ngarobah penampilan",
+        "random": "Meunang poto acak",
+        "upload": "Unggah poto anjeun sorangan"
+      }
+    }
+  },
+  "countries.isl": "Internasional"
 }

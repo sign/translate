@@ -13,20 +13,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    concurrency:
+      group: ${{ github.ref }}-server
+      cancel-in-progress: true
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup Bun Runtime
-        uses: antongolub/action-setup-bun@v1 # or @v1.x.x
+        uses: antongolub/action-setup-bun@v1
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
         with:
-          cache: false
-      #
-      #      - name: Cache node_modules
-      #        uses: actions/cache@v2
-      #        with:
-      #          path: |
-      #            node_modules
-      #          key: client-${{ runner.os }}-${{ hashFiles('package.json') }}
+          path: |
+            node_modules
+          key: client-${{ runner.os }} # Key is generic as for frequent package updates
 
       - name: Install Dependencies
         run: npm install --legacy-peer-deps # https://github.com/oven-sh/bun/issues/82
@@ -49,7 +51,7 @@ jobs:
         run: node tools/sitemap-generator.js # https://github.com/oven-sh/bun/issues/311
 
       - name: Archive dist
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build-dist
           path: dist/sign-translate/browser/
@@ -59,10 +61,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download built dist artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build-dist
           path: dist/sign-translate/browser/
@@ -83,10 +85,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download built dist artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build-dist
           path: dist/sign-translate/browser/
@@ -109,10 +111,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download built dist artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build-dist
           path: dist/sign-translate/browser/

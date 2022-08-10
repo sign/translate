@@ -25,6 +25,8 @@
   @include mat.tooltip-theme($theme);
   @include mat.card-theme($theme);
   @include mat.tabs-theme($theme);
+  @include mat.dialog-theme($theme);
+  @include mat.tree-theme($theme);
 }
 
 @include theme-components($app-theme);
@@ -84,6 +86,10 @@ button[mat-icon-button] {
   @media (prefers-color-scheme: dark) {
     color: map-get(mat.$dark-theme-foreground-palette, icon);
   }
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
 }
 
 .mat-drawer-container {

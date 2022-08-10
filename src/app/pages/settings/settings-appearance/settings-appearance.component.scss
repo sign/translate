@@ -1,8 +1,7 @@
 #appearance-options {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, 70px);
   gap: 1em;
-  padding: 1em;
 
   button {
     border: 0 solid white; // For the animation

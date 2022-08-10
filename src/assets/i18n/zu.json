@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ukubukeka",
-    "action": "Lungisa ukubukeka",
-    "random": "Thola isithombe esingahleliwe",
-    "upload": "Layisha esakho isithombe"
-  },
   "video": {
     "errors": {
       "starting": "Ikhamera iyaqala",
@@ -154,6 +148,44 @@
       "avatar": "Isithombe",
       "human": "Umuntu"
     },
-    "title": "Izilungiselelo"
-  }
+    "title": "Izilungiselelo",
+    "close": "Vala izilungiselelo",
+    "support": {
+      "title": "Ukusekela",
+      "feedback": {
+        "title": "Impendulo"
+      },
+      "about": {
+        "title": "Mayelana"
+      }
+    },
+    "voice": {
+      "title": "Izwi",
+      "input": {
+        "title": "Okokufaka"
+      },
+      "output": {
+        "title": "Okukhiphayo"
+      }
+    },
+    "other": {
+      "title": "Okunye",
+      "offline": {
+        "title": "Okungaxhunyiwe ku-inthanethi",
+        "files": {
+          "pix2pixGenerator": "Isithombe-namaqiniso generator womuntu",
+          "pix2pixUpscaler": "I-upscaler yomuntu engokoqobo yesithombe",
+          "avatarGlb": "I-avatar ye-3D",
+          "avatarUsdz": "I-3D Avatar ye-AR ku-iOS"
+        }
+      },
+      "appearance": {
+        "title": "Ukubukeka",
+        "action": "Lungisa ukubukeka",
+        "random": "Thola isithombe esingahleliwe",
+        "upload": "Layisha esakho isithombe"
+      }
+    }
+  },
+  "countries.isl": "Okwamanye amazwe"
 }

@@ -109,7 +109,44 @@
       "avatar": "אווטאר",
       "human": "אנושי"
     },
-    "title": "הגדרות"
+    "title": "הגדרות",
+    "close": "סגור הגדרות",
+    "support": {
+      "title": "תמיכה",
+      "feedback": {
+        "title": "מָשׁוֹב"
+      },
+      "about": {
+        "title": "על אודות"
+      }
+    },
+    "voice": {
+      "title": "קוֹל",
+      "input": {
+        "title": "קֶלֶט"
+      },
+      "output": {
+        "title": "תְפוּקָה"
+      }
+    },
+    "other": {
+      "title": "אַחֵר",
+      "offline": {
+        "title": "לא מקוון",
+        "files": {
+          "pix2pixGenerator": "מחולל אנושי פוטו-ריאליסטי",
+          "pix2pixUpscaler": "יוקרה אנושי פוטו-ריאליסטי",
+          "avatarGlb": "אווטאר תלת מימד",
+          "avatarUsdz": "אווטאר 3D עבור AR ב-iOS"
+        }
+      },
+      "appearance": {
+        "title": "מראה חיצוני",
+        "action": "שנה את המראה",
+        "random": "קבל תמונה אקראית",
+        "upload": "העלה תמונה משלך"
+      }
+    }
   },
   "legal": {
     "terms": {
@@ -147,13 +184,8 @@
       }
     }
   },
-  "appearance": {
-    "title": "מראה חיצוני",
-    "action": "שנה את המראה",
-    "random": "קבל תמונה אקראית",
-    "upload": "העלה תמונה משלך"
-  },
   "language-selector": {
     "label": "שנה שפה או אזור"
-  }
+  },
+  "countries.isl": "בינלאומי"
 }

@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Hitsura",
-    "action": "Baguhin ang hitsura",
-    "random": "Kumuha ng random na larawan",
-    "upload": "Mag-upload ng sarili mong larawan"
-  },
   "video": {
     "errors": {
       "starting": "Nagsisimula ang camera",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Tao"
     },
-    "title": "Mga setting"
-  }
+    "title": "Mga setting",
+    "close": "Isara ang mga setting",
+    "support": {
+      "title": "Suporta",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Tungkol sa"
+      }
+    },
+    "voice": {
+      "title": "Boses",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Iba pa",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-realistic na generator ng tao",
+          "pix2pixUpscaler": "Photo-realistic human upscaler",
+          "avatarGlb": "3D na Avatar",
+          "avatarUsdz": "3D Avatar para sa AR sa iOS"
+        }
+      },
+      "appearance": {
+        "title": "Hitsura",
+        "action": "Baguhin ang hitsura",
+        "random": "Kumuha ng random na larawan",
+        "upload": "Mag-upload ng sarili mong larawan"
+      }
+    }
+  },
+  "countries.isl": "Internasyonal"
 }

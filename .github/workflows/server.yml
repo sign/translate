@@ -18,17 +18,21 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    concurrency:
+      group: ${{ github.ref }}-server
+      cancel-in-progress: true
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             functions/node_modules
-          key: server-${{ runner.os }}-${{ hashFiles('functions/package.json') }}
+          key: server-${{ runner.os }} # Key is generic as for frequent package updates
 
       - name: Install Dependencies
         working-directory: functions
@@ -46,8 +50,8 @@ jobs:
       #          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Service Account Key
-        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}" > $HOME/gcloud.json
+        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}" > "$HOME"/gcloud.json
 
       - name: Deploy Cloud Functions
         working-directory: functions
-        run: export GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcloud.json && npm run deploy
+        run: export GOOGLE_APPLICATION_CREDENTIALS="$HOME"/gcloud.json && npm run deploy

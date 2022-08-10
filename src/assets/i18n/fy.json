@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Ferskining",
-    "action": "Feroarje uterlik",
-    "random": "Krij in willekeurige foto",
-    "upload": "Upload dyn eigen foto"
-  },
   "video": {
     "errors": {
       "starting": "Kamera begjint",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Minske"
     },
-    "title": "Ynstellings"
-  }
+    "title": "Ynstellings",
+    "close": "Ynstellings slute",
+    "support": {
+      "title": "Stypje",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Oer"
+      }
+    },
+    "voice": {
+      "title": "Lûd",
+      "input": {
+        "title": "Ynfier"
+      },
+      "output": {
+        "title": "Utfier"
+      }
+    },
+    "other": {
+      "title": "Oar",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Foto-realistyske minsklike generator",
+          "pix2pixUpscaler": "Foto-realistyske minsklike upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar foar AR op iOS"
+        }
+      },
+      "appearance": {
+        "title": "Ferskining",
+        "action": "Feroarje uterlik",
+        "random": "Krij in willekeurige foto",
+        "upload": "Upload dyn eigen foto"
+      }
+    }
+  },
+  "countries.isl": "Ynternasjonaal"
 }

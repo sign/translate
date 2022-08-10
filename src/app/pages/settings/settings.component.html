@@ -1,0 +1,46 @@
+<ng-template #settingsMenu>
+  <ng-container *transloco="let t; read: 'settings'">
+    <mat-toolbar *ngIf="!contentPage">
+      <span>{{ t('title') }}</span>
+      <button mat-icon-button (click)="dismiss()" [attr.aria-label]="t('close')">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <ng-container *ngFor="let group of groups; index as i">
+        <mat-divider *ngIf="i !== 0"></mat-divider>
+        <h3 matSubheader>{{ t(group.name + '.title') }}</h3>
+        <a mat-list-item *ngFor="let page of group.pages" (click)="open(group, page)">
+          <mat-icon mat-list-icon>{{ page.icon }}</mat-icon>
+          {{ t(group.name + '.' + page.path + '.title') }}
+        </a>
+      </ng-container>
+    </mat-nav-list>
+  </ng-container>
+</ng-template>
+
+<mat-drawer-container autosize>
+  <mat-drawer mode="side" opened *ngIf="contentPage && (isLargePage$ | async)">
+    <ng-container *ngTemplateOutlet="settingsMenu"></ng-container>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <ng-container *ngIf="!contentPage">
+      <ng-container *ngTemplateOutlet="settingsMenu"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="contentPage">
+      <ng-container *transloco="let t; read: 'settings'">
+        <mat-toolbar>
+          <button mat-icon-button *ngIf="(isLargePage$ | async) === false" (click)="closeContentPage()">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <span>{{ t(contentPage + '.title') }}</span>
+        </mat-toolbar>
+        <div id="content-page">
+          <router-outlet name="settings"></router-outlet>
+        </div>
+      </ng-container>
+    </ng-container>
+  </mat-drawer-content>
+</mat-drawer-container>

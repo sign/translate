@@ -1,26 +1,24 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+
+import {SettingsAboutComponent} from './settings-about.component';
+import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {NgxsModule} from '@ngxs/store';
+import {SettingsState} from '../../../modules/settings/settings.state';
+import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-import {AppearanceComponent} from './appearance.component';
-import {NgxsModule} from '@ngxs/store';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
-import {SettingsState} from '../../../modules/settings/settings.state';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
-
-describe('AppearanceComponent', () => {
-  let component: AppearanceComponent;
-  let fixture: ComponentFixture<AppearanceComponent>;
+describe('SettingsAboutComponent', () => {
+  let component: SettingsAboutComponent;
+  let fixture: ComponentFixture<SettingsAboutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppearanceComponent],
+      declarations: [SettingsAboutComponent],
       imports: [AppAngularMaterialModule, AppTranslocoTestingModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
     }).compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AppearanceComponent);
+    fixture = TestBed.createComponent(SettingsAboutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

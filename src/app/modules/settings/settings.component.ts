@@ -1,6 +1,6 @@
 import {SettingsStateModel} from './settings.state';
 import {SetSetting} from './settings.actions';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Select, Store} from '@ngxs/store';
 import {BaseComponent} from '../../components/base/base.component';
 import {Directive} from '@angular/core';

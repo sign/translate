@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Aparans",
-    "action": "Modifye aparans",
-    "random": "Jwenn yon foto o aza",
-    "upload": "Telechaje pwòp foto ou"
-  },
   "video": {
     "errors": {
       "starting": "Kamera kòmanse",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Moun"
     },
-    "title": "Anviwònman"
-  }
+    "title": "Anviwònman",
+    "close": "Fèmen anviwònman yo",
+    "support": {
+      "title": "Sipò",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "Konsènan"
+      }
+    },
+    "voice": {
+      "title": "Vwa",
+      "input": {
+        "title": "Antre"
+      },
+      "output": {
+        "title": "Sòti"
+      }
+    },
+    "other": {
+      "title": "Lòt",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Foto-reyalis dèlko imen",
+          "pix2pixUpscaler": "Photo-reyalis moun upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar pou AR sou iOS"
+        }
+      },
+      "appearance": {
+        "title": "Aparans",
+        "action": "Modifye aparans",
+        "random": "Jwenn yon foto o aza",
+        "upload": "Voye foto pwòp ou a"
+      }
+    }
+  },
+  "countries.isl": "Entènasyonal"
 }

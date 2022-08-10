@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Mwonekano",
-    "action": "Rekebisha mwonekano",
-    "random": "Pata picha ya nasibu",
-    "upload": "Pakia picha yako mwenyewe"
-  },
   "video": {
     "errors": {
       "starting": "Kamera inaanza",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Binadamu"
     },
-    "title": "Mipangilio"
-  }
+    "title": "Mipangilio",
+    "close": "Funga mipangilio",
+    "support": {
+      "title": "Msaada",
+      "feedback": {
+        "title": "Maoni"
+      },
+      "about": {
+        "title": "Kuhusu"
+      }
+    },
+    "voice": {
+      "title": "Sauti",
+      "input": {
+        "title": "Ingizo"
+      },
+      "output": {
+        "title": "Pato"
+      }
+    },
+    "other": {
+      "title": "Nyingine",
+      "offline": {
+        "title": "Nje ya mtandao",
+        "files": {
+          "pix2pixGenerator": "Picha-halisi jenereta ya binadamu",
+          "pix2pixUpscaler": "Kiboreshaji cha hali ya juu cha binadamu",
+          "avatarGlb": "Avatar ya 3D",
+          "avatarUsdz": "Avatar ya 3D ya AR kwenye iOS"
+        }
+      },
+      "appearance": {
+        "title": "Mwonekano",
+        "action": "Rekebisha mwonekano",
+        "random": "Pata picha ya nasibu",
+        "upload": "Pakia picha yako mwenyewe"
+      }
+    }
+  },
+  "countries.isl": "Kimataifa"
 }

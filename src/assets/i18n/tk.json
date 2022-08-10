@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Daş görnüşi",
-    "action": "Daş görnüşini üýtgediň",
-    "random": "Tötänleýin surat alyň",
-    "upload": "Öz suratyňyzy ýükläň"
-  },
   "video": {
     "errors": {
       "starting": "Kamera başlaýar",
@@ -154,6 +148,44 @@
       "avatar": "Awatar",
       "human": "Adam"
     },
-    "title": "Sazlamalar"
-  }
+    "title": "Sazlamalar",
+    "close": "Sazlamalary ýapyň",
+    "support": {
+      "title": "Goldaw",
+      "feedback": {
+        "title": "Seslenme"
+      },
+      "about": {
+        "title": "Takmynan"
+      }
+    },
+    "voice": {
+      "title": "Ses",
+      "input": {
+        "title": "Giriş"
+      },
+      "output": {
+        "title": "Çykyş"
+      }
+    },
+    "other": {
+      "title": "Beýlekiler",
+      "offline": {
+        "title": "Oflayn",
+        "files": {
+          "pix2pixGenerator": "Surat-realistik adam generatory",
+          "pix2pixUpscaler": "Surat-realistik adam ulaldyjy",
+          "avatarGlb": "3D Awatar",
+          "avatarUsdz": "IOS-da AR üçin 3D Awatar"
+        }
+      },
+      "appearance": {
+        "title": "Daş görnüşi",
+        "action": "Daş görnüşini üýtgediň",
+        "random": "Tötänleýin surat alyň",
+        "upload": "Öz suratyňyzy ýükläň"
+      }
+    }
+  },
+  "countries.isl": "Halkara"
 }

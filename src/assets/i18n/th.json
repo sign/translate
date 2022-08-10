@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "รูปร่าง",
-    "action": "ปรับเปลี่ยนรูปลักษณ์",
-    "random": "รับภาพสุ่ม",
-    "upload": "อัพโหลดรูปภาพของคุณเอง"
-  },
   "video": {
     "errors": {
       "starting": "กล้องเริ่มต้น",
@@ -154,6 +148,44 @@
       "avatar": "สัญลักษณ์",
       "human": "มนุษย์"
     },
-    "title": "การตั้งค่า"
-  }
+    "title": "การตั้งค่า",
+    "close": "ปิดการตั้งค่า",
+    "support": {
+      "title": "สนับสนุน",
+      "feedback": {
+        "title": "ข้อเสนอแนะ"
+      },
+      "about": {
+        "title": "เกี่ยวกับ"
+      }
+    },
+    "voice": {
+      "title": "เสียง",
+      "input": {
+        "title": "ป้อนข้อมูล"
+      },
+      "output": {
+        "title": "เอาท์พุต"
+      }
+    },
+    "other": {
+      "title": "อื่น",
+      "offline": {
+        "title": "ออฟไลน์",
+        "files": {
+          "pix2pixGenerator": "เครื่องกำเนิดมนุษย์ที่เหมือนจริงของภาพถ่าย",
+          "pix2pixUpscaler": "ภาพเหมือนจริง upscaler มนุษย์",
+          "avatarGlb": "อวตารสามมิติ",
+          "avatarUsdz": "3D Avatar สำหรับ AR บน iOS"
+        }
+      },
+      "appearance": {
+        "title": "รูปร่าง",
+        "action": "ปรับเปลี่ยนรูปลักษณ์",
+        "random": "รับภาพสุ่ม",
+        "upload": "อัพโหลดรูปภาพของคุณเอง"
+      }
+    }
+  },
+  "countries.isl": "ระหว่างประเทศ"
 }

@@ -33,7 +33,6 @@ import {SpeechToTextComponent} from './components/speech-to-text/speech-to-text.
 import {AvatarPoseViewerComponent} from './pages/translate/pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
 import {AppGoogleAnalyticsModule} from './core/modules/google-analytics/google-analytics.module';
 import {TranslateInputButtonComponent} from './pages/translate/input/button/button.component';
-import {AppearanceComponent} from './pages/translate/appearance/appearance.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {BenchmarkItemComponent} from './pages/benchmark/benchmark-item/benchmark-item.component';
@@ -42,6 +41,7 @@ import {DropzoneDirective} from './directives/dropzone.directive';
 import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-file.component';
 import {TRANSLOCO_LOADER} from '@ngneat/transloco';
 import {HttpLoader} from './core/modules/transloco/transloco.loader';
+import {LazyDialogEntryComponent} from './pages/translate/dialog-entry.component';
 
 @NgModule({
   declarations: [
@@ -64,11 +64,11 @@ import {HttpLoader} from './core/modules/transloco/transloco.loader';
     SkeletonPoseViewerComponent,
     SpeechToTextComponent,
     TranslateInputButtonComponent,
-    AppearanceComponent,
     BenchmarkComponent,
     BenchmarkItemComponent,
     DropzoneDirective,
     DropPoseFileComponent,
+    LazyDialogEntryComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -77,12 +77,12 @@ import {HttpLoader} from './core/modules/transloco/transloco.loader';
     AppRoutingModule,
     AppSharedModule,
     SettingsModule,
+    TranslateModule,
     PoseModule,
     SignWritingModule,
     DetectorModule,
     AnimationModule,
     Pix2PixModule,
-    TranslateModule,
     AppGoogleAnalyticsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

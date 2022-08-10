@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Bayyanar",
-    "action": "Gyara kamanni",
-    "random": "Samun hoto bazuwar",
-    "upload": "Sanya hoton ku"
-  },
   "video": {
     "errors": {
       "starting": "Kamara tana farawa",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Mutum"
     },
-    "title": "Saituna"
-  }
+    "title": "Saituna",
+    "close": "Rufe saituna",
+    "support": {
+      "title": "Taimako",
+      "feedback": {
+        "title": "Jawabin"
+      },
+      "about": {
+        "title": "Game da"
+      }
+    },
+    "voice": {
+      "title": "Murya",
+      "input": {
+        "title": "Shigarwa"
+      },
+      "output": {
+        "title": "Fitowa"
+      }
+    },
+    "other": {
+      "title": "Sauran",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Hoto-gaskiya janareta na ɗan adam",
+          "pix2pixUpscaler": "Photo-gaskiya ɗan adam upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar don AR akan iOS"
+        }
+      },
+      "appearance": {
+        "title": "Bayyanar",
+        "action": "Gyara kamanni",
+        "random": "Samun hoto bazuwar",
+        "upload": "Sanya hoton ku"
+      }
+    }
+  },
+  "countries.isl": "Ƙasashen Duniya"
 }

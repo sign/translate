@@ -117,12 +117,6 @@
       }
     }
   },
-  "appearance": {
-    "title": "Appearance",
-    "action": "Modify appearance",
-    "random": "Get a random photo",
-    "upload": "Upload your own photo"
-  },
   "video": {
     "errors": {
       "starting": "Camera starting",
@@ -154,6 +148,44 @@
       "avatar": "Avatar",
       "human": "Human"
     },
-    "title": "Settings"
-  }
+    "title": "Settings",
+    "close": "Close settings",
+    "support": {
+      "title": "Support",
+      "feedback": {
+        "title": "Feedback"
+      },
+      "about": {
+        "title": "About"
+      }
+    },
+    "voice": {
+      "title": "Voice",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Other",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-realistic human generator",
+          "pix2pixUpscaler": "Photo-realistic human upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar for AR on iOS"
+        }
+      },
+      "appearance": {
+        "title": "Appearance",
+        "action": "Modify appearance",
+        "random": "Get a random photo",
+        "upload": "Upload your own photo"
+      }
+    }
+  },
+  "countries.isl": "International"
 }
