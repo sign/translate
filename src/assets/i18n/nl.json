@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Internationale"
-  }
+  "countries.isl": "Internationale"
 }

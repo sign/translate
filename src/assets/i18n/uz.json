@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Xalqaro"
-  }
+  "countries.isl": "Xalqaro"
 }

@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Caalami"
-  }
+  "countries.isl": "Caalami"
 }

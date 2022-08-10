@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Quốc tế"
-  }
+  "countries.isl": "Quốc tế"
 }

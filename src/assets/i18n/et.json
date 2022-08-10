@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Rahvusvaheline"
-  }
+  "countries.isl": "Rahvusvaheline"
 }

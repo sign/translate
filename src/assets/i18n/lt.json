@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Tarptautinė"
-  }
+  "countries.isl": "Tarptautinė"
 }

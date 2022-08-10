@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "国際的"
-  }
+  "countries.isl": "国際的"
 }

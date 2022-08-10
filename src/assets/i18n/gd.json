@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Eadar-nàiseanta"
-  }
+  "countries.isl": "Eadar-nàiseanta"
 }

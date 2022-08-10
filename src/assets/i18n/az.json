@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Beynəlxalq"
-  }
+  "countries.isl": "Beynəlxalq"
 }

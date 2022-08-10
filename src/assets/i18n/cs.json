@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Mezinárodní"
-  }
+  "countries.isl": "Mezinárodní"
 }

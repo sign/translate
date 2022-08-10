@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "دولي"
-  }
+  "countries.isl": "دولي"
 }

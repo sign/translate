@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Ao-ao"
-  }
+  "countries.isl": "Ao-ao"
 }

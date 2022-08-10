@@ -1,14 +1,16 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Select} from '@ngxs/store';
-import {Observable} from 'rxjs';
+import {delay, Observable, switchMap} from 'rxjs';
 import {TranslocoService} from '@ngneat/transloco';
+import {filter, takeUntil, tap} from 'rxjs/operators';
+import {BaseComponent} from '../../../components/base/base.component';
 
 @Component({
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
 })
-export class LanguageSelectorComponent implements OnInit {
+export class LanguageSelectorComponent extends BaseComponent implements OnInit {
   @Select(state => state.translate.detectedLanguage) detectedLanguage$: Observable<string>;
 
   @Input() flags = false;
@@ -22,10 +24,14 @@ export class LanguageSelectorComponent implements OnInit {
   @Output() languageChange = new EventEmitter<string>();
 
   topLanguages: string[];
-
   selectedIndex = 0;
 
-  constructor(private transloco: TranslocoService) {}
+  displayNames: Intl.DisplayNames;
+  langNames: {[lang: string]: string} = {};
+
+  constructor(private transloco: TranslocoService) {
+    super();
+  }
 
   ngOnInit(): void {
     this.topLanguages = this.languages.slice(0, 3);
@@ -34,6 +40,41 @@ export class LanguageSelectorComponent implements OnInit {
     const urlParams = new URLSearchParams(searchParams);
     const initial = urlParams.get(this.urlParameter) || this.languages[0];
     this.selectLanguage(initial);
+
+    this.transloco.langChanges$
+      .pipe(
+        // wait until relevant language file has been loaded
+        switchMap(() => this.transloco.events$),
+        filter(e => e.type === 'translationLoadSuccess' && e.payload.scope === this.translationKey),
+        tap(() => this.setLangNames(this.transloco.getActiveLang())),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+  }
+
+  langName(lang: string): string {
+    if (this.displayNames && lang.length === 2) {
+      const result = this.displayNames.of(lang.toUpperCase());
+      if (result && result !== lang) {
+        return result;
+      }
+    }
+
+    // Fallback to predefined list
+    return this.transloco.translate(`${this.translationKey}.${lang}`);
+  }
+
+  setLangNames(locale: string) {
+    const type = this.translationKey === 'languages' ? 'language' : 'region';
+    this.displayNames = new Intl.DisplayNames([locale], {type});
+    if (this.displayNames.resolvedOptions().locale !== locale) {
+      console.error('Failed to set language display names for locale', locale);
+      delete this.displayNames;
+    }
+
+    for (const lang of this.languages) {
+      this.langNames[lang] = this.langName(lang);
+    }
   }
 
   selectLanguage(lang: string): void {
@@ -60,9 +101,5 @@ export class LanguageSelectorComponent implements OnInit {
     } else {
       this.selectLanguage(this.topLanguages[index - Number(this.hasLanguageDetection)]);
     }
-  }
-
-  langName(lang: string): string {
-    return this.transloco.translate(`${this.translationKey}.${lang}`);
   }
 }

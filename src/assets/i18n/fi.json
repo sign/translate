@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Kansainvälinen"
-  }
+  "countries.isl": "Kansainvälinen"
 }

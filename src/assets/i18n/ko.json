@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "국제적인"
-  }
+  "countries.isl": "국제적인"
 }

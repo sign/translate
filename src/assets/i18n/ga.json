@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Idirnáisiúnta"
-  }
+  "countries.isl": "Idirnáisiúnta"
 }

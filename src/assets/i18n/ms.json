@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "antarabangsa"
-  }
+  "countries.isl": "antarabangsa"
 }

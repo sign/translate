@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Nemzetközi"
-  }
+  "countries.isl": "Nemzetközi"
 }

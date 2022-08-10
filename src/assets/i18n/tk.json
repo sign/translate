@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Halkara"
-  }
+  "countries.isl": "Halkara"
 }

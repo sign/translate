@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "ዓለም አቀፍ"
-  }
+  "countries.isl": "ዓለም አቀፍ"
 }

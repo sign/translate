@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Uluslararası"
-  }
+  "countries.isl": "Uluslararası"
 }

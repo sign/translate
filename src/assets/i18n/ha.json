@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Ƙasashen Duniya"
-  }
+  "countries.isl": "Ƙasashen Duniya"
 }

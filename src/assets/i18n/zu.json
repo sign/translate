@@ -187,7 +187,5 @@
       }
     }
   },
-  "countries": {
-    "isl": "Amazwe ngamazwe"
-  }
+  "countries.isl": "Okwamanye amazwe"
 }
