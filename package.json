@@ -141,6 +141,6 @@
     "tsx": "^3.8.1",
     "typescript": "~4.7.4",
     "webpack-bundle-analyzer": "^4.5.0",
-    "zod": "^3.17.10"
+    "zod": "^3.18.0"
   }
 }

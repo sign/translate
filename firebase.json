@@ -43,6 +43,26 @@
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "about",
+        "destination": "about/index.html"
+      },
+      {
+        "source": "about/about",
+        "destination": "about/about/index.html"
+      },
+      {
+        "source": "about/contribute",
+        "destination": "about/contribute/index.html"
+      },
+      {
+        "source": "about/languages",
+        "destination": "about/languages/index.html"
+      },
+      {
+        "source": "about/tools",
+        "destination": "about/tools/index.html"
       }
     ]
   }

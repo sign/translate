@@ -29,6 +29,10 @@ mat-toolbar span {
   @media #{$mat-lt-sm} {
     .cdk-overlay-pane {
       max-width: 100vw !important;
+
+      .mat-dialog-container {
+        border-radius: 0;
+      }
     }
   }
 }
