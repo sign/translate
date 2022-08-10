@@ -186,5 +186,8 @@
         "upload": "Prześlij własne zdjęcie"
       }
     }
+  },
+  "countries": {
+    "isl": "Międzynarodowy"
   }
 }

@@ -186,5 +186,8 @@
         "upload": "Ngarkoni foton tuaj"
       }
     }
+  },
+  "countries": {
+    "isl": "Ndërkombëtare"
   }
 }

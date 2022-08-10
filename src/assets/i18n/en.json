@@ -1,4 +1,7 @@
 {
+  "countries": {
+    "isl": "International"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

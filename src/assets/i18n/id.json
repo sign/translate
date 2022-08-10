@@ -186,5 +186,8 @@
         "upload": "Unggah foto Anda sendiri"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasional"
   }
 }

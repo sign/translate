@@ -186,5 +186,8 @@
         "upload": "Kargatu zure argazkia"
       }
     }
+  },
+  "countries": {
+    "isl": "Nazioartekoa"
   }
 }

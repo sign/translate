@@ -186,5 +186,8 @@
         "upload": "Llwythwch eich llun eich hun i fyny"
       }
     }
+  },
+  "countries": {
+    "isl": "Rhyngwladol"
   }
 }

@@ -186,5 +186,8 @@
         "upload": "Carregue sua própria foto"
       }
     }
+  },
+  "countries": {
+    "isl": "Internacional"
   }
 }

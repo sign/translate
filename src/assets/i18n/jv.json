@@ -186,5 +186,8 @@
         "upload": "Upload foto sampeyan dhewe"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasional"
   }
 }

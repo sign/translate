@@ -186,5 +186,8 @@
         "upload": "Pag-upload sa imong kaugalingon nga litrato"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasyonal"
   }
 }

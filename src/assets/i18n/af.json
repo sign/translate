@@ -186,5 +186,8 @@
         "upload": "Laai jou eie foto op"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasionaal"
   }
 }

@@ -186,5 +186,8 @@
         "upload": "Laadige üles oma foto"
       }
     }
+  },
+  "countries": {
+    "isl": "Rahvusvaheline"
   }
 }

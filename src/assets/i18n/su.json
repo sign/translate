@@ -186,5 +186,8 @@
         "upload": "Unggah poto anjeun sorangan"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasional"
   }
 }

@@ -186,5 +186,8 @@
         "upload": "Hladdu upp þinni eigin mynd"
       }
     }
+  },
+  "countries": {
+    "isl": "Alþjóðlegt"
   }
 }

@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
+import {TranslocoService} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-language-selector',
@@ -23,6 +24,8 @@ export class LanguageSelectorComponent implements OnInit {
   topLanguages: string[];
 
   selectedIndex = 0;
+
+  constructor(private transloco: TranslocoService) {}
 
   ngOnInit(): void {
     this.topLanguages = this.languages.slice(0, 3);
@@ -57,5 +60,9 @@ export class LanguageSelectorComponent implements OnInit {
     } else {
       this.selectLanguage(this.topLanguages[index - Number(this.hasLanguageDetection)]);
     }
+  }
+
+  langName(lang: string): string {
+    return this.transloco.translate(`${this.translationKey}.${lang}`);
   }
 }

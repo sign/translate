@@ -186,5 +186,8 @@
         "upload": "O'zingizning rasmingizni yuklang"
       }
     }
+  },
+  "countries": {
+    "isl": "Xalqaro"
   }
 }

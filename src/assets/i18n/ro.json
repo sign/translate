@@ -186,5 +186,8 @@
         "upload": "Încărcați propria fotografie"
       }
     }
+  },
+  "countries": {
+    "isl": "Internaţional"
   }
 }

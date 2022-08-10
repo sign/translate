@@ -186,5 +186,8 @@
         "upload": "Íoslódáil an pictiúr ar do dheasc féin"
       }
     }
+  },
+  "countries": {
+    "isl": "Idirnáisiúnta"
   }
 }

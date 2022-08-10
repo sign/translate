@@ -186,5 +186,8 @@
         "upload": "Luchdaich a-nuas an dealbh fhèin"
       }
     }
+  },
+  "countries": {
+    "isl": "Eadar-nàiseanta"
   }
 }

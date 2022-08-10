@@ -186,5 +186,8 @@
   },
   "language-selector": {
     "label": "שנה שפה או אזור"
+  },
+  "countries": {
+    "isl": "בינלאומי"
   }
 }

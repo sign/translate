@@ -186,5 +186,8 @@
         "upload": "Mag-upload ng sarili mong larawan"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasyonal"
   }
 }

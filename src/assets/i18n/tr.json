@@ -186,5 +186,8 @@
         "upload": "Kendi fotoğrafınızı yükleyin"
       }
     }
+  },
+  "countries": {
+    "isl": "Uluslararası"
   }
 }

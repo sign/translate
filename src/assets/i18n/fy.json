@@ -186,5 +186,8 @@
         "upload": "Upload dyn eigen foto"
       }
     }
+  },
+  "countries": {
+    "isl": "Ynternasjonaal"
   }
 }

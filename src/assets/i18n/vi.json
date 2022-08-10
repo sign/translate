@@ -186,5 +186,8 @@
         "upload": "Tải lên ảnh của riêng bạn"
       }
     }
+  },
+  "countries": {
+    "isl": "Quốc tế"
   }
 }

@@ -1,7 +1,9 @@
 ::ng-deep .fab-menu {
   background: transparent;
   box-shadow: none;
+  overflow: visible; // Allow shadow to exceed panel
   min-width: 58px !important;
+  //transform: translateX(15%); // Position in center
 
   button {
     display: block;

@@ -186,5 +186,8 @@
         "upload": "Puja la teva pròpia foto"
       }
     }
+  },
+  "countries": {
+    "isl": "Internacional"
   }
 }

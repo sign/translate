@@ -186,5 +186,8 @@
         "upload": "Įkelk savo nuotrauką"
       }
     }
+  },
+  "countries": {
+    "isl": "Tarptautinė"
   }
 }

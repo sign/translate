@@ -186,5 +186,8 @@
         "upload": "Učitajte vlastitu fotografiju"
       }
     }
+  },
+  "countries": {
+    "isl": "Međunarodni"
   }
 }

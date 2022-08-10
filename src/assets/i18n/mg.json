@@ -186,5 +186,8 @@
         "upload": "Ampidiro ny sarinao manokana"
       }
     }
+  },
+  "countries": {
+    "isl": "iraisam-pirenena"
   }
 }

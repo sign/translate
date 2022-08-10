@@ -186,5 +186,8 @@
         "upload": "Last opp ditt eget bilde"
       }
     }
+  },
+  "countries": {
+    "isl": "Internasjonal"
   }
 }

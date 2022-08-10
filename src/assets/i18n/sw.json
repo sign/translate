@@ -186,5 +186,8 @@
         "upload": "Pakia picha yako mwenyewe"
       }
     }
+  },
+  "countries": {
+    "isl": "Kimataifa"
   }
 }

@@ -186,5 +186,8 @@
         "upload": "Ladda upp ditt eget foto"
       }
     }
+  },
+  "countries": {
+    "isl": "Internationell"
   }
 }

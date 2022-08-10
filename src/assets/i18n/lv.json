@@ -186,5 +186,8 @@
         "upload": "Augšupielādējiet savu fotoattēlu"
       }
     }
+  },
+  "countries": {
+    "isl": "Starptautisks"
   }
 }

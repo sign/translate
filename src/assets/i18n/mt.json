@@ -186,5 +186,8 @@
         "upload": "Ittella r-ritratt tiegħek"
       }
     }
+  },
+  "countries": {
+    "isl": "Internazzjonali"
   }
 }

@@ -186,5 +186,8 @@
         "upload": "Lataa oma valokuvasi"
       }
     }
+  },
+  "countries": {
+    "isl": "Kansainvälinen"
   }
 }
