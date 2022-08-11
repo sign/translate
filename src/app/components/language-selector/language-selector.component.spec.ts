@@ -35,7 +35,6 @@ describe('LanguageSelectorComponent', () => {
   for (const lang of SITE_LANGUAGES) {
     it(`should support language ${lang.value} (code '${lang.key}')`, async () => {
       const key = languageCodeNormalizer(lang.key).toLowerCase();
-      console.log(lang.key, ' -> ', key);
       const files = [
         `assets/i18n/${key}.json`,
         `assets/i18n/countries/${key}.json`,

@@ -204,7 +204,6 @@ export class AssetsService {
       // File stat does not exist
       const statStr = localStorage.getItem(path);
       if (!statStr) {
-        console.log('File stat does not exist in localStorage');
         return null;
       }
       const stat = JSON.parse(statStr);

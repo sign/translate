@@ -22,6 +22,7 @@ describe('LanguageSelectorComponent', () => {
     component = fixture.componentInstance;
     component.translationKey = 'translate.languages.spoken';
     component.languages = ['en', 'fr', 'de', 'he', 'ar'];
+    component.setLangNames('en');
 
     fixture.detectChanges();
   });

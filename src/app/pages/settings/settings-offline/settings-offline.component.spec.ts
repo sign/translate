@@ -7,6 +7,9 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {MatTreeModule} from '@angular/material/tree';
+import {CdkTreeModule} from '@angular/cdk/tree';
+import {NgxFilesizeModule} from 'ngx-filesize';
 
 describe('SettingsOfflineComponent', () => {
   let component: SettingsOfflineComponent;
@@ -15,7 +18,14 @@ describe('SettingsOfflineComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsOfflineComponent],
-      imports: [AppAngularMaterialModule, AppTranslocoTestingModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [
+        AppAngularMaterialModule,
+        MatTreeModule,
+        CdkTreeModule,
+        NgxFilesizeModule,
+        AppTranslocoTestingModule,
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsOfflineComponent);
