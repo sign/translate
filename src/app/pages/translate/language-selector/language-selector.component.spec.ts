@@ -20,10 +20,8 @@ describe('LanguageSelectorComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LanguageSelectorComponent);
     component = fixture.componentInstance;
-    component.translationKey = 'translate.languages.spoken';
-    component.languages = ['en', 'fr', 'de', 'he', 'ar'];
-    component.setLangNames('en');
-
+    component.translationKey = 'languages';
+    component.languages = ['en', 'fr', 'de'];
     fixture.detectChanges();
   });
 

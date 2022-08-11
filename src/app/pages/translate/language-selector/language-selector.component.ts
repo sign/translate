@@ -42,9 +42,7 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
     this.selectLanguage(initial);
 
     // Initialize langNames, relevant for SSR
-    if (!('navigator' in globalThis)) {
-      this.setLangNames(this.transloco.getActiveLang());
-    }
+    this.setLangNames(this.transloco.getActiveLang());
     this.transloco.langChanges$
       .pipe(
         // wait until relevant language file has been loaded
