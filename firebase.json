@@ -41,10 +41,6 @@
         "destination": "/assets/robots.txt"
       },
       {
-        "source": "**",
-        "destination": "/index.html"
-      },
-      {
         "source": "about",
         "destination": "about/index.html"
       },
@@ -63,6 +59,10 @@
       {
         "source": "about/tools",
         "destination": "about/tools/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
