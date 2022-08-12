@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Photo-realistic kanaka mīkini hana wāwahie",
           "pix2pixUpscaler": "Kiʻi-ʻoiaʻiʻo kanaka upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar no AR ma iOS"
+          "avatarUsdz": "3D Avatar no AR ma iOS",
+          "translation": "Unuhi",
+          "translation.spokenToSigned": "ʻŌlelo-i-kaulima",
+          "translation.signedToSpoken": "Kaulima-i-Spoken"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "International"
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}"
 }

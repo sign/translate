@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Foto-gerçekçi insan üreteci",
           "pix2pixUpscaler": "Foto-gerçekçi insan ölçekleyici",
           "avatarGlb": "3D avatar",
-          "avatarUsdz": "iOS'ta AR için 3D Avatar"
+          "avatarUsdz": "iOS'ta AR için 3D Avatar",
+          "translation": "Tercüme",
+          "translation.spokenToSigned": "Konuşulana İmzalı",
+          "translation.signedToSpoken": "İmzalı Konuşulan"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Uluslararası"
+  "countries.isl": "Uluslararası",
+  "to": "{{a}} → {{b}}"
 }

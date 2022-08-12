@@ -1,22 +1,24 @@
 <ng-template #nodeTemplate let-node>
-  <span class="node-label" *ngIf="node.name">{{ 'settings.other.offline.files.' + node.name | transloco }}</span>
-  <span class="node-label" *ngIf="!node.name">{{ node.path }}</span>
-  <span *ngIf="node.size">{{ node.size | filesize }}</span>
-  <mat-progress-spinner
-    *ngIf="node.progress"
-    mode="determinate"
-    [value]="node.progress * 100"
-    [diameter]="20"></mat-progress-spinner>
+  <span class="node-label" *ngIf="node.name">{{ nodeLabel(node) }}</span>
+  <span class="node-label" *ngIf="!node.name">{{ node.path.split('/').pop() }}</span>
+  <ng-container *ngIf="node.size !== null">
+    <span *ngIf="node.size">{{ node.size | filesize }}</span>
+    <mat-progress-spinner
+      *ngIf="node.progress"
+      mode="determinate"
+      [value]="node.progress * 100"
+      [diameter]="20"></mat-progress-spinner>
 
-  <button mat-icon-button color="accent" *ngIf="node.exists" (click)="reDownload(node)">
-    <mat-icon>cached</mat-icon>
-  </button>
-  <button mat-icon-button color="warn" *ngIf="node.exists" (click)="deleteCache(node)">
-    <mat-icon>delete</mat-icon>
-  </button>
-  <button mat-icon-button color="primary" *ngIf="!node.exists && !node.progress" (click)="download(node)">
-    <mat-icon>download</mat-icon>
-  </button>
+    <button mat-icon-button color="accent" *ngIf="node.exists" (click)="reDownload(node)">
+      <mat-icon>cached</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" *ngIf="node.exists" (click)="deleteCache(node)">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" *ngIf="!node.exists && !node.progress" (click)="download(node)">
+      <mat-icon>download</mat-icon>
+    </button>
+  </ng-container>
 </ng-template>
 
 <mat-tree [dataSource]="filesTree" [treeControl]="treeControl">

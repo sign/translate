@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Jenereta yamunthu yowoneka bwino",
           "pix2pixUpscaler": "Photo-zenizeni upscaler munthu",
           "avatarGlb": "Avatar ya 3D",
-          "avatarUsdz": "3D avatar ya AR pa iOS"
+          "avatarUsdz": "3D avatar ya AR pa iOS",
+          "translation": "Kumasulira",
+          "translation.spokenToSigned": "Kulankhulidwa-ku-Saina",
+          "translation.signedToSpoken": "Kusaina-Kulankhulidwa"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Mayiko"
+  "countries.isl": "Mayiko",
+  "to": "{{a}} → {{b}}"
 }

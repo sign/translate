@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Photo-chaiyo yemunhu jenareta",
           "pix2pixUpscaler": "Photo-chaiyo yemunhu upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar yeAR paIOS"
+          "avatarUsdz": "3D Avatar yeAR paIOS",
+          "translation": "Shanduro",
+          "translation.spokenToSigned": "Kutaura-kune-Kusaina",
+          "translation.signedToSpoken": "Saina-kune-Kutaura"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "International"
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}"
 }

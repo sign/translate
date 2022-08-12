@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Фотореалистичен човечки генератор",
           "pix2pixUpscaler": "Фотореалистично човечко зголемување на резолуцијата",
           "avatarGlb": "3D аватар",
-          "avatarUsdz": "3D Avatar за AR на iOS"
+          "avatarUsdz": "3D Avatar за AR на iOS",
+          "translation": "Превод",
+          "translation.spokenToSigned": "Говорно-потпишан",
+          "translation.signedToSpoken": "Потпишан-во-говорен"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Меѓународен"
+  "countries.isl": "Меѓународен",
+  "to": "{{a}} → {{b}}"
 }

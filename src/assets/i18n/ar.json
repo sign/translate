@@ -176,7 +176,10 @@
           "pix2pixGenerator": "مولد بشري واقعي للصور",
           "pix2pixUpscaler": "المرقي البشري للصور الواقعية",
           "avatarGlb": "3D الصورة الرمزية",
-          "avatarUsdz": "3D Avatar لـ AR على iOS"
+          "avatarUsdz": "3D Avatar لـ AR على iOS",
+          "translation": "ترجمة",
+          "translation.spokenToSigned": "تحدث إلى التوقيع",
+          "translation.signedToSpoken": "التوقيع على الكلام"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "دولي"
+  "countries.isl": "دولي",
+  "to": "{{a}} ← {{ب}}"
 }

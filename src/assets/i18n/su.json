@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Generator manusa poto-realistis",
           "pix2pixUpscaler": "Poto-realistis upscaler manusa",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D pikeun AR dina ios"
+          "avatarUsdz": "Avatar 3D pikeun AR dina ios",
+          "translation": "Tarjamahan",
+          "translation.spokenToSigned": "Diucapkeun-ka-Ditandatanganan",
+          "translation.signedToSpoken": "Ditandatanganan-ka-Diucapkeun"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Internasional"
+  "countries.isl": "Internasional",
+  "to": "{{a}} → {{b}}"
 }

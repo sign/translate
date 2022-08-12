@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Kaihanga tangata-whakaahua",
           "pix2pixUpscaler": "Tangata-whakaahua teitei ake",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D mo AR i runga iOS"
+          "avatarUsdz": "Avatar 3D mo AR i runga iOS",
+          "translation": "Whakamaoritanga",
+          "translation.spokenToSigned": "Korero-ki-Waitohu",
+          "translation.signedToSpoken": "Waitohu-ki-Krero"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Ao-ao"
+  "countries.isl": "Ao-ao",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Генератори фотореалистии инсон",
           "pix2pixUpscaler": "Бартарии инсони аксбардорӣ",
           "avatarGlb": "Аватар 3D",
-          "avatarUsdz": "Avatar 3D барои AR дар iOS"
+          "avatarUsdz": "Avatar 3D барои AR дар iOS",
+          "translation": "Тарҷума",
+          "translation.spokenToSigned": "Гуфтугӯ-ба-имзо",
+          "translation.signedToSpoken": "Имзо-ба-сухан"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "байналхалкй"
+  "countries.isl": "байналхалкй",
+  "to": "{{a}} → {{b}}"
 }

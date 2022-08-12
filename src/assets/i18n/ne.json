@@ -176,7 +176,10 @@
           "pix2pixGenerator": "फोटो-यथार्थवादी मानव जनरेटर",
           "pix2pixUpscaler": "फोटो-यथार्थवादी मानव अपस्केलर",
           "avatarGlb": "3D अवतार",
-          "avatarUsdz": "iOS मा AR को लागि 3D अवतार"
+          "avatarUsdz": "iOS मा AR को लागि 3D अवतार",
+          "translation": "अनुवाद",
+          "translation.spokenToSigned": "स्पोकन-टू-साइन गरिएको",
+          "translation.signedToSpoken": "साइन-टु-स्पोकन"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "अन्तर्राष्ट्रिय"
+  "countries.isl": "अन्तर्राष्ट्रिय",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Fotorealistický ľudský generátor",
           "pix2pixUpscaler": "Fotorealistický ľudský upscaler",
           "avatarGlb": "3D avatar",
-          "avatarUsdz": "3D Avatar pre AR na iOS"
+          "avatarUsdz": "3D Avatar pre AR na iOS",
+          "translation": "Preklad",
+          "translation.spokenToSigned": "Hovorené podpísané",
+          "translation.signedToSpoken": "Signed-to-Spoken"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "International"
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}"
 }

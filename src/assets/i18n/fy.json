@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Foto-realistyske minsklike generator",
           "pix2pixUpscaler": "Foto-realistyske minsklike upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar foar AR op iOS"
+          "avatarUsdz": "3D Avatar foar AR op iOS",
+          "translation": "Oersetting",
+          "translation.spokenToSigned": "Sprekt-oan-ûndertekene",
+          "translation.signedToSpoken": "Undertekene-to-Spreken"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Ynternasjonaal"
+  "countries.isl": "Ynternasjonaal",
+  "to": "{{a}} → {{b}}"
 }

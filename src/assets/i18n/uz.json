@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Fotorealistik inson generatori",
           "pix2pixUpscaler": "Fotorealistik insoniy yuksaluvchi",
           "avatarGlb": "3D avatar",
-          "avatarUsdz": "iOS uchun AR uchun 3D Avatar"
+          "avatarUsdz": "iOS uchun AR uchun 3D Avatar",
+          "translation": "Tarjima",
+          "translation.spokenToSigned": "Gap-to-imzo",
+          "translation.signedToSpoken": "Signed-to-Spoken"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Xalqaro"
+  "countries.isl": "Xalqaro",
+  "to": "{{a}} → {{b}}"
 }

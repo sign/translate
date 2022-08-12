@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Photo-realistiko nga generator sa tawo",
           "pix2pixUpscaler": "Photo-realistiko nga tawo nga upscaler",
           "avatarGlb": "3D nga Avatar",
-          "avatarUsdz": "3D Avatar alang sa AR sa iOS"
+          "avatarUsdz": "3D Avatar alang sa AR sa iOS",
+          "translation": "Paghubad",
+          "translation.spokenToSigned": "Gisulti-sa-Gipirmahan",
+          "translation.signedToSpoken": "Gipirmahan-sa-Gisulti"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Internasyonal"
+  "countries.isl": "Internasyonal",
+  "to": "{{a}} → {{b}}"
 }

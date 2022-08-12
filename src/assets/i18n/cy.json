@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Generadur dynol ffoto-realistig",
           "pix2pixUpscaler": "Ffoto-realistig upscaler dynol",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D ar gyfer AR ar iOS"
+          "avatarUsdz": "Avatar 3D ar gyfer AR ar iOS",
+          "translation": "Cyfieithiad",
+          "translation.spokenToSigned": "Llafar-i-Arwyddedig",
+          "translation.signedToSpoken": "Llofnod-i-Siarad"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Rhyngwladol"
+  "countries.isl": "Rhyngwladol",
+  "to": "{{a}} → {{b}}"
 }

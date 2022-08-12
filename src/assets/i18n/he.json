@@ -137,7 +137,10 @@
           "pix2pixGenerator": "מחולל אנושי פוטו-ריאליסטי",
           "pix2pixUpscaler": "יוקרה אנושי פוטו-ריאליסטי",
           "avatarGlb": "אווטאר תלת מימד",
-          "avatarUsdz": "אווטאר 3D עבור AR ב-iOS"
+          "avatarUsdz": "אווטאר 3D עבור AR ב-iOS",
+          "translation": "תִרגוּם",
+          "translation.spokenToSigned": "מדוברת אל חתום",
+          "translation.signedToSpoken": "חתום לדיבור"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
   "language-selector": {
     "label": "שנה שפה או אזור"
   },
-  "countries.isl": "בינלאומי"
+  "countries.isl": "בינלאומי",
+  "to": "{{a}} ← {{b}}"
 }

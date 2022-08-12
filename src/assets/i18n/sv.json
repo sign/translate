@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Fotorealistisk mänsklig generator",
           "pix2pixUpscaler": "Fotorealistisk mänsklig uppskalare",
           "avatarGlb": "3D-avatar",
-          "avatarUsdz": "3D Avatar för AR på iOS"
+          "avatarUsdz": "3D Avatar för AR på iOS",
+          "translation": "Översättning",
+          "translation.spokenToSigned": "Talat-till-signerad",
+          "translation.signedToSpoken": "Signerad till talat"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Internationell"
+  "countries.isl": "Internationell",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "เครื่องกำเนิดมนุษย์ที่เหมือนจริงของภาพถ่าย",
           "pix2pixUpscaler": "ภาพเหมือนจริง upscaler มนุษย์",
           "avatarGlb": "อวตารสามมิติ",
-          "avatarUsdz": "3D Avatar สำหรับ AR บน iOS"
+          "avatarUsdz": "3D Avatar สำหรับ AR บน iOS",
+          "translation": "การแปล",
+          "translation.spokenToSigned": "พูดเพื่อลงนาม",
+          "translation.signedToSpoken": "ลงนามเพื่อพูด"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "ระหว่างประเทศ"
+  "countries.isl": "ระหว่างประเทศ",
+  "to": "{{a}} → {{b}}"
 }

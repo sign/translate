@@ -176,7 +176,10 @@
           "pix2pixGenerator": "ફોટો-વાસ્તવિક માનવ જનરેટર",
           "pix2pixUpscaler": "ફોટો-વાસ્તવિક માનવ અપસ્કેલર",
           "avatarGlb": "3D અવતાર",
-          "avatarUsdz": "iOS પર AR માટે 3D અવતાર"
+          "avatarUsdz": "iOS પર AR માટે 3D અવતાર",
+          "translation": "અનુવાદ",
+          "translation.spokenToSigned": "સ્પોકન ટુ સહી કરેલ",
+          "translation.signedToSpoken": "સાઇન-ટુ-સ્પોકન"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "આંતરરાષ્ટ્રીય"
+  "countries.isl": "આંતરરાષ્ટ્રીય",
+  "to": "{{a}} → {{b}}"
 }

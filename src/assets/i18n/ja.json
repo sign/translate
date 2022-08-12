@@ -176,7 +176,10 @@
           "pix2pixGenerator": "フォトリアリスティックなヒューマン ジェネレーター",
           "pix2pixUpscaler": "写真のようにリアルな人間のアップスケーラー",
           "avatarGlb": "3Dアバター",
-          "avatarUsdz": "iOS の AR 用 3D アバター"
+          "avatarUsdz": "iOS の AR 用 3D アバター",
+          "translation": "翻訳",
+          "translation.spokenToSigned": "音声対署名",
+          "translation.signedToSpoken": "手話音声"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "国際的"
+  "countries.isl": "国際的",
+  "to": "{{a}} → {{b}}"
 }

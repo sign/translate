@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Gineadóir daonna grianghraf-réalaíoch",
           "pix2pixUpscaler": "Ardaitheoir daonna grianghraf-réalaíoch",
           "avatarGlb": "Cluiche avatar 3D",
-          "avatarUsdz": "Íosluchtaigh avatar 3d le haghaidh ios"
+          "avatarUsdz": "Íosluchtaigh avatar 3d le haghaidh ios",
+          "translation": "Aistriúchán",
+          "translation.spokenToSigned": "Labhairt le Sínithe",
+          "translation.signedToSpoken": "Sínithe go Labhartha"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Idirnáisiúnta"
+  "countries.isl": "Idirnáisiúnta",
+  "to": "{{a}} → {{b}}"
 }

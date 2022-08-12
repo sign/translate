@@ -54,6 +54,11 @@
                 "glob": "**/*",
                 "input": "node_modules/@sign-mt/browsermt/artifacts/",
                 "output": "./browsermt/"
+              },
+              {
+                "glob": "worker.js",
+                "input": "node_modules/@sign-mt/browsermt/build/bundled/",
+                "output": "./browsermt/"
               }
             ],
             "styles": [

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Picha-halisi jenereta ya binadamu",
           "pix2pixUpscaler": "Kiboreshaji cha hali ya juu cha binadamu",
           "avatarGlb": "Avatar ya 3D",
-          "avatarUsdz": "Avatar ya 3D ya AR kwenye iOS"
+          "avatarUsdz": "Avatar ya 3D ya AR kwenye iOS",
+          "translation": "Tafsiri",
+          "translation.spokenToSigned": "Imesemwa-kwa-Saini",
+          "translation.signedToSpoken": "Imesainiwa-kwa-Kutamkwa"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Kimataifa"
+  "countries.isl": "Kimataifa",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Xerador humano fotorrealista",
           "pix2pixUpscaler": "Escalador humano fotorrealista",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D para AR en iOS"
+          "avatarUsdz": "Avatar 3D para AR en iOS",
+          "translation": "Tradución",
+          "translation.spokenToSigned": "Falado para asinado",
+          "translation.signedToSpoken": "Asinado para falar"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Internacional"
+  "countries.isl": "Internacional",
+  "to": "{{a}} → {{b}}"
 }

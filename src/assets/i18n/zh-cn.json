@@ -176,7 +176,10 @@
           "pix2pixGenerator": "逼真的人体发电机",
           "pix2pixUpscaler": "逼真的人体放大镜",
           "avatarGlb": "3D头像",
-          "avatarUsdz": "iOS 上的 AR 3D 头像"
+          "avatarUsdz": "iOS 上的 AR 3D 头像",
+          "translation": "翻译",
+          "translation.spokenToSigned": "口语签名",
+          "translation.signedToSpoken": "口语签名"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "国际的"
+  "countries.isl": "国际的",
+  "to": "{{a}} → {{b}}"
 }

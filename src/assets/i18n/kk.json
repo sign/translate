@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Фотореалистік адам генераторы",
           "pix2pixUpscaler": "Фотореалистикалық адам жоғарылатушы",
           "avatarGlb": "3D аватары",
-          "avatarUsdz": "iOS жүйесінде AR үшін 3D аватары"
+          "avatarUsdz": "iOS жүйесінде AR үшін 3D аватары",
+          "translation": "Аударма",
+          "translation.spokenToSigned": "Сөйлеу-қол қою",
+          "translation.signedToSpoken": "Signed-to-Spoken"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Халықаралық"
+  "countries.isl": "Халықаралық",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Foto-reyalis dèlko imen",
           "pix2pixUpscaler": "Photo-reyalis moun upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar pou AR sou iOS"
+          "avatarUsdz": "3D Avatar pou AR sou iOS",
+          "translation": "Tradiksyon",
+          "translation.spokenToSigned": "Pale-a-siyen",
+          "translation.signedToSpoken": "Siyen-pou-pale"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Entènasyonal"
+  "countries.isl": "Entènasyonal",
+  "to": "{{a}} → {{b}}"
 }

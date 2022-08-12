@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Gineadair daonna dealbh-reusanta",
           "pix2pixUpscaler": "Àrdachadh daonna dealbh-reusanta",
           "avatarGlb": "Avatar ann an 3d a",
-          "avatarUsdz": "Avatar 3d a airson ios"
+          "avatarUsdz": "Avatar 3d a airson ios",
+          "translation": "Eadar-theangachadh",
+          "translation.spokenToSigned": "Labhairt ri Soidhne",
+          "translation.signedToSpoken": "Soidhne-gu-labhairt"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Eadar-nàiseanta"
+  "countries.isl": "Eadar-nàiseanta",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Hilberînerê mirovî yê wêne-realîst",
           "pix2pixUpscaler": "Upscaler mirovê wêne-realîst",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar ji bo AR li ser iOS"
+          "avatarUsdz": "3D Avatar ji bo AR li ser iOS",
+          "translation": "Werger",
+          "translation.spokenToSigned": "Peyv-bi-îmze kirin",
+          "translation.signedToSpoken": "Îmze kirin-ji-gotin"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Navnetewî"
+  "countries.isl": "Navnetewî",
+  "to": "{{a}} ← {{b}}"
 }

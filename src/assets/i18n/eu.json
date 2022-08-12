@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Giza sorgailu foto-errealista",
           "pix2pixUpscaler": "Foto-errealista giza upscaler",
           "avatarGlb": "3D avatarra",
-          "avatarUsdz": "3D Avatar ARrako iOS-n"
+          "avatarUsdz": "3D Avatar ARrako iOS-n",
+          "translation": "Itzulpena",
+          "translation.spokenToSigned": "Ahozkoa-Sinatua",
+          "translation.signedToSpoken": "Ahozko sinatuta"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Nazioartekoa"
+  "countries.isl": "Nazioartekoa",
+  "to": "{{a}} → {{b}}"
 }

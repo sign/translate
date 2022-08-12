@@ -176,7 +176,10 @@
           "pix2pixGenerator": "ڦوٽو-حقيقت پسند انساني جنريٽر",
           "pix2pixUpscaler": "ڦوٽو-حقيقت پسند انسان اپ اسڪيلر",
           "avatarGlb": "3D اوتار",
-          "avatarUsdz": "iOS تي AR لاءِ 3D اوتار"
+          "avatarUsdz": "iOS تي AR لاءِ 3D اوتار",
+          "translation": "ترجمو",
+          "translation.spokenToSigned": "ڳالهه ٻولهه سان دستخط ٿيل",
+          "translation.signedToSpoken": "دستخط سان ڳالهائڻ"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "بين الاقوامي"
+  "countries.isl": "بين الاقوامي",
+  "to": "{{a}} ← {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "ფოტო-რეალისტური ადამიანის გენერატორი",
           "pix2pixUpscaler": "ფოტო-რეალისტური ადამიანის ამაღლება",
           "avatarGlb": "3D ავატარი",
-          "avatarUsdz": "3D ავატარი AR-ისთვის iOS-ზე"
+          "avatarUsdz": "3D ავატარი AR-ისთვის iOS-ზე",
+          "translation": "თარგმანი",
+          "translation.spokenToSigned": "სალაპარაკო-ხელმოწერილი",
+          "translation.signedToSpoken": "ხელმოწერილი-სალაპარაკო"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "საერთაშორისო"
+  "countries.isl": "საერთაშორისო",
+  "to": "{{a}} → {{b}}"
 }

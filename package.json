@@ -62,7 +62,7 @@
     "@ngneat/transloco": "^4.1.1",
     "@nguniversal/express-engine": "^14.0.3",
     "@ngxs/store": "3.7.5",
-    "@sign-mt/browsermt": "^0.0.1",
+    "@sign-mt/browsermt": "^0.0.2",
     "@sign/i18n": "git://github.com/sign/i18n.git",
     "@sutton-signwriting/font-ttf": "^1.3.2",
     "@sutton-signwriting/sgnw-components": "1.0.0",

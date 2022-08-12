@@ -176,7 +176,10 @@
           "pix2pixGenerator": "புகைப்பட-யதார்த்தமான மனித ஜெனரேட்டர்",
           "pix2pixUpscaler": "புகைப்பட-யதார்த்தமான மனித மேம்பாட்டாளர்",
           "avatarGlb": "3டி அவதார்",
-          "avatarUsdz": "iOS இல் ARக்கான 3D அவதார்"
+          "avatarUsdz": "iOS இல் ARக்கான 3D அவதார்",
+          "translation": "மொழிபெயர்ப்பு",
+          "translation.spokenToSigned": "கையொப்பமிடப்பட்டது",
+          "translation.signedToSpoken": "கையொப்பமிட்டது-பேசப்பட்டது"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "சர்வதேச"
+  "countries.isl": "சர்வதேச",
+  "to": "{{a}} → {{b}}"
 }

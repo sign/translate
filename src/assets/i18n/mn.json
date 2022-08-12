@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Фото бодит хүний ​​генератор",
           "pix2pixUpscaler": "Фото-бодит хүний ​​дээд зэрэглэлийн",
           "avatarGlb": "3D аватар",
-          "avatarUsdz": "iOS дээрх AR-д зориулсан 3D Avatar"
+          "avatarUsdz": "iOS дээрх AR-д зориулсан 3D Avatar",
+          "translation": "Орчуулга",
+          "translation.spokenToSigned": "Гарын үсэг зурсан",
+          "translation.signedToSpoken": "Гарын үсэг зурсан"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Олон улсын"
+  "countries.isl": "Олон улсын",
+  "to": "{{a}} → {{b}}"
 }

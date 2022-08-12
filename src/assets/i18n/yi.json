@@ -176,7 +176,10 @@
           "pix2pixGenerator": "פאָטאָ-רעאַליסטיש מענטש גענעראַטאָר",
           "pix2pixUpscaler": "פאָטאָ-רעאַליסטיש מענטש אַפּסקאַלער",
           "avatarGlb": "3 ד אַוואַטאַר",
-          "avatarUsdz": "3D Avatar פֿאַר AR אויף יאָס"
+          "avatarUsdz": "3D Avatar פֿאַר AR אויף יאָס",
+          "translation": "איבערזעצונג",
+          "translation.spokenToSigned": "גערעדט-צו-געחתמעט",
+          "translation.signedToSpoken": "געחתמעט-צו-גערעדט"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "אינטערנאַציאָנאַלע"
+  "countries.isl": "אינטערנאַציאָנאַלע",
+  "to": "{{a}} ← {{b}}"
 }

@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Fotorealistlik inimgeneraator",
           "pix2pixUpscaler": "Fotorealistlik inimlik upscale",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D-avatar AR jaoks iOS-is"
+          "avatarUsdz": "3D-avatar AR jaoks iOS-is",
+          "translation": "Tõlge",
+          "translation.spokenToSigned": "Räägitud allkirjaga",
+          "translation.signedToSpoken": "Signeeritud kõneks"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Rahvusvaheline"
+  "countries.isl": "Rahvusvaheline",
+  "to": "{{a}} → {{b}}"
 }

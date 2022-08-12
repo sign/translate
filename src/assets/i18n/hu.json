@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Fotorealisztikus emberi generátor",
           "pix2pixUpscaler": "Fotórealisztikus emberi feljavító",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar AR-hez iOS rendszeren"
+          "avatarUsdz": "3D Avatar AR-hez iOS rendszeren",
+          "translation": "Fordítás",
+          "translation.spokenToSigned": "Aláírtnak szólva",
+          "translation.signedToSpoken": "Aláírt-beszéd"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Nemzetközi"
+  "countries.isl": "Nemzetközi",
+  "to": "{{a}} → {{b}}"
 }

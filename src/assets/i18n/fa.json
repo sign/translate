@@ -176,7 +176,10 @@
           "pix2pixGenerator": "مولد انسان عکس واقع گرایانه",
           "pix2pixUpscaler": "ارتقاء دهنده انسان با عکس واقع گرایانه",
           "avatarGlb": "آواتار سه بعدی",
-          "avatarUsdz": "آواتار سه بعدی برای AR در iOS"
+          "avatarUsdz": "آواتار سه بعدی برای AR در iOS",
+          "translation": "ترجمه",
+          "translation.spokenToSigned": "گفتاری به امضا شده",
+          "translation.signedToSpoken": "امضا شده به گفتار"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "بین المللی"
+  "countries.isl": "بین المللی",
+  "to": "{{a}} ← {{b}}"
 }

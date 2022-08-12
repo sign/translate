@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Sawir-dhaliyaha aadanaha ee dhabta ah",
           "pix2pixUpscaler": "Sawir-qaade bini'aadminimo oo dhab ah",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar ee AR ee iOS"
+          "avatarUsdz": "3D Avatar ee AR ee iOS",
+          "translation": "Turjumaada",
+          "translation.spokenToSigned": "Looga hadlay-La Saxiixay",
+          "translation.signedToSpoken": "Saxiix-ku-hadal"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Caalami"
+  "countries.isl": "Caalami",
+  "to": "{{a}} → {{b}}"
 }

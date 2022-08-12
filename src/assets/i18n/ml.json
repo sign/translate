@@ -176,7 +176,10 @@
           "pix2pixGenerator": "ഫോട്ടോ-റിയലിസ്റ്റിക് ഹ്യൂമൻ ജനറേറ്റർ",
           "pix2pixUpscaler": "ഫോട്ടോ-റിയലിസ്റ്റിക് ഹ്യൂമൻ അപ്‌സ്‌കേലർ",
           "avatarGlb": "3D അവതാർ",
-          "avatarUsdz": "iOS-ൽ AR-നുള്ള 3D അവതാർ"
+          "avatarUsdz": "iOS-ൽ AR-നുള്ള 3D അവതാർ",
+          "translation": "വിവർത്തനം",
+          "translation.spokenToSigned": "സ്പോൺ-ടു-സൈഡ്",
+          "translation.signedToSpoken": "സൈൻ-ടു-സ്പോക്കൺ"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "അന്താരാഷ്ട്ര"
+  "countries.isl": "അന്താരാഷ്ട്ര",
+  "to": "{{a}} → {{b}}"
 }

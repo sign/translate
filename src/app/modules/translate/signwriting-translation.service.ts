@@ -1,31 +1,18 @@
 import {Injectable} from '@angular/core';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
-import {catchError, from, Observable, of} from 'rxjs';
+import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';
 import {filter, map} from 'rxjs/operators';
-import * as comlink from 'comlink';
+import {ComlinkWorkerInterface, createBergamotWorker, ModelRegistry, TranslationResponse} from '@sign-mt/browsermt';
 
-type TranslationResponse = {text: string};
-
-// TODO import types: import {ModelRegistry} from '@sign-mt/browsermt/build/src/worker.d.ts'
-type ModelRegistry = any;
-type TranslationOptions = any;
+type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SignWritingTranslationService {
-  worker: comlink.Remote<{
-    importBergamotWorker: (jsFilePath: string, wasmFilePath: string) => Promise<void>;
-    loadModel: (from: string, to: string, modelRegistry: ModelRegistry) => Promise<void>;
-    translate: (
-      from: string,
-      to: string,
-      sentences: string[],
-      options: TranslationOptions[]
-    ) => Promise<TranslationResponse[]>;
-  }>;
+  worker: ComlinkWorkerInterface;
 
   loadedModel: string;
 
@@ -35,13 +22,9 @@ export class SignWritingTranslationService {
     if (this.worker) {
       return;
     }
-    const worker: Worker = new Worker('/node_modules/@sign-mt/browsermt/build/esm/worker.js');
-    this.worker = comlink.wrap(worker);
+    this.worker = createBergamotWorker('/browsermt/worker.js');
 
-    await this.worker.importBergamotWorker(
-      'browsermt/bergamot-translator-worker.js',
-      'browsermt/bergamot-translator-worker.wasm'
-    );
+    await this.worker.importBergamotWorker('bergamot-translator-worker.js', 'bergamot-translator-worker.wasm');
   }
 
   async createModelRegistry(modelPath: string) {
@@ -54,36 +37,44 @@ export class SignWritingTranslationService {
     return modelRegistry;
   }
 
-  async loadOfflineModel(from: string, to: string) {
-    const model = `${from}${to}`;
-    if (this.loadedModel === model) {
+  async loadOfflineModel(direction: TranslationDirection, from: string, to: string) {
+    const modelName = `${from}${to}`;
+    if (this.loadedModel === modelName) {
       return;
     }
 
-    const modelPath = `browsermt/${model}/`;
-    const state = await this.assets.stat(modelPath);
+    const modelPath = `models/browsermt/${direction}/${from}-${to}/`;
+    const state = this.assets.stat(modelPath);
     if (!state.exists) {
-      throw new Error(`Model '${model}' not found locally`);
+      throw new Error(`Model '${modelPath}' not found locally`);
     }
 
-    const modelRegistry = {[model]: await this.createModelRegistry(modelPath)};
+    const modelRegistry = {[modelName]: await this.createModelRegistry(modelPath)} as ModelRegistry;
 
     await this.initWorker();
     await this.worker.loadModel(from, to, modelRegistry);
-    this.loadedModel = model;
+    this.loadedModel = modelName;
   }
 
-  async translateOffline(text: string, from: string, to: string): Promise<TranslationResponse> {
-    await this.loadOfflineModel(from, to);
-    const translations = await this.worker.translate(from, to, [text], {isHtml: false} as any);
+  async translateOffline(
+    direction: TranslationDirection,
+    text: string,
+    from: string,
+    to: string
+  ): Promise<TranslationResponse> {
+    await this.loadOfflineModel(direction, from, to);
+    let translations = await this.worker.translate(from, to, [text], [{isHtml: false}]);
+    if (typeof translations[0] === 'string') {
+      translations = translations.map((t: any) => ({text: t}));
+    }
     return translations[0];
   }
 
   translateOnline(
+    direction: TranslationDirection,
     text: string,
     from: string,
-    to: string,
-    direction: 'spoken-to-signed' | 'signed-to-spoken'
+    to: string
   ): Observable<TranslationResponse> {
     // TODO replace with model deployed on cloud functions
     const api = 'https://pub.cl.uzh.ch/demo/signwriting/spoken2sign';
@@ -104,22 +95,23 @@ export class SignWritingTranslationService {
     spokenLanguage: string,
     signedLanguage: string
   ): Observable<TranslationResponse> {
+    const direction: TranslationDirection = 'spoken-to-signed';
     const offlineSpecific = () => {
       const newText = `<SW> ${text}`;
-      return from(this.translateOffline(newText, spokenLanguage, signedLanguage));
+      return from(this.translateOffline(direction, newText, spokenLanguage, signedLanguage));
     };
 
     const offlineGeneric = () => {
       const newText = `<SW> <${signedLanguage}> <${spokenLanguage}> ${text}`;
-      return from(this.translateOffline(newText, 'spoken', 'signed'));
+      return from(this.translateOffline(direction, newText, 'spoken', 'signed'));
     };
 
-    const online = () => this.translateOnline(text, spokenLanguage, signedLanguage, 'spoken-to-signed');
+    const online = () => this.translateOnline(direction, text, spokenLanguage, signedLanguage);
 
     return offlineSpecific().pipe(
-      catchError(() => offlineGeneric()),
-      filter(() => 'navigator' in globalThis && navigator.onLine),
-      catchError(() => online())
+      catchError(offlineGeneric),
+      filter(() => !('navigator' in globalThis) || navigator.onLine),
+      catchError(online)
     );
   }
 }

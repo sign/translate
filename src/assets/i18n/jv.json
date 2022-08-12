@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Generator manungsa foto-realistis",
           "pix2pixUpscaler": "Photo-realistis manungsa upscaler",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D kanggo AR ing iOS"
+          "avatarUsdz": "Avatar 3D kanggo AR ing iOS",
+          "translation": "Ngartekne",
+          "translation.spokenToSigned": "Spoken-to-Signed",
+          "translation.signedToSpoken": "Mlebu-kanggo-Spoken"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "Internasional"
+  "countries.isl": "Internasional",
+  "to": "{{a}} → {{b}}"
 }

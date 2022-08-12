@@ -176,7 +176,10 @@
           "pix2pixGenerator": "ဓာတ်ပုံ- လက်တွေ့ဆန်သော လူ့မီးစက်",
           "pix2pixUpscaler": "ဓာတ်ပုံ- လက်တွေ့ဆန်တဲ့ လူသားတွေ တက်လာပါတယ်။",
           "avatarGlb": "3D ရုပ်ပွားတော်",
-          "avatarUsdz": "iOS ရှိ AR အတွက် 3D Avatar"
+          "avatarUsdz": "iOS ရှိ AR အတွက် 3D Avatar",
+          "translation": "ဘာသာပြန်ခြင်း။",
+          "translation.spokenToSigned": "စကားပြော-လက်မှတ်ထိုး",
+          "translation.signedToSpoken": "လက်မှတ်ရေးထိုးပြီး စကားပြောပါ။"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "နိုင်ငံတကာ"
+  "countries.isl": "နိုင်ငံတကာ",
+  "to": "{{a}} → {{b}}"
 }

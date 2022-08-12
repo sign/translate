@@ -176,7 +176,10 @@
           "pix2pixGenerator": "Penjana manusia foto-realistik",
           "pix2pixUpscaler": "Penskala manusia yang realistik foto",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D untuk AR pada iOS"
+          "avatarUsdz": "Avatar 3D untuk AR pada iOS",
+          "translation": "Terjemahan",
+          "translation.spokenToSigned": "Diucapkan kepada Ditandatangani",
+          "translation.signedToSpoken": "Ditandatangani-untuk-Dituturkan"
         }
       },
       "appearance": {
@@ -187,5 +190,6 @@
       }
     }
   },
-  "countries.isl": "antarabangsa"
+  "countries.isl": "antarabangsa",
+  "to": "{{a}} → {{b}}"
 }
