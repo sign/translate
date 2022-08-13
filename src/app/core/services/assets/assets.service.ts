@@ -136,13 +136,13 @@ export class AssetsService {
     try {
       return await this.navigatorStorageFileUri(path, download, downloadDone);
     } catch (e) {
-      console.log('Navigator storage api not supported', e);
+      // console.log('Navigator storage api not supported', e);
     }
 
     try {
       return await this.capacitorGetFileUri(path, download, downloadDone);
     } catch (e) {
-      console.log('Capacitor file API not supported', e);
+      // console.log('Capacitor file API not supported', e);
     }
 
     return this.buildRemotePath(path);
@@ -204,7 +204,6 @@ export class AssetsService {
       // File stat does not exist
       const statStr = localStorage.getItem(path);
       if (!statStr) {
-        console.log('File stat does not exist in localStorage');
         return null;
       }
       const stat = JSON.parse(statStr);

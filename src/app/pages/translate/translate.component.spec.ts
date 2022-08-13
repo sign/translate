@@ -13,6 +13,7 @@ import {SettingsState} from '../../modules/settings/settings.state';
 import {HttpClientModule} from '@angular/common/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {TranslocoService} from '@ngneat/transloco';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -28,6 +29,7 @@ describe('TranslateComponent', () => {
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         HttpClientModule,
+        RouterTestingModule,
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Select} from '@ngxs/store';
-import {delay, Observable, switchMap} from 'rxjs';
+import {Observable, switchMap} from 'rxjs';
 import {TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
@@ -41,6 +41,8 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
     const initial = urlParams.get(this.urlParameter) || this.languages[0];
     this.selectLanguage(initial);
 
+    // Initialize langNames, relevant for SSR
+    this.setLangNames(this.transloco.getActiveLang());
     this.transloco.langChanges$
       .pipe(
         // wait until relevant language file has been loaded
