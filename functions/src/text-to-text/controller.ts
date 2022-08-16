@@ -16,7 +16,6 @@ export class TextToTextTranslationEndpoint {
     const query = {prefix: `models/browsermt/${direction}/${from}-${to}`};
     const [files] = await this.bucket.getFiles(query);
     const paths = files.map(f => f.metadata.name).filter(p => !p.endsWith('/'));
-    console.log(query, paths);
     return paths.length > 0 ? paths : null;
   }
 

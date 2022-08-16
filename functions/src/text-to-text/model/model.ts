@@ -21,7 +21,6 @@ export class TextToTextTranslationModel {
     const modelName = `${this.from}${this.to}`;
     const modelRegistry = {[modelName]: await this.createModelRegistry(files)} as ModelRegistry;
 
-    console.log(modelRegistry);
     await this.worker.loadModel(this.from, this.to, modelRegistry);
   }
 
