@@ -3,7 +3,7 @@ import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google
 import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';
-import {filter, map} from 'rxjs/operators';
+import {filter} from 'rxjs/operators';
 import {ComlinkWorkerInterface, createBergamotWorker, ModelRegistry, TranslationResponse} from '@sign-mt/browsermt';
 
 type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
@@ -76,18 +76,8 @@ export class SignWritingTranslationService {
     from: string,
     to: string
   ): Observable<TranslationResponse> {
-    // TODO replace with model deployed on cloud functions
-    const api = 'https://pub.cl.uzh.ch/demo/signwriting/spoken2sign';
-    const body = {
-      country_code: to,
-      language_code: from,
-      text,
-      translation_type: 'sent',
-    };
-    return this.http.post<any>(api, body).pipe(map(res => ({text: res.translations[0]})));
-    // const url = `https://spoken-to-signed-sxie2r74ua-uc.a.run.app/${direction}`; // TODO replace with deployed url
-    // const query = new URLSearchParams({text, from, to});
-    // return this.http.get<TranslationResponse>(`${url}?${query}`);
+    const query = new URLSearchParams({from, to, text});
+    return this.http.get<TranslationResponse>(`/api/${direction}?${query}`);
   }
 
   translateSpokenToSignWriting(
