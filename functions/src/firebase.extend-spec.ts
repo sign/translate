@@ -73,6 +73,7 @@ export function setupFirebaseTestEnvironment() {
             return [buffer];
           },
           getSignedUrl: () => ref.getDownloadURL(),
+          publicUrl: () => ref.getDownloadURL(),
           delete: () => ref.delete(),
         };
       },

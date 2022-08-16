@@ -35,9 +35,7 @@ export class TextToTextTranslationModel {
         throw new Error(`Invalid model file name: ${fileName}`);
       }
 
-      // tODO publicUrl
       const [mediaLink] = await this.bucket.file(filePath).getSignedUrl({action: 'read', expires});
-      console.log(mediaLink);
       modelRegistry[fileType] = {
         name: mediaLink,
         size: 0,
