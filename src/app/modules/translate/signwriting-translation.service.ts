@@ -4,7 +4,7 @@ import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';
 import {filter} from 'rxjs/operators';
-import {ComlinkWorkerInterface, createBergamotWorker, ModelRegistry, TranslationResponse} from '@sign-mt/browsermt';
+import {ComlinkWorkerInterface, ModelRegistry, TranslationResponse} from '@sign-mt/browsermt';
 
 type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
 
@@ -22,6 +22,7 @@ export class SignWritingTranslationService {
     if (this.worker) {
       return;
     }
+    const {createBergamotWorker} = await import('@sign-mt/browsermt');
     this.worker = createBergamotWorker('/browsermt/worker.js');
 
     await this.worker.importBergamotWorker('bergamot-translator-worker.js', 'bergamot-translator-worker.wasm');
