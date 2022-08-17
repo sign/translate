@@ -1,5 +1,5 @@
 {
-  "name": "sign-translate",
+  "name": "@sign/translate",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
@@ -30,7 +30,6 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^14.1.2",
     "@angular/cdk": "^14.1.2",
@@ -60,7 +59,7 @@
     "@mediapipe/drawing_utils": "^0.3.1620248257",
     "@mediapipe/holistic": "^0.5.1635989137",
     "@ngneat/transloco": "^4.1.1",
-    "@nguniversal/express-engine": "^14.0.3",
+    "@nguniversal/express-engine": "^14.1.0",
     "@ngxs/store": "3.7.5",
     "@sign-mt/browsermt": "0.1.0",
     "@sign/i18n": "git://github.com/sign/i18n.git",
@@ -90,18 +89,18 @@
     "zone.js": "~0.11.8"
   },
   "devDependencies": {
-    "@angular-devkit/architect": "^0.1401.2",
-    "@angular-devkit/build-angular": "^14.1.2",
+    "@angular-devkit/architect": "^0.1401.3",
+    "@angular-devkit/build-angular": "^14.1.3",
     "@angular-eslint/builder": "^14.0.2",
     "@angular-eslint/eslint-plugin": "^14.0.2",
     "@angular-eslint/eslint-plugin-template": "^14.0.2",
     "@angular-eslint/schematics": "^14.0.2",
     "@angular-eslint/template-parser": "^14.0.2",
-    "@angular/cli": "^14.1.2",
+    "@angular/cli": "^14.1.3",
     "@angular/compiler-cli": "^14.1.2",
     "@capacitor/assets": "^1.0.0-next.5",
     "@capacitor/cli": "^4.0.1",
-    "@nguniversal/builders": "^14.0.3",
+    "@nguniversal/builders": "^14.1.0",
     "@playwright/test": "^1.25.0",
     "@sign/configuration": "git://github.com/sign/.github.git",
     "@trapezedev/project": "^5.0.0",
