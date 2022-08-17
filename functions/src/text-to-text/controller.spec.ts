@@ -17,7 +17,7 @@ describe('TextToTextTranslationEndpoint', () => {
 
   let controller: TextToTextTranslationEndpoint;
   beforeEach(() => {
-    controller = new TextToTextTranslationEndpoint(bucket);
+    controller = new TextToTextTranslationEndpoint(testEnvironment.database, bucket);
   });
 
   it('should error invalid direction', async () => {
@@ -80,7 +80,7 @@ describe('TextToTextTranslationEndpoint', () => {
     );
   });
 
-  it('should create a model for existing model files', async () => {
+  async function translateExample() {
     const mockReq = new MockExpressRequest({
       url: '/',
       params: {direction: 'spoken-to-signed'},
@@ -89,7 +89,11 @@ describe('TextToTextTranslationEndpoint', () => {
     const mockRes = new MockExpressResponse({request: mockReq});
     await controller.request(mockReq, mockRes);
 
-    const response = mockRes._getJSON();
+    return mockRes._getJSON();
+  }
+
+  it('should translate text for existing model files', async () => {
+    const response = await translateExample();
 
     expect(response).toEqual({
       direction: 'spoken-to-signed',
@@ -97,5 +101,42 @@ describe('TextToTextTranslationEndpoint', () => {
       to: 'ru',
       text: 'Здравствуйте,',
     });
+  });
+
+  it('should cache translation response', async () => {
+    const helloMd5 = '5d41402abc4b2a76b9719d911017c592';
+    const ref = testEnvironment.database.ref('/translations/spoken-to-signed/en-ru/' + helloMd5);
+    const snapshotBefore = await ref.once('value');
+    expect(snapshotBefore.exists()).toBe(false);
+
+    const response = await translateExample();
+
+    const snapshot = await ref.once('value');
+    expect(snapshot.exists()).toBe(true);
+    const cachedValue = snapshot.val();
+    expect(cachedValue.text).toEqual('hello');
+    expect(cachedValue.counter).toEqual(1);
+    expect(cachedValue.timestamp).toBeLessThanOrEqual(Date.now());
+    expect(cachedValue.timestamp).toBeGreaterThanOrEqual(Date.now() - 5000);
+    expect(cachedValue.translation).toEqual(response.text);
+  });
+
+  it('should respond with cached response if exists', async () => {
+    const helloMd5 = '5d41402abc4b2a76b9719d911017c592';
+    const ref = testEnvironment.database.ref('/translations/spoken-to-signed/en-ru/' + helloMd5);
+    await ref.set({
+      text: 'hello',
+      counter: 1,
+      timestamp: Date.now(),
+      translation: 'fake translation',
+    });
+
+    const response = await translateExample();
+    expect(response.text).toEqual('fake translation');
+
+    const snapshot = await ref.once('value');
+    expect(snapshot.exists()).toBe(true);
+    const cachedValue = snapshot.val();
+    expect(cachedValue.counter).toEqual(2);
   });
 });

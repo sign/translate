@@ -180,6 +180,12 @@
           "translation": "Переклад",
           "translation.spokenToSigned": "Розмова з підписом",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Перемкнути {{label}}",
+          "download": "Завантажте автономну модель",
+          "delete": "Очистити кеш офлайнової моделі",
+          "reDownload": "Повторне завантаження автономної моделі"
         }
       },
       "appearance": {

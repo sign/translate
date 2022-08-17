@@ -9,13 +9,28 @@
       [value]="node.progress * 100"
       [diameter]="20"></mat-progress-spinner>
 
-    <button mat-icon-button color="accent" *ngIf="node.exists" (click)="reDownload(node)">
+    <button
+      mat-icon-button
+      color="accent"
+      [attr.aria-label]="'settings.other.offline.actions.reDownload' | transloco"
+      *ngIf="node.exists"
+      (click)="reDownload(node)">
       <mat-icon>cached</mat-icon>
     </button>
-    <button mat-icon-button color="warn" *ngIf="node.exists" (click)="deleteCache(node)">
+    <button
+      mat-icon-button
+      color="warn"
+      [attr.aria-label]="'settings.other.offline.actions.delete' | transloco"
+      *ngIf="node.exists"
+      (click)="deleteCache(node)">
       <mat-icon>delete</mat-icon>
     </button>
-    <button mat-icon-button color="primary" *ngIf="!node.exists && !node.progress" (click)="download(node)">
+    <button
+      mat-icon-button
+      color="primary"
+      [attr.aria-label]="'settings.other.offline.actions.download' | transloco"
+      *ngIf="!node.exists && !node.progress"
+      (click)="download(node)">
       <mat-icon>download</mat-icon>
     </button>
   </ng-container>
@@ -25,7 +40,7 @@
   <!-- This is the tree node template for leaf nodes -->
   <mat-tree-node *matTreeNodeDef="let node">
     <!-- use a disabled button to provide padding for tree leaf -->
-    <button mat-icon-button disabled></button>
+    <button mat-icon-button disabled [attr.aria-hidden]="true"></button>
     <ng-container *ngTemplateOutlet="nodeTemplate; context: {$implicit: node}"></ng-container>
   </mat-tree-node>
 
@@ -36,7 +51,7 @@
         mat-icon-button
         matTreeNodeToggle
         [disabled]="node.children.length === 0"
-        [attr.aria-label]="'Toggle ' + node.name">
+        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco: {label: nodeLabel(node)}">
         <mat-icon class="mat-icon-rtl-mirror">
           {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
         </mat-icon>

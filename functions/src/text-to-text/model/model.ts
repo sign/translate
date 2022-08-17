@@ -51,6 +51,9 @@ export class TextToTextTranslationModel {
   }
 
   async terminate() {
+    if (!this.worker) {
+      return;
+    }
     return this.worker.terminate();
   }
 }

@@ -180,6 +180,12 @@
           "translation": "Käännös",
           "translation.spokenToSigned": "Puhuttu allekirjoitetulle",
           "translation.signedToSpoken": "Allekirjoitettu puheeksi"
+        },
+        "actions": {
+          "toggle": "Vaihda {{label}}",
+          "download": "Lataa offline-malli",
+          "delete": "Tyhjennä offline-mallin välimuisti",
+          "reDownload": "Lataa offline-malli uudelleen"
         }
       },
       "appearance": {

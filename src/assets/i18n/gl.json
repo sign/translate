@@ -180,6 +180,12 @@
           "translation": "Tradución",
           "translation.spokenToSigned": "Falado para asinado",
           "translation.signedToSpoken": "Asinado para falar"
+        },
+        "actions": {
+          "toggle": "Alternar {{label}}",
+          "download": "Descargar modelo offline",
+          "delete": "Limpar a caché de modelos sen conexión",
+          "reDownload": "Volve descargar o modelo sen conexión"
         }
       },
       "appearance": {

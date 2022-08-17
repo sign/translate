@@ -180,6 +180,12 @@
           "translation": "翻訳",
           "translation.spokenToSigned": "音声対署名",
           "translation.signedToSpoken": "手話音声"
+        },
+        "actions": {
+          "toggle": "トグル {{label}}",
+          "download": "オフライン モデルのダウンロード",
+          "delete": "オフライン モデル キャッシュのパージ",
+          "reDownload": "オフライン モデルの再ダウンロード"
         }
       },
       "appearance": {

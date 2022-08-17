@@ -180,6 +180,12 @@
           "translation": "Unuhi",
           "translation.spokenToSigned": "ʻŌlelo-i-kaulima",
           "translation.signedToSpoken": "Kaulima-i-Spoken"
+        },
+        "actions": {
+          "toggle": "Hoʻololi {{label}}",
+          "download": "Hoʻoiho i ke kumu hoʻohālike hoʻopahemo",
+          "delete": "E hoʻomaʻemaʻe i ka pahu hoʻohālike hoʻopahemo",
+          "reDownload": "Hoʻoiho hou i ke kumu hoʻohālike hoʻopahemo"
         }
       },
       "appearance": {

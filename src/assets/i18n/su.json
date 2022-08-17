@@ -180,6 +180,12 @@
           "translation": "Tarjamahan",
           "translation.spokenToSigned": "Diucapkeun-ka-Ditandatanganan",
           "translation.signedToSpoken": "Ditandatanganan-ka-Diucapkeun"
+        },
+        "actions": {
+          "toggle": "Togél {{label}}",
+          "download": "Unduh Modél Offline",
+          "delete": "Ngabersihan Offline Modél Cache",
+          "reDownload": "Unduh deui Modél Offline"
         }
       },
       "appearance": {

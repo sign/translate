@@ -180,6 +180,12 @@
           "translation": "ترجمہ",
           "translation.spokenToSigned": "بات کرنے سے دستخط شدہ",
           "translation.signedToSpoken": "دستخط شدہ سے بولنے والا"
+        },
+        "actions": {
+          "toggle": "ٹوگل کریں {{label}}",
+          "download": "آف لائن ماڈل ڈاؤن لوڈ کریں۔",
+          "delete": "آف لائن ماڈل کیشے کو صاف کریں۔",
+          "reDownload": "آف لائن ماڈل دوبارہ ڈاؤن لوڈ کریں۔"
         }
       },
       "appearance": {

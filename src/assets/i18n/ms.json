@@ -180,6 +180,12 @@
           "translation": "Terjemahan",
           "translation.spokenToSigned": "Diucapkan kepada Ditandatangani",
           "translation.signedToSpoken": "Ditandatangani-untuk-Dituturkan"
+        },
+        "actions": {
+          "toggle": "Togol {{label}}",
+          "download": "Muat turun Model Luar Talian",
+          "delete": "Bersihkan Cache Model Luar Talian",
+          "reDownload": "Muat Turun Semula Model Luar Talian"
         }
       },
       "appearance": {

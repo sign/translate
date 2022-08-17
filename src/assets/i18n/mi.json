@@ -180,6 +180,12 @@
           "translation": "Whakamaoritanga",
           "translation.spokenToSigned": "Korero-ki-Waitohu",
           "translation.signedToSpoken": "Waitohu-ki-Krero"
+        },
+        "actions": {
+          "toggle": "Takahuri {{label}}",
+          "download": "Tikiake Tauira Tuimotu",
+          "delete": "Pure Tuimotu Keteroki Tauira",
+          "reDownload": "Tikiake Anō Tauira Tuimotu"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Übersetzung",
           "translation.spokenToSigned": "Gesprochen-zu-Signiert",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "{{Label}} umschalten",
+          "download": "Laden Sie das Offline-Modell herunter",
+          "delete": "Leeren Sie den Offline-Modell-Cache",
+          "reDownload": "Laden Sie das Offline-Modell erneut herunter"
         }
       },
       "appearance": {

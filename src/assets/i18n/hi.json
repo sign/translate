@@ -180,6 +180,12 @@
           "translation": "अनुवाद",
           "translation.spokenToSigned": "बोले-से-हस्ताक्षरित",
           "translation.signedToSpoken": "साइन-टू-स्पोकन"
+        },
+        "actions": {
+          "toggle": "टॉगल करें {{लेबल}}",
+          "download": "ऑफलाइन मॉडल डाउनलोड करें",
+          "delete": "ऑफ़लाइन मॉडल कैश को शुद्ध करें",
+          "reDownload": "ऑफलाइन मॉडल को फिर से डाउनलोड करें"
         }
       },
       "appearance": {

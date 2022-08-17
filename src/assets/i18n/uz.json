@@ -180,6 +180,12 @@
           "translation": "Tarjima",
           "translation.spokenToSigned": "Gap-to-imzo",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "{{label}}-ni almashtirish",
+          "download": "Oflayn modelni yuklab oling",
+          "delete": "Oflayn model keshini tozalash",
+          "reDownload": "Oflayn modelni qayta yuklab oling"
         }
       },
       "appearance": {

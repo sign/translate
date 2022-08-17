@@ -180,6 +180,12 @@
           "translation": "Terjemahan",
           "translation.spokenToSigned": "Diucapkan-untuk-Ditandatangani",
           "translation.signedToSpoken": "Ditandatangani-untuk-Diucapkan"
+        },
+        "actions": {
+          "toggle": "Alihkan {{label}}",
+          "download": "Unduh Model Offline",
+          "delete": "Bersihkan Cache Model Offline",
+          "reDownload": "Unduh Ulang Model Offline"
         }
       },
       "appearance": {

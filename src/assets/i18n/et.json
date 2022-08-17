@@ -180,6 +180,12 @@
           "translation": "Tõlge",
           "translation.spokenToSigned": "Räägitud allkirjaga",
           "translation.signedToSpoken": "Signeeritud kõneks"
+        },
+        "actions": {
+          "toggle": "Lülita {{label}}",
+          "download": "Laadige alla võrguühenduseta mudel",
+          "delete": "Tühjendage võrguühenduseta mudeli vahemälu",
+          "reDownload": "Laadige võrguühenduseta mudel uuesti alla"
         }
       },
       "appearance": {

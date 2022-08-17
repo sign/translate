@@ -180,6 +180,12 @@
           "translation": "Vertimas",
           "translation.spokenToSigned": "Pasisakyta pasirašytinai",
           "translation.signedToSpoken": "Pasirašyta į kalbą"
+        },
+        "actions": {
+          "toggle": "Perjungti {{label}}",
+          "download": "Atsisiųskite modelį neprisijungus",
+          "delete": "Išvalykite neprisijungus naudojamo modelio talpyklą",
+          "reDownload": "Iš naujo atsisiųskite neprisijungus naudojamą modelį"
         }
       },
       "appearance": {

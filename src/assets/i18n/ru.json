@@ -180,6 +180,12 @@
           "translation": "Перевод",
           "translation.spokenToSigned": "Разговорный с подписанным",
           "translation.signedToSpoken": "Подписано для разговора"
+        },
+        "actions": {
+          "toggle": "Переключить {{метка}}",
+          "download": "Скачать автономную модель",
+          "delete": "Очистить кэш автономной модели",
+          "reDownload": "Повторно загрузить офлайн-модель"
         }
       },
       "appearance": {

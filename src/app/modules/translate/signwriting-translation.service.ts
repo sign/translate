@@ -77,7 +77,7 @@ export class SignWritingTranslationService {
     to: string
   ): Observable<TranslationResponse> {
     const query = new URLSearchParams({from, to, text});
-    return this.http.get<TranslationResponse>(`/api/${direction}?${query}`);
+    return this.http.get<TranslationResponse>(`https://sign.mt/api/${direction}?${query}`);
   }
 
   translateSpokenToSignWriting(

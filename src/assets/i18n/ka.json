@@ -180,6 +180,12 @@
           "translation": "თარგმანი",
           "translation.spokenToSigned": "სალაპარაკო-ხელმოწერილი",
           "translation.signedToSpoken": "ხელმოწერილი-სალაპარაკო"
+        },
+        "actions": {
+          "toggle": "{{label}}-ის გადართვა",
+          "download": "ჩამოტვირთეთ ოფლაინ მოდელი",
+          "delete": "ოფლაინ მოდელის ქეშის გასუფთავება",
+          "reDownload": "ხელახლა ჩამოტვირთეთ ოფლაინ მოდელი"
         }
       },
       "appearance": {

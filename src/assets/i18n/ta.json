@@ -180,6 +180,12 @@
           "translation": "மொழிபெயர்ப்பு",
           "translation.spokenToSigned": "கையொப்பமிடப்பட்டது",
           "translation.signedToSpoken": "கையொப்பமிட்டது-பேசப்பட்டது"
+        },
+        "actions": {
+          "toggle": "{{label}} ஐ நிலைமாற்று",
+          "download": "ஆஃப்லைன் மாதிரியைப் பதிவிறக்கவும்",
+          "delete": "ஆஃப்லைன் மாதிரி தற்காலிக சேமிப்பை அகற்றவும்",
+          "reDownload": "ஆஃப்லைன் மாதிரியை மீண்டும் பதிவிறக்கவும்"
         }
       },
       "appearance": {

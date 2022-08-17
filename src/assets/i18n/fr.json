@@ -180,6 +180,12 @@
           "translation": "Traduction",
           "translation.spokenToSigned": "Du parlé au signé",
           "translation.signedToSpoken": "Signé à parlé"
+        },
+        "actions": {
+          "toggle": "Basculer {{étiquette}}",
+          "download": "Télécharger le modèle hors ligne",
+          "delete": "Purger le cache du modèle hors ligne",
+          "reDownload": "Re-télécharger le modèle hors ligne"
         }
       },
       "appearance": {

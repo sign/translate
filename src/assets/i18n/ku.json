@@ -180,6 +180,12 @@
           "translation": "Werger",
           "translation.spokenToSigned": "Peyv-bi-îmze kirin",
           "translation.signedToSpoken": "Îmze kirin-ji-gotin"
+        },
+        "actions": {
+          "toggle": "{{ label}} biguherîne",
+          "download": "Modela Offline dakêşin",
+          "delete": "Cache Modela Offline Paqij bike",
+          "reDownload": "Modela Offline ji nû ve dakêşin"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Phetolelo",
           "translation.spokenToSigned": "E builoeng-ho-Saenoa",
           "translation.signedToSpoken": "Saennwe-ho-Bua"
+        },
+        "actions": {
+          "toggle": "Fetolela {{label}}",
+          "download": "Khoasolla Mohlala oa Offline",
+          "delete": "Hlatsoa Cache ea Moetso oa Offline",
+          "reDownload": "Khoasolla Hape Moetso oa Offline"
         }
       },
       "appearance": {

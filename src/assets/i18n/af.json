@@ -180,6 +180,12 @@
           "translation": "Vertaling",
           "translation.spokenToSigned": "Gepraat-tot-Geteken",
           "translation.signedToSpoken": "Geteken-tot-Gesproke"
+        },
+        "actions": {
+          "toggle": "Wissel {{label}}",
+          "download": "Laai vanlyn model af",
+          "delete": "Maak vanlyn modelkas skoon",
+          "reDownload": "Laai weer vanlyn model af"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Превод",
           "translation.spokenToSigned": "Говорно-потпишан",
           "translation.signedToSpoken": "Потпишан-во-говорен"
+        },
+        "actions": {
+          "toggle": "Вклучи {{label}}",
+          "download": "Преземете офлајн модел",
+          "delete": "Исчистете го кешот на офлајн модел",
+          "reDownload": "Повторно преземете офлајн модел"
         }
       },
       "appearance": {

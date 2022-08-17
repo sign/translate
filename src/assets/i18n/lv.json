@@ -180,6 +180,12 @@
           "translation": "Tulkošana",
           "translation.spokenToSigned": "Runāts ar parakstu",
           "translation.signedToSpoken": "Parakstīts uz runātu"
+        },
+        "actions": {
+          "toggle": "Pārslēgt {{label}}",
+          "download": "Lejupielādēt bezsaistes modeli",
+          "delete": "Iztīriet bezsaistes modeļa kešatmiņu",
+          "reDownload": "Atkārtoti lejupielādējiet bezsaistes modeli"
         }
       },
       "appearance": {

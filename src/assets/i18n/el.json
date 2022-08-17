@@ -180,6 +180,12 @@
           "translation": "Μετάφραση",
           "translation.spokenToSigned": "Ομιλία προς υπογραφή",
           "translation.signedToSpoken": "Υπογεγραμμένο σε προφορικό"
+        },
+        "actions": {
+          "toggle": "Εναλλαγή {{label}}",
+          "download": "Λήψη μοντέλου εκτός σύνδεσης",
+          "delete": "Εκκαθάριση της προσωρινής μνήμης μοντέλων εκτός σύνδεσης",
+          "reDownload": "Επανάληψη λήψης μοντέλου εκτός σύνδεσης"
         }
       },
       "appearance": {

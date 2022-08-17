@@ -180,6 +180,12 @@
           "translation": "Traduzzjoni",
           "translation.spokenToSigned": "Mitkellma biex Iffirmat",
           "translation.signedToSpoken": "Iffirmat għal Mitkellem"
+        },
+        "actions": {
+          "toggle": "Aqleb {{label}}",
+          "download": "Niżżel il-Mudell Offline",
+          "delete": "Neħħi l-Cache tal-Mudell Offline",
+          "reDownload": "Niżżel mill-ġdid il-Mudell Offline"
         }
       },
       "appearance": {

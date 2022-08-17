@@ -180,6 +180,12 @@
           "translation": "Turjumaada",
           "translation.spokenToSigned": "Looga hadlay-La Saxiixay",
           "translation.signedToSpoken": "Saxiix-ku-hadal"
+        },
+        "actions": {
+          "toggle": "Beddel {{calaamad}}",
+          "download": "Soo deji Modelka khadka tooska ah",
+          "delete": "Ka saar Cache Model-ka Khadka Tooska ah",
+          "reDownload": "Dib u soo deji Modelka khadka tooska ah"
         }
       },
       "appearance": {

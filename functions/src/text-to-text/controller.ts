@@ -1,16 +1,18 @@
 import * as express from 'express';
 import * as functions from 'firebase-functions';
 import * as httpErrors from 'http-errors';
+import * as crypto from 'crypto';
 import {errorMiddleware} from '../middlewares/error.middleware';
 import {TextToTextTranslationModel} from './model/model';
 import {Bucket, Storage} from '@google-cloud/storage';
+import {FirebaseDatabase, Reference} from '@firebase/database-types';
 
 const TRANSLATION_DIRECTIONS = new Set(['spoken-to-signed', 'signed-to-spoken']);
 
 export class TextToTextTranslationEndpoint {
   models = new Map<string, TextToTextTranslationModel>();
 
-  constructor(private bucket: Bucket) {}
+  constructor(private database: FirebaseDatabase, private bucket: Bucket) {}
 
   async modelFiles(direction: string, from: string, to: string): Promise<string[] | null> {
     const query = {prefix: `models/browsermt/${direction}/${from}-${to}`};
@@ -59,24 +61,60 @@ export class TextToTextTranslationEndpoint {
     return {direction, from, to, text};
   }
 
+  async getCachedTranslation(direction: string, from: string, to: string, text: string): Promise<string | Reference> {
+    const hash = crypto.createHash('md5').update(text).digest('hex');
+    const ref = this.database.ref('translations').child(direction).child(`${from}-${to}`).child(hash);
+
+    return new Promise(async resolve => {
+      let result = ref;
+      await ref.transaction(cache => {
+        if (!cache) {
+          return null;
+        }
+
+        result = cache.translation;
+        return {
+          counter: cache.counter + 1,
+          timestamp: Date.now(),
+        };
+      });
+      resolve(result);
+    });
+  }
+
   async request(req: express.Request, res: express.Response) {
+    // Only in-browser cache, not CDN cache, to have a more accurate cache hits counter
+    res.set('Cache-Control', 'public, max-age=86400, s-maxage=0');
+
     const {direction, from, to, text} = this.parseParameters(req);
 
-    const model = await this.getModel(direction, from, to);
-    const translatedText = await model.translate(text);
+    const cache = await this.getCachedTranslation(direction, from, to, text);
+    let translation: string;
+    if (typeof cache === 'string') {
+      translation = cache;
+    } else {
+      const model = await this.getModel(direction, from, to);
+      translation = await model.translate(text);
 
-    res.set('Cache-Control', 'public, max-age=86400'); // one day
+      await cache.set({
+        text,
+        translation,
+        counter: 1,
+        timestamp: Date.now(),
+      });
+    }
+
     res.json({
       direction,
       from,
       to,
-      text: translatedText,
+      text: translation,
     });
   }
 }
 
-export const textToTextFunctions = (storage: Storage) => {
-  const endpoint = new TextToTextTranslationEndpoint(storage.bucket('sign-mt-assets'));
+export const textToTextFunctions = (database: FirebaseDatabase, storage: Storage) => {
+  const endpoint = new TextToTextTranslationEndpoint(database, storage.bucket('sign-mt-assets'));
 
   const app = express();
   app.get('/api/:direction', endpoint.request.bind(endpoint));

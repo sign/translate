@@ -180,6 +180,12 @@
           "translation": "Translation",
           "translation.spokenToSigned": "Voasoratra amin'ny sonia",
           "translation.signedToSpoken": "Voasonia-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Misintona Modely an-tserasera",
+          "delete": "Diovy ny cache modely ivelan'ny Internet",
+          "reDownload": "Avereno alaina ny modely an-tserasera"
         }
       },
       "appearance": {

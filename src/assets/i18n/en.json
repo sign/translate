@@ -164,6 +164,12 @@
       "title": "Other",
       "offline": {
         "title": "Offline",
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Download Offline Model",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Re-Download Offline Model"
+        },
         "files": {
           "pix2pixGenerator": "Photo-realistic human generator",
           "pix2pixUpscaler": "Photo-realistic human upscaler",

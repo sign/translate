@@ -180,6 +180,12 @@
           "translation": "ترجمو",
           "translation.spokenToSigned": "ڳالهه ٻولهه سان دستخط ٿيل",
           "translation.signedToSpoken": "دستخط سان ڳالهائڻ"
+        },
+        "actions": {
+          "toggle": "ٽوگل ڪريو {{label}}",
+          "download": "ڊائون لوڊ آف لائن ماڊل",
+          "delete": "آف لائن ماڊل ڪيش کي صاف ڪريو",
+          "reDownload": "آف لائن ماڊل ٻيهر ڊائون لوڊ ڪريو"
         }
       },
       "appearance": {

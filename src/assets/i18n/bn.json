@@ -180,6 +180,12 @@
           "translation": "অনুবাদ",
           "translation.spokenToSigned": "কথ্য থেকে স্বাক্ষরিত",
           "translation.signedToSpoken": "সাইন-টু-স্পোকেন"
+        },
+        "actions": {
+          "toggle": "টগল {{label}}",
+          "download": "অফলাইন মডেল ডাউনলোড করুন",
+          "delete": "অফলাইন মডেল ক্যাশে শুদ্ধ করুন",
+          "reDownload": "অফলাইন মডেল পুনরায় ডাউনলোড করুন"
         }
       },
       "appearance": {

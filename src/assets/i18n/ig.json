@@ -180,6 +180,12 @@
           "translation": "Ntụgharị asụsụ",
           "translation.spokenToSigned": "Kwuru-na-binyere aka",
           "translation.signedToSpoken": "Ebinyere aka na-ekwu okwu"
+        },
+        "actions": {
+          "toggle": "Tụgharịa {{label}}",
+          "download": "Budata Model na-anọghị n'ịntanetị",
+          "delete": "Hichapụ cache Model na-anọghị n'ịntanetị",
+          "reDownload": "Budata Model na-anọghị n'ịntanetị"
         }
       },
       "appearance": {

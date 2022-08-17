@@ -180,6 +180,12 @@
           "translation": "Prijevod",
           "translation.spokenToSigned": "Izgovoreno-potpisano",
           "translation.signedToSpoken": "Signal-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Uključi/isključi {{label}}",
+          "download": "Preuzmite izvanmrežni model",
+          "delete": "Očisti predmemoriju izvanmrežnog modela",
+          "reDownload": "Ponovno preuzmite izvanmrežni model"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Tradiksyon",
           "translation.spokenToSigned": "Pale-a-siyen",
           "translation.signedToSpoken": "Siyen-pou-pale"
+        },
+        "actions": {
+          "toggle": "Aktivite {{label}}",
+          "download": "Telechaje Offline Modèl",
+          "delete": "Purge Offline Modèl Cache",
+          "reDownload": "Re-Telechaje Offline Modèl"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "ការបកប្រែ",
           "translation.spokenToSigned": "និយាយទៅហត្ថលេខា",
           "translation.signedToSpoken": "ហត្ថលេខាទៅនិយាយ"
+        },
+        "actions": {
+          "toggle": "បិទ/បើក {{label}}",
+          "download": "ទាញយកម៉ូដែលក្រៅបណ្តាញ",
+          "delete": "សម្អាតឃ្លាំងសម្ងាត់គំរូក្រៅបណ្តាញ",
+          "reDownload": "ទាញយកគំរូក្រៅបណ្តាញឡើងវិញ"
         }
       },
       "appearance": {

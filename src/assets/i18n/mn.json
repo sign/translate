@@ -180,6 +180,12 @@
           "translation": "Орчуулга",
           "translation.spokenToSigned": "Гарын үсэг зурсан",
           "translation.signedToSpoken": "Гарын үсэг зурсан"
+        },
+        "actions": {
+          "toggle": "{{label}}-г асаах/унтраах",
+          "download": "Офлайн загвар татаж авах",
+          "delete": "Офлайн загварын кэшийг цэвэрлэх",
+          "reDownload": "Офлайн загварыг дахин татаж авах"
         }
       },
       "appearance": {

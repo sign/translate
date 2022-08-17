@@ -180,6 +180,12 @@
           "translation": "અનુવાદ",
           "translation.spokenToSigned": "સ્પોકન ટુ સહી કરેલ",
           "translation.signedToSpoken": "સાઇન-ટુ-સ્પોકન"
+        },
+        "actions": {
+          "toggle": "ટૉગલ કરો {{label}}",
+          "download": "ઑફલાઇન મોડલ ડાઉનલોડ કરો",
+          "delete": "ઑફલાઇન મૉડલ કૅશ સાફ કરો",
+          "reDownload": "ઑફલાઇન મોડલ ફરીથી ડાઉનલોડ કરો"
         }
       },
       "appearance": {

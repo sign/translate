@@ -180,6 +180,12 @@
           "translation": "Dịch",
           "translation.spokenToSigned": "Nói để ký",
           "translation.signedToSpoken": "Đã ký để nói"
+        },
+        "actions": {
+          "toggle": "Chuyển đổi {{label}}",
+          "download": "Tải xuống mô hình ngoại tuyến",
+          "delete": "Xóa bộ nhớ cache của mô hình ngoại tuyến",
+          "reDownload": "Tải xuống lại mô hình ngoại tuyến"
         }
       },
       "appearance": {

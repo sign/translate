@@ -180,6 +180,12 @@
           "translation": "Përkthimi",
           "translation.spokenToSigned": "E folur për të nënshkruar",
           "translation.signedToSpoken": "I nënshkruar në të folur"
+        },
+        "actions": {
+          "toggle": "Ndrysho {{label}}",
+          "download": "Shkarkoni Modelin Offline",
+          "delete": "Pastro memorien e modelit jashtë linje",
+          "reDownload": "Rishkarkoni modelin jashtë linje"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Oersetting",
           "translation.spokenToSigned": "Sprekt-oan-ûndertekene",
           "translation.signedToSpoken": "Undertekene-to-Spreken"
+        },
+        "actions": {
+          "toggle": "Skeakelje {{label}}",
+          "download": "Download offline model",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Re-Download Offline Model"
         }
       },
       "appearance": {

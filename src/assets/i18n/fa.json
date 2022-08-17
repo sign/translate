@@ -180,6 +180,12 @@
           "translation": "ترجمه",
           "translation.spokenToSigned": "گفتاری به امضا شده",
           "translation.signedToSpoken": "امضا شده به گفتار"
+        },
+        "actions": {
+          "toggle": "تغییر وضعیت {{label}}",
+          "download": "دانلود مدل آفلاین",
+          "delete": "حافظه پنهان مدل آفلاین را پاک کنید",
+          "reDownload": "مدل آفلاین را دوباره دانلود کنید"
         }
       },
       "appearance": {

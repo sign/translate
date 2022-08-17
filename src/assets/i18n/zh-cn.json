@@ -180,6 +180,12 @@
           "translation": "翻译",
           "translation.spokenToSigned": "口语签名",
           "translation.signedToSpoken": "口语签名"
+        },
+        "actions": {
+          "toggle": "切换 {{label}}",
+          "download": "下载离线模型",
+          "delete": "清除离线模型缓存",
+          "reDownload": "重新下载离线模型"
         }
       },
       "appearance": {

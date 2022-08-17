@@ -180,6 +180,12 @@
           "translation": "Аударма",
           "translation.spokenToSigned": "Сөйлеу-қол қою",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "{{label}} қосу/өшіру",
+          "download": "Офлайн үлгісін жүктеп алыңыз",
+          "delete": "Офлайн үлгі кэшін тазалау",
+          "reDownload": "Офлайн үлгіні қайта жүктеп алыңыз"
         }
       },
       "appearance": {

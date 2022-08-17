@@ -180,6 +180,12 @@
           "translation": "การแปล",
           "translation.spokenToSigned": "พูดเพื่อลงนาม",
           "translation.signedToSpoken": "ลงนามเพื่อพูด"
+        },
+        "actions": {
+          "toggle": "สลับ {{label}}",
+          "download": "ดาวน์โหลดโมเดลออฟไลน์",
+          "delete": "ล้างแคชโมเดลออฟไลน์",
+          "reDownload": "ดาวน์โหลดโมเดลออฟไลน์อีกครั้ง"
         }
       },
       "appearance": {

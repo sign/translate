@@ -180,6 +180,12 @@
           "translation": "ترجمة",
           "translation.spokenToSigned": "تحدث إلى التوقيع",
           "translation.signedToSpoken": "التوقيع على الكلام"
+        },
+        "actions": {
+          "toggle": "تبديل {{label}}",
+          "download": "تنزيل نموذج غير متصل",
+          "delete": "تطهير مخبأ نموذج غير متصل",
+          "reDownload": "إعادة تنزيل النموذج غير المتصل"
         }
       },
       "appearance": {

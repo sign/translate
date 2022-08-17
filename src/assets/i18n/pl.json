@@ -180,6 +180,12 @@
           "translation": "Tłumaczenie",
           "translation.spokenToSigned": "Mówiony do podpisu",
           "translation.signedToSpoken": "Podpisanie na głos"
+        },
+        "actions": {
+          "toggle": "Przełącz {{label}}",
+          "download": "Pobierz model offline",
+          "delete": "Wyczyść pamięć podręczną modelu offline",
+          "reDownload": "Pobierz ponownie model offline"
         }
       },
       "appearance": {

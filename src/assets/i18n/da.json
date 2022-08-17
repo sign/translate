@@ -180,6 +180,12 @@
           "translation": "Oversættelse",
           "translation.spokenToSigned": "Talt-til-underskrevet",
           "translation.signedToSpoken": "Signeret til talt"
+        },
+        "actions": {
+          "toggle": "Slå {{label}} til/fra",
+          "download": "Download offline model",
+          "delete": "Tøm offline modelcache",
+          "reDownload": "Gen-download offline model"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "ການແປ",
           "translation.spokenToSigned": "ເວົ້າກັບເຊັນ",
           "translation.signedToSpoken": "ເຊັນເພື່ອເວົ້າ"
+        },
+        "actions": {
+          "toggle": "ສະຫຼັບ {{label}}",
+          "download": "ດາວໂຫລດແບບອອບໄລນ໌",
+          "delete": "ລ້າງແຄດຕົວແບບອອບໄລນ໌",
+          "reDownload": "ດາວໂຫຼດແບບອອບໄລນ໌ຄືນໃໝ່"
         }
       },
       "appearance": {

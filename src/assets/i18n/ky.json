@@ -180,6 +180,12 @@
           "translation": "Translation",
           "translation.spokenToSigned": "Сүйлөшүп кол коюлган",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "{{label}} которуштуруу",
+          "download": "Оффлайн моделин жүктөп алыңыз",
+          "delete": "Оффлайн моделдин кэшин тазалоо",
+          "reDownload": "Оффлайн моделин кайра жүктөө"
         }
       },
       "appearance": {

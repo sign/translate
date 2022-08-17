@@ -180,6 +180,12 @@
           "translation": "Tercüme",
           "translation.spokenToSigned": "Konuşulana İmzalı",
           "translation.signedToSpoken": "İmzalı Konuşulan"
+        },
+        "actions": {
+          "toggle": "{{etiket}} arasında geçiş yap",
+          "download": "Çevrimdışı Modeli İndir",
+          "delete": "Çevrimdışı Model Önbelleğini Temizle",
+          "reDownload": "Çevrimdışı Modeli Yeniden İndir"
         }
       },
       "appearance": {

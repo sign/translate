@@ -180,6 +180,12 @@
           "translation": "Preklad",
           "translation.spokenToSigned": "Hovorené podpísané",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Prepnúť {{label}}",
+          "download": "Stiahnite si model offline",
+          "delete": "Vymazať vyrovnávaciu pamäť modelu offline",
+          "reDownload": "Znova si stiahnite offline model"
         }
       },
       "appearance": {

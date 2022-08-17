@@ -180,6 +180,12 @@
           "translation": "Aistriúchán",
           "translation.spokenToSigned": "Labhairt le Sínithe",
           "translation.signedToSpoken": "Sínithe go Labhartha"
+        },
+        "actions": {
+          "toggle": "Scoránaigh {{label}}",
+          "download": "Íosluchtaigh múnla gan an Idirlíon",
+          "delete": "Glan Samhail Taisce As Líne",
+          "reDownload": "Íosluchtaigh múnla ar ais ar an Idirlíon"
         }
       },
       "appearance": {

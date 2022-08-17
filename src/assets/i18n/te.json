@@ -180,6 +180,12 @@
           "translation": "అనువాదం",
           "translation.spokenToSigned": "స్పోకెన్-టు-సైన్డ్",
           "translation.signedToSpoken": "మాట్లాడటానికి సంతకం చేయబడింది"
+        },
+        "actions": {
+          "toggle": "{{label}}ని టోగుల్ చేయి",
+          "download": "ఆఫ్‌లైన్ మోడల్‌ని డౌన్‌లోడ్ చేయండి",
+          "delete": "ఆఫ్‌లైన్ మోడల్ కాష్‌ను ప్రక్షాళన చేయండి",
+          "reDownload": "ఆఫ్‌లైన్ మోడల్‌ని మళ్లీ డౌన్‌లోడ్ చేయండి"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Pagsasalin",
           "translation.spokenToSigned": "Spoken-to-Signed",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "I-toggle ang {{label}}",
+          "download": "I-download ang Offline na Modelo",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Muling I-download ang Offline na Modelo"
         }
       },
       "appearance": {

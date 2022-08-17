@@ -180,6 +180,12 @@
           "translation": "Uguqulo",
           "translation.spokenToSigned": "Kuthethwa-ukusayinwa",
           "translation.signedToSpoken": "Isayinwe-kuya-Kuthethwa"
+        },
+        "actions": {
+          "toggle": "Guqula {{ileyibheli}}",
+          "download": "Khuphela iModeli engaxhunyiwe kwi-intanethi",
+          "delete": "Coca iCache yeModeli engaxhunyiwe kwi-intanethi",
+          "reDownload": "Khuphela kwakhona iModeli yeOffline"
         }
       },
       "appearance": {

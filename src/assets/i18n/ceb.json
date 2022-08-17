@@ -180,6 +180,12 @@
           "translation": "Paghubad",
           "translation.spokenToSigned": "Gisulti-sa-Gipirmahan",
           "translation.signedToSpoken": "Gipirmahan-sa-Gisulti"
+        },
+        "actions": {
+          "toggle": "I-toggle ang {{label}}",
+          "download": "Pag-download sa Offline nga Modelo",
+          "delete": "Paglimpyo sa Offline nga Model Cache",
+          "reDownload": "I-download pag-usab ang Offline nga Modelo"
         }
       },
       "appearance": {

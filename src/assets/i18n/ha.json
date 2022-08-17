@@ -180,6 +180,12 @@
           "translation": "Fassara",
           "translation.spokenToSigned": "Magana-da- Sa hannu",
           "translation.signedToSpoken": "Sa hannu-da-Magana"
+        },
+        "actions": {
+          "toggle": "Juyawa {{lamba}}",
+          "download": "Zazzage Model Offline",
+          "delete": "Cire cache Model Offline",
+          "reDownload": "Sake Sauke Samfurin Wajen Layi"
         }
       },
       "appearance": {

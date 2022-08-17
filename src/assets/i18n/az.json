@@ -180,6 +180,12 @@
           "translation": "Tərcümə",
           "translation.spokenToSigned": "Danışıq-imza",
           "translation.signedToSpoken": "İmzalı-Danışıqlı"
+        },
+        "actions": {
+          "toggle": "{{label}} dəyişin",
+          "download": "Offline Modeli yükləyin",
+          "delete": "Oflayn Model Keşini Təmizləyin",
+          "reDownload": "Offline Modeli Yenidən Yükləyin"
         }
       },
       "appearance": {

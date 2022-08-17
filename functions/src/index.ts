@@ -7,6 +7,6 @@ import {textToTextFunctions} from './text-to-text/controller';
 module.exports = {
   translate: {
     prerender: prerenderFunctions(),
-    textToText: textToTextFunctions(admin.storage() as any),
+    textToText: textToTextFunctions(admin.database(), admin.storage() as any),
   },
 };

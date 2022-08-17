@@ -180,6 +180,12 @@
           "translation": "Itzulpena",
           "translation.spokenToSigned": "Ahozkoa-Sinatua",
           "translation.signedToSpoken": "Ahozko sinatuta"
+        },
+        "actions": {
+          "toggle": "Aldatu {{label}}",
+          "download": "Deskargatu lineaz kanpoko eredua",
+          "delete": "Garbitu lineaz kanpoko ereduaren cachea",
+          "reDownload": "Deskargatu berriro lineaz kanpoko eredua"
         }
       },
       "appearance": {

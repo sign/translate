@@ -180,6 +180,12 @@
           "translation": "Vertaling",
           "translation.spokenToSigned": "Gesproken-naar-ondertekend",
           "translation.signedToSpoken": "Ondertekend-naar-gesproken"
+        },
+        "actions": {
+          "toggle": "Schakel {{label}}",
+          "download": "Offline-model downloaden",
+          "delete": "Offline modelcache opschonen",
+          "reDownload": "Offline model opnieuw downloaden"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Terjime",
           "translation.spokenToSigned": "Gepleşikden gol çekildi",
           "translation.signedToSpoken": "Gol çekildi"
+        },
+        "actions": {
+          "toggle": "{{Etiket}} çalyş",
+          "download": "Oflayn modelini göçürip alyň",
+          "delete": "Oflayn model keşini arassalaň",
+          "reDownload": "Oflayn modeli täzeden göçürip alyň"
         }
       },
       "appearance": {

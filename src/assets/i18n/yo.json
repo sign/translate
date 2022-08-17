@@ -180,6 +180,12 @@
           "translation": "Itumọ",
           "translation.spokenToSigned": "Sọ-si-Afọwọsi",
           "translation.signedToSpoken": "Wole-si-Sọrọ"
+        },
+        "actions": {
+          "toggle": "Yipada {{aami}}",
+          "download": "Ṣe igbasilẹ Awoṣe Aisinipo",
+          "delete": "Pa Kaṣe Awoṣe Aisinipo kuro",
+          "reDownload": "Tun-Download Offline Awoṣe"
         }
       },
       "appearance": {

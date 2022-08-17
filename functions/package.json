@@ -4,7 +4,7 @@
     "lint": "eslint src --fix",
     "build": "tsc",
     "build:watch": "tsc -w",
-    "test": "jest",
+    "test": "jest --run-in-band",
     "test:watch": "jest --watch-all --collect-coverage",
     "test:ci": "firebase emulators:exec --only database,firestore,storage \"npm run test --exit\"",
     "emulate": "npm run emulators:stop && firebase emulators:start",

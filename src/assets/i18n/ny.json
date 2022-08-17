@@ -180,6 +180,12 @@
           "translation": "Kumasulira",
           "translation.spokenToSigned": "Kulankhulidwa-ku-Saina",
           "translation.signedToSpoken": "Kusaina-Kulankhulidwa"
+        },
+        "actions": {
+          "toggle": "Sinthani {{label}}",
+          "download": "Tsitsani Mtundu wa Offline",
+          "delete": "Chotsani Chosungira Chachitsanzo cha Offline",
+          "reDownload": "Tsitsaninso Mtundu Wopanda intaneti"
         }
       },
       "appearance": {

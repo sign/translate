@@ -180,6 +180,12 @@
           "translation": "Ukuhumusha",
           "translation.spokenToSigned": "Kukhulunywa-kuya-Kusayinwe",
           "translation.signedToSpoken": "Kusayinwe-kuya-Kukhulunywa"
+        },
+        "actions": {
+          "toggle": "Guqula {{ilebula}}",
+          "download": "Landa imodeli engaxhunyiwe ku-inthanethi",
+          "delete": "Hlanza Inqolobane Yemodeli Engaxhunyiwe Ku-inthanethi",
+          "reDownload": "Dawuniloda Kabusha Imodeli Engaxhunyiwe Ku-inthanethi"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Traduzzione",
           "translation.spokenToSigned": "Parlate à firmatu",
           "translation.signedToSpoken": "Firmatu à parlà"
+        },
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Scaricate u mudellu offline",
+          "delete": "Purga a cache di mudelli offline",
+          "reDownload": "Scaricate di novu u mudellu offline"
         }
       },
       "appearance": {

@@ -141,6 +141,12 @@
           "translation": "תִרגוּם",
           "translation.spokenToSigned": "מדוברת אל חתום",
           "translation.signedToSpoken": "חתום לדיבור"
+        },
+        "actions": {
+          "toggle": "החלף את {{תווית}}",
+          "download": "הורד דגם לא מקוון",
+          "delete": "ניקוי מטמון מודל לא מקוון",
+          "reDownload": "הורד מחדש מודל לא מקוון"
         }
       },
       "appearance": {

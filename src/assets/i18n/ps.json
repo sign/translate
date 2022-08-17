@@ -180,6 +180,12 @@
           "translation": "ژباړه",
           "translation.spokenToSigned": "لاسلیک شوي خبرې",
           "translation.signedToSpoken": "لاسلیک شوي - خبرې"
+        },
+        "actions": {
+          "toggle": "بدلول {{label}}",
+          "download": "آفلاین ماډل ډاونلوډ کړئ",
+          "delete": "د آفلاین ماډل کیچ پاک کړئ",
+          "reDownload": "آفلاین ماډل بیا ډاونلوډ کړئ"
         }
       },
       "appearance": {

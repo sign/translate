@@ -180,6 +180,12 @@
           "translation": "अनुवाद",
           "translation.spokenToSigned": "स्पोकन-टू-साइन गरिएको",
           "translation.signedToSpoken": "साइन-टु-स्पोकन"
+        },
+        "actions": {
+          "toggle": "टगल {{label}}",
+          "download": "अफलाइन मोडेल डाउनलोड गर्नुहोस्",
+          "delete": "अफलाइन मोडेल क्यास पर्ज गर्नुहोस्",
+          "reDownload": "अफलाइन मोडेल पुन: डाउनलोड गर्नुहोस्"
         }
       },
       "appearance": {

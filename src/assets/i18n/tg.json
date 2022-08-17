@@ -180,6 +180,12 @@
           "translation": "Тарҷума",
           "translation.spokenToSigned": "Гуфтугӯ-ба-имзо",
           "translation.signedToSpoken": "Имзо-ба-сухан"
+        },
+        "actions": {
+          "toggle": "Гузариш {{label}}",
+          "download": "Модели офлайнро зеркашӣ кунед",
+          "delete": "Тоза кардани кэши модели офлайн",
+          "reDownload": "Модели офлайнро аз нав зеркашӣ кунед"
         }
       },
       "appearance": {

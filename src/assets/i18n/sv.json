@@ -180,6 +180,12 @@
           "translation": "Översättning",
           "translation.spokenToSigned": "Talat-till-signerad",
           "translation.signedToSpoken": "Signerad till talat"
+        },
+        "actions": {
+          "toggle": "Växla {{label}}",
+          "download": "Ladda ner offlinemodell",
+          "delete": "Rensa offlinemodellcache",
+          "reDownload": "Ladda ner offlinemodell igen"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Eadar-theangachadh",
           "translation.spokenToSigned": "Labhairt ri Soidhne",
           "translation.signedToSpoken": "Soidhne-gu-labhairt"
+        },
+        "actions": {
+          "toggle": "Tog {{label}}",
+          "download": "Luchdaich a-nuas air loidhne an-asgaidh model.",
+          "delete": "Glan tasgadan modail far-loidhne",
+          "reDownload": "Luchdaich a-nuas am modail gun eadar-Lìon"
         }
       },
       "appearance": {

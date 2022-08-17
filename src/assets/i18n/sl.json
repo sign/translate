@@ -180,6 +180,12 @@
           "translation": "Prevajanje",
           "translation.spokenToSigned": "Spoken-to-Signed",
           "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Preklopi {{label}}",
+          "download": "Prenesite model brez povezave",
+          "delete": "Počisti predpomnilnik modela brez povezave",
+          "reDownload": "Ponovno prenesite model brez povezave"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Þýðing",
           "translation.spokenToSigned": "Talað við-undirritað",
           "translation.signedToSpoken": "Undirritaður til að tala"
+        },
+        "actions": {
+          "toggle": "Skipta á {{label}}",
+          "download": "Sækja fyrirmynd án nettengingar",
+          "delete": "Hreinsaðu skyndiminni án nettengingar",
+          "reDownload": "Sæktu líkan án nettengingar aftur"
         }
       },
       "appearance": {

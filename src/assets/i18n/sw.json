@@ -180,6 +180,12 @@
           "translation": "Tafsiri",
           "translation.spokenToSigned": "Imesemwa-kwa-Saini",
           "translation.signedToSpoken": "Imesainiwa-kwa-Kutamkwa"
+        },
+        "actions": {
+          "toggle": "Geuza {{lebo}}",
+          "download": "Pakua Muundo wa Nje ya Mtandao",
+          "delete": "Futa Akiba ya Muundo wa Nje ya Mtandao",
+          "reDownload": "Pakua Upya Muundo wa Nje ya Mtandao"
         }
       },
       "appearance": {

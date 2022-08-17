@@ -180,6 +180,12 @@
           "translation": "ਅਨੁਵਾਦ",
           "translation.spokenToSigned": "ਸਪੋਕਨ-ਟੂ-ਦਸਤਖਤ",
           "translation.signedToSpoken": "ਦਸਤਖਤ-ਤੋਂ-ਬੋਲੇ"
+        },
+        "actions": {
+          "toggle": "ਟੌਗਲ {{label}}",
+          "download": "ਔਫਲਾਈਨ ਮਾਡਲ ਡਾਊਨਲੋਡ ਕਰੋ",
+          "delete": "ਔਫਲਾਈਨ ਮਾਡਲ ਕੈਸ਼ ਨੂੰ ਸਾਫ਼ ਕਰੋ",
+          "reDownload": "ਔਫਲਾਈਨ ਮਾਡਲ ਮੁੜ-ਡਾਊਨਲੋਡ ਕਰੋ"
         }
       },
       "appearance": {

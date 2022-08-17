@@ -180,6 +180,12 @@
           "translation": "Пераклад",
           "translation.spokenToSigned": "Гаворка-падпісанне",
           "translation.signedToSpoken": "Размова з подпісам"
+        },
+        "actions": {
+          "toggle": "Пераключыць {{label}}",
+          "download": "Спампаваць аўтаномную мадэль",
+          "delete": "Ачысціць кэш пазасеткавай мадэлі",
+          "reDownload": "Паўторна спампаваць пазасеткавую мадэль"
         }
       },
       "appearance": {

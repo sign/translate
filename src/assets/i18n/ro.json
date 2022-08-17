@@ -180,6 +180,12 @@
           "translation": "Traducere",
           "translation.spokenToSigned": "Vorbite la semnat",
           "translation.signedToSpoken": "Semnat la vorbit"
+        },
+        "actions": {
+          "toggle": "Comutați {{label}}",
+          "download": "Descărcați modelul offline",
+          "delete": "Ștergeți memoria cache a modelului offline",
+          "reDownload": "Re-descărcați modelul offline"
         }
       },
       "appearance": {

@@ -180,6 +180,12 @@
           "translation": "Traduzione",
           "translation.spokenToSigned": "Da parlato a firmato",
           "translation.signedToSpoken": "Firmato a parlato"
+        },
+        "actions": {
+          "toggle": "Attiva/disattiva {{etichetta}}",
+          "download": "Scarica il modello offline",
+          "delete": "Elimina la cache del modello offline",
+          "reDownload": "Scarica nuovamente il modello offline"
         }
       },
       "appearance": {
