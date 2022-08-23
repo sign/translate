@@ -12,6 +12,7 @@ const OFFLINE_PATHS = {
   pix2pixUpscaler: 'models/upscaler/model.h5.layers/',
   translation: {
     spokenToSigned: {
+      SpokenSigned: 'models/browsermt/spoken-to-signed/spoken-signed/',
       EnFr: 'models/browsermt/spoken-to-signed/en-fr/',
     },
   },

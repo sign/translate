@@ -149,9 +149,10 @@ export class TranslateState implements NgxsOnInit {
     {text}: SetSpokenLanguageText
   ): Promise<void> {
     const {spokenLanguage} = getState();
+    const trimmedText = text.trim();
     patchState({
       spokenLanguageText: text,
-      detectedLanguage: !text || spokenLanguage ? null : await this.service.detectSpokenLanguage(text),
+      detectedLanguage: !trimmedText || spokenLanguage ? null : await this.service.detectSpokenLanguage(trimmedText),
     });
 
     dispatch(ChangeTranslation);
@@ -187,14 +188,19 @@ export class TranslateState implements NgxsOnInit {
     if (spokenToSigned) {
       patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
 
-      if (!spokenLanguageText) {
+      const trimmedSpokenLanguageText = spokenLanguageText.trim();
+      if (!trimmedSpokenLanguageText) {
         patchState({signedLanguagePose: null, signWriting: []});
       } else {
         const actualSpokenLanguage = spokenLanguage || detectedLanguage;
-        const path = this.service.translateSpokenToSigned(spokenLanguageText, actualSpokenLanguage, signedLanguage);
+        const path = this.service.translateSpokenToSigned(
+          trimmedSpokenLanguageText,
+          actualSpokenLanguage,
+          signedLanguage
+        );
         patchState({signedLanguagePose: path});
         return this.swService
-          .translateSpokenToSignWriting(spokenLanguageText, actualSpokenLanguage, signedLanguage)
+          .translateSpokenToSignWriting(trimmedSpokenLanguageText, actualSpokenLanguage, signedLanguage)
           .pipe(tap(({text}) => dispatch(new SetSignWritingText(text.split(' ')))));
       }
     }

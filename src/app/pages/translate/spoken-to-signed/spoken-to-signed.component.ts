@@ -49,10 +49,9 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
     // Local text changes
     this.text.valueChanges
       .pipe(
-        debounce(() => interval(500)),
+        debounce(() => interval(300)),
         skipWhile(text => !text), // Don't run on empty text, on app launch
-        map(text => text.trim()),
-        distinctUntilChanged(),
+        distinctUntilChanged((a, b) => a.trim() === b.trim()),
         tap(text => this.store.dispatch(new SetSpokenLanguageText(text))),
         takeUntil(this.ngUnsubscribe)
       )

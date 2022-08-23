@@ -88,12 +88,12 @@ export class SignWritingTranslationService {
   ): Observable<TranslationResponse> {
     const direction: TranslationDirection = 'spoken-to-signed';
     const offlineSpecific = () => {
-      const newText = `<SW> ${text}`;
+      const newText = `$SW$ ${text}`;
       return from(this.translateOffline(direction, newText, spokenLanguage, signedLanguage));
     };
 
     const offlineGeneric = () => {
-      const newText = `<SW> <${signedLanguage}> <${spokenLanguage}> ${text}`;
+      const newText = `$SW$ $${signedLanguage}$ $${spokenLanguage}$ ${text}`;
       return from(this.translateOffline(direction, newText, 'spoken', 'signed'));
     };
 
