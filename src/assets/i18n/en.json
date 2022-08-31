@@ -13,7 +13,6 @@
       "detect": "Detect language"
     },
     "description": "Sign language translator app for desktop and mobile",
-    "feedback": "Send feedback",
     "input": {
       "webcam": "Webcam",
       "upload": "Upload",
@@ -145,7 +144,8 @@
     "support": {
       "title": "Support",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Send feedback"
       },
       "about": {
         "title": "About"

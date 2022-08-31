@@ -1,20 +1,14 @@
 import {TextToTextTranslationModel} from './model';
 import {setupFirebaseTestEnvironment} from '../../firebase.extend-spec';
-import {Bucket} from '@google-cloud/storage';
 import {setupModelFiles} from './model.extend-spec';
 
 describe('TextToTextTranslationModel', () => {
   const testEnvironment = setupFirebaseTestEnvironment();
   const modelFiles = setupModelFiles(testEnvironment);
 
-  let bucket: Bucket;
-  beforeAll(async () => {
-    bucket = testEnvironment.storage.bucket('test');
-  });
-
   let model: TextToTextTranslationModel;
   beforeEach(async () => {
-    model = new TextToTextTranslationModel(bucket, 'en', 'ru');
+    model = new TextToTextTranslationModel(testEnvironment.bucket, 'en', 'ru');
   });
 
   afterEach(async () => {

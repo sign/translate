@@ -5,11 +5,11 @@ const STORAGE_PREFIX = 'models/browsermt/spoken-to-signed/en-ru/';
 
 export function setupModelFiles(testEnvironment: FirebaseTestEnvironmentContext) {
   beforeAll(async () => {
-    const bucket = testEnvironment.storage.bucket('test');
-
     // Upload a model to storage
     for (const file of MODEL_FILES) {
-      await bucket.upload(__dirname + `/test-assets/enru/${file}`, {destination: STORAGE_PREFIX + file});
+      await testEnvironment.bucket.upload(__dirname + `/test-assets/enru/${file}`, {
+        destination: STORAGE_PREFIX + file,
+      });
     }
   });
 

@@ -9,7 +9,7 @@
     "strict": true,
     "target": "es2017",
     "moduleResolution": "node",
-    "types": ["node"],
+    "types": ["node", "jest"],
     "resolveJsonModule": true,
     "useUnknownInCatchVariables": false
   },

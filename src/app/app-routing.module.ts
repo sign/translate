@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'playground', component: PlaygroundComponent},
   {path: 'benchmark', component: BenchmarkComponent},
   {path: 'about', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
+  {path: 'legal', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
   {
     path: 's', // to prevent the settings from loading on page load, adding one level of route (i.e. s/offline)
     outlet: 'settings',

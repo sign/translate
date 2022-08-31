@@ -1,6 +1,5 @@
 import {TextToTextTranslationEndpoint} from './controller';
 import {setupFirebaseTestEnvironment} from '../firebase.extend-spec';
-import {Bucket} from '@google-cloud/storage';
 import {setupModelFiles} from './model/model.extend-spec';
 
 const MockExpressRequest = require('mock-express-request');
@@ -10,14 +9,9 @@ describe('TextToTextTranslationEndpoint', () => {
   const testEnvironment = setupFirebaseTestEnvironment();
   setupModelFiles(testEnvironment); // const modelFiles =
 
-  let bucket: Bucket;
-  beforeAll(async () => {
-    bucket = testEnvironment.storage.bucket('test');
-  });
-
   let controller: TextToTextTranslationEndpoint;
   beforeEach(() => {
-    controller = new TextToTextTranslationEndpoint(testEnvironment.database, bucket);
+    controller = new TextToTextTranslationEndpoint(testEnvironment.database, testEnvironment.bucket);
   });
 
   it('should error invalid direction', async () => {
