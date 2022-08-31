@@ -1,0 +1,34 @@
+<ng-template #nodeTemplate let-node>
+  <a [href]="node.repository" *ngIf="node.repository" target="_blank">{{ node.name }}</a>
+  <span *ngIf="!node.repository">{{ node.name }}</span>
+  <a [href]="node.licenseUrl" *ngIf="node.licenseUrl" target="_blank">{{ node.licenses }}</a>
+  <span *ngIf="!node.licenseUrl">{{ node.licenses }}</span>
+</ng-template>
+
+<mat-tree [dataSource]="filesTree" [treeControl]="treeControl">
+  <!-- This is the tree node template for leaf nodes -->
+  <mat-tree-node *matTreeNodeDef="let node">
+    <!-- use a disabled button to provide padding for tree leaf -->
+    <button mat-icon-button disabled [attr.aria-hidden]="true"></button>
+    <ng-container *ngTemplateOutlet="nodeTemplate; context: {$implicit: node}"></ng-container>
+  </mat-tree-node>
+
+  <!-- This is the tree node template for expandable nodes -->
+  <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChildren">
+    <div class="folder">
+      <button
+        mat-icon-button
+        matTreeNodeToggle
+        [disabled]="node.children.length === 0"
+        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco: {label: node.name}">
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
+        </mat-icon>
+      </button>
+      <ng-container *ngTemplateOutlet="nodeTemplate; context: {$implicit: node}"></ng-container>
+    </div>
+    <div [hidden]="!treeControl.isExpanded(node)" role="group">
+      <ng-container matTreeNodeOutlet></ng-container>
+    </div>
+  </mat-nested-tree-node>
+</mat-tree>
