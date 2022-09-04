@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LicensesComponent} from './licenses.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('LicensesComponent', () => {
   let component: LicensesComponent;
@@ -9,6 +10,7 @@ describe('LicensesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LicensesComponent],
+      imports: [HttpClientModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LicensesComponent);
