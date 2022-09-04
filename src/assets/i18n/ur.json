@@ -176,7 +176,16 @@
           "pix2pixGenerator": "تصویری حقیقت پسندانہ انسانی جنریٹر",
           "pix2pixUpscaler": "تصویری حقیقت پسندانہ انسانی اپ اسکیلر",
           "avatarGlb": "3D اوتار",
-          "avatarUsdz": "iOS پر AR کے لیے 3D اوتار"
+          "avatarUsdz": "iOS پر AR کے لیے 3D اوتار",
+          "translation": "ترجمہ",
+          "translation.spokenToSigned": "بات کرنے سے دستخط شدہ",
+          "translation.signedToSpoken": "دستخط شدہ سے بولنے والا"
+        },
+        "actions": {
+          "toggle": "ٹوگل کریں {{label}}",
+          "download": "آف لائن ماڈل ڈاؤن لوڈ کریں۔",
+          "delete": "آف لائن ماڈل کیشے کو صاف کریں۔",
+          "reDownload": "آف لائن ماڈل دوبارہ ڈاؤن لوڈ کریں۔"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "بین اقوامی"
+  "countries.isl": "بین اقوامی",
+  "to": "{{a}} ← {{b}}"
 }

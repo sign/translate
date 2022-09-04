@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Isithombe-namaqiniso generator womuntu",
           "pix2pixUpscaler": "I-upscaler yomuntu engokoqobo yesithombe",
           "avatarGlb": "I-avatar ye-3D",
-          "avatarUsdz": "I-3D Avatar ye-AR ku-iOS"
+          "avatarUsdz": "I-3D Avatar ye-AR ku-iOS",
+          "translation": "Ukuhumusha",
+          "translation.spokenToSigned": "Kukhulunywa-kuya-Kusayinwe",
+          "translation.signedToSpoken": "Kusayinwe-kuya-Kukhulunywa"
+        },
+        "actions": {
+          "toggle": "Guqula {{ilebula}}",
+          "download": "Landa imodeli engaxhunyiwe ku-inthanethi",
+          "delete": "Hlanza Inqolobane Yemodeli Engaxhunyiwe Ku-inthanethi",
+          "reDownload": "Dawuniloda Kabusha Imodeli Engaxhunyiwe Ku-inthanethi"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Okwamanye amazwe"
+  "countries.isl": "Okwamanye amazwe",
+  "to": "{{a}} → {{b}}"
 }

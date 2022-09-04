@@ -23,6 +23,7 @@ import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
 import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {blobToBase64} from 'base64-blob';
+import {SignWritingTranslationService} from './signwriting-translation.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -62,7 +63,7 @@ const initialState: TranslateStateModel = {
 export class TranslateState implements NgxsOnInit {
   @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
 
-  constructor(private service: TranslationService) {}
+  constructor(private service: TranslationService, private swService: SignWritingTranslationService) {}
 
   ngxsOnInit({dispatch}: StateContext<TranslateStateModel>): any {
     dispatch(ChangeTranslation);
@@ -148,9 +149,10 @@ export class TranslateState implements NgxsOnInit {
     {text}: SetSpokenLanguageText
   ): Promise<void> {
     const {spokenLanguage} = getState();
+    const trimmedText = text.trim();
     patchState({
       spokenLanguageText: text,
-      detectedLanguage: !text || spokenLanguage ? null : await this.service.detectSpokenLanguage(text),
+      detectedLanguage: !trimmedText || spokenLanguage ? null : await this.service.detectSpokenLanguage(trimmedText),
     });
 
     dispatch(ChangeTranslation);
@@ -186,15 +188,20 @@ export class TranslateState implements NgxsOnInit {
     if (spokenToSigned) {
       patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
 
-      if (!spokenLanguageText) {
+      const trimmedSpokenLanguageText = spokenLanguageText.trim();
+      if (!trimmedSpokenLanguageText) {
         patchState({signedLanguagePose: null, signWriting: []});
       } else {
         const actualSpokenLanguage = spokenLanguage || detectedLanguage;
-        const path = this.service.translateSpokenToSigned(spokenLanguageText, actualSpokenLanguage, signedLanguage);
+        const path = this.service.translateSpokenToSigned(
+          trimmedSpokenLanguageText,
+          actualSpokenLanguage,
+          signedLanguage
+        );
         patchState({signedLanguagePose: path});
-        return this.service
-          .translateSpokenToSignWriting(spokenLanguageText, actualSpokenLanguage, signedLanguage)
-          .pipe(tap(signWriting => dispatch(new SetSignWritingText(signWriting))));
+        return this.swService
+          .translateSpokenToSignWriting(trimmedSpokenLanguageText, actualSpokenLanguage, signedLanguage)
+          .pipe(tap(({text}) => dispatch(new SetSignWritingText(text.split(' ')))));
       }
     }
 

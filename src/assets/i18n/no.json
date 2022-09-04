@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Fotorealistisk menneskelig generator",
           "pix2pixUpscaler": "Fotorealistisk menneskelig oppskalerer",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar for AR på iOS"
+          "avatarUsdz": "3D Avatar for AR på iOS",
+          "translation": "Oversettelse",
+          "translation.spokenToSigned": "Talt-til-signert",
+          "translation.signedToSpoken": "Signert til talt"
+        },
+        "actions": {
+          "toggle": "Slå på {{label}}",
+          "download": "Last ned offline modell",
+          "delete": "Tøm frakoblet modellbuffer",
+          "reDownload": "Last ned frakoblet modell på nytt"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Internasjonal"
+  "countries.isl": "Internasjonal",
+  "to": "{{a}} → {{b}}"
 }

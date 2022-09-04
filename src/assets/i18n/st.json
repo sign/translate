@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Jenereithara ea 'nete ea motho",
           "pix2pixUpscaler": "Photo-real motho upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar bakeng sa AR ho iOS"
+          "avatarUsdz": "3D Avatar bakeng sa AR ho iOS",
+          "translation": "Phetolelo",
+          "translation.spokenToSigned": "E builoeng-ho-Saenoa",
+          "translation.signedToSpoken": "Saennwe-ho-Bua"
+        },
+        "actions": {
+          "toggle": "Fetolela {{label}}",
+          "download": "Khoasolla Mohlala oa Offline",
+          "delete": "Hlatsoa Cache ea Moetso oa Offline",
+          "reDownload": "Khoasolla Hape Moetso oa Offline"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Machaba"
+  "countries.isl": "Machaba",
+  "to": "{{a}} → {{b}}"
 }

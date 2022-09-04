@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ფოტო-რეალისტური ადამიანის გენერატორი",
           "pix2pixUpscaler": "ფოტო-რეალისტური ადამიანის ამაღლება",
           "avatarGlb": "3D ავატარი",
-          "avatarUsdz": "3D ავატარი AR-ისთვის iOS-ზე"
+          "avatarUsdz": "3D ავატარი AR-ისთვის iOS-ზე",
+          "translation": "თარგმანი",
+          "translation.spokenToSigned": "სალაპარაკო-ხელმოწერილი",
+          "translation.signedToSpoken": "ხელმოწერილი-სალაპარაკო"
+        },
+        "actions": {
+          "toggle": "{{label}}-ის გადართვა",
+          "download": "ჩამოტვირთეთ ოფლაინ მოდელი",
+          "delete": "ოფლაინ მოდელის ქეშის გასუფთავება",
+          "reDownload": "ხელახლა ჩამოტვირთეთ ოფლაინ მოდელი"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "საერთაშორისო"
+  "countries.isl": "საერთაშორისო",
+  "to": "{{a}} → {{b}}"
 }

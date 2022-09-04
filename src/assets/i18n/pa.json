@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ਫੋਟੋ-ਯਥਾਰਥਵਾਦੀ ਮਨੁੱਖੀ ਜਨਰੇਟਰ",
           "pix2pixUpscaler": "ਫੋਟੋ-ਯਥਾਰਥਵਾਦੀ ਮਨੁੱਖੀ ਅੱਪਸਕੇਲਰ",
           "avatarGlb": "3D ਅਵਤਾਰ",
-          "avatarUsdz": "iOS 'ਤੇ AR ਲਈ 3D ਅਵਤਾਰ"
+          "avatarUsdz": "iOS 'ਤੇ AR ਲਈ 3D ਅਵਤਾਰ",
+          "translation": "ਅਨੁਵਾਦ",
+          "translation.spokenToSigned": "ਸਪੋਕਨ-ਟੂ-ਦਸਤਖਤ",
+          "translation.signedToSpoken": "ਦਸਤਖਤ-ਤੋਂ-ਬੋਲੇ"
+        },
+        "actions": {
+          "toggle": "ਟੌਗਲ {{label}}",
+          "download": "ਔਫਲਾਈਨ ਮਾਡਲ ਡਾਊਨਲੋਡ ਕਰੋ",
+          "delete": "ਔਫਲਾਈਨ ਮਾਡਲ ਕੈਸ਼ ਨੂੰ ਸਾਫ਼ ਕਰੋ",
+          "reDownload": "ਔਫਲਾਈਨ ਮਾਡਲ ਮੁੜ-ਡਾਊਨਲੋਡ ਕਰੋ"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "ਅੰਤਰਰਾਸ਼ਟਰੀ"
+  "countries.isl": "ਅੰਤਰਰਾਸ਼ਟਰੀ",
+  "to": "{{a}} → {{b}}"
 }

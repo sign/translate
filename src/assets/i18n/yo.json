@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Photo-bojumu eda eniyan monomono",
           "pix2pixUpscaler": "Photo-bojumu eda eniyan upscaler",
           "avatarGlb": "3D Afata",
-          "avatarUsdz": "Afata 3D fun AR lori iOS"
+          "avatarUsdz": "Afata 3D fun AR lori iOS",
+          "translation": "Itumọ",
+          "translation.spokenToSigned": "Sọ-si-Afọwọsi",
+          "translation.signedToSpoken": "Wole-si-Sọrọ"
+        },
+        "actions": {
+          "toggle": "Yipada {{aami}}",
+          "download": "Ṣe igbasilẹ Awoṣe Aisinipo",
+          "delete": "Pa Kaṣe Awoṣe Aisinipo kuro",
+          "reDownload": "Tun-Download Offline Awoṣe"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "International"
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,16 @@
           "pix2pixGenerator": "फोटो-वास्तववादी मानवी जनरेटर",
           "pix2pixUpscaler": "फोटो-वास्तववादी मानवी अपस्केलर",
           "avatarGlb": "3D अवतार",
-          "avatarUsdz": "iOS वर AR साठी 3D अवतार"
+          "avatarUsdz": "iOS वर AR साठी 3D अवतार",
+          "translation": "भाषांतर",
+          "translation.spokenToSigned": "स्पोकन-टू-साइन केलेले",
+          "translation.signedToSpoken": "साइन-टू-स्पोकन"
+        },
+        "actions": {
+          "toggle": "{{label}} टॉगल करा",
+          "download": "ऑफलाइन मॉडेल डाउनलोड करा",
+          "delete": "ऑफलाइन मॉडेल कॅशे साफ करा",
+          "reDownload": "ऑफलाइन मॉडेल पुन्हा डाउनलोड करा"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "आंतरराष्ट्रीय"
+  "countries.isl": "आंतरराष्ट्रीय",
+  "to": "{{a}} → {{b}}"
 }

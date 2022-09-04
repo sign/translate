@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ፎቶ-ተጨባጭ የሰው ጀነሬተር",
           "pix2pixUpscaler": "ፎቶ-ተጨባጭ የሰው አሻሽል",
           "avatarGlb": "3D አምሳያ",
-          "avatarUsdz": "3D Avatar ለ AR በ iOS ላይ"
+          "avatarUsdz": "3D Avatar ለ AR በ iOS ላይ",
+          "translation": "ትርጉም",
+          "translation.spokenToSigned": "የተነገረ-የተፈረመ",
+          "translation.signedToSpoken": "የተፈረመ-ለመናገር"
+        },
+        "actions": {
+          "toggle": "{{label}} ቀይር",
+          "download": "ከመስመር ውጭ ሞዴል አውርድ",
+          "delete": "ከመስመር ውጭ የሞዴል መሸጎጫ ያጽዱ",
+          "reDownload": "ከመስመር ውጭ ሞዴል እንደገና ያውርዱ"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "ዓለም አቀፍ"
+  "countries.isl": "ዓለም አቀፍ",
+  "to": "{{a}} → {{b}}"
 }

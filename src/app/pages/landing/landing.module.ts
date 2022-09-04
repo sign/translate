@@ -16,6 +16,9 @@ import {AboutOfflineComponent} from './about/about-offline/about-offline.compone
 import {AboutAppearanceComponent} from './about/about-appearance/about-appearance.component';
 import {AboutSharingComponent} from './about/about-sharing/about-sharing.component';
 import {LazyMapComponent} from './languages/lazy-map/lazy-map.component';
+import {LicensesComponent} from './licenses/licenses.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {CdkTreeModule} from '@angular/cdk/tree';
 
 @NgModule({
   declarations: [
@@ -32,8 +35,16 @@ import {LazyMapComponent} from './languages/lazy-map/lazy-map.component';
     AboutAppearanceComponent,
     AboutSharingComponent,
     LazyMapComponent,
+    LicensesComponent,
   ],
-  imports: [CommonModule, AppAngularMaterialModule, AppTranslocoModule, LandingRoutingModule],
+  imports: [
+    CommonModule,
+    AppAngularMaterialModule,
+    AppTranslocoModule,
+    LandingRoutingModule,
+    MatTreeModule,
+    CdkTreeModule,
+  ],
   bootstrap: [LandingComponent],
 })
 export class LandingModule {}

@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ម៉ាស៊ីនបង្កើតរូបភាពមនុស្សពិត",
           "pix2pixUpscaler": "រូបថត - ការកើនឡើងមនុស្សជាក់ស្តែង",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "3D Avatar សម្រាប់ AR នៅលើ iOS"
+          "avatarUsdz": "3D Avatar សម្រាប់ AR នៅលើ iOS",
+          "translation": "ការបកប្រែ",
+          "translation.spokenToSigned": "និយាយទៅហត្ថលេខា",
+          "translation.signedToSpoken": "ហត្ថលេខាទៅនិយាយ"
+        },
+        "actions": {
+          "toggle": "បិទ/បើក {{label}}",
+          "download": "ទាញយកម៉ូដែលក្រៅបណ្តាញ",
+          "delete": "សម្អាតឃ្លាំងសម្ងាត់គំរូក្រៅបណ្តាញ",
+          "reDownload": "ទាញយកគំរូក្រៅបណ្តាញឡើងវិញ"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "អន្តរជាតិ"
+  "countries.isl": "អន្តរជាតិ",
+  "to": "{{a}} → {{b}}"
 }

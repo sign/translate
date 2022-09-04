@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Foto-gerçekçi insan üreteci",
           "pix2pixUpscaler": "Foto-gerçekçi insan ölçekleyici",
           "avatarGlb": "3D avatar",
-          "avatarUsdz": "iOS'ta AR için 3D Avatar"
+          "avatarUsdz": "iOS'ta AR için 3D Avatar",
+          "translation": "Tercüme",
+          "translation.spokenToSigned": "Konuşulana İmzalı",
+          "translation.signedToSpoken": "İmzalı Konuşulan"
+        },
+        "actions": {
+          "toggle": "{{etiket}} arasında geçiş yap",
+          "download": "Çevrimdışı Modeli İndir",
+          "delete": "Çevrimdışı Model Önbelleğini Temizle",
+          "reDownload": "Çevrimdışı Modeli Yeniden İndir"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Uluslararası"
+  "countries.isl": "Uluslararası",
+  "to": "{{a}} → {{b}}"
 }

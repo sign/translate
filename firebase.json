@@ -3,6 +3,32 @@
     "predeploy": ["cd functions && npm run build"],
     "source": "functions"
   },
+  "emulators": {
+    "firestore": {
+      "port": 4010
+    },
+    "database": {
+      "port": 4011
+    },
+    "storage": {
+      "port": 4012
+    },
+    "functions": {
+      "port": 4013
+    },
+    "eventarc": {
+      "port": 4014
+    },
+    "hosting": {
+      "port": 4015
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "storage": {
+    "rules": "functions/storage.rules"
+  },
   "hosting": {
     "target": "translate",
     "public": "dist/sign-translate/browser",
@@ -35,6 +61,10 @@
       {
         "source": "/opensearch.xml",
         "function": "translate-prerender"
+      },
+      {
+        "source": "/api/**",
+        "function": "translate-textToText"
       },
       {
         "source": "/robots.txt",

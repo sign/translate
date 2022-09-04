@@ -17,3 +17,8 @@ mat-tree {
 mat-progress-spinner {
   margin: 0 10px;
 }
+
+mat-nested-tree-node mat-nested-tree-node {
+  padding-inline-start: 20px;
+  display: block;
+}

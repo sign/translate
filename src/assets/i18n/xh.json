@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Ifoto-eyinyani yejenereyitha yomntu",
           "pix2pixUpscaler": "Ifoto-eyinyani yomntu upscaler",
           "avatarGlb": "IAvatar ye3D",
-          "avatarUsdz": "I-Avatar ye-3D ye-AR kwi-iOS"
+          "avatarUsdz": "I-Avatar ye-3D ye-AR kwi-iOS",
+          "translation": "Uguqulo",
+          "translation.spokenToSigned": "Kuthethwa-ukusayinwa",
+          "translation.signedToSpoken": "Isayinwe-kuya-Kuthethwa"
+        },
+        "actions": {
+          "toggle": "Guqula {{ileyibheli}}",
+          "download": "Khuphela iModeli engaxhunyiwe kwi-intanethi",
+          "delete": "Coca iCache yeModeli engaxhunyiwe kwi-intanethi",
+          "reDownload": "Khuphela kwakhona iModeli yeOffline"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Amazwe ngamazwe"
+  "countries.isl": "Amazwe ngamazwe",
+  "to": "{{a}} → {{b}}"
 }

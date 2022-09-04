@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Ֆոտո-իրատեսական մարդկային գեներատոր",
           "pix2pixUpscaler": "Ֆոտո-իրատեսական մարդկային բարձրացում",
           "avatarGlb": "3D ավատար",
-          "avatarUsdz": "3D ավատար AR-ի համար iOS-ում"
+          "avatarUsdz": "3D ավատար AR-ի համար iOS-ում",
+          "translation": "Թարգմանություն",
+          "translation.spokenToSigned": "Խոսված-ստորագրված",
+          "translation.signedToSpoken": "Ստորագրված-խոսավոր"
+        },
+        "actions": {
+          "toggle": "Փոխարկել {{label}}",
+          "download": "Ներբեռնեք անցանց մոդելը",
+          "delete": "Մաքրել անցանց մոդելի քեշը",
+          "reDownload": "Նորից ներբեռնեք անցանց մոդելը"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Միջազգային"
+  "countries.isl": "Միջազգային",
+  "to": "{{a}} → {{b}}"
 }

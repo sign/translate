@@ -176,7 +176,16 @@
           "pix2pixGenerator": "逼真的人體發電機",
           "pix2pixUpscaler": "逼真的人體放大鏡",
           "avatarGlb": "3D頭像",
-          "avatarUsdz": "iOS 上的 AR 3D 頭像"
+          "avatarUsdz": "iOS 上的 AR 3D 頭像",
+          "translation": "翻譯",
+          "translation.spokenToSigned": "口語簽名",
+          "translation.signedToSpoken": "口語簽名"
+        },
+        "actions": {
+          "toggle": "切換 {{label}}",
+          "download": "下載離線模型",
+          "delete": "清除離線模型緩存",
+          "reDownload": "重新下載離線模型"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "國際的"
+  "countries.isl": "國際的",
+  "to": "{{a}} → {{b}}"
 }

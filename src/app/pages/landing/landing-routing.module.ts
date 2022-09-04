@@ -5,6 +5,7 @@ import {LanguagesComponent} from './languages/languages.component';
 import {ContributeComponent} from './contribute/contribute.component';
 import {ToolsComponent} from './tools/tools.component';
 import {LandingComponent} from './landing.component';
+import {LicensesComponent} from './licenses/licenses.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
       {path: 'languages', component: LanguagesComponent},
       {path: 'contribute', component: ContributeComponent},
       {path: 'tools', component: ToolsComponent},
+      {path: 'licenses', component: LicensesComponent},
     ],
   },
 ];

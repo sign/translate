@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Fotoreal insan generatoru",
           "pix2pixUpscaler": "Fotorealist insan yüksəlişi",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "iOS-da AR üçün 3D Avatar"
+          "avatarUsdz": "iOS-da AR üçün 3D Avatar",
+          "translation": "Tərcümə",
+          "translation.spokenToSigned": "Danışıq-imza",
+          "translation.signedToSpoken": "İmzalı-Danışıqlı"
+        },
+        "actions": {
+          "toggle": "{{label}} dəyişin",
+          "download": "Offline Modeli yükləyin",
+          "delete": "Oflayn Model Keşini Təmizləyin",
+          "reDownload": "Offline Modeli Yenidən Yükləyin"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Beynəlxalq"
+  "countries.isl": "Beynəlxalq",
+  "to": "{{a}} → {{b}}"
 }

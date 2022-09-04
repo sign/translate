@@ -37,17 +37,12 @@ jobs:
       - name: Install Dependencies
         working-directory: functions
         run: npm install
-      #
-      #      - name: Lint code
-      #        run: npm run lint
-      #
-      #      - name: Test code
-      #        run: npm run test:ci
-      #
-      #      - name: Coveralls
-      #        uses: coverallsapp/github-action@master
-      #        with:
-      #          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Test code
+        run: npm run test:ci
 
       - name: Create Service Account Key
         run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}" > "$HOME"/gcloud.json

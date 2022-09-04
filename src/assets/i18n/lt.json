@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Fotorealistiškas žmogaus generatorius",
           "pix2pixUpscaler": "Realistiška, tikroviška, žmogaus nuotrauka",
           "avatarGlb": "3D avataras",
-          "avatarUsdz": "3D avataras, skirtas AR sistemoje „iOS“."
+          "avatarUsdz": "3D avataras, skirtas AR sistemoje „iOS“.",
+          "translation": "Vertimas",
+          "translation.spokenToSigned": "Pasisakyta pasirašytinai",
+          "translation.signedToSpoken": "Pasirašyta į kalbą"
+        },
+        "actions": {
+          "toggle": "Perjungti {{label}}",
+          "download": "Atsisiųskite modelį neprisijungus",
+          "delete": "Išvalykite neprisijungus naudojamo modelio talpyklą",
+          "reDownload": "Iš naujo atsisiųskite neprisijungus naudojamą modelį"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Tarptautinė"
+  "countries.isl": "Tarptautinė",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Φωτορεαλιστική ανθρώπινη γεννήτρια",
           "pix2pixUpscaler": "Φωτορεαλιστικό ανθρώπινο αναβαθμιστή",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar για AR σε iOS"
+          "avatarUsdz": "3D Avatar για AR σε iOS",
+          "translation": "Μετάφραση",
+          "translation.spokenToSigned": "Ομιλία προς υπογραφή",
+          "translation.signedToSpoken": "Υπογεγραμμένο σε προφορικό"
+        },
+        "actions": {
+          "toggle": "Εναλλαγή {{label}}",
+          "download": "Λήψη μοντέλου εκτός σύνδεσης",
+          "delete": "Εκκαθάριση της προσωρινής μνήμης μοντέλων εκτός σύνδεσης",
+          "reDownload": "Επανάληψη λήψης μοντέλου εκτός σύνδεσης"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Διεθνές"
+  "countries.isl": "Διεθνές",
+  "to": "{{a}} → {{b}}"
 }

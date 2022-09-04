@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Máy tạo hình ảnh chân thực của con người",
           "pix2pixUpscaler": "Bộ nâng cấp hình ảnh thực tế của con người",
           "avatarGlb": "Hình đại diện 3D",
-          "avatarUsdz": "Hình đại diện 3D cho AR trên iOS"
+          "avatarUsdz": "Hình đại diện 3D cho AR trên iOS",
+          "translation": "Dịch",
+          "translation.spokenToSigned": "Nói để ký",
+          "translation.signedToSpoken": "Đã ký để nói"
+        },
+        "actions": {
+          "toggle": "Chuyển đổi {{label}}",
+          "download": "Tải xuống mô hình ngoại tuyến",
+          "delete": "Xóa bộ nhớ cache của mô hình ngoại tuyến",
+          "reDownload": "Tải xuống lại mô hình ngoại tuyến"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Quốc tế"
+  "countries.isl": "Quốc tế",
+  "to": "{{a}} → {{b}}"
 }

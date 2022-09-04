@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ಫೋಟೋ-ರಿಯಲಿಸ್ಟಿಕ್ ಮಾನವ ಜನರೇಟರ್",
           "pix2pixUpscaler": "ಫೋಟೋ-ರಿಯಲಿಸ್ಟಿಕ್ ಮಾನವ ಉನ್ನತಿ",
           "avatarGlb": "3D ಅವತಾರ",
-          "avatarUsdz": "iOS ನಲ್ಲಿ AR ಗಾಗಿ 3D ಅವತಾರ್"
+          "avatarUsdz": "iOS ನಲ್ಲಿ AR ಗಾಗಿ 3D ಅವತಾರ್",
+          "translation": "ಅನುವಾದ",
+          "translation.spokenToSigned": "ಮಾತನಾಡಲು ಸಹಿ ಮಾಡಲಾಗಿದೆ",
+          "translation.signedToSpoken": "ಸಹಿ-ಮಾತನಾಡಿದ"
+        },
+        "actions": {
+          "toggle": "{{label}} ಟಾಗಲ್ ಮಾಡಿ",
+          "download": "ಆಫ್‌ಲೈನ್ ಮಾದರಿಯನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+          "delete": "ಆಫ್‌ಲೈನ್ ಮಾದರಿ ಸಂಗ್ರಹವನ್ನು ಶುದ್ಧೀಕರಿಸಿ",
+          "reDownload": "ಆಫ್‌ಲೈನ್ ಮಾದರಿಯನ್ನು ಮರು-ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "ಅಂತಾರಾಷ್ಟ್ರೀಯ"
+  "countries.isl": "ಅಂತಾರಾಷ್ಟ್ರೀಯ",
+  "to": "{{a}} → {{b}}"
 }

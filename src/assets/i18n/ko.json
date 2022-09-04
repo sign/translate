@@ -176,7 +176,16 @@
           "pix2pixGenerator": "사실적인 인간 생성기",
           "pix2pixUpscaler": "사실적인 인간 업스케일러",
           "avatarGlb": "3D 아바타",
-          "avatarUsdz": "iOS의 AR용 3D 아바타"
+          "avatarUsdz": "iOS의 AR용 3D 아바타",
+          "translation": "번역",
+          "translation.spokenToSigned": "음성 서명",
+          "translation.signedToSpoken": "서명된 음성"
+        },
+        "actions": {
+          "toggle": "{{label}} 전환",
+          "download": "오프라인 모델 다운로드",
+          "delete": "오프라인 모델 캐시 제거",
+          "reDownload": "오프라인 모델 다시 다운로드"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "국제적인"
+  "countries.isl": "국제적인",
+  "to": "{{a}} → {{b}}"
 }

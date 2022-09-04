@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Фотореалистік адам генераторы",
           "pix2pixUpscaler": "Фотореалистикалық адам жоғарылатушы",
           "avatarGlb": "3D аватары",
-          "avatarUsdz": "iOS жүйесінде AR үшін 3D аватары"
+          "avatarUsdz": "iOS жүйесінде AR үшін 3D аватары",
+          "translation": "Аударма",
+          "translation.spokenToSigned": "Сөйлеу-қол қою",
+          "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "{{label}} қосу/өшіру",
+          "download": "Офлайн үлгісін жүктеп алыңыз",
+          "delete": "Офлайн үлгі кэшін тазалау",
+          "reDownload": "Офлайн үлгіні қайта жүктеп алыңыз"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Халықаралық"
+  "countries.isl": "Халықаралық",
+  "to": "{{a}} → {{b}}"
 }

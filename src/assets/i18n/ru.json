@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Генератор фотореалистичных людей",
           "pix2pixUpscaler": "Фотореалистичный апскейлер человека",
           "avatarGlb": "3D аватар",
-          "avatarUsdz": "3D-аватар для AR на iOS"
+          "avatarUsdz": "3D-аватар для AR на iOS",
+          "translation": "Перевод",
+          "translation.spokenToSigned": "Разговорный с подписанным",
+          "translation.signedToSpoken": "Подписано для разговора"
+        },
+        "actions": {
+          "toggle": "Переключить {{метка}}",
+          "download": "Скачать автономную модель",
+          "delete": "Очистить кэш автономной модели",
+          "reDownload": "Повторно загрузить офлайн-модель"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Международный"
+  "countries.isl": "Международный",
+  "to": "{{а}} → {{б}}"
 }

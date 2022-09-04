@@ -176,7 +176,16 @@
           "pix2pixGenerator": "مولد انسان عکس واقع گرایانه",
           "pix2pixUpscaler": "ارتقاء دهنده انسان با عکس واقع گرایانه",
           "avatarGlb": "آواتار سه بعدی",
-          "avatarUsdz": "آواتار سه بعدی برای AR در iOS"
+          "avatarUsdz": "آواتار سه بعدی برای AR در iOS",
+          "translation": "ترجمه",
+          "translation.spokenToSigned": "گفتاری به امضا شده",
+          "translation.signedToSpoken": "امضا شده به گفتار"
+        },
+        "actions": {
+          "toggle": "تغییر وضعیت {{label}}",
+          "download": "دانلود مدل آفلاین",
+          "delete": "حافظه پنهان مدل آفلاین را پاک کنید",
+          "reDownload": "مدل آفلاین را دوباره دانلود کنید"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "بین المللی"
+  "countries.isl": "بین المللی",
+  "to": "{{a}} ← {{b}}"
 }

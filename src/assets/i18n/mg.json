@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Mpamokatra olombelona sary-zava-misy",
           "pix2pixUpscaler": "Photo-realistic olombelona upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar ho an'ny AR amin'ny iOS"
+          "avatarUsdz": "3D Avatar ho an'ny AR amin'ny iOS",
+          "translation": "Translation",
+          "translation.spokenToSigned": "Voasoratra amin'ny sonia",
+          "translation.signedToSpoken": "Voasonia-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Misintona Modely an-tserasera",
+          "delete": "Diovy ny cache modely ivelan'ny Internet",
+          "reDownload": "Avereno alaina ny modely an-tserasera"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "iraisam-pirenena"
+  "countries.isl": "iraisam-pirenena",
+  "to": "{{a}} → {{b}}"
 }

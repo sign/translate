@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Generator uman foto-realist",
           "pix2pixUpscaler": "Upscaler uman foto-realist",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D pentru AR pe iOS"
+          "avatarUsdz": "Avatar 3D pentru AR pe iOS",
+          "translation": "Traducere",
+          "translation.spokenToSigned": "Vorbite la semnat",
+          "translation.signedToSpoken": "Semnat la vorbit"
+        },
+        "actions": {
+          "toggle": "Comutați {{label}}",
+          "download": "Descărcați modelul offline",
+          "delete": "Ștergeți memoria cache a modelului offline",
+          "reDownload": "Re-descărcați modelul offline"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Internaţional"
+  "countries.isl": "Internaţional",
+  "to": "{{a}} → {{b}}"
 }

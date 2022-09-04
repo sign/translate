@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Hoto-gaskiya janareta na ɗan adam",
           "pix2pixUpscaler": "Photo-gaskiya ɗan adam upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar don AR akan iOS"
+          "avatarUsdz": "3D Avatar don AR akan iOS",
+          "translation": "Fassara",
+          "translation.spokenToSigned": "Magana-da- Sa hannu",
+          "translation.signedToSpoken": "Sa hannu-da-Magana"
+        },
+        "actions": {
+          "toggle": "Juyawa {{lamba}}",
+          "download": "Zazzage Model Offline",
+          "delete": "Cire cache Model Offline",
+          "reDownload": "Sake Sauke Samfurin Wajen Layi"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Ƙasashen Duniya"
+  "countries.isl": "Ƙasashen Duniya",
+  "to": "{{a}} → {{b}}"
 }

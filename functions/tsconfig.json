@@ -1,17 +1,4 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "outDir": "lib",
-    "sourceMap": true,
-    "strict": true,
-    "target": "es2017",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "useUnknownInCatchVariables": false
-  },
-  "compileOnSave": true,
-  "include": ["src/**/*"]
+  "extends": "./tsconfig.spec.json",
+  "exclude": ["**/*.spec.ts", "**/*.extend-spec.ts"]
 }

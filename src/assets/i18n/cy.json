@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Generadur dynol ffoto-realistig",
           "pix2pixUpscaler": "Ffoto-realistig upscaler dynol",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D ar gyfer AR ar iOS"
+          "avatarUsdz": "Avatar 3D ar gyfer AR ar iOS",
+          "translation": "Cyfieithiad",
+          "translation.spokenToSigned": "Llafar-i-Arwyddedig",
+          "translation.signedToSpoken": "Llofnod-i-Siarad"
+        },
+        "actions": {
+          "toggle": "Toglo {{label}}",
+          "download": "Lawrlwythwch Model All-lein",
+          "delete": "Cael gwared ar Cache Model All-lein",
+          "reDownload": "Ail-lawrlwytho Model All-lein"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Rhyngwladol"
+  "countries.isl": "Rhyngwladol",
+  "to": "{{a}} → {{b}}"
 }
