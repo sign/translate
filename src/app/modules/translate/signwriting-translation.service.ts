@@ -3,7 +3,7 @@ import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google
 import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';
-import {filter} from 'rxjs/operators';
+import {filter, map} from 'rxjs/operators';
 import {ComlinkWorkerInterface, ModelRegistry, TranslationResponse} from '@sign-mt/browsermt';
 
 type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
@@ -77,8 +77,28 @@ export class SignWritingTranslationService {
     from: string,
     to: string
   ): Observable<TranslationResponse> {
-    const query = new URLSearchParams({from, to, text});
-    return this.http.get<TranslationResponse>(`https://sign.mt/api/${direction}?${query}`);
+    // TODO use the new API
+    // const query = new URLSearchParams({from, to, text});
+    // return this.http.get<TranslationResponse>(`https://sign.mt/api/${direction}?${query}`);'
+
+    interface SpokenToSignWritingResponse {
+      country_code: string;
+      direction: string;
+      language_code: string;
+      n_best: string;
+      text: string;
+      translation_type: string;
+      translations: string[];
+    }
+
+    const api = 'https://pub.cl.uzh.ch/demo/signwriting/spoken2sign';
+    const body = {
+      country_code: to,
+      language_code: from,
+      text,
+      translation_type: 'sent',
+    };
+    return this.http.post<SpokenToSignWritingResponse>(api, body).pipe(map(res => ({text: res.translations[0]})));
   }
 
   translateSpokenToSignWriting(
