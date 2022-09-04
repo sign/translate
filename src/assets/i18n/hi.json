@@ -176,7 +176,16 @@
           "pix2pixGenerator": "फोटो-यथार्थवादी मानव जनरेटर",
           "pix2pixUpscaler": "फोटो-यथार्थवादी मानव upscaler",
           "avatarGlb": "3डी अवतार",
-          "avatarUsdz": "iOS पर AR के लिए 3D अवतार"
+          "avatarUsdz": "iOS पर AR के लिए 3D अवतार",
+          "translation": "अनुवाद",
+          "translation.spokenToSigned": "बोले-से-हस्ताक्षरित",
+          "translation.signedToSpoken": "साइन-टू-स्पोकन"
+        },
+        "actions": {
+          "toggle": "टॉगल करें {{लेबल}}",
+          "download": "ऑफलाइन मॉडल डाउनलोड करें",
+          "delete": "ऑफ़लाइन मॉडल कैश को शुद्ध करें",
+          "reDownload": "ऑफलाइन मॉडल को फिर से डाउनलोड करें"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "अंतरराष्ट्रीय"
+  "countries.isl": "अंतरराष्ट्रीय",
+  "to": "{{a}} → {{b}}"
 }

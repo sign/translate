@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Générateur humain photo-réaliste",
           "pix2pixUpscaler": "Upscaler humain photo-réaliste",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D pour AR sur iOS"
+          "avatarUsdz": "Avatar 3D pour AR sur iOS",
+          "translation": "Traduction",
+          "translation.spokenToSigned": "Du parlé au signé",
+          "translation.signedToSpoken": "Signé à parlé"
+        },
+        "actions": {
+          "toggle": "Basculer {{étiquette}}",
+          "download": "Télécharger le modèle hors ligne",
+          "delete": "Purger le cache du modèle hors ligne",
+          "reDownload": "Re-télécharger le modèle hors ligne"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "International"
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}"
 }

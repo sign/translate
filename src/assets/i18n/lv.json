@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Fotoreālistisks cilvēka ģenerators",
           "pix2pixUpscaler": "Fotoreālistisks, cilvēka uzlabotājs",
           "avatarGlb": "3D iemiesojums",
-          "avatarUsdz": "3D iemiesojums AR operētājsistēmā iOS"
+          "avatarUsdz": "3D iemiesojums AR operētājsistēmā iOS",
+          "translation": "Tulkošana",
+          "translation.spokenToSigned": "Runāts ar parakstu",
+          "translation.signedToSpoken": "Parakstīts uz runātu"
+        },
+        "actions": {
+          "toggle": "Pārslēgt {{label}}",
+          "download": "Lejupielādēt bezsaistes modeli",
+          "delete": "Iztīriet bezsaistes modeļa kešatmiņu",
+          "reDownload": "Atkārtoti lejupielādējiet bezsaistes modeli"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Starptautisks"
+  "countries.isl": "Starptautisks",
+  "to": "{{a}} → {{b}}"
 }

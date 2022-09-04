@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Фотореалистичен човешки генератор",
           "pix2pixUpscaler": "Фото-реалистичен човешки upscaler",
           "avatarGlb": "3D аватар",
-          "avatarUsdz": "3D аватар за AR на iOS"
+          "avatarUsdz": "3D аватар за AR на iOS",
+          "translation": "Превод",
+          "translation.spokenToSigned": "Говорено към Подписано",
+          "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Превключване на {{label}}",
+          "download": "Изтеглете офлайн модел",
+          "delete": "Изчистване на кеша на офлайн модела",
+          "reDownload": "Повторно изтегляне на офлайн модел"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Международен"
+  "countries.isl": "Международен",
+  "to": "{{a}} → {{b}}"
 }

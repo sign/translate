@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ফটো-বাস্তববাদী মানব জেনারেটর",
           "pix2pixUpscaler": "ফটো-বাস্তববাদী মানব আপস্কেলার",
           "avatarGlb": "3D অবতার",
-          "avatarUsdz": "iOS-এ AR-এর জন্য 3D অবতার"
+          "avatarUsdz": "iOS-এ AR-এর জন্য 3D অবতার",
+          "translation": "অনুবাদ",
+          "translation.spokenToSigned": "কথ্য থেকে স্বাক্ষরিত",
+          "translation.signedToSpoken": "সাইন-টু-স্পোকেন"
+        },
+        "actions": {
+          "toggle": "টগল {{label}}",
+          "download": "অফলাইন মডেল ডাউনলোড করুন",
+          "delete": "অফলাইন মডেল ক্যাশে শুদ্ধ করুন",
+          "reDownload": "অফলাইন মডেল পুনরায় ডাউনলোড করুন"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "আন্তর্জাতিক"
+  "countries.isl": "আন্তর্জাতিক",
+  "to": "{{a}} → {{b}}"
 }

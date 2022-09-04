@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Generador humà fotorealista",
           "pix2pixUpscaler": "Escalador humà fotorealista",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D per a AR a iOS"
+          "avatarUsdz": "Avatar 3D per a AR a iOS",
+          "translation": "Traducció",
+          "translation.spokenToSigned": "Parlat a signat",
+          "translation.signedToSpoken": "Signat per parlar"
+        },
+        "actions": {
+          "toggle": "Commuta {{label}}",
+          "download": "Baixeu el model fora de línia",
+          "delete": "Purga la memòria cau de models fora de línia",
+          "reDownload": "Torneu a baixar el model fora de línia"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Internacional"
+  "countries.isl": "Internacional",
+  "to": "{{a}} → {{b}}"
 }

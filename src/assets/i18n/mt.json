@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Ġeneratur uman foto-realistiku",
           "pix2pixUpscaler": "Upscaler uman foto-realistiku",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar għal AR fuq iOS"
+          "avatarUsdz": "3D Avatar għal AR fuq iOS",
+          "translation": "Traduzzjoni",
+          "translation.spokenToSigned": "Mitkellma biex Iffirmat",
+          "translation.signedToSpoken": "Iffirmat għal Mitkellem"
+        },
+        "actions": {
+          "toggle": "Aqleb {{label}}",
+          "download": "Niżżel il-Mudell Offline",
+          "delete": "Neħħi l-Cache tal-Mudell Offline",
+          "reDownload": "Niżżel mill-ġdid il-Mudell Offline"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Internazzjonali"
+  "countries.isl": "Internazzjonali",
+  "to": "{{a}} → {{b}}"
 }

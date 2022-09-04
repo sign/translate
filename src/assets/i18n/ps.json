@@ -176,7 +176,16 @@
           "pix2pixGenerator": "د عکس حقیقي انسان جنراتور",
           "pix2pixUpscaler": "د عکس حقیقت لرونکی انسان لوړ پوړی",
           "avatarGlb": "3D اوتار",
-          "avatarUsdz": "په iOS کې د AR لپاره 3D اوتار"
+          "avatarUsdz": "په iOS کې د AR لپاره 3D اوتار",
+          "translation": "ژباړه",
+          "translation.spokenToSigned": "لاسلیک شوي خبرې",
+          "translation.signedToSpoken": "لاسلیک شوي - خبرې"
+        },
+        "actions": {
+          "toggle": "بدلول {{label}}",
+          "download": "آفلاین ماډل ډاونلوډ کړئ",
+          "delete": "د آفلاین ماډل کیچ پاک کړئ",
+          "reDownload": "آفلاین ماډل بیا ډاونلوډ کړئ"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "نړیوال"
+  "countries.isl": "نړیوال",
+  "to": "{{a}} ← {{b}}"
 }

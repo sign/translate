@@ -3,12 +3,19 @@ import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
 import {MatTreeNestedDataSource} from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
+import {TranslocoService} from '@ngneat/transloco';
 
 const OFFLINE_PATHS = {
-  pix2pixGenerator: 'models/generator/model.h5.layers16/',
-  pix2pixUpscaler: 'models/upscaler/model.h5.layers/',
   avatarGlb: '3d/character.glb',
   avatarUsdz: '3d/character.usdz',
+  pix2pixGenerator: 'models/generator/model.h5.layers16/',
+  pix2pixUpscaler: 'models/upscaler/model.h5.layers/',
+  translation: {
+    spokenToSigned: {
+      SpokenSigned: 'models/browsermt/spoken-to-signed/spoken-signed/',
+      EnFr: 'models/browsermt/spoken-to-signed/en-fr/',
+    },
+  },
 };
 
 if (!isIOS) {
@@ -25,16 +32,20 @@ export class SettingsOfflineComponent implements OnInit {
   treeControl = new NestedTreeControl<AssetState>(node => node.children);
   filesTree = new MatTreeNestedDataSource<AssetState>();
 
-  constructor(private assets: AssetsService) {}
+  constructor(private assets: AssetsService, private transloco: TranslocoService) {}
 
   async ngOnInit() {
-    await Promise.all(
-      Object.entries(OFFLINE_PATHS).map(
-        async ([name, path]) => (this.localFiles[name] = {name, ...(await this.assets.stat(path))})
-      )
-    );
-
+    this.localFiles = this.assetInfo('', OFFLINE_PATHS).children;
     this.updateTree();
+  }
+
+  assetInfo(name: string, obj: string | any) {
+    if (typeof obj === 'string') {
+      return {name, ...this.assets.stat(obj)};
+    }
+    const prefix = name ? name + '.' : '';
+    const children = Object.entries(obj).map(([n, path]) => this.assetInfo(prefix + n, path));
+    return {name, size: null, children: children};
   }
 
   updateTree() {
@@ -71,5 +82,16 @@ export class SettingsOfflineComponent implements OnInit {
   async reDownload(node: AssetState) {
     await this.deleteCache(node);
     await this.download(node);
+  }
+
+  nodeLabel(node: AssetState) {
+    if (node.name.includes('.spokenToSigned.')) {
+      const langCountry = node.name.substr(-4).toLowerCase();
+      return this.transloco.translate(`to`, {
+        a: this.transloco.translate(`languages.${langCountry.substr(0, 2)}`),
+        b: this.transloco.translate(`countries.${langCountry.substr(2, 2)}`),
+      });
+    }
+    return this.transloco.translate('settings.other.offline.files.' + node.name);
   }
 }

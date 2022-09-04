@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ඡායාරූප යථාර්ථවාදී මානව උත්පාදක යන්ත්රය",
           "pix2pixUpscaler": "ඡායාරූප-යථාර්ථවාදී මානව උත්පාදකයා",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "iOS මත AR සඳහා 3D Avatar"
+          "avatarUsdz": "iOS මත AR සඳහා 3D Avatar",
+          "translation": "පරිවර්තනය",
+          "translation.spokenToSigned": "කථනයට අත්සන් කර ඇත",
+          "translation.signedToSpoken": "කතා කිරීමට අත්සන් කර ඇත"
+        },
+        "actions": {
+          "toggle": "{{label}} ටොගල් කරන්න",
+          "download": "නොබැඳි ආකෘතිය බාගන්න",
+          "delete": "නොබැඳි ආකෘති හැඹිලිය ඉවත් කරන්න",
+          "reDownload": "නොබැඳි ආකෘතිය නැවත බාගන්න"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "අන්තර්ජාතික"
+  "countries.isl": "අන්තර්ජාතික",
+  "to": "{{a}} → {{b}}"
 }

@@ -176,7 +176,16 @@
           "pix2pixGenerator": "ຮູບ​ພາບ​, ເຄື່ອງ​ຜະ​ລິດ​ມະ​ນຸດ​ຈິງ​",
           "pix2pixUpscaler": "ຕົວຂະຫຍາຍຮູບພາບ-ຄວາມເປັນຈິງຂອງມະນຸດ",
           "avatarGlb": "3D ຮູບແທນຕົວ",
-          "avatarUsdz": "3D Avatar ສໍາລັບ AR ໃນ iOS"
+          "avatarUsdz": "3D Avatar ສໍາລັບ AR ໃນ iOS",
+          "translation": "ການແປ",
+          "translation.spokenToSigned": "ເວົ້າກັບເຊັນ",
+          "translation.signedToSpoken": "ເຊັນເພື່ອເວົ້າ"
+        },
+        "actions": {
+          "toggle": "ສະຫຼັບ {{label}}",
+          "download": "ດາວໂຫລດແບບອອບໄລນ໌",
+          "delete": "ລ້າງແຄດຕົວແບບອອບໄລນ໌",
+          "reDownload": "ດາວໂຫຼດແບບອອບໄລນ໌ຄືນໃໝ່"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "ສາກົນ"
+  "countries.isl": "ສາກົນ",
+  "to": "{{a}} → {{b}}"
 }

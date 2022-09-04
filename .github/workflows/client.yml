@@ -50,6 +50,9 @@ jobs:
       - name: Generate Sitemap
         run: node tools/sitemap-generator.js # https://github.com/oven-sh/bun/issues/311
 
+      - name: Generate Licenses File
+        run: npx -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
+
       - name: Archive dist
         uses: actions/upload-artifact@v3
         with:

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {ComponentType} from '@angular/cdk/overlay';
 
@@ -9,7 +9,7 @@ import {ComponentType} from '@angular/cdk/overlay';
 export class LazyDialogEntryComponent implements OnInit {
   static component: ComponentType<unknown> = null;
 
-  constructor(public dialog: MatDialog, private router: Router) {}
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router) {}
 
   async ngOnInit() {
     // Load component dynamically
@@ -24,6 +24,16 @@ export class LazyDialogEntryComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       this.router.navigate([{outlets: {dialog: [], settings: []}}]);
+    });
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        // TODO: figure out a more robust way to detect when the dialog should be closed
+        console.log(this.route);
+        if (!event.url.includes('dialog')) {
+          dialogRef.close();
+        }
+      }
     });
   }
 }

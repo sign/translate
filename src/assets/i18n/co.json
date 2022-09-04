@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Generatore umanu foto-realisticu",
           "pix2pixUpscaler": "Upscaler umanu foto-realisticu",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D per AR in iOS"
+          "avatarUsdz": "Avatar 3D per AR in iOS",
+          "translation": "Traduzzione",
+          "translation.spokenToSigned": "Parlate à firmatu",
+          "translation.signedToSpoken": "Firmatu à parlà"
+        },
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Scaricate u mudellu offline",
+          "delete": "Purga a cache di mudelli offline",
+          "reDownload": "Scaricate di novu u mudellu offline"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Internaziunale"
+  "countries.isl": "Internaziunale",
+  "to": "{{a}} → {{b}}"
 }

@@ -25,13 +25,13 @@ type ProgressCallback = (receivedLength: number, totalLength: number) => void;
 export class AssetsService {
   static BUCKET_URL = 'https://firebasestorage.googleapis.com/v0/b/sign-mt-assets/o/';
 
-  async stat(path: string): Promise<AssetState> {
+  stat(path: string): AssetState {
     if (path.endsWith('/')) {
       const files = this.getLocalStorageDirectory(path);
       if (!files) {
         return {path, exists: false, children: []};
       }
-      const filesStat = await Promise.all(files.map(f => this.stat(path + f)));
+      const filesStat = files.map(f => this.stat(path + f));
       return {
         path,
         exists: filesStat.every(f => f.exists),

@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Foto-ezitere mmadụ generator",
           "pix2pixUpscaler": "Foto-ezigbo mmadụ upscaler",
           "avatarGlb": "Avatar 3D",
-          "avatarUsdz": "Avatar 3D maka AR na iOS"
+          "avatarUsdz": "Avatar 3D maka AR na iOS",
+          "translation": "Ntụgharị asụsụ",
+          "translation.spokenToSigned": "Kwuru-na-binyere aka",
+          "translation.signedToSpoken": "Ebinyere aka na-ekwu okwu"
+        },
+        "actions": {
+          "toggle": "Tụgharịa {{label}}",
+          "download": "Budata Model na-anọghị n'ịntanetị",
+          "delete": "Hichapụ cache Model na-anọghị n'ịntanetị",
+          "reDownload": "Budata Model na-anọghị n'ịntanetị"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Mba ụwa"
+  "countries.isl": "Mba ụwa",
+  "to": "{{a}} → {{b}}"
 }

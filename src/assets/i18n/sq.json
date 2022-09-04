@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Gjenerator fotorealist njerëzor",
           "pix2pixUpscaler": "Përmirësues foto-realist njerëzor",
           "avatarGlb": "Avatari 3D",
-          "avatarUsdz": "Avatar 3D për AR në iOS"
+          "avatarUsdz": "Avatar 3D për AR në iOS",
+          "translation": "Përkthimi",
+          "translation.spokenToSigned": "E folur për të nënshkruar",
+          "translation.signedToSpoken": "I nënshkruar në të folur"
+        },
+        "actions": {
+          "toggle": "Ndrysho {{label}}",
+          "download": "Shkarkoni Modelin Offline",
+          "delete": "Pastro memorien e modelit jashtë linje",
+          "reDownload": "Rishkarkoni modelin jashtë linje"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Ndërkombëtare"
+  "countries.isl": "Ndërkombëtare",
+  "to": "{{a}} → {{b}}"
 }

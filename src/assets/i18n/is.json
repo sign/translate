@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Ljósraunsæi mannlegur rafall",
           "pix2pixUpscaler": "Ljósraunsæi mannlegur uppsláttarmaður",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar fyrir AR á iOS"
+          "avatarUsdz": "3D Avatar fyrir AR á iOS",
+          "translation": "Þýðing",
+          "translation.spokenToSigned": "Talað við-undirritað",
+          "translation.signedToSpoken": "Undirritaður til að tala"
+        },
+        "actions": {
+          "toggle": "Skipta á {{label}}",
+          "download": "Sækja fyrirmynd án nettengingar",
+          "delete": "Hreinsaðu skyndiminni án nettengingar",
+          "reDownload": "Sæktu líkan án nettengingar aftur"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Alþjóðlegt"
+  "countries.isl": "Alþjóðlegt",
+  "to": "{{a}} → {{b}}"
 }

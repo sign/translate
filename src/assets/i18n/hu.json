@@ -176,7 +176,16 @@
           "pix2pixGenerator": "Fotorealisztikus emberi generátor",
           "pix2pixUpscaler": "Fotórealisztikus emberi feljavító",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar AR-hez iOS rendszeren"
+          "avatarUsdz": "3D Avatar AR-hez iOS rendszeren",
+          "translation": "Fordítás",
+          "translation.spokenToSigned": "Aláírtnak szólva",
+          "translation.signedToSpoken": "Aláírt-beszéd"
+        },
+        "actions": {
+          "toggle": "Váltás: {{label}}",
+          "download": "Offline modell letöltése",
+          "delete": "Az offline modell gyorsítótárának kiürítése",
+          "reDownload": "Töltse le újra az offline modellt"
         }
       },
       "appearance": {
@@ -187,5 +196,6 @@
       }
     }
   },
-  "countries.isl": "Nemzetközi"
+  "countries.isl": "Nemzetközi",
+  "to": "{{a}} → {{b}}"
 }

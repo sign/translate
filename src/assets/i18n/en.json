@@ -1,5 +1,6 @@
 {
   "countries.isl": "International",
+  "to": "{{a}} → {{b}}",
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"
@@ -12,7 +13,6 @@
       "detect": "Detect language"
     },
     "description": "Sign language translator app for desktop and mobile",
-    "feedback": "Send feedback",
     "input": {
       "webcam": "Webcam",
       "upload": "Upload",
@@ -144,7 +144,8 @@
     "support": {
       "title": "Support",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Send feedback"
       },
       "about": {
         "title": "About"
@@ -163,11 +164,20 @@
       "title": "Other",
       "offline": {
         "title": "Offline",
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Download Offline Model",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Re-Download Offline Model"
+        },
         "files": {
           "pix2pixGenerator": "Photo-realistic human generator",
           "pix2pixUpscaler": "Photo-realistic human upscaler",
           "avatarGlb": "3D Avatar",
-          "avatarUsdz": "3D Avatar for AR on iOS"
+          "avatarUsdz": "3D Avatar for AR on iOS",
+          "translation": "Translation",
+          "translation.spokenToSigned": "Spoken-to-Signed",
+          "translation.signedToSpoken": "Signed-to-Spoken"
         }
       },
       "appearance": {
