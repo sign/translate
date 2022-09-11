@@ -1,9 +1,12 @@
-const platform = 'navigator' in globalThis ? navigator.platform : '';
-export const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(platform);
-export const isIOS = /(iPhone|iPod|iPad)/i.test(platform);
+function nav(property: 'platform' | 'vendor' | 'userAgent') {
+  return 'navigator' in globalThis ? navigator[property] : '';
+}
+
+export const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(nav('platform'));
+export const isIOS = /(iPhone|iPod|iPad)/i.test(nav('platform'));
 
 export const isSafari =
-  /apple/i.test(navigator.vendor) &&
-  !/crios/i.test(navigator.userAgent) &&
-  !/fxios/i.test(navigator.userAgent) &&
-  !/Opera|OPT\//.test(navigator.userAgent);
+  /apple/i.test(nav('vendor')) &&
+  !/crios/i.test(nav('userAgent')) &&
+  !/fxios/i.test(nav('userAgent')) &&
+  !/Opera|OPT\//.test(nav('userAgent'));

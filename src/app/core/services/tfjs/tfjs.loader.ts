@@ -2,7 +2,7 @@ export async function loadTFDS() {
   const tf = await import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs');
   await tf.ready();
 
-  if ('gpu' in navigator) {
+  if ('navigator' in globalThis && 'gpu' in navigator) {
     await import(/* webpackChunkName: "@tensorflow/tfjs-backend-webgpu" */ '@tensorflow/tfjs-backend-webgpu');
     await tf.setBackend('webgpu');
   }
