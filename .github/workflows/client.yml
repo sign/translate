@@ -2,12 +2,12 @@ name: Client
 
 on:
   push:
-    branches: [master]
+    branches: [main, master]
     paths-ignore:
       - 'functions/**'
       - '.github/workflows/server.yml'
   pull_request:
-    branches: [master]
+    branches: [main, master]
 
 jobs:
   build:
