@@ -7,7 +7,7 @@ describe('TextToTextTranslationModel', () => {
   const modelFiles = setupModelFiles(testEnvironment);
 
   let model: TextToTextTranslationModel;
-  beforeEach(async () => {
+  beforeEach(() => {
     model = new TextToTextTranslationModel(testEnvironment.bucket, 'en', 'ru');
   });
 
