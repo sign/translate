@@ -28,7 +28,7 @@
     "firebase-admin": "^11.0.1",
     "firebase-functions": "^3.24.0",
     "http-errors": "^2.0.0",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "3.2.10"
   },
   "devDependencies": {
     "@firebase/firestore-types": "^2.5.0",
@@ -38,13 +38,13 @@
     "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
-    "eslint": "^8.23.1",
+    "eslint": "^8.24.0",
     "firebase-functions-test": "^2.4.0",
     "firebase-tools": "^11.10.0",
     "jest": "^29.0.3",
     "mock-express-request": "^0.2.2",
     "mock-express-response": "^0.3.0",
-    "ts-jest": "^29.0.1",
+    "ts-jest": "^29.0.2",
     "typescript": "^4.8.3"
   }
 }
