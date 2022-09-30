@@ -44,9 +44,6 @@ jobs:
       - name: Test code
         run: npm run test:ci
 
-      - name: Create Service Account Key
-        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}" > "$HOME"/gcloud.json
-
       - name: Deploy Cloud Functions
         working-directory: functions
-        run: export GOOGLE_APPLICATION_CREDENTIALS="$HOME"/gcloud.json && npm run deploy
+        run: firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"

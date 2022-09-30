@@ -10,13 +10,13 @@ import {font} from '@sutton-signwriting/font-ttf';
   providedIn: 'root',
 })
 export class SignWritingService {
-  static font: Promise<font>;
+  static font: Promise<typeof font>;
 
   constructor(private bodyService: BodyService, private faceService: FaceService, private handsService: HandsService) {}
 
   static get fontsModule() {
     if (!SignWritingService.font) {
-      SignWritingService.font = import('@sutton-signwriting/font-ttf/font/font.min') as Promise<font>;
+      SignWritingService.font = import('@sutton-signwriting/font-ttf/font/font.min') as Promise<typeof font>;
     }
     return SignWritingService.font;
   }

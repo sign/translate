@@ -47,7 +47,7 @@
               },
               {
                 "glob": "**/*.json",
-                "input": "node_modules/@sign/i18n/build/",
+                "input": "node_modules/@sign-mt/i18n/build/",
                 "output": "./assets/i18n/"
               },
               {
@@ -176,7 +176,7 @@
               },
               {
                 "glob": "**/*.json",
-                "input": "node_modules/@sign/i18n/build/",
+                "input": "node_modules/@sign-mt/i18n/build/",
                 "output": "./assets/i18n/"
               }
             ],
