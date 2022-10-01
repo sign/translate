@@ -39,9 +39,11 @@ jobs:
         run: npm install
 
       - name: Lint code
+        working-directory: functions
         run: npm run lint
 
       - name: Test code
+        working-directory: functions
         run: npm run test:ci
 
       - name: Deploy Cloud Functions
