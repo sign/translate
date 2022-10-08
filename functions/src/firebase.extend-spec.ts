@@ -1,7 +1,7 @@
 import {initializeTestEnvironment} from '@firebase/rules-unit-testing';
 import {RulesTestContext, RulesTestEnvironment} from '@firebase/rules-unit-testing/dist/src/public_types';
-import firebase from 'firebase/compat';
 import {FirebaseFirestore} from '@firebase/firestore-types';
+import {FirebaseDatabase} from '@firebase/database-types';
 import {Bucket, Storage} from '@google-cloud/storage';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
@@ -28,7 +28,7 @@ service firebase.storage {
 export interface FirebaseTestEnvironmentContext {
   env: RulesTestEnvironment;
   context: RulesTestContext;
-  database: firebase.database.Database;
+  database: FirebaseDatabase;
   firestore: FirebaseFirestore;
   storage: Storage;
   bucket: Bucket;
