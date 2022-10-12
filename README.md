@@ -55,98 +55,18 @@
 
 <hr>
 
-## Key Features
-
-(Hyperlinks to issues indicate the feature does not exist fully)
-
-#### Spoken-to-signed language translation
-
-```
-┌─────────────────────┐
-│Spoken Language Audio│                                        ┌─────────┐
-└─────────┬───────────┘                            ┌──────────►│Human GAN│
-          │                                        │           └─────────┘
-          ▼                                        │
-┌────────────────────┐     ┌───────────┐    ┌──────┴──────┐    ┌───────────────┐
-│Spoken Language Text├────►│SignWriting├───►│Pose Sequence├───►│Skeleton Viewer│
-└─────────┬──────────┘     └───────────┘    └──────┬──────┘    └───────────────┘
-          │                      ▲                 │
-          ▼                      │                 │           ┌────────────────┐
-┌───────────────────────┐        │                 └──────────►│Avatar Animation│
-│Language Identification├────────┘                             └────────────────┘
-└───────────────────────┘
-```
-
-- Text / Microphone inputs
-- Text-to-speech
-- Spoken Language identification (Detect Language)
-- Spoken language text to SignWriting translation
-- [SignWriting to pose sequence](https://github.com/sign/translate/issues/15)
-- Text to pose sequence fallback (server side)
-- Skeleton / [Avatar](https://github.com/sign/translate/issues/16) / Human Pose Viewers
-- Copy / share / download video
-
-#### Signed-to-spoken language translation
-
-```
-┌──────────────────────────┐                                ┌────────────────────┐
-│Upload Sign Language Video│                      ┌────────►│Spoken Language Text│
-└──────────┬───────────────┘                      │         └──────────┬─────────┘
-           │                                      │                    │
-           │          ┌────────────┐       ┌──────┴────┐               │
-           ├─────────►│Segmentation├──────►│SignWriting│               │
-           │          └────────────┘       └───────────┘               │
-           │                                                           ▼
-┌──────────┴────────────────┐                               ┌─────────────────────┐
-│Camera Sign Language Video │                               │Spoken Language Audio│
-└───────────────────────────┘                               └─────────────────────┘
-```
-
-- Camera / File upload video inputs
-- SignWriting hand shape and [orientation](https://github.com/sign/translate/issues/1) estimation
-- SignWriting facial features estimation
-- [Signed Language identification (Detect Language)](https://github.com/sign/translate/issues/21)
-- [Segmentation]() - **TODO CREATE ISSUE**
-- [Tokenization]() - **TODO CREATE ISSUE**
-- [SignWriting to spoken language translation](https://github.com/sign/translate/issues/18)
-- Text-to-speech
-- [Copy / share translation](https://github.com/sign/translate/issues/19)
-
-## Development Setup
-
-### Prerequisites
-
-- Install [Node.js] which includes [Node Package Manager][npm]
-
-### Setting Up the Project
-
-Install dependencies locally:
-
-```
-npm install
-```
-
-Run the application:
-
-```
-npm start
-```
-
-Test the application:
-
-```
-npm test
-```
-
 ### Want to Help?
 
-Want to report a bug, contribute some code, or improve documentation? Excellent!
+You can find our current roadmap/progress on our [project board][project-board], and more clearly in our [wiki][wiki].
+
+Want to report a bug, [contribute some code][development-setup], or improve documentation? Excellent!
 Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/sign/translate/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/sign/translate/labels/good%20first%20issue)</kbd>.
 
 **Find this useful? Give our repo a star :star: :arrow_up:.**
 
 [![Stargazers repo roster for @sign/translate](https://reporoster.com/stars/sign/translate)](https://github.com/sign/translate/stargazers)
 
-[node.js]: https://nodejs.org/
-[npm]: https://www.npmjs.com/get-npm
+[wiki]: https://github.com/sign/translate/wiki/Spoken-to-Signed
 [contributing]: https://github.com/sign/.github/blob/main/CONTRIBUTING.md
+[project-board]: https://github.com/sign/translate/projects/1
+[development-setup]: DEVELOPMENT.md

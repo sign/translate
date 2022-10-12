@@ -49,4 +49,4 @@ jobs:
 
       - name: Deploy Cloud Functions
         working-directory: functions
-        run: firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"
+        run: npx firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"
