@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
+import {AfterViewInit, Component, ViewChild, ViewContainerRef} from '@angular/core';
 import {ComponentType} from '@angular/cdk/overlay';
 
 @Component({

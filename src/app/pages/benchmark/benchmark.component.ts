@@ -79,7 +79,7 @@ export class BenchmarkComponent {
 
     // Evaluate 30 texts
     for (let i = 0; i < 30; i++) {
-      this.translation.detectSpokenLanguage('Lorem ipsum dolor sit amet');
+      await this.translation.detectSpokenLanguage('Lorem ipsum dolor sit amet');
       this.buildStats();
     }
   }

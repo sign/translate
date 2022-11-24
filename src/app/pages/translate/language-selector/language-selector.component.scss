@@ -11,8 +11,6 @@ mat-tab-group {
 
 // Make language expansion menu show the correct icon
 button.menu-icon-button {
-  margin-top: 2px;
-
   mat-icon {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -47,11 +45,7 @@ button.menu-language-button {
 }
 
 ::ng-deep {
-  .mat-tab-header {
-    border-bottom-width: 0;
-  }
-
-  .mat-tab-label {
+  .mdc-tab {
     min-width: unset !important;
     text-transform: uppercase;
     padding: 0 16px !important;
@@ -62,8 +56,8 @@ button.menu-language-button {
       color: map-get(mat.$dark-theme-foreground-palette, text);
     }
 
-    &.mat-tab-label-active {
-      color: mat.get-color-from-palette($app-primary, 700);
+    &[aria-selected='true'] {
+      color: mat.get-color-from-palette(map-get($app-color, primary), 700);
       transition: color 0.2s;
     }
   }

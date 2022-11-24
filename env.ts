@@ -11,7 +11,7 @@ const schema = z.object({
   ENABLE_CAPACITOR_SERVER: z.string().default('0').transform(stringToNumber).transform(Boolean),
 
   /**
-   * Sometimes the ip that was detected may not be the one that you want (i.e WSL2)
+   * Sometimes the ip that was detected may not be the one that you want (i.e. WSL2)
    */
   OVERRIDE_CAPACITOR_SERVER: z.string().optional(),
 

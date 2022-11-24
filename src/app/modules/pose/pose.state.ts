@@ -38,7 +38,7 @@ const initialState: PoseStateModel = {
 export class PoseState implements NgxsOnInit {
   constructor(private poseService: PoseService, private store: Store) {}
 
-  ngxsOnInit(ctx?: StateContext<any>): void {
+  ngxsOnInit(): void {
     this.poseService.onResults(results => {
       // TODO: passing the `image` canvas through NGXS bugs the pose.
       // https://github.com/google/mediapipe/issues/2422

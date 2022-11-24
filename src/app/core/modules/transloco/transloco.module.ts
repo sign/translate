@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {environment} from '../../../../environments/environment';
-import {TRANSLOCO_CONFIG, translocoConfig, TranslocoConfig, TranslocoModule} from '@ngneat/transloco';
+import {TRANSLOCO_CONFIG, translocoConfig, TranslocoModule} from '@ngneat/transloco';
 import {translocoScopes} from './transloco.loader';
 import {HttpClientModule} from '@angular/common/http';
 import {SITE_LANGUAGES} from '../../../components/language-selector/language-selector.component';

@@ -7,12 +7,11 @@ import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators'
 import {BaseComponent} from '../base/base.component';
 import {wait} from '../../core/helpers/wait/wait';
 import {PoseVideoFrame} from '../../modules/pose/pose.actions';
-import {Pose, PoseStateModel} from '../../modules/pose/pose.state';
+import {PoseStateModel} from '../../modules/pose/pose.state';
 import {PoseService} from '../../modules/pose/pose.service';
 import {SignWritingStateModel} from '../../modules/sign-writing/sign-writing.state';
 import {SettingsStateModel} from '../../modules/settings/settings.state';
 import {SignWritingService} from '../../modules/sign-writing/sign-writing.service';
-import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 
 @Component({
   selector: 'app-video',
@@ -96,7 +95,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   setCamera(): void {
     const video = this.videoEl.nativeElement;
     video.muted = true;
-    video.addEventListener('loadedmetadata', e => video.play());
+    video.addEventListener('loadedmetadata', () => video.play());
 
     this.videoState$
       .pipe(
@@ -127,10 +126,11 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   scaleCanvas(): void {
-    window.requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
       // Zoom canvas to 100% width
       const bbox = this.elementRef.nativeElement.getBoundingClientRect();
-      const scale = bbox.width / this.canvasEl.nativeElement.width;
+      const width = Math.min(bbox.width, document.documentElement.clientWidth);
+      const scale = width / this.canvasEl.nativeElement.width;
       this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
 
       // Set parent element height
@@ -143,7 +143,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
       .pipe(
         map(state => state.pose),
         filter(Boolean),
-        tap((pose: Pose) => {
+        tap(() => {
           this.fpsStats.end(); // End previous frame time
           this.fpsStats.begin(); // Start new frame time
         }),

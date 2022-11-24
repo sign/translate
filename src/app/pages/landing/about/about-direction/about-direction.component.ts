@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Platform} from '@angular/cdk/platform';
-import {GoogleAnalyticsService} from '../../../../core/modules/google-analytics/google-analytics.service';
 import {TranslocoService} from '@ngneat/transloco';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';

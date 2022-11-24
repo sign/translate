@@ -12,5 +12,5 @@ model-viewer {
   height: 100%;
   --poster-color: transparent;
   --progress-mask: transparent;
-  --progress-bar-color: #{mat.get-color-from-palette(theme.$app-primary)};
+  --progress-bar-color: #{mat.get-color-from-palette(map-get(theme.$app-color, primary))};
 }

@@ -26,7 +26,7 @@ export class AnimationState implements NgxsOnInit {
 
   constructor(private animation: AnimationService) {}
 
-  ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
+  ngxsOnInit({dispatch}: StateContext<any>): void {
     // Load model once setting turns on
     this.animatePose$
       .pipe(

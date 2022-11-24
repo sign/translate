@@ -12,8 +12,8 @@
         <mat-divider *ngIf="i !== 0"></mat-divider>
         <h3 matSubheader>{{ t(group.name + '.title') }}</h3>
         <a mat-list-item *ngFor="let page of group.pages" (click)="open(group, page)">
-          <mat-icon mat-list-icon>{{ page.icon }}</mat-icon>
-          {{ t(group.name + '.' + page.path + '.title') }}
+          <mat-icon matListItemIcon>{{ page.icon }}</mat-icon>
+          <span matListItemTitle>{{ t(group.name + '.' + page.path + '.title') }}</span>
         </a>
       </ng-container>
     </mat-nav-list>

@@ -36,12 +36,12 @@ async function getAvailableLanguages() {
   return matches.map(m => m[1]);
 }
 
-function extract(text, attribute, value) {
-  const exp = new RegExp(`${attribute}="${value}".*?>(.*?)<`, 'gi');
-  console.log(exp);
-  console.log(text.match(exp));
-  return text.match(exp)[6];
-}
+// function extract(text, attribute, value) {
+//   const exp = new RegExp(`${attribute}="${value}".*?>(.*?)<`, 'gi');
+//   console.log(exp);
+//   console.log(text.match(exp));
+//   return text.match(exp)[6];
+// }
 
 async function applyGoogleLanguage(language, filePath) {
   console.log({language});
@@ -70,7 +70,7 @@ async function applyGoogleLanguage(language, filePath) {
     .replace('PDF', 'OGV')
     .replace('xlsx', 'webm')
     .replace('XLSX', 'WEBM')
-    .replace(/[,、]? ?[..]?PPTX/i, '');
+    .replace(/[,、]? ?.?PPTX/i, '');
 
   const [aboutTitle, languagesTitle, contributeTitle, toolsTitle] = [
     ...about.matchAll(/h-c-header__nav-li-link.*?"\s*title="(.*?)"/g),
@@ -105,7 +105,7 @@ async function applyGoogleLanguage(language, filePath) {
       swapLanguages: swapLanguages.trim(),
 
       'language-selector': {
-        detect: /\[\[\["auto","(.*?)"\]/g.exec(main)[1],
+        detect: /\[\[\["auto","(.*?)"]/g.exec(main)[1],
         // "detected": "{lang} - Detected" // TODO get from a js file?
       },
       // "spoken-to-signed": {

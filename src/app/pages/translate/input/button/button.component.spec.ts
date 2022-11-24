@@ -1,4 +1,4 @@
-import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {ComponentFixture, fakeAsync, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TranslateInputButtonComponent} from './button.component';
@@ -10,7 +10,7 @@ import {TranslateState} from '../../../../modules/translate/translate.state';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {SettingsState} from '../../../../modules/settings/settings.state';
-import {SetInputMode, SetSpokenLanguageText} from '../../../../modules/translate/translate.actions';
+import {SetInputMode} from '../../../../modules/translate/translate.actions';
 
 describe('TranslateInputButtonComponent', () => {
   let store: Store;

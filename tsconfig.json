@@ -16,7 +16,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "target": "es2020",
+    "target": "es2022",
     "module": "esnext",
     "lib": ["es2018", "dom"]
   },

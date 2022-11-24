@@ -150,7 +150,7 @@ export class AssetsService {
 
   async deleteFile(path: string) {
     return Promise.all([
-      this.deleteNavigatorStorageFile(path).catch(e => {}),
+      this.deleteNavigatorStorageFile(path).catch(() => {}),
       this.deleteCapacitorGetFileUri(path).catch(() => {}),
     ]);
   }

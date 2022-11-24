@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {PoseState} from '../../modules/pose/pose.state';
 import {TranslocoService} from '@ngneat/transloco';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
@@ -30,6 +31,7 @@ describe('PlaygroundComponent', () => {
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState, PoseState], ngxsConfig),
         HttpClientModule,
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 

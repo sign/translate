@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
-import {HttpClient} from '@angular/common/http';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he',
@@ -168,7 +167,7 @@ export class TranslationService {
     'zu',
   ];
 
-  constructor(private ga: GoogleAnalyticsService, private http: HttpClient) {}
+  constructor(private ga: GoogleAnalyticsService) {}
 
   async initCld(): Promise<void> {
     if (this.cld) {

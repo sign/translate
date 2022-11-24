@@ -22,14 +22,12 @@ export class LazyDialogEntryComponent implements OnInit {
       width: '960px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
       this.router.navigate([{outlets: {dialog: [], settings: []}}]);
     });
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        // TODO: figure out a more robust way to detect when the dialog should be closed
-        console.log(this.route);
         if (!event.url.includes('dialog')) {
           dialogRef.close();
         }

@@ -87,12 +87,8 @@ mat-toolbar {
       }
 
       app-language-selector {
-        width: calc(50% - 20px);
+        width: calc(50% - 24px);
       }
-    }
-
-    #swap-languages {
-      margin: 4px 0;
     }
   }
 }

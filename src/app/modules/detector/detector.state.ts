@@ -28,7 +28,7 @@ export class DetectorState implements NgxsOnInit {
 
   constructor(private detector: DetectorService) {}
 
-  ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
+  ngxsOnInit({dispatch}: StateContext<any>): void {
     // Load model once setting turns on
     this.detectSign$
       .pipe(
@@ -49,8 +49,8 @@ export class DetectorState implements NgxsOnInit {
   }
 
   @Action(DetectSigning)
-  async detectSigning({getState, patchState}: StateContext<DetectorStateModel>, {pose}: DetectSigning): Promise<void> {
-    const signingProbability = await this.detector.detect(pose);
+  detectSigning({getState, patchState}: StateContext<DetectorStateModel>, {pose}: DetectSigning): void {
+    const signingProbability = this.detector.detect(pose);
     patchState({
       signingProbability,
       isSigning: signingProbability > 0.5,

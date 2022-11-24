@@ -1,5 +1,5 @@
-ncu -u --reject ngx-filesize
+ncu -u --reject ngx-filesize,typescript
 npm install
 
-ncu --cwd functions --reject node-fetch -u
+ncu --cwd functions --reject node-fetch,typescript -u
 npm install --prefix functions

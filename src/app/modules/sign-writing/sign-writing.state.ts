@@ -82,7 +82,7 @@ export class SignWritingState implements NgxsOnInit {
       .pipe(
         filter(Boolean),
         filter(() => !this.drawSignWriting), // Only run if needed
-        tap((pose: Pose) => {
+        tap(() => {
           patchState({timestamp: Date.now()});
         })
       )

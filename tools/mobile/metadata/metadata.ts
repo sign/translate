@@ -162,7 +162,7 @@ async function main() {
   };
 
   const concurrency = 20;
-  const allContexts = androidContexts.concat(iosContexts).sort((a, b) => (Math.random() > 0.5 ? 1 : -1));
+  const allContexts = androidContexts.concat(iosContexts).sort(() => (Math.random() > 0.5 ? 1 : -1));
   await asyncPoolAll(concurrency, allContexts, screenCapture);
   await webkitBrowser.close();
   await chromiumBrowser.close();

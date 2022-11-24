@@ -47,7 +47,7 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
       if (!SignWritingComponent.isCustomElementDefined) {
         SignWritingComponent.isCustomElementDefined = true;
 
-        SignWritingService.loadFonts();
+        SignWritingService.loadFonts().then().catch();
 
         // Load the SignWriting custom elements
         import('@sutton-signwriting/sgnw-components/loader')

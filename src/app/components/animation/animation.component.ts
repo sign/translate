@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {Select} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {AnimationStateModel} from '../../modules/animation/animation.state';

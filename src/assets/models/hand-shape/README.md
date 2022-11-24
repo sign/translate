@@ -87,7 +87,7 @@ book, including a title for each handshape, a unique identifier, and 6 examples 
 images of an adult white male hand.
 
 We observe a fundamental truth - every example for each hand shape is a photograph of the same hand, and thus, given the
-3D coordinates of every joint, can be transformed to the other examples by a closed, and well defined set of
+3D coordinates of every joint, can be transformed to the other examples by a closed, and well-defined set of
 mathematical operations (namely, 3D rotation, scaling, and translation). Given this observation, the analysis of a hand
 shape from an image can ignore the variation in rotation, view, and plane, and mathematically normalize any given hand
 to a fixed orientation.

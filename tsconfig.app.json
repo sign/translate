@@ -11,6 +11,6 @@
       "@types/long"
     ]
   },
-  "files": ["src/main.ts", "src/polyfills.ts"],
+  "files": ["src/main.ts"],
   "include": ["src/**/*.d.ts", "node_modules/@types/chrome/index.d.ts"]
 }

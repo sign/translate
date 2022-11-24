@@ -5,7 +5,7 @@ button {
   transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (prefers-color-scheme: light) {
-    color: mat.get-color-from-palette(theme.$app-primary, 800) !important;
+    color: mat.get-color-from-palette(map-get(theme.$app-color, primary), 800) !important;
   }
 
   &.selected {

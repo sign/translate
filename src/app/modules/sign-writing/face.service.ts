@@ -61,7 +61,7 @@ export class FaceService {
     const model = this.faceSequentialModel;
 
     if (!model) {
-      // By default just open eyes
+      // By default, just open eyes
       return {face: {location: faceLocation, symbol: '񌞁'}};
     }
 

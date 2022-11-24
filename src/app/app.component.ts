@@ -1,5 +1,5 @@
 import {AfterViewInit, Component} from '@angular/core';
-import {getBrowserLang, TranslocoService} from '@ngneat/transloco';
+import {TranslocoService} from '@ngneat/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';

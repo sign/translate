@@ -15,19 +15,23 @@
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @mixin theme-components($theme) {
-  @include mat.core-theme($theme);
-  @include mat.sidenav-theme($theme);
-  @include mat.toolbar-theme($theme);
-  @include mat.button-theme($theme);
-  @include mat.menu-theme($theme);
-  @include mat.progress-spinner-theme($theme);
-  @include mat.progress-bar-theme($theme);
-  @include mat.tooltip-theme($theme);
-  @include mat.card-theme($theme);
-  @include mat.tabs-theme($theme);
-  @include mat.dialog-theme($theme);
-  @include mat.tree-theme($theme);
+  @include mat.core-color($theme);
+  @include mat.sidenav-color($theme);
+  @include mat.toolbar-color($theme);
+  @include mat.button-color($theme);
+  @include mat.menu-color($theme);
+  @include mat.progress-spinner-color($theme);
+  @include mat.progress-bar-color($theme);
+  @include mat.tooltip-color($theme);
+  @include mat.card-color($theme);
+  @include mat.tabs-color($theme);
+  @include mat.dialog-color($theme);
+  @include mat.tree-color($theme);
 }
+
+// Include typography and density styles once, for light and dark modes
+@include mat.all-component-typographies($app-theme);
+@include mat.all-component-densities($app-theme);
 
 @include theme-components($app-theme);
 
@@ -52,7 +56,7 @@ html {
 }
 
 body {
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  --mdc-typography-button-letter-spacing: normal;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background-color: white;
@@ -103,7 +107,6 @@ button[mat-icon-button] {
   border-color: map-get(mat.$dark-theme-foreground-palette, divider);
   border-style: solid;
   border-width: 0;
-  font-family: 'Product Sans', Arial, sans-serif;
   font-weight: 400;
 
   &:first-child {
@@ -122,9 +125,9 @@ button[mat-icon-button] {
 }
 
 a {
-  color: mat.get-color-from-palette($app-primary, 700);
+  color: mat.get-color-from-palette(map-get($app-color, primary), 700);
   @media (prefers-color-scheme: dark) {
-    color: mat.get-color-from-palette($app-primary, 300);
+    color: mat.get-color-from-palette(map-get($app-color, primary), 300);
   }
 }
 

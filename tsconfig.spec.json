@@ -13,6 +13,6 @@
       "@types/long"
     ]
   },
-  "files": ["src/test.ts", "src/polyfills.ts", "node_modules/pose-viewer/dist/types/components.d.ts"],
+  "files": ["node_modules/pose-viewer/dist/types/components.d.ts"],
   "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
 }

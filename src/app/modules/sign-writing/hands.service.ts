@@ -52,7 +52,7 @@ export class HandsService {
   shape(vectors: Vector3[], normal: PlaneNormal, isLeft: boolean): string {
     const model = isLeft ? this.leftHandSequentialModel : this.rightHandSequentialModel;
     if (!model) {
-      return '񆄡'; // By default just fist shape
+      return '񆄡'; // By default, just fist shape
     }
 
     const hsIndex = this.tf.tidy(() => {
@@ -109,7 +109,7 @@ export class HandsService {
   }
 
   direction(plane: HandPlane, normal: PlaneNormal, flipAxis: boolean): HandDirection {
-    const x = flipAxis ? normal.direction.x : -normal.direction.x; // For right hand, flip the x axis
+    const x = flipAxis ? normal.direction.x : -normal.direction.x; // For right hand, flip the x-axis
 
     // TODO subtract chest normal from hand normal, to allow for body rotation
 

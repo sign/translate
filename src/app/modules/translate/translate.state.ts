@@ -16,7 +16,7 @@ import {
 } from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
-import {Observable, of} from 'rxjs';
+import {EMPTY, Observable, of} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
@@ -205,7 +205,7 @@ export class TranslateState implements NgxsOnInit {
       }
     }
 
-    return of();
+    return EMPTY;
   }
 
   @Action(UploadPoseFile)

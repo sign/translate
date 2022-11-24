@@ -2,7 +2,6 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {VideoComponent} from './video.component';
-import {AppModule} from '../../app.module';
 import {AppSharedModule} from '../../core/modules/shared.module';
 import {VideoControlsComponent} from './video-controls/video-controls.component';
 import {AnimationComponent} from '../animation/animation.component';

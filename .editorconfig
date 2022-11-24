@@ -10,9 +10,11 @@ trim_trailing_whitespace = true
 
 [*.ts]
 quote_type = single
+ij_typescript_use_double_quotes = false
 
 [*.html]
 quote_type = double
+ij_html_quote_style = double
 
 [*.md]
 max_line_length = off
