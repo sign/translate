@@ -3,8 +3,8 @@ import {TestBed} from '@angular/core/testing';
 import {DetectorService} from './detector.service';
 import {Pose, PoseLandmark} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
-import createSpy = jasmine.createSpy;
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
+import createSpy = jasmine.createSpy;
 
 describe('DetectorService', () => {
   let service: DetectorService;

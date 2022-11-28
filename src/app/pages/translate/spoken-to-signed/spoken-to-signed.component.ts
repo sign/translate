@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {BaseComponent} from '../../../components/base/base.component';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
-import {interval, Observable} from 'rxjs';
-import {Select, Store} from '@ngxs/store';
+import {interval} from 'rxjs';
+import {Store} from '@ngxs/store';
 import {
   CopySignedLanguageVideo,
   DownloadSignedLanguageVideo,
@@ -21,12 +21,12 @@ import {isIOS, isMacLike} from 'src/app/core/constants';
   styleUrls: ['./spoken-to-signed.component.scss'],
 })
 export class SpokenToSignedComponent extends BaseComponent implements OnInit {
-  @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
-  @Select(state => state.translate) translate$: Observable<TranslateStateModel>;
-  @Select(state => state.translate.spokenLanguageText) text$: Observable<string>;
-  @Select(state => state.translate.signWriting) signWriting$: Observable<string[]>;
-  @Select(state => state.translate.signedLanguagePose) pose$: Observable<string>;
-  @Select(state => state.translate.signedLanguageVideo) video$: Observable<string>;
+  poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
+  translate$ = this.store.select<TranslateStateModel>(state => state.translate);
+  text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
+  signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
+  pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
+  video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
 
   videoUrl: SafeUrl;
   spokenLanguage: string;

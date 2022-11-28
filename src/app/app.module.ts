@@ -6,11 +6,6 @@ import {AppSharedModule} from './core/modules/shared.module';
 import {VideoComponent} from './components/video/video.component';
 import {VideoControlsComponent} from './components/video/video-controls/video-controls.component';
 import {NavigatorService} from './core/services/navigator/navigator.service';
-import {PoseModule} from './modules/pose/pose.module';
-import {SignWritingModule} from './modules/sign-writing/sign-writing.module';
-import {SettingsModule} from './modules/settings/settings.module';
-import {DetectorModule} from './modules/detector/detector.module';
-import {AnimationModule} from './modules/animation/animation.module';
 import {AnimationComponent} from './components/animation/animation.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PlaygroundComponent} from './pages/playground/playground.component';
@@ -26,7 +21,6 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {Pix2PixModule} from './modules/pix2pix/pix2pix.module';
 import {HumanPoseViewerComponent} from './pages/translate/pose-viewers/human-pose-viewer/human-pose-viewer.component';
 import {environment} from '../environments/environment';
-import {TranslateModule} from './modules/translate/translate.module';
 import {ViewerSelectorComponent} from './pages/translate/spoken-to-signed/viewer-selector/viewer-selector.component';
 import {SkeletonPoseViewerComponent} from './pages/translate/pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 import {SpeechToTextComponent} from './components/speech-to-text/speech-to-text.component';
@@ -42,6 +36,12 @@ import {DropPoseFileComponent} from './pages/translate/drop-pose-file/drop-pose-
 import {TRANSLOCO_LOADER} from '@ngneat/transloco';
 import {HttpLoader} from './core/modules/transloco/transloco.loader';
 import {LazyDialogEntryComponent} from './pages/translate/dialog-entry.component';
+import {SettingsModule} from './modules/settings/settings.module';
+import {TranslateModule} from './modules/translate/translate.module';
+import {PoseModule} from './modules/pose/pose.module';
+import {SignWritingModule} from './modules/sign-writing/sign-writing.module';
+import {DetectorModule} from './modules/detector/detector.module';
+import {AnimationModule} from './modules/animation/animation.module';
 
 @NgModule({
   declarations: [

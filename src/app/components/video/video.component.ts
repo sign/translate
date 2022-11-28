@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
-import {Select, Store} from '@ngxs/store';
-import {combineLatest, firstValueFrom, Observable} from 'rxjs';
+import {Store} from '@ngxs/store';
+import {combineLatest, firstValueFrom} from 'rxjs';
 import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
@@ -19,13 +19,13 @@ import {SignWritingService} from '../../modules/sign-writing/sign-writing.servic
   styleUrls: ['./video.component.scss'],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
-  @Select(state => state.settings) settingsState$: Observable<SettingsStateModel>;
-  @Select(state => state.settings.animatePose) animatePose$: Observable<boolean>;
+  settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
+  animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
 
-  @Select(state => state.video) videoState$: Observable<VideoStateModel>;
-  @Select(state => state.pose) poseState$: Observable<PoseStateModel>;
-  @Select(state => state.signWriting) signWritingState$: Observable<SignWritingStateModel>;
-  @Select(state => state.detector.signingProbability) signingProbability$: Observable<number>;
+  videoState$ = this.store.select<VideoStateModel>(state => state.video);
+  poseState$ = this.store.select<PoseStateModel>(state => state.pose);
+  signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
+  signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
 
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;

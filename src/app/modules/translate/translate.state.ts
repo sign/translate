@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
+import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {
   ChangeTranslation,
   CopySignedLanguageVideo,
@@ -16,7 +16,7 @@ import {
 } from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
-import {EMPTY, Observable, of} from 'rxjs';
+import {EMPTY, Observable} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
@@ -61,9 +61,13 @@ const initialState: TranslateStateModel = {
   defaults: initialState,
 })
 export class TranslateState implements NgxsOnInit {
-  @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
+  poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
 
-  constructor(private service: TranslationService, private swService: SignWritingTranslationService) {}
+  constructor(
+    private store: Store,
+    private service: TranslationService,
+    private swService: SignWritingTranslationService
+  ) {}
 
   ngxsOnInit({dispatch}: StateContext<TranslateStateModel>): any {
     dispatch(ChangeTranslation);

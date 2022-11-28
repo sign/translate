@@ -1,9 +1,9 @@
 import {AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
-import {fromEvent, interval, Observable} from 'rxjs';
+import {fromEvent, interval} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
-import {Select, Store} from '@ngxs/store';
+import {Store} from '@ngxs/store';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
 
 @Component({
@@ -12,7 +12,7 @@ import {transferableImage} from '../../../../core/helpers/image/transferable';
   styleUrls: ['./human-pose-viewer.component.scss'],
 })
 export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {
-  @Select(state => state.settings.appearance) appearance$: Observable<string>;
+  appearance$ = this.store.select<string>(state => state.settings.appearance);
 
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
 

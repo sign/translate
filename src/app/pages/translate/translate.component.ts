@@ -1,7 +1,7 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
-import {Select, Store} from '@ngxs/store';
+import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
-import {fromEvent, Observable} from 'rxjs';
+import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {
@@ -21,7 +21,7 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./translate.component.scss'],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
-  @Select(state => state.translate.spokenToSigned) spokenToSigned$: Observable<boolean>;
+  spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
   @HostBinding('class.keyboard-open') keyboardOpen: boolean;

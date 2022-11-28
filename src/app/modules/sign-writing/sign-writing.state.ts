@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
-import {Observable} from 'rxjs';
+import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {Pose} from '../pose/pose.state';
 import {filter, first, tap} from 'rxjs/operators';
 import {HandsService, HandStateModel} from './hands.service';
@@ -34,10 +33,11 @@ const initialState: SignWritingStateModel = {
 })
 export class SignWritingState implements NgxsOnInit {
   drawSignWriting = false;
-  @Select(state => state.pose.pose) pose$: Observable<Pose>;
-  @Select(state => state.settings.drawSignWriting) drawSignWriting$: Observable<boolean>;
+  pose$ = this.store.select<Pose>(state => state.pose.pose);
+  drawSignWriting$ = this.store.select<boolean>(state => state.settings.drawSignWriting);
 
   constructor(
+    private store: Store,
     private bodyService: BodyService,
     private faceService: FaceService,
     private handsService: HandsService,

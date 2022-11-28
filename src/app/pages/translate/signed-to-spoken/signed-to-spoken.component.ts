@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Select, Store} from '@ngxs/store';
-import {Observable} from 'rxjs';
+import {Store} from '@ngxs/store';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
 import {InputMode} from '../../../modules/translate/translate.state';
 import {SetSignWritingText} from '../../../modules/translate/translate.actions';
@@ -77,10 +76,10 @@ const FAKE_WORDS = [
   styleUrls: ['./signed-to-spoken.component.scss'],
 })
 export class SignedToSpokenComponent implements OnInit {
-  @Select(state => state.video) videoState$: Observable<VideoStateModel>;
-  @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
-  @Select(state => state.translate.spokenLanguage) spokenLanguage$: Observable<string>;
-  @Select(state => state.translate.signWriting) signWriting$: Observable<string[]>;
+  videoState$ = this.store.select<VideoStateModel>(state => state.video);
+  inputMode$ = this.store.select<InputMode>(state => state.translate.inputMode);
+  spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);
+  signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
 
   // This is bullshit for now
   translation = 'Translation';

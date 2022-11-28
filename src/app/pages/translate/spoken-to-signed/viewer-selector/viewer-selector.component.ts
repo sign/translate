@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
-import {Select, Store} from '@ngxs/store';
-import {Observable} from 'rxjs';
+import {Store} from '@ngxs/store';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {takeUntil, tap} from 'rxjs/operators';
 import {ThemePalette} from '@angular/material/core';
@@ -18,7 +17,7 @@ export interface MatFabMenu {
   styleUrls: ['./viewer-selector.component.scss'],
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {
-  @Select(state => state.settings.poseViewer) poseViewerSetting$: Observable<PoseViewerSetting>;
+  poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
 
   buttons: MatFabMenu[] = [
     {id: 'human', icon: 'emoji_people', color: 'warn'},

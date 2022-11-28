@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {InputMode} from '../../../../modules/translate/translate.state';
-import {Select, Store} from '@ngxs/store';
-import {Observable} from 'rxjs';
+import {Store} from '@ngxs/store';
 import {SetInputMode} from '../../../../modules/translate/translate.actions';
 
 @Component({
@@ -10,7 +9,7 @@ import {SetInputMode} from '../../../../modules/translate/translate.actions';
   styleUrls: ['./button.component.scss'],
 })
 export class TranslateInputButtonComponent {
-  @Select(state => state.translate.inputMode) inputMode$: Observable<InputMode>;
+  inputMode$ = this.store.select<InputMode>(state => state.translate.inputMode);
 
   @Input() mode: InputMode;
   @Input() icon: string;

@@ -4,8 +4,8 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {TextToSpeechComponent} from './text-to-speech.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {SimpleChange} from '@angular/core';
-import Spy = jasmine.Spy;
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
+import Spy = jasmine.Spy;
 
 describe('TextToSpeechComponent', () => {
   let component: TextToSpeechComponent;

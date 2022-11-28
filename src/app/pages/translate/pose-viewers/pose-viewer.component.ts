@@ -33,7 +33,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
   static isCustomElementDefined = false;
 
-  protected constructor(private store: Store) {
+  protected constructor(protected store: Store) {
     super();
 
     // Load the `pose-viewer` custom element
