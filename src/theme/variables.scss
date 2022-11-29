@@ -3,22 +3,33 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$app-color: (
-  primary: mat.define-palette(mat.$blue-palette),
-  accent: mat.define-palette(mat.$pink-palette),
-  warn: mat.define-palette(mat.$red-palette),
-  // The warn palette is optional (defaults to red).
-);
+
+$app-accent: mat.define-palette(mat.$pink-palette);
+$app-warn: mat.define-palette(mat.$red-palette);
 $app-typography: mat.define-typography-config(
   $font-family: 'Roboto,Helvetica Neue,sans-serif',
 );
-$app-theme-map: (
-  color: $app-color,
-);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$app-theme: mat.define-light-theme($app-theme-map);
-$app-dark-theme: mat.define-dark-theme($app-theme-map);
+$app-color: (
+  primary: mat.define-palette(mat.$blue-palette),
+  accent: $app-accent,
+  warn: $app-warn,
+);
+$app-theme: mat.define-light-theme(
+  (
+    color: $app-color,
+  )
+);
+$app-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$blue-palette, $default: 400),
+      accent: $app-accent,
+      warn: $app-warn,
+    ),
+  )
+);
 
 $mat-xs: 'screen and (max-width: 599px)';
 $mat-sm: 'screen and (min-width: 600px) and (max-width: 959px)';
