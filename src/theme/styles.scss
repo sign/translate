@@ -19,6 +19,8 @@
   @include mat.sidenav-color($theme);
   @include mat.toolbar-color($theme);
   @include mat.button-color($theme);
+  @include mat.fab-color($theme);
+  @include mat.icon-button-color($theme);
   @include mat.menu-color($theme);
   @include mat.progress-spinner-color($theme);
   @include mat.progress-bar-color($theme);
@@ -85,7 +87,7 @@ app-root {
   margin: 0 auto;
 }
 
-button[mat-icon-button] {
+button[mat-icon-button]:not([color]) {
   color: map-get(mat.$light-theme-foreground-palette, icon);
   @media (prefers-color-scheme: dark) {
     color: map-get(mat.$dark-theme-foreground-palette, icon);

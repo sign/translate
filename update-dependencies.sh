@@ -1,4 +1,4 @@
-ncu -u --reject typescript
+ncu -u --reject filesize,typescript
 npm install
 
 ncu --cwd functions --reject node-fetch,typescript -u
