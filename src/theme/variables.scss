@@ -12,7 +12,7 @@ $app-typography: mat.define-typography-config(
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-color: (
-  primary: mat.define-palette(mat.$blue-palette),
+  primary: mat.define-palette(mat.$blue-palette, $default: 700),
   accent: $app-accent,
   warn: $app-warn,
 );
