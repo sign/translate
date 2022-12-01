@@ -10,7 +10,6 @@
       "detect": "Selectați limba",
       "more": "Mai multe limbi"
     },
-    "feedback": "Trimiteți feedback",
     "input": {
       "text": "Mesaj text",
       "webcam": "Cameră web",
@@ -153,7 +152,8 @@
     "support": {
       "title": "A sustine",
       "feedback": {
-        "title": "Părere"
+        "title": "Părere",
+        "send": "Trimite feedback"
       },
       "about": {
         "title": "Despre"

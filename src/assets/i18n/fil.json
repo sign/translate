@@ -10,7 +10,6 @@
       "detect": "Kilalanin ang Wika",
       "more": "Higit pang mga Wika"
     },
-    "feedback": "Ipadala ang feedback",
     "input": {
       "text": "Text",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Suporta",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Magbigay ng feedback"
       },
       "about": {
         "title": "Tungkol sa"

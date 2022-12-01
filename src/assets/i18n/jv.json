@@ -10,7 +10,6 @@
       "detect": "Deteksi basa",
       "more": "Liyane Basa"
     },
-    "feedback": "Kirim umpan balik",
     "input": {
       "text": "Teks",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Nyokong",
       "feedback": {
-        "title": "Tanggepan"
+        "title": "Tanggepan",
+        "send": "Ngirim saran"
       },
       "about": {
         "title": "Babagan"

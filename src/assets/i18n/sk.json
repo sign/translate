@@ -10,7 +10,6 @@
       "detect": "rozpoznaný jazyk",
       "more": "Viac jazykov"
     },
-    "feedback": "Odoslať spätnú väzbu",
     "input": {
       "text": "Text",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "podpora",
       "feedback": {
-        "title": "Spätná väzba"
+        "title": "Spätná väzba",
+        "send": "Poslať spätnú väzbu"
       },
       "about": {
         "title": "O"

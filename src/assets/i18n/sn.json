@@ -10,7 +10,6 @@
       "detect": "Ziva zita remutauro",
       "more": "More Mitauro"
     },
-    "feedback": "Tumira maonero ako",
     "input": {
       "text": "Mashoko",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Support",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Tumira mhinduro"
       },
       "about": {
         "title": "About"

@@ -10,7 +10,6 @@
       "detect": "Noteikt valodu",
       "more": "Vairāk valodu"
     },
-    "feedback": "Sūtīt atsauksmes",
     "input": {
       "text": "Teksts",
       "webcam": "Tīmekļa kamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Atbalsts",
       "feedback": {
-        "title": "Atsauksmes"
+        "title": "Atsauksmes",
+        "send": "Sūtiet atsauksmes"
       },
       "about": {
         "title": "Par"

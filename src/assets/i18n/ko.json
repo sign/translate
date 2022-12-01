@@ -10,7 +10,6 @@
       "detect": "언어 감지",
       "more": "더 많은 언어"
     },
-    "feedback": "의견 보내기",
     "input": {
       "text": "텍스트",
       "webcam": "웹캠",
@@ -153,7 +152,8 @@
     "support": {
       "title": "지원하다",
       "feedback": {
-        "title": "피드백"
+        "title": "피드백",
+        "send": "피드백 보내기"
       },
       "about": {
         "title": "에 대한"

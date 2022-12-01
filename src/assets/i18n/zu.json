@@ -10,7 +10,6 @@
       "detect": "Hlonza ulimi",
       "more": "Izilimi Eziningi"
     },
-    "feedback": "Thumela impendulo",
     "input": {
       "text": "Umbhalo",
       "webcam": "Ikhamera yewebhu",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Ukusekela",
       "feedback": {
-        "title": "Impendulo"
+        "title": "Impendulo",
+        "send": "Thumela impendulo"
       },
       "about": {
         "title": "Mayelana"

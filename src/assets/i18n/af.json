@@ -10,7 +10,6 @@
       "detect": "Bespeur taal",
       "more": "Meer tale"
     },
-    "feedback": "Stuur terugvoer",
     "input": {
       "text": "Teks",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Ondersteuning",
       "feedback": {
-        "title": "Terugvoer"
+        "title": "Terugvoer",
+        "send": "Stuur terugvoering"
       },
       "about": {
         "title": "Oor"

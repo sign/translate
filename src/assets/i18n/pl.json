@@ -10,7 +10,6 @@
       "detect": "Wykryj język",
       "more": "Więcej języków"
     },
-    "feedback": "Prześlij opinię",
     "input": {
       "text": "Tekst",
       "webcam": "Kamerka internetowa",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Wspierać się",
       "feedback": {
-        "title": "Informacja zwrotna"
+        "title": "Informacja zwrotna",
+        "send": "Wyślij opinię"
       },
       "about": {
         "title": "O"

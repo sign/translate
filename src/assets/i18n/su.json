@@ -10,7 +10,6 @@
       "detect": "Détéksi basa",
       "more": "Langkung Basa"
     },
-    "feedback": "Kintun dulang",
     "input": {
       "text": "Téks",
       "webcam": "Kaméra wéb",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Ngarojong",
       "feedback": {
-        "title": "Eupan balik"
+        "title": "Eupan balik",
+        "send": "Kirim eupan balik"
       },
       "about": {
         "title": "Ngeunaan"

@@ -10,7 +10,6 @@
       "detect": "tautuhi reo",
       "more": "Ētahi atu Reo"
     },
-    "feedback": "Tuku urupare",
     "input": {
       "text": "Kuputuhi",
       "webcam": "Tukutuku",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Tautoko",
       "feedback": {
-        "title": "Urupare"
+        "title": "Urupare",
+        "send": "Tuku urupare"
       },
       "about": {
         "title": "Mō"

@@ -10,7 +10,6 @@
       "detect": "Fumana ulwimi",
       "more": "Iilwimi ezingakumbi"
     },
-    "feedback": "Thumela ingxelo",
     "input": {
       "text": "Umbhalo",
       "webcam": "Iwebcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Inkxaso",
       "feedback": {
-        "title": "Ingxelo"
+        "title": "Ingxelo",
+        "send": "Ukuzisa impendulo"
       },
       "about": {
         "title": "Malunga"

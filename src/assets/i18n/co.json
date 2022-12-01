@@ -10,7 +10,6 @@
       "detect": "Détecter la langue",
       "more": "Più Lingue"
     },
-    "feedback": "Envoyer des commentaires",
     "input": {
       "text": "Testu",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Supportu",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Mandate feedback"
       },
       "about": {
         "title": "À propositu"

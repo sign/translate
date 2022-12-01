@@ -10,7 +10,6 @@
       "detect": "Registrer sprog",
       "more": "Flere sprog"
     },
-    "feedback": "Send feedback",
     "input": {
       "text": "Tekst",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Support",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Send feedback"
       },
       "about": {
         "title": "Om"

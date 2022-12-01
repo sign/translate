@@ -10,7 +10,6 @@
       "detect": "Greina tungumál",
       "more": "Fleiri tungumál"
     },
-    "feedback": "Senda ábendingu",
     "input": {
       "text": "Texti",
       "webcam": "Vefmyndavél",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Stuðningur",
       "feedback": {
-        "title": "Endurgjöf"
+        "title": "Endurgjöf",
+        "send": "Senda athugasemdir"
       },
       "about": {
         "title": "Um"

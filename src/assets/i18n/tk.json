@@ -10,7 +10,6 @@
       "detect": "Определить язык",
       "more": "Has köp dil"
     },
-    "feedback": "Отправить отзыв",
     "input": {
       "text": "Текст",
       "webcam": "Web kamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Goldaw",
       "feedback": {
-        "title": "Seslenme"
+        "title": "Seslenme",
+        "send": "Ters jogap iberiň"
       },
       "about": {
         "title": "Takmynan"

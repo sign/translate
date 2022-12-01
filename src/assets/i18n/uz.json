@@ -10,7 +10,6 @@
       "detect": "Avtomatik aniqlash",
       "more": "Ko'proq tillar"
     },
-    "feedback": "Fikr-mulohaza",
     "input": {
       "text": "Matn",
       "webcam": "Vebkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Qo'llab-quvvatlash",
       "feedback": {
-        "title": "Fikr-mulohaza"
+        "title": "Fikr-mulohaza",
+        "send": "Fikr-mulohaza yuboring"
       },
       "about": {
         "title": "Haqida"

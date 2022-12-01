@@ -10,7 +10,6 @@
       "detect": "Detect language",
       "more": "ʻŌlelo hou aku"
     },
-    "feedback": "Send feedback",
     "input": {
       "text": "Text",
       "webcam": "Kamepa pūnaewele",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Kākoʻo",
       "feedback": {
-        "title": "Manaʻo manaʻo"
+        "title": "Manaʻo manaʻo",
+        "send": "Hoʻouna manaʻo"
       },
       "about": {
         "title": "E pili ana"

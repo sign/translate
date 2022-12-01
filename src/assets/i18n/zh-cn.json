@@ -10,7 +10,6 @@
       "detect": "检测语言",
       "more": "更多语言"
     },
-    "feedback": "发送反馈",
     "input": {
       "text": "文字",
       "webcam": "摄像头",
@@ -153,7 +152,8 @@
     "support": {
       "title": "支持",
       "feedback": {
-        "title": "反馈"
+        "title": "反馈",
+        "send": "发送反馈"
       },
       "about": {
         "title": "关于"

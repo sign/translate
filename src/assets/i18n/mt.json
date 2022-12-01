@@ -10,7 +10,6 @@
       "detect": "Induna bil-lingwa",
       "more": "Aktar Lingwi"
     },
-    "feedback": "Ibgħat feedback",
     "input": {
       "text": "Test",
       "webcam": "Kamera tal-Web",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Appoġġ",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Ibgħat feedback"
       },
       "about": {
         "title": "Dwar"

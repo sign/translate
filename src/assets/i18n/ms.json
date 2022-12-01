@@ -10,7 +10,6 @@
       "detect": "Kesan bahasa",
       "more": "Lebih Banyak Bahasa"
     },
-    "feedback": "Hantar maklum balas",
     "input": {
       "text": "Teks",
       "webcam": "Kamera web",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Sokongan",
       "feedback": {
-        "title": "Maklum balas"
+        "title": "Maklum balas",
+        "send": "Hantar maklumbalas"
       },
       "about": {
         "title": "Tentang"

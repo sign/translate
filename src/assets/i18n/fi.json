@@ -10,7 +10,6 @@
       "detect": "Tunnista kieli",
       "more": "Lisää kieliä"
     },
-    "feedback": "Lähetä palautetta",
     "input": {
       "text": "Teksti",
       "webcam": "Verkkokamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Tuki",
       "feedback": {
-        "title": "Palaute"
+        "title": "Palaute",
+        "send": "Lähetä palautetta"
       },
       "about": {
         "title": "Noin"

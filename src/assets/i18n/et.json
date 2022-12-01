@@ -10,7 +10,6 @@
       "detect": "Tuvasta keel",
       "more": "Rohkem keeli"
     },
-    "feedback": "Saada tagasisidet",
     "input": {
       "text": "Tekst",
       "webcam": "Veebikaamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Toetus",
       "feedback": {
-        "title": "Tagasiside"
+        "title": "Tagasiside",
+        "send": "Saada tagasisidet"
       },
       "about": {
         "title": "Umbes"

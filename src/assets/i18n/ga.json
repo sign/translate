@@ -10,7 +10,6 @@
       "detect": "Aimsigh teanga",
       "more": "Tuilleadh Teangacha"
     },
-    "feedback": "Seol aiseolas",
     "input": {
       "text": "Téacs",
       "webcam": "Ceamara gréasáin",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Tacaíocht",
       "feedback": {
-        "title": "Aiseolas"
+        "title": "Aiseolas",
+        "send": "Seol Aiseolas"
       },
       "about": {
         "title": "Faoi"

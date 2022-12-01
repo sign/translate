@@ -10,7 +10,6 @@
       "detect": "Dili algıla",
       "more": "Diğer Diller"
     },
-    "feedback": "Geri bildirim gönder",
     "input": {
       "text": "Metin",
       "webcam": "Web kamerası",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Destek",
       "feedback": {
-        "title": "Geri bildirim"
+        "title": "Geri bildirim",
+        "send": "Geribildirim yolla"
       },
       "about": {
         "title": "Hakkında"

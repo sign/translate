@@ -10,7 +10,6 @@
       "detect": "Dili seç",
       "more": "Daha çox dil"
     },
-    "feedback": "Rəy göndər",
     "input": {
       "text": "Mətn",
       "webcam": "Vebkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Dəstək",
       "feedback": {
-        "title": "Əlaqə"
+        "title": "Əlaqə",
+        "send": "Rəy göndərin"
       },
       "about": {
         "title": "Haqqında"

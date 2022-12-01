@@ -10,7 +10,6 @@
       "detect": "Hauteman hizkuntza",
       "more": "Hizkuntza gehiago"
     },
-    "feedback": "Bidali oharrak",
     "input": {
       "text": "Testuak",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Laguntza",
       "feedback": {
-        "title": "Iritzia"
+        "title": "Iritzia",
+        "send": "Bidali iritzia"
       },
       "about": {
         "title": "Buruz"

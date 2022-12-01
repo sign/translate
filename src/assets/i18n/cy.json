@@ -10,7 +10,6 @@
       "detect": "Synhwyro iaith",
       "more": "Mwy o Ieithoedd"
     },
-    "feedback": "Anfon adborth",
     "input": {
       "text": "Testun",
       "webcam": "Gwegamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Cefnogaeth",
       "feedback": {
-        "title": "Adborth"
+        "title": "Adborth",
+        "send": "Anfon adborth"
       },
       "about": {
         "title": "Ynghylch"

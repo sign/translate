@@ -10,7 +10,6 @@
       "detect": "Identifiera språk",
       "more": "Flera språk"
     },
-    "feedback": "Skicka feedback",
     "input": {
       "text": "Text",
       "webcam": "Webbkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Stöd",
       "feedback": {
-        "title": "Respons"
+        "title": "Respons",
+        "send": "Skicka synpunkter"
       },
       "about": {
         "title": "Handla om"

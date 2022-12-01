@@ -10,7 +10,6 @@
       "detect": "Fufuzani chilankhulo",
       "more": "Zinenero Zambiri"
     },
-    "feedback": "Tumizani maganizo anu",
     "input": {
       "text": "Malemba",
       "webcam": "Webukamu",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Thandizo",
       "feedback": {
-        "title": "Ndemanga"
+        "title": "Ndemanga",
+        "send": "Tumizani ndemanga"
       },
       "about": {
         "title": "Za"

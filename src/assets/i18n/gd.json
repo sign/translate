@@ -10,7 +10,6 @@
       "detect": "Mothaich dhan chànan",
       "more": "Tuilleadh Chànanan"
     },
-    "feedback": "Innis dhuinn dè do bheachd",
     "input": {
       "text": "Teacs",
       "webcam": "Camara-lìn",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Taic",
       "feedback": {
-        "title": "Fios air ais"
+        "title": "Fios air ais",
+        "send": "Cuir fios air ais"
       },
       "about": {
         "title": "Mu dheidhinn"

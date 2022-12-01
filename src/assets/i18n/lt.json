@@ -10,7 +10,6 @@
       "detect": "Nustatyti kalbą",
       "more": "Daugiau kalbų"
     },
-    "feedback": "Siųsti atsiliepimą",
     "input": {
       "text": "Tekstas",
       "webcam": "Internetinė kamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Palaikymas",
       "feedback": {
-        "title": "Atsiliepimas"
+        "title": "Atsiliepimas",
+        "send": "Siųsti atsiliepimą"
       },
       "about": {
         "title": "Apie"

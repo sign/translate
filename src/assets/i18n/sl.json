@@ -10,7 +10,6 @@
       "detect": "Zaznaj jezik",
       "more": "Več jezikov"
     },
-    "feedback": "Pošljite povratne informacije",
     "input": {
       "text": "Besedilo",
       "webcam": "Spletna kamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Podpora",
       "feedback": {
-        "title": "Povratne informacije"
+        "title": "Povratne informacije",
+        "send": "Pošlji povratno informacijo"
       },
       "about": {
         "title": "O tem"

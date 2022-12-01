@@ -10,7 +10,6 @@
       "detect": "ٻولي کوجيو",
       "more": "وڌيڪ ٻوليون"
     },
-    "feedback": "جوابي راءِ ڏيو",
     "input": {
       "text": "متن",
       "webcam": "ويب ڪيم",
@@ -153,7 +152,8 @@
     "support": {
       "title": "حمايت",
       "feedback": {
-        "title": "راءِ"
+        "title": "راءِ",
+        "send": "موٽ موڪليو"
       },
       "about": {
         "title": "بابت"

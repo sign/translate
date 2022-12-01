@@ -10,7 +10,6 @@
       "detect": "言語を検出する",
       "more": "その他の言語"
     },
-    "feedback": "フィードバックを送信",
     "input": {
       "text": "テキスト",
       "webcam": "ウェブカメラ",
@@ -153,7 +152,8 @@
     "support": {
       "title": "サポート",
       "feedback": {
-        "title": "フィードバック"
+        "title": "フィードバック",
+        "send": "フィードバックを送信"
       },
       "about": {
         "title": "約"

@@ -10,7 +10,6 @@
       "detect": "Gimatikud ang sinultian",
       "more": "Dugang Pinulongan"
     },
-    "feedback": "Padal-i og ikasulti",
     "input": {
       "text": "Teksto",
       "webcam": "webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Suporta",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Ipadala ang feedback"
       },
       "about": {
         "title": "Mahitungod sa"

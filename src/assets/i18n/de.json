@@ -10,7 +10,6 @@
       "detect": "Sprache erkennen",
       "more": "Mehr Sprachen"
     },
-    "feedback": "Feedback geben",
     "input": {
       "text": "Text",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Die Unterstützung",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Feedback abschicken"
       },
       "about": {
         "title": "Um"

@@ -10,7 +10,6 @@
       "detect": "Dili algıla",
       "more": "Zêdetir Ziman"
     },
-    "feedback": "Geri bildirim gönder",
     "input": {
       "text": "Metin",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Alîkarî",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Bersiv bişînin"
       },
       "about": {
         "title": "Ji dor"

@@ -10,7 +10,6 @@
       "detect": "Gjenkjenn språk",
       "more": "Flere språk"
     },
-    "feedback": "Send tilbakemelding",
     "input": {
       "text": "Tekst",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Brukerstøtte",
       "feedback": {
-        "title": "Tilbakemelding"
+        "title": "Tilbakemelding",
+        "send": "Send tilbakemelding"
       },
       "about": {
         "title": "Om"

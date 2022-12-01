@@ -10,7 +10,6 @@
       "detect": "د ژبې موندل",
       "more": "نورې ژبې"
     },
-    "feedback": "کتنې ولیږئ",
     "input": {
       "text": "متن",
       "webcam": "ویب کیم",
@@ -153,7 +152,8 @@
     "support": {
       "title": "ملاتړ",
       "feedback": {
-        "title": "فیډبیک"
+        "title": "فیډبیک",
+        "send": "نظر واستوئ"
       },
       "about": {
         "title": "په اړه"

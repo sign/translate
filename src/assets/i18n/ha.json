@@ -10,7 +10,6 @@
       "detect": "Tsinkayo harshe",
       "more": "Ƙarin Harsuna"
     },
-    "feedback": "Aika ta&#39;aliƙi",
     "input": {
       "text": "Rubutu",
       "webcam": "Kamara ta yanar gizo",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Taimako",
       "feedback": {
-        "title": "Jawabin"
+        "title": "Jawabin",
+        "send": "Aika martani"
       },
       "about": {
         "title": "Game da"

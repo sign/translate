@@ -10,7 +10,6 @@
       "detect": "Zbulo gjuhën",
       "more": "Më shumë gjuhë"
     },
-    "feedback": "Dërgo reagimet",
     "input": {
       "text": "Teksti",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Mbështetje",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Dërgo komente"
       },
       "about": {
         "title": "Rreth"

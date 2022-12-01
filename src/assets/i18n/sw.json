@@ -10,7 +10,6 @@
       "detect": "Tambua lugha",
       "more": "Lugha Zaidi"
     },
-    "feedback": "Tuma maoni",
     "input": {
       "text": "Matini",
       "webcam": "Kamera ya wavuti",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Msaada",
       "feedback": {
-        "title": "Maoni"
+        "title": "Maoni",
+        "send": "Tuma maoni"
       },
       "about": {
         "title": "Kuhusu"

@@ -10,7 +10,6 @@
       "detect": "Fumana puo",
       "more": "Lipuo Tse Eketsehileng"
     },
-    "feedback": "Romela maikutlo a hau",
     "input": {
       "text": "Mongolo",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Tšehetso",
       "feedback": {
-        "title": "Maikutlo"
+        "title": "Maikutlo",
+        "send": "Romella maikutlo"
       },
       "about": {
         "title": "About"

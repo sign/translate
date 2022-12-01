@@ -10,7 +10,6 @@
       "detect": "偵測語言",
       "more": "更多語言"
     },
-    "feedback": "提供意見",
     "input": {
       "text": "文字",
       "webcam": "攝像頭",
@@ -153,7 +152,8 @@
     "support": {
       "title": "支持",
       "feedback": {
-        "title": "反饋"
+        "title": "反饋",
+        "send": "發送反饋"
       },
       "about": {
         "title": "關於"

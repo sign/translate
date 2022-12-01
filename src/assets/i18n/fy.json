@@ -10,7 +10,6 @@
       "detect": "Taal werkenne",
       "more": "Mear talen"
     },
-    "feedback": "Stjoer weromkeppeling",
     "input": {
       "text": "Tekst",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Stypje",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Kommentaar ferstjoere"
       },
       "about": {
         "title": "Oer"

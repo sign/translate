@@ -10,7 +10,6 @@
       "detect": "Ṣawari ede",
       "more": "Awọn ede diẹ sii"
     },
-    "feedback": "Fi ijabọ ranṣẹ",
     "input": {
       "text": "Àyọkà",
       "webcam": "Kamẹra wẹẹbu",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Atilẹyin",
       "feedback": {
-        "title": "Esi"
+        "title": "Esi",
+        "send": "Firanṣẹ esi"
       },
       "about": {
         "title": "Nipa"

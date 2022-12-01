@@ -10,7 +10,6 @@
       "detect": "Haminany fiteny",
       "more": "Fiteny bebe kokoa"
     },
-    "feedback": "Handefa valin-kevitra",
     "input": {
       "text": "Soratra",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "MANAMPY",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Mandefa hevitra"
       },
       "about": {
         "title": "About"

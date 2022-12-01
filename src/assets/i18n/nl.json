@@ -10,7 +10,6 @@
       "detect": "Taal herkennen",
       "more": "Meer talen"
     },
-    "feedback": "Feedback sturen",
     "input": {
       "text": "Tekst",
       "webcam": "webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Steun",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Stuur feedback"
       },
       "about": {
         "title": "Over"

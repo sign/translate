@@ -10,7 +10,6 @@
       "detect": "Nyelvfelismerés",
       "more": "További nyelvek"
     },
-    "feedback": "Visszajelzés küldése",
     "input": {
       "text": "Szöveg",
       "webcam": "Webkamera",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Támogatás",
       "feedback": {
-        "title": "Visszacsatolás"
+        "title": "Visszacsatolás",
+        "send": "Visszajelzés küldése"
       },
       "about": {
         "title": "Ról ről"

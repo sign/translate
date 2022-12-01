@@ -10,7 +10,6 @@
       "detect": "ቋንቋ  አግኝ",
       "more": "ተጨማሪ ቋንቋዎች"
     },
-    "feedback": "ግብረ-መልስ ላክ",
     "input": {
       "text": "ጽሑፍ",
       "webcam": "የድረገፅ ካሜራ",
@@ -153,7 +152,8 @@
     "support": {
       "title": "ድጋፍ",
       "feedback": {
-        "title": "ግብረ መልስ"
+        "title": "ግብረ መልስ",
+        "send": "ግብረ - መልስ ላክ"
       },
       "about": {
         "title": "ስለ"

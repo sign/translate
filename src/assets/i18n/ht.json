@@ -10,7 +10,6 @@
       "detect": "Detekte lang",
       "more": "Plis Lang"
     },
-    "feedback": "Voye remak w",
     "input": {
       "text": "Tèks",
       "webcam": "Webcam",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Sipò",
       "feedback": {
-        "title": "Feedback"
+        "title": "Feedback",
+        "send": "Voye fidbak"
       },
       "about": {
         "title": "Konsènan"

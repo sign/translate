@@ -10,7 +10,6 @@
       "detect": "Detectar idioma",
       "more": "Máis Idiomas"
     },
-    "feedback": "Enviar comentarios",
     "input": {
       "text": "Texto",
       "webcam": "Cámara web",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Apoiar",
       "feedback": {
-        "title": "Comentarios"
+        "title": "Comentarios",
+        "send": "Enviar comentarios"
       },
       "about": {
         "title": "Sobre"

@@ -10,7 +10,6 @@
       "detect": "Chọpụta asụsụ",
       "more": "Asụsụ ndị ọzọ"
     },
-    "feedback": "Zite nzaghachi",
     "input": {
       "text": "Ederede",
       "webcam": "Igwefoto webụ",
@@ -153,7 +152,8 @@
     "support": {
       "title": "Nkwado",
       "feedback": {
-        "title": "Nzaghachi"
+        "title": "Nzaghachi",
+        "send": "Zipu nzaghachi"
       },
       "about": {
         "title": "Ihe gbasara"
