@@ -73,8 +73,10 @@ export class VideoState implements NgxsOnInit {
     try {
       const camera = await this.navigator.getCamera({
         facingMode: 'user',
+        aspectRatio: 1,
         width: {min: 1280},
         height: {min: 720},
+        frameRate: 120, // Used to minimize motion blur
       });
 
       const videoTrack = camera.getVideoTracks()[0];

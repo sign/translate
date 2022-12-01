@@ -4,7 +4,7 @@ import {env} from './env';
 
 const config: CapacitorConfig = {
   appId: 'mt.sign.translate',
-  appName: 'Sign Translate',
+  appName: 'sign',
   webDir: 'dist/sign-translate/browser',
   bundledWebRuntime: false,
   server: getServer(),
@@ -19,6 +19,7 @@ const config: CapacitorConfig = {
   },
   android: {
     path: 'android',
+    useLegacyBridge: false,
   },
 };
 

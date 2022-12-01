@@ -11,10 +11,12 @@ async function main() {
   await project.android.setVersionName(xpackage.version);
   const [major, minor, patch] = xpackage.version.split('.').map(Number);
   await project.android.setVersionCode(major * 10000 + minor * 100 + patch);
+  await project.android.setAppName(capacitorConfig.appName);
 
   for (const build of ['Debug', 'Release']) {
     await project.ios.setBundleId('App', build, capacitorConfig.appId);
     await project.ios.setVersion('App', build, xpackage.version);
+    await project.ios.setDisplayName('App', build, capacitorConfig.appName);
   }
 
   await project.commit();
