@@ -19,18 +19,15 @@ p {
 
 #video-container {
   height: 100%;
+  overflow: hidden;
 
   video {
     display: none;
   }
 
   canvas {
-    transform-origin: top left;
+    transform-origin: top;
   }
-}
-
-.flip {
-  transform: scaleX(-1);
 }
 
 app-video-controls {

@@ -7,7 +7,7 @@
 
     <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
       <video #video autoplay loop muted playsinline crossorigin="anonymous"></video>
-      <canvas #canvas class="flip" height="100%" width="100%"></canvas>
+      <canvas #canvas height="100%" width="100%"></canvas>
       <div #stats></div>
     </div>
 
