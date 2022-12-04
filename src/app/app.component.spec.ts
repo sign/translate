@@ -35,37 +35,30 @@ describe('AppComponent', () => {
     expect(a11y).toHaveNoViolations();
   });
 
-  it('should add embed class on body if embed url param is included', async () => {
+  it('should add embed class on body if embed url param is included', () => {
     expect(document.body.className.includes('embed')).toEqual(false);
     component.urlParams.set('embed', '');
     component.checkURLEmbedding();
     expect(document.body.className.includes('embed')).toEqual(true);
   });
 
-  it('should set spoken language text url param is included', async () => {
+  it('should set spoken language text url param is included', () => {
     component.urlParams.set('text', '123');
     const dispatchSpy = spyOn(store, 'dispatch');
     component.checkURLText();
     expect(dispatchSpy).toHaveBeenCalledWith(new SetSpokenLanguageText('123'));
   });
 
-  it('language change to german should set direction ltr', async () => {
+  it('language change to german should set direction ltr', () => {
     const transloco = TestBed.inject(TranslocoService);
     transloco.setActiveLang('de');
     expect(document.dir).toEqual('ltr');
   });
 
-  it('language change to hebrew should set direction rtl', async () => {
+  it('language change to hebrew should set direction rtl', () => {
     const transloco = TestBed.inject(TranslocoService);
     transloco.setActiveLang('he');
     expect(document.dir).toEqual('rtl');
     document.dir = 'ltr'; // Restore state if succeeded
   });
-
-  // it('should render app', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('sign-translate app is running!');
-  // });
 });

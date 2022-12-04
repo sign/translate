@@ -2,8 +2,6 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
 
-const SpeechRecognition = globalThis.SpeechRecognition || globalThis.webkitSpeechRecognition;
-
 @Component({
   selector: 'app-speech-to-text',
   templateUrl: './speech-to-text.component.html',
@@ -13,18 +11,19 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   @Input() lang = 'en';
   @Output() changeText: EventEmitter<string> = new EventEmitter<string>();
 
+  SpeechRecognition = globalThis.SpeechRecognition || globalThis.webkitSpeechRecognition;
   speechRecognition!: SpeechRecognition;
 
   supportError = null;
   isRecording = false;
 
   ngOnInit(): void {
-    if (!SpeechRecognition) {
+    if (!this.SpeechRecognition) {
       this.supportError = 'browser-not-supported';
       return;
     }
 
-    this.speechRecognition = new SpeechRecognition();
+    this.speechRecognition = new this.SpeechRecognition();
     this.speechRecognition.interimResults = true;
     this.speechRecognition.lang = this.lang;
 

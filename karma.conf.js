@@ -1,6 +1,9 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+const coverageDir = require('path').join(__dirname, './coverage/');
+console.log('coverageDir', coverageDir);
+
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -29,7 +32,7 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/'),
+      dir: coverageDir,
       subdir: '.',
       reporters: [{type: 'html'}, {type: 'text-summary'}, {type: 'lcovonly'}],
     },
