@@ -1,12 +1,15 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {BaseSettingsComponent} from '../../../modules/settings/settings.component';
 import {Store} from '@ngxs/store';
 
 @Component({
   templateUrl: './settings-appearance.component.html',
+  selector: 'app-settings-appearance',
   styleUrls: ['./settings-appearance.component.scss'],
 })
 export class SettingsAppearanceComponent extends BaseSettingsComponent {
+  @Input() scale = 1;
+
   appearances = [
     {src: 'assets/appearance/maayan.png', title: 'Maayan', value: '#ffc8c8', disabled: false},
     {src: 'assets/appearance/amit.png', title: 'Amit', value: '#c8c8ff', disabled: false},

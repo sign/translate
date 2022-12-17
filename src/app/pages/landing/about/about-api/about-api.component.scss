@@ -1,0 +1,35 @@
+@import '../../../../../theme/variables';
+
+.api-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @media #{$mat-lt-md} {
+    flex-direction: column;
+  }
+
+  > div {
+    flex: 1;
+
+    &.video-container {
+      max-width: 512px;
+    }
+  }
+}
+
+pre {
+  background: #282828;
+  color: #66ff66;
+  border-radius: 16px;
+  padding: 32px;
+  direction: ltr;
+}
+
+video {
+  background: #dddddd22;
+  border-radius: 16px;
+  max-width: 512px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}

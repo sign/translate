@@ -4,7 +4,7 @@
     <span>{{ t('title') }}</span>
   </mat-toolbar>
 
-  <div id="container">
+  <div class="container">
     <button mat-raised-button color="primary" (click)="bench()">Start Benchmarking!</button>
 
     <mat-card *ngFor="let stat of stats | keyvalue">

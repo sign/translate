@@ -9,6 +9,13 @@
         {{ 'legal.' + page + '.title' | transloco }}
       </a>
     </mat-nav-list>
+
+    <mat-divider></mat-divider>
+    <mat-toolbar>
+      <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">
+        {{ 'landing.try' | transloco }}
+      </a>
+    </mat-toolbar>
   </mat-drawer>
   <mat-drawer-content>
     <mat-toolbar id="header">

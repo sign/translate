@@ -5,11 +5,14 @@ import {AboutComponent} from './about.component';
 import {AboutHeroComponent} from './about-hero/about-hero.component';
 import {AboutDirectionComponent} from './about-direction/about-direction.component';
 import {AboutOfflineComponent} from './about-offline/about-offline.component';
-import {AboutSharingComponent} from './about-sharing/about-sharing.component';
 import {StoresComponent} from '../../../components/stores/stores.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {AboutAppearanceComponent} from './about-appearance/about-appearance.component';
+import {AboutBenefitsComponent} from './about-benefits/about-benefits.component';
+import {AboutApiComponent} from './about-api/about-api.component';
+import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
+import {SettingsPageModule} from '../../settings/settings.module';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -21,12 +24,13 @@ describe('AboutComponent', () => {
         AboutComponent,
         AboutHeroComponent,
         AboutAppearanceComponent,
+        AboutBenefitsComponent,
         AboutDirectionComponent,
+        AboutApiComponent,
         AboutOfflineComponent,
-        AboutSharingComponent,
         StoresComponent,
       ],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, AppNgxsModule, SettingsPageModule],
     }).compileComponents();
   });
 

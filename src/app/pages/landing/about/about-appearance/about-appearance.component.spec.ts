@@ -3,6 +3,8 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AboutAppearanceComponent} from './about-appearance.component';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
+import {SettingsPageModule} from '../../../settings/settings.module';
+import {AppNgxsModule} from '../../../../core/modules/ngxs/ngxs.module';
 
 describe('AboutAppearanceComponent', () => {
   let component: AboutAppearanceComponent;
@@ -11,7 +13,7 @@ describe('AboutAppearanceComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutAppearanceComponent],
-      imports: [AppTranslocoTestingModule],
+      imports: [AppTranslocoTestingModule, SettingsPageModule, AppNgxsModule],
     }).compileComponents();
   });
 

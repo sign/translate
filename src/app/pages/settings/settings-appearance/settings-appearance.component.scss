@@ -1,13 +1,13 @@
 #appearance-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 70px);
+  grid-template-columns: repeat(auto-fit, calc(70px * var(--appearance-scale)));
   gap: 1em;
 
   button {
     border: 0 solid white; // For the animation
     border-radius: 4px;
-    width: 5em;
-    height: 5em;
+    width: calc(5em * var(--appearance-scale));
+    height: calc(5em * var(--appearance-scale));
     transition: border 0.2s;
 
     &.image {
@@ -23,6 +23,10 @@
 
     &[disabled] {
       filter: grayscale(1);
+    }
+
+    mat-icon {
+      scale: var(--appearance-scale);
     }
   }
 }

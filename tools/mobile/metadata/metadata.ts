@@ -88,7 +88,7 @@ async function makeIOS(
   };
   await screenshot(page, cViewport, imgPath(locale, cViewport, 'main'));
   // Copy main page for the about page
-  if (device === 'iPhone 13 Pro') {
+  if (device === 'iPhone 14 Pro') {
     fs.copyFileSync(imgPath(locale, cViewport, 'main'), `${assetsDir}/iphone/${pageLang}.png`);
   }
 

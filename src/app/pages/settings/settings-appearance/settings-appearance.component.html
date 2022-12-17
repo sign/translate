@@ -1,5 +1,5 @@
 <ng-container *transloco="let t; read: 'settings.other.appearance'">
-  <div id="appearance-options" *ngIf="settingsState$ | async as settings">
+  <div id="appearance-options" *ngIf="settingsState$ | async as settings" [style.--appearance-scale]="scale">
     <button
       mat-fab
       *ngFor="let appearance of appearances"
@@ -20,9 +20,9 @@
     </button>
   </div>
 
-  <h5 style="padding: 1.5em">
+  <p style="padding: 1.5em">
     <u>Note</u>: Supporting custom photos is possible.<br />
     However, not a current priority. <br />
     <a href="https://github.com/sign/translate/issues/33" target="_blank">GitHub Issue</a>.
-  </h5>
+  </p>
 </ng-container>
