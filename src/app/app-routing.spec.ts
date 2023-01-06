@@ -12,12 +12,22 @@ describe('AppRoutingModule', () => {
     });
   });
 
-  it('should load about page lazy module ', () => {
-    router = TestBed.inject(Router);
-    router.initialNavigation();
+  const pages = {
+    '/': 'translate',
+    '/playground': 'playground',
+    '/about': 'about',
+    '/benchmark': 'benchmark',
+    '/legal': 'legal',
+  };
 
-    router.navigate(['/about']);
-    const route = router.getCurrentNavigation();
-    expect(String(route.extractedUrl)).toEqual('/about');
-  });
+  for (const [path, page] of Object.entries(pages)) {
+    it(`should load ${page} page`, () => {
+      router = TestBed.inject(Router);
+      router.initialNavigation();
+
+      router.navigate([path]);
+      const route = router.getCurrentNavigation();
+      expect(String(route.extractedUrl)).toEqual(path);
+    });
+  }
 });
