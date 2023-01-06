@@ -38,7 +38,7 @@
     }
   },
   "landing": {
-    "try": "ESSAYER GOOGLE TRADUCTION",
+    "try": "Essayer Sign Traduction",
     "about": {
       "title": "À propos",
       "hero": {
@@ -79,7 +79,7 @@
   },
   "legal": {
     "terms": {
-      "title": "Conditions d&#39;utilisation"
+      "title": "Conditions d'utilisation"
     },
     "privacy": {
       "title": "Confidentialité"

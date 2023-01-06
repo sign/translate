@@ -36,5 +36,6 @@ export {SettingsPageComponent};
     CdkTreeModule,
   ],
   bootstrap: [SettingsPageComponent],
+  exports: [SettingsAppearanceComponent],
 })
 export class SettingsPageModule {}

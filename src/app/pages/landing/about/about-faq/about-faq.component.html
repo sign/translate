@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Frequently Asked Questions</h2>
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let question of questions">
+      <mat-expansion-panel-header>
+        {{ question.question }}
+      </mat-expansion-panel-header>
+      <p>{{ question.answer }}</p>
+      <ol *ngIf="question.steps">
+        <li *ngFor="let step of question.steps">
+          {{ step }}
+        </li>
+      </ol>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

@@ -17,7 +17,7 @@
     },
     "swapLanguages": "Aqleb il-lingwi",
     "upload": {
-      "types": "Tella&#39; .mp4, .ogv, jew .webm.",
+      "types": "Tella' .mp4, .ogv, jew .webm.",
       "browse": "Ibbrawżja l-kompjuter tiegħek",
       "title": "Agħżel vidjo"
     },
@@ -65,7 +65,7 @@
     }
   },
   "text-to-speech": {
-    "play": "Isma&#39;",
+    "play": "Isma'",
     "cancel": "Waqfa",
     "unavailable": "L-output tal-vuċi mhuwiex disponibbli għall-lingwa magħżula"
   },

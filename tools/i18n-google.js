@@ -81,6 +81,9 @@ async function applyGoogleLanguage(language, filePath) {
     .map(m => m[1])
     .slice(5);
 
+  let tryButton = /<a href="https:\/\/translate\.google\.com.*?"\s*title="(.*?)"/.exec(about)[1];
+  tryButton = tryButton.replace('Google', 'Sign').replace('GOOGLE', 'SIGN');
+
   const extraSuggestion = {
     keyboard: {
       ctrl: ctrl.trim(),
@@ -93,7 +96,7 @@ async function applyGoogleLanguage(language, filePath) {
       },
     },
     landing: {
-      try: /<a href="https:\/\/translate\.google\.com.*?"\s*title="(.*?)"/.exec(about)[1],
+      try: tryButton,
     },
   };
   const extraForce = {

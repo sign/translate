@@ -4,6 +4,7 @@ mat-toolbar {
   &#header {
     position: sticky;
     top: 0;
+    z-index: 2;
   }
 
   nav {
@@ -12,9 +13,11 @@ mat-toolbar {
   }
 
   @media #{$mat-lt-md} {
-    nav {
+    nav,
+    a {
       display: none;
     }
+
     span {
       flex: 1 1 auto;
     }

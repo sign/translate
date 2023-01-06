@@ -29,6 +29,7 @@
   @include mat.tabs-color($theme);
   @include mat.dialog-color($theme);
   @include mat.tree-color($theme);
+  @include mat.expansion-theme($theme);
 }
 
 // Include typography and density styles once, for light and dark modes
@@ -81,7 +82,7 @@ app-root {
   height: 100%;
 }
 
-#container {
+.container {
   width: auto;
   max-width: 1280px;
   margin: 0 auto;

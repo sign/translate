@@ -45,6 +45,12 @@ describe('LanguageSelectorComponent', () => {
       for (const req of requests) {
         expect(req.ok).toBeTruthy();
       }
+
+      const jsons = await Promise.all(requests.map(r => r.json()));
+      for (const json of jsons) {
+        const text = JSON.stringify(json);
+        expect(text).not.toContain('&#'); // No URL Encoded characters
+      }
     });
   }
 });
