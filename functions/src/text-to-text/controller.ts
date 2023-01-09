@@ -74,6 +74,7 @@ export class TextToTextTranslationEndpoint {
 
         result = cache.translation;
         return {
+          ...cache,
           counter: cache.counter + 1,
           timestamp: Date.now(),
         };

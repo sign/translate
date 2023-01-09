@@ -10,7 +10,6 @@
       "detect": "Garo luuqada",
       "more": "Luuqado badan"
     },
-    "feedback": "Soo-dir ra'yi-celin",
     "input": {
       "text": "Qoraal",
       "webcam": "Webcam",
@@ -154,7 +153,7 @@
       "title": "Taageero",
       "feedback": {
         "title": "Jawaab celin",
-        "send": "Soo dir jawaab celin"
+        "send": "Soo-dir ra'yi-celin"
       },
       "about": {
         "title": "Ku saabsan"
