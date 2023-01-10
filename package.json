@@ -64,7 +64,7 @@
     "@ngxs/store": "3.7.6",
     "@sign-mt/browsermt": "^0.2.1",
     "@sign-mt/i18n": "git://github.com/sign/i18n.git",
-    "@sutton-signwriting/font-ttf": "^1.4.3",
+    "@sutton-signwriting/font-ttf": "^1.4.4",
     "@sutton-signwriting/sgnw-components": "1.1.0",
     "@tensorflow/tfjs": "4.2.0",
     "@tensorflow/tfjs-backend-wasm": "4.2.0",

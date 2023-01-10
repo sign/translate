@@ -9,8 +9,8 @@
     "test:ci": "firebase emulators:exec --only database,firestore,storage \"npm run test\"",
     "emulate": "npm run emulators:stop && firebase emulators:start",
     "emulators:stop": "lsof -t -i:4010 -i:4011 -i:4012 -i:4013 -i:4014 -i:4015 | xargs kill -9",
-    "serve": "firebase emulators:start --only functions",
-    "deploy": "firebase deploy --only functions:translate",
+    "serve": "source '../.env' && firebase emulators:start --only functions",
+    "deploy": "source '../.env' && firebase deploy --only functions:translate",
     "logs": "firebase functions:log",
     "playground": "node lib/playground.js"
   },

@@ -35,6 +35,15 @@
     "ignore": [],
     "headers": [
       {
+        "source": "/ngsw-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
         "source": "**/*.@(jpg|jpeg|gif|png|svg|ttf|woff2)",
         "headers": [
           {

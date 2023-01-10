@@ -45,8 +45,20 @@ export class TextToTextTranslationModel {
     return modelRegistry;
   }
 
-  async translate(text: string) {
-    const translations: [string] = (await this.worker.translate(this.from, this.to, [text], [{isHtml: false}])) as any;
+  async translate(text: string, from: string, to: string) {
+    const tags = ['$SW$'];
+    if (this.from === 'signed' || this.to === 'signed') {
+      tags.push(`$${from}$`);
+      tags.push(`$${to}$`);
+    }
+
+    const taggedText = `${tags.join(' ')} ${text}`;
+    const translations: [string] = (await this.worker.translate(
+      this.from,
+      this.to,
+      [taggedText],
+      [{isHtml: false}]
+    )) as any;
     return translations[0];
   }
 

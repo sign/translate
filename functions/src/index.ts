@@ -4,8 +4,12 @@ admin.initializeApp({
   databaseURL: 'https://sign-mt-default-rtdb.firebaseio.com/',
 });
 
+import * as functions from 'firebase-functions';
 import {prerenderFunctions} from './prerender/controller';
 import {textToTextFunctions} from './text-to-text/controller';
+import {logConsoleMemory} from './utils/memory';
+
+logConsoleMemory(process.env.NODE_ENV === 'production' ? functions.logger : console);
 
 module.exports = {
   translate: {
