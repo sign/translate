@@ -46,13 +46,14 @@ export class TextToTextTranslationModel {
   }
 
   async translate(text: string, from: string, to: string) {
+    // Format is: $SW/HNS$ $COUNTRY$ $ISO$? $LANGUAGE$ | text
     const tags = ['$SW$'];
-    if (this.from === 'signed' || this.to === 'signed') {
-      tags.push(`$${from}$`);
+    if (this.from === 'spoken') {
       tags.push(`$${to}$`);
+      tags.push(`$${from}$`);
     }
 
-    const taggedText = `${tags.join(' ')} ${text}`;
+    const taggedText = `${tags.join(' ')} | ${text}`;
     const translations: [string] = (await this.worker.translate(
       this.from,
       this.to,
