@@ -29,7 +29,7 @@
   @include mat.tabs-color($theme);
   @include mat.dialog-color($theme);
   @include mat.tree-color($theme);
-  @include mat.expansion-theme($theme);
+  @include mat.expansion-color($theme);
 }
 
 // Include typography and density styles once, for light and dark modes
