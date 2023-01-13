@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Không tìm thấy trang",
+    "doesNotExist": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại.",
+    "errorLogged": "Chúng tôi đã ghi lỗi và sẽ xem xét nó.",
+    "goHome": "Đi về nhà"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

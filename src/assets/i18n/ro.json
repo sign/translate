@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Pagina nu a fost gasita",
+    "doesNotExist": "Ne pare rău, pagina pe care o căutați nu există.",
+    "errorLogged": "Am înregistrat eroarea și o vom analiza.",
+    "goHome": "Du-te acasă"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

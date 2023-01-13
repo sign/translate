@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Cha deach duilleag a lorg",
+    "doesNotExist": "Duilich, chan eil an duilleag a bha thu a' sireadh ann.",
+    "errorLogged": "Tha sinn air a’ mhearachd a chlàradh agus bheir sinn sùil air.",
+    "goHome": "Rach gu Dachaigh"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

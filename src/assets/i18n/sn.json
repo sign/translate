@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Peji haina kuwanikwa",
+    "doesNotExist": "Tine urombo, peji rawanga uchitsvaga haripo.",
+    "errorLogged": "Isu takanyora kukanganisa uye tichazvitarisa.",
+    "goHome": "Enda Kumba"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

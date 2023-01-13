@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Hindi nahanap ang page",
+    "doesNotExist": "Paumanhin, ang pahina na iyong hinahanap ay wala.",
+    "errorLogged": "Na-log namin ang error at titingnan ito.",
+    "goHome": "Pumunta sa Bahay"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

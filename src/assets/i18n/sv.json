@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "sidan hittas inte",
+    "doesNotExist": "Tyvärr, sidan du letade efter finns inte.",
+    "errorLogged": "Vi har loggat felet och kommer att undersöka det.",
+    "goHome": "Gå till hemmet"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Skift"

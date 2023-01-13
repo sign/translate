@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Siden blev ikke fundet",
+    "doesNotExist": "Beklager, siden du ledte efter eksisterer ikke.",
+    "errorLogged": "Vi har logget fejlen og vil undersøge det.",
+    "goHome": "Gå hjem"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Kaore i kitea te whaarangi",
+    "doesNotExist": "Aroha mai, karekau te wharangi i rapua e koe.",
+    "errorLogged": "Kua takiuru matou i te hapa ka tirohia e matou.",
+    "goHome": "Haere ki te Kainga"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

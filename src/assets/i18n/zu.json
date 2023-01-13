@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Ikhasi alitholakali",
+    "doesNotExist": "Uxolo, ikhasi obulifuna alikho.",
+    "errorLogged": "Sifake iphutha futhi sizolibheka.",
+    "goHome": "Iya Ekhaya"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

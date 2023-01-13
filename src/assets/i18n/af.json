@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "bladsy nie gevind nie",
+    "doesNotExist": "Jammer, die bladsy waarna jy gesoek het, bestaan ​​nie.",
+    "errorLogged": "Ons het die fout aangeteken en sal daarna kyk.",
+    "goHome": "Gaan huis toe"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

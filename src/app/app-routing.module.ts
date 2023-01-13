@@ -5,6 +5,7 @@ import {TranslateComponent} from './pages/translate/translate.component';
 import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {environment} from '../environments/environment';
 import {LazyDialogEntryComponent} from './pages/translate/dialog-entry.component';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
     path: 's', // to prevent the settings from loading on page load, adding one level of route (i.e. s/offline)
     outlet: 'settings',
     loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsPageModule),
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 

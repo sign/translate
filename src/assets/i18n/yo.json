@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Oju-iwe ko ri",
+    "doesNotExist": "Ma binu, oju-iwe ti o n wa ko si.",
+    "errorLogged": "A ti wọle aṣiṣe ati pe a yoo wo inu rẹ.",
+    "goHome": "Lọ si Ile"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

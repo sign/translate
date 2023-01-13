@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Paj la pa jwenn",
+    "doesNotExist": "Padon, paj ou t'ap chache a pa egziste.",
+    "errorLogged": "Nou te konekte erè a epi nou pral gade nan li.",
+    "goHome": "Ale nan Kay"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

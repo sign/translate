@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Stran ni najdena",
+    "doesNotExist": "Oprostite, stran, ki ste jo iskali, ne obstaja.",
+    "errorLogged": "Napako smo zabeležili in jo bomo preučili.",
+    "goHome": "Pojdi domov"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

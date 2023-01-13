@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "halaman ora ditemo'ke",
+    "doesNotExist": "Nuwun sewu, kaca sing sampeyan goleki ora ana.",
+    "errorLogged": "Kita wis mlebu kesalahan lan bakal mriksa.",
+    "goHome": "Pindhah menyang Ngarep"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

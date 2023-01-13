@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Sahypa tapylmady",
+    "doesNotExist": "Bagyşlaň, gözleýän sahypaňyz ýok.",
+    "errorLogged": "Erroralňyşlygy hasaba aldyk we oňa göz aýlarys.",
+    "goHome": "Öýe git"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

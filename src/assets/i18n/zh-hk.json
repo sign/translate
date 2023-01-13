@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "網頁未找到",
+    "doesNotExist": "抱歉，您要查找的頁面不存在。",
+    "errorLogged": "我們已記錄錯誤並將進行調查。",
+    "goHome": "回家"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

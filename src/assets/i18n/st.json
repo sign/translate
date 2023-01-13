@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Leqephe ha le fumanehe",
+    "doesNotExist": "Tšoarelo, leqephe leo u neng u le batla ha le eo.",
+    "errorLogged": "Re kentse phoso 'me re tla e sheba.",
+    "goHome": "Eya Hae"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

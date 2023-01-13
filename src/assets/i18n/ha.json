@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Ba a samo shafi ba",
+    "doesNotExist": "Yi haƙuri, shafin da kuke nema babu shi.",
+    "errorLogged": "Mun shiga cikin kuskure kuma za mu bincika.",
+    "goHome": "Jeka Gida"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

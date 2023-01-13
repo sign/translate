@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "pagina non trovata",
+    "doesNotExist": "Siamo spiacenti, la pagina che stavi cercando non esiste.",
+    "errorLogged": "Abbiamo registrato l'errore e lo esamineremo.",
+    "goHome": "Vai a Casa"
+  },
   "keyboard": {
     "ctrl": "CTRL",
     "shift": "MAIUSC"

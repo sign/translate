@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Lapa nav atrasta",
+    "doesNotExist": "Atvainojiet, lapa, kuru meklējāt, neeksistē.",
+    "errorLogged": "Mēs esam reģistrējuši kļūdu un to izskatīsim.",
+    "goHome": "Doties mājās"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

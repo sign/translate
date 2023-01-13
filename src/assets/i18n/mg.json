@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Pejy tsy hita",
+    "doesNotExist": "Miala tsiny fa tsy misy ny pejy tadiavinao.",
+    "errorLogged": "Nosoratanay ny lesoka ary hojerentsika izany.",
+    "goHome": "Mandehana any an-trano"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Maj"

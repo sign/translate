@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "sahifa topilmadi",
+    "doesNotExist": "Kechirasiz, siz qidirayotgan sahifa mavjud emas.",
+    "errorLogged": "Biz xatolikni qayd etdik va uni ko'rib chiqamiz.",
+    "goHome": "Uyga boring"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

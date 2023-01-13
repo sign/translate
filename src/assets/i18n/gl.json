@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "páxina non atopada",
+    "doesNotExist": "Sentímolo, a páxina que buscabas non existe.",
+    "errorLogged": "Rexistramos o erro e investigarémolo.",
+    "goHome": "Ir a Inicio"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Maiús"

@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "הדף לא נמצא",
+    "doesNotExist": "מצטערים, הדף שחיפשת לא קיים.",
+    "errorLogged": "רשמנו את השגיאה ונבדוק אותה.",
+    "goHome": "לך הביתה"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

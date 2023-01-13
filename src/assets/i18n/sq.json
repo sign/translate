@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Faqja nuk u gjet",
+    "doesNotExist": "Na vjen keq, faqja që po kërkoni nuk ekziston.",
+    "errorLogged": "Ne e kemi regjistruar gabimin dhe do ta shqyrtojmë.",
+    "goHome": "Shkoni në Shtëpi"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

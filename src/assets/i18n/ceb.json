@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Wala makit-an ang panid",
+    "doesNotExist": "Pasensya, wala ang panid nga imong gipangita.",
+    "errorLogged": "Gi-log namon ang sayup ug susihon kini.",
+    "goHome": "Adto sa Balay"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

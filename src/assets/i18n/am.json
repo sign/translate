@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "ገጹ አልተገኘም",
+    "doesNotExist": "ይቅርታ፣ ስትፈልጉት የነበረው ገጽ የለም።",
+    "errorLogged": "ስህተቱን አስገብተናል እና እንመለከታለን።",
+    "goHome": "ወደ ቤት ሂድ"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

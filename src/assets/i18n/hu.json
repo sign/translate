@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Az oldal nem található",
+    "doesNotExist": "Sajnáljuk, a keresett oldal nem létezik.",
+    "errorLogged": "A hibát naplóztuk, és megvizsgáljuk.",
+    "goHome": "Menj haza"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

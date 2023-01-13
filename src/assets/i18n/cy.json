@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Tudalen heb ei chanfod",
+    "doesNotExist": "Mae'n ddrwg gennym, nid yw'r dudalen roeddech yn chwilio amdani yn bodoli.",
+    "errorLogged": "Rydym wedi cofnodi'r gwall a byddwn yn ymchwilio iddo.",
+    "goHome": "Ewch i Gartref"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

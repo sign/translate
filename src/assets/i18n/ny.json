@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Tsamba silinapezeke",
+    "doesNotExist": "Pepani, tsamba lomwe mumayang'ana kulibe.",
+    "errorLogged": "Talowetsa zolakwikazo ndipo tiyang'ana.",
+    "goHome": "Pitani Kunyumba"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

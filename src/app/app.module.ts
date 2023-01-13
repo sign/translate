@@ -42,6 +42,7 @@ import {PoseModule} from './modules/pose/pose.module';
 import {SignWritingModule} from './modules/sign-writing/sign-writing.module';
 import {DetectorModule} from './modules/detector/detector.module';
 import {AnimationModule} from './modules/animation/animation.module';
+import {NotFoundComponent} from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import {AnimationModule} from './modules/animation/animation.module';
     DropzoneDirective,
     DropPoseFileComponent,
     LazyDialogEntryComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

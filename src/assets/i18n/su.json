@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Kaca teu kapanggih",
+    "doesNotExist": "Punten, halaman anu anjeun pilari teu aya.",
+    "errorLogged": "Kami parantos log in kasalahan sareng bakal ningali kana éta.",
+    "goHome": "Pindah ka Imah"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

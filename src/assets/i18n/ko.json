@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "페이지를 찾을 수 없음",
+    "doesNotExist": "죄송합니다. 찾고 계신 페이지가 존재하지 않습니다.",
+    "errorLogged": "오류를 기록했으며 조사하겠습니다.",
+    "goHome": "홈으로 이동"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

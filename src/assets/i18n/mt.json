@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Paġna mhux misjuba",
+    "doesNotExist": "Jiddispjacini, il-paġna li kont qed tfittex ma teżistix.",
+    "errorLogged": "Aħna illoggjaw l-iżball u se nħarsu fih.",
+    "goHome": "Mur id-Dar"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

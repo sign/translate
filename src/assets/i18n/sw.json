@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Ukurasa haujapatikana",
+    "doesNotExist": "Samahani, ukurasa uliokuwa ukitafuta haupo.",
+    "errorLogged": "Tumeweka hitilafu na tutaichunguza.",
+    "goHome": "Nenda nyumbani"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

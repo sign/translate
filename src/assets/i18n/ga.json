@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Ní bhfuarthas an leathanach",
+    "doesNotExist": "Ár leithscéal, níl an leathanach a bhí á lorg agat ann.",
+    "errorLogged": "Tá an earráid logáilte againn agus déanfaimid breathnú uirthi.",
+    "goHome": "Téigh go Baile"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

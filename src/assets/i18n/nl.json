@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Pagina niet gevonden",
+    "doesNotExist": "Sorry, de pagina die je zocht bestaat niet.",
+    "errorLogged": "We hebben de fout geregistreerd en zullen ernaar kijken.",
+    "goHome": "Ga naar huis"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

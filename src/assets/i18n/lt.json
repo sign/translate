@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Puslapis nerastas",
+    "doesNotExist": "Atsiprašome, puslapis, kurio ieškojote, neegzistuoja.",
+    "errorLogged": "Užregistravome klaidą ir ją išnagrinėsime.",
+    "goHome": "Eiti namo"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

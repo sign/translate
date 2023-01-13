@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Seite nicht gefunden",
+    "doesNotExist": "Entschuldigung, die von Ihnen gesuchte Seite existiert nicht.",
+    "errorLogged": "Wir haben den Fehler protokolliert und werden ihn untersuchen.",
+    "goHome": "Zur Startseite"
+  },
   "keyboard": {
     "ctrl": "Strg",
     "shift": "Umschalttaste"

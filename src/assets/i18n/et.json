@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "lehte ei leitud",
+    "doesNotExist": "Vabandust, lehekülge, mida otsisite, pole olemas.",
+    "errorLogged": "Logisime vea sisse ja uurime seda.",
+    "goHome": "Minge avalehele"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

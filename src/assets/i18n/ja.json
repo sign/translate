@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "ページが見つかりません",
+    "doesNotExist": "申し訳ありませんが、お探しのページは存在しません。",
+    "errorLogged": "エラーを記録しましたので、調査いたします。",
+    "goHome": "ホームに移動"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

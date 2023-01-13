@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Ahụghị ibe",
+    "doesNotExist": "Ndo, ibe ahụ ị na-achọ adịghị.",
+    "errorLogged": "Anyị abanyela mperi ahụ, anyị ga-enyocha ya.",
+    "goHome": "Gaa n'ụlọ"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

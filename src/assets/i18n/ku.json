@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Rûpel nehat dîtin",
+    "doesNotExist": "Bibore, rûpela ku hûn lê digeriyan tune.",
+    "errorLogged": "Me xeletî tomar kir û em ê lê bigerin.",
+    "goHome": "Biçe Malê"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Üst Karakter"

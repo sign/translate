@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "səhifə tapılmadı",
+    "doesNotExist": "Üzr istəyirik, axtardığınız səhifə mövcud deyil.",
+    "errorLogged": "Biz xətanı qeyd etdik və onu araşdıracağıq.",
+    "goHome": "Evə getmək"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

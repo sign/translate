@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Page aole i loaa",
+    "doesNotExist": "E kala mai, ʻaʻohe ʻaoʻao āu e ʻimi nei.",
+    "errorLogged": "Ua hoʻopaʻa inoa mākou i ka hewa a e nānā i loko.",
+    "goHome": "E hele i ka Home"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

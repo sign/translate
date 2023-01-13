@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "halaman tidak ditemukan",
+    "doesNotExist": "Maaf, halaman yang Anda cari tidak ada.",
+    "errorLogged": "Kami telah mencatat kesalahan tersebut dan akan menyelidikinya.",
+    "goHome": "Pergi ke rumah"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

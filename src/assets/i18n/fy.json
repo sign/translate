@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Side net fûn",
+    "doesNotExist": "Sorry, de side wêr't jo nei sochten bestiet net.",
+    "errorLogged": "Wy hawwe de flater oanmeld en sille der nei sjen.",
+    "goHome": "Nei hús gean"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

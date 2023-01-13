@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Stránka nenájdená",
+    "doesNotExist": "Ľutujeme, stránka, ktorú ste hľadali, neexistuje.",
+    "errorLogged": "Chybu sme zaznamenali a preskúmame ju.",
+    "goHome": "Choď domov"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

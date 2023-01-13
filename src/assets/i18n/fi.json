@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Sivua ei löydetty",
+    "doesNotExist": "Valitettavasti etsimääsi sivua ei ole olemassa.",
+    "errorLogged": "Olemme kirjaanneet virheen ja tutkimme sen.",
+    "goHome": "Mene kotiin"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "vaihto"

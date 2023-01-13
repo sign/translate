@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Bogga lama helin",
+    "doesNotExist": "Waan ka xunahay, bogga aad raadinaysay ma jiro.",
+    "errorLogged": "Waanu galnay khaladka waana eegi doonaa",
+    "goHome": "Aad Guriga"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

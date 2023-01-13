@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Ez da orria aurkitu",
+    "doesNotExist": "Barkatu, bilatzen ari zaren orria ez da existitzen.",
+    "errorLogged": "Errorea erregistratu dugu eta aztertuko dugu.",
+    "goHome": "Joan Hasierara"
+  },
   "keyboard": {
     "ctrl": "Ktrl",
     "shift": "Maius"

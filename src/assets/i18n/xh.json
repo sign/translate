@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "iphela alifumaneki",
+    "doesNotExist": "Uxolo, iphepha obulikhangela alikho.",
+    "errorLogged": "Sifake impazamo kwaye siza kujonga kuyo.",
+    "goHome": "Yiya eKhaya"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

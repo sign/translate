@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Pagina micca trovu",
+    "doesNotExist": "Scusate, a pagina chì cercavate ùn esiste micca.",
+    "errorLogged": "Avemu registratu l'errore è guardemu in questu.",
+    "goHome": "Andà à Home"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

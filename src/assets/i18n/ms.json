@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Laman tidak dijumpai",
+    "doesNotExist": "Maaf, halaman yang anda cari tidak wujud.",
+    "errorLogged": "Kami telah melog ralat dan akan menelitinya.",
+    "goHome": "Pulang ke rumah"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"

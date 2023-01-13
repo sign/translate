@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Pàgina no trobada",
+    "doesNotExist": "Ho sentim, la pàgina que estaves buscant no existeix.",
+    "errorLogged": "Hem registrat l'error i ho mirarem.",
+    "goHome": "Vés a casa"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Maj"

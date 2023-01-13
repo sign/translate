@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "síða ekki fundin",
+    "doesNotExist": "Því miður, síðan sem þú varst að leita að er ekki til.",
+    "errorLogged": "Við höfum skráð villuna og munum skoða hana.",
+    "goHome": "Farðu heim"
+  },
   "keyboard": {
     "ctrl": "Ctrl",
     "shift": "Shift"
