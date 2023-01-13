@@ -9,6 +9,7 @@ import write_blob from 'capacitor-blob-writer';
 
 export type AssetState = {
   name?: string;
+  label?: string;
   path: string;
   exists: boolean;
   size?: number;

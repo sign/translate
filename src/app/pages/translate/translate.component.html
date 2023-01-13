@@ -4,7 +4,8 @@
   <button
     mat-icon-button
     [attr.aria-label]="'settings.title' | transloco"
-    [routerLink]="[{outlets: {settings: ['s'], dialog: ['settings']}}]">
+    [routerLink]="[{outlets: {settings: ['s'], dialog: ['settings']}}]"
+    [queryParamsHandling]="'preserve'">
     <mat-icon>settings</mat-icon>
   </button>
 </mat-toolbar>

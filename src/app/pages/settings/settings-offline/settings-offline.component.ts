@@ -4,6 +4,8 @@ import {AssetsService, AssetState} from '../../../core/services/assets/assets.se
 import {MatTreeNestedDataSource} from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {TranslocoService} from '@ngneat/transloco';
+import {takeUntil, tap} from 'rxjs/operators';
+import {BaseComponent} from '../../../components/base/base.component';
 
 const OFFLINE_PATHS = {
   avatarGlb: '3d/character.glb',
@@ -27,16 +29,28 @@ if (!isIOS) {
   templateUrl: './settings-offline.component.html',
   styleUrls: ['./settings-offline.component.scss'],
 })
-export class SettingsOfflineComponent implements OnInit {
+export class SettingsOfflineComponent extends BaseComponent implements OnInit {
   localFiles: {[key: string]: AssetState} = {};
   treeControl = new NestedTreeControl<AssetState>(node => node.children);
   filesTree = new MatTreeNestedDataSource<AssetState>();
 
-  constructor(private assets: AssetsService, private transloco: TranslocoService) {}
+  constructor(private assets: AssetsService, private transloco: TranslocoService) {
+    super();
+  }
 
   async ngOnInit() {
     this.localFiles = this.assetInfo('', OFFLINE_PATHS).children;
     this.updateTree();
+    this.listenForLangChange();
+  }
+
+  listenForLangChange() {
+    this.transloco.events$
+      .pipe(
+        tap(() => this.updateLabels()),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   assetInfo(name: string, obj: string | any) {
@@ -50,6 +64,7 @@ export class SettingsOfflineComponent implements OnInit {
 
   updateTree() {
     this.filesTree.data = this.treeControl.dataNodes = Object.values(this.localFiles);
+    this.updateLabels();
   }
 
   hasChildren(_: number, node: AssetState) {
@@ -85,13 +100,27 @@ export class SettingsOfflineComponent implements OnInit {
   }
 
   nodeLabel(node: AssetState) {
-    if (node.name.includes('.spokenToSigned.')) {
-      const langCountry = node.name.substr(-4).toLowerCase();
+    if (node.name?.includes('.spokenToSigned.')) {
+      const lastPart = node.name.split('.').pop();
+      const lang = lastPart.substring(0, lastPart.length / 2).toLowerCase();
+      const country = lastPart.substring(lastPart.length / 2).toLowerCase();
+
       return this.transloco.translate(`to`, {
-        a: this.transloco.translate(`languages.${langCountry.substr(0, 2)}`),
-        b: this.transloco.translate(`countries.${langCountry.substr(2, 2)}`),
+        a: this.transloco.translate(`languages.${lang}`),
+        b: this.transloco.translate(`countries.${country}`),
       });
     }
     return this.transloco.translate('settings.other.offline.files.' + node.name);
+  }
+
+  updateLabels(nodes?: AssetState[]) {
+    for (const node of nodes ?? this.treeControl.dataNodes) {
+      if (node.name) {
+        node.label = this.nodeLabel(node);
+        if (node.children) {
+          this.updateLabels(node.children);
+        }
+      }
+    }
   }
 }

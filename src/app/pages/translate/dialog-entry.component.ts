@@ -23,7 +23,7 @@ export class LazyDialogEntryComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.router.navigate([{outlets: {dialog: [], settings: []}}]);
+      this.router.navigate([{outlets: {dialog: [], settings: []}}], {queryParamsHandling: 'preserve'});
     });
 
     this.router.events.subscribe(event => {

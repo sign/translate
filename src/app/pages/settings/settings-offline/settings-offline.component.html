@@ -1,5 +1,5 @@
 <ng-template #nodeTemplate let-node>
-  <span class="node-label" *ngIf="node.name">{{ nodeLabel(node) }}</span>
+  <span class="node-label" *ngIf="node.name">{{ node.label }}</span>
   <span class="node-label" *ngIf="!node.name">{{ node.path.split('/').pop() }}</span>
   <ng-container *ngIf="node.size !== null">
     <span *ngIf="node.size">{{ node.size | filesize }}</span>
@@ -51,7 +51,7 @@
         mat-icon-button
         matTreeNodeToggle
         [disabled]="node.children.length === 0"
-        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco: {label: nodeLabel(node)}">
+        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco : {label: node.label}">
         <mat-icon class="mat-icon-rtl-mirror">
           {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
         </mat-icon>
