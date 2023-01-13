@@ -34,7 +34,7 @@ export interface FirebaseTestEnvironmentContext {
   bucket: Bucket;
 }
 
-export function setupFirebaseTestEnvironment() {
+export function setupFirebaseTestEnvironment(clearStorage = true): FirebaseTestEnvironmentContext {
   const testEnvironmentContext: FirebaseTestEnvironmentContext = {} as any;
 
   beforeAll(async () => {
@@ -72,7 +72,7 @@ export function setupFirebaseTestEnvironment() {
             const buffer = await req.buffer();
             return [buffer];
           },
-          getSignedUrl: () => ref.getDownloadURL(),
+          getSignedUrl: () => ref.getDownloadURL().then(url => [url]),
           publicUrl: () => ref.getDownloadURL(),
           delete: () => ref.delete(),
         };
@@ -91,7 +91,9 @@ export function setupFirebaseTestEnvironment() {
   beforeEach(async () => {
     await testEnvironmentContext.env.clearDatabase();
     await testEnvironmentContext.env.clearFirestore();
-    await testEnvironmentContext.env.clearStorage();
+    if (clearStorage) {
+      await testEnvironmentContext.env.clearStorage();
+    }
   });
 
   afterAll(async () => {

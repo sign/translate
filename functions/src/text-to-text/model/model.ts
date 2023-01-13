@@ -45,15 +45,15 @@ export class TextToTextTranslationModel {
     return modelRegistry;
   }
 
-  async translate(text: string, from: string, to: string) {
-    // Format is: $SW/HNS$ $COUNTRY$ $ISO$? $LANGUAGE$ | text
-    const tags = ['$SW$'];
+  async translate(text: string, from?: string, to?: string) {
+    const tags = [];
+    // Format is: $COUNTRY$ $ISO$? $LANGUAGE$ | text
     if (this.from === 'spoken') {
       tags.push(`$${to}$`);
       tags.push(`$${from}$`);
     }
 
-    const taggedText = `${tags.join(' ')} | ${text}`;
+    const taggedText = tags.length > 0 ? `${tags.join(' ')} | ${text}` : text;
     const translations: [string] = (await this.worker.translate(
       this.from,
       this.to,

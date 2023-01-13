@@ -3,7 +3,7 @@ import {setupFirebaseTestEnvironment} from '../../firebase.extend-spec';
 import {setupModelFiles} from './model.extend-spec';
 
 describe('TextToTextTranslationModel', () => {
-  const testEnvironment = setupFirebaseTestEnvironment();
+  const testEnvironment = setupFirebaseTestEnvironment(false);
   const modelFiles = setupModelFiles(testEnvironment);
 
   let model: TextToTextTranslationModel;
@@ -12,7 +12,10 @@ describe('TextToTextTranslationModel', () => {
   });
 
   afterEach(async () => {
-    await model.terminate();
+    // Can be that the model was not created successfully
+    if (model) {
+      await model.terminate();
+    }
   });
 
   it('should initialize worker', async () => {

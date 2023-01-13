@@ -6,7 +6,7 @@
     "build:watch": "tsc -w --project tsconfig.json",
     "test": "jest --run-in-band",
     "test:watch": "jest --watch-all --collect-coverage",
-    "test:ci": "firebase emulators:exec --only database,firestore,storage \"npm run test\"",
+    "test:ci": "firebase emulators:exec --only database,firestore,storage 'npm run test'",
     "emulate": "npm run emulators:stop && firebase emulators:start",
     "emulators:stop": "lsof -t -i:4010 -i:4011 -i:4012 -i:4013 -i:4014 -i:4015 | xargs kill -9",
     "serve": "source '../.env' && firebase emulators:start --only functions",

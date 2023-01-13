@@ -58,6 +58,8 @@ functions/lib
 functions/src/playground.ts
 .firebase
 firebase-debug.log
+firestore-debug.log
+database-debug.log
 
 .env
 
