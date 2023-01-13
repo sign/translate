@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "نړیوال",
-  "to": "{{a}} ← {{b}}"
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "ټول",
+  "countries.signed": "ټول"
 }

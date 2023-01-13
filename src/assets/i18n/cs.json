@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Mezinárodní",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Všechno",
+  "countries.signed": "Všechno"
 }

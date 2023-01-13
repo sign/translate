@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Меѓународен",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Сите",
+  "countries.signed": "Сите"
 }

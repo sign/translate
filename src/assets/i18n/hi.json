@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "अंतरराष्ट्रीय",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "सभी",
+  "countries.signed": "सभी"
 }

@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "អន្តរជាតិ",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ទាំងអស់។",
+  "countries.signed": "ទាំងអស់។"
 }

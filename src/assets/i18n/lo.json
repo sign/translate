@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "ສາກົນ",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ທັງໝົດ",
+  "countries.signed": "ທັງໝົດ"
 }

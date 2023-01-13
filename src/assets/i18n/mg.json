@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "iraisam-pirenena",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "rehetra",
+  "countries.signed": "rehetra"
 }

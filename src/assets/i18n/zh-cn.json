@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "国际的",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "全部",
+  "countries.signed": "全部"
 }

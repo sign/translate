@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Alþjóðlegt",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Allt",
+  "countries.signed": "Allt"
 }

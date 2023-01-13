@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "دولي",
-  "to": "{{a}} ← {{ب}}"
+  "to": "{{a}} ← {{ب}}",
+  "languages.spoken": "الجميع",
+  "countries.signed": "الجميع"
 }

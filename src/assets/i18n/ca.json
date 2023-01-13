@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Internacional",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Tots",
+  "countries.signed": "Tots"
 }

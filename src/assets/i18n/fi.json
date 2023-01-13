@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Kansainvälinen",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Kaikki",
+  "countries.signed": "Kaikki"
 }

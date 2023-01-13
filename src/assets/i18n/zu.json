@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Okwamanye amazwe",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Konke",
+  "countries.signed": "Konke"
 }

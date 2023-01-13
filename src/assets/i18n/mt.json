@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Internazzjonali",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Kollha",
+  "countries.signed": "Kollha"
 }

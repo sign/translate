@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "antarabangsa",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Semua",
+  "countries.signed": "Semua"
 }

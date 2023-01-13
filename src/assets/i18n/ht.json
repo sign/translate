@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Entènasyonal",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Tout",
+  "countries.signed": "Tout"
 }

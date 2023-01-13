@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Internationale",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Allemaal",
+  "countries.signed": "Allemaal"
 }

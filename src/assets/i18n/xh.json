@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Amazwe ngamazwe",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Konke",
+  "countries.signed": "Konke"
 }

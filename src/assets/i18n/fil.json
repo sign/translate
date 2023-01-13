@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Internasyonal",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Lahat",
+  "countries.signed": "Lahat"
 }

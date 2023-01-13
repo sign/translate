@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Ƙasashen Duniya",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Duka",
+  "countries.signed": "Duka"
 }

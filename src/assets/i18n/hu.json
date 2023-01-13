@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Nemzetközi",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Összes",
+  "countries.signed": "Összes"
 }

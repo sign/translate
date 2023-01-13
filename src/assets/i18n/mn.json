@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Олон улсын",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Бүгд",
+  "countries.signed": "Бүгд"
 }

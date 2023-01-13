@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "ዓለም አቀፍ",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ሁሉም",
+  "countries.signed": "ሁሉም"
 }

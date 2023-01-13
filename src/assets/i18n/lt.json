@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Tarptautinė",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Visi",
+  "countries.signed": "Visi"
 }

@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Beynəlxalq",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Hamısı",
+  "countries.signed": "Hamısı"
 }

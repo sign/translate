@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "بين الاقوامي",
-  "to": "{{a}} ← {{b}}"
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "سڀ",
+  "countries.signed": "سڀ"
 }

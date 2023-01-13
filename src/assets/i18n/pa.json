@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "ਅੰਤਰਰਾਸ਼ਟਰੀ",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ਸਾਰੇ",
+  "countries.signed": "ਸਾਰੇ"
 }

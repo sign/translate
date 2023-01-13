@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Ao-ao",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Katoa",
+  "countries.signed": "Katoa"
 }

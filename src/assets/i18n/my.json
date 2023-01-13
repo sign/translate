@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "နိုင်ငံတကာ",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "အားလုံး",
+  "countries.signed": "အားလုံး"
 }

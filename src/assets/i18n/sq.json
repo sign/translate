@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Ndërkombëtare",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Të gjitha",
+  "countries.signed": "Të gjitha"
 }

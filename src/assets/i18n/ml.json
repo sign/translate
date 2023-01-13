@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "അന്താരാഷ്ട്ര",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "എല്ലാം",
+  "countries.signed": "എല്ലാം"
 }

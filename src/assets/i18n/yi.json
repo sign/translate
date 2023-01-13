@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "אינטערנאַציאָנאַלע",
-  "to": "{{a}} ← {{b}}"
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "אַלע",
+  "countries.signed": "אַלע"
 }

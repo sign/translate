@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Интернатионал",
-  "to": "{{а}} → {{б}}"
+  "to": "{{а}} → {{б}}",
+  "languages.spoken": "Све",
+  "countries.signed": "Све"
 }

@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Internasional",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Sadayana",
+  "countries.signed": "Sadayana"
 }

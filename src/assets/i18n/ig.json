@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Mba ụwa",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Ha niile",
+  "countries.signed": "Ha niile"
 }

@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Международный",
-  "to": "{{а}} → {{б}}"
+  "to": "{{а}} → {{б}}",
+  "languages.spoken": "Все",
+  "countries.signed": "Все"
 }

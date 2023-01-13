@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Rahvusvaheline",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Kõik",
+  "countries.signed": "Kõik"
 }

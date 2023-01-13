@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "ระหว่างประเทศ",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ทั้งหมด",
+  "countries.signed": "ทั้งหมด"
 }

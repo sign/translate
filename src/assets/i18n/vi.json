@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Quốc tế",
-  "to": "{{a}} → {{b}}"
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Tất cả các",
+  "countries.signed": "Tất cả các"
 }

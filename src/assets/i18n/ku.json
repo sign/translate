@@ -203,5 +203,7 @@
     }
   },
   "countries.isl": "Navnetewî",
-  "to": "{{a}} ← {{b}}"
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "Gişt",
+  "countries.signed": "Gişt"
 }
