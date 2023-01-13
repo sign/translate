@@ -37,6 +37,7 @@ app-sign-writing {
 }
 
 .translation-text {
+  position: relative;
   padding: 20px 24px;
   color: map-get(mat.$light-theme-foreground-palette, text);
   flex: 1;
@@ -91,20 +92,20 @@ app-sign-writing {
   @media (prefers-color-scheme: dark) {
     background-color: #202124;
   }
+}
 
-  #actions {
-    position: absolute;
-    margin: 14px;
-    bottom: 0;
-    right: 0;
-    text-align: end;
-    //width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
-    width: calc(100% - 2 * 14px);
+.actions {
+  position: absolute;
+  margin: 14px;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+  //width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
+  width: calc(100% - 2 * 14px);
 
-    mat-spinner {
-      display: inline-block;
-      margin: 0 8px -8px;
-    }
+  mat-spinner {
+    display: inline-block;
+    margin: 0 8px -8px;
   }
 }
 
