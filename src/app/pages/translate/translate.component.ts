@@ -22,6 +22,8 @@ import {Meta, Title} from '@angular/platform-browser';
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
   spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
+  spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
+  detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
   @HostBinding('class.keyboard-open') keyboardOpen: boolean;

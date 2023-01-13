@@ -37,6 +37,7 @@
           (click)="swapLanguages()"
           id="swap-languages"
           mat-icon-button
+          [disabled]="(spokenLanguage$ | async) === null && (detectedLanguage$ | async) === null"
           [matTooltip]="'translate.swapLanguages' | transloco"
           [attr.aria-label]="'translate.swapLanguages' | transloco">
           <mat-icon>swap_horiz</mat-icon>
