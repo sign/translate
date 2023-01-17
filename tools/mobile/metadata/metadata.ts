@@ -8,7 +8,7 @@ import {googlePlayLocales} from './locales.android';
 import {iOSLocales} from './locales.ios';
 import {iosDevices, androidDevices} from './devices';
 
-const assetsDir = `src/assets/promotional/about/`;
+const assetsDir = `src/assets/promotional/about`;
 mkdir(`${assetsDir}/iphone`);
 mkdir(`${assetsDir}/android`);
 
@@ -124,7 +124,12 @@ async function main() {
   const chromiumBrowser = await chromium.launch({headless: false});
 
   for (const device of androidDevices.concat(iosDevices)) {
+    if (!(device in devices)) {
+      console.log(devices);
+      throw new Error(`Device ${device} is unknown`);
+    }
     if (!('screen' in devices[device])) {
+      console.log(devices[device]);
       throw new Error(`Device ${device} is missing screen values`);
     }
   }

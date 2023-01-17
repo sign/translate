@@ -27,6 +27,20 @@ platform :ios do
     upload_to_testflight
   end
 
+ lane :frameit_screenshots do
+    # It frames the screenshots in landscape right whenever the filename contains `landscape` word
+    frameit(
+      silver: true,
+      path: "./fastlane/screenshots",
+      force_orientation_block: proc do |filename|
+        f = filename.downcase
+        if f.include?("landscape")
+          :landscape_right
+        end
+      end
+    )
+  end
+
 end
 
 
