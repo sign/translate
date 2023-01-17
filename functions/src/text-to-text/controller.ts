@@ -98,7 +98,7 @@ export class TextToTextTranslationEndpoint {
       translation = cache;
     } else {
       const model = await this.getModel(direction, from, to);
-      translation = await model.translate(text, from, to);
+      translation = await model.translate(text, from, to, 'SW');
       await cache.set({
         text,
         translation,

@@ -45,9 +45,12 @@ export class TextToTextTranslationModel {
     return modelRegistry;
   }
 
-  async translate(text: string, from?: string, to?: string) {
+  async translate(text: string, from?: string, to?: string, format?: string) {
     const tags = [];
-    // Format is: $COUNTRY$ $ISO$? $LANGUAGE$ | text
+    // Format is: $FORMAT$ $COUNTRY$ $ISO$? $LANGUAGE$ | text
+    if (format) {
+      tags.push(`$${format}$`);
+    }
     if (this.from === 'spoken') {
       tags.push(`$${to}$`);
       tags.push(`$${from}$`);
