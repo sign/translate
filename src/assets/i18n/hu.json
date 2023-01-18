@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Az oldal nem található",
+    "doesNotExist": "Sajnáljuk, a keresett oldal nem létezik.",
+    "errorLogged": "A hibát naplóztuk, és megvizsgáljuk.",
+    "goHome": "Menj haza"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Fordító",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Nyelvfelismerés",
+      "more": "További nyelvek"
+    },
+    "input": {
+      "text": "Szöveg",
+      "webcam": "Webkamera",
+      "upload": "Feltöltés"
+    },
+    "swapLanguages": "Nyelvek felcserélése",
+    "upload": {
+      "types": ".mp4, .ogv vagy .webm formátumú fájlt töltsön fel.",
+      "browse": "Tallózás a számítógépen",
+      "title": "Válassz egy videót"
+    },
+    "description": "Kétirányú, többnyelvű jelnyelvi fordítóalkalmazás asztali számítógépekre és mobileszközökre",
+    "spoken-to-signed": {
+      "text": "Beszélt nyelvű szöveg",
+      "actions": {
+        "download": "Fordítás letöltése",
+        "copy": "Fordítás másolása",
+        "share": "Fordítás megosztása"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Emberi videomodell betöltése",
+          "generating": "Videó generálása"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "PRÓBÁLJA KI A FORDÍTÓT",
+    "about": {
+      "title": "Névjegy",
+      "hero": {
+        "title": "Fordítson valós időben több mint 40 aláírt és beszélt nyelv között.",
+        "img": "Példa élő fordításra az amerikai jelnyelv és az angol között"
+      },
+      "direction": {
+        "spoken-to-signed": "Fordítás beszélt nyelvről jelnyelvre",
+        "signed-to-spoken": "Vagy a jelzett nyelvektől a beszélt nyelvekig"
+      }
+    },
+    "languages": {
+      "title": "Nyelvek"
+    },
+    "contribute": {
+      "title": "Együttműködés"
+    },
+    "tools": {
+      "title": "Eszközök"
+    },
+    "nav": {
+      "pages": "Navigáljon más oldalakra",
+      "legal": "Keresse meg a jogi oldalakat"
+    }
+  },
+  "text-to-speech": {
+    "play": "Meghallgatás",
+    "cancel": "Állj meg",
+    "unavailable": "A hangkimenet nem érhető el a kiválasztott nyelven"
+  },
+  "speech-to-text": {
+    "start": "Hangalapú fordítás",
+    "stop": "Hangos fordítás leállítása",
+    "not-allowed": "A mikrofon használatához engedély szükséges",
+    "language-not-supported": "A kiválasztott nyelv nem támogatott",
+    "browser-not-supported": "A hangbevitel nem támogatott ebben a böngészőben",
+    "service-not-allowed": "Engedély kell a beszédfelismerés használatához"
+  },
+  "legal": {
+    "terms": {
+      "title": "Szerződési feltételek"
+    },
+    "privacy": {
+      "title": "Adatvédelem"
+    },
+    "licenses": {
+      "title": "Szoftverek és licencek"
+    }
+  },
+  "playground": {
+    "title": "Jelnyelv-feldolgozó játszótér"
+  },
+  "benchmark": {
+    "title": "Viszonyítási alap",
+    "stats": {
+      "cld": {
+        "title": "Beszélt nyelvi azonosítás",
+        "import": "Import modul",
+        "load": "Betöltési modell",
+        "find": "Szöveg azonosítása",
+        "create": "Teremt"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Munkás Init",
+        "load": "Betöltési modell",
+        "first-frame": "Első képkocka következtetés",
+        "frame": "Keret következtetés"
+      },
+      "pose": {
+        "title": "Teljes testhelyzet becslés",
+        "load": "Modellterhelés",
+        "first-frame": "Első képkocka következtetés",
+        "frame": "Keret következtetés"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera indul",
+      "turnedOff": "Kamera kikapcsolva",
+      "notConnected": "A kamera nincs csatlakoztatva",
+      "permissionDenied": "Kameraengedély megtagadva"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kapcsolja ki a kamerát",
+        "off": "Kapcsolja be a kamerát"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Pózbecslés betöltése..."
+  },
+  "language-selector": {
+    "label": "Nyelv vagy régió módosítása"
+  },
+  "settings": {
+    "detectSign": "Jel észlelése",
+    "drawVideo": "Rajzolj videót",
+    "drawPose": "Rajzolj pózt",
+    "drawSignWriting": "Rajzolj Jelírás",
+    "animatePose": "Animált póz",
+    "poseViewer": {
+      "pose": "Csontváz",
+      "avatar": "Avatar",
+      "human": "Emberi"
+    },
+    "title": "Beállítások",
+    "close": "Zárja be a beállításokat",
+    "support": {
+      "title": "Támogatás",
+      "feedback": {
+        "title": "Visszacsatolás",
+        "send": "Visszajelzés küldése"
+      },
+      "about": {
+        "title": "Ról ről"
+      }
+    },
+    "voice": {
+      "title": "Hang",
+      "input": {
+        "title": "Bemenet"
+      },
+      "output": {
+        "title": "Kimenet"
+      }
+    },
+    "other": {
+      "title": "Egyéb",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealisztikus emberi generátor",
+          "pix2pixUpscaler": "Fotórealisztikus emberi feljavító",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar AR-hez iOS rendszeren",
+          "translation": "Fordítás",
+          "translation.spokenToSigned": "Aláírtnak szólva",
+          "translation.signedToSpoken": "Aláírt-beszéd"
+        },
+        "actions": {
+          "toggle": "Váltás: {{label}}",
+          "download": "Offline modell letöltése",
+          "delete": "Az offline modell gyorsítótárának kiürítése",
+          "reDownload": "Töltse le újra az offline modellt"
+        }
+      },
+      "appearance": {
+        "title": "Megjelenés",
+        "action": "Módosítsa a megjelenést",
+        "random": "Vegyél egy véletlenszerű fényképet",
+        "upload": "Töltsd fel saját fotódat"
+      }
+    }
+  },
+  "countries.isl": "Nemzetközi",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Összes",
+  "countries.signed": "Összes"
+}

@@ -1,0 +1,24 @@
+mat-tree {
+  background: none;
+}
+
+.node-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+}
+
+mat-progress-spinner {
+  margin: 0 10px;
+}
+
+mat-nested-tree-node mat-nested-tree-node {
+  padding-inline-start: 20px;
+  display: block;
+}

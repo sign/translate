@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Paġna mhux misjuba",
+    "doesNotExist": "Jiddispjacini, il-paġna li kont qed tfittex ma teżistix.",
+    "errorLogged": "Aħna illoggjaw l-iżball u se nħarsu fih.",
+    "goHome": "Mur id-Dar"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Induna bil-lingwa",
+      "more": "Aktar Lingwi"
+    },
+    "input": {
+      "text": "Test",
+      "webcam": "Kamera tal-Web",
+      "upload": "Upload"
+    },
+    "swapLanguages": "Aqleb il-lingwi",
+    "upload": {
+      "types": "Tella' .mp4, .ogv, jew .webm.",
+      "browse": "Ibbrawżja l-kompjuter tiegħek",
+      "title": "Agħżel vidjo"
+    },
+    "description": "App bi-direzzjonali tat-traduzzjoni tal-lingwa tas-sinjali multilingwi għal desktop u mobbli",
+    "spoken-to-signed": {
+      "text": "Test tal-Lingwa Mitkellma",
+      "actions": {
+        "download": "Niżżel Traduzzjoni",
+        "copy": "Kopja tat-Traduzzjoni",
+        "share": "Share Traduzzjoni"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Tagħbija tal-mudell tal-vidjo uman",
+          "generating": "Ġenerazzjoni tal-vidjo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "IPPROVA ITTRADUĊI",
+    "about": {
+      "title": "Dwar",
+      "hero": {
+        "title": "Ittraduċi bejn aktar minn 40 lingwa ffirmata u mitkellma f'ħin reali.",
+        "img": "Eżempju ta' traduzzjoni diretta bejn il-Lingwa tas-Sinjali Amerikana u l-Ingliż"
+      },
+      "direction": {
+        "spoken-to-signed": "Ittraduċi minn lingwi mitkellma għal lingwi tas-sinjali",
+        "signed-to-spoken": "Jew minn lingwi ffirmati għal lingwi mitkellma"
+      }
+    },
+    "languages": {
+      "title": "Lingwi"
+    },
+    "contribute": {
+      "title": "Ikkontribwixxi"
+    },
+    "tools": {
+      "title": "Għodod"
+    },
+    "nav": {
+      "pages": "Innaviga lejn paġni oħra",
+      "legal": "Innaviga lejn paġni legali"
+    }
+  },
+  "text-to-speech": {
+    "play": "Isma'",
+    "cancel": "Waqfa",
+    "unavailable": "L-output tal-vuċi mhuwiex disponibbli għall-lingwa magħżula"
+  },
+  "speech-to-text": {
+    "start": "Ittraduċi bil-vuċi",
+    "stop": "Waqqaf it-traduzzjoni bil-vuċi",
+    "not-allowed": "Jeħtieġ permess biex tuża mikrofonu",
+    "language-not-supported": "Il-lingwa magħżula mhix appoġġjata",
+    "browser-not-supported": "Id-dħul tal-vuċi mhuwiex appoġġjat fuq dan il-browser",
+    "service-not-allowed": "Jeħtieġ permess biex tuża r-rikonoxximent tad-diskors"
+  },
+  "legal": {
+    "terms": {
+      "title": "Termini"
+    },
+    "privacy": {
+      "title": "Privatezza"
+    },
+    "licenses": {
+      "title": "Softwer u Liċenzji"
+    }
+  },
+  "playground": {
+    "title": "Playground tal-Ipproċessar tal-Lingwa tas-Sinjali"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identifikazzjoni tal-Lingwa Mitkellma",
+        "import": "Modulu ta 'importazzjoni",
+        "load": "Mudell tat-Tagħbija",
+        "find": "Identifika t-Test",
+        "create": "Oħloq"
+      },
+      "pix2pix": {
+        "title": "Viewer tal-Poża tal-Bniedem",
+        "init": "Ħaddiem Init",
+        "load": "Mudell tat-Tagħbija",
+        "first-frame": "L-Ewwel Frame Inferenza",
+        "frame": "Inferenza tal-qafas"
+      },
+      "pose": {
+        "title": "Stima tal-Pose tal-Korp Sħiħ",
+        "load": "Tagħbija tal-Mudell",
+        "first-frame": "L-Ewwel Frame Inferenza",
+        "frame": "Inferenza tal-qafas"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera tal-bidu",
+      "turnedOff": "Kamera mitfija",
+      "notConnected": "Kamera mhux konnessa",
+      "permissionDenied": "Permess tal-kamera miċħud"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Itfi l-kamera",
+        "off": "Ixgħel il-kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Tagħbija Stima tal-Pożizzjoni..."
+  },
+  "language-selector": {
+    "label": "Ibdel il-lingwa jew ir-reġjun"
+  },
+  "settings": {
+    "detectSign": "Issib Sinjal",
+    "drawVideo": "Iġbed Video",
+    "drawPose": "Iġbed Poża",
+    "drawSignWriting": "Iġbed il-Kitba tas-Sinjali",
+    "animatePose": "Janima Poża",
+    "poseViewer": {
+      "pose": "Skeletru",
+      "avatar": "Avatar",
+      "human": "Bniedem"
+    },
+    "title": "Settings",
+    "close": "Agħlaq is-settings",
+    "support": {
+      "title": "Appoġġ",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Ibgħat feedback"
+      },
+      "about": {
+        "title": "Dwar"
+      }
+    },
+    "voice": {
+      "title": "Leħen",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Oħrajn",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Ġeneratur uman foto-realistiku",
+          "pix2pixUpscaler": "Upscaler uman foto-realistiku",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar għal AR fuq iOS",
+          "translation": "Traduzzjoni",
+          "translation.spokenToSigned": "Mitkellma biex Iffirmat",
+          "translation.signedToSpoken": "Iffirmat għal Mitkellem"
+        },
+        "actions": {
+          "toggle": "Aqleb {{label}}",
+          "download": "Niżżel il-Mudell Offline",
+          "delete": "Neħħi l-Cache tal-Mudell Offline",
+          "reDownload": "Niżżel mill-ġdid il-Mudell Offline"
+        }
+      },
+      "appearance": {
+        "title": "Dehra",
+        "action": "Ibdel id-dehra",
+        "random": "Ikseb ritratt bl-addoċċ",
+        "upload": "Ittella r-ritratt tiegħek"
+      }
+    }
+  },
+  "countries.isl": "Internazzjonali",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Kollha",
+  "countries.signed": "Kollha"
+}

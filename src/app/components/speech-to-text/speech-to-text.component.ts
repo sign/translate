@@ -2,31 +2,30 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
 
-const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
 @Component({
   selector: 'app-speech-to-text',
   templateUrl: './speech-to-text.component.html',
-  styleUrls: ['./speech-to-text.component.css']
+  styleUrls: ['./speech-to-text.component.css'],
 })
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
-
   @Input() lang = 'en';
   @Output() changeText: EventEmitter<string> = new EventEmitter<string>();
 
+  SpeechRecognition = globalThis.SpeechRecognition || globalThis.webkitSpeechRecognition;
   speechRecognition!: SpeechRecognition;
 
   supportError = null;
   isRecording = false;
 
   ngOnInit(): void {
-    if (!SpeechRecognition) {
+    if (!this.SpeechRecognition) {
       this.supportError = 'browser-not-supported';
       return;
     }
 
-    this.speechRecognition = new SpeechRecognition();
+    this.speechRecognition = new this.SpeechRecognition();
     this.speechRecognition.interimResults = true;
+    this.speechRecognition.lang = this.lang;
 
     fromEvent(this.speechRecognition, 'result').subscribe((event: SpeechRecognitionEvent) => {
       const transcription = event.results[0][0].transcript;
@@ -34,10 +33,15 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     });
 
     fromEvent(this.speechRecognition, 'error').subscribe((event: SpeechRecognitionErrorEvent) => {
-      if (['not-allowed', 'language-not-supported'].includes(event.error)) {
+      if (['not-allowed', 'language-not-supported', 'service-not-allowed'].includes(event.error)) {
         this.supportError = event.error;
       } else {
         this.supportError = null;
+      }
+
+      // Try accessing microphone, to request permission
+      if (event.error === 'not-allowed') {
+        this.requestPermission();
       }
     });
 
@@ -45,7 +49,7 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
       this.changeText.emit('');
       this.isRecording = true;
     });
-    fromEvent(this.speechRecognition, 'end').subscribe(() => this.isRecording = false);
+    fromEvent(this.speechRecognition, 'end').subscribe(() => (this.isRecording = false));
 
     fromEvent(this.speechRecognition, 'speechend').subscribe(this.stop.bind(this));
   }
@@ -56,12 +60,18 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     }
   }
 
-  start(): void {
+  requestPermission() {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then(stream => {
+      stream.getTracks().forEach(track => track.stop());
+      this.supportError = null;
+    });
+  }
+
+  start() {
     this.speechRecognition.start();
   }
 
-  stop(): void {
+  stop() {
     this.speechRecognition.stop();
   }
-
 }

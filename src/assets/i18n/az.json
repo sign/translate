@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "səhifə tapılmadı",
+    "doesNotExist": "Üzr istəyirik, axtardığınız səhifə mövcud deyil.",
+    "errorLogged": "Biz xətanı qeyd etdik və onu araşdıracağıq.",
+    "goHome": "Evə getmək"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Tərcümə",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Dili seç",
+      "more": "Daha çox dil"
+    },
+    "input": {
+      "text": "Mətn",
+      "webcam": "Vebkamera",
+      "upload": "Yükləmək"
+    },
+    "swapLanguages": "Dilləri dəyişin",
+    "upload": {
+      "types": "Bu faylları yükləyin: .mp4, .ogv və ya .webm.",
+      "browse": "Kompüterinizə nəzər salın",
+      "title": "Video seçin"
+    },
+    "description": "Masaüstü və mobil cihazlar üçün iki istiqamətli çoxdilli işarə dili tərcümə proqramı",
+    "spoken-to-signed": {
+      "text": "Danışıq Dili Mətni",
+      "actions": {
+        "download": "Tərcüməni yükləyin",
+        "copy": "Tərcüməni Kopyalayın",
+        "share": "Tərcüməni Paylaşın"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "İnsan video modeli yüklənir",
+          "generating": "Videonun yaradılması"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "TƏRCÜMƏNİ SINAYIN",
+    "about": {
+      "title": "Haqqında",
+      "hero": {
+        "title": "Real vaxt rejimində 40+ imzalanmış və danışıq dili arasında tərcümə edin.",
+        "img": "Amerika işarə dili və ingilis dili arasında canlı tərcümə nümunəsi"
+      },
+      "direction": {
+        "spoken-to-signed": "Danışıq dillərindən işarəli dillərə tərcümə edin",
+        "signed-to-spoken": "Və ya imzalanmış dillərdən danışıq dillərinə"
+      }
+    },
+    "languages": {
+      "title": "Dillər"
+    },
+    "contribute": {
+      "title": "Töhfə verin"
+    },
+    "tools": {
+      "title": "Alətlər"
+    },
+    "nav": {
+      "pages": "Digər səhifələrə keçin",
+      "legal": "Hüquqi səhifələrə keçin"
+    }
+  },
+  "text-to-speech": {
+    "play": "Qulaq asın",
+    "cancel": "Dayan",
+    "unavailable": "Seçilmiş dil üçün səs çıxışı mövcud deyil"
+  },
+  "speech-to-text": {
+    "start": "Səsli tərcümə edin",
+    "stop": "Səslə tərcüməni dayandırın",
+    "not-allowed": "Mikrofondan istifadə etmək üçün icazə lazımdır",
+    "language-not-supported": "Seçilmiş dil dəstəklənmir",
+    "browser-not-supported": "Səslə daxiletmə bu brauzerdə dəstəklənmir",
+    "service-not-allowed": "Nitqin tanınmasından istifadə etmək üçün icazə lazımdır"
+  },
+  "legal": {
+    "terms": {
+      "title": "Şərtlər"
+    },
+    "privacy": {
+      "title": "Məxfilik"
+    },
+    "licenses": {
+      "title": "Proqram və Lisenziya"
+    }
+  },
+  "playground": {
+    "title": "İşarə Dili Emalı Oyun Meydançası"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Danışıq dilinin identifikasiyası",
+        "import": "İdxal Modulu",
+        "load": "Yükləmə Modeli",
+        "find": "Mətni müəyyənləşdirin",
+        "create": "Yaradın"
+      },
+      "pix2pix": {
+        "title": "İnsan Poza Baxıcı",
+        "init": "İşçi Init",
+        "load": "Yükləmə Modeli",
+        "first-frame": "İlk Çərçivə Nəticəsi",
+        "frame": "Çərçivə Nəticəsi"
+      },
+      "pose": {
+        "title": "Tam Bədən Pozunun Qiymətləndirilməsi",
+        "load": "Model yükü",
+        "first-frame": "İlk Çərçivə Nəticəsi",
+        "frame": "Çərçivə Nəticəsi"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera başlayır",
+      "turnedOff": "Kamera söndürüldü",
+      "notConnected": "Kamera qoşulmayıb",
+      "permissionDenied": "Kamera icazəsi rədd edildi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kameranı söndürün",
+        "off": "Kameranı yandırın"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Duruş Təxmini Yüklənir..."
+  },
+  "language-selector": {
+    "label": "Dili və ya bölgəni dəyişdirin"
+  },
+  "settings": {
+    "detectSign": "İşarəni aşkarla",
+    "drawVideo": "Video çəkmək",
+    "drawPose": "Poza çəkin",
+    "drawSignWriting": "İşarə yazısını çəkin",
+    "animatePose": "Animasiya pozası",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Avatar",
+      "human": "İnsan"
+    },
+    "title": "Parametrlər",
+    "close": "Parametrləri bağlayın",
+    "support": {
+      "title": "Dəstək",
+      "feedback": {
+        "title": "Əlaqə",
+        "send": "Rəy göndərin"
+      },
+      "about": {
+        "title": "Haqqında"
+      }
+    },
+    "voice": {
+      "title": "Səs",
+      "input": {
+        "title": "Giriş"
+      },
+      "output": {
+        "title": "Çıxış"
+      }
+    },
+    "other": {
+      "title": "Digər",
+      "offline": {
+        "title": "Oflayn",
+        "files": {
+          "pix2pixGenerator": "Fotoreal insan generatoru",
+          "pix2pixUpscaler": "Fotorealist insan yüksəlişi",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "iOS-da AR üçün 3D Avatar",
+          "translation": "Tərcümə",
+          "translation.spokenToSigned": "Danışıq-imza",
+          "translation.signedToSpoken": "İmzalı-Danışıqlı"
+        },
+        "actions": {
+          "toggle": "{{label}} dəyişin",
+          "download": "Offline Modeli yükləyin",
+          "delete": "Oflayn Model Keşini Təmizləyin",
+          "reDownload": "Offline Modeli Yenidən Yükləyin"
+        }
+      },
+      "appearance": {
+        "title": "Görünüş",
+        "action": "Görünüşü dəyişdirin",
+        "random": "Təsadüfi bir şəkil alın",
+        "upload": "Öz şəklinizi yükləyin"
+      }
+    }
+  },
+  "countries.isl": "Beynəlxalq",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Hamısı",
+  "countries.signed": "Hamısı"
+}

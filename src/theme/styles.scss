@@ -9,40 +9,131 @@
 @include mat.core();
 
 /* You can add global styles to this file, and also import other style files */
-@import "./variables";
+@import './variables';
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($app-theme);
-
-@media (prefers-color-scheme: dark) {
-  @include mat.all-component-themes($app-dark-theme);
+@mixin theme-components($theme) {
+  @include mat.core-color($theme);
+  @include mat.sidenav-color($theme);
+  @include mat.toolbar-color($theme);
+  @include mat.button-color($theme);
+  @include mat.fab-color($theme);
+  @include mat.icon-button-color($theme);
+  @include mat.menu-color($theme);
+  @include mat.progress-spinner-color($theme);
+  @include mat.progress-bar-color($theme);
+  @include mat.tooltip-color($theme);
+  @include mat.card-color($theme);
+  @include mat.tabs-color($theme);
+  @include mat.dialog-color($theme);
+  @include mat.tree-color($theme);
+  @include mat.expansion-color($theme);
 }
 
-@import "fonts/material-icons.css";
-@import "fonts/roboto.css";
+// Include typography and density styles once, for light and dark modes
+@include mat.all-component-typographies($app-theme);
+@include mat.all-component-densities($app-theme);
 
+@include theme-components($app-theme);
 
-html, body {
+@media (prefers-color-scheme: dark) {
+  @include theme-components($app-dark-theme);
+}
+
+@import 'fonts/material-icons.css';
+@import 'fonts/roboto.css';
+
+html,
+body {
   height: 100%;
   // Does not work in iOS PWA, requires hijacking javascript
   overscroll-behavior-y: none;
 }
 
+html {
+  // Only on iOS, in case of viewport cover
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  height: calc(100% - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+}
+
 body {
+  --mdc-typography-button-letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: white;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: mat.get-color-from-palette(mat.$gray-palette, 50);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: black !important;
+  }
+
+  &.embed {
+    mat-toolbar,
+    #input-mode-group,
+    #feedback {
+      display: none !important;
+    }
+  }
 }
 
 app-root {
-  height: 100%
+  height: 100%;
 }
 
-button[mat-icon-button] {
+.container {
+  width: auto;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button[mat-icon-button]:not([color]) {
   color: map-get(mat.$light-theme-foreground-palette, icon);
   @media (prefers-color-scheme: dark) {
     color: map-get(mat.$dark-theme-foreground-palette, icon);
   }
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+}
+
+.mat-drawer-container {
+  height: 100%;
+  background: transparent;
+}
+
+.mat-toolbar {
+  box-sizing: border-box;
+  background-color: black;
+  border-color: map-get(mat.$dark-theme-foreground-palette, divider);
+  border-style: solid;
+  border-width: 0;
+  font-weight: 400;
+
+  &:first-child {
+    border-bottom-width: 1px;
+  }
+
+  &:last-child {
+    border-top-width: 1px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: white;
+    border-color: map-get(mat.$light-theme-foreground-palette, divider);
+    color: map-get(mat.$gray-palette, 800);
+  }
+}
+
+a {
+  color: mat.get-color-from-palette(map-get($app-color, primary), 700);
+  @media (prefers-color-scheme: dark) {
+    color: mat.get-color-from-palette(map-get($app-color, primary), 300);
+  }
+}
+
+[dir='rtl'] mat-icon.rtl-flip {
+  transform: scale(-1, 1);
 }

@@ -1,0 +1,47 @@
+<mat-drawer-container>
+  <mat-drawer #menu position="start" mode="over">
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let page of pages" [routerLink]="page" (click)="menu.close()">
+        {{ 'landing.' + page + '.title' | transloco }}
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+        {{ 'legal.' + page + '.title' | transloco }}
+      </a>
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+    <mat-toolbar>
+      <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">
+        {{ 'landing.try' | transloco }}
+      </a>
+    </mat-toolbar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar id="header">
+      <mat-icon (click)="menu.open()" id="menu-handler">menu</mat-icon>
+      <mat-icon>waving_hand</mat-icon>
+      <span>&nbsp;{{ 'translate.title' | transloco }}</span>
+      <nav [attr.aria-label]="'landing.nav.pages' | transloco">
+        <a mat-button *ngFor="let page of pages" [routerLink]="page" queryParamsHandling="preserve">
+          {{ 'landing.' + page + '.title' | transloco }}
+        </a>
+      </nav>
+      <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">
+        {{ 'landing.try' | transloco }}
+      </a>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+    <mat-toolbar>
+      <nav [attr.aria-label]="'landing.nav.legal' | transloco">
+        <a mat-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+          {{ 'legal.' + page + '.title' | transloco }}
+        </a>
+      </nav>
+
+      <app-language-selector></app-language-selector>
+    </mat-toolbar>
+  </mat-drawer-content>
+</mat-drawer-container>

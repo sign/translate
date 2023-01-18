@@ -1,0 +1,1 @@
+Una aplicació de traducció multilingüe bidireccional en llengua de signes per a ordinadors i mòbils

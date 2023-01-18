@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "پيج نه لڌو",
+    "doesNotExist": "معاف ڪجو، جيڪو صفحو توهان ڳولي رهيا آهيو اهو موجود ناهي.",
+    "errorLogged": "اسان غلطي کي لاگ ان ڪيو آهي ۽ ان تي غور ڪنداسين.",
+    "goHome": "گهر ڏانهن وڃو"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign ترجمو",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "ٻولي کوجيو",
+      "more": "وڌيڪ ٻوليون"
+    },
+    "input": {
+      "text": "متن",
+      "webcam": "ويب ڪيم",
+      "upload": "اپ لوڊ ڪريو"
+    },
+    "swapLanguages": "ٻولي کي تديل ڪرڻ جي لاءِ",
+    "upload": {
+      "types": "هڪ mp4، ogv، يا webm اپ لوڊ ڪريو.",
+      "browse": "پنهنجو ڪمپيوٽر برائوز ڪريو",
+      "title": "هڪ وڊيو چونڊيو"
+    },
+    "description": "ڊيسڪ ٽاپ ۽ موبائيل لاءِ هڪ ٻه طرفي گهڻ لساني نشاني ٻولي ترجمو ايپ",
+    "spoken-to-signed": {
+      "text": "ڳالهائيندڙ ٻولي جو متن",
+      "actions": {
+        "download": "ڊائون لوڊ ترجمو",
+        "copy": "نقل ڪريو ترجمو",
+        "share": "ترجمو حصيداري ڪريو"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "انساني وڊيو ماڊل لوڊ ڪندي",
+          "generating": "وڊيو ٺاهي رهيو آهي"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ترجمي جي ڪوشش ڪريو",
+    "about": {
+      "title": "باري ۾",
+      "hero": {
+        "title": "حقيقي وقت ۾ 40+ دستخط ٿيل ۽ ڳالهائيندڙ ٻولين جي وچ ۾ ترجمو ڪريو.",
+        "img": "آمريڪي سائنسي ٻولي ۽ انگريزي وچ ۾ لائيو ترجمي جو مثال"
+      },
+      "direction": {
+        "spoken-to-signed": "ڳالھائيندڙ کان دستخط ٿيل ٻولين ۾ ترجمو ڪريو",
+        "signed-to-spoken": "يا نشانين کان ڳالهائيندڙ ٻولين تائين"
+      }
+    },
+    "languages": {
+      "title": "ٻوليون"
+    },
+    "contribute": {
+      "title": "حصو وٺو"
+    },
+    "tools": {
+      "title": "اوزار"
+    },
+    "nav": {
+      "pages": "ٻين صفحن ڏانهن وڃو",
+      "legal": "قانوني صفحن تي وڃو"
+    }
+  },
+  "text-to-speech": {
+    "play": "ٻڌو",
+    "cancel": "روڪ",
+    "unavailable": "منتخب ٿيل ٻولي لاءِ وائيس آئوٽ موجود ناهي"
+  },
+  "speech-to-text": {
+    "start": "وائس جي ذريعي ترجمو ڪريو",
+    "stop": "آواز ذريعي ترجمو بند ڪريو",
+    "not-allowed": "مائڪرو فون استعمال ڪرڻ جي اجازت جي ضرورت آهي",
+    "language-not-supported": "منتخب ٿيل ٻولي سپورٽ نه آهي",
+    "browser-not-supported": "هن برائوزر تي وائس ان پٽ سپورٽ نه آهي",
+    "service-not-allowed": "تقرير جي سڃاڻپ کي استعمال ڪرڻ جي اجازت جي ضرورت آهي"
+  },
+  "legal": {
+    "terms": {
+      "title": "شرطون"
+    },
+    "privacy": {
+      "title": "رازداري"
+    },
+    "licenses": {
+      "title": "سافٽ ويئر ۽ لائيسنس"
+    }
+  },
+  "playground": {
+    "title": "سائنسي ٻولي پروسيسنگ راند جو ميدان"
+  },
+  "benchmark": {
+    "title": "بينچ مارڪ",
+    "stats": {
+      "cld": {
+        "title": "ڳالهائيندڙ ٻولي جي سڃاڻپ",
+        "import": "درآمد ماڊل",
+        "load": "لوڊ ماڊل",
+        "find": "متن جي سڃاڻپ ڪريو",
+        "create": "ٺاهيو"
+      },
+      "pix2pix": {
+        "title": "انساني پوزيشن ڏسڻ وارو",
+        "init": "ڪم ڪندڙ شروعات",
+        "load": "لوڊ ماڊل",
+        "first-frame": "پهريون فريم انفرنس",
+        "frame": "فريم جو اندازو"
+      },
+      "pose": {
+        "title": "مڪمل جسماني پوزيشن جو اندازو",
+        "load": "ماڊل لوڊ",
+        "first-frame": "پهريون فريم انفرنس",
+        "frame": "فريم جو اندازو"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "ڪئميرا شروع ٿي",
+      "turnedOff": "ڪئميرا بند ٿي وئي",
+      "notConnected": "ڪئميرا ڳنڍيل ناهي",
+      "permissionDenied": "ڪئميرا جي اجازت رد ڪئي وئي"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "ڪئميرا بند ڪريو",
+        "off": "ڪئميرا آن ڪريو"
+      }
+    }
+  },
+  "pose": {
+    "loading": "لوڊ ٿي رهيو آهي پوزيشن جو اندازو..."
+  },
+  "language-selector": {
+    "label": "ٻولي يا علائقو تبديل ڪريو"
+  },
+  "settings": {
+    "detectSign": "سڃاڻپ جي نشاني",
+    "drawVideo": "وڊيو ٺاھيو",
+    "drawPose": "نقشو ٺاھيو",
+    "drawSignWriting": "ڊرائنگ سائن لکڻ",
+    "animatePose": "متحرڪ پوزيشن",
+    "poseViewer": {
+      "pose": "ڍَڪُ",
+      "avatar": "اوتار",
+      "human": "انسان"
+    },
+    "title": "سيٽنگون",
+    "close": "سيٽنگون بند ڪريو",
+    "support": {
+      "title": "حمايت",
+      "feedback": {
+        "title": "راءِ",
+        "send": "موٽ موڪليو"
+      },
+      "about": {
+        "title": "بابت"
+      }
+    },
+    "voice": {
+      "title": "آواز",
+      "input": {
+        "title": "ان پٽ"
+      },
+      "output": {
+        "title": "پيداوار"
+      }
+    },
+    "other": {
+      "title": "ٻيو",
+      "offline": {
+        "title": "آف لائن",
+        "files": {
+          "pix2pixGenerator": "ڦوٽو-حقيقت پسند انساني جنريٽر",
+          "pix2pixUpscaler": "ڦوٽو-حقيقت پسند انسان اپ اسڪيلر",
+          "avatarGlb": "3D اوتار",
+          "avatarUsdz": "iOS تي AR لاءِ 3D اوتار",
+          "translation": "ترجمو",
+          "translation.spokenToSigned": "ڳالهه ٻولهه سان دستخط ٿيل",
+          "translation.signedToSpoken": "دستخط سان ڳالهائڻ"
+        },
+        "actions": {
+          "toggle": "ٽوگل ڪريو {{label}}",
+          "download": "ڊائون لوڊ آف لائن ماڊل",
+          "delete": "آف لائن ماڊل ڪيش کي صاف ڪريو",
+          "reDownload": "آف لائن ماڊل ٻيهر ڊائون لوڊ ڪريو"
+        }
+      },
+      "appearance": {
+        "title": "ظاهر",
+        "action": "ظاهر تبديل ڪريو",
+        "random": "هڪ بي ترتيب تصوير حاصل ڪريو",
+        "upload": "اپلوڊ ڪريو پنھنجو فوٽو"
+      }
+    }
+  },
+  "countries.isl": "بين الاقوامي",
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "سڀ",
+  "countries.signed": "سڀ"
+}

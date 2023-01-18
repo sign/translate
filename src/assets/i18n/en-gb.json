@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Page not found",
+    "doesNotExist": "Sorry, the page you were looking for doesn't exist.",
+    "errorLogged": "We've logged the error and will look into it.",
+    "goHome": "Go to Home"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Detect language",
+      "more": "More Languages"
+    },
+    "input": {
+      "text": "Text",
+      "webcam": "Webcam",
+      "upload": "Upload"
+    },
+    "swapLanguages": "Swap languages",
+    "upload": {
+      "types": "Upload a .mp4, .ogv, or .webm.",
+      "browse": "Browse your computer",
+      "title": "Choose a video"
+    },
+    "description": "A bi-directional multilingual sign language translation app for desktop and mobile",
+    "spoken-to-signed": {
+      "text": "Spoken Language Text",
+      "actions": {
+        "download": "Download Translation",
+        "copy": "Copy Translation",
+        "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Loading human video model",
+          "generating": "Generating video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "Try Translating!",
+    "about": {
+      "title": "About",
+      "hero": {
+        "title": "Translate between 40+ signed and spoken languages in real-time.",
+        "img": "Example of live translation between American Sign Language and English"
+      },
+      "direction": {
+        "spoken-to-signed": "Translate from spoken to signed languages",
+        "signed-to-spoken": "Or from signed to spoken languages"
+      }
+    },
+    "languages": {
+      "title": "Languages"
+    },
+    "contribute": {
+      "title": "Contribute"
+    },
+    "tools": {
+      "title": "Tools"
+    },
+    "nav": {
+      "pages": "Navigate to other pages",
+      "legal": "Navigate to legal pages"
+    }
+  },
+  "text-to-speech": {
+    "play": "Listen",
+    "cancel": "Stop",
+    "unavailable": "Voice output isn't available for the selected language"
+  },
+  "speech-to-text": {
+    "start": "Translate by voice",
+    "stop": "Stop translation by voice",
+    "not-allowed": "Need permission to use microphone",
+    "language-not-supported": "Selected language is not supported",
+    "browser-not-supported": "Voice input isn't supported on this browser",
+    "service-not-allowed": "Need permission to use speech recognition"
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software and Licenses"
+    }
+  },
+  "playground": {
+    "title": "Sign Language Processing Playground"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Spoken Language Identification",
+        "import": "Import Module",
+        "load": "Load Model",
+        "find": "Identify Text",
+        "create": "Create"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Worker Init",
+        "load": "Load Model",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Full Body Pose Estimation",
+        "load": "Model Load",
+        "first-frame": "First Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Camera starting",
+      "turnedOff": "Camera turned off",
+      "notConnected": "Camera not connected",
+      "permissionDenied": "Camera permission denied"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Turn off camera",
+        "off": "Turn on camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Loading Pose Estimation..."
+  },
+  "language-selector": {
+    "label": "Change language or region"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Draw Video",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Draw Sign Writing",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Skeleton",
+      "avatar": "Avatar",
+      "human": "Human"
+    },
+    "title": "Settings",
+    "close": "Close settings",
+    "support": {
+      "title": "Support",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Send feedback"
+      },
+      "about": {
+        "title": "About"
+      }
+    },
+    "voice": {
+      "title": "Voice",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Other",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-realistic human generator",
+          "pix2pixUpscaler": "Photo-realistic human upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar for AR on iOS",
+          "translation": "Translation",
+          "translation.spokenToSigned": "Spoken-to-Signed",
+          "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Toggle {{label}}",
+          "download": "Download Offline Model",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Re-Download Offline Model"
+        }
+      },
+      "appearance": {
+        "title": "Appearance",
+        "action": "Modify appearance",
+        "random": "Get a random photo",
+        "upload": "Upload your own photo"
+      }
+    }
+  },
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "All",
+  "countries.signed": "All"
+}

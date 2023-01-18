@@ -1,0 +1,5 @@
+<mat-nav-list>
+  <a mat-list-item *ngFor="let page of legalPages" (click)="navigateToLegalPage(page)">
+    {{ 'legal.' + page + '.title' | transloco }}
+  </a>
+</mat-nav-list>

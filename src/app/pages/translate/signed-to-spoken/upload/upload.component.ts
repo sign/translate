@@ -5,10 +5,9 @@ import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions'
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.scss']
+  styleUrls: ['./upload.component.scss'],
 })
 export class UploadComponent {
-
   uploadEl: HTMLInputElement = document.createElement('input');
 
   constructor(private store: Store) {
@@ -16,7 +15,6 @@ export class UploadComponent {
     this.uploadEl.setAttribute('accept', '.mp4, .ogv, .webm');
 
     this.uploadEl.addEventListener('change', this.onFileUpload.bind(this));
-
   }
 
   upload(): void {
@@ -30,5 +28,4 @@ export class UploadComponent {
       this.store.dispatch(new SetVideo(objectURL));
     }
   }
-
 }

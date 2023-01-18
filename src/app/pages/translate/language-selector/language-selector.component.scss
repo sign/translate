@@ -12,15 +12,11 @@ mat-tab-group {
 // Make language expansion menu show the correct icon
 button.menu-icon-button {
   mat-icon {
-    transition: transform .2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &[aria-expanded] mat-icon {
+  &[aria-expanded='true'] mat-icon {
     transform: rotateZ(-180deg);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: map-get(mat.$dark-theme-foreground-palette, icon);
   }
 }
 
@@ -30,10 +26,13 @@ button.menu-language-button {
   width: 100%;
   height: 100%;
   text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media #{$mat-lt-md} {
-  button.menu-icon-button, mat-tab-group {
+  button.menu-icon-button,
+  mat-tab-group {
     display: none;
   }
   button.menu-language-button {
@@ -41,37 +40,18 @@ button.menu-language-button {
   }
 }
 
+:host ::ng-deep div[role='tab'] {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0 16px;
+}
 
-::ng-deep {
-  .mdc-tab {
-    min-width: unset !important;
-    text-transform: uppercase;
-    padding: 0 16px !important;
+::ng-deep .language-selector-menu {
+  max-height: calc(100vh - 64px - 68px - 48px) !important;
+}
 
-    @media (prefers-color-scheme: dark) {
-      color: map-get(mat.$dark-theme-foreground-palette, text);
-    }
-
-    &[aria-selected='true'] {
-      color: mat.get-color-from-palette($app-primary);
-      transition: color .2s;
-    }
-  }
-
-  // Mat tab has a bug that when changing tabs, the height of the body is at least 1 px
-  .mat-mdc-tab-body-wrapper {
-    display: none !important;
-  }
-
-  .flag-icon {
-    background-size: cover;
-    border-radius: 50%;
-    width: 1em;
-    margin-inline-end: .5em;
-  }
-
-
-  .language-selector-menu {
-    margin-top: 5px;
-  }
+button.menu-language-button {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

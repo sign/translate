@@ -1,8 +1,15 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LanguageSelectorComponent} from './language-selector.component';
-import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {NgxsModule} from '@ngxs/store';
+import {SettingsState} from '../../../modules/settings/settings.state';
+import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {TranslateState} from '../../../modules/translate/translate.state';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -12,23 +19,31 @@ describe('LanguageSelectorComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [LanguageSelectorComponent],
       imports: [
-        AppTranslocoModule,
-        AppAngularMaterialModule
-      ]
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
+        NoopAnimationsModule,
+        HttpClientTestingModule,
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+      ],
     }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LanguageSelectorComponent);
     component = fixture.componentInstance;
-    component.translationKey = 'translate.languages.spoken';
-    component.languages = ['en', 'fr', 'de', 'he', 'ar'];
-
+    component.translationKey = 'languages';
+    component.languages = ['en', 'fr', 'de'];
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 
   it('select the same language should do nothing', () => {

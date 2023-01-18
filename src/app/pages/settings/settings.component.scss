@@ -1,0 +1,45 @@
+@import '../../../theme/variables';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  @media #{$mat-lt-sm} {
+    height: 100vh;
+    // Only on iOS, in case of viewport cover
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
+  > * {
+    flex-grow: 1;
+  }
+}
+
+h3 {
+  padding: 16px;
+  margin: 0;
+}
+
+mat-drawer {
+  min-width: 200px;
+}
+
+mat-toolbar span {
+  flex: 1 1 auto;
+}
+
+#content-page {
+  padding: 1em;
+}
+
+::ng-deep {
+  @media #{$mat-lt-sm} {
+    .cdk-overlay-pane {
+      max-width: 100vw !important;
+
+      .mat-dialog-container {
+        border-radius: 0;
+      }
+    }
+  }
+}

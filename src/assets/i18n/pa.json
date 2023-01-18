@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "ਪੰਨਾ ਮਿਲਿਆ ਨਹੀਂ",
+    "doesNotExist": "ਮਾਫ਼ ਕਰਨਾ, ਜਿਸ ਪੰਨੇ ਨੂੰ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਸੀ ਉਹ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+    "errorLogged": "ਅਸੀਂ ਗਲਤੀ ਨੂੰ ਲੌਗ ਕੀਤਾ ਹੈ ਅਤੇ ਇਸਦੀ ਜਾਂਚ ਕਰਾਂਗੇ।",
+    "goHome": "ਘਰ 'ਤੇ ਜਾਓ"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "ਭਾਸ਼ਾ ਖੋਜੋ",
+      "more": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ"
+    },
+    "input": {
+      "text": "ਲਿਖਤ",
+      "webcam": "ਵੈਬਕੈਮ",
+      "upload": "ਅੱਪਲੋਡ ਕਰੋ"
+    },
+    "swapLanguages": "ਭਾਸ਼ਾਵਾਂ ਵਿਚਾਲੇ ਅਦਲਾ-ਬਦਲੀ ਕਰੋ",
+    "upload": {
+      "types": ".mp4, .ogv ਜਾਂ .webm ਫਾਰਮੈਟ ਵਿੱਚ ਅੱਪਲੋਡ ਕਰੋ।",
+      "browse": "ਆਪਣਾ ਕੰਪਿਊਟਰ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
+      "title": "ਇੱਕ ਵੀਡੀਓ ਚੁਣੋ"
+    },
+    "description": "ਡੈਸਕਟਾਪ ਅਤੇ ਮੋਬਾਈਲ ਲਈ ਇੱਕ ਦੋ-ਦਿਸ਼ਾਵੀ ਬਹੁ-ਭਾਸ਼ਾਈ ਸੈਨਤ ਭਾਸ਼ਾ ਅਨੁਵਾਦ ਐਪ",
+    "spoken-to-signed": {
+      "text": "ਬੋਲੀ ਦੀ ਭਾਸ਼ਾ ਦਾ ਪਾਠ",
+      "actions": {
+        "download": "ਅਨੁਵਾਦ ਡਾਊਨਲੋਡ ਕਰੋ",
+        "copy": "ਅਨੁਵਾਦ ਕਾਪੀ ਕਰੋ",
+        "share": "ਅਨੁਵਾਦ ਸਾਂਝਾ ਕਰੋ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "ਮਨੁੱਖੀ ਵੀਡੀਓ ਮਾਡਲ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+          "generating": "ਵੀਡੀਓ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ਅਨੁਵਾਦ ਅਜ਼ਮਾਓ",
+    "about": {
+      "title": "ਬਾਬਤ",
+      "hero": {
+        "title": "ਅਸਲ-ਸਮੇਂ ਵਿੱਚ 40+ ਹਸਤਾਖਰਿਤ ਅਤੇ ਬੋਲੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ।",
+        "img": "ਅਮਰੀਕੀ ਸੈਨਤ ਭਾਸ਼ਾ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਵਿਚਕਾਰ ਲਾਈਵ ਅਨੁਵਾਦ ਦੀ ਉਦਾਹਰਨ"
+      },
+      "direction": {
+        "spoken-to-signed": "ਬੋਲੀ ਤੋਂ ਹਸਤਾਖਰਿਤ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ",
+        "signed-to-spoken": "ਜਾਂ ਹਸਤਾਖਰਿਤ ਤੋਂ ਬੋਲੀ ਜਾਣ ਵਾਲੀਆਂ ਭਾਸ਼ਾਵਾਂ ਤੱਕ"
+      }
+    },
+    "languages": {
+      "title": "ਭਾਸ਼ਾਵਾਂ"
+    },
+    "contribute": {
+      "title": "ਯੋਗਦਾਨ ਪਾਓ"
+    },
+    "tools": {
+      "title": "ਔਜ਼ਾਰ"
+    },
+    "nav": {
+      "pages": "ਹੋਰ ਪੰਨਿਆਂ 'ਤੇ ਨੈਵੀਗੇਟ ਕਰੋ",
+      "legal": "ਕਾਨੂੰਨੀ ਪੰਨਿਆਂ 'ਤੇ ਨੈਵੀਗੇਟ ਕਰੋ"
+    }
+  },
+  "text-to-speech": {
+    "play": "ਸੁਣੋ",
+    "cancel": "ਰੂਕੋ",
+    "unavailable": "ਚੁਣੀ ਗਈ ਭਾਸ਼ਾ ਲਈ ਵੌਇਸ ਆਉਟਪੁੱਟ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
+  },
+  "speech-to-text": {
+    "start": "ਅਵਾਜ਼ ਰਾਹੀਂ ਅਨੁਵਾਦ ਕਰੋ",
+    "stop": "ਆਵਾਜ਼ ਦੁਆਰਾ ਅਨੁਵਾਦ ਬੰਦ ਕਰੋ",
+    "not-allowed": "ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਵਰਤਣ ਲਈ ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ ਹੈ",
+    "language-not-supported": "ਚੁਣੀ ਗਈ ਭਾਸ਼ਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ",
+    "browser-not-supported": "ਇਸ ਬ੍ਰਾਊਜ਼ਰ 'ਤੇ ਵੌਇਸ ਇਨਪੁਟ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ",
+    "service-not-allowed": "ਬੋਲੀ ਪਛਾਣ ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਇਜਾਜ਼ਤ ਦੀ ਲੋੜ ਹੈ"
+  },
+  "legal": {
+    "terms": {
+      "title": "ਮਦਾਂ"
+    },
+    "privacy": {
+      "title": "ਪਰਦੇਦਾਰੀ"
+    },
+    "licenses": {
+      "title": "ਸਾਫਟਵੇਅਰ ਅਤੇ ਲਾਇਸੰਸ"
+    }
+  },
+  "playground": {
+    "title": "ਸੈਨਤ ਭਾਸ਼ਾ ਪ੍ਰੋਸੈਸਿੰਗ ਖੇਡ ਦਾ ਮੈਦਾਨ"
+  },
+  "benchmark": {
+    "title": "ਬੇਂਚਮਾਰਕ",
+    "stats": {
+      "cld": {
+        "title": "ਬੋਲੀ ਜਾਣ ਵਾਲੀ ਭਾਸ਼ਾ ਦੀ ਪਛਾਣ",
+        "import": "ਆਯਾਤ ਮੋਡੀਊਲ",
+        "load": "ਲੋਡ ਮਾਡਲ",
+        "find": "ਟੈਕਸਟ ਦੀ ਪਛਾਣ ਕਰੋ",
+        "create": "ਬਣਾਓ"
+      },
+      "pix2pix": {
+        "title": "ਮਨੁੱਖੀ ਪੋਜ਼ ਦਰਸ਼ਕ",
+        "init": "ਵਰਕਰ Init",
+        "load": "ਲੋਡ ਮਾਡਲ",
+        "first-frame": "ਪਹਿਲਾ ਫਰੇਮ ਅਨੁਮਾਨ",
+        "frame": "ਫਰੇਮ ਇਨਫਰੈਂਸ"
+      },
+      "pose": {
+        "title": "ਪੂਰੇ ਸਰੀਰ ਦੀ ਸਥਿਤੀ ਦਾ ਅੰਦਾਜ਼ਾ",
+        "load": "ਮਾਡਲ ਲੋਡ",
+        "first-frame": "ਪਹਿਲਾ ਫਰੇਮ ਅਨੁਮਾਨ",
+        "frame": "ਫਰੇਮ ਇਨਫਰੈਂਸ"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "ਕੈਮਰਾ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ",
+      "turnedOff": "ਕੈਮਰਾ ਬੰਦ ਹੋ ਗਿਆ",
+      "notConnected": "ਕੈਮਰਾ ਕਨੈਕਟ ਨਹੀਂ ਹੈ",
+      "permissionDenied": "ਕੈਮਰੇ ਦੀ ਇਜਾਜ਼ਤ ਅਸਵੀਕਾਰ ਕੀਤੀ ਗਈ"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "ਕੈਮਰਾ ਬੰਦ ਕਰੋ",
+        "off": "ਕੈਮਰਾ ਚਾਲੂ ਕਰੋ"
+      }
+    }
+  },
+  "pose": {
+    "loading": "ਪੋਜ਼ ਦਾ ਅੰਦਾਜ਼ਾ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+  },
+  "language-selector": {
+    "label": "ਭਾਸ਼ਾ ਜਾਂ ਖੇਤਰ ਬਦਲੋ"
+  },
+  "settings": {
+    "detectSign": "ਨਿਸ਼ਾਨ ਦਾ ਪਤਾ ਲਗਾਓ",
+    "drawVideo": "ਵੀਡੀਓ ਬਣਾਓ",
+    "drawPose": "ਪੋਜ਼ ਖਿੱਚੋ",
+    "drawSignWriting": "ਸਾਈਨ ਰਾਈਟਿੰਗ ਡਰਾਅ ਕਰੋ",
+    "animatePose": "ਐਨੀਮੇਟ ਪੋਜ਼",
+    "poseViewer": {
+      "pose": "ਪਿੰਜਰ",
+      "avatar": "ਅਵਤਾਰ",
+      "human": "ਮਨੁੱਖੀ"
+    },
+    "title": "ਸੈਟਿੰਗਾਂ",
+    "close": "ਸੈਟਿੰਗਾਂ ਬੰਦ ਕਰੋ",
+    "support": {
+      "title": "ਸਪੋਰਟ",
+      "feedback": {
+        "title": "ਸੁਝਾਅ",
+        "send": "ਫੀਡਬੈਕ ਭੇਜੋ"
+      },
+      "about": {
+        "title": "ਬਾਰੇ"
+      }
+    },
+    "voice": {
+      "title": "ਆਵਾਜ਼",
+      "input": {
+        "title": "ਇੰਪੁੱਟ"
+      },
+      "output": {
+        "title": "ਆਉਟਪੁੱਟ"
+      }
+    },
+    "other": {
+      "title": "ਹੋਰ",
+      "offline": {
+        "title": "ਔਫਲਾਈਨ",
+        "files": {
+          "pix2pixGenerator": "ਫੋਟੋ-ਯਥਾਰਥਵਾਦੀ ਮਨੁੱਖੀ ਜਨਰੇਟਰ",
+          "pix2pixUpscaler": "ਫੋਟੋ-ਯਥਾਰਥਵਾਦੀ ਮਨੁੱਖੀ ਅੱਪਸਕੇਲਰ",
+          "avatarGlb": "3D ਅਵਤਾਰ",
+          "avatarUsdz": "iOS 'ਤੇ AR ਲਈ 3D ਅਵਤਾਰ",
+          "translation": "ਅਨੁਵਾਦ",
+          "translation.spokenToSigned": "ਸਪੋਕਨ-ਟੂ-ਦਸਤਖਤ",
+          "translation.signedToSpoken": "ਦਸਤਖਤ-ਤੋਂ-ਬੋਲੇ"
+        },
+        "actions": {
+          "toggle": "ਟੌਗਲ {{label}}",
+          "download": "ਔਫਲਾਈਨ ਮਾਡਲ ਡਾਊਨਲੋਡ ਕਰੋ",
+          "delete": "ਔਫਲਾਈਨ ਮਾਡਲ ਕੈਸ਼ ਨੂੰ ਸਾਫ਼ ਕਰੋ",
+          "reDownload": "ਔਫਲਾਈਨ ਮਾਡਲ ਮੁੜ-ਡਾਊਨਲੋਡ ਕਰੋ"
+        }
+      },
+      "appearance": {
+        "title": "ਦਿੱਖ",
+        "action": "ਦਿੱਖ ਨੂੰ ਸੋਧੋ",
+        "random": "ਇੱਕ ਬੇਤਰਤੀਬ ਫੋਟੋ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "upload": "ਆਪਣੀ ਖੁਦ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ"
+      }
+    }
+  },
+  "countries.isl": "ਅੰਤਰਰਾਸ਼ਟਰੀ",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ਸਾਰੇ",
+  "countries.signed": "ਸਾਰੇ"
+}

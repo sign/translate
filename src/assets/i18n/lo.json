@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "ບໍ່ພົບໜ້າ",
+    "doesNotExist": "ຂໍອະໄພ, ຫນ້າທີ່ເຈົ້າກໍາລັງຊອກຫາບໍ່ມີຢູ່.",
+    "errorLogged": "ພວກ​ເຮົາ​ໄດ້​ເຂົ້າ​ສູ່​ລະ​ບົບ​ຄວາມ​ຜິດ​ພາດ​ແລະ​ຈະ​ກວດ​ສອບ​ມັນ​.",
+    "goHome": "ໄປທີ່ຫນ້າທໍາອິດ"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign ແປພາສາ",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "ກວດສອບພາສາ",
+      "more": "ພາສາເພີ່ມເຕີມ"
+    },
+    "input": {
+      "text": "ຂໍ້ຄວາມ",
+      "webcam": "ກ້ອງເວັບ",
+      "upload": "ອັບໂຫຼດ"
+    },
+    "swapLanguages": "ສັບປ່ຽນພາສາ",
+    "upload": {
+      "types": "ອັບໂຫຼດໄຟລ໌ .mp4, .ogv ຫຼື .webm.",
+      "browse": "ຊອກຫາໃນຄອມພິວເຕີ",
+      "title": "ເລືອກວິດີໂອ"
+    },
+    "description": "ແອັບແປພາສາມືຫຼາຍພາສາສອງທິດທາງສຳລັບເດັສທັອບ ແລະມືຖື",
+    "spoken-to-signed": {
+      "text": "ຂໍ້ຄວາມພາສາເວົ້າ",
+      "actions": {
+        "download": "ດາວໂຫຼດການແປ",
+        "copy": "ສຳເນົາການແປ",
+        "share": "ແບ່ງປັນການແປ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "ກຳລັງໂຫຼດຕົວແບບວິດີໂອຂອງມະນຸດ",
+          "generating": "ກຳລັງສ້າງວິດີໂອ"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ລອງແປພາສາ",
+    "about": {
+      "title": "ກ່ຽວກັບ",
+      "hero": {
+        "title": "ແປລະຫວ່າງ 40+ ພາສາທີ່ມີລາຍເຊັນ ແລະເວົ້າໃນເວລາຈິງ.",
+        "img": "ຕົວຢ່າງການແປສົດລະຫວ່າງພາສາມືອາເມລິກາ ແລະພາສາອັງກິດ"
+      },
+      "direction": {
+        "spoken-to-signed": "ແປຈາກພາສາເວົ້າເປັນພາສາລາຍເຊັນ",
+        "signed-to-spoken": "ຫຼືຈາກລາຍເຊັນເປັນພາສາເວົ້າ"
+      }
+    },
+    "languages": {
+      "title": "ພາສາ"
+    },
+    "contribute": {
+      "title": "ປະ​ກອບ​ສ່ວນ"
+    },
+    "tools": {
+      "title": "ເຄື່ອງມື"
+    },
+    "nav": {
+      "pages": "ທ່ອງໄປຫາໜ້າອື່ນ",
+      "legal": "ທ່ອງໄປຫາໜ້າກົດໝາຍ"
+    }
+  },
+  "text-to-speech": {
+    "play": "ຟັງສຽງ",
+    "cancel": "ຢຸດ",
+    "unavailable": "ສຽງອອກບໍ່ສາມາດໃຊ້ໄດ້ກັບພາສາທີ່ເລືອກ"
+  },
+  "speech-to-text": {
+    "start": "ແປພາສາດ້ວຍສຽງ",
+    "stop": "ຢຸດການແປດ້ວຍສຽງ",
+    "not-allowed": "ຕ້ອງການການອະນຸຍາດເພື່ອໃຊ້ໄມໂຄຣໂຟນ",
+    "language-not-supported": "ບໍ່ຮອງຮັບພາສາທີ່ເລືອກ",
+    "browser-not-supported": "ບຼາວເຊີນີ້ບໍ່ຮອງຮັບການປ້ອນຂໍ້ມູນດ້ວຍສຽງ",
+    "service-not-allowed": "ຕ້ອງການການອະນຸຍາດເພື່ອໃຊ້ການຮັບຮູ້ສຽງເວົ້າ"
+  },
+  "legal": {
+    "terms": {
+      "title": "ຂໍ້ກຳນົດ"
+    },
+    "privacy": {
+      "title": "ຄວາມເປັນສ່ວນຕົວ"
+    },
+    "licenses": {
+      "title": "ຊອບ​ແວ ແລະ ລິຂະສິດ"
+    }
+  },
+  "playground": {
+    "title": "ເຄື່ອງຫຼີ້ນການປະມວນຜົນພາສາມື"
+  },
+  "benchmark": {
+    "title": "ດັດຊະນີ",
+    "stats": {
+      "cld": {
+        "title": "ການລະບຸພາສາເວົ້າ",
+        "import": "ໂມດູນນໍາເຂົ້າ",
+        "load": "ໂຫຼດຕົວແບບ",
+        "find": "ລະບຸຂໍ້ຄວາມ",
+        "create": "ສ້າງ"
+      },
+      "pix2pix": {
+        "title": "ຜູ້ເບິ່ງທ່າຂອງມະນຸດ",
+        "init": "ຄົນງານ Init",
+        "load": "ໂຫຼດຕົວແບບ",
+        "first-frame": "Inference ກອບທໍາອິດ",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "ການຄາດຄະເນການວາງຕົວເຕັມ",
+        "load": "ການໂຫຼດຕົວແບບ",
+        "first-frame": "Inference ກອບທໍາອິດ",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "ກ້ອງຖ່າຍຮູບເລີ່ມຕົ້ນ",
+      "turnedOff": "ກ້ອງຖ່າຍຮູບຖືກປິດ",
+      "notConnected": "ກ້ອງຖ່າຍຮູບບໍ່ໄດ້ເຊື່ອມຕໍ່",
+      "permissionDenied": "ການອະນຸຍາດກ້ອງຖ່າຍຮູບຖືກປະຕິເສດ"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "ປິດກ້ອງຖ່າຍຮູບ",
+        "off": "ເປີດກ້ອງຖ່າຍຮູບ"
+      }
+    }
+  },
+  "pose": {
+    "loading": "ກໍາລັງໂຫລດການຄາດຄະເນ Pose..."
+  },
+  "language-selector": {
+    "label": "ປ່ຽນພາສາ ຫຼືພາກພື້ນ"
+  },
+  "settings": {
+    "detectSign": "ກວດພົບສັນຍານ",
+    "drawVideo": "ແຕ້ມວິດີໂອ",
+    "drawPose": "ແຕ້ມຮູບ",
+    "drawSignWriting": "ແຕ້ມປ້າຍຂຽນ",
+    "animatePose": "ພາບເຄື່ອນໄຫວ",
+    "poseViewer": {
+      "pose": "ໂຄງກະດູກ",
+      "avatar": "ຮູບແທນຕົວ",
+      "human": "ມະນຸດ"
+    },
+    "title": "ການຕັ້ງຄ່າ",
+    "close": "ປິດການຕັ້ງຄ່າ",
+    "support": {
+      "title": "ສະຫນັບສະຫນູນ",
+      "feedback": {
+        "title": "ຄໍາຕິຊົມ",
+        "send": "ສົ່ງຄໍາຄິດເຫັນ"
+      },
+      "about": {
+        "title": "ກ່ຽວກັບ"
+      }
+    },
+    "voice": {
+      "title": "ສຽງ",
+      "input": {
+        "title": "ປ້ອນຂໍ້ມູນ"
+      },
+      "output": {
+        "title": "ຜົນຜະລິດ"
+      }
+    },
+    "other": {
+      "title": "ອື່ນໆ",
+      "offline": {
+        "title": "ອອບໄລນ໌",
+        "files": {
+          "pix2pixGenerator": "ຮູບ​ພາບ​, ເຄື່ອງ​ຜະ​ລິດ​ມະ​ນຸດ​ຈິງ​",
+          "pix2pixUpscaler": "ຕົວຂະຫຍາຍຮູບພາບ-ຄວາມເປັນຈິງຂອງມະນຸດ",
+          "avatarGlb": "3D ຮູບແທນຕົວ",
+          "avatarUsdz": "3D Avatar ສໍາລັບ AR ໃນ iOS",
+          "translation": "ການແປ",
+          "translation.spokenToSigned": "ເວົ້າກັບເຊັນ",
+          "translation.signedToSpoken": "ເຊັນເພື່ອເວົ້າ"
+        },
+        "actions": {
+          "toggle": "ສະຫຼັບ {{label}}",
+          "download": "ດາວໂຫລດແບບອອບໄລນ໌",
+          "delete": "ລ້າງແຄດຕົວແບບອອບໄລນ໌",
+          "reDownload": "ດາວໂຫຼດແບບອອບໄລນ໌ຄືນໃໝ່"
+        }
+      },
+      "appearance": {
+        "title": "ຮູບລັກສະນະ",
+        "action": "ແກ້ໄຂຮູບລັກສະນະ",
+        "random": "ເອົາຮູບສຸ່ມ",
+        "upload": "ອັບໂຫຼດຮູບຂອງທ່ານເອງ"
+      }
+    }
+  },
+  "countries.isl": "ສາກົນ",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ທັງໝົດ",
+  "countries.signed": "ທັງໝົດ"
+}

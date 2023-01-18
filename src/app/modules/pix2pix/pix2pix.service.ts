@@ -1,28 +1,55 @@
 import {Injectable} from '@angular/core';
 import * as comlink from 'comlink';
-import {transferableImage} from '../../core/helpers/image/transferable';
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
+import {AssetsService} from '../../core/services/assets/assets.service';
+import {isSafari} from '../../core/constants';
 
+interface Pix2PixModel {
+  loadModel: (generator: Map<string, string>, upscaler: Map<string, string>) => Promise<void>;
+  translateQueue: (queueId: number, image: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>;
+}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Pix2PixService {
-  worker: comlink.Remote<{
-    loadModel: () => Promise<void>,
-    translate: (bitmap: ImageBitmap | ImageData) => Promise<Uint8ClampedArray>,
-  }>;
+  worker: comlink.Remote<Pix2PixModel> | Pix2PixModel;
+
+  isFirstFrame = true;
+
+  queueId = 0;
+
+  constructor(private ga: GoogleAnalyticsService, private assets: AssetsService) {}
 
   async loadModel(): Promise<void> {
+    this.queueId++;
+
     if (this.worker) {
       return;
     }
 
-    this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
-    await this.worker.loadModel();
+    await this.ga.trace('pix2pix', 'init', async () => {
+      if (isSafari) {
+        // Some browsers (Safari) don't support WebGL in workers,
+        // making the model slow to the point it is unusable.
+        this.worker = await import('./pix2pix.model');
+      } else {
+        this.worker = comlink.wrap(new Worker(new URL('./pix2pix.worker', import.meta.url)));
+      }
+    });
+
+    const [generator, upscaler] = await Promise.all([
+      this.assets.getDirectory('models/generator/model.h5.layers16/'),
+      this.assets.getDirectory('models/upscaler/model.h5.layers/'),
+    ]);
+    await this.ga.trace('pix2pix', 'load', () => this.worker.loadModel(generator, upscaler));
   }
 
-  async translate(canvas: HTMLCanvasElement): Promise<Uint8ClampedArray> {
-    const image = await transferableImage(canvas);
-    return this.worker.translate(image);
+  async translate(image: ImageBitmap | ImageData): Promise<Uint8ClampedArray> {
+    const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
+    return this.ga.trace('pix2pix', frameType, async () => {
+      this.isFirstFrame = false;
+      return this.worker.translateQueue(this.queueId, image);
+    });
   }
 }

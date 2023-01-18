@@ -5,7 +5,7 @@ import {SignWritingService} from './sign-writing.service';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Tensor} from '@tensorflow/tfjs';
 import {PoseNormalizationService} from '../pose/pose-normalization.service';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
 
 export interface SWFeatureDescription {
@@ -29,23 +29,26 @@ export interface FaceStateModel {
 const FACE_MAP = {
   Eyes: ['񌞱', '񌡱', '񌠑', '񌧱'],
   Eyebrows: ['񌑑', '񌏱', '񌒱'],
-  Mouth: ['񍪱', '񍡱', '񍤱', '񍘱', '񍝑', '񍠑', '񍭱']
+  Mouth: ['񍪱', '񍡱', '񍤱', '񍘱', '񍝑', '񍠑', '񍭱'],
 };
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FaceService {
-
   faceSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService, public three: ThreeService) {
-  }
+  constructor(
+    private poseNormalization: PoseNormalizationService,
+    private tf: TensorflowService,
+    private three: ThreeService
+  ) {}
 
   async loadModel(): Promise<LayersModel> {
     await Promise.all([this.tf.load(), this.three.load()]);
-    return this.tf.loadLayersModel('assets/models/face-features/model.json')
-      .then(model => this.faceSequentialModel = model as unknown as LayersModel);
+    return this.tf
+      .loadLayersModel('assets/models/face-features/model.json')
+      .then(model => (this.faceSequentialModel = model as unknown as LayersModel));
   }
 
   normalize(vectors): Tensor {
@@ -58,7 +61,7 @@ export class FaceService {
     const model = this.faceSequentialModel;
 
     if (!model) {
-      // By default just open eyes
+      // By default, just open eyes
       return {face: {location: faceLocation, symbol: '񌞁'}};
     }
 
@@ -97,18 +100,17 @@ export class FaceService {
     const mouthY = (vectors[14].y + vectors[17].y) / 2;
     const mouthLocation = new this.three.Vector2(mouthX, mouthY);
 
-
     return {
       face: {location: faceLocation, symbol: '񋾡'},
       eyes: {
         left: {location: leftEye, symbol: eyeSymbol},
-        right: {location: rightEye, symbol: eyeSymbol}
+        right: {location: rightEye, symbol: eyeSymbol},
       },
       eyebrows: {
         left: {location: leftEyebrow, symbol: leftEyebrowSymbol},
-        right: {location: rightEyebrow, symbol: rightEyebrowSymbol}
+        right: {location: rightEyebrow, symbol: rightEyebrowSymbol},
       },
-      mouth: {location: mouthLocation, symbol: state.Mouth}
+      mouth: {location: mouthLocation, symbol: state.Mouth},
     };
   }
 

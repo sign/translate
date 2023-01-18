@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "stranica nije pronađena",
+    "doesNotExist": "Nažalost, stranica koju ste tražili ne postoji.",
+    "errorLogged": "Grešku smo prijavili i ispitat ćemo je.",
+    "goHome": "Idi kuci"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Prevodilac",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Otkrij jezik",
+      "more": "Više jezika"
+    },
+    "input": {
+      "text": "Tekst",
+      "webcam": "Web kamera",
+      "upload": "Upload"
+    },
+    "swapLanguages": "Zamijeni jezike",
+    "upload": {
+      "types": "Otpremite .mp4, .ogv ili .webm.",
+      "browse": "Pretraži računar",
+      "title": "Odaberite video"
+    },
+    "description": "Dvosmjerna višejezična aplikacija za prevođenje znakovnog jezika za desktop i mobilne uređaje",
+    "spoken-to-signed": {
+      "text": "Tekst govornog jezika",
+      "actions": {
+        "download": "Preuzmite prevod",
+        "copy": "Kopiraj prevod",
+        "share": "Dijeli prevod"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Učitavanje ljudskog video modela",
+          "generating": "Generisanje video zapisa"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "Isprobajte Sign Prevodioca",
+    "about": {
+      "title": "O programu",
+      "hero": {
+        "title": "Prevodite između 40+ znakovnih i govornih jezika u realnom vremenu.",
+        "img": "Primjer živog prijevoda između američkog znakovnog jezika i engleskog"
+      },
+      "direction": {
+        "spoken-to-signed": "Prevodite s govornog na znakovne jezike",
+        "signed-to-spoken": "Ili sa znakovnih na govorne jezike"
+      }
+    },
+    "languages": {
+      "title": "Jezici"
+    },
+    "contribute": {
+      "title": "Dajte svoj doprinos"
+    },
+    "tools": {
+      "title": "Alati"
+    },
+    "nav": {
+      "pages": "Idite na druge stranice",
+      "legal": "Idite na pravne stranice"
+    }
+  },
+  "text-to-speech": {
+    "play": "Poslušajte",
+    "cancel": "Stani",
+    "unavailable": "Glasovni izlaz nije dostupan za odabrani jezik"
+  },
+  "speech-to-text": {
+    "start": "Prijevod glasom",
+    "stop": "Zaustavi prevođenje glasom",
+    "not-allowed": "Potrebna mi je dozvola za korištenje mikrofona",
+    "language-not-supported": "Odabrani jezik nije podržan",
+    "browser-not-supported": "Unos glasom nije podržan na ovom pretraživaču",
+    "service-not-allowed": "Potrebna mi je dozvola za korištenje prepoznavanja govora"
+  },
+  "legal": {
+    "terms": {
+      "title": "Uslovi"
+    },
+    "privacy": {
+      "title": "Privatnost"
+    },
+    "licenses": {
+      "title": "Softver i licence"
+    }
+  },
+  "playground": {
+    "title": "Igralište za obradu znakovnog jezika"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identifikacija govornog jezika",
+        "import": "Uvozni modul",
+        "load": "Load Model",
+        "find": "Identifikujte tekst",
+        "create": "Stvoriti"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Worker Init",
+        "load": "Load Model",
+        "first-frame": "Zaključivanje prvog okvira",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Procjena poze cijelog tijela",
+        "load": "Opterećenje modela",
+        "first-frame": "Zaključivanje prvog okvira",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera se pokreće",
+      "turnedOff": "Kamera je isključena",
+      "notConnected": "Kamera nije povezana",
+      "permissionDenied": "Dozvola za kameru je odbijena"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Isključite kameru",
+        "off": "Uključite kameru"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Učitavanje procjene položaja..."
+  },
+  "language-selector": {
+    "label": "Promijenite jezik ili regiju"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Draw Video",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Draw Sign Writing",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Skeleton",
+      "avatar": "Avatar",
+      "human": "Čovjek"
+    },
+    "title": "Postavke",
+    "close": "Zatvorite postavke",
+    "support": {
+      "title": "Podrška",
+      "feedback": {
+        "title": "Povratne informacije",
+        "send": "Pošaljite povratne informacije"
+      },
+      "about": {
+        "title": "O"
+      }
+    },
+    "voice": {
+      "title": "Glas",
+      "input": {
+        "title": "Unos"
+      },
+      "output": {
+        "title": "Izlaz"
+      }
+    },
+    "other": {
+      "title": "Ostalo",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealističan ljudski generator",
+          "pix2pixUpscaler": "Foto-realističan ljudski upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar za AR na iOS-u",
+          "translation": "Prevod",
+          "translation.spokenToSigned": "Govoreno-potpisano",
+          "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "Uključi {{label}}",
+          "download": "Preuzmite Offline model",
+          "delete": "Očistite predmemoriju modela van mreže",
+          "reDownload": "Ponovno preuzmite offline model"
+        }
+      },
+      "appearance": {
+        "title": "Izgled",
+        "action": "Izmijenite izgled",
+        "random": "Uzmite nasumično odabranu fotografiju",
+        "upload": "Otpremite vlastitu fotografiju"
+      }
+    }
+  },
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Sve",
+  "countries.signed": "Sve"
+}

@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "پاڼه ونه موندل شوه",
+    "doesNotExist": "بخښنه غواړئ، هغه پاڼه چې تاسو یې په لټه کې یاست شتون نلري.",
+    "errorLogged": "موږ تېروتنه ثبت کړې او موږ به یې وګورو.",
+    "goHome": "کور ته تلل"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign ژباړونکی",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "د ژبې موندل",
+      "more": "نورې ژبې"
+    },
+    "input": {
+      "text": "متن",
+      "webcam": "ویب کیم",
+      "upload": "پورته کول"
+    },
+    "swapLanguages": "ژبې بدلول",
+    "upload": {
+      "types": "یو .mp4 ، .ogv ، ، یا .webm اپلوډ کړئ.",
+      "browse": "خپل کمپیوټر لټون کړئ",
+      "title": "یو ویډیو غوره کړئ"
+    },
+    "description": "د ډیسټاپ او موبایل لپاره دوه اړخیزه څو ژبنۍ نښې ژبې ژباړې ایپ",
+    "spoken-to-signed": {
+      "text": "د خبرې شوې ژبې متن",
+      "actions": {
+        "download": "ژباړه ډاونلوډ کړئ",
+        "copy": "کاپي ژباړه",
+        "share": "ژباړه شریک کړئ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "د انسان ویډیو ماډل پورته کول",
+          "generating": "ویډیو جوړول"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "د ژباړې هڅه وکړئ",
+    "about": {
+      "title": "په اړه",
+      "hero": {
+        "title": "په ریښتیني وخت کې د 40+ لاسلیک شوي او ویل شوي ژبو ترمینځ وژباړئ.",
+        "img": "د امریکایی اشارو ژبې او انګلیسي ترمنځ د ژوندۍ ژباړې بیلګه"
+      },
+      "direction": {
+        "spoken-to-signed": "له خبرې شوي څخه لاسلیک شوي ژبې ته وژباړئ",
+        "signed-to-spoken": "یا له لاسلیک شوي ژبې څخه خبرې شوي ژبې ته"
+      }
+    },
+    "languages": {
+      "title": "ژبې"
+    },
+    "contribute": {
+      "title": "مرسته"
+    },
+    "tools": {
+      "title": "توکي"
+    },
+    "nav": {
+      "pages": "نورو پاڼو ته لاړ شئ",
+      "legal": "قانوني پاڼو ته لاړ شئ"
+    }
+  },
+  "text-to-speech": {
+    "play": "اوریدل",
+    "cancel": "درېدل",
+    "unavailable": "د غږ محصول د ټاکل شوې ژبې لپاره شتون نلري"
+  },
+  "speech-to-text": {
+    "start": "د غږ له مخې ژباړه کړئ",
+    "stop": "د غږ له لارې ژباړه ودروئ",
+    "not-allowed": "د مایکروفون کارولو اجازه ته اړتیا لري",
+    "language-not-supported": "ټاکل شوې ژبه ملاتړ نه کوي",
+    "browser-not-supported": "د غږ ان پټ په دې براوزر کې ملاتړ نه کوي",
+    "service-not-allowed": "د وینا پیژندنې کارولو لپاره اجازې ته اړتیا لري"
+  },
+  "legal": {
+    "terms": {
+      "title": "شرایط"
+    },
+    "privacy": {
+      "title": "خصوصي حریم"
+    },
+    "licenses": {
+      "title": "سافټ ویر او جواز لیکونه"
+    }
+  },
+  "playground": {
+    "title": "د نښې ژبې پروسس کولو لوبې ډګر"
+  },
+  "benchmark": {
+    "title": "بنچمارک",
+    "stats": {
+      "cld": {
+        "title": "د خبرې ژبې پیژندنه",
+        "import": "د واردولو ماډل",
+        "load": "موډل بار کړئ",
+        "find": "د متن پیژندنه",
+        "create": "جوړ کړئ"
+      },
+      "pix2pix": {
+        "title": "د انسان پوز لیدونکی",
+        "init": "کارګر انیټ",
+        "load": "موډل بار کړئ",
+        "first-frame": "د لومړي چوکاټ تحلیل",
+        "frame": "د چوکاټ تحلیل"
+      },
+      "pose": {
+        "title": "د بشپړ بدن پوز اټکل",
+        "load": "د ماډل بار",
+        "first-frame": "د لومړي چوکاټ تحلیل",
+        "frame": "د چوکاټ تحلیل"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "کیمره پیل کیږي",
+      "turnedOff": "کیمره بنده شوه",
+      "notConnected": "کیمره تړل شوې نه ده",
+      "permissionDenied": "د کیمرې اجازه رد شوه"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "کیمره بنده کړئ",
+        "off": "کیمره چالان کړئ"
+      }
+    }
+  },
+  "pose": {
+    "loading": "د پوز اټکل پورته کول..."
+  },
+  "language-selector": {
+    "label": "ژبه یا سیمه بدله کړئ"
+  },
+  "settings": {
+    "detectSign": "نښه کشف کړئ",
+    "drawVideo": "ویډیو رسم کړئ",
+    "drawPose": "پوز رسم کړئ",
+    "drawSignWriting": "د لاسلیک لیکنه رسم کړئ",
+    "animatePose": "متحرک پوز",
+    "poseViewer": {
+      "pose": "کنکال",
+      "avatar": "اوتار",
+      "human": "انسان"
+    },
+    "title": "ترتیبات",
+    "close": "تنظیمات بند کړئ",
+    "support": {
+      "title": "ملاتړ",
+      "feedback": {
+        "title": "فیډبیک",
+        "send": "نظر واستوئ"
+      },
+      "about": {
+        "title": "په اړه"
+      }
+    },
+    "voice": {
+      "title": "غږ",
+      "input": {
+        "title": "داخلول"
+      },
+      "output": {
+        "title": "محصول"
+      }
+    },
+    "other": {
+      "title": "نور",
+      "offline": {
+        "title": "آفلاین",
+        "files": {
+          "pix2pixGenerator": "د عکس حقیقي انسان جنراتور",
+          "pix2pixUpscaler": "د عکس حقیقت لرونکی انسان لوړ پوړی",
+          "avatarGlb": "3D اوتار",
+          "avatarUsdz": "په iOS کې د AR لپاره 3D اوتار",
+          "translation": "ژباړه",
+          "translation.spokenToSigned": "لاسلیک شوي خبرې",
+          "translation.signedToSpoken": "لاسلیک شوي - خبرې"
+        },
+        "actions": {
+          "toggle": "بدلول {{label}}",
+          "download": "آفلاین ماډل ډاونلوډ کړئ",
+          "delete": "د آفلاین ماډل کیچ پاک کړئ",
+          "reDownload": "آفلاین ماډل بیا ډاونلوډ کړئ"
+        }
+      },
+      "appearance": {
+        "title": "بڼه",
+        "action": "بڼه بدله کړئ",
+        "random": "یو ناڅاپي عکس ترلاسه کړئ",
+        "upload": "خپل عکس اپلوډ کړئ"
+      }
+    }
+  },
+  "countries.isl": "نړیوال",
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "ټول",
+  "countries.signed": "ټول"
+}

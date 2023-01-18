@@ -4,15 +4,16 @@ import {fromEvent, interval} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
-import {promiseRaf} from '../../../../core/helpers/raf/raf';
-
+import {transferableImage} from '../../../../core/helpers/image/transferable';
 
 @Component({
   selector: 'app-human-pose-viewer',
   templateUrl: './human-pose-viewer.component.html',
-  styleUrls: ['./human-pose-viewer.component.scss']
+  styleUrls: ['./human-pose-viewer.component.scss'],
 })
 export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {
+  appearance$ = this.store.select<string>(state => state.settings.appearance);
+
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
 
   @Input() src: string;
@@ -21,6 +22,8 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
   ready = false;
   modelReady = false;
+
+  totalFrames = 1;
 
   constructor(store: Store, private pix2pix: Pix2PixService) {
     super(store);
@@ -33,85 +36,104 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     const ctx = canvas.getContext('2d');
 
     let destroyed = false;
-    this.ngUnsubscribe.subscribe(() => destroyed = true);
+    this.ngUnsubscribe.subscribe(() => (destroyed = true));
 
-    fromEvent(pose, 'firstRender$').pipe(
-      tap(async () => {
-        this.reset();
+    fromEvent(pose, 'firstRender$')
+      .pipe(
+        tap(async () => {
+          this.reset();
+          this.totalFrames = (await this.fps()) * pose.duration;
 
-        await this.pix2pix.loadModel();
+          await this.pix2pix.loadModel();
 
-        const poseCanvas = pose.shadowRoot.querySelector('canvas');
+          const poseCanvas = pose.shadowRoot.querySelector('canvas');
+          const poseCtx = poseCanvas.getContext('2d', {willReadFrequently: true});
 
-        let lastTime = -Infinity;
-        while (!pose.ended) {
-          // Verify element is not destroyed
-          if (destroyed) {
-            return;
+          // To avoid communication time losses, we create a queue sent to be translated
+          let queued = 0;
+
+          const iterFrame = async () => {
+            // Verify element is not destroyed
+            if (destroyed) {
+              return;
+            }
+
+            if (pose.ended) {
+              if (queued === 0) {
+                // Reset the pose-viewer drawing
+                this.ready = true;
+                await this.drawCache();
+              }
+              return;
+            }
+
+            queued++;
+            await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
+            const image = await transferableImage(poseCanvas, poseCtx);
+            await pose.nextFrame();
+            this.translateFrame(image, canvas, ctx).then(() => {
+              queued--;
+              iterFrame();
+            });
+          };
+
+          for (let i = 0; i < 3; i++) {
+            // Leaving at 1, need to fix VideoEncoder timestamps
+            await iterFrame();
           }
-
-          const uint8Array: Uint8ClampedArray = await promiseRaf(() => this.pix2pix.translate(poseCanvas));
-          this.modelReady = true; // Stop loading after first model inference
-
-          // If did not change the pose time
-          if (lastTime > pose.currentTime) {
-            return;
-          }
-          lastTime = pose.currentTime;
-
-          const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-          this.addCacheData(imageData);
-
-          ctx.putImageData(imageData, 0, 0);
-
-          await pose.nextFrame();
-        }
-
-        // Reset the pose-viewer drawing
-        this.ready = true;
-        await this.drawCache();
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
-  reset(): void {
+  async translateFrame(image: ImageBitmap | ImageData, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
+    const uint8Array = await this.pix2pix.translate(image);
+    this.modelReady = true; // Stop loading after first model inference
+
+    const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
+    await this.addCacheFrame(imageData);
+
+    ctx.putImageData(imageData, 0, 0);
+  }
+
+  override reset(): void {
     super.reset();
     this.ready = false;
   }
 
-  async getFps(): Promise<number> {
-    const poseEl = this.poseEl.nativeElement;
-    const pose = await poseEl.getPose();
-
-    return pose.body.fps;
-  }
-
   async drawCache(): Promise<void> {
+    // Supported in selected browsers https://caniuse.com/?search=MediaStreamTrackGenerator
+    if (this.streamWriter) {
+      return this.stopRecording();
+    }
+
     if (this.cache.length === 0) {
       return;
     }
 
     const canvas = this.canvasEl.nativeElement;
-    this.startRecording(canvas as any);
+    await this.startRecording(canvas as any);
 
     const ctx = canvas.getContext('2d');
-    const fps = await this.getFps();
+    const fps = await this.fps();
 
     let i = -1;
-    this.cacheSubscription = interval(1000 / fps).pipe(
-      tap(() => {
-        i++;
-        if (i < this.cache.length) {
-          ctx.putImageData(this.cache[i], 0, 0);
-          delete this.cache[i]; // Free up memory after cached frame is no longer necessary
-        } else {
-          this.cacheSubscription.unsubscribe();
-          this.stopRecording();
-        }
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.cacheSubscription = interval(1000 / fps)
+      .pipe(
+        tap(() => {
+          i++;
+          if (i < this.cache.length) {
+            ctx.putImageData(this.cache[i], 0, 0);
+            delete this.cache[i]; // Free up memory after cached frame is no longer necessary
+          } else {
+            this.cacheSubscription.unsubscribe();
+            this.stopRecording();
+          }
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   progress(): number {
@@ -122,6 +144,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     if (!pose.duration) {
       return 0;
     }
-    return 100 * pose.currentTime / pose.duration;
+
+    return (100 * this.frameIndex) / this.totalFrames;
   }
 }

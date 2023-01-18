@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "صفحه یافت نشد",
+    "doesNotExist": "با عرض پوزش، صفحه ای که به دنبال آن بودید وجود ندارد.",
+    "errorLogged": "ما خطا را ثبت کرده ایم و آن را بررسی می کنیم.",
+    "goHome": "برو خانه"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "‏‫ترجمه Sign‬",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "شناسایی زبان",
+      "more": "زبان های بیشتر"
+    },
+    "input": {
+      "text": "نوشتار",
+      "webcam": "وبکم",
+      "upload": "بارگذاری"
+    },
+    "swapLanguages": "تعویض زبان‌ها",
+    "upload": {
+      "types": "سندی با قالب ‎.mp4، ‏‎.ogv، یا ‎.webm بارگذاری کنید.",
+      "browse": "مرور رایانه",
+      "title": "یک ویدیو را انتخاب کنید"
+    },
+    "description": "یک برنامه ترجمه دو زبانه چند زبانه برای دسکتاپ و موبایل",
+    "spoken-to-signed": {
+      "text": "متن زبان گفتاری",
+      "actions": {
+        "download": "دانلود ترجمه",
+        "copy": "ترجمه کپی",
+        "share": "ترجمه را به اشتراک بگذارید"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "در حال بارگیری مدل ویدیویی انسانی",
+          "generating": "در حال تولید ویدیو"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "Translate را امتحان کنید",
+    "about": {
+      "title": "درباره",
+      "hero": {
+        "title": "بین بیش از 40 زبان امضایی و گفتاری را در زمان واقعی ترجمه کنید.",
+        "img": "نمونه ای از ترجمه زنده بین زبان اشاره آمریکایی و انگلیسی"
+      },
+      "direction": {
+        "spoken-to-signed": "از زبان گفتاری به زبان اشاره ترجمه کنید",
+        "signed-to-spoken": "یا از زبان های امضا شده به زبان های گفتاری"
+      }
+    },
+    "languages": {
+      "title": "زبان‌ها"
+    },
+    "contribute": {
+      "title": "مشارکت"
+    },
+    "tools": {
+      "title": "ابزارها"
+    },
+    "nav": {
+      "pages": "به صفحات دیگر بروید",
+      "legal": "به صفحات قانونی بروید"
+    }
+  },
+  "text-to-speech": {
+    "play": "گوش کردن",
+    "cancel": "متوقف کردن",
+    "unavailable": "خروجی صدا برای زبان انتخابی در دسترس نیست"
+  },
+  "speech-to-text": {
+    "start": "ترجمه گفتار",
+    "stop": "ترجمه صوتی را متوقف کنید",
+    "not-allowed": "برای استفاده از میکروفون به مجوز نیاز دارید",
+    "language-not-supported": "زبان انتخابی پشتیبانی نمی شود",
+    "browser-not-supported": "ورودی صوتی در این مرورگر پشتیبانی نمی‌شود",
+    "service-not-allowed": "برای استفاده از تشخیص گفتار به مجوز نیاز دارید"
+  },
+  "legal": {
+    "terms": {
+      "title": "شرایط"
+    },
+    "privacy": {
+      "title": "حریم خصوصی"
+    },
+    "licenses": {
+      "title": "نرم افزار و مجوزها"
+    }
+  },
+  "playground": {
+    "title": "زمین بازی پردازش زبان اشاره"
+  },
+  "benchmark": {
+    "title": "معیار",
+    "stats": {
+      "cld": {
+        "title": "شناسایی زبان گفتاری",
+        "import": "ماژول واردات",
+        "load": "مدل بارگذاری",
+        "find": "متن را شناسایی کنید",
+        "create": "ايجاد كردن"
+      },
+      "pix2pix": {
+        "title": "نمایشگر ژست انسانی",
+        "init": "سازمان کارگری",
+        "load": "مدل بارگذاری",
+        "first-frame": "استنتاج فریم اول",
+        "frame": "استنتاج فریم"
+      },
+      "pose": {
+        "title": "تخمین ژست کامل بدن",
+        "load": "بار مدل",
+        "first-frame": "استنتاج فریم اول",
+        "frame": "استنتاج فریم"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "دوربین شروع می شود",
+      "turnedOff": "دوربین خاموش شد",
+      "notConnected": "دوربین وصل نیست",
+      "permissionDenied": "اجازه دوربین رد شد"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "دوربین را خاموش کنید",
+        "off": "دوربین را روشن کنید"
+      }
+    }
+  },
+  "pose": {
+    "loading": "در حال بارگیری تخمین پوس..."
+  },
+  "language-selector": {
+    "label": "زبان یا منطقه را تغییر دهید"
+  },
+  "settings": {
+    "detectSign": "علامت تشخیص",
+    "drawVideo": "ترسیم ویدئو",
+    "drawPose": "رسم ژست",
+    "drawSignWriting": "رسم علامت نویسی",
+    "animatePose": "ژست متحرک",
+    "poseViewer": {
+      "pose": "اسکلت",
+      "avatar": "آواتار",
+      "human": "انسان"
+    },
+    "title": "تنظیمات",
+    "close": "تنظیمات را ببندید",
+    "support": {
+      "title": "پشتیبانی",
+      "feedback": {
+        "title": "بازخورد",
+        "send": "ارسال بازخورد"
+      },
+      "about": {
+        "title": "در باره"
+      }
+    },
+    "voice": {
+      "title": "صدا",
+      "input": {
+        "title": "ورودی"
+      },
+      "output": {
+        "title": "خروجی"
+      }
+    },
+    "other": {
+      "title": "دیگر",
+      "offline": {
+        "title": "آفلاین",
+        "files": {
+          "pix2pixGenerator": "مولد انسان عکس واقع گرایانه",
+          "pix2pixUpscaler": "ارتقاء دهنده انسان با عکس واقع گرایانه",
+          "avatarGlb": "آواتار سه بعدی",
+          "avatarUsdz": "آواتار سه بعدی برای AR در iOS",
+          "translation": "ترجمه",
+          "translation.spokenToSigned": "گفتاری به امضا شده",
+          "translation.signedToSpoken": "امضا شده به گفتار"
+        },
+        "actions": {
+          "toggle": "تغییر وضعیت {{label}}",
+          "download": "دانلود مدل آفلاین",
+          "delete": "حافظه پنهان مدل آفلاین را پاک کنید",
+          "reDownload": "مدل آفلاین را دوباره دانلود کنید"
+        }
+      },
+      "appearance": {
+        "title": "ظاهر",
+        "action": "ظاهر را اصلاح کنید",
+        "random": "یک عکس تصادفی بگیرید",
+        "upload": "عکس خود را آپلود کنید"
+      }
+    }
+  },
+  "countries.isl": "بین المللی",
+  "to": "{{a}} ← {{b}}",
+  "languages.spoken": "همه",
+  "countries.signed": "همه"
+}

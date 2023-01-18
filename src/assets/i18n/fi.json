@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Sivua ei löydetty",
+    "doesNotExist": "Valitettavasti etsimääsi sivua ei ole olemassa.",
+    "errorLogged": "Olemme kirjaanneet virheen ja tutkimme sen.",
+    "goHome": "Mene kotiin"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "vaihto"
+  },
+  "translate": {
+    "title": "Sign Kääntäjä",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Tunnista kieli",
+      "more": "Lisää kieliä"
+    },
+    "input": {
+      "text": "Teksti",
+      "webcam": "Verkkokamera",
+      "upload": "Lataa"
+    },
+    "swapLanguages": "Vaihda kieliä",
+    "upload": {
+      "types": "Lataa .mp4, .ogv tai .webm.",
+      "browse": "Selaa tietokonetta",
+      "title": "Valitse video"
+    },
+    "description": "Kaksisuuntainen monikielinen viittomakielen käännössovellus pöytäkoneille ja mobiililaitteille",
+    "spoken-to-signed": {
+      "text": "Puhutun kielen teksti",
+      "actions": {
+        "download": "Lataa käännös",
+        "copy": "Kopioi käännös",
+        "share": "Jaa käännös"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ladataan ihmisvideomallia",
+          "generating": "Luodaan videota"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "KOKEILE KÄÄNTÄJÄÄ",
+    "about": {
+      "title": "Tietoja",
+      "hero": {
+        "title": "Käännä yli 40 viittomakielen ja puhutun kielen välillä reaaliajassa.",
+        "img": "Esimerkki live-käännöksestä amerikkalaisen viittomakielen ja englannin välillä"
+      },
+      "direction": {
+        "spoken-to-signed": "Käännä puhutuista viittomakielistä",
+        "signed-to-spoken": "Tai viittomakielistä puhuttuihin kieliin"
+      }
+    },
+    "languages": {
+      "title": "Kielet"
+    },
+    "contribute": {
+      "title": "Avusta"
+    },
+    "tools": {
+      "title": "Työkalut"
+    },
+    "nav": {
+      "pages": "Siirry muille sivuille",
+      "legal": "Siirry juridisille sivuille"
+    }
+  },
+  "text-to-speech": {
+    "play": "Kuuntele",
+    "cancel": "Lopettaa",
+    "unavailable": "Äänilähtö ei ole käytettävissä valitulla kielellä"
+  },
+  "speech-to-text": {
+    "start": "Käännä puhe",
+    "stop": "Pysäytä äänikääntäminen",
+    "not-allowed": "Mikrofonin käyttöön tarvitaan lupa",
+    "language-not-supported": "Valittua kieltä ei tueta",
+    "browser-not-supported": "Äänisyöttöä ei tueta tässä selaimessa",
+    "service-not-allowed": "Tarvitset luvan käyttää puheentunnistusta"
+  },
+  "legal": {
+    "terms": {
+      "title": "Käyttöehdot"
+    },
+    "privacy": {
+      "title": "Tietosuoja"
+    },
+    "licenses": {
+      "title": "Ohjelmistot ja käyttöluvat"
+    }
+  },
+  "playground": {
+    "title": "Viittomakielen käsittelyn leikkikenttä"
+  },
+  "benchmark": {
+    "title": "Vertailuarvo",
+    "stats": {
+      "cld": {
+        "title": "Puhutun kielen tunnistus",
+        "import": "Tuo moduuli",
+        "load": "Lataa malli",
+        "find": "Tunnista teksti",
+        "create": "Luoda"
+      },
+      "pix2pix": {
+        "title": "Ihmisasennon katseluohjelma",
+        "init": "Työntekijä Init",
+        "load": "Lataa malli",
+        "first-frame": "Ensimmäisen kehyksen päättely",
+        "frame": "Frame johtopäätös"
+      },
+      "pose": {
+        "title": "Koko kehon asentoarvio",
+        "load": "Mallin kuormitus",
+        "first-frame": "Ensimmäisen kehyksen päättely",
+        "frame": "Frame johtopäätös"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera käynnistyy",
+      "turnedOff": "Kamera sammutettu",
+      "notConnected": "Kameraa ei ole kytketty",
+      "permissionDenied": "Kameran lupa evätty"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Sammuta kamera",
+        "off": "Kytke kamera päälle"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ladataan asentoarviota..."
+  },
+  "language-selector": {
+    "label": "Vaihda kieli tai alue"
+  },
+  "settings": {
+    "detectSign": "Tunnista merkki",
+    "drawVideo": "Piirrä video",
+    "drawPose": "Piirrä Pose",
+    "drawSignWriting": "Piirrä merkkien kirjoittaminen",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Luuranko",
+      "avatar": "hahmo",
+      "human": "Ihmisen"
+    },
+    "title": "asetukset",
+    "close": "Sulje asetukset",
+    "support": {
+      "title": "Tuki",
+      "feedback": {
+        "title": "Palaute",
+        "send": "Lähetä palautetta"
+      },
+      "about": {
+        "title": "Noin"
+      }
+    },
+    "voice": {
+      "title": "Ääni",
+      "input": {
+        "title": "Syöte"
+      },
+      "output": {
+        "title": "Lähtö"
+      }
+    },
+    "other": {
+      "title": "muu",
+      "offline": {
+        "title": "Offline-tilassa",
+        "files": {
+          "pix2pixGenerator": "Valokuvarealistinen ihmisgeneraattori",
+          "pix2pixUpscaler": "Valokuvarealistinen ihmisparannus",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar AR:lle iOS:ssä",
+          "translation": "Käännös",
+          "translation.spokenToSigned": "Puhuttu allekirjoitetulle",
+          "translation.signedToSpoken": "Allekirjoitettu puheeksi"
+        },
+        "actions": {
+          "toggle": "Vaihda {{label}}",
+          "download": "Lataa offline-malli",
+          "delete": "Tyhjennä offline-mallin välimuisti",
+          "reDownload": "Lataa offline-malli uudelleen"
+        }
+      },
+      "appearance": {
+        "title": "Ulkomuoto",
+        "action": "Muokkaa ulkonäköä",
+        "random": "Ota satunnainen valokuva",
+        "upload": "Lataa oma valokuvasi"
+      }
+    }
+  },
+  "countries.isl": "Kansainvälinen",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Kaikki",
+  "countries.signed": "Kaikki"
+}

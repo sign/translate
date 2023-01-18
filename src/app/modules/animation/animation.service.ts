@@ -2,58 +2,82 @@ import {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, Pose} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
+import {MediapipeHolisticService} from '../../core/services/holistic.service';
 import {POSE_LANDMARKS} from '@mediapipe/holistic';
-import {TensorflowService} from '../../core/services/tfjs.service';
 
 const ANIMATION_KEYS = [
-  'mixamorigHead.quaternion', 'mixamorigNeck.quaternion', 'mixamorigSpine.quaternion',
-  'mixamorigSpine1.quaternion', 'mixamorigSpine2.quaternion', 'mixamorigHips.quaternion',
+  'mixamorigHead.quaternion',
+  'mixamorigNeck.quaternion',
+  'mixamorigSpine.quaternion',
+  'mixamorigSpine1.quaternion',
+  'mixamorigSpine2.quaternion',
+  'mixamorigHips.quaternion',
 
-  'mixamorigLeftUpLeg.quaternion', 'mixamorigLeftLeg.quaternion', 'mixamorigLeftToeBase.quaternion',
-  'mixamorigLefthis.tfoot.quaternion', 'mixamorigLeftArm.quaternion',
-  'mixamorigLeftShoulder.quaternion', 'mixamorigLefthis.tforeArm.quaternion',
+  'mixamorigLeftUpLeg.quaternion',
+  'mixamorigLeftLeg.quaternion',
+  'mixamorigLeftToeBase.quaternion',
+  'mixamorigLefthis.tfoot.quaternion',
+  'mixamorigLeftArm.quaternion',
+  'mixamorigLeftShoulder.quaternion',
+  'mixamorigLefthis.tforeArm.quaternion',
 
-  'mixamorigRightUpLeg.quaternion', 'mixamorigRightLeg.quaternion', 'mixamorigRightToeBase.quaternion',
-  'mixamorigRighthis.tfoot.quaternion', 'mixamorigRightArm.quaternion',
-  'mixamorigRightShoulder.quaternion', 'mixamorigRighthis.tforeArm.quaternion',
+  'mixamorigRightUpLeg.quaternion',
+  'mixamorigRightLeg.quaternion',
+  'mixamorigRightToeBase.quaternion',
+  'mixamorigRighthis.tfoot.quaternion',
+  'mixamorigRightArm.quaternion',
+  'mixamorigRightShoulder.quaternion',
+  'mixamorigRighthis.tforeArm.quaternion',
 
   'mixamorigLeftHand.quaternion',
-  'mixamorigLeftHandThumb1.quaternion', 'mixamorigLeftHandThumb2.quaternion',
+  'mixamorigLeftHandThumb1.quaternion',
+  'mixamorigLeftHandThumb2.quaternion',
   'mixamorigLeftHandThumb3.quaternion',
-  'mixamorigLeftHandIndex1.quaternion', 'mixamorigLeftHandIndex2.quaternion',
+  'mixamorigLeftHandIndex1.quaternion',
+  'mixamorigLeftHandIndex2.quaternion',
   'mixamorigLeftHandIndex3.quaternion',
-  'mixamorigLeftHandMiddle1.quaternion', 'mixamorigLeftHandMiddle2.quaternion',
+  'mixamorigLeftHandMiddle1.quaternion',
+  'mixamorigLeftHandMiddle2.quaternion',
   'mixamorigLeftHandMiddle3.quaternion',
-  'mixamorigLeftHandRing1.quaternion', 'mixamorigLeftHandRing2.quaternion', 'mixamorigLeftHandRing3.quaternion',
-  'mixamorigLeftHandPinky1.quaternion', 'mixamorigLeftHandPinky2.quaternion',
+  'mixamorigLeftHandRing1.quaternion',
+  'mixamorigLeftHandRing2.quaternion',
+  'mixamorigLeftHandRing3.quaternion',
+  'mixamorigLeftHandPinky1.quaternion',
+  'mixamorigLeftHandPinky2.quaternion',
   'mixamorigLeftHandPinky3.quaternion',
 
   'mixamorigRightHand.quaternion',
-  'mixamorigRightHandThumb1.quaternion', 'mixamorigRightHandThumb2.quaternion',
+  'mixamorigRightHandThumb1.quaternion',
+  'mixamorigRightHandThumb2.quaternion',
   'mixamorigRightHandThumb3.quaternion',
-  'mixamorigRightHandIndex1.quaternion', 'mixamorigRightHandIndex2.quaternion',
+  'mixamorigRightHandIndex1.quaternion',
+  'mixamorigRightHandIndex2.quaternion',
   'mixamorigRightHandIndex3.quaternion',
-  'mixamorigRightHandMiddle1.quaternion', 'mixamorigRightHandMiddle2.quaternion',
+  'mixamorigRightHandMiddle1.quaternion',
+  'mixamorigRightHandMiddle2.quaternion',
   'mixamorigRightHandMiddle3.quaternion',
-  'mixamorigRightHandRing1.quaternion', 'mixamorigRightHandRing2.quaternion',
+  'mixamorigRightHandRing1.quaternion',
+  'mixamorigRightHandRing2.quaternion',
   'mixamorigRightHandRing3.quaternion',
-  'mixamorigRightHandPinky1.quaternion', 'mixamorigRightHandPinky2.quaternion',
+  'mixamorigRightHandPinky1.quaternion',
+  'mixamorigRightHandPinky2.quaternion',
   'mixamorigRightHandPinky3.quaternion',
 ];
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AnimationService {
   sequentialModel: LayersModel;
 
-  constructor(public tf: TensorflowService) {
-  }
+  constructor(private tf: TensorflowService, private holistic: MediapipeHolisticService) {}
 
   async loadModel(): Promise<LayersModel> {
     await this.tf.load();
-    return this.tf.loadLayersModel('assets/models/pose-animation/model.json')
-      .then(model => this.sequentialModel = model as unknown as LayersModel);
+    return this.tf
+      .loadLayersModel('assets/models/pose-animation/model.json')
+      .then(model => (this.sequentialModel = model as unknown as LayersModel));
   }
 
   normalizePose(pose: Pose): Tensor {
@@ -62,7 +86,8 @@ export class AnimationService {
     const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
 
-    const tensor = this.tf.tensor(landmarks.map(l => [l.x, l.y, l.z]))
+    const tensor = this.tf
+      .tensor(landmarks.map(l => [l.x, l.y, l.z]))
       .mul(this.tf.tensor([pose.image.width, pose.image.height, pose.image.width]));
 
     const p1 = tensor.slice(POSE_LANDMARKS.LEFT_SHOULDER, 1);
@@ -75,20 +100,22 @@ export class AnimationService {
     return normTensor;
   }
 
-  estimate(pose: Pose): { [key: string]: [number, number, number, number] } {
+  estimate(poses: Pose[]): {[key: string]: [number, number, number, number][]} {
     if (!this.sequentialModel) {
       return null;
     }
 
     const quaternions = this.tf.tidy(() => {
-      const normalized = this.normalizePose(pose).reshape([1, 1, 75 * 3]);
-      const pred: Tensor = this.sequentialModel.predict(normalized) as Tensor;
-      return pred.reshape([ANIMATION_KEYS.length, 4]).arraySync();
+      const normalized = poses.map(pose => this.normalizePose(pose).reshape([1, 75 * 3]));
+      const stack = this.tf.stack(normalized, 1);
+      const pred: Tensor = this.sequentialModel.predict(stack) as Tensor;
+      const sequence = pred.reshape([normalized.length, ANIMATION_KEYS.length, 4]);
+      const keysSequence = sequence.transpose([1, 0, 2]);
+      return keysSequence.arraySync();
     });
 
     const tracks = {};
-    ANIMATION_KEYS.forEach((k, i) => tracks[k] = quaternions[i]);
+    ANIMATION_KEYS.forEach((k, i) => (tracks[k] = quaternions[i]));
     return tracks;
   }
-
 }

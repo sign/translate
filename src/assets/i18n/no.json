@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Side ikke funnet",
+    "doesNotExist": "Beklager, siden du lette etter eksisterer ikke.",
+    "errorLogged": "Vi har logget feilen og vil se på den.",
+    "goHome": "Gå hjem"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Oversetter",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Gjenkjenn språk",
+      "more": "Flere språk"
+    },
+    "input": {
+      "text": "Tekst",
+      "webcam": "Webkamera",
+      "upload": "Laste opp"
+    },
+    "swapLanguages": "Bytt språk",
+    "upload": {
+      "types": "Last opp en .mp4-, .ogv-- eller .webm-fil.",
+      "browse": "Bla gjennom datamaskinen din",
+      "title": "Velg en video"
+    },
+    "description": "En toveis flerspråklig tegnspråkoversettelsesapp for datamaskin og mobil",
+    "spoken-to-signed": {
+      "text": "Muntlig språktekst",
+      "actions": {
+        "download": "Last ned oversettelse",
+        "copy": "Kopier oversettelse",
+        "share": "Del oversettelse"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laster inn menneskelig videomodell",
+          "generating": "Genererer video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "PRØV OVERSETTER",
+    "about": {
+      "title": "Info",
+      "hero": {
+        "title": "Oversett mellom 40+ tegnspråk og talespråk i sanntid.",
+        "img": "Eksempel på direkte oversettelse mellom amerikansk tegnspråk og engelsk"
+      },
+      "direction": {
+        "spoken-to-signed": "Oversett fra talespråk til tegnspråk",
+        "signed-to-spoken": "Eller fra tegnspråk til talespråk"
+      }
+    },
+    "languages": {
+      "title": "Språk"
+    },
+    "contribute": {
+      "title": "Bidra"
+    },
+    "tools": {
+      "title": "Verktøy"
+    },
+    "nav": {
+      "pages": "Naviger til andre sider",
+      "legal": "Naviger til juridiske sider"
+    }
+  },
+  "text-to-speech": {
+    "play": "Lytt til",
+    "cancel": "Stoppe",
+    "unavailable": "Stemmeutdata er ikke tilgjengelig for det valgte språket"
+  },
+  "speech-to-text": {
+    "start": "Oversettelse via tale",
+    "stop": "Stopp oversettelsen med stemmen",
+    "not-allowed": "Trenger tillatelse for å bruke mikrofon",
+    "language-not-supported": "Det valgte språket støttes ikke",
+    "browser-not-supported": "Taleinndata støttes ikke i denne nettleseren",
+    "service-not-allowed": "Trenger tillatelse for å bruke talegjenkjenning"
+  },
+  "legal": {
+    "terms": {
+      "title": "Vilkår"
+    },
+    "privacy": {
+      "title": "Personvern"
+    },
+    "licenses": {
+      "title": "Programvare og lisenser"
+    }
+  },
+  "playground": {
+    "title": "Lekeplass for tegnspråkbehandling"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Talespråkidentifikasjon",
+        "import": "Importmodul",
+        "load": "Last modell",
+        "find": "Identifiser tekst",
+        "create": "Skape"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Arbeider Init",
+        "load": "Last modell",
+        "first-frame": "Første rammeslutning",
+        "frame": "Rammeslutning"
+      },
+      "pose": {
+        "title": "Estimering av helkroppsposisjon",
+        "load": "Modellbelastning",
+        "first-frame": "Første rammeslutning",
+        "frame": "Rammeslutning"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera starter",
+      "turnedOff": "Kamera slått av",
+      "notConnected": "Kameraet er ikke tilkoblet",
+      "permissionDenied": "Kameratillatelse nektet"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Slå av kameraet",
+        "off": "Slå på kameraet"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Laster posisjonsestimat..."
+  },
+  "language-selector": {
+    "label": "Endre språk eller region"
+  },
+  "settings": {
+    "detectSign": "Oppdag tegn",
+    "drawVideo": "Tegn video",
+    "drawPose": "Tegn positur",
+    "drawSignWriting": "Tegne tegnskriving",
+    "animatePose": "Animer positur",
+    "poseViewer": {
+      "pose": "Skjelett",
+      "avatar": "Avatar",
+      "human": "Menneskelig"
+    },
+    "title": "Innstillinger",
+    "close": "Lukk innstillingene",
+    "support": {
+      "title": "Brukerstøtte",
+      "feedback": {
+        "title": "Tilbakemelding",
+        "send": "Send tilbakemelding"
+      },
+      "about": {
+        "title": "Om"
+      }
+    },
+    "voice": {
+      "title": "Stemme",
+      "input": {
+        "title": "Inndata"
+      },
+      "output": {
+        "title": "Produksjon"
+      }
+    },
+    "other": {
+      "title": "Annen",
+      "offline": {
+        "title": "Frakoblet",
+        "files": {
+          "pix2pixGenerator": "Fotorealistisk menneskelig generator",
+          "pix2pixUpscaler": "Fotorealistisk menneskelig oppskalerer",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar for AR på iOS",
+          "translation": "Oversettelse",
+          "translation.spokenToSigned": "Talt-til-signert",
+          "translation.signedToSpoken": "Signert til talt"
+        },
+        "actions": {
+          "toggle": "Slå på {{label}}",
+          "download": "Last ned offline modell",
+          "delete": "Tøm frakoblet modellbuffer",
+          "reDownload": "Last ned frakoblet modell på nytt"
+        }
+      },
+      "appearance": {
+        "title": "Utseende",
+        "action": "Endre utseende",
+        "random": "Få et tilfeldig bilde",
+        "upload": "Last opp ditt eget bilde"
+      }
+    }
+  },
+  "countries.isl": "Internasjonal",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Alle",
+  "countries.signed": "Alle"
+}

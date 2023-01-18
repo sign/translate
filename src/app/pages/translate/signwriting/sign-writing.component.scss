@@ -1,11 +1,21 @@
 :host {
-  width: 100px !important;
   text-align: center;
-  padding: 20px 0;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+
+  color: black;
 
   @media (prefers-color-scheme: dark) {
     color: white;
   }
+}
+
+#signs {
+  padding: 20px 0;
+  width: 100%;
+  font-size: 24px;
+  position: absolute;
 }
 
 fsw-sign {
@@ -19,7 +29,7 @@ fsw-sign {
   -ms-user-select: none; /* Edge*/
   -webkit-touch-callout: none; /* Safari Touch */
 
-  ::ng-deep text[font-size="0"] {
-    display: none;
+  ::ng-deep text[font-size='0'] {
+    //display: none;
   }
 }

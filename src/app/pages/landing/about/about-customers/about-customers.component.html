@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Our Potential Business Customers</h2>
+
+  <p>
+    Our product is well-suited for fast food chains in the United States, with a focus on those that are looking to
+    increase accessibility to their customers and enhance their brand awareness through PR opportunities. As of 2018,
+    there were a total of <b>{{ 307940 | number }}</b> chain restaurants and <b>{{ 352815 | number }}</b> independent
+    restaurants operating in the US.
+  </p>
+
+  <p>
+    Despite claiming to be "committed to an inclusive ordering experience," fast food chains in the US often fail to
+    fully accommodate customers with speech and hearing disabilities. While they may offer assistive technologies such
+    as Braille menus, Large print/picture menus, Magnification Mode on Kiosk, Reach Mode on Kiosk, and Audio Navigation
+    on Kiosk, these customers are still required to drive up to the window for crew support when placing their orders.
+    This lack of accessibility highlights the need for more comprehensive solutions that truly cater to the needs of all
+    customers.
+  </p>
+
+  <mat-card>
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab *ngFor="let customer of customers" label="{{ customer.name }}">
+          <p>
+            <br />
+            As of 2022, {{ customer.name }} has <b>{{ customer.locations | number }}</b> locations in the United States.
+            <br /><br />
+            <u>If {{ customer.name }} were to adopt our product, they might say:</u><br />
+            {{ customer.testimonial }}
+          </p>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -4,15 +4,33 @@ import {SignWritingStateModel} from './sign-writing.state';
 import {BodyService} from './body.service';
 import {FaceService} from './face.service';
 import {Vector2, Vector3} from 'three';
-
+import {font} from '@sutton-signwriting/font-ttf';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SignWritingService {
-  constructor(private bodyService: BodyService,
-              private faceService: FaceService,
-              private handsService: HandsService) {
+  static font: Promise<typeof font>;
+
+  constructor(private bodyService: BodyService, private faceService: FaceService, private handsService: HandsService) {}
+
+  static get fontsModule() {
+    if (!SignWritingService.font) {
+      SignWritingService.font = import('@sutton-signwriting/font-ttf/font/font.min') as Promise<typeof font>;
+    }
+    return SignWritingService.font;
+  }
+
+  static async cssLoaded() {
+    const fontModule = await SignWritingService.fontsModule;
+    return new Promise(resolve => fontModule.cssLoaded(resolve));
+  }
+
+  static async loadFonts() {
+    const fontModule = await SignWritingService.fontsModule;
+
+    // Set local font directory, copied from @sutton-signwriting/font-ttf
+    fontModule.cssAppend('assets/fonts/signwriting/');
   }
 
   static textFontSize(text: string, width: number, ctx: CanvasRenderingContext2D): number {
@@ -24,8 +42,13 @@ export class SignWritingService {
     return 100 * scale;
   }
 
-  static drawSWText(text: string, center: Vector2 | Vector3, fontSize: number,
-                    ctx: CanvasRenderingContext2D, isNormalized = true): void {
+  static drawSWText(
+    text: string,
+    center: Vector2 | Vector3,
+    fontSize: number,
+    ctx: CanvasRenderingContext2D,
+    isNormalized = true
+  ): void {
     ctx.font = fontSize + 'px SuttonSignWritingOneD';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -35,7 +58,6 @@ export class SignWritingService {
     const y = isNormalized ? center.y * ctx.canvas.height : center.y;
     ctx.fillText(text, x, y);
   }
-
 
   draw(swState: SignWritingStateModel, ctx: CanvasRenderingContext2D): void {
     this.bodyService.draw(swState.body, ctx);

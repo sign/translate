@@ -1,0 +1,34 @@
+@use '@angular/material' as mat;
+@import '../../../../theme/variables';
+
+:host > * {
+  display: block;
+  width: calc(100% - 100px);
+  padding: 50px;
+
+  @media #{$mat-lt-md} {
+    width: calc(100% - 50px);
+    padding: 50px 25px;
+  }
+
+  &:nth-child(2n + 1) {
+    background-color: map-get(mat.$grey-palette, 50);
+    @media (prefers-color-scheme: dark) {
+      background-color: #151515;
+    }
+  }
+}
+
+app-stores {
+  text-align: center;
+}
+
+:host ::ng-deep {
+  .cards-container {
+    display: flex;
+    gap: 2rem;
+    @media #{$mat-lt-md} {
+      flex-direction: column;
+    }
+  }
+}

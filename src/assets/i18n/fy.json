@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Side net fûn",
+    "doesNotExist": "Sorry, de side wêr't jo nei sochten bestiet net.",
+    "errorLogged": "Wy hawwe de flater oanmeld en sille der nei sjen.",
+    "goHome": "Nei hús gean"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Taal werkenne",
+      "more": "Mear talen"
+    },
+    "input": {
+      "text": "Tekst",
+      "webcam": "Webcam",
+      "upload": "Upload"
+    },
+    "swapLanguages": "Talen omwikselje",
+    "upload": {
+      "types": "Laad in .mp4, .ogv, of .webm op.",
+      "browse": "Op dyn kompjûter sykje",
+      "title": "Kies in fideo"
+    },
+    "description": "In bidirectionele meartalige oersettingsapp foar gebeartetaal foar buroblêd en mobyl",
+    "spoken-to-signed": {
+      "text": "Sprektaal Tekst",
+      "actions": {
+        "download": "Download oersetting",
+        "copy": "Kopiearje oersetting",
+        "share": "Diele oersetting"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Laden fan minsklik fideomodel",
+          "generating": "It generearjen fan fideo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "BESYKJE TRANSLATE",
+    "about": {
+      "title": "Oer",
+      "hero": {
+        "title": "Oersette tusken 40+ ûndertekene en sprutsen talen yn real-time.",
+        "img": "Foarbyld fan live oersetting tusken American Sign Language en Ingelsk"
+      },
+      "direction": {
+        "spoken-to-signed": "Oersette fan sprutsen nei ûndertekene talen",
+        "signed-to-spoken": "Of fan tekentalen nei sprektalen"
+      }
+    },
+    "languages": {
+      "title": "Talen"
+    },
+    "contribute": {
+      "title": "Meihelpe"
+    },
+    "tools": {
+      "title": "Ark"
+    },
+    "nav": {
+      "pages": "Gean nei oare siden",
+      "legal": "Gean nei juridyske siden"
+    }
+  },
+  "text-to-speech": {
+    "play": "Harkje",
+    "cancel": "Ophâlde",
+    "unavailable": "Stimútfier is net beskikber foar de selektearre taal"
+  },
+  "speech-to-text": {
+    "start": "Oersetten fan ynsprutsen tekst",
+    "stop": "Stopje oersetting mei stim",
+    "not-allowed": "Tastimming nedich om mikrofoan te brûken",
+    "language-not-supported": "Selekteare taal wurdt net stipe",
+    "browser-not-supported": "Stimynfier wurdt net stipe yn dizze browser",
+    "service-not-allowed": "Tastimming nedich om spraakherkenning te brûken"
+  },
+  "legal": {
+    "terms": {
+      "title": "Betingsten"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software en lisinsjes"
+    }
+  },
+  "playground": {
+    "title": "Gebeartetaalferwurkingsboarterstún"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Spoken Language Identification",
+        "import": "Ymportearje Module",
+        "load": "Laden Model",
+        "find": "Tekst identifisearje",
+        "create": "Meitsje"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Arbeider Init",
+        "load": "Laden Model",
+        "first-frame": "Earste Frame Inference",
+        "frame": "Frame konklúzje"
+      },
+      "pose": {
+        "title": "Skatting fan folsleine lichemsposysje",
+        "load": "Model Load",
+        "first-frame": "Earste Frame Inference",
+        "frame": "Frame konklúzje"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera begjint",
+      "turnedOff": "Kamera útskeakele",
+      "notConnected": "Kamera net ferbûn",
+      "permissionDenied": "Kameratastimming wegere"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamera útsette",
+        "off": "Kamera oansette"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Poseskatting laden..."
+  },
+  "language-selector": {
+    "label": "Feroarje taal of regio"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Fideo tekenje",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Teken teken skriuwen",
+    "animatePose": "Animearje Pose",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Avatar",
+      "human": "Minske"
+    },
+    "title": "Ynstellings",
+    "close": "Ynstellings slute",
+    "support": {
+      "title": "Stypje",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Kommentaar ferstjoere"
+      },
+      "about": {
+        "title": "Oer"
+      }
+    },
+    "voice": {
+      "title": "Lûd",
+      "input": {
+        "title": "Ynfier"
+      },
+      "output": {
+        "title": "Utfier"
+      }
+    },
+    "other": {
+      "title": "Oar",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Foto-realistyske minsklike generator",
+          "pix2pixUpscaler": "Foto-realistyske minsklike upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar foar AR op iOS",
+          "translation": "Oersetting",
+          "translation.spokenToSigned": "Sprekt-oan-ûndertekene",
+          "translation.signedToSpoken": "Undertekene-to-Spreken"
+        },
+        "actions": {
+          "toggle": "Skeakelje {{label}}",
+          "download": "Download offline model",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Re-Download Offline Model"
+        }
+      },
+      "appearance": {
+        "title": "Ferskining",
+        "action": "Feroarje uterlik",
+        "random": "Krij in willekeurige foto",
+        "upload": "Upload dyn eigen foto"
+      }
+    }
+  },
+  "countries.isl": "Ynternasjonaal",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Alle",
+  "countries.signed": "Alle"
+}

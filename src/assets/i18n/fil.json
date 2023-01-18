@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Hindi nahanap ang page",
+    "doesNotExist": "Paumanhin, ang pahina na iyong hinahanap ay wala.",
+    "errorLogged": "Na-log namin ang error at titingnan ito.",
+    "goHome": "Pumunta sa Bahay"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Kilalanin ang Wika",
+      "more": "Higit pang mga Wika"
+    },
+    "input": {
+      "text": "Text",
+      "webcam": "Webcam",
+      "upload": "Mag-upload"
+    },
+    "swapLanguages": "Maglipat ng mga wika",
+    "upload": {
+      "types": "Mag-upload ng .mp4, .ogv, o .webm.",
+      "browse": "Mag-browse sa computer mo",
+      "title": "Pumili ng video"
+    },
+    "description": "Isang bi-directional multilingual sign language translation app para sa desktop at mobile",
+    "spoken-to-signed": {
+      "text": "Teksto ng Binigkas na Wika",
+      "actions": {
+        "download": "I-download ang Pagsasalin",
+        "copy": "Kopyahin ang Pagsasalin",
+        "share": "Ibahagi ang Pagsasalin"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nilo-load ang modelo ng video ng tao",
+          "generating": "Bumubuo ng video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "SUBUKAN ANG TRANSLATE",
+    "about": {
+      "title": "Tungkol sa",
+      "hero": {
+        "title": "Magsalin sa pagitan ng 40+ na nilagdaan at sinasalitang mga wika sa real-time.",
+        "img": "Halimbawa ng live na pagsasalin sa pagitan ng American Sign Language at English"
+      },
+      "direction": {
+        "spoken-to-signed": "Isalin mula sa sinasalita patungo sa mga sign na wika",
+        "signed-to-spoken": "O mula sa nilagdaan hanggang sa mga sinasalitang wika"
+      }
+    },
+    "languages": {
+      "title": "Mga Wika"
+    },
+    "contribute": {
+      "title": "Mag-contribute"
+    },
+    "tools": {
+      "title": "Mga tool"
+    },
+    "nav": {
+      "pages": "Mag-navigate sa iba pang mga pahina",
+      "legal": "Mag-navigate sa mga legal na pahina"
+    }
+  },
+  "text-to-speech": {
+    "play": "Makinig",
+    "cancel": "Tumigil ka",
+    "unavailable": "Hindi available ang output ng boses para sa napiling wika"
+  },
+  "speech-to-text": {
+    "start": "Magsalin sa pamamagitan ng boses",
+    "stop": "Ihinto ang pagsasalin sa pamamagitan ng boses",
+    "not-allowed": "Kailangan ng pahintulot na gumamit ng mikropono",
+    "language-not-supported": "Ang napiling wika ay hindi suportado",
+    "browser-not-supported": "Hindi sinusuportahan ang voice input sa browser na ito",
+    "service-not-allowed": "Kailangan ng pahintulot na gumamit ng speech recognition"
+  },
+  "legal": {
+    "terms": {
+      "title": "Mga Tuntunin"
+    },
+    "privacy": {
+      "title": "Privacy"
+    },
+    "licenses": {
+      "title": "Software at Mga Lisensya"
+    }
+  },
+  "playground": {
+    "title": "Palaruan sa Pagproseso ng Sign Language"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Pagkilala sa Wikang Binibigkas",
+        "import": "Import Module",
+        "load": "I-load ang Modelo",
+        "find": "Kilalanin ang Teksto",
+        "create": "Lumikha"
+      },
+      "pix2pix": {
+        "title": "Human Pose Viewer",
+        "init": "Manggagawa Init",
+        "load": "I-load ang Modelo",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Pagtatantya ng Posisyon ng Buong Katawan",
+        "load": "Pag-load ng Modelo",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Nagsisimula ang camera",
+      "turnedOff": "Naka-off ang camera",
+      "notConnected": "Hindi nakakonekta ang camera",
+      "permissionDenied": "Tinanggihan ang pahintulot sa camera"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "I-off ang camera",
+        "off": "I-on ang camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Nilo-load ang pagtatantya ng pose..."
+  },
+  "language-selector": {
+    "label": "Baguhin ang wika o rehiyon"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Gumuhit ng Video",
+    "drawPose": "Gumuhit ng Pose",
+    "drawSignWriting": "Gumuhit ng Pagsulat ng Palatandaan",
+    "animatePose": "Pagalawin Pose",
+    "poseViewer": {
+      "pose": "Kalansay",
+      "avatar": "Avatar",
+      "human": "Tao"
+    },
+    "title": "Mga setting",
+    "close": "Isara ang mga setting",
+    "support": {
+      "title": "Suporta",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Magbigay ng feedback"
+      },
+      "about": {
+        "title": "Tungkol sa"
+      }
+    },
+    "voice": {
+      "title": "Boses",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Iba pa",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-realistic na generator ng tao",
+          "pix2pixUpscaler": "Photo-realistic human upscaler",
+          "avatarGlb": "3D na Avatar",
+          "avatarUsdz": "3D Avatar para sa AR sa iOS",
+          "translation": "Pagsasalin",
+          "translation.spokenToSigned": "Spoken-to-Signed",
+          "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "I-toggle ang {{label}}",
+          "download": "I-download ang Offline na Modelo",
+          "delete": "Purge Offline Model Cache",
+          "reDownload": "Muling I-download ang Offline na Modelo"
+        }
+      },
+      "appearance": {
+        "title": "Hitsura",
+        "action": "Baguhin ang hitsura",
+        "random": "Kumuha ng random na larawan",
+        "upload": "Mag-upload ng sarili mong larawan"
+      }
+    }
+  },
+  "countries.isl": "Internasyonal",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Lahat",
+  "countries.signed": "Lahat"
+}

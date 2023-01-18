@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Sahypa tapylmady",
+    "doesNotExist": "Bagyşlaň, gözleýän sahypaňyz ýok.",
+    "errorLogged": "Erroralňyşlygy hasaba aldyk we oňa göz aýlarys.",
+    "goHome": "Öýe git"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Переводчик",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Определить язык",
+      "more": "Has köp dil"
+    },
+    "input": {
+      "text": "Текст",
+      "webcam": "Web kamera",
+      "upload": "Uploadükle"
+    },
+    "swapLanguages": "Обратный перевод",
+    "upload": {
+      "types": "Загрузите файл MP4, OGV или WEBM.",
+      "browse": "Выбрать на компьютере",
+      "title": "Wideo saýlaň"
+    },
+    "description": "Iş stoly we ykjam üçin iki taraplaýyn köp dilli alamat dilini terjime etmek programmasy",
+    "spoken-to-signed": {
+      "text": "Gepleşik diliniň teksti",
+      "actions": {
+        "download": "Terjimäni göçürip al",
+        "copy": "Terjimäni göçüriň",
+        "share": "Terjimäni paýlaş"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Adam wideo modelini ýüklemek",
+          "generating": "Wideo döretmek"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "TERJIME EDIP GÖRÜŇ",
+    "about": {
+      "title": "Hakynda",
+      "hero": {
+        "title": "40+ gol çekilen we gürlenýän dilleriň arasynda hakyky wagtda terjime ediň.",
+        "img": "Amerikan alamat dili bilen iňlis diliniň arasynda göni terjime edilmeginiň mysaly"
+      },
+      "direction": {
+        "spoken-to-signed": "Gepleşiklerden gol çekilen dillere terjime ediň",
+        "signed-to-spoken": "Ora-da gol çekilen dillerden başlap"
+      }
+    },
+    "languages": {
+      "title": "Diller"
+    },
+    "contribute": {
+      "title": "Goşant goş"
+    },
+    "tools": {
+      "title": "Gurallar"
+    },
+    "nav": {
+      "pages": "Beýleki sahypalara geçiň",
+      "legal": "Hukuk sahypalaryna geçiň"
+    }
+  },
+  "text-to-speech": {
+    "play": "Прослушать",
+    "cancel": "Dur",
+    "unavailable": "Saýlanan dil üçin ses çykaryjy elýeterli däl"
+  },
+  "speech-to-text": {
+    "start": "Начать перевод речи",
+    "stop": "Ses bilen terjime etmegi bes ediň",
+    "not-allowed": "Mikrofony ulanmak üçin rugsat gerek",
+    "language-not-supported": "Saýlanan dil goldanylmaýar",
+    "browser-not-supported": "Bu brauzerde ses girizmek goldanylmaýar",
+    "service-not-allowed": "Söz tanamak üçin rugsat gerek"
+  },
+  "legal": {
+    "terms": {
+      "title": "Düzgünler"
+    },
+    "privacy": {
+      "title": "Gizlinlik"
+    },
+    "licenses": {
+      "title": "Programma üpjünçiligi we lisenziýalar"
+    }
+  },
+  "playground": {
+    "title": "Sözlük dilini gaýtadan işlemek meýdançasy"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Gepleşik dilini kesgitlemek",
+        "import": "Moduly import ediň",
+        "load": "Modelük modeli",
+        "find": "Teksti kesgitläň",
+        "create": "Dörediň"
+      },
+      "pix2pix": {
+        "title": "Adamyň pozisi",
+        "init": "Işçi Init",
+        "load": "Modelük modeli",
+        "first-frame": "Ilkinji çarçuwaly maglumat",
+        "frame": "Çarçuwaly maglumat"
+      },
+      "pose": {
+        "title": "Bedeniň doly bahasy",
+        "load": "Model ýük",
+        "first-frame": "Ilkinji çarçuwaly maglumat",
+        "frame": "Çarçuwaly maglumat"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera başlaýar",
+      "turnedOff": "Kamera öçürildi",
+      "notConnected": "Kamera birikdirilmedik",
+      "permissionDenied": "Kameranyň rugsady ret edildi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamerany öçüriň",
+        "off": "Kamerany açyň"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Pozanyň bahasyny ýüklemek ..."
+  },
+  "language-selector": {
+    "label": "Dili ýa-da sebiti üýtgediň"
+  },
+  "settings": {
+    "detectSign": "Belgini kesgitläň",
+    "drawVideo": "Wideo çyzyň",
+    "drawPose": "Surat çekiň",
+    "drawSignWriting": "Bellik ýazgyny çyzyň",
+    "animatePose": "Animasiýa pozasy",
+    "poseViewer": {
+      "pose": "Skelet",
+      "avatar": "Awatar",
+      "human": "Adam"
+    },
+    "title": "Sazlamalar",
+    "close": "Sazlamalary ýapyň",
+    "support": {
+      "title": "Goldaw",
+      "feedback": {
+        "title": "Seslenme",
+        "send": "Ters jogap iberiň"
+      },
+      "about": {
+        "title": "Takmynan"
+      }
+    },
+    "voice": {
+      "title": "Ses",
+      "input": {
+        "title": "Giriş"
+      },
+      "output": {
+        "title": "Çykyş"
+      }
+    },
+    "other": {
+      "title": "Beýlekiler",
+      "offline": {
+        "title": "Oflayn",
+        "files": {
+          "pix2pixGenerator": "Surat-realistik adam generatory",
+          "pix2pixUpscaler": "Surat-realistik adam ulaldyjy",
+          "avatarGlb": "3D Awatar",
+          "avatarUsdz": "IOS-da AR üçin 3D Awatar",
+          "translation": "Terjime",
+          "translation.spokenToSigned": "Gepleşikden gol çekildi",
+          "translation.signedToSpoken": "Gol çekildi"
+        },
+        "actions": {
+          "toggle": "{{Etiket}} çalyş",
+          "download": "Oflayn modelini göçürip alyň",
+          "delete": "Oflayn model keşini arassalaň",
+          "reDownload": "Oflayn modeli täzeden göçürip alyň"
+        }
+      },
+      "appearance": {
+        "title": "Daş görnüşi",
+        "action": "Daş görnüşini üýtgediň",
+        "random": "Tötänleýin surat alyň",
+        "upload": "Öz suratyňyzy ýükläň"
+      }
+    }
+  },
+  "countries.isl": "Halkara",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Hemmesi",
+  "countries.signed": "Hemmesi"
+}

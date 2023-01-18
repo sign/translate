@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Seite nicht gefunden",
+    "doesNotExist": "Entschuldigung, die von Ihnen gesuchte Seite existiert nicht.",
+    "errorLogged": "Wir haben den Fehler protokolliert und werden ihn untersuchen.",
+    "goHome": "Zur Startseite"
+  },
+  "keyboard": {
+    "ctrl": "Strg",
+    "shift": "Umschalttaste"
+  },
+  "translate": {
+    "title": "Sign Übersetzer",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Sprache erkennen",
+      "more": "Mehr Sprachen"
+    },
+    "input": {
+      "text": "Text",
+      "webcam": "Webcam",
+      "upload": "Hochladen"
+    },
+    "swapLanguages": "Sprachen tauschen",
+    "upload": {
+      "types": "Du kannst MP4-, OGV-- oder WEBM-Datei hochladen.",
+      "browse": "Computer durchsuchen",
+      "title": "Wählen Sie ein Video aus"
+    },
+    "description": "Eine bidirektionale mehrsprachige Gebärdensprachübersetzungs-App für Desktop und Handy",
+    "spoken-to-signed": {
+      "text": "Text in gesprochener Sprache",
+      "actions": {
+        "download": "Übersetzung herunterladen",
+        "copy": "Übersetzung kopieren",
+        "share": "Übersetzung teilen"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Menschliches Videomodell wird geladen",
+          "generating": "Video generieren"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ÜBERSETZER TESTEN",
+    "about": {
+      "title": "Info",
+      "hero": {
+        "title": "Übersetzen Sie in Echtzeit zwischen mehr als 40 Gebärden- und Lautsprachen.",
+        "img": "Beispiel einer Live-Übersetzung zwischen Amerikanischer Gebärdensprache und Englisch"
+      },
+      "direction": {
+        "spoken-to-signed": "Übersetzen Sie von gesprochenen in Gebärdensprachen",
+        "signed-to-spoken": "Oder von Gebärden- zu Lautsprachen"
+      }
+    },
+    "languages": {
+      "title": "Sprachen"
+    },
+    "contribute": {
+      "title": "Etwas beitragen"
+    },
+    "tools": {
+      "title": "Tools"
+    },
+    "nav": {
+      "pages": "Navigieren Sie zu anderen Seiten",
+      "legal": "Navigieren Sie zu den rechtlichen Seiten"
+    }
+  },
+  "text-to-speech": {
+    "play": "Anhören",
+    "cancel": "Stoppen",
+    "unavailable": "Die Sprachausgabe ist für die ausgewählte Sprache nicht verfügbar"
+  },
+  "speech-to-text": {
+    "start": "Spracheingaben übersetzen",
+    "stop": "Stoppen Sie die Sprachübersetzung",
+    "not-allowed": "Benötigen Sie die Erlaubnis, das Mikrofon zu verwenden",
+    "language-not-supported": "Ausgewählte Sprache wird nicht unterstützt",
+    "browser-not-supported": "Die Spracheingabe wird in diesem Browser nicht unterstützt",
+    "service-not-allowed": "Benötigen Sie eine Berechtigung zur Verwendung der Spracherkennung"
+  },
+  "legal": {
+    "terms": {
+      "title": "Nutzungsbedingungen"
+    },
+    "privacy": {
+      "title": "Datenschutz"
+    },
+    "licenses": {
+      "title": "Software und Lizenzen"
+    }
+  },
+  "playground": {
+    "title": "Spielplatz für Gebärdensprachverarbeitung"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identifizierung der gesprochenen Sprache",
+        "import": "Modul importieren",
+        "load": "Modell laden",
+        "find": "Texte identifizieren",
+        "create": "Erstellen"
+      },
+      "pix2pix": {
+        "title": "Viewer für menschliche Posen",
+        "init": "Worker-Init",
+        "load": "Modell laden",
+        "first-frame": "Erste Frame-Inferenz",
+        "frame": "Frame-Inferenz"
+      },
+      "pose": {
+        "title": "Schätzung der Ganzkörperhaltung",
+        "load": "Modell laden",
+        "first-frame": "Erste Frame-Inferenz",
+        "frame": "Frame-Inferenz"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera startet",
+      "turnedOff": "Kamera ausgeschaltet",
+      "notConnected": "Kamera nicht verbunden",
+      "permissionDenied": "Kameraerlaubnis verweigert"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Kamera ausschalten",
+        "off": "Kamera einschalten"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Haltungsschätzung wird geladen..."
+  },
+  "language-selector": {
+    "label": "Sprache oder Region ändern"
+  },
+  "settings": {
+    "detectSign": "Zeichen erkennen",
+    "drawVideo": "Video zeichnen",
+    "drawPose": "Pose zeichnen",
+    "drawSignWriting": "Zeichnen Sie das Schreiben von Zeichen",
+    "animatePose": "Pose animieren",
+    "poseViewer": {
+      "pose": "Skelett",
+      "avatar": "Benutzerbild",
+      "human": "Menschlich"
+    },
+    "title": "Einstellungen",
+    "close": "Einstellungen schließen",
+    "support": {
+      "title": "Die Unterstützung",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Feedback abschicken"
+      },
+      "about": {
+        "title": "Um"
+      }
+    },
+    "voice": {
+      "title": "Stimme",
+      "input": {
+        "title": "Eingang"
+      },
+      "output": {
+        "title": "Ausgabe"
+      }
+    },
+    "other": {
+      "title": "Sonstiges",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Fotorealistischer menschlicher Generator",
+          "pix2pixUpscaler": "Fotorealistischer menschlicher Upscaler",
+          "avatarGlb": "3D-Avatar",
+          "avatarUsdz": "3D-Avatar für AR auf iOS",
+          "translation": "Übersetzung",
+          "translation.spokenToSigned": "Gesprochen-zu-Signiert",
+          "translation.signedToSpoken": "Signed-to-Spoken"
+        },
+        "actions": {
+          "toggle": "{{Label}} umschalten",
+          "download": "Laden Sie das Offline-Modell herunter",
+          "delete": "Leeren Sie den Offline-Modell-Cache",
+          "reDownload": "Laden Sie das Offline-Modell erneut herunter"
+        }
+      },
+      "appearance": {
+        "title": "Aussehen",
+        "action": "Aussehen ändern",
+        "random": "Holen Sie sich ein zufälliges Foto",
+        "upload": "Laden Sie Ihr eigenes Foto hoch"
+      }
+    }
+  },
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Alle",
+  "countries.signed": "Alle"
+}

@@ -5,13 +5,9 @@ import {SignWritingState} from './sign-writing.state';
 import {BodyService} from './body.service';
 import {FaceService} from './face.service';
 
-
 @NgModule({
   declarations: [],
   providers: [HandsService, BodyService, FaceService],
-  imports: [
-    NgxsModule.forFeature([SignWritingState])
-  ]
+  imports: [NgxsModule.forFeature([SignWritingState])],
 })
-export class SignWritingModule {
-}
+export class SignWritingModule {}

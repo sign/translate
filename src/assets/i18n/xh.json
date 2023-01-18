@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "iphela alifumaneki",
+    "doesNotExist": "Uxolo, iphepha obulikhangela alikho.",
+    "errorLogged": "Sifake impazamo kwaye siza kujonga kuyo.",
+    "goHome": "Yiya eKhaya"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "IToliki kaSign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Fumana ulwimi",
+      "more": "Iilwimi ezingakumbi"
+    },
+    "input": {
+      "text": "Umbhalo",
+      "webcam": "Iwebcam",
+      "upload": "Layisha"
+    },
+    "swapLanguages": "Tshintsha iilwimi",
+    "upload": {
+      "types": "Layisha ifayili ye- .mp4, .ogv, okanye ye- .webm",
+      "browse": "Bhrawza ikhompyutha",
+      "title": "Khetha ividiyo"
+    },
+    "description": "Isixhobo sokuguqulela ulwimi lwezandla oluphindwe kabini kwi-desktop kunye neselfowuni",
+    "spoken-to-signed": {
+      "text": "Isicatshulwa solwimi oluthethwayo",
+      "actions": {
+        "download": "Khuphela Inguqulelo",
+        "copy": "Khuphela Inguqulelo",
+        "share": "Yabelana Ngenguqulelo"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ilayisha imodeli yevidiyo yomntu",
+          "generating": "Ukuvelisa ividiyo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ZAMA UKUGUQULELA",
+    "about": {
+      "title": "Malunga",
+      "hero": {
+        "title": "Guqulela phakathi kwe-40+ yeelwimi ezisayiniweyo nezithethwayo ngexesha lokwenyani.",
+        "img": "Umzekelo wenguqulelo ephilayo phakathi koLwimi lweZandla lwaseMelika kunye nesiNgesi"
+      },
+      "direction": {
+        "spoken-to-signed": "Guqulela ukusuka kwiilwimi ezithethwa ngezandla",
+        "signed-to-spoken": "Okanye ukusuka kwiilwimi zezandla ukuya kwiilwimi ezithethwayo"
+      }
+    },
+    "languages": {
+      "title": "Iilwimi"
+    },
+    "contribute": {
+      "title": "Nikela"
+    },
+    "tools": {
+      "title": "Izixhobo"
+    },
+    "nav": {
+      "pages": "Yiya kwamanye amaphepha",
+      "legal": "Yiya kumaphepha asemthethweni"
+    }
+  },
+  "text-to-speech": {
+    "play": "Mamela",
+    "cancel": "Yeka",
+    "unavailable": "Ukukhutshwa kwelizwi akufumaneki kulwimi olukhethiweyo"
+  },
+  "speech-to-text": {
+    "start": "Guqulela ngelizwi",
+    "stop": "Yeka ukuguqulela ngelizwi",
+    "not-allowed": "Udinga imvume yokusebenzisa imayikrofoni",
+    "language-not-supported": "Ulwimi olukhethiweyo aluxhaswanga",
+    "browser-not-supported": "Ungeniso lwelizwi aluxhaswanga kwesi sikhangeli",
+    "service-not-allowed": "Udinga imvume yokusebenzisa ukuqondwa kwentetho"
+  },
+  "legal": {
+    "terms": {
+      "title": "Imimiselo"
+    },
+    "privacy": {
+      "title": "Yabucala"
+    },
+    "licenses": {
+      "title": "iSoftware kunye neMigaqo"
+    }
+  },
+  "playground": {
+    "title": "Ibala lokudlala lokuLungiselela uLwimi lweZandla"
+  },
+  "benchmark": {
+    "title": "Umlinganiselo",
+    "stats": {
+      "cld": {
+        "title": "Ukuchongwa kolwimi oluthethwayo",
+        "import": "Ngenisa Imodyuli",
+        "load": "Layisha iModeli",
+        "find": "Chonga Isiqendu",
+        "create": "Yenza"
+      },
+      "pix2pix": {
+        "title": "Umjongi wePose yoMntu",
+        "init": "Umsebenzi wokuqala",
+        "load": "Layisha iModeli",
+        "first-frame": "Ukungeniswa kwesakhelo sokuqala",
+        "frame": "Ukungeniswa kwesakhelo"
+      },
+      "pose": {
+        "title": "Uqikelelo lokuma komzimba ogcweleyo",
+        "load": "Umthwalo wemodeli",
+        "first-frame": "Ukungeniswa kwesakhelo sokuqala",
+        "frame": "Ukungeniswa kwesakhelo"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Ikhamera iyaqala",
+      "turnedOff": "Ikhamera icinyiwe",
+      "notConnected": "Ikhamera ayiqhagamshelwanga",
+      "permissionDenied": "Imvume yekhamera yaliwe"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Cima ikhamera",
+        "off": "Layita ikhamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ilayisha uqikelelo lweNdawo..."
+  },
+  "language-selector": {
+    "label": "Guqula ulwimi okanye ummandla"
+  },
+  "settings": {
+    "detectSign": "Khangela Uphawu",
+    "drawVideo": "Zoba iVidiyo",
+    "drawPose": "Zoba Ukuma",
+    "drawSignWriting": "Zoba uBhalo loMqondiso",
+    "animatePose": "Philisa Ukuma",
+    "poseViewer": {
+      "pose": "Amathambo",
+      "avatar": "IAvatar",
+      "human": "Umntu"
+    },
+    "title": "Iisetingi",
+    "close": "Vala iisetingi",
+    "support": {
+      "title": "Inkxaso",
+      "feedback": {
+        "title": "Ingxelo",
+        "send": "Ukuzisa impendulo"
+      },
+      "about": {
+        "title": "Malunga"
+      }
+    },
+    "voice": {
+      "title": "Ilizwi",
+      "input": {
+        "title": "Igalelo"
+      },
+      "output": {
+        "title": "Isiphumo"
+      }
+    },
+    "other": {
+      "title": "Okunye",
+      "offline": {
+        "title": "Ngaphandle kweintanethi",
+        "files": {
+          "pix2pixGenerator": "Ifoto-eyinyani yejenereyitha yomntu",
+          "pix2pixUpscaler": "Ifoto-eyinyani yomntu upscaler",
+          "avatarGlb": "IAvatar ye3D",
+          "avatarUsdz": "I-Avatar ye-3D ye-AR kwi-iOS",
+          "translation": "Uguqulo",
+          "translation.spokenToSigned": "Kuthethwa-ukusayinwa",
+          "translation.signedToSpoken": "Isayinwe-kuya-Kuthethwa"
+        },
+        "actions": {
+          "toggle": "Guqula {{ileyibheli}}",
+          "download": "Khuphela iModeli engaxhunyiwe kwi-intanethi",
+          "delete": "Coca iCache yeModeli engaxhunyiwe kwi-intanethi",
+          "reDownload": "Khuphela kwakhona iModeli yeOffline"
+        }
+      },
+      "appearance": {
+        "title": "Imbonakalo",
+        "action": "Guqula inkangeleko",
+        "random": "Fumana ifoto engaqhelekanga",
+        "upload": "Layisha eyakho ifoto"
+      }
+    }
+  },
+  "countries.isl": "Amazwe ngamazwe",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Konke",
+  "countries.signed": "Konke"
+}

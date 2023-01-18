@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Ahụghị ibe",
+    "doesNotExist": "Ndo, ibe ahụ ị na-achọ adịghị.",
+    "errorLogged": "Anyị abanyela mperi ahụ, anyị ga-enyocha ya.",
+    "goHome": "Gaa n'ụlọ"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Chọpụta asụsụ",
+      "more": "Asụsụ ndị ọzọ"
+    },
+    "input": {
+      "text": "Ederede",
+      "webcam": "Igwefoto webụ",
+      "upload": "Bulite"
+    },
+    "swapLanguages": "Gbanweta asụsụ",
+    "upload": {
+      "types": "Bugoo .mp4, .ogv, ma ọ bụ .webm.",
+      "browse": "Lenye anya na kọmputa gị",
+      "title": "Họrọ vidiyo"
+    },
+    "description": "Ngwa ntụgharị asụsụ ogbi asụsụ ọtụtụ asụsụ abụọ maka desktọpụ na mkpanaka",
+    "spoken-to-signed": {
+      "text": "Ederede Asụsụ Asụsụ",
+      "actions": {
+        "download": "Budata Ntụgharị asụsụ",
+        "copy": "Detuo ntụgharị asụsụ",
+        "share": "Kekọrịta ntụgharị asụsụ"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Na-ebu ihe ngosi vidiyo mmadụ",
+          "generating": "Na-emepụta vidiyo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "NWAA TỤGHARỊA ASỤSỤ",
+    "about": {
+      "title": "Maka",
+      "hero": {
+        "title": "Tụgharịa asụsụ n'etiti 40+ mbinye aka na asụsụ a na-asụ ozugbo.",
+        "img": "Ọmụmaatụ nke ntụgharị asụsụ dị ndụ n'etiti Asụsụ ogbi nke America na Bekee"
+      },
+      "direction": {
+        "spoken-to-signed": "Tụgharịa asụsụ site na asụ ka ọ bụrụ asụsụ ndị mbinye aka",
+        "signed-to-spoken": "Ma ọ bụ site na mbinye aka gaa na asụsụ ndị a na-asụ"
+      }
+    },
+    "languages": {
+      "title": "Asụsụ"
+    },
+    "contribute": {
+      "title": "Nyere aka"
+    },
+    "tools": {
+      "title": "Ngwaọrụ"
+    },
+    "nav": {
+      "pages": "Gaa na ibe ndị ọzọ",
+      "legal": "Gaa na ibe iwu"
+    }
+  },
+  "text-to-speech": {
+    "play": "Gee",
+    "cancel": "Kwụsị",
+    "unavailable": "Mbupute olu adịghị maka asụsụ ahọpụtara"
+  },
+  "speech-to-text": {
+    "start": "Jiri olu tụgharịa asụsụ",
+    "stop": "Kwụsị ntụgharị asụsụ site n'olu",
+    "not-allowed": "Achọrọ ikike iji igweokwu",
+    "language-not-supported": "Akwadoghi asusu ahọpụtara",
+    "browser-not-supported": "Akwadoghi ntinye olu na ihe nchọgharị a",
+    "service-not-allowed": "Achọrọ ikike iji njirimara okwu"
+  },
+  "legal": {
+    "terms": {
+      "title": "Usoro"
+    },
+    "privacy": {
+      "title": "Nkeonwe"
+    },
+    "licenses": {
+      "title": "Ngwanrọ na Ikikere"
+    }
+  },
+  "playground": {
+    "title": "Ebe egwuregwu na-ahazi asụsụ ogbi"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Nchọpụta Asụsụ Asụsụ",
+        "import": "Bubata Modul",
+        "load": "Nlereanya ibu",
+        "find": "Chọpụta Ederede",
+        "create": "Mepụta"
+      },
+      "pix2pix": {
+        "title": "Ihe nlere anya mmadụ",
+        "init": "Onye ọrụ Init",
+        "load": "Nlereanya ibu",
+        "first-frame": "Ntuziaka Frame Mbụ",
+        "frame": "Ntinye Frame"
+      },
+      "pose": {
+        "title": "Ntụle ọnọdụ ahụ zuru oke",
+        "load": "Ibu Model",
+        "first-frame": "Ntuziaka Frame Mbụ",
+        "frame": "Ntinye Frame"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Igwefoto na-amalite",
+      "turnedOff": "Agbanyụrụ igwefoto",
+      "notConnected": "Ejikọghị igwefoto",
+      "permissionDenied": "Ajụrụ ikike igwefoto"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Gbanyụọ igwefoto",
+        "off": "Gbanwuo igwefoto"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Na-ebunye Ntụle Ngosipụta..."
+  },
+  "language-selector": {
+    "label": "Gbanwee asụsụ ma ọ bụ mpaghara"
+  },
+  "settings": {
+    "detectSign": "Chọpụta akara",
+    "drawVideo": "See vidiyo",
+    "drawPose": "Dọta Pose",
+    "drawSignWriting": "See Ihe odide akara",
+    "animatePose": "Ọnọdụ ndụ",
+    "poseViewer": {
+      "pose": "Ọkpụkpụ",
+      "avatar": "Avatar",
+      "human": "Mmadụ"
+    },
+    "title": "Ntọala",
+    "close": "Mechie ntọala",
+    "support": {
+      "title": "Nkwado",
+      "feedback": {
+        "title": "Nzaghachi",
+        "send": "Zipu nzaghachi"
+      },
+      "about": {
+        "title": "Ihe gbasara"
+      }
+    },
+    "voice": {
+      "title": "Olu",
+      "input": {
+        "title": "Ntinye"
+      },
+      "output": {
+        "title": "Mpụta"
+      }
+    },
+    "other": {
+      "title": "Ndị ọzọ",
+      "offline": {
+        "title": "Na-anọghị n'ịntanetị",
+        "files": {
+          "pix2pixGenerator": "Foto-ezitere mmadụ generator",
+          "pix2pixUpscaler": "Foto-ezigbo mmadụ upscaler",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D maka AR na iOS",
+          "translation": "Ntụgharị asụsụ",
+          "translation.spokenToSigned": "Kwuru-na-binyere aka",
+          "translation.signedToSpoken": "Ebinyere aka na-ekwu okwu"
+        },
+        "actions": {
+          "toggle": "Tụgharịa {{label}}",
+          "download": "Budata Model na-anọghị n'ịntanetị",
+          "delete": "Hichapụ cache Model na-anọghị n'ịntanetị",
+          "reDownload": "Budata Model na-anọghị n'ịntanetị"
+        }
+      },
+      "appearance": {
+        "title": "Ọdịdị",
+        "action": "Gbanwee ọdịdị",
+        "random": "Nweta foto enweghị usoro",
+        "upload": "Bulite foto nke gị"
+      }
+    }
+  },
+  "countries.isl": "Mba ụwa",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Ha niile",
+  "countries.signed": "Ha niile"
+}

@@ -2,29 +2,31 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: url(../../assets/fonts/roboto/Roboto-normal-300.ttf) format('truetype'),
-  url(../../assets/fonts/roboto/Roboto-normal-300.woff2) format('woff2'),
-  url(../../assets/fonts/roboto/Roboto-normal-300.woff) format('woff');
+  font-display: swap;
+  src: url(/assets/fonts/roboto/Roboto-normal-300.ttf) format('truetype'),
+    url(/assets/fonts/roboto/Roboto-normal-300.woff2) format('woff2'),
+    url(/assets/fonts/roboto/Roboto-normal-300.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url(../../assets/fonts/roboto/Roboto-normal-400.eot);
-  src: local('Roboto'), url(../../assets/fonts/roboto/Roboto-normal-400.ttf) format('truetype'),
-  url(../../assets/fonts/roboto/Roboto-normal-400.svg#Roboto) format('svg'),
-  url(../../assets/fonts/roboto/Roboto-normal-400.woff2) format('woff2'),
-  url(../../assets/fonts/roboto/Roboto-normal-400.woff) format('woff'),
-  url(../../assets/fonts/roboto/Roboto-normal-400.eot?#iefix) format('embedded-opentype');
+  font-display: swap;
+  src: url(/assets/fonts/roboto/Roboto-normal-400.eot);
+  src: local('Roboto'), url(/assets/fonts/roboto/Roboto-normal-400.ttf) format('truetype'),
+    url(/assets/fonts/roboto/Roboto-normal-400.svg#Roboto) format('svg'),
+    url(/assets/fonts/roboto/Roboto-normal-400.woff2) format('woff2'),
+    url(/assets/fonts/roboto/Roboto-normal-400.woff) format('woff'),
+    url(/assets/fonts/roboto/Roboto-normal-400.eot?#iefix) format('embedded-opentype');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: url(../../assets/fonts/roboto/Roboto-normal-500.ttf) format('truetype'),
-  url(../../assets/fonts/roboto/Roboto-normal-500.woff2) format('woff2'),
-  url(../../assets/fonts/roboto/Roboto-normal-500.woff) format('woff');
+  font-display: swap;
+  src: url(/assets/fonts/roboto/Roboto-normal-500.ttf) format('truetype'),
+    url(/assets/fonts/roboto/Roboto-normal-500.woff2) format('woff2'),
+    url(/assets/fonts/roboto/Roboto-normal-500.woff) format('woff');
 }
-

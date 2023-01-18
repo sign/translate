@@ -1,14 +1,14 @@
 @use '@angular/material' as mat;
-@import "../../../../theme/variables";
+@import '../../../../theme/variables';
 
 :host {
   display: grid;
   width: 100%;
-  grid-template-areas: "spoken signwriting signed";
+  grid-template-areas: 'spoken signwriting signed';
   grid-template-columns: auto 100px 50%;
 
   @media #{$mat-lt-sm} {
-    grid-template-areas: "spoken signwriting" "signed signed";
+    grid-template-areas: 'spoken signwriting' 'signed signed';
     grid-template-columns: auto 100px;
 
     .sign-language {
@@ -31,12 +31,13 @@
 
 app-sign-writing {
   @media #{$mat-lt-sm} {
-    overflow-y: auto;
+    border: none !important;
     height: 195px;
   }
 }
 
 .translation-text {
+  position: relative;
   padding: 20px 24px;
   color: map-get(mat.$light-theme-foreground-palette, text);
   flex: 1;
@@ -53,6 +54,7 @@ app-sign-writing {
     background-color: transparent;
     color: inherit;
     border: none;
+    direction: unset; // Important for initial cursor position
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     font-size: 24px;
     line-height: 32px;
@@ -72,11 +74,12 @@ app-sign-writing {
     text-align: end;
     font-size: 12px;
     line-height: 40px;
+    padding-inline: 10px;
   }
 }
 
 // Numbers should always be left-to-right
-::ng-deep html[dir="rtl"] #char-count {
+::ng-deep html[dir='rtl'] #char-count {
   direction: ltr;
   text-align: start !important;
 }
@@ -90,19 +93,20 @@ app-sign-writing {
   @media (prefers-color-scheme: dark) {
     background-color: #202124;
   }
+}
 
-  #actions {
-    position: absolute;
-    margin: 14px;
-    bottom: 0;
-    right: 0;
-    text-align: end;
-    width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
+.actions {
+  position: absolute;
+  margin: 14px;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+  //width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
+  width: calc(100% - 2 * 14px);
 
-    mat-spinner {
-      display: inline-block;
-      margin: 0 8px -8px;
-    }
+  mat-spinner {
+    display: inline-block;
+    margin: 0 8px -8px;
   }
 }
 

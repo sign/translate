@@ -1,5 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+!**/.gitkeep
+
 # compiled output
 /dist
 /tmp
@@ -47,3 +49,20 @@ Thumbs.db
 
 # Angular
 .angular
+
+# Tools
+tools/cache
+
+# Firebase
+functions/lib
+functions/src/playground.ts
+.firebase
+firebase-debug.log
+firestore-debug.log
+database-debug.log
+
+.env
+
+
+src/assets/promotional/about/iphone/*.png
+src/assets/promotional/about/android/*.png

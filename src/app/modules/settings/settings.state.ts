@@ -16,6 +16,8 @@ export interface SettingsStateModel {
   drawPose: boolean;
   drawSignWriting: boolean;
 
+  appearance: string;
+
   poseViewer: PoseViewerSetting;
 }
 
@@ -32,12 +34,14 @@ const initialState: SettingsStateModel = {
   drawSignWriting: false,
 
   poseViewer: 'pose',
+
+  appearance: '#ffc8c8',
 };
 
 @Injectable()
 @State<SettingsStateModel>({
   name: 'settings',
-  defaults: initialState
+  defaults: initialState,
 })
 export class SettingsState {
   @Action(SetSetting)

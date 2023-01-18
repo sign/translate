@@ -1,8 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TextToSpeechComponent} from './text-to-speech.component';
-import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {SimpleChange} from '@angular/core';
+import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import Spy = jasmine.Spy;
 
 describe('TextToSpeechComponent', () => {
@@ -24,7 +26,7 @@ describe('TextToSpeechComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TextToSpeechComponent],
-      imports: [AppTranslocoModule]
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule],
     }).compileComponents();
   });
 
@@ -43,17 +45,25 @@ describe('TextToSpeechComponent', () => {
     expect(component.isSpeaking).toBeFalse();
   });
 
-  it('voiceschanged event should select local service', () => {
-    component.lang = 'en';
-    window.speechSynthesis.dispatchEvent(new Event('voiceschanged'));
-    expect(getVoicesSpy).toHaveBeenCalled();
-    expect(voiceSpy).toHaveBeenCalled();
-
-    expect(component.isSupported).toBeTrue();
-    const voice = voiceSpy.calls.first().args[0];
-    expect(voice.lang).toBe('en-US');
-    expect(voice.localService).toBe(true);
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
+
+  if ('dispatchEvent' in window.speechSynthesis) {
+    it('voiceschanged event should select local service', () => {
+      component.lang = 'en';
+      window.speechSynthesis.dispatchEvent(new Event('voiceschanged'));
+      expect(getVoicesSpy).toHaveBeenCalled();
+      expect(voiceSpy).toHaveBeenCalled();
+
+      expect(component.isSupported).toBeTrue();
+      const voice = voiceSpy.calls.first().args[0];
+      expect(voice.lang).toBe('en-US');
+      expect(voice.localService).toBe(true);
+    });
+  }
 
   it('language change with no voices should not select service', () => {
     component.voices = [];

@@ -14,7 +14,6 @@ export interface PoseLandmark {
 
 export const EMPTY_LANDMARK: PoseLandmark = {x: 0, y: 0, z: 0};
 
-
 export interface Pose {
   faceLandmarks: PoseLandmark[];
   poseLandmarks: PoseLandmark[];
@@ -36,20 +35,21 @@ const initialState: PoseStateModel = {
 @Injectable()
 @State<PoseStateModel>({
   name: 'pose',
-  defaults: initialState
+  defaults: initialState,
 })
 export class PoseState implements NgxsOnInit {
   @Select(state => state.settings.pose) poseSetting$: Observable<boolean>;
 
-  constructor(private poseService: PoseService) {
-  }
+  constructor(private poseService: PoseService, private store: Store) {}
 
   ngxsOnInit({dispatch}: StateContext<any>): void {
-    this.poseSetting$.pipe(
-      filter(Boolean),
-      first(),
-      tap(() => dispatch(LoadPoseModel))
-    ).subscribe();
+    this.poseSetting$
+      .pipe(
+        filter(Boolean),
+        first(),
+        tap(() => dispatch(LoadPoseModel))
+      )
+      .subscribe();
   }
 
   @Action(LoadPoseModel)
@@ -61,6 +61,24 @@ export class PoseState implements NgxsOnInit {
   @Action(PoseVideoFrame)
   async poseFrame({patchState, dispatch}: StateContext<PoseStateModel>, {video}: PoseVideoFrame): Promise<void> {
     const result = await this.poseService.predict(video);
+    // TODO: passing the `image` canvas through NGXS bugs the pose.
+    // https://github.com/google/mediapipe/issues/2422
+    //    const fakeImage = document.createElement('canvas');
+    //       fakeImage.width = results.image.width;
+    //       fakeImage.height = results.image.height;
+    //       const ctx = fakeImage.getContext('2d');
+    //       ctx.drawImage(results.image, 0, 0, fakeImage.width, fakeImage.height);
+    //
+    //       // Since v0.4, "results" include additional parameters
+    //       this.store.dispatch(
+    //         new StoreFramePose({
+    //           faceLandmarks: results.faceLandmarks,
+    //           poseLandmarks: results.poseLandmarks,
+    //           leftHandLandmarks: results.leftHandLandmarks,
+    //           rightHandLandmarks: results.rightHandLandmarks,
+    //           image: fakeImage,
+    //         })
+    //       );
 
     // Since v0.4, "results" include additional parameters
     dispatch(new StoreFramePose(result));

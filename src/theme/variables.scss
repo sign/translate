@@ -3,27 +3,44 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$app-primary: mat.define-palette(mat.$blue-palette);
-$app-accent: mat.define-palette(mat.$pink-palette);
 
-// The warn palette is optional (defaults to red).
+$app-accent: mat.define-palette(mat.$pink-palette);
 $app-warn: mat.define-palette(mat.$red-palette);
+$app-typography: mat.define-typography-config(
+  $font-family: 'Roboto,Helvetica Neue,sans-serif',
+);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$app-theme: mat.define-light-theme($app-primary, $app-accent, $app-warn);
-$app-dark-theme: mat.define-dark-theme($app-primary, $app-accent, $app-warn);
+$app-color: (
+  primary: mat.define-palette(mat.$blue-palette, $default: 700),
+  accent: $app-accent,
+  warn: $app-warn,
+);
+$app-theme: mat.define-light-theme(
+  (
+    color: $app-color,
+  )
+);
+$app-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$blue-palette, $default: 400),
+      accent: $app-accent,
+      warn: $app-warn,
+    ),
+  )
+);
 
-
-$mat-xs: "screen and (max-width: 599px)";
-$mat-sm: "screen and (min-width: 600px) and (max-width: 959px)";
-$mat-md: "screen and (min-width: 960px) and (max-width: 1279px)";
-$mat-lg: "screen and (min-width: 1280px) and (max-width: 1919px)";
-$mat-xl: "screen and (min-width: 1920px) and (max-width: 5000px)";
-$mat-lt-sm: "screen and (max-width: 599px)";
-$mat-lt-md: "screen and (max-width: 959px)";
-$mat-lt-lg: "screen and (max-width: 1279px)";
-$mat-lt-xl: "screen and (max-width: 1919px)";
-$mat-gt-xs: "screen and (min-width: 600px)";
-$mat-gt-sm: "screen and (min-width: 960px)";
-$mat-gt-md: "screen and (min-width: 1280px)";
-$mat-gt-xl: "screen and (min-width: 1920px)";
+$mat-xs: 'screen and (max-width: 599px)';
+$mat-sm: 'screen and (min-width: 600px) and (max-width: 959px)';
+$mat-md: 'screen and (min-width: 960px) and (max-width: 1279px)';
+$mat-lg: 'screen and (min-width: 1280px) and (max-width: 1919px)';
+$mat-xl: 'screen and (min-width: 1920px) and (max-width: 5000px)';
+$mat-lt-sm: 'screen and (max-width: 599px)';
+$mat-lt-md: 'screen and (max-width: 959px)';
+$mat-lt-lg: 'screen and (max-width: 1279px)';
+$mat-lt-xl: 'screen and (max-width: 1919px)';
+$mat-gt-xs: 'screen and (min-width: 600px)';
+$mat-gt-sm: 'screen and (min-width: 960px)';
+$mat-gt-md: 'screen and (min-width: 1280px)';
+$mat-gt-xl: 'screen and (min-width: 1920px)';

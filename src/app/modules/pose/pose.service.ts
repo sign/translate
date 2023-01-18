@@ -1,30 +1,46 @@
 import {Injectable} from '@angular/core';
-import {FACEMESH_FACE_OVAL, FACEMESH_LEFT_EYE, FACEMESH_LEFT_EYEBROW, FACEMESH_LIPS, FACEMESH_RIGHT_EYE, FACEMESH_RIGHT_EYEBROW, FACEMESH_TESSELATION, HAND_CONNECTIONS, POSE_CONNECTIONS, POSE_LANDMARKS} from '@mediapipe/holistic';
+import {
+  FACEMESH_FACE_OVAL,
+  FACEMESH_LEFT_EYE,
+  FACEMESH_LEFT_EYEBROW,
+  FACEMESH_LIPS,
+  FACEMESH_RIGHT_EYE,
+  FACEMESH_RIGHT_EYEBROW,
+  FACEMESH_TESSELATION,
+  HAND_CONNECTIONS,
+  POSE_CONNECTIONS,
+  POSE_LANDMARKS,
+} from '@mediapipe/holistic';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {Pose, PoseLandmark} from './pose.state';
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import * as comlink from 'comlink';
 import {transferableImage} from '../../core/helpers/image/transferable';
-
 
 const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22];
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PoseService {
+  isFirstFrame = true;
 
   worker: comlink.Remote<{
-    loadModel: () => Promise<void>,
-    pose: (imageBitmap: ImageBitmap | ImageData) => Promise<Pose>,
+    loadModel: () => Promise<void>;
+    pose: (imageBitmap: ImageBitmap | ImageData) => Promise<Pose>;
   }>;
+
+  constructor(private ga: GoogleAnalyticsService) {}
 
   async load(): Promise<void> {
     if (this.worker) {
       return;
     }
 
-    this.worker = comlink.wrap(new Worker(new URL('./pose.worker', import.meta.url)));
-    await this.worker.loadModel();
+    await this.ga.trace('pose', 'load', async () => {
+      this.worker = comlink.wrap(new Worker(new URL('./pose.worker', import.meta.url)));
+      await this.worker.loadModel();
+    });
   }
 
   async predict(video: HTMLVideoElement): Promise<Pose> {
@@ -33,15 +49,19 @@ export class PoseService {
       return null;
     }
 
+    const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
     const image = await transferableImage(video);
 
-    const result: Pose = await this.worker.pose(image);
-    if (!result) {
-      return null;
-    }
+    return this.ga.trace('pose', frameType, async () => {
+      this.isFirstFrame = false;
+      const result: Pose = await this.worker.pose(image);
+      if (!result) {
+        return null;
+      }
 
-    // result.image = image; // TODO fix
-    return result;
+      // result.image = image; // TODO fix
+      return result;
+    });
   }
 
   drawBody(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D): void {
@@ -54,15 +74,21 @@ export class PoseService {
     drawing.drawLandmarks(ctx, filteredLandmarks, {color: '#00FF00', fillColor: '#FF0000'});
   }
 
-  drawHand(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D, lineColor: string, dotColor: string, dotFillColor: string): void {
+  drawHand(
+    landmarks: PoseLandmark[],
+    ctx: CanvasRenderingContext2D,
+    lineColor: string,
+    dotColor: string,
+    dotFillColor: string
+  ): void {
     drawing.drawConnectors(ctx, landmarks, HAND_CONNECTIONS, {color: lineColor});
     drawing.drawLandmarks(ctx, landmarks, {
       color: dotColor,
       fillColor: dotFillColor,
       lineWidth: 2,
-      radius: (landmark) => {
-        return drawing.lerp(landmark.z, -0.15, .1, 10, 1);
-      }
+      radius: landmark => {
+        return drawing.lerp(landmark.z, -0.15, 0.1, 10, 1);
+      },
     });
   }
 
@@ -81,8 +107,7 @@ export class PoseService {
       const from = connector[0];
       const to = connector[1];
       if (from && to) {
-        if (from.visibility && to.visibility &&
-          (from.visibility < 0.1 || to.visibility < 0.1)) {
+        if (from.visibility && to.visibility && (from.visibility < 0.1 || to.visibility < 0.1)) {
           continue;
         }
         ctx.beginPath();

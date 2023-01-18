@@ -1,0 +1,45 @@
+@import '../../../theme/variables';
+
+mat-toolbar {
+  &#header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  nav {
+    margin-inline-start: 3em;
+    flex: 1 1 auto;
+  }
+
+  @media #{$mat-lt-md} {
+    nav,
+    a {
+      display: none;
+    }
+
+    span {
+      flex: 1 1 auto;
+    }
+
+    app-language-selector {
+      margin: auto;
+    }
+  }
+
+  @media #{$mat-gt-md} {
+    app-language-selector {
+      margin-right: 3em;
+    }
+  }
+
+  #menu-handler {
+    margin-right: 0.5em;
+    cursor: pointer;
+    display: none;
+
+    @media #{$mat-lt-md} {
+      display: unset;
+    }
+  }
+}

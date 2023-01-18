@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Leqephe ha le fumanehe",
+    "doesNotExist": "Tšoarelo, leqephe leo u neng u le batla ha le eo.",
+    "errorLogged": "Re kentse phoso 'me re tla e sheba.",
+    "goHome": "Eya Hae"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Liphetolelo tsa Sign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Fumana puo",
+      "more": "Lipuo Tse Eketsehileng"
+    },
+    "input": {
+      "text": "Mongolo",
+      "webcam": "Webcam",
+      "upload": "Kenya"
+    },
+    "swapLanguages": "Fetola dipuo",
+    "upload": {
+      "types": "Aplouda a .mp4, .ogv, kapa .webm",
+      "browse": "Phenya khomphuta ya hao",
+      "title": "Khetha video"
+    },
+    "description": "Sesebelisoa sa phetolelo ea lipuo tse peli tsa lipuo tsa matsoho bakeng sa komporo ea khomphutha le ea selefouno",
+    "spoken-to-signed": {
+      "text": "Sengoloa sa Puo e Builoeng",
+      "actions": {
+        "download": "Khoasolla Phetolelo",
+        "copy": "Kopitsa Phetolelo",
+        "share": "Arolelana Phetolelo"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "E kenya mofuta oa video oa motho",
+          "generating": "Ho hlahisa video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "lLEKA HO FETOLELA",
+    "about": {
+      "title": "Mabapi le",
+      "hero": {
+        "title": "Fetolela lipakeng tsa 40+ lipuo tsa matsoho le tse buuoang ka nako ea sebele.",
+        "img": "Mohlala oa phetolelo e phelang lipakeng tsa Puo ea Matsoho ea Amerika le Senyesemane"
+      },
+      "direction": {
+        "spoken-to-signed": "Fetolela ho tloha lipuong tse buuoang ho ea ho lipuo tsa matsoho",
+        "signed-to-spoken": "Kapa ho tloha lipuong tsa matsoho ho ea ho tse buuoang"
+      }
+    },
+    "languages": {
+      "title": "Lipuo"
+    },
+    "contribute": {
+      "title": "Tlatsetsa"
+    },
+    "tools": {
+      "title": "Ditshebediso"
+    },
+    "nav": {
+      "pages": "E ea maqepheng a mang",
+      "legal": "E ea maqepheng a molao"
+    }
+  },
+  "text-to-speech": {
+    "play": "Mamela",
+    "cancel": "Ema",
+    "unavailable": "Voice output ha e fumanehe bakeng sa puo e khethiloeng"
+  },
+  "speech-to-text": {
+    "start": "Toloka ka lentsoe",
+    "stop": "Emisa ho fetolela ka lentsoe",
+    "not-allowed": "U hloka tumello ea ho sebelisa maekrofounu",
+    "language-not-supported": "Puo e khethiloeng ha e tšehetsoe",
+    "browser-not-supported": "Voice input ha e sebetse ho porausara ena",
+    "service-not-allowed": "U hloka tumello ea ho sebelisa temoho ea puo"
+  },
+  "legal": {
+    "terms": {
+      "title": "Melaoana"
+    },
+    "privacy": {
+      "title": "Lekunutu"
+    },
+    "licenses": {
+      "title": "Softewere le Lilaesense"
+    }
+  },
+  "playground": {
+    "title": "Lebala la ho Etsa Puo ea Matsoho"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Boitsebiso ba Puo e Builoeng",
+        "import": "Theha Mojule",
+        "load": "Laela Mohlala",
+        "find": "Lemoha Mongolo",
+        "create": "Theha"
+      },
+      "pix2pix": {
+        "title": "Motho Pose Viewer",
+        "init": "Sehlopha sa Basebetsi",
+        "load": "Laela Mohlala",
+        "first-frame": "Tlhahiso ea Pele ea Frame",
+        "frame": "Tlhaloso ea Frame"
+      },
+      "pose": {
+        "title": "Khakanyo ea Boemo ba 'mele o Feletseng",
+        "load": "Mojaro oa Mohlala",
+        "first-frame": "Tlhahiso ea Pele ea Frame",
+        "frame": "Tlhaloso ea Frame"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Khamera e qala",
+      "turnedOff": "Khamera e timiloe",
+      "notConnected": "Khamera ha e ea hokahanngoa",
+      "permissionDenied": "Tumello ea khamera e hanetsoe"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Tima khamera",
+        "off": "Bulela khamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Loading Pose Estimation..."
+  },
+  "language-selector": {
+    "label": "Fetola puo kapa sebaka"
+  },
+  "settings": {
+    "detectSign": "Lemoha Letšoao",
+    "drawVideo": "Thala Video",
+    "drawPose": "Draw Pose",
+    "drawSignWriting": "Thala Mongolo oa Letšoao",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Skeleton",
+      "avatar": "Avatar",
+      "human": "Motho"
+    },
+    "title": "Litlhophiso",
+    "close": "Koala litlhophiso",
+    "support": {
+      "title": "Tšehetso",
+      "feedback": {
+        "title": "Maikutlo",
+        "send": "Romella maikutlo"
+      },
+      "about": {
+        "title": "About"
+      }
+    },
+    "voice": {
+      "title": "Lentsoe",
+      "input": {
+        "title": "Kenyeletso"
+      },
+      "output": {
+        "title": "Sephetho"
+      }
+    },
+    "other": {
+      "title": "Tse ding",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Jenereithara ea 'nete ea motho",
+          "pix2pixUpscaler": "Photo-real motho upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar bakeng sa AR ho iOS",
+          "translation": "Phetolelo",
+          "translation.spokenToSigned": "E builoeng-ho-Saenoa",
+          "translation.signedToSpoken": "Saennwe-ho-Bua"
+        },
+        "actions": {
+          "toggle": "Fetolela {{label}}",
+          "download": "Khoasolla Mohlala oa Offline",
+          "delete": "Hlatsoa Cache ea Moetso oa Offline",
+          "reDownload": "Khoasolla Hape Moetso oa Offline"
+        }
+      },
+      "appearance": {
+        "title": "Ponahalo",
+        "action": "Fetola chebahalo",
+        "random": "Fumana foto e sa reroang",
+        "upload": "Kenya senepe sa hau"
+      }
+    }
+  },
+  "countries.isl": "Machaba",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Tsohle",
+  "countries.signed": "Tsohle"
+}

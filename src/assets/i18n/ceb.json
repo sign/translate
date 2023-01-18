@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Wala makit-an ang panid",
+    "doesNotExist": "Pasensya, wala ang panid nga imong gipangita.",
+    "errorLogged": "Gi-log namon ang sayup ug susihon kini.",
+    "goHome": "Adto sa Balay"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Gimatikud ang sinultian",
+      "more": "Dugang Pinulongan"
+    },
+    "input": {
+      "text": "Teksto",
+      "webcam": "webcam",
+      "upload": "Pag-upload"
+    },
+    "swapLanguages": "Pag-swap og mga lengguwahe",
+    "upload": {
+      "types": "Pag-upload og .mp4, .ogv, o .webm",
+      "browse": "I-browse ang imong computer",
+      "title": "Pagpili og video"
+    },
+    "description": "Usa ka bi-directional multilingual nga sign language nga paghubad nga app para sa desktop ug mobile",
+    "spoken-to-signed": {
+      "text": "Gisulti nga Pinulongan nga Teksto",
+      "actions": {
+        "download": "Pag-download sa Hubad",
+        "copy": "Kopyaha ang Hubad",
+        "share": "Ipakigbahin ang Hubad"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Nag-load sa modelo sa video sa tawo",
+          "generating": "Paghimo og video"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "SULAYI ANG TRANSLATE",
+    "about": {
+      "title": "Mahitungod Niini",
+      "hero": {
+        "title": "Paghubad tali sa 40+ nga gipirmahan ug gisulti nga mga sinultian sa tinuud nga oras.",
+        "img": "Pananglitan sa live nga paghubad tali sa American Sign Language ug English"
+      },
+      "direction": {
+        "spoken-to-signed": "Paghubad gikan sa sinultihan ngadto sa signed nga mga pinulongan",
+        "signed-to-spoken": "O gikan sa gipirmahan ngadto sa gisulti nga mga pinulongan"
+      }
+    },
+    "languages": {
+      "title": "Mga Lengguwahe"
+    },
+    "contribute": {
+      "title": "Pag-ambag"
+    },
+    "tools": {
+      "title": "Mga Galamiton"
+    },
+    "nav": {
+      "pages": "Pag-navigate sa ubang mga panid",
+      "legal": "Pagdala ngadto sa legal nga mga panid"
+    }
+  },
+  "text-to-speech": {
+    "play": "Pamati",
+    "cancel": "Hunong",
+    "unavailable": "Ang output sa tingog dili magamit alang sa pinili nga pinulongan"
+  },
+  "speech-to-text": {
+    "start": "Ihubad pinaagi sa tingog",
+    "stop": "Hunonga ang paghubad pinaagi sa tingog",
+    "not-allowed": "Nagkinahanglan og pagtugot sa paggamit sa mikropono",
+    "language-not-supported": "Ang pinili nga pinulongan wala gisuportahan",
+    "browser-not-supported": "Ang input sa tingog wala gisuportahan sa kini nga browser",
+    "service-not-allowed": "Nagkinahanglan og pagtugot sa paggamit sa speech recognition"
+  },
+  "legal": {
+    "terms": {
+      "title": "Mga Termino"
+    },
+    "privacy": {
+      "title": "Pagkapribado"
+    },
+    "licenses": {
+      "title": "Software ug Mga Lisensya"
+    }
+  },
+  "playground": {
+    "title": "Dulaanan sa Pagproseso sa Sign Language"
+  },
+  "benchmark": {
+    "title": "Benchmark",
+    "stats": {
+      "cld": {
+        "title": "Identipikasyon sa Gisulti nga Pinulongan",
+        "import": "Import nga Module",
+        "load": "Modelo sa Pagkarga",
+        "find": "Ilha ang Teksto",
+        "create": "Paghimo"
+      },
+      "pix2pix": {
+        "title": "Tawo nga Pose Viewer",
+        "init": "Trabaho Init",
+        "load": "Modelo sa Pagkarga",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      },
+      "pose": {
+        "title": "Pagbanabana sa Tibuok Lawas nga Posisyon",
+        "load": "Model Load",
+        "first-frame": "Unang Frame Inference",
+        "frame": "Frame Inference"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Nagsugod ang camera",
+      "turnedOff": "Gipalong ang camera",
+      "notConnected": "Ang camera dili konektado",
+      "permissionDenied": "Gidili ang pagtugot sa camera"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "I-off ang camera",
+        "off": "I-on ang camera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Nagkarga sa Pagbanabana sa Posisyon..."
+  },
+  "language-selector": {
+    "label": "Usba ang pinulongan o rehiyon"
+  },
+  "settings": {
+    "detectSign": "Detect Sign",
+    "drawVideo": "Pagdrowing og Video",
+    "drawPose": "Pagdrowing og Pose",
+    "drawSignWriting": "Pagdibuho sa Pagsulat sa Timailhan",
+    "animatePose": "Animate Pose",
+    "poseViewer": {
+      "pose": "Kalabera",
+      "avatar": "Avatar",
+      "human": "Tawo"
+    },
+    "title": "Mga setting",
+    "close": "Isira ang mga setting",
+    "support": {
+      "title": "Suporta",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Ipadala ang feedback"
+      },
+      "about": {
+        "title": "Mahitungod sa"
+      }
+    },
+    "voice": {
+      "title": "Tingog",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Output"
+      }
+    },
+    "other": {
+      "title": "Ang uban",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Photo-realistiko nga generator sa tawo",
+          "pix2pixUpscaler": "Photo-realistiko nga tawo nga upscaler",
+          "avatarGlb": "3D nga Avatar",
+          "avatarUsdz": "3D Avatar alang sa AR sa iOS",
+          "translation": "Paghubad",
+          "translation.spokenToSigned": "Gisulti-sa-Gipirmahan",
+          "translation.signedToSpoken": "Gipirmahan-sa-Gisulti"
+        },
+        "actions": {
+          "toggle": "I-toggle ang {{label}}",
+          "download": "Pag-download sa Offline nga Modelo",
+          "delete": "Paglimpyo sa Offline nga Model Cache",
+          "reDownload": "I-download pag-usab ang Offline nga Modelo"
+        }
+      },
+      "appearance": {
+        "title": "Panagway",
+        "action": "Usba ang hitsura",
+        "random": "Pagkuha ug random nga litrato",
+        "upload": "Pag-upload sa imong kaugalingon nga litrato"
+      }
+    }
+  },
+  "countries.isl": "Internasyonal",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Tanan",
+  "countries.signed": "Tanan"
+}

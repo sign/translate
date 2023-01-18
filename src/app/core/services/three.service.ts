@@ -1,9 +1,8 @@
 import * as three from 'three';
 import {Injectable} from '@angular/core';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThreeService {
   private importPromise: Promise<typeof three>;
@@ -11,8 +10,7 @@ export class ThreeService {
 
   async load(): Promise<typeof three> {
     if (!this.importPromise) {
-      this.importPromise = import(/* webpackChunkName: "three" */ 'three')
-        .then(module => this.three = module);
+      this.importPromise = import(/* webpackChunkName: "three" */ 'three').then(module => (this.three = module));
     }
 
     return this.importPromise;
@@ -47,5 +45,4 @@ export class ThreeService {
   get AnimationClip(): typeof three.AnimationClip {
     return this.three.AnimationClip;
   }
-
 }

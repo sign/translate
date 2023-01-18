@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+    <string name="app_name">sign</string>
+    <string name="title_activity_main">Sign Translate</string>
+    <string name="package_name">mt.sign.translate</string>
+    <string name="custom_url_scheme">mt.sign.translate</string>
+</resources>

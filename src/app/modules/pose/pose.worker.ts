@@ -10,11 +10,11 @@ let results: Observable<any>;
 
 async function loadModel(): Promise<void> {
   model = new Holistic({
-    locateFile: (file) => {
+    locateFile: file => {
       const f = new URL(`/assets/models/holistic/${file}`, globalThis.location.origin).toString();
       console.log('path', f);
       return f;
-    }
+    },
   });
 
   model.setOptions({modelComplexity: 1});
@@ -22,12 +22,12 @@ async function loadModel(): Promise<void> {
   console.log('Pose model loaded!');
 
   results = new Observable(subscriber => {
-    model.onResults((results) => {
+    model.onResults(results => {
       subscriber.next({
         faceLandmarks: results.faceLandmarks,
         poseLandmarks: results.poseLandmarks,
         leftHandLandmarks: results.leftHandLandmarks,
-        rightHandLandmarks: results.rightHandLandmarks
+        rightHandLandmarks: results.rightHandLandmarks,
       });
     });
   });
@@ -47,6 +47,5 @@ async function pose(imageBitmap: ImageBitmap | ImageData): Promise<any> {
   await model.send({image: imageBitmap as any});
   return result;
 }
-
 
 comlink.expose({loadModel, pose});

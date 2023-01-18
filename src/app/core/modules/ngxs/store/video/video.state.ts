@@ -1,11 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
+import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {filter, tap} from 'rxjs/operators';
-import {Observable} from 'rxjs';
 import {SetVideo, StartCamera, StopVideo} from './video.actions';
 import {SetSetting} from '../../../../../modules/settings/settings.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
-
 
 export type AspectRatio = '16-9' | '4-3' | '2-1' | '1-1';
 
@@ -33,20 +31,20 @@ const initialState: VideoStateModel = {
 @Injectable()
 @State<VideoStateModel>({
   name: 'video',
-  defaults: initialState
+  defaults: initialState,
 })
 export class VideoState implements NgxsOnInit {
+  receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);
 
-  @Select(state => state.settings.receiveVideo) receiveVideo$: Observable<boolean>;
-
-  constructor(private navigator: NavigatorService) {
-  }
+  constructor(private store: Store, private navigator: NavigatorService) {}
 
   ngxsOnInit({dispatch}: StateContext<VideoStateModel>): void {
-    this.receiveVideo$.pipe(
-      filter(state => !state),
-      tap(() => dispatch(StopVideo))
-    ).subscribe();
+    this.receiveVideo$
+      .pipe(
+        filter(state => !state),
+        tap(() => dispatch(StopVideo))
+      )
+      .subscribe();
   }
 
   @Action(StopVideo)
@@ -59,7 +57,7 @@ export class VideoState implements NgxsOnInit {
 
     patchState({
       ...initialState,
-      error: error || 'turnedOff'
+      error: error || 'turnedOff',
     });
   }
 
@@ -75,20 +73,19 @@ export class VideoState implements NgxsOnInit {
     try {
       const camera = await this.navigator.getCamera({
         facingMode: 'user',
+        aspectRatio: 1,
         width: {min: 1280},
-        height: {min: 720}
+        height: {min: 720},
+        frameRate: 120, // Used to minimize motion blur
       });
-      if (!camera) {
-        throw new Error('notConnected');
-      }
 
       const videoTrack = camera.getVideoTracks()[0];
       const trackSettings = videoTrack.getSettings();
       const videoSettings: VideoSettings = {
-        aspectRatio: this.aspectRatio(trackSettings.aspectRatio),
+        aspectRatio: VideoState.aspectRatio(trackSettings.aspectRatio),
         frameRate: trackSettings.frameRate,
         width: trackSettings.width,
-        height: trackSettings.height
+        height: trackSettings.height,
       };
       videoTrack.addEventListener('ended', turnOffVideo);
 
@@ -110,10 +107,10 @@ export class VideoState implements NgxsOnInit {
       const width = videoEl.videoWidth;
       const height = videoEl.videoHeight;
       const videoSettings: VideoSettings = {
-        aspectRatio: this.aspectRatio(width / height),
+        aspectRatio: VideoState.aspectRatio(width / height),
         frameRate: null,
         width,
-        height
+        height,
       };
 
       patchState({src, videoSettings, error: null});
@@ -122,7 +119,7 @@ export class VideoState implements NgxsOnInit {
     videoEl.src = src;
   }
 
-  private aspectRatio(ratio: number): AspectRatio {
+  static aspectRatio(ratio: number): AspectRatio {
     return ratio > 1.9 ? '2-1' : ratio < 1.5 ? (ratio < 1.1 ? '1-1' : '4-3') : '16-9';
   }
 }

@@ -1,13 +1,13 @@
 import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
-import {Select, Store} from '@ngxs/store';
-import {combineLatest, Observable} from 'rxjs';
-import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
+import {Store} from '@ngxs/store';
+import {combineLatest, firstValueFrom} from 'rxjs';
+import {VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../base/base.component';
 import {wait} from '../../core/helpers/wait/wait';
 import {PoseVideoFrame} from '../../modules/pose/pose.actions';
-import {Pose, PoseStateModel} from '../../modules/pose/pose.state';
+import {PoseStateModel} from '../../modules/pose/pose.state';
 import {PoseService} from '../../modules/pose/pose.service';
 import {SignWritingStateModel} from '../../modules/sign-writing/sign-writing.state';
 import {SettingsStateModel} from '../../modules/settings/settings.state';
@@ -16,16 +16,16 @@ import {SignWritingService} from '../../modules/sign-writing/sign-writing.servic
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
-  styleUrls: ['./video.component.scss']
+  styleUrls: ['./video.component.scss'],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
-  @Select(state => state.settings) settingsState$: Observable<SettingsStateModel>;
-  @Select(state => state.settings.animatePose) animatePose$: Observable<boolean>;
+  settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
+  animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
 
-  @Select(state => state.video) videoState$: Observable<VideoStateModel>;
-  @Select(state => state.pose) poseState$: Observable<PoseStateModel>;
-  @Select(state => state.signWriting) signWritingState$: Observable<SignWritingStateModel>;
-  @Select(state => state.detector.signingProbability) signingProbability$: Observable<number>;
+  videoState$ = this.store.select<VideoStateModel>(state => state.video);
+  poseState$ = this.store.select<PoseStateModel>(state => state.pose);
+  signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
+  signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
 
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
@@ -41,10 +41,12 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   fpsStats = new Stats();
   signingStats = new Stats();
 
-  constructor(private store: Store,
-              private poseService: PoseService,
-              private signWritingService: SignWritingService,
-              private elementRef: ElementRef) {
+  constructor(
+    private store: Store,
+    private poseService: PoseService,
+    private signWritingService: SignWritingService,
+    private elementRef: ElementRef
+  ) {
     super();
   }
 
@@ -71,7 +73,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
     let lastTime = null;
     while (true) {
-      if (video.readyState === 0) { // if video is no longer available
+      if (video.readyState === 0) {
+        // if video is no longer available
         break;
       }
 
@@ -80,7 +83,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         lastTime = video.currentTime;
 
         // Get pose estimation
-        await this.store.dispatch(poseAction).toPromise();
+        await firstValueFrom(this.store.dispatch(poseAction));
       }
 
       // TODO await videoframe if supported
@@ -92,55 +95,64 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   setCamera(): void {
     const video = this.videoEl.nativeElement;
     video.muted = true;
-    video.addEventListener('loadedmetadata', e => video.play());
+    video.addEventListener('loadedmetadata', () => video.play());
 
-    this.videoState$.pipe(
-      tap(({camera, src}) => {
-        // Either video feed or camera
-        video.src = src || '';
-        video.srcObject = camera;
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.videoState$
+      .pipe(
+        tap(({camera, src}) => {
+          // Either video feed or camera
+          video.src = src || '';
+          video.srcObject = camera;
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
-    this.videoState$.pipe(
-      map(state => state.videoSettings),
-      filter(Boolean),
-      tap(({width, height, aspectRatio}) => {
-        this.aspectRatio = 'aspect-' + aspectRatio;
+    this.videoState$
+      .pipe(
+        map(state => state.videoSettings),
+        filter(Boolean),
+        tap(({width, height, aspectRatio}) => {
+          this.aspectRatio = 'aspect-' + aspectRatio;
 
-        this.canvasEl.nativeElement.width = width;
-        this.canvasEl.nativeElement.height = height;
+          this.canvasEl.nativeElement.width = width;
+          this.canvasEl.nativeElement.height = height;
 
-        // It is required to wait for next frame, as grid element might still be resizing
-        requestAnimationFrame(this.scaleCanvas.bind(this));
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+          // It is required to wait for next frame, as grid element might still be resizing
+          requestAnimationFrame(this.scaleCanvas.bind(this));
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   scaleCanvas(): void {
-    window.requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
       // Zoom canvas to 100% width
       const bbox = this.elementRef.nativeElement.getBoundingClientRect();
-      const scale = bbox.width / this.canvasEl.nativeElement.width;
-      this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
+      const width = Math.min(bbox.width, document.documentElement.clientWidth);
+      const scale = width / this.canvasEl.nativeElement.width;
+      this.canvasEl.nativeElement.style.transform = `scale(-${scale}, ${scale})`;
 
       // Set parent element height
       this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';
+      // Set canvas parent element width
+      this.canvasEl.nativeElement.parentElement.style.width = width + 'px';
     });
   }
 
   trackPose(): void {
-    this.poseState$.pipe(
-      map(state => state.pose),
-      filter(Boolean),
-      tap((pose: Pose) => {
-        this.fpsStats.end(); // End previous frame time
-        this.fpsStats.begin(); // Start new frame time
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.poseState$
+      .pipe(
+        map(state => state.pose),
+        filter(Boolean),
+        tap(() => {
+          this.fpsStats.end(); // End previous frame time
+          this.fpsStats.begin(); // Start new frame time
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   preloadSignWritingFont(): void {
@@ -151,34 +163,35 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   drawChanges(): void {
     const ctx = this.canvasCtx;
     const canvas = ctx.canvas;
-    combineLatest([this.poseState$, this.signWritingState$, this.settingsState$]).pipe(
-      distinctUntilChanged((x, y) => x[1].timestamp === y[1].timestamp),
-      tap(([poseState, signWritingState, settingsState]) => {
-        if (poseState.pose) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
+    combineLatest([this.poseState$, this.signWritingState$, this.settingsState$])
+      .pipe(
+        distinctUntilChanged((x, y) => x[1].timestamp === y[1].timestamp),
+        tap(([poseState, signWritingState, settingsState]) => {
+          if (poseState.pose) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-          // Draw video
-          if (settingsState.drawVideo) {
-            ctx.drawImage(poseState.pose.image, 0, 0, canvas.width, canvas.height);
-          } else {
-            ctx.fillStyle = 'white';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // Draw video
+            if (settingsState.drawVideo) {
+              ctx.drawImage(poseState.pose.image, 0, 0, canvas.width, canvas.height);
+            } else {
+              ctx.fillStyle = 'white';
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
+            // Draw pose
+            if (settingsState.drawPose) {
+              this.poseService.draw(poseState.pose, ctx);
+            }
+
+            // Draw Sign Writing
+            if (settingsState.drawSignWriting) {
+              this.signWritingService.draw(signWritingState, ctx);
+            }
           }
-
-          // Draw pose
-          if (settingsState.drawPose) {
-            this.poseService.draw(poseState.pose, ctx);
-          }
-
-          // Draw Sign Writing
-          if (settingsState.drawSignWriting) {
-            this.signWritingService.draw(signWritingState, ctx);
-          }
-        }
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
-
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 
   setStats(): void {
@@ -205,19 +218,23 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   setDetectorListener(panel: Stats.Panel): void {
     // Update panel value
-    this.signingProbability$.pipe(
-      tap(v => panel.update(v * 100, 100)),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.signingProbability$
+      .pipe(
+        tap(v => panel.update(v * 100, 100)),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
     // Show hide panel
-    this.settingsState$.pipe(
-      map(settings => settings.detectSign),
-      distinctUntilChanged(),
-      tap(detectSign => {
-        this.signingStats.domElement.style.display = detectSign ? 'block' : 'none';
-      }),
-      takeUntil(this.ngUnsubscribe)
-    ).subscribe();
+    this.settingsState$
+      .pipe(
+        map(settings => settings.detectSign),
+        distinctUntilChanged(),
+        tap(detectSign => {
+          this.signingStats.domElement.style.display = detectSign ? 'block' : 'none';
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
   }
 }

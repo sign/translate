@@ -17,12 +17,10 @@ export interface BodyStateModel {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BodyService {
-
-  constructor(private three: ThreeService) {
-  }
+  constructor(private three: ThreeService) {}
 
   shoulders(landmarks: PoseLandmark[]): BodyShoulders {
     const p1 = landmarks[POSE_LANDMARKS.LEFT_SHOULDER];
@@ -30,7 +28,7 @@ export class BodyService {
 
     return {
       center: new this.three.Vector2((p1.x + p2.x) / 2, (p1.y + p2.y) / 2),
-      width: Math.abs(p1.x - p2.x)
+      width: Math.abs(p1.x - p2.x),
     };
   }
 
@@ -56,10 +54,10 @@ export class BodyService {
   }
 
   drawArms(body: BodyStateModel, ctx: CanvasRenderingContext2D): void {
-    ctx.lineWidth = body.shoulders.width * ctx.canvas.width / 50;
+    ctx.lineWidth = (body.shoulders.width * ctx.canvas.width) / 50;
     const shoulders = [
       {x: body.shoulders.center.x + 0.45 * body.shoulders.width, y: body.shoulders.center.y},
-      {x: body.shoulders.center.x - 0.45 * body.shoulders.width, y: body.shoulders.center.y}
+      {x: body.shoulders.center.x - 0.45 * body.shoulders.width, y: body.shoulders.center.y},
     ] as PoseLandmark[];
     this.drawArm(shoulders[0], body.elbows[0], body.wrists[0], ctx);
     this.drawArm(shoulders[1], body.elbows[1], body.wrists[1], ctx);

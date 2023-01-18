@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Ez da orria aurkitu",
+    "doesNotExist": "Barkatu, bilatzen ari zaren orria ez da existitzen.",
+    "errorLogged": "Errorea erregistratu dugu eta aztertuko dugu.",
+    "goHome": "Joan Hasierara"
+  },
+  "keyboard": {
+    "ctrl": "Ktrl",
+    "shift": "Maius"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Hauteman hizkuntza",
+      "more": "Hizkuntza gehiago"
+    },
+    "input": {
+      "text": "Testuak",
+      "webcam": "Webkamera",
+      "upload": "Kargatu"
+    },
+    "swapLanguages": "Aldatu hizkuntzak",
+    "upload": {
+      "types": "Kargatu .mp4, .ogv edo .webm formatuko fitxategi bat.",
+      "browse": "Arakatu ordenagailua",
+      "title": "Aukeratu bideo bat"
+    },
+    "description": "Norabide biko zeinu hizkuntza anitzeko itzulpen aplikazioa mahaigainerako eta mugikorretarako",
+    "spoken-to-signed": {
+      "text": "Ahozko Hizkuntza Testua",
+      "actions": {
+        "download": "Deskargatu Itzulpena",
+        "copy": "Kopiatu Itzulpena",
+        "share": "Partekatu itzulpena"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Giza bideo eredua kargatzen",
+          "generating": "Bideoa sortzea"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "PROBATU TRANSLATE",
+    "about": {
+      "title": "Honi buruz",
+      "hero": {
+        "title": "Itzuli sinatutako eta ahozko 40 hizkuntza baino gehiago denbora errealean.",
+        "img": "Amerikako zeinu hizkuntzaren eta ingelesaren arteko zuzeneko itzulpenaren adibidea"
+      },
+      "direction": {
+        "spoken-to-signed": "Itzuli ahozko hizkuntzetatik zeinu hizkuntzetara",
+        "signed-to-spoken": "Edo zeinudunetatik ahozko hizkuntzetara"
+      }
+    },
+    "languages": {
+      "title": "Hizkuntzak"
+    },
+    "contribute": {
+      "title": "Egin ekarpena"
+    },
+    "tools": {
+      "title": "Tresnak"
+    },
+    "nav": {
+      "pages": "Nabigatu beste orrietara",
+      "legal": "Nabigatu legezko orrietara"
+    }
+  },
+  "text-to-speech": {
+    "play": "Entzun",
+    "cancel": "Gelditu",
+    "unavailable": "Ahots-irteera ez dago erabilgarri hautatutako hizkuntzarako"
+  },
+  "speech-to-text": {
+    "start": "Itzuli ahotsaren bidez",
+    "stop": "Gelditu ahots bidezko itzulpena",
+    "not-allowed": "Mikrofonoa erabiltzeko baimena behar da",
+    "language-not-supported": "Hautatutako hizkuntza ez da onartzen",
+    "browser-not-supported": "Arakatzaile honetan ez da ahots bidezko idazketa onartzen",
+    "service-not-allowed": "Ahots-ezagutza erabiltzeko baimena behar da"
+  },
+  "legal": {
+    "terms": {
+      "title": "Baldintzak"
+    },
+    "privacy": {
+      "title": "Pribatutasuna"
+    },
+    "licenses": {
+      "title": "Softwarea eta lizentziak"
+    }
+  },
+  "playground": {
+    "title": "Zeinu Hizkuntza Prozesatzeko Jolastokia"
+  },
+  "benchmark": {
+    "title": "Erreferentzia",
+    "stats": {
+      "cld": {
+        "title": "Ahozko hizkuntzaren identifikazioa",
+        "import": "Inportazio modulua",
+        "load": "Karga eredua",
+        "find": "Testua identifikatzea",
+        "create": "Sortu"
+      },
+      "pix2pix": {
+        "title": "Giza jarreraren ikuslea",
+        "init": "Langilea Init",
+        "load": "Karga eredua",
+        "first-frame": "Lehenengo fotograma inferentzia",
+        "frame": "Frame Inferentzia"
+      },
+      "pose": {
+        "title": "Gorputz osoko jarreraren estimazioa",
+        "load": "Ereduaren Karga",
+        "first-frame": "Lehenengo fotograma inferentzia",
+        "frame": "Frame Inferentzia"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera martxan",
+      "turnedOff": "Kamera itzalita",
+      "notConnected": "Kamera ez dago konektatuta",
+      "permissionDenied": "Kameraren baimena ukatu da"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Itzali kamera",
+        "off": "Aktibatu kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Poseen estimazioa kargatzen..."
+  },
+  "language-selector": {
+    "label": "Aldatu hizkuntza edo eskualdea"
+  },
+  "settings": {
+    "detectSign": "Detektatu seinalea",
+    "drawVideo": "Marraztu Bideoa",
+    "drawPose": "Marraztu Pose",
+    "drawSignWriting": "Marraztu zeinu idazkera",
+    "animatePose": "Animatu Pose",
+    "poseViewer": {
+      "pose": "Hezurdura",
+      "avatar": "Avatarra",
+      "human": "Gizakia"
+    },
+    "title": "Ezarpenak",
+    "close": "Itxi ezarpenak",
+    "support": {
+      "title": "Laguntza",
+      "feedback": {
+        "title": "Iritzia",
+        "send": "Bidali iritzia"
+      },
+      "about": {
+        "title": "Buruz"
+      }
+    },
+    "voice": {
+      "title": "Ahotsa",
+      "input": {
+        "title": "Sarrera"
+      },
+      "output": {
+        "title": "Irteera"
+      }
+    },
+    "other": {
+      "title": "Bestela",
+      "offline": {
+        "title": "Lineaz kanpo",
+        "files": {
+          "pix2pixGenerator": "Giza sorgailu foto-errealista",
+          "pix2pixUpscaler": "Foto-errealista giza upscaler",
+          "avatarGlb": "3D avatarra",
+          "avatarUsdz": "3D Avatar ARrako iOS-n",
+          "translation": "Itzulpena",
+          "translation.spokenToSigned": "Ahozkoa-Sinatua",
+          "translation.signedToSpoken": "Ahozko sinatuta"
+        },
+        "actions": {
+          "toggle": "Aldatu {{label}}",
+          "download": "Deskargatu lineaz kanpoko eredua",
+          "delete": "Garbitu lineaz kanpoko ereduaren cachea",
+          "reDownload": "Deskargatu berriro lineaz kanpoko eredua"
+        }
+      },
+      "appearance": {
+        "title": "Itxura",
+        "action": "Aldatu itxura",
+        "random": "Lortu ausaz argazki bat",
+        "upload": "Kargatu zure argazkia"
+      }
+    }
+  },
+  "countries.isl": "Nazioartekoa",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Denak",
+  "countries.signed": "Denak"
+}

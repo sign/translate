@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "sayfa bulunamadı",
+    "doesNotExist": "Üzgünüz, aradığınız sayfa mevcut değil.",
+    "errorLogged": "Hatayı kaydettik ve inceleyeceğiz.",
+    "goHome": "Eve gitmek"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Üst Karakter"
+  },
+  "translate": {
+    "title": "Sign Çeviri",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Dili algıla",
+      "more": "Diğer Diller"
+    },
+    "input": {
+      "text": "Metin",
+      "webcam": "Web kamerası",
+      "upload": "Yüklemek"
+    },
+    "swapLanguages": "Dil değiştir",
+    "upload": {
+      "types": ".mp4, .ogv veya .webm dosyası yükleyin.",
+      "browse": "Bilgisayarınıza göz atın",
+      "title": "Bir video seçin"
+    },
+    "description": "Masaüstü ve mobil cihazlar için çift yönlü çok dilli işaret dili çeviri uygulaması",
+    "spoken-to-signed": {
+      "text": "Konuşulan Dil Metni",
+      "actions": {
+        "download": "Çeviriyi İndir",
+        "copy": "Çeviriyi Kopyala",
+        "share": "Çeviriyi Paylaş"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "İnsan video modeli yükleniyor",
+          "generating": "Video oluşturuluyor"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ÇEVİRİ'Yİ DENEYİN",
+    "about": {
+      "title": "Hakkında",
+      "hero": {
+        "title": "40'tan fazla işaretli ve konuşulan dil arasında gerçek zamanlı çeviri yapın.",
+        "img": "Amerikan İşaret Dili ile İngilizce arasındaki canlı çeviri örneği"
+      },
+      "direction": {
+        "spoken-to-signed": "Konuşulan dillerden işaretli dillere çeviri yapın",
+        "signed-to-spoken": "Veya işaretli dillerden konuşulan dillere"
+      }
+    },
+    "languages": {
+      "title": "Diller"
+    },
+    "contribute": {
+      "title": "Katkıda Bulunun"
+    },
+    "tools": {
+      "title": "Araçlar"
+    },
+    "nav": {
+      "pages": "Diğer sayfalara gidin",
+      "legal": "Yasal sayfalara gidin"
+    }
+  },
+  "text-to-speech": {
+    "play": "Dinleyin",
+    "cancel": "Durmak",
+    "unavailable": "Seçilen dil için ses çıkışı mevcut değil"
+  },
+  "speech-to-text": {
+    "start": "Sesle çeviri",
+    "stop": "Sesle çeviriyi durdur",
+    "not-allowed": "Mikrofon kullanmak için izne ihtiyacınız var",
+    "language-not-supported": "Seçilen dil desteklenmiyor",
+    "browser-not-supported": "Bu tarayıcıda ses girişi desteklenmiyor",
+    "service-not-allowed": "Konuşma tanımayı kullanmak için izne ihtiyacınız var"
+  },
+  "legal": {
+    "terms": {
+      "title": "Şartlar"
+    },
+    "privacy": {
+      "title": "Gizlilik"
+    },
+    "licenses": {
+      "title": "Yazılım ve Lisanslar"
+    }
+  },
+  "playground": {
+    "title": "İşaret Dili İşleme Oyun Alanı"
+  },
+  "benchmark": {
+    "title": "Kalite testi",
+    "stats": {
+      "cld": {
+        "title": "Konuşulan Dil Tanımlama",
+        "import": "İçe Aktarma Modülü",
+        "load": "Yük Modeli",
+        "find": "Metni Tanımla",
+        "create": "Oluşturmak"
+      },
+      "pix2pix": {
+        "title": "İnsan Poz Görüntüleyici",
+        "init": "Çalışan Başlatma",
+        "load": "Yük Modeli",
+        "first-frame": "İlk Çerçeve Çıkarımı",
+        "frame": "Çerçeve Çıkarımı"
+      },
+      "pose": {
+        "title": "Tam Vücut Poz Tahmini",
+        "load": "Model Yükü",
+        "first-frame": "İlk Çerçeve Çıkarımı",
+        "frame": "Çerçeve Çıkarımı"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera başlatılıyor",
+      "turnedOff": "Kamera kapandı",
+      "notConnected": "Kamera bağlı değil",
+      "permissionDenied": "Kamera izni reddedildi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "kamerayı kapat",
+        "off": "Kamera açın"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Poz Tahmini Yükleniyor..."
+  },
+  "language-selector": {
+    "label": "Dili veya bölgeyi değiştir"
+  },
+  "settings": {
+    "detectSign": "İşareti Algıla",
+    "drawVideo": "Videoyu Çiz",
+    "drawPose": "Poz çiz",
+    "drawSignWriting": "İşaret Yazısı çiz",
+    "animatePose": "Hareketli Poz",
+    "poseViewer": {
+      "pose": "iskelet",
+      "avatar": "avatar",
+      "human": "İnsan"
+    },
+    "title": "Ayarlar",
+    "close": "Ayarları kapat",
+    "support": {
+      "title": "Destek",
+      "feedback": {
+        "title": "Geri bildirim",
+        "send": "Geribildirim yolla"
+      },
+      "about": {
+        "title": "Hakkında"
+      }
+    },
+    "voice": {
+      "title": "Ses",
+      "input": {
+        "title": "Giriş"
+      },
+      "output": {
+        "title": "Çıktı"
+      }
+    },
+    "other": {
+      "title": "Başka",
+      "offline": {
+        "title": "Çevrimdışı",
+        "files": {
+          "pix2pixGenerator": "Foto-gerçekçi insan üreteci",
+          "pix2pixUpscaler": "Foto-gerçekçi insan ölçekleyici",
+          "avatarGlb": "3D avatar",
+          "avatarUsdz": "iOS'ta AR için 3D Avatar",
+          "translation": "Tercüme",
+          "translation.spokenToSigned": "Konuşulana İmzalı",
+          "translation.signedToSpoken": "İmzalı Konuşulan"
+        },
+        "actions": {
+          "toggle": "{{etiket}} arasında geçiş yap",
+          "download": "Çevrimdışı Modeli İndir",
+          "delete": "Çevrimdışı Model Önbelleğini Temizle",
+          "reDownload": "Çevrimdışı Modeli Yeniden İndir"
+        }
+      },
+      "appearance": {
+        "title": "Dış görünüş",
+        "action": "Görünümü değiştir",
+        "random": "Rastgele bir fotoğraf çekin",
+        "upload": "Kendi fotoğrafınızı yükleyin"
+      }
+    }
+  },
+  "countries.isl": "Uluslararası",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Herşey",
+  "countries.signed": "Herşey"
+}

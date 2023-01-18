@@ -1,4 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SignedToSpokenComponent} from './signed-to-spoken.component';
 import {NgxsModule} from '@ngxs/store';
@@ -8,6 +9,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('SignedToSpokenComponent', () => {
   let component: SignedToSpokenComponent;
@@ -15,14 +17,9 @@ describe('SignedToSpokenComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        SignedToSpokenComponent,
-        TextToSpeechComponent
-      ],
-      imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig)
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      declarations: [SignedToSpokenComponent, TextToSpeechComponent],
+      imports: [NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig), HttpClientModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
@@ -34,5 +31,11 @@ describe('SignedToSpokenComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 });

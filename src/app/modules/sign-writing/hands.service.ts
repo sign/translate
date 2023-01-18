@@ -6,7 +6,7 @@ import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Tensor} from '@tensorflow/tfjs';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
 import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
-import {TensorflowService} from '../../core/services/tfjs.service';
+import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
 
 export type HandPlane = 'wall' | 'floor';
@@ -22,17 +22,18 @@ export interface HandStateModel {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HandsService {
-
   // Need two models because they are stateful
   leftHandSequentialModel: LayersModel;
   rightHandSequentialModel: LayersModel;
 
-  constructor(private poseNormalization: PoseNormalizationService, public tf: TensorflowService, public three: ThreeService) {
-  }
-
+  constructor(
+    private poseNormalization: PoseNormalizationService,
+    private tf: TensorflowService,
+    private three: ThreeService
+  ) {}
 
   async loadModel(): Promise<void> {
     await Promise.all([this.tf.load(), this.three.load()]);
@@ -51,7 +52,7 @@ export class HandsService {
   shape(vectors: Vector3[], normal: PlaneNormal, isLeft: boolean): string {
     const model = isLeft ? this.leftHandSequentialModel : this.rightHandSequentialModel;
     if (!model) {
-      return '񆄡'; // By default just fist shape
+      return '񆄡'; // By default, just fist shape
     }
 
     const hsIndex = this.tf.tidy(() => {
@@ -108,7 +109,7 @@ export class HandsService {
   }
 
   direction(plane: HandPlane, normal: PlaneNormal, flipAxis: boolean): HandDirection {
-    const x = flipAxis ? normal.direction.x : -normal.direction.x; // For right hand, flip the x axis
+    const x = flipAxis ? normal.direction.x : -normal.direction.x; // For right hand, flip the x-axis
 
     // TODO subtract chest normal from hand normal, to allow for body rotation
 
@@ -116,7 +117,8 @@ export class HandsService {
       case 'wall':
         const xzAngle = this.poseNormalization.angle(normal.direction.z, x);
 
-        if (xzAngle > 210) { // 180 degrees + 30 safety
+        if (xzAngle > 210) {
+          // 180 degrees + 30 safety
           return 'me';
         }
 
@@ -161,7 +163,10 @@ export class HandsService {
   drawNormal(normal: PlaneNormal, ctx: CanvasRenderingContext2D): void {
     const dimensions = new this.three.Vector3(ctx.canvas.width, ctx.canvas.height, ctx.canvas.width);
 
-    const scaledNormal = new this.three.Vector3().multiplyVectors(dimensions, normal.direction).normalize().multiplyScalar(100);
+    const scaledNormal = new this.three.Vector3()
+      .multiplyVectors(dimensions, normal.direction)
+      .normalize()
+      .multiplyScalar(100);
 
     const center = new this.three.Vector3().multiplyVectors(dimensions, normal.center);
 
@@ -186,7 +191,8 @@ export class HandsService {
     // Rotation
     char += isLeft ? (8 - hand.rotation) % 8 : hand.rotation;
 
-    if (isHeelView) {  // Heel view only has "side" shift
+    if (isHeelView) {
+      // Heel view only has "side" shift
       char += 0x10;
     } else {
       if (hand.plane === 'floor') {
@@ -197,14 +203,16 @@ export class HandsService {
       const shifts = {
         you: 0,
         side: 0x10,
-        me: 0x20
+        me: 0x20,
       };
       char += shifts[hand.direction];
     }
 
     const text = String.fromCodePoint(char);
-    const center = new this.three.Vector2((hand.bbox.min.x + hand.bbox.max.x) / (2 * ctx.canvas.width),
-      (hand.bbox.min.y + hand.bbox.max.y) / (2 * ctx.canvas.height));
+    const center = new this.three.Vector2(
+      (hand.bbox.min.x + hand.bbox.max.x) / (2 * ctx.canvas.width),
+      (hand.bbox.min.y + hand.bbox.max.y) / (2 * ctx.canvas.height)
+    );
 
     // Font should be same size for all shapes, where flat hand is 1/3 of shoulders width
     const fontSize = SignWritingService.textFontSize('񂇁', shouldersWidth / 3, ctx);

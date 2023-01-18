@@ -4,16 +4,13 @@
     "outDir": "./out-tsc/app",
     "types": [
       "@types/dom-speech-recognition",
+      "@types/emscripten",
       "@types/node",
-      "@types/offscreencanvas"
+      "@types/offscreencanvas",
+      "@types/dom-mediacapture-transform",
+      "@types/long"
     ]
   },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts",
-    "node_modules/@types/chrome/index.d.ts"
-  ]
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts", "node_modules/@types/chrome/index.d.ts"]
 }

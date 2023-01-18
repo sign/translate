@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "páxina non atopada",
+    "doesNotExist": "Sentímolo, a páxina que buscabas non existe.",
+    "errorLogged": "Rexistramos o erro e investigarémolo.",
+    "goHome": "Ir a Inicio"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Maiús"
+  },
+  "translate": {
+    "title": "Tradutor de Sign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Detectar idioma",
+      "more": "Máis Idiomas"
+    },
+    "input": {
+      "text": "Texto",
+      "webcam": "Cámara web",
+      "upload": "Cargar"
+    },
+    "swapLanguages": "Intercambiar idiomas",
+    "upload": {
+      "types": "Carga un ficheiro .mp4, .ogv ou .webm.",
+      "browse": "Buscar no ordenador",
+      "title": "Escolle un vídeo"
+    },
+    "description": "Unha aplicación de tradución multilingüe bidireccional en lingua de signos para escritorio e móbil",
+    "spoken-to-signed": {
+      "text": "Texto da lingua falada",
+      "actions": {
+        "download": "Descargar Tradución",
+        "copy": "Copiar a tradución",
+        "share": "Compartir tradución"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Cargando modelo de vídeo humano",
+          "generating": "Xerando vídeo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "PROBA O TRADUTOR",
+    "about": {
+      "title": "Acerca de",
+      "hero": {
+        "title": "Traduce entre máis de 40 idiomas falados e de signos en tempo real.",
+        "img": "Exemplo de tradución en directo entre a lingua de signos americana e o inglés"
+      },
+      "direction": {
+        "spoken-to-signed": "Traducir de linguas faladas a linguas de signos",
+        "signed-to-spoken": "Ou de linguas de signos a faladas"
+      }
+    },
+    "languages": {
+      "title": "Idiomas"
+    },
+    "contribute": {
+      "title": "Contribuír"
+    },
+    "tools": {
+      "title": "Ferramentas"
+    },
+    "nav": {
+      "pages": "Navega a outras páxinas",
+      "legal": "Navega ás páxinas legais"
+    }
+  },
+  "text-to-speech": {
+    "play": "Escoitar",
+    "cancel": "Pare",
+    "unavailable": "A saída de voz non está dispoñible para o idioma seleccionado"
+  },
+  "speech-to-text": {
+    "start": "Traducir por voz",
+    "stop": "Detén a tradución por voz",
+    "not-allowed": "Necesita permiso para usar o micrófono",
+    "language-not-supported": "Non se admite o idioma seleccionado",
+    "browser-not-supported": "Este navegador non admite a entrada de voz",
+    "service-not-allowed": "Necesita permiso para usar o recoñecemento de voz"
+  },
+  "legal": {
+    "terms": {
+      "title": "Condicións"
+    },
+    "privacy": {
+      "title": "Privacidade"
+    },
+    "licenses": {
+      "title": "Software e licenzas"
+    }
+  },
+  "playground": {
+    "title": "Patio de procesamento da lingua de signos"
+  },
+  "benchmark": {
+    "title": "Referencia",
+    "stats": {
+      "cld": {
+        "title": "Identificación da lingua falada",
+        "import": "Módulo de importación",
+        "load": "Modelo de carga",
+        "find": "Identificar o texto",
+        "create": "Crear"
+      },
+      "pix2pix": {
+        "title": "Visor de pose humana",
+        "init": "Init obreiro",
+        "load": "Modelo de carga",
+        "first-frame": "Inferencia do primeiro cadro",
+        "frame": "Inferencia de marco"
+      },
+      "pose": {
+        "title": "Estimación da postura do corpo enteiro",
+        "load": "Carga do modelo",
+        "first-frame": "Inferencia do primeiro cadro",
+        "frame": "Inferencia de marco"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Inicio da cámara",
+      "turnedOff": "Cámara apagada",
+      "notConnected": "Cámara non conectada",
+      "permissionDenied": "Permiso da cámara denegado"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Apague a cámara",
+        "off": "Acende a cámara"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Cargando estimación de pose..."
+  },
+  "language-selector": {
+    "label": "Cambiar idioma ou rexión"
+  },
+  "settings": {
+    "detectSign": "Detectar signo",
+    "drawVideo": "Vídeo de debuxo",
+    "drawPose": "Debuxar Pose",
+    "drawSignWriting": "Debuxa a escritura de signos",
+    "animatePose": "Animar Pose",
+    "poseViewer": {
+      "pose": "Esqueleto",
+      "avatar": "Avatar",
+      "human": "Humano"
+    },
+    "title": "Configuración",
+    "close": "Pecha a configuración",
+    "support": {
+      "title": "Apoiar",
+      "feedback": {
+        "title": "Comentarios",
+        "send": "Enviar comentarios"
+      },
+      "about": {
+        "title": "Sobre"
+      }
+    },
+    "voice": {
+      "title": "Voz",
+      "input": {
+        "title": "Entrada"
+      },
+      "output": {
+        "title": "Saída"
+      }
+    },
+    "other": {
+      "title": "Outra",
+      "offline": {
+        "title": "Sen conexión",
+        "files": {
+          "pix2pixGenerator": "Xerador humano fotorrealista",
+          "pix2pixUpscaler": "Escalador humano fotorrealista",
+          "avatarGlb": "Avatar 3D",
+          "avatarUsdz": "Avatar 3D para AR en iOS",
+          "translation": "Tradución",
+          "translation.spokenToSigned": "Falado para asinado",
+          "translation.signedToSpoken": "Asinado para falar"
+        },
+        "actions": {
+          "toggle": "Alternar {{label}}",
+          "download": "Descargar modelo offline",
+          "delete": "Limpar a caché de modelos sen conexión",
+          "reDownload": "Volve descargar o modelo sen conexión"
+        }
+      },
+      "appearance": {
+        "title": "Aparición",
+        "action": "Modificar a aparencia",
+        "random": "Obtén unha foto aleatoria",
+        "upload": "Carga a túa propia foto"
+      }
+    }
+  },
+  "countries.isl": "Internacional",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Todos",
+  "countries.signed": "Todos"
+}

@@ -1,12 +1,22 @@
 {
-  "name": "Sign Translate",
+  "name": "sign",
   "short_name": "Sign Translate",
   "scope": "/",
   "id": "sign.mt",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
   "theme_color": "#3F51B5",
+  "background_color": "#FFF",
+  "user_preferences": {
+    "color_scheme_dark": {
+      "theme_color": "#3F51B5",
+      "background_color": "#000"
+    },
+    "color_scheme_light": {
+      "theme_color": "#3F51B5",
+      "background_color": "#FFF"
+    }
+  },
   "icons": [
     {
       "src": "assets/icons/generated/manifest-icon-192.png",
@@ -22,11 +32,21 @@
     }
   ],
   "protocol_handlers": [
-      {
-        "protocol": "web+sign",
-        "url": "/?text=%s"
-      }
-    ],
+    {
+      "protocol": "web+sign",
+      "url": "/?text=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "application/*": [".pose"]
+      },
+      "icons": [],
+      "launch_type": "multiple-clients"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Translate sign language",

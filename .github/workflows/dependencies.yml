@@ -1,0 +1,30 @@
+name: 'Dependencies'
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Every Sunday at midnight
+  workflow_dispatch:
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Install NCU
+        run: npm install -g npm-check-updates
+
+      - name: Update dependencies
+        run: chmod +x update-dependencies.sh && ./update-dependencies.sh
+
+      - uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          title: 'chore(dependencies): update all dependencies to latest'
+          body: 'This is an automatic dependencies update. All dependencies are updated to the latest version. If all checks pass, feel free to merge it.'
+          branch: 'dependencies-update'
+          commit-message: 'chore(dependencies): update all dependencies to latest'
+          author: 'Amit Moryossef <amitmoryossef@gmail.com>'
+          auto-merge: squash

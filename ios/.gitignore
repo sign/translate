@@ -1,0 +1,26 @@
+App/build
+App/Pods
+App/Podfile.lock
+App/App/public
+DerivedData
+xcuserdata
+
+# Cordova plugins for Capacitor
+capacitor-cordova-ios-plugins
+App/App/capacitor.config.json
+
+
+# Screenshots
+App/fastlane/screenshots/**/*.png
+!App/fastlane/screenshots/**/*_framed.png
+App/fastlane/Preview.html
+App/fastlane/report.xml
+App/fastlane/screenshots/background.jpeg
+App/fastlane/screenshots/Framefile.json
+
+# Env
+App/fastlane/.env.default
+
+# Build files
+App/*.ipa
+App/*.dSYM.zip

@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Paj la pa jwenn",
+    "doesNotExist": "Padon, paj ou t'ap chache a pa egziste.",
+    "errorLogged": "Nou te konekte erè a epi nou pral gade nan li.",
+    "goHome": "Ale nan Kay"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Detekte lang",
+      "more": "Plis Lang"
+    },
+    "input": {
+      "text": "Tèks",
+      "webcam": "Webcam",
+      "upload": "Telechaje"
+    },
+    "swapLanguages": "Boukante lang yo",
+    "upload": {
+      "types": "Òplod yon .mp4, .ogv, oswa .webm",
+      "browse": "Navige sou òdinatè w lan",
+      "title": "Chwazi yon videyo"
+    },
+    "description": "Yon aplikasyon tradiksyon lang siy bi-direksyon miltiling pou Desktop ak mobil",
+    "spoken-to-signed": {
+      "text": "Tèks langaj pale",
+      "actions": {
+        "download": "Telechaje Tradiksyon",
+        "copy": "Kopi Tradiksyon",
+        "share": "Pataje tradiksyon"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Chaje modèl videyo imen",
+          "generating": "Jenere videyo"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "ESEYE TRANSLATE",
+    "about": {
+      "title": "Konsènan",
+      "hero": {
+        "title": "Tradwi ant plis pase 40 lang ki pale ak siyen an tan reyèl.",
+        "img": "Egzanp tradiksyon an dirèk ant Lang siy Ameriken ak Angle"
+      },
+      "direction": {
+        "spoken-to-signed": "Tradui soti nan lang pale ak siyen",
+        "signed-to-spoken": "Oswa soti nan lang siyen yo pale"
+      }
+    },
+    "languages": {
+      "title": "Langaj"
+    },
+    "contribute": {
+      "title": "Kontribye"
+    },
+    "tools": {
+      "title": "Zouti yo"
+    },
+    "nav": {
+      "pages": "Navige nan lòt paj",
+      "legal": "Navige nan paj legal yo"
+    }
+  },
+  "text-to-speech": {
+    "play": "Tande",
+    "cancel": "Sispann",
+    "unavailable": "Pwodiksyon vwa pa disponib pou lang ou chwazi a"
+  },
+  "speech-to-text": {
+    "start": "Tradiksyon vokal",
+    "stop": "Sispann tradiksyon pa vwa",
+    "not-allowed": "Bezwen pèmisyon pou itilize mikwofòn",
+    "language-not-supported": "Lang chwazi pa sipòte",
+    "browser-not-supported": "Antre vwa pa sipòte sou navigatè sa a",
+    "service-not-allowed": "Bezwen pèmisyon pou itilize rekonesans lapawòl"
+  },
+  "legal": {
+    "terms": {
+      "title": "Tèm"
+    },
+    "privacy": {
+      "title": "Pèsonèl"
+    },
+    "licenses": {
+      "title": "Lojisyèl ak Lisans yo"
+    }
+  },
+  "playground": {
+    "title": "Lakou rekreyasyon pou trete lang siy"
+  },
+  "benchmark": {
+    "title": "Referans",
+    "stats": {
+      "cld": {
+        "title": "Idantifikasyon lang ki pale",
+        "import": "Enpòte Modil",
+        "load": "Chaj modèl",
+        "find": "Idantifye tèks",
+        "create": "Kreye"
+      },
+      "pix2pix": {
+        "title": "Moun Poz Viewer",
+        "init": "Travayè Init",
+        "load": "Chaj modèl",
+        "first-frame": "Premye Enferans ankadreman",
+        "frame": "Enferans ankadreman"
+      },
+      "pose": {
+        "title": "Estimasyon plen kò poze",
+        "load": "Modèl chaj",
+        "first-frame": "Premye Enferans ankadreman",
+        "frame": "Enferans ankadreman"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Kamera kòmanse",
+      "turnedOff": "Kamera etenn",
+      "notConnected": "Kamera pa konekte",
+      "permissionDenied": "Pèmisyon kamera refize"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Etenn kamera",
+        "off": "Limen kamera"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Chaje estimasyon poze..."
+  },
+  "language-selector": {
+    "label": "Chanje lang oswa rejyon an"
+  },
+  "settings": {
+    "detectSign": "Detekte siy",
+    "drawVideo": "Trase Videyo",
+    "drawPose": "Trase poze",
+    "drawSignWriting": "Trase ekriti siy",
+    "animatePose": "Anime poze",
+    "poseViewer": {
+      "pose": "Kilè eskèlèt",
+      "avatar": "Avatar",
+      "human": "Moun"
+    },
+    "title": "Anviwònman",
+    "close": "Fèmen anviwònman yo",
+    "support": {
+      "title": "Sipò",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Voye fidbak"
+      },
+      "about": {
+        "title": "Konsènan"
+      }
+    },
+    "voice": {
+      "title": "Vwa",
+      "input": {
+        "title": "Antre"
+      },
+      "output": {
+        "title": "Sòti"
+      }
+    },
+    "other": {
+      "title": "Lòt",
+      "offline": {
+        "title": "Offline",
+        "files": {
+          "pix2pixGenerator": "Foto-reyalis dèlko imen",
+          "pix2pixUpscaler": "Photo-reyalis moun upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar pou AR sou iOS",
+          "translation": "Tradiksyon",
+          "translation.spokenToSigned": "Pale-a-siyen",
+          "translation.signedToSpoken": "Siyen-pou-pale"
+        },
+        "actions": {
+          "toggle": "Aktivite {{label}}",
+          "download": "Telechaje Offline Modèl",
+          "delete": "Purge Offline Modèl Cache",
+          "reDownload": "Re-Telechaje Offline Modèl"
+        }
+      },
+      "appearance": {
+        "title": "Aparans",
+        "action": "Modifye aparans",
+        "random": "Jwenn yon foto o aza",
+        "upload": "Voye foto pwòp ou a"
+      }
+    }
+  },
+  "countries.isl": "Entènasyonal",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Tout",
+  "countries.signed": "Tout"
+}

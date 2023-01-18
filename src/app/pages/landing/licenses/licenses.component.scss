@@ -1,0 +1,16 @@
+:host {
+  max-width: 960px;
+  display: block;
+  margin: 8px auto;
+}
+
+mat-tree-node {
+  :nth-child(2) {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  margin-right: 40px;
+}

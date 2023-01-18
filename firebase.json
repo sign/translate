@@ -1,0 +1,108 @@
+{
+  "functions": {
+    "predeploy": ["cd functions && npm run build"],
+    "source": "functions"
+  },
+  "emulators": {
+    "firestore": {
+      "port": 4010
+    },
+    "database": {
+      "port": 4011
+    },
+    "storage": {
+      "port": 4012
+    },
+    "functions": {
+      "port": 4013
+    },
+    "eventarc": {
+      "port": 4014
+    },
+    "hosting": {
+      "port": 4015
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "storage": {
+    "rules": "functions/storage.rules"
+  },
+  "hosting": {
+    "target": "translate",
+    "public": "dist/sign-translate/browser",
+    "ignore": [],
+    "headers": [
+      {
+        "source": "/ngsw-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|ttf|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin"
+          },
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "require-corp"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/opensearch.xml",
+        "function": "translate-prerender"
+      },
+      {
+        "source": "/api/**",
+        "function": "translate-textToText"
+      },
+      {
+        "source": "/robots.txt",
+        "destination": "/assets/robots.txt"
+      },
+      {
+        "source": "about",
+        "destination": "about/index.html"
+      },
+      {
+        "source": "about/about",
+        "destination": "about/about/index.html"
+      },
+      {
+        "source": "about/contribute",
+        "destination": "about/contribute/index.html"
+      },
+      {
+        "source": "about/languages",
+        "destination": "about/languages/index.html"
+      },
+      {
+        "source": "about/tools",
+        "destination": "about/tools/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

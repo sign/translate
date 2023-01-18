@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Page aole i loaa",
+    "doesNotExist": "E kala mai, ʻaʻohe ʻaoʻao āu e ʻimi nei.",
+    "errorLogged": "Ua hoʻopaʻa inoa mākou i ka hewa a e nānā i loko.",
+    "goHome": "E hele i ka Home"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Sign Translate",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Detect language",
+      "more": "ʻŌlelo hou aku"
+    },
+    "input": {
+      "text": "Text",
+      "webcam": "Kamepa pūnaewele",
+      "upload": "Hoʻouka"
+    },
+    "swapLanguages": "Swap languages",
+    "upload": {
+      "types": "Upload a .mp4, .ogv, or .webm.",
+      "browse": "Browse your computer",
+      "title": "E koho i kahi wikiō"
+    },
+    "description": "He polokalamu unuhi ʻōlelo hōʻailona ʻelua ʻaoʻao no ka papapihi a me ka paʻa lima",
+    "spoken-to-signed": {
+      "text": "Palapala ʻŌlelo Haʻiʻōlelo",
+      "actions": {
+        "download": "Hoʻoiho i ka unuhi",
+        "copy": "E kope i ka unuhi",
+        "share": "Kaʻana unuhi"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Ke hoʻouka nei i ke kumu hoʻohālike wikiō kanaka",
+          "generating": "Hoʻopuka wikiō"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "E HOʻOPĀ",
+    "about": {
+      "title": "E pili ana",
+      "hero": {
+        "title": "Unuhi ma waena o 40+ mau ʻōlelo pūlima a ʻōlelo ʻia i ka manawa maoli.",
+        "img": "Ka laʻana o ka unuhi ola ma waena o ka ʻōlelo hōʻailona ʻAmelika a me ka ʻōlelo Pelekania"
+      },
+      "direction": {
+        "spoken-to-signed": "Unuhi mai ka ʻōlelo ʻōlelo i nā ʻōlelo pūlima",
+        "signed-to-spoken": "A i ʻole mai i pūlima ʻia i nā ʻōlelo ʻōlelo"
+      }
+    },
+    "languages": {
+      "title": "Nā ʻōlelo"
+    },
+    "contribute": {
+      "title": "E komo pū"
+    },
+    "tools": {
+      "title": "Nā meahana"
+    },
+    "nav": {
+      "pages": "E hoʻokele i nā ʻaoʻao ʻē aʻe",
+      "legal": "E hoʻokele i nā ʻaoʻao kānāwai"
+    }
+  },
+  "text-to-speech": {
+    "play": "Listen",
+    "cancel": "Kāohi",
+    "unavailable": "ʻAʻole loaʻa ka leo hoʻopuka no ka ʻōlelo i koho ʻia"
+  },
+  "speech-to-text": {
+    "start": "Translate by voice",
+    "stop": "E hooki i ka unuhi ma ka leo",
+    "not-allowed": "Pono ka ʻae e hoʻohana i ka microphone",
+    "language-not-supported": "ʻAʻole kākoʻo ʻia ka ʻōlelo i koho ʻia",
+    "browser-not-supported": "ʻAʻole kākoʻo ʻia ka hoʻokomo leo ma kēia polokalamu kele pūnaewele",
+    "service-not-allowed": "Pono ka ʻae e hoʻohana i ka ʻike ʻōlelo"
+  },
+  "legal": {
+    "terms": {
+      "title": "Nā lālā"
+    },
+    "privacy": {
+      "title": "Palekana Pilikino"
+    },
+    "licenses": {
+      "title": "Lako polokalamu a me nā laikini"
+    }
+  },
+  "playground": {
+    "title": "Ke kahua pāʻani hoʻoponopono ʻōlelo hōʻailona"
+  },
+  "benchmark": {
+    "title": "Hōʻailona",
+    "stats": {
+      "cld": {
+        "title": "ʻIke ʻōlelo ʻōlelo",
+        "import": "Hoʻokomo Module",
+        "load": "Hoʻohālike Hoʻouka",
+        "find": "E ʻike i ke kikokikona",
+        "create": "Hana"
+      },
+      "pix2pix": {
+        "title": "Nānā Pose Kanaka",
+        "init": "Mea Hana Init",
+        "load": "Hoʻohālike Hoʻouka",
+        "first-frame": "ʻO ka manaʻo o ka papa mua",
+        "frame": "Hoʻohālua ʻana"
+      },
+      "pose": {
+        "title": "Hoʻohālikelike ʻia ke kino piha",
+        "load": "Kauana Hoʻohālike",
+        "first-frame": "ʻO ka manaʻo o ka papa mua",
+        "frame": "Hoʻohālua ʻana"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Hoʻomaka ka pahupaʻikiʻi",
+      "turnedOff": "Ua pio ka pahupaʻikiʻi",
+      "notConnected": "ʻAʻole pili ka pahupaʻikiʻi",
+      "permissionDenied": "Ua hōʻole ʻia ka ʻae pahupaʻikiʻi"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Hoʻopau i ka pahupaʻikiʻi",
+        "off": "E hoʻā i ka pahupaʻikiʻi"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Ke hoʻouka nei i ka manaʻo kuhi..."
+  },
+  "language-selector": {
+    "label": "Hoʻololi i ka ʻōlelo a i ʻole ka ʻāina"
+  },
+  "settings": {
+    "detectSign": "ʻIke i ka hōʻailona",
+    "drawVideo": "E kaha kiʻi wikiō",
+    "drawPose": "Kaha kiʻi",
+    "drawSignWriting": "E kaha i ke kakau ana",
+    "animatePose": "Hoʻolaula",
+    "poseViewer": {
+      "pose": "Iwi",
+      "avatar": "Avatar",
+      "human": "Kanaka"
+    },
+    "title": "Nā hoʻonohonoho",
+    "close": "Pani i nā hoʻonohonoho",
+    "support": {
+      "title": "Kākoʻo",
+      "feedback": {
+        "title": "Manaʻo manaʻo",
+        "send": "Hoʻouna manaʻo"
+      },
+      "about": {
+        "title": "E pili ana"
+      }
+    },
+    "voice": {
+      "title": "Leo",
+      "input": {
+        "title": "Hookomo"
+      },
+      "output": {
+        "title": "Hoʻopuka"
+      }
+    },
+    "other": {
+      "title": "'ē aʻe",
+      "offline": {
+        "title": "Pahemo",
+        "files": {
+          "pix2pixGenerator": "Photo-realistic kanaka mīkini hana wāwahie",
+          "pix2pixUpscaler": "Kiʻi-ʻoiaʻiʻo kanaka upscaler",
+          "avatarGlb": "3D Avatar",
+          "avatarUsdz": "3D Avatar no AR ma iOS",
+          "translation": "Unuhi",
+          "translation.spokenToSigned": "ʻŌlelo-i-kaulima",
+          "translation.signedToSpoken": "Kaulima-i-Spoken"
+        },
+        "actions": {
+          "toggle": "Hoʻololi {{label}}",
+          "download": "Hoʻoiho i ke kumu hoʻohālike hoʻopahemo",
+          "delete": "E hoʻomaʻemaʻe i ka pahu hoʻohālike hoʻopahemo",
+          "reDownload": "Hoʻoiho hou i ke kumu hoʻohālike hoʻopahemo"
+        }
+      },
+      "appearance": {
+        "title": "Ka nana aku",
+        "action": "Hoʻololi i ka helehelena",
+        "random": "E kiʻi i kiʻi kiʻi ʻole",
+        "upload": "Hoʻouka i kāu kiʻi ponoʻī"
+      }
+    }
+  },
+  "countries.isl": "International",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "ʻO nā mea a pau",
+  "countries.signed": "ʻO nā mea a pau"
+}

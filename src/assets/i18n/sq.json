@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Faqja nuk u gjet",
+    "doesNotExist": "Na vjen keq, faqja që po kërkoni nuk ekziston.",
+    "errorLogged": "Ne e kemi regjistruar gabimin dhe do ta shqyrtojmë.",
+    "goHome": "Shkoni në Shtëpi"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "Përkthe me Sign",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Zbulo gjuhën",
+      "more": "Më shumë gjuhë"
+    },
+    "input": {
+      "text": "Teksti",
+      "webcam": "Webkamera",
+      "upload": "Ngarkoni"
+    },
+    "swapLanguages": "Ndërro gjuhët",
+    "upload": {
+      "types": "Ngarko një dokument .mp4, .ogv ose .webm.",
+      "browse": "Shfleto kompjuterin tënd",
+      "title": "Zgjidhni një video"
+    },
+    "description": "Një aplikacion përkthimi shumëgjuhësh i gjuhës së shenjave në dy drejtime për desktop dhe celular",
+    "spoken-to-signed": {
+      "text": "Teksti i gjuhës së folur",
+      "actions": {
+        "download": "Shkarko Përkthimin",
+        "copy": "Kopjo Përkthim",
+        "share": "Share Translation"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Po ngarkohet modeli i videos njerëzore",
+          "generating": "Gjenerimi i videos"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "PROVO APL. \"PËRKTHE\"",
+    "about": {
+      "title": "Rreth apl.",
+      "hero": {
+        "title": "Përkthe midis 40+ gjuhëve të nënshkruara dhe të folura në kohë reale.",
+        "img": "Shembull i përkthimit të drejtpërdrejtë midis gjuhës amerikane të shenjave dhe anglishtes"
+      },
+      "direction": {
+        "spoken-to-signed": "Përktheni nga gjuhët e folura në gjuhët e shenjave",
+        "signed-to-spoken": "Ose nga gjuhët e nënshkruara në të folur"
+      }
+    },
+    "languages": {
+      "title": "Gjuhët"
+    },
+    "contribute": {
+      "title": "Kontribuo"
+    },
+    "tools": {
+      "title": "Veglat"
+    },
+    "nav": {
+      "pages": "Navigoni në faqet e tjera",
+      "legal": "Navigoni në faqet ligjore"
+    }
+  },
+  "text-to-speech": {
+    "play": "Dëgjo",
+    "cancel": "Ndalo",
+    "unavailable": "Dalja e zërit nuk disponohet për gjuhën e zgjedhur"
+  },
+  "speech-to-text": {
+    "start": "Përkthe me zë",
+    "stop": "Ndalo përkthimin me zë",
+    "not-allowed": "Duhet leje për të përdorur mikrofonin",
+    "language-not-supported": "Gjuha e zgjedhur nuk mbështetet",
+    "browser-not-supported": "Hyrja zanore nuk mbështetet në këtë shfletues",
+    "service-not-allowed": "Duhet leje për të përdorur njohjen e të folurit"
+  },
+  "legal": {
+    "terms": {
+      "title": "Kushtet"
+    },
+    "privacy": {
+      "title": "Privatësia"
+    },
+    "licenses": {
+      "title": "Softueri dhe Licencat"
+    }
+  },
+  "playground": {
+    "title": "Shesh lojërash për përpunimin e gjuhës së shenjave"
+  },
+  "benchmark": {
+    "title": "Standardi",
+    "stats": {
+      "cld": {
+        "title": "Identifikimi i gjuhës së folur",
+        "import": "Moduli i importit",
+        "load": "Modeli i ngarkimit",
+        "find": "Identifikimi i tekstit",
+        "create": "Krijo"
+      },
+      "pix2pix": {
+        "title": "Shikuesi i pozës njerëzore",
+        "init": "Initi i Punëtorëve",
+        "load": "Modeli i ngarkimit",
+        "first-frame": "Konkluzioni i Kornizës së Parë",
+        "frame": "Konkluzioni i kornizës"
+      },
+      "pose": {
+        "title": "Vlerësimi i pozitës së plotë të trupit",
+        "load": "Ngarkesa e modelit",
+        "first-frame": "Konkluzioni i Kornizës së Parë",
+        "frame": "Konkluzioni i kornizës"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Fillimi i kamerës",
+      "turnedOff": "Kamera u fikur",
+      "notConnected": "Kamera nuk është e lidhur",
+      "permissionDenied": "Leja e kamerës u refuzua"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Fik kamerën",
+        "off": "Aktivizo kamerën"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Po ngarkohet vlerësimi i pozicionit..."
+  },
+  "language-selector": {
+    "label": "Ndryshoni gjuhën ose rajonin"
+  },
+  "settings": {
+    "detectSign": "Shenja e zbulimit",
+    "drawVideo": "Vizatoni video",
+    "drawPose": "Vizatoni pozën",
+    "drawSignWriting": "Vizatoni Shkrim i Shenjave",
+    "animatePose": "Pozë e gjallë",
+    "poseViewer": {
+      "pose": "Skeleti",
+      "avatar": "Avatari",
+      "human": "Njerëzore"
+    },
+    "title": "Cilësimet",
+    "close": "Mbyll cilësimet",
+    "support": {
+      "title": "Mbështetje",
+      "feedback": {
+        "title": "Feedback",
+        "send": "Dërgo komente"
+      },
+      "about": {
+        "title": "Rreth"
+      }
+    },
+    "voice": {
+      "title": "Zëri",
+      "input": {
+        "title": "Input"
+      },
+      "output": {
+        "title": "Prodhimi"
+      }
+    },
+    "other": {
+      "title": "Të tjera",
+      "offline": {
+        "title": "Jashtë linje",
+        "files": {
+          "pix2pixGenerator": "Gjenerator fotorealist njerëzor",
+          "pix2pixUpscaler": "Përmirësues foto-realist njerëzor",
+          "avatarGlb": "Avatari 3D",
+          "avatarUsdz": "Avatar 3D për AR në iOS",
+          "translation": "Përkthimi",
+          "translation.spokenToSigned": "E folur për të nënshkruar",
+          "translation.signedToSpoken": "I nënshkruar në të folur"
+        },
+        "actions": {
+          "toggle": "Ndrysho {{label}}",
+          "download": "Shkarkoni Modelin Offline",
+          "delete": "Pastro memorien e modelit jashtë linje",
+          "reDownload": "Rishkarkoni modelin jashtë linje"
+        }
+      },
+      "appearance": {
+        "title": "Pamja e jashtme",
+        "action": "Ndrysho pamjen",
+        "random": "Merrni një foto të rastësishme",
+        "upload": "Ngarkoni foton tuaj"
+      }
+    }
+  },
+  "countries.isl": "Ndërkombëtare",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Të gjitha",
+  "countries.signed": "Të gjitha"
+}

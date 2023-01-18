@@ -1,3 +1,11 @@
+@use '@angular/material' as mat;
+
+::ng-deep {
+  body {
+    background-color: mat.get-color-from-palette(mat.$gray-palette, 50);
+  }
+}
+
 :host {
   height: 100vh;
   display: flex;

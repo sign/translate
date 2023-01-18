@@ -1,0 +1,209 @@
+{
+  "404": {
+    "title": "Puslapis nerastas",
+    "doesNotExist": "Atsiprašome, puslapis, kurio ieškojote, neegzistuoja.",
+    "errorLogged": "Užregistravome klaidą ir ją išnagrinėsime.",
+    "goHome": "Eiti namo"
+  },
+  "keyboard": {
+    "ctrl": "Ctrl",
+    "shift": "Shift"
+  },
+  "translate": {
+    "title": "„Sign“ vertėjas",
+    "language-selector": {
+      "detected": "{{lang}}",
+      "detect": "Nustatyti kalbą",
+      "more": "Daugiau kalbų"
+    },
+    "input": {
+      "text": "Tekstas",
+      "webcam": "Internetinė kamera",
+      "upload": "Įkelti"
+    },
+    "swapLanguages": "Sukeisti kalbas",
+    "upload": {
+      "types": "Įkelkite .mp4, .ogv arba .webm failus.",
+      "browse": "Naršykite kompiuteryje",
+      "title": "Pasirinkite vaizdo įrašą"
+    },
+    "description": "Dviejų krypčių daugiakalbė gestų kalbos vertimo programa, skirta staliniams kompiuteriams ir mobiliesiems telefonams",
+    "spoken-to-signed": {
+      "text": "Šnekamosios kalbos tekstas",
+      "actions": {
+        "download": "Atsisiųskite vertimą",
+        "copy": "Kopijuoti vertimą",
+        "share": "Pasidalinti vertimu"
+      },
+      "progress-bars": {
+        "human-pose-viewer": {
+          "loading": "Įkeliamas žmogaus vaizdo modelis",
+          "generating": "Kuriamas vaizdo įrašas"
+        }
+      }
+    }
+  },
+  "landing": {
+    "try": "IŠBANDYKITE VERTĖJĄ",
+    "about": {
+      "title": "Apie",
+      "hero": {
+        "title": "Realiuoju laiku verskite iš daugiau nei 40 kalbų su gestais ir kalbomis.",
+        "img": "Tiesioginio vertimo iš Amerikos gestų kalbos į anglų kalbą pavyzdys"
+      },
+      "direction": {
+        "spoken-to-signed": "Versti iš šnekamųjų į gestų kalbas",
+        "signed-to-spoken": "Arba nuo gestų iki šnekamųjų kalbų"
+      }
+    },
+    "languages": {
+      "title": "Kalbos"
+    },
+    "contribute": {
+      "title": "Bendradarbiauti"
+    },
+    "tools": {
+      "title": "Įrankiai"
+    },
+    "nav": {
+      "pages": "Eikite į kitus puslapius",
+      "legal": "Eikite į teisinius puslapius"
+    }
+  },
+  "text-to-speech": {
+    "play": "Klausyti",
+    "cancel": "Sustabdyti",
+    "unavailable": "Balso išvestis nepasiekiama pasirinkta kalba"
+  },
+  "speech-to-text": {
+    "start": "Vertimas balsu",
+    "stop": "Sustabdyti vertimą balsu",
+    "not-allowed": "Reikia leidimo naudoti mikrofoną",
+    "language-not-supported": "Pasirinkta kalba nepalaikoma",
+    "browser-not-supported": "Balso įvestis nepalaikoma šioje naršyklėje",
+    "service-not-allowed": "Reikia leidimo naudoti kalbos atpažinimą"
+  },
+  "legal": {
+    "terms": {
+      "title": "Sąlygos"
+    },
+    "privacy": {
+      "title": "Privatumas"
+    },
+    "licenses": {
+      "title": "Programinė įranga ir licencijos"
+    }
+  },
+  "playground": {
+    "title": "Gestų kalbos apdorojimo žaidimų aikštelė"
+  },
+  "benchmark": {
+    "title": "Etalonas",
+    "stats": {
+      "cld": {
+        "title": "Šnekamosios kalbos identifikavimas",
+        "import": "Importavimo modulis",
+        "load": "Krovinio modelis",
+        "find": "Identifikuokite tekstą",
+        "create": "Sukurti"
+      },
+      "pix2pix": {
+        "title": "Žmogaus pozų žiūrovas",
+        "init": "Darbuotojas Initas",
+        "load": "Krovinio modelis",
+        "first-frame": "Pirmojo kadro išvada",
+        "frame": "Rėmo išvada"
+      },
+      "pose": {
+        "title": "Viso kūno pozos įvertinimas",
+        "load": "Modelio apkrova",
+        "first-frame": "Pirmojo kadro išvada",
+        "frame": "Rėmo išvada"
+      }
+    }
+  },
+  "video": {
+    "errors": {
+      "starting": "Fotoaparato paleidimas",
+      "turnedOff": "Kamera išjungta",
+      "notConnected": "Kamera neprijungta",
+      "permissionDenied": "Fotoaparato leidimas atmestas"
+    },
+    "controls": {
+      "receiveVideo": {
+        "on": "Išjunkite kamerą",
+        "off": "Įjunkite kamerą"
+      }
+    }
+  },
+  "pose": {
+    "loading": "Įkeliamas pozos įvertinimas..."
+  },
+  "language-selector": {
+    "label": "Pakeiskite kalbą arba regioną"
+  },
+  "settings": {
+    "detectSign": "Aptikti ženklą",
+    "drawVideo": "Nupiešti vaizdo įrašą",
+    "drawPose": "Pieškite pozą",
+    "drawSignWriting": "Pieškite ženklų rašymą",
+    "animatePose": "Animuoti poza",
+    "poseViewer": {
+      "pose": "Skeletas",
+      "avatar": "Avataras",
+      "human": "Žmogus"
+    },
+    "title": "Nustatymai",
+    "close": "Uždaryti nustatymus",
+    "support": {
+      "title": "Palaikymas",
+      "feedback": {
+        "title": "Atsiliepimas",
+        "send": "Siųsti atsiliepimą"
+      },
+      "about": {
+        "title": "Apie"
+      }
+    },
+    "voice": {
+      "title": "Balsas",
+      "input": {
+        "title": "Įvestis"
+      },
+      "output": {
+        "title": "Išvestis"
+      }
+    },
+    "other": {
+      "title": "Kita",
+      "offline": {
+        "title": "Neprisijungus",
+        "files": {
+          "pix2pixGenerator": "Fotorealistiškas žmogaus generatorius",
+          "pix2pixUpscaler": "Realistiška, tikroviška, žmogaus nuotrauka",
+          "avatarGlb": "3D avataras",
+          "avatarUsdz": "3D avataras, skirtas AR sistemoje „iOS“.",
+          "translation": "Vertimas",
+          "translation.spokenToSigned": "Pasisakyta pasirašytinai",
+          "translation.signedToSpoken": "Pasirašyta į kalbą"
+        },
+        "actions": {
+          "toggle": "Perjungti {{label}}",
+          "download": "Atsisiųskite modelį neprisijungus",
+          "delete": "Išvalykite neprisijungus naudojamo modelio talpyklą",
+          "reDownload": "Iš naujo atsisiųskite neprisijungus naudojamą modelį"
+        }
+      },
+      "appearance": {
+        "title": "Išvaizda",
+        "action": "Keisti išvaizdą",
+        "random": "Gaukite atsitiktinę nuotrauką",
+        "upload": "Įkelk savo nuotrauką"
+      }
+    }
+  },
+  "countries.isl": "Tarptautinė",
+  "to": "{{a}} → {{b}}",
+  "languages.spoken": "Visi",
+  "countries.signed": "Visi"
+}
