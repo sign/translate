@@ -38,7 +38,7 @@ export class PoseService {
     }
 
     await this.ga.trace('pose', 'load', async () => {
-      this.worker = comlink.wrap(new Worker(new URL('./pose.worker', import.meta.url)));
+      this.worker = comlink.wrap(new Worker(new URL('./pose.worker', import.meta.url), {type: 'module'}));
       await this.worker.loadModel();
     });
   }
@@ -59,7 +59,13 @@ export class PoseService {
         return null;
       }
 
-      // result.image = image; // TODO fix
+      // TODO not sure if this is needed
+      // const newImage = document.createElement('canvas');
+      // newImage.width = image.width;
+      // newImage.height = image.height;
+      // const ctx = newImage.getContext('2d');
+      // ctx.drawImage(image as any, 0, 0);
+      // result.image = newImage;
       return result;
     });
   }

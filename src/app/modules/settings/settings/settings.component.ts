@@ -13,6 +13,7 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
   availableSettings: Array<keyof SettingsStateModel> = [
     'detectSign',
     'drawVideo',
+    'pose',
     'drawPose',
     'drawSignWriting',
     'animatePose',

@@ -52,9 +52,10 @@ export class PoseState implements NgxsOnInit {
   }
 
   @Action(LoadPoseModel)
-  async load({patchState, dispatch}: StateContext<PoseStateModel>): Promise<void> {
+  async load({patchState}: StateContext<PoseStateModel>): Promise<void> {
     patchState({isLoaded: false});
     await this.poseService.load();
+    // isLoaded is set to true once the first frame is processed.
   }
 
   @Action(PoseVideoFrame)

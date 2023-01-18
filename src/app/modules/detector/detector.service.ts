@@ -22,10 +22,8 @@ export class DetectorService {
   constructor(private tf: TensorflowService) {}
 
   async loadModel() {
-    return this.tf
-      .load()
-      .then(() => this.tf.loadLayersModel('assets/models/sign-detector/model.json'))
-      .then(model => (this.sequentialModel = model as unknown as LayersModel));
+    await this.tf.load();
+    this.sequentialModel = await this.tf.loadLayersModel('assets/models/sign-detector/model.json');
   }
 
   distance(p1: PoseLandmark, p2: PoseLandmark): number {
@@ -68,7 +66,7 @@ export class DetectorService {
       x: (newPose[POSE_LANDMARKS.LEFT_SHOULDER].x + newPose[POSE_LANDMARKS.RIGHT_SHOULDER].x) / 2,
       y: (newPose[POSE_LANDMARKS.LEFT_SHOULDER].y + newPose[POSE_LANDMARKS.RIGHT_SHOULDER].y) / 2,
     };
-    const newFakePose = [
+    return [
       newPose[POSE_LANDMARKS.NOSE],
       neck,
       newPose[POSE_LANDMARKS.RIGHT_SHOULDER],
@@ -95,8 +93,6 @@ export class DetectorService {
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
     ];
-
-    return newFakePose;
   }
 
   isValidLandmark(l: PoseLandmark): boolean {
