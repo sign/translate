@@ -1,8 +1,21 @@
 import {Injectable} from '@angular/core';
+import {
+  FACEMESH_FACE_OVAL,
+  FACEMESH_LEFT_EYE,
+  FACEMESH_LEFT_EYEBROW,
+  FACEMESH_LIPS,
+  FACEMESH_RIGHT_EYE,
+  FACEMESH_RIGHT_EYEBROW,
+  FACEMESH_TESSELATION,
+  HAND_CONNECTIONS,
+  POSE_CONNECTIONS,
+  POSE_LANDMARKS,
+} from '@mediapipe/holistic';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {Pose, PoseLandmark} from './pose.state';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
-import {MediapipeHolisticService} from '../../core/services/holistic.service';
+import * as comlink from 'comlink';
+import {transferableImage} from '../../core/helpers/image/transferable';
 
 const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22];
 
@@ -10,46 +23,50 @@ const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18
   providedIn: 'root',
 })
 export class PoseService {
-  model?: any;
   isFirstFrame = true;
-  onResultsCallbacks = [];
 
-  constructor(private ga: GoogleAnalyticsService, private holistic: MediapipeHolisticService) {}
+  worker: comlink.Remote<{
+    loadModel: () => Promise<void>;
+    pose: (imageBitmap: ImageBitmap | ImageData) => Promise<Pose>;
+  }>;
 
-  onResults(onResultsCallback) {
-    this.onResultsCallbacks.push(onResultsCallback);
-  }
+  constructor(private ga: GoogleAnalyticsService) {}
 
   async load(): Promise<void> {
-    if (this.model) {
+    if (this.worker) {
       return;
     }
 
-    await this.holistic.load();
-
-    await this.ga.trace('pose', 'load', () => {
-      this.model = new this.holistic.Holistic({locateFile: file => `assets/models/holistic/${file}`});
-
-      this.model.setOptions({
-        upperBodyOnly: false,
-        modelComplexity: 1,
-      });
-
-      this.model.onResults(results => {
-        for (const callback of this.onResultsCallbacks) {
-          callback(results);
-        }
-      });
+    await this.ga.trace('pose', 'load', async () => {
+      this.worker = comlink.wrap(new Worker(new URL('./pose.worker', import.meta.url), {type: 'module'}));
+      await this.worker.loadModel();
     });
   }
 
-  async predict(video: HTMLVideoElement | HTMLImageElement): Promise<void> {
-    await this.load();
+  async predict(video: HTMLVideoElement | HTMLImageElement): Promise<Pose> {
+    const width = (video as HTMLVideoElement).videoWidth ?? video.width;
+    if (!this.worker || width === 0) {
+      return null;
+    }
 
     const frameType = this.isFirstFrame ? 'first-frame' : 'frame';
-    await this.ga.trace('pose', frameType, () => {
+    const image = await transferableImage(video);
+
+    return this.ga.trace('pose', frameType, async () => {
       this.isFirstFrame = false;
-      return this.model.send({image: video});
+      const result: Pose = await this.worker.pose(image);
+      if (!result) {
+        return null;
+      }
+
+      // TODO not sure if this is needed
+      // const newImage = document.createElement('canvas');
+      // newImage.width = image.width;
+      // newImage.height = image.height;
+      // const ctx = newImage.getContext('2d');
+      // ctx.drawImage(image as any, 0, 0);
+      // result.image = newImage;
+      return result;
     });
   }
 
@@ -59,7 +76,7 @@ export class PoseService {
       delete filteredLandmarks[l];
     }
 
-    drawing.drawConnectors(ctx, filteredLandmarks, this.holistic.POSE_CONNECTIONS, {color: '#00FF00'});
+    drawing.drawConnectors(ctx, filteredLandmarks, POSE_CONNECTIONS, {color: '#00FF00'});
     drawing.drawLandmarks(ctx, filteredLandmarks, {color: '#00FF00', fillColor: '#FF0000'});
   }
 
@@ -70,7 +87,7 @@ export class PoseService {
     dotColor: string,
     dotFillColor: string
   ): void {
-    drawing.drawConnectors(ctx, landmarks, this.holistic.HAND_CONNECTIONS, {color: lineColor});
+    drawing.drawConnectors(ctx, landmarks, HAND_CONNECTIONS, {color: lineColor});
     drawing.drawLandmarks(ctx, landmarks, {
       color: dotColor,
       fillColor: dotFillColor,
@@ -82,13 +99,13 @@ export class PoseService {
   }
 
   drawFace(landmarks: PoseLandmark[], ctx: CanvasRenderingContext2D): void {
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_TESSELATION, {color: '#C0C0C070', lineWidth: 1});
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_RIGHT_EYE, {color: '#FF3030'});
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_LEFT_EYE, {color: '#30FF30'});
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
-    drawing.drawConnectors(ctx, landmarks, this.holistic.FACEMESH_LIPS, {color: '#E0E0E0'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_TESSELATION, {color: '#C0C0C070', lineWidth: 1});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_RIGHT_EYE, {color: '#FF3030'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_LEFT_EYE, {color: '#30FF30'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
+    drawing.drawConnectors(ctx, landmarks, FACEMESH_LIPS, {color: '#E0E0E0'});
   }
 
   drawConnect(connectors: PoseLandmark[][], ctx: CanvasRenderingContext2D): void {
@@ -112,15 +129,12 @@ export class PoseService {
 
     if (pose.rightHandLandmarks) {
       ctx.strokeStyle = '#00FF00';
-      this.drawConnect(
-        [[pose.poseLandmarks[this.holistic.POSE_LANDMARKS.RIGHT_ELBOW], pose.rightHandLandmarks[0]]],
-        ctx
-      );
+      this.drawConnect([[pose.poseLandmarks[POSE_LANDMARKS.RIGHT_ELBOW], pose.rightHandLandmarks[0]]], ctx);
     }
 
     if (pose.leftHandLandmarks) {
       ctx.strokeStyle = '#FF0000';
-      this.drawConnect([[pose.poseLandmarks[this.holistic.POSE_LANDMARKS.LEFT_ELBOW], pose.leftHandLandmarks[0]]], ctx);
+      this.drawConnect([[pose.poseLandmarks[POSE_LANDMARKS.LEFT_ELBOW], pose.leftHandLandmarks[0]]], ctx);
     }
   }
 

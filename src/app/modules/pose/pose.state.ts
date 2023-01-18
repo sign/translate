@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {PoseService} from './pose.service';
-import {PoseVideoFrame, StoreFramePose} from './pose.actions';
+import {LoadPoseModel, PoseVideoFrame, StoreFramePose} from './pose.actions';
+import {filter, first, tap} from 'rxjs/operators';
 
 export interface PoseLandmark {
   x: number;
@@ -36,34 +37,51 @@ const initialState: PoseStateModel = {
   defaults: initialState,
 })
 export class PoseState implements NgxsOnInit {
+  poseSetting$ = this.store.select<boolean>(state => state.settings.pose);
+
   constructor(private poseService: PoseService, private store: Store) {}
 
-  ngxsOnInit(): void {
-    this.poseService.onResults(results => {
-      // TODO: passing the `image` canvas through NGXS bugs the pose.
-      // https://github.com/google/mediapipe/issues/2422
-      const fakeImage = document.createElement('canvas');
-      fakeImage.width = results.image.width;
-      fakeImage.height = results.image.height;
-      const ctx = fakeImage.getContext('2d');
-      ctx.drawImage(results.image, 0, 0, fakeImage.width, fakeImage.height);
+  ngxsOnInit({dispatch}: StateContext<any>): void {
+    this.poseSetting$
+      .pipe(
+        filter(Boolean),
+        first(),
+        tap(() => dispatch(LoadPoseModel))
+      )
+      .subscribe();
+  }
 
-      // Since v0.4, "results" include additional parameters
-      this.store.dispatch(
-        new StoreFramePose({
-          faceLandmarks: results.faceLandmarks,
-          poseLandmarks: results.poseLandmarks,
-          leftHandLandmarks: results.leftHandLandmarks,
-          rightHandLandmarks: results.rightHandLandmarks,
-          image: fakeImage,
-        })
-      );
-    });
+  @Action(LoadPoseModel)
+  async load({patchState}: StateContext<PoseStateModel>): Promise<void> {
+    patchState({isLoaded: false});
+    await this.poseService.load();
+    // isLoaded is set to true once the first frame is processed.
   }
 
   @Action(PoseVideoFrame)
   async poseFrame({patchState, dispatch}: StateContext<PoseStateModel>, {video}: PoseVideoFrame): Promise<void> {
-    await this.poseService.predict(video);
+    const result = await this.poseService.predict(video);
+    // TODO: passing the `image` canvas through NGXS bugs the pose.
+    // https://github.com/google/mediapipe/issues/2422
+    //    const fakeImage = document.createElement('canvas');
+    //       fakeImage.width = results.image.width;
+    //       fakeImage.height = results.image.height;
+    //       const ctx = fakeImage.getContext('2d');
+    //       ctx.drawImage(results.image, 0, 0, fakeImage.width, fakeImage.height);
+    //
+    //       // Since v0.4, "results" include additional parameters
+    //       this.store.dispatch(
+    //         new StoreFramePose({
+    //           faceLandmarks: results.faceLandmarks,
+    //           poseLandmarks: results.poseLandmarks,
+    //           leftHandLandmarks: results.leftHandLandmarks,
+    //           rightHandLandmarks: results.rightHandLandmarks,
+    //           image: fakeImage,
+    //         })
+    //       );
+
+    // Since v0.4, "results" include additional parameters
+    dispatch(new StoreFramePose(result));
   }
 
   @Action(StoreFramePose)

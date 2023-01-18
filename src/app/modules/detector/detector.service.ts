@@ -2,8 +2,8 @@ import {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, Pose, PoseLandmark} from '../pose/pose.state';
 import {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
+import {POSE_LANDMARKS} from '@mediapipe/holistic';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
-import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
 const WINDOW_SIZE = 20;
 
@@ -19,16 +19,11 @@ export class DetectorService {
 
   sequentialModel: LayersModel;
 
-  constructor(private tf: TensorflowService, private holistic: MediapipeHolisticService) {}
+  constructor(private tf: TensorflowService) {}
 
   async loadModel() {
-    return Promise.all([
-      this.holistic.load(),
-      this.tf
-        .load()
-        .then(() => this.tf.loadLayersModel('assets/models/sign-detector/model.json'))
-        .then(model => (this.sequentialModel = model as unknown as LayersModel)),
-    ]);
+    await this.tf.load();
+    this.sequentialModel = await this.tf.loadLayersModel('assets/models/sign-detector/model.json');
   }
 
   distance(p1: PoseLandmark, p2: PoseLandmark): number {
@@ -38,16 +33,15 @@ export class DetectorService {
   }
 
   normalizePose(pose: Pose): PoseLandmark[] {
-    const bodyLandmarks =
-      pose.poseLandmarks || new Array(Object.keys(this.holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
+    const bodyLandmarks = pose.poseLandmarks || new Array(Object.keys(POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const rightHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
     const landmarks = bodyLandmarks
       .concat(leftHandLandmarks, rightHandLandmarks)
       .map(l => (this.isValidLandmark(l) ? l : EMPTY_LANDMARK));
 
-    const p1 = landmarks[this.holistic.POSE_LANDMARKS.LEFT_SHOULDER];
-    const p2 = landmarks[this.holistic.POSE_LANDMARKS.RIGHT_SHOULDER];
+    const p1 = landmarks[POSE_LANDMARKS.LEFT_SHOULDER];
+    const p2 = landmarks[POSE_LANDMARKS.RIGHT_SHOULDER];
 
     if (p1.x > 0 && p2.x > 0) {
       this.shoulderWidth[this.shoulderWidthIndex % WINDOW_SIZE] = this.distance(p1, p2);
@@ -69,25 +63,18 @@ export class DetectorService {
 
     // TODO remove, this is to be compliant with openpose
     const neck = {
-      x:
-        (newPose[this.holistic.POSE_LANDMARKS.LEFT_SHOULDER].x +
-          newPose[this.holistic.POSE_LANDMARKS.RIGHT_SHOULDER].x) /
-        2,
-      y:
-        (newPose[this.holistic.POSE_LANDMARKS.LEFT_SHOULDER].y +
-          newPose[this.holistic.POSE_LANDMARKS.RIGHT_SHOULDER].y) /
-        2,
+      x: (newPose[POSE_LANDMARKS.LEFT_SHOULDER].x + newPose[POSE_LANDMARKS.RIGHT_SHOULDER].x) / 2,
+      y: (newPose[POSE_LANDMARKS.LEFT_SHOULDER].y + newPose[POSE_LANDMARKS.RIGHT_SHOULDER].y) / 2,
     };
-
     return [
-      newPose[this.holistic.POSE_LANDMARKS.NOSE],
+      newPose[POSE_LANDMARKS.NOSE],
       neck,
-      newPose[this.holistic.POSE_LANDMARKS.RIGHT_SHOULDER],
-      newPose[this.holistic.POSE_LANDMARKS.RIGHT_ELBOW],
-      newPose[this.holistic.POSE_LANDMARKS.RIGHT_WRIST],
-      newPose[this.holistic.POSE_LANDMARKS.LEFT_SHOULDER],
-      newPose[this.holistic.POSE_LANDMARKS.LEFT_ELBOW],
-      newPose[this.holistic.POSE_LANDMARKS.LEFT_WRIST],
+      newPose[POSE_LANDMARKS.RIGHT_SHOULDER],
+      newPose[POSE_LANDMARKS.RIGHT_ELBOW],
+      newPose[POSE_LANDMARKS.RIGHT_WRIST],
+      newPose[POSE_LANDMARKS.LEFT_SHOULDER],
+      newPose[POSE_LANDMARKS.LEFT_ELBOW],
+      newPose[POSE_LANDMARKS.LEFT_WRIST],
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
@@ -95,10 +82,10 @@ export class DetectorService {
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
-      newPose[this.holistic.POSE_LANDMARKS.RIGHT_EYE],
-      newPose[this.holistic.POSE_LANDMARKS.LEFT_EYE],
-      newPose[this.holistic.POSE_LANDMARKS.RIGHT_EAR],
-      newPose[this.holistic.POSE_LANDMARKS.LEFT_EAR],
+      newPose[POSE_LANDMARKS.RIGHT_EYE],
+      newPose[POSE_LANDMARKS.LEFT_EYE],
+      newPose[POSE_LANDMARKS.RIGHT_EAR],
+      newPose[POSE_LANDMARKS.LEFT_EAR],
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,

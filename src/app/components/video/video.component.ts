@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {combineLatest, firstValueFrom} from 'rxjs';
-import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
+import {VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../base/base.component';
@@ -112,14 +112,15 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
       .pipe(
         map(state => state.videoSettings),
         filter(Boolean),
-        tap(({width, height}) => {
+        tap(({width, height, aspectRatio}) => {
+          this.aspectRatio = 'aspect-' + aspectRatio;
+
           this.canvasEl.nativeElement.width = width;
           this.canvasEl.nativeElement.height = height;
 
           // It is required to wait for next frame, as grid element might still be resizing
           requestAnimationFrame(this.scaleCanvas.bind(this));
         }),
-        tap((settings: VideoSettings) => (this.aspectRatio = 'aspect-' + settings.aspectRatio)),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();

@@ -12,6 +12,7 @@ export interface SettingsStateModel {
   animatePose: boolean;
 
   drawVideo: boolean;
+  pose: boolean;
   drawPose: boolean;
   drawSignWriting: boolean;
 
@@ -28,6 +29,7 @@ const initialState: SettingsStateModel = {
   animatePose: false,
 
   drawVideo: true,
+  pose: false,
   drawPose: true,
   drawSignWriting: false,
 

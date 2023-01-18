@@ -51,7 +51,7 @@
         mat-icon-button
         matTreeNodeToggle
         [disabled]="node.children.length === 0"
-        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco : {label: node.label}">
+        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco: {label: node.label}">
         <mat-icon class="mat-icon-rtl-mirror">
           {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
         </mat-icon>

@@ -41,6 +41,11 @@
                 "output": "./assets/flags/1x1/"
               },
               {
+                "glob": "**/*",
+                "input": "./node_modules/@mediapipe/holistic/",
+                "output": "./"
+              },
+              {
                 "glob": "*.ttf",
                 "input": "./node_modules/@sutton-signwriting/font-ttf/font",
                 "output": "./assets/fonts/signwriting/"

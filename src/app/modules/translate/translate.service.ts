@@ -190,7 +190,8 @@ export class TranslationService {
   }
 
   translateSpokenToSigned(text: string, spokenLanguage: string, signedLanguage: string): string {
-    const api = 'https://spoken-to-signed-sxie2r74ua-uc.a.run.app/';
-    return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
+    // const api = 'https://spoken-to-signed-sxie2r74ua-uc.a.run.app/';
+    // return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
+    return 'assets/tmp/example.pose';
   }
 }
