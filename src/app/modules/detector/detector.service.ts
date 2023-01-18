@@ -95,6 +95,8 @@ export class DetectorService {
       EMPTY_LANDMARK,
       EMPTY_LANDMARK,
     ];
+
+    return newFakePose;
   }
 
   isValidLandmark(l: PoseLandmark): boolean {

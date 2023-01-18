@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Action, NgxsOnInit, Select, State, StateContext} from '@ngxs/store';
+import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {PoseService} from './pose.service';
 import {LoadPoseModel, PoseVideoFrame, StoreFramePose} from './pose.actions';
-import {Observable} from 'rxjs';
 import {filter, first, tap} from 'rxjs/operators';
 
 export interface PoseLandmark {
@@ -38,7 +37,7 @@ const initialState: PoseStateModel = {
   defaults: initialState,
 })
 export class PoseState implements NgxsOnInit {
-  @Select(state => state.settings.pose) poseSetting$: Observable<boolean>;
+  poseSetting$ = this.store.select<boolean>(state => state.settings.pose);
 
   constructor(private poseService: PoseService, private store: Store) {}
 

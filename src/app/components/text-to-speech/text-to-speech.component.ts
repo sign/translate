@@ -14,12 +14,7 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   isSpeaking = false;
 
   // SpeechSynthesisUtterance is not supported on Android native build
-  speech: SpeechSynthesisUtterance = 'SpeechSynthesisUtterance';
-  in;
-  globalThis?;
-  new;
-
-  SpeechSynthesisUtterance(): null;
+  speech: SpeechSynthesisUtterance = 'SpeechSynthesisUtterance' in globalThis ? new SpeechSynthesisUtterance() : null;
 
   private listeners: {[key: string]: EventListener} = {};
 

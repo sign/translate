@@ -43,8 +43,8 @@ export class PoseService {
     });
   }
 
-  async predict(video: HTMLVideoElement): Promise<Pose> {
-    const [width, height] = [video.videoWidth, video.videoHeight];
+  async predict(video: HTMLVideoElement | HTMLImageElement): Promise<Pose> {
+    const width = (video as HTMLVideoElement).videoWidth ?? video.width;
     if (!this.worker || width === 0) {
       return null;
     }
