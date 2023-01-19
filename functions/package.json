@@ -34,7 +34,7 @@
     "@firebase/firestore-types": "^2.5.1",
     "@firebase/rules-unit-testing": "^2.0.5",
     "@types/http-errors": "^2.0.1",
-    "@types/jest": "29.2.5",
+    "@types/jest": "29.2.6",
     "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
