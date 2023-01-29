@@ -21,7 +21,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
   // Using cache and MediaRecorder for older browsers, and safari
-  mimeTypes = ['video/webm; codecs=vp9', 'video/webm; codecs=vp8', 'video/webm', 'video/mp4', 'video/ogv'];
+  mimeTypes = ['video/webm;codecs:vp9', 'video/webm;codecs:vp8', 'video/webm', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
 
   // Use a writeable stream on supported browsers

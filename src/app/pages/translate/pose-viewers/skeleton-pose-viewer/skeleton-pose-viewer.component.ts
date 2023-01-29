@@ -29,8 +29,9 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
           await this.startRecording(poseCanvas as any);
 
-          // MP4 videos can't have a transparent background
-          if (this.mediaRecorder && this.mediaRecorder.mimeType === 'video/mp4' && !this.colorSchemeMedia.matches) {
+          // Some browsers videos can't have a transparent background
+          const isTransparencySupported = 'chrome' in window; // transparency is currently not supported in firefox and safari
+          if (this.mediaRecorder && !isTransparencySupported && !this.colorSchemeMedia.matches) {
             this.background = 'white';
           }
         }),

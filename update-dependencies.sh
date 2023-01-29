@@ -1,5 +1,5 @@
-ncu -u --reject filesize,typescript
+ncu --cacheClear -u --reject filesize,typescript
 npm install
 
-ncu --cwd functions --reject node-fetch,typescript -u
+ncu --cacheClear --cwd functions --reject node-fetch,typescript -u
 npm install --prefix functions
