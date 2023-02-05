@@ -237,7 +237,16 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": ["/", "/about"]
+            "routes": [
+              "/",
+              "/about",
+              "/about/languages",
+              "/about/contribute",
+              "/about/tools",
+              "/legal/terms",
+              "/legal/privacy",
+              "/legal/licenses"
+            ]
           },
           "configurations": {
             "production": {
