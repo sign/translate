@@ -30,6 +30,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
   @ViewChild('stats') statsEl: ElementRef;
+  appRootEl = document.querySelector('app-root');
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
 
@@ -62,9 +63,9 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.preloadPoseEstimationModel();
     this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
 
-    // @ts-ignore
     const resizeObserver = new ResizeObserver(this.scaleCanvas.bind(this));
     resizeObserver.observe(this.elementRef.nativeElement);
+    resizeObserver.observe(this.appRootEl); // Catch changes when canvas becomes bigger then screen
   }
 
   async appLoop(): Promise<void> {
@@ -130,9 +131,11 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     requestAnimationFrame(() => {
       // Zoom canvas to 100% width
       const bbox = this.elementRef.nativeElement.getBoundingClientRect();
-      const width = Math.min(bbox.width, document.documentElement.clientWidth);
+      const documentBbox = this.appRootEl.getBoundingClientRect();
+
+      const width = Math.min(bbox.width, documentBbox.width);
       const scale = width / this.canvasEl.nativeElement.width;
-      this.canvasEl.nativeElement.style.transform = `scale(-${scale}, ${scale})`;
+      this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
 
       // Set parent element height
       this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';

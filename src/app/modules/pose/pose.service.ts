@@ -11,6 +11,8 @@ const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18
 })
 export class PoseService {
   model?: any;
+  loadPromise: Promise<any>;
+
   isFirstFrame = true;
   onResultsCallbacks = [];
 
@@ -21,6 +23,21 @@ export class PoseService {
   }
 
   async load(): Promise<void> {
+    if (!this.loadPromise) {
+      this.loadPromise = this._load();
+    }
+
+    // Holistic loading may fail for various reasons.
+    // If that fails, show an alert to the user, for further investigation.
+    try {
+      await this.loadPromise;
+    } catch (e) {
+      console.error(e);
+      alert(e.message);
+    }
+  }
+
+  private async _load(): Promise<void> {
     if (this.model) {
       return;
     }
@@ -34,6 +51,8 @@ export class PoseService {
         upperBodyOnly: false,
         modelComplexity: 1,
       });
+
+      await this.model.initialize();
 
       // Send an empty frame, to force the mediapipe computation graph to load
       const frame = document.createElement('canvas');

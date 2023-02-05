@@ -20,14 +20,20 @@ p {
 #video-container {
   height: 100%;
   overflow: hidden;
+  transform: scaleX(-1);
 
   video {
     display: none;
   }
 
   canvas {
-    transform-origin: top;
+    transform-origin: top left;
   }
+}
+
+// Transform origin does not support "start". For RTL languages, we need to flip the transform origin.
+::ng-deep html[dir='rtl'] #video-container canvas {
+  transform-origin: top right !important;
 }
 
 app-video-controls {
