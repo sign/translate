@@ -8,5 +8,11 @@ select {
 
   @media (prefers-color-scheme: dark) {
     color: white;
+
+    * {
+      // Only required for Windows, Chrome
+      // https://github.com/sign/translate/issues/54
+      background: black;
+    }
   }
 }
