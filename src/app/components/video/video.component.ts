@@ -6,7 +6,7 @@ import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../base/base.component';
 import {wait} from '../../core/helpers/wait/wait';
-import {PoseVideoFrame} from '../../modules/pose/pose.actions';
+import {LoadPoseEstimationModel, PoseVideoFrame} from '../../modules/pose/pose.actions';
 import {PoseStateModel} from '../../modules/pose/pose.state';
 import {PoseService} from '../../modules/pose/pose.service';
 import {SignWritingStateModel} from '../../modules/sign-writing/sign-writing.state';
@@ -59,6 +59,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.preloadSignWritingFont();
     this.drawChanges();
 
+    this.preloadPoseEstimationModel();
     this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
 
     // @ts-ignore
@@ -157,6 +158,10 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   preloadSignWritingFont(): void {
     this.canvasCtx.font = '100px SuttonSignWritingOneD';
     this.canvasCtx.fillText('Preload SignWriting', 0, 0);
+  }
+
+  preloadPoseEstimationModel(): void {
+    this.store.dispatch(LoadPoseEstimationModel);
   }
 
   drawChanges(): void {

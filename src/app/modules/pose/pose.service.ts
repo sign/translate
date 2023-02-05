@@ -27,7 +27,7 @@ export class PoseService {
 
     await this.holistic.load();
 
-    await this.ga.trace('pose', 'load', () => {
+    await this.ga.trace('pose', 'load', async () => {
       this.model = new this.holistic.Holistic({locateFile: file => `assets/models/holistic/${file}`});
 
       this.model.setOptions({
@@ -35,6 +35,13 @@ export class PoseService {
         modelComplexity: 1,
       });
 
+      // Send an empty frame, to force the mediapipe computation graph to load
+      const frame = document.createElement('canvas');
+      frame.width = 256;
+      frame.height = 256;
+      await this.model.send({image: frame});
+
+      // Track following results
       this.model.onResults(results => {
         for (const callback of this.onResultsCallbacks) {
           callback(results);

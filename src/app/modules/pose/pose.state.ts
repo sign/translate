@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {PoseService} from './pose.service';
-import {PoseVideoFrame, StoreFramePose} from './pose.actions';
+import {LoadPoseEstimationModel, PoseVideoFrame, StoreFramePose} from './pose.actions';
 
 export interface PoseLandmark {
   x: number;
@@ -59,6 +59,11 @@ export class PoseState implements NgxsOnInit {
         })
       );
     });
+  }
+
+  @Action(LoadPoseEstimationModel)
+  async loadPose(): Promise<void> {
+    await this.poseService.load();
   }
 
   @Action(PoseVideoFrame)
