@@ -1,13 +1,16 @@
-# `sign/translate` License
+# License for `sign/translate`
 
-Depending on the type of your legal entity, you are granted permission to use `sign/translate` for your project.
-Individuals, non-profits, and educational institutes are allowed to use `sign/transalte` to translate from and to sign language for free,
-while a company license is required for for-profit organisations.
-This two-tier system was designed to ensure funding for this project while still allowing the source code to be available and the program to be free for most.
-Read below for the exact terms of use.
+The license for `sign/translate` is divided into two tiers, based on the type of your legal entity.
+Individuals, non-profit organizations, and educational institutions are permitted to use `sign/translate` for sign language translation without charge,
+while a separate license is required for for-profit commercial organizations.
 
-- [Free license](#free-license)
-- [Company license](#company-license)
+This licensing model has been designed to provide funding for the development and maintenance of `sign/translate`,
+while still making the source code accessible and the program free for a majority of users.
+
+Please review the following license terms carefully to determine which license applies to your use case.
+
+- [Free License](#free-license)
+- [Commercial License](#commercial-license)
 
 ---
 
@@ -179,8 +182,9 @@ d. Nothing in this Public License constitutes or may be interpreted as a limitat
 
 ---
 
-## Company license
+## Commercial License
 
-You are required to obtain a company license to use `sign/translate` if you are not within the group of entities eligible for a free license.
+The commercial license is required for organizations that do not meet the criteria for the free license.
 
-Contact `license@sign.mt` for additional information.
+Detailed information about the commercial license, including the scope of its usage and the licensing fee, will be provided upon request.
+Please direct all inquiries regarding the commercial license to `license@sign.mt`.

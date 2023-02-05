@@ -8,19 +8,19 @@
 
 Install dependencies locally:
 
-```
+```bash
 npm install
 ```
 
 Run the application:
 
-```
+```bash
 npm start
 ```
 
 Test the application:
 
-```
+```bash
 npm test
 ```
 

@@ -2,9 +2,9 @@
 
 <p align="center">
   <i>
-    Sign Translate is a web-based application for real-time multilingual sign language translation.
+    Revolutionizing Sign Language Communication with Cutting-Edge Real-Time Translation Models.
     <br>
-    Built for desktop and mobile, based on state-of-the-art client side models.
+    Experience Effortless Sign Language Translation on desktop and mobile.
   </i>
 </p>
 
@@ -33,23 +33,22 @@
 
 <p align="center">
   <a href="https://github.com/sign/translate/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/stars/sign/translate" alt="github Stars" />
+    <img src="https://img.shields.io/github/stars/sign/translate" alt="sign/translate github Stars" />
   </a>
   <a href="https://github.com/sign/translate/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/sign/translate" alt="github Forks" />
+    <img src="https://img.shields.io/github/forks/sign/translate" alt="sign/translate github Forks" />
   </a>
   <a href="https://github.com/sign/translate/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/contributors/sign/translate" alt="github Contributors" />
+    <img src="https://img.shields.io/github/contributors/sign/translate" alt="sign/translate github Contributors" />
   </a>
   <a href="https://github.com/sign/translate/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/sign/translate" alt="github Issues" />
+    <img src="https://img.shields.io/github/issues/sign/translate" alt="sign/translate github Issues" />
   </a>
 </p>
 
 <p align="center">
-
   <a href="https://sign.mt" target="_blank">
-    <img src="src/assets/promotional/about/hero.webp" alt="Translation Demo" />
+    <img src="src/assets/promotional/about/hero.webp" alt="Sign Language Translation Demo" />
   </a>
 </p>
 
@@ -57,7 +56,9 @@
 
 ### Want to Help?
 
-You can find our current roadmap/progress on our [project board][project-board], and more clearly in our [wiki][wiki].
+Join us on the journey to revolutionize sign language communication.
+Follow our progress and help shape the future of our project with our [Project Board][project-board],
+and dive deeper into our vision and plans with our [Wiki][wiki].
 
 Want to report a bug, [contribute some code][development-setup], or improve documentation? Excellent!
 Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/sign/translate/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/sign/translate/labels/good%20first%20issue)</kbd>.
