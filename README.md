@@ -70,3 +70,14 @@ Read up on our guidelines for [contributing][contributing] and then check out on
 [contributing]: https://github.com/sign/.github/blob/main/CONTRIBUTING.md
 [project-board]: https://github.com/sign/translate/projects/1
 [development-setup]: DEVELOPMENT.md
+
+### Cite
+
+```bibtex
+@misc{moryossef2023signmt,
+    title={sign.mt: A Web-Based Application for Real-Time Multilingual Sign Language Translation},
+    author={Moryossef, Amit},
+    howpublished={\url{https://sign.mt/}},
+    year={2023}
+}
+```
