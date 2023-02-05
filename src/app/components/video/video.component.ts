@@ -30,7 +30,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
   @ViewChild('stats') statsEl: ElementRef;
-  appRootEl = document.querySelector('app-root');
+  appRootEl = document.querySelector('app-root') ?? document.body;
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
 
