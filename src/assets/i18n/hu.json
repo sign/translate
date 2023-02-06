@@ -27,7 +27,6 @@
       "browse": "Tallózás a számítógépen",
       "title": "Válassz egy videót"
     },
-    "description": "Kétirányú, többnyelvű jelnyelvi fordítóalkalmazás asztali számítógépekre és mobileszközökre",
     "spoken-to-signed": {
       "text": "Beszélt nyelvű szöveg",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Videó generálása"
         }
       }
-    }
+    },
+    "description": "Könnyű jelnyelvi fordítás élvonalbeli valós idejű modellekkel. "
   },
   "landing": {
     "try": "PRÓBÁLJA KI A FORDÍTÓT",

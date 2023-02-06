@@ -27,7 +27,6 @@
       "browse": "Pretraži računar",
       "title": "Odaberite video"
     },
-    "description": "Dvosmjerna višejezična aplikacija za prevođenje znakovnog jezika za desktop i mobilne uređaje",
     "spoken-to-signed": {
       "text": "Tekst govornog jezika",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generisanje video zapisa"
         }
       }
-    }
+    },
+    "description": "Lako prevođenje znakovnog jezika s vrhunskim modelima u stvarnom vremenu. "
   },
   "landing": {
     "try": "Isprobajte Sign Prevodioca",

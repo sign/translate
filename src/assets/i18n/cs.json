@@ -27,7 +27,6 @@
       "browse": "Procházet počítač",
       "title": "Vyberte video"
     },
-    "description": "Obousměrná vícejazyčná aplikace pro překlad znakového jazyka pro počítače a mobilní zařízení",
     "spoken-to-signed": {
       "text": "Text mluveného jazyka",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generování videa"
         }
       }
-    }
+    },
+    "description": "Překlad znakové řeči bez námahy se špičkovými modely v reálném čase. "
   },
   "landing": {
     "try": "VYZKOUŠET PŘEKLADAČ",

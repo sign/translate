@@ -27,7 +27,6 @@
       "browse": "Shfleto kompjuterin tënd",
       "title": "Zgjidhni një video"
     },
-    "description": "Një aplikacion përkthimi shumëgjuhësh i gjuhës së shenjave në dy drejtime për desktop dhe celular",
     "spoken-to-signed": {
       "text": "Teksti i gjuhës së folur",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Gjenerimi i videos"
         }
       }
-    }
+    },
+    "description": "Përkthim i lehtë i gjuhës së shenjave me modele të avancuara në kohë reale. "
   },
   "landing": {
     "try": "PROVO APL. \"PËRKTHE\"",

@@ -27,7 +27,6 @@
       "browse": "I-browse ang imong computer",
       "title": "Pagpili og video"
     },
-    "description": "Usa ka bi-directional multilingual nga sign language nga paghubad nga app para sa desktop ug mobile",
     "spoken-to-signed": {
       "text": "Gisulti nga Pinulongan nga Teksto",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Paghimo og video"
         }
       }
-    }
+    },
+    "description": "Walay Kusog nga Paghubad sa Sign Language uban sa Cutting-Edge Real-Time nga mga Modelo. "
   },
   "landing": {
     "try": "SULAYI ANG TRANSLATE",

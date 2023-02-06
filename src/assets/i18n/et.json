@@ -27,7 +27,6 @@
       "browse": "Sirvi arvutit",
       "title": "Valige video"
     },
-    "description": "Kahesuunaline mitmekeelne viipekeele tõlkerakendus lauaarvutitele ja mobiiltelefonidele",
     "spoken-to-signed": {
       "text": "Kõnekeelne tekst",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Video genereerimine"
         }
       }
-    }
+    },
+    "description": "Lihtne viipekeelte tõlge tipptasemel reaalajas mudelitega. "
   },
   "landing": {
     "try": "PROOVI TÕLGET",

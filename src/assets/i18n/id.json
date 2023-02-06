@@ -27,7 +27,6 @@
       "browse": "Jelajahi komputer",
       "title": "Pilih video"
     },
-    "description": "Aplikasi terjemahan bahasa isyarat multibahasa dua arah untuk desktop dan seluler",
     "spoken-to-signed": {
       "text": "Teks Bahasa Lisan",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Membuat video"
         }
       }
-    }
+    },
+    "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Real-Time Mutakhir. "
   },
   "landing": {
     "try": "COBA TERJEMAHAN",

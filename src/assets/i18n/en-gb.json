@@ -27,7 +27,6 @@
       "browse": "Browse your computer",
       "title": "Choose a video"
     },
-    "description": "A bi-directional multilingual sign language translation app for desktop and mobile",
     "spoken-to-signed": {
       "text": "Spoken Language Text",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generating video"
         }
       }
-    }
+    },
+    "description": "Effortless Sign Language Translation with Cutting-Edge Real-Time Models. Translate Sign Language instantly on desktop and mobile."
   },
   "landing": {
     "try": "Try Translating!",

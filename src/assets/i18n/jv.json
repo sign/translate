@@ -27,7 +27,6 @@
       "browse": "Tlusuri komputer",
       "title": "Pilih video"
     },
-    "description": "Aplikasi terjemahan basa isyarat multi-arah bi-directional kanggo desktop lan seluler",
     "spoken-to-signed": {
       "text": "Teks Basa Jawi",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Nggawe video"
         }
       }
-    }
+    },
+    "description": "Terjemahan Basa Isyarat Tanpa Usaha kanthi Model-Model Wektu Nyata. "
   },
   "landing": {
     "try": "COBA TERJEMAHAN",

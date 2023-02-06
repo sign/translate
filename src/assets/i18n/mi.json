@@ -27,7 +27,6 @@
       "browse": "Pūtirotirotia tō rorohiko",
       "title": "Kōwhiria he ataata"
     },
-    "description": "He taupānga whakamaori reo tohu reo-a-rua mo te papamahi me te pūkoro",
     "spoken-to-signed": {
       "text": "Kuputuhi Reo Korero",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Te whakaputa ataata"
         }
       }
-    }
+    },
+    "description": "Te Whakamaoritanga Reo Waitohu Maamaa me nga Tauira Waa Tuturu. "
   },
   "landing": {
     "try": "WHAKAMĀTAURIA A WHAKAMĀORI",

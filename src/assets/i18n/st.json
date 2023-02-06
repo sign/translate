@@ -27,7 +27,6 @@
       "browse": "Phenya khomphuta ya hao",
       "title": "Khetha video"
     },
-    "description": "Sesebelisoa sa phetolelo ea lipuo tse peli tsa lipuo tsa matsoho bakeng sa komporo ea khomphutha le ea selefouno",
     "spoken-to-signed": {
       "text": "Sengoloa sa Puo e Builoeng",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ho hlahisa video"
         }
       }
-    }
+    },
+    "description": "Phetolelo ea Puo ea Matsoho e sa Lekanyetsoang e nang le Meetso ea Nako ea Sebele ea Cutting-Edge. "
   },
   "landing": {
     "try": "lLEKA HO FETOLELA",

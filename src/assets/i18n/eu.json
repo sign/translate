@@ -27,7 +27,6 @@
       "browse": "Arakatu ordenagailua",
       "title": "Aukeratu bideo bat"
     },
-    "description": "Norabide biko zeinu hizkuntza anitzeko itzulpen aplikazioa mahaigainerako eta mugikorretarako",
     "spoken-to-signed": {
       "text": "Ahozko Hizkuntza Testua",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Bideoa sortzea"
         }
       }
-    }
+    },
+    "description": "Esfortzurik gabeko zeinu hizkuntzaren itzulpena punta-puntako denbora errealeko ereduekin. "
   },
   "landing": {
     "try": "PROBATU TRANSLATE",

@@ -27,7 +27,6 @@
       "browse": "Dhex baadh kombuyuutarkaaga",
       "title": "Dooro muuqaal"
     },
-    "description": "App-ka tarjumaadda luqadaha dhegoolaha ee laba-jiho ah oo loogu talagalay miiska iyo mobilada",
     "spoken-to-signed": {
       "text": "Qoraalka Luuqadda Lagu Hadlo",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Soo saarista muuqaal"
         }
       }
-    }
+    },
+    "description": "Turjumaada Luqadda Calaamadaha oo aan Dedaal lahayn oo leh Qaabab-Waqtiga Dhabta ah ee Goynta "
   },
   "landing": {
     "try": "ISKU DAY TARJUMIN",

@@ -27,7 +27,6 @@
       "browse": "Rùraich an coimpiutair agad",
       "title": "Tagh bhidio"
     },
-    "description": "Aplacaid eadar-theangachadh cànan soidhnidh dà-stiùiridh airson deasg is fòn-làimhe",
     "spoken-to-signed": {
       "text": "Teacs Cànain Labhairt",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "A ' cruthachadh bhidio"
         }
       }
-    }
+    },
+    "description": "Eadar-theangachadh cànan soidhnidh gun oidhirp le modalan fìor-ùine adhartach. "
   },
   "landing": {
     "try": "FEUCH AN t-EADAR-THEANGADAIR",

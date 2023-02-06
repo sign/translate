@@ -27,7 +27,6 @@
       "browse": "Find en fil på din computer",
       "title": "Vælg en video"
     },
-    "description": "En tovejs flersproget tegnsprogsoversættelsesapp til desktop og mobil",
     "spoken-to-signed": {
       "text": "Talt sprog tekst",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generering af video"
         }
       }
-    }
+    },
+    "description": "Ubesværet tegnsprogsoversættelse med banebrydende realtidsmodeller. "
   },
   "landing": {
     "try": "PRØV OVERSÆT",

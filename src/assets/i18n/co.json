@@ -27,7 +27,6 @@
       "browse": "Circà nantu à u to urdinatori",
       "title": "Sceglite un video"
     },
-    "description": "Una app di traduzione bidirezionale in lingua di i segni multilingue per desktop è mobile",
     "spoken-to-signed": {
       "text": "Testu in lingua parlata",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generazione di video"
         }
       }
-    }
+    },
+    "description": "Traduzzione in lingua di i segni senza sforzu cù mudelli di punta in tempu reale. "
   },
   "landing": {
     "try": "ESSAYEZ DE TRADUIRE",

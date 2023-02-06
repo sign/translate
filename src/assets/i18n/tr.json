@@ -27,7 +27,6 @@
       "browse": "Bilgisayarınıza göz atın",
       "title": "Bir video seçin"
     },
-    "description": "Masaüstü ve mobil cihazlar için çift yönlü çok dilli işaret dili çeviri uygulaması",
     "spoken-to-signed": {
       "text": "Konuşulan Dil Metni",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Video oluşturuluyor"
         }
       }
-    }
+    },
+    "description": "Son Teknoloji Gerçek Zamanlı Modellerle Zahmetsiz İşaret Dili Tercümesi. "
   },
   "landing": {
     "try": "ÇEVİRİ'Yİ DENEYİN",

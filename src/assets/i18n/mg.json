@@ -27,7 +27,6 @@
       "browse": "Hitety ny solosainao",
       "title": "Mifidiana video"
     },
-    "description": "Fampiharana fandikana amin'ny teny moana amin'ny fiteny roa tonta ho an'ny desktop sy finday",
     "spoken-to-signed": {
       "text": "Lahatsoratra amin'ny fiteny miteny",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Mamorona video"
         }
       }
-    }
+    },
+    "description": "Fandikana amin'ny tenin'ny tanana tsy misy ezaka be miaraka amin'ny maodely tena misy fotoana. "
   },
   "landing": {
     "try": "ANDRAMO ADIKA",

@@ -27,7 +27,6 @@
       "browse": "Procurar no computador",
       "title": "Escolha um vídeo"
     },
-    "description": "Um aplicativo de tradução de linguagem de sinais multilíngue bidirecional para desktop e dispositivos móveis",
     "spoken-to-signed": {
       "text": "Texto em idioma falado",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Gerando vídeo"
         }
       }
-    }
+    },
+    "description": "Tradução de linguagem de sinais sem esforço com modelos de ponta em tempo real. "
   },
   "landing": {
     "try": "TESTAR O TRADUTOR",

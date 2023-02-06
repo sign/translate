@@ -27,7 +27,6 @@
       "browse": "Blaai deur jou rekenaar",
       "title": "Kies 'n video"
     },
-    "description": "'n Tweerigting veeltalige gebaretaalvertalingstoepassing vir rekenaars en selfone",
     "spoken-to-signed": {
       "text": "Gesproke Taalteks",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Genereer video"
         }
       }
-    }
+    },
+    "description": "Moeitelose gebaretaalvertaling met die nuutste intydse modelle. "
   },
   "landing": {
     "try": "Probeer Sign Vertaal",

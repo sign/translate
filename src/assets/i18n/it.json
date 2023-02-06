@@ -27,7 +27,6 @@
       "browse": "Cerca sul computer",
       "title": "Scegli un video"
     },
-    "description": "Un'app di traduzione della lingua dei segni multilingue bidirezionale per desktop e dispositivi mobili",
     "spoken-to-signed": {
       "text": "Testo in lingua parlata",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generazione video"
         }
       }
-    }
+    },
+    "description": "Traduzione semplificata della lingua dei segni con modelli in tempo reale all'avanguardia. "
   },
   "landing": {
     "try": "PROVA TRADUTTORE",

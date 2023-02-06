@@ -27,7 +27,6 @@
       "browse": "浏览您的计算机",
       "title": "选择一个视频"
     },
-    "description": "适用于桌面和移动设备的双向多语言手语翻译应用程序",
     "spoken-to-signed": {
       "text": "口语文本",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "生成视频"
         }
       }
-    }
+    },
+    "description": "使用尖端实时模型轻松进行手语翻译。"
   },
   "landing": {
     "try": "试用 Sign 翻译",

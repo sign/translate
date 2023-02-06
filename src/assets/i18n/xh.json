@@ -27,7 +27,6 @@
       "browse": "Bhrawza ikhompyutha",
       "title": "Khetha ividiyo"
     },
-    "description": "Isixhobo sokuguqulela ulwimi lwezandla oluphindwe kabini kwi-desktop kunye neselfowuni",
     "spoken-to-signed": {
       "text": "Isicatshulwa solwimi oluthethwayo",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ukuvelisa ividiyo"
         }
       }
-    }
+    },
+    "description": "Ukuguqulela ngolwimi lwezandla olungenamgudu oluneMifuziselo yeXesha lokwenyani le-Cutting-Edge. "
   },
   "landing": {
     "try": "ZAMA UKUGUQULELA",

@@ -27,7 +27,6 @@
       "browse": "Tsvaga pakombiyuta yako",
       "title": "Sarudza vhidhiyo"
     },
-    "description": "A bi-directional yemitauro yakawanda yemutauro wemasaini app yedesktop nenharembozha",
     "spoken-to-signed": {
       "text": "Mutauro Unotaurwa",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Kugadzira vhidhiyo"
         }
       }
-    }
+    },
+    "description": "Kusashanda Kushandura Mutauro Wemasaini neCutting-Edge Real-Time Models. "
   },
   "landing": {
     "try": "Edza Kushandura Nesign",

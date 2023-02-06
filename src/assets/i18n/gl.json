@@ -27,7 +27,6 @@
       "browse": "Buscar no ordenador",
       "title": "Escolle un vídeo"
     },
-    "description": "Unha aplicación de tradución multilingüe bidireccional en lingua de signos para escritorio e móbil",
     "spoken-to-signed": {
       "text": "Texto da lingua falada",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Xerando vídeo"
         }
       }
-    }
+    },
+    "description": "Tradución sen esforzo á lingua de signos con modelos de vangarda en tempo real. "
   },
   "landing": {
     "try": "PROBA O TRADUTOR",

@@ -27,7 +27,6 @@
       "browse": "Tìm tệp trên máy tính của bạn",
       "title": "Chọn một video"
     },
-    "description": "Ứng dụng dịch ngôn ngữ ký hiệu đa ngôn ngữ hai chiều dành cho máy tính để bàn và thiết bị di động",
     "spoken-to-signed": {
       "text": "Văn bản Ngôn ngữ Nói",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Tạo video"
         }
       }
-    }
+    },
+    "description": "Dịch ngôn ngữ ký hiệu dễ dàng với các mô hình thời gian thực tiên tiến. "
   },
   "landing": {
     "try": "THỬ DỊCH",

@@ -27,7 +27,6 @@
       "browse": "Prebrskajte računalnik",
       "title": "Izberite videoposnetek"
     },
-    "description": "Dvosmerna večjezična aplikacija za prevajanje znakovnega jezika za namizne in mobilne naprave",
     "spoken-to-signed": {
       "text": "Besedilo v govorjenem jeziku",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ustvarjanje videa"
         }
       }
-    }
+    },
+    "description": "Enostavno prevajanje znakovnega jezika z najsodobnejšimi modeli v realnem času. "
   },
   "landing": {
     "try": "PREIZKUSITE PREVAJALNIK",

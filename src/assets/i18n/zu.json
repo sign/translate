@@ -27,7 +27,6 @@
       "browse": "Phequlula ikhompyutha yakho",
       "title": "Khetha ividiyo"
     },
-    "description": "Uhlelo lokusebenza lokuhumusha ulimi lwezandla oluneziqondiso ezimbili lwedeskithophu neselula",
     "spoken-to-signed": {
       "text": "Umbhalo Wolimi Olukhulunywayo",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ikhiqiza ividiyo"
         }
       }
-    }
+    },
+    "description": "Ukuhunyushwa Kolimi Lwezandla Okungenamzamo Okunamamodeli Asesikhathini Sangempela. "
   },
   "landing": {
     "try": "ZAMA I-TRANSLATE",

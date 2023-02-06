@@ -27,7 +27,6 @@
       "browse": "Naršykite kompiuteryje",
       "title": "Pasirinkite vaizdo įrašą"
     },
-    "description": "Dviejų krypčių daugiakalbė gestų kalbos vertimo programa, skirta staliniams kompiuteriams ir mobiliesiems telefonams",
     "spoken-to-signed": {
       "text": "Šnekamosios kalbos tekstas",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Kuriamas vaizdo įrašas"
         }
       }
-    }
+    },
+    "description": "Nesudėtingas vertimas į gestų kalbą naudojant pažangiausius realiojo laiko modelius. "
   },
   "landing": {
     "try": "IŠBANDYKITE VERTĖJĄ",

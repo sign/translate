@@ -27,7 +27,6 @@
       "browse": "Chitani burauzi kompyuta",
       "title": "Sankhani kanema"
     },
-    "description": "Pulogalamu yomasulira zinenero zambiri m'zinenero zambiri zamakompyuta ndi mafoni",
     "spoken-to-signed": {
       "text": "Mawu a Chinenero Cholankhulidwa",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Kupanga kanema"
         }
       }
-    }
+    },
+    "description": "Kumasulira Kosavuta kwa Chinenero Chamanja ndi Ma Models a Nthawi Yeniyeni. "
   },
   "landing": {
     "try": "TAYESANI ZOMASULIRA",

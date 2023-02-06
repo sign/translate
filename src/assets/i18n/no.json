@@ -27,7 +27,6 @@
       "browse": "Bla gjennom datamaskinen din",
       "title": "Velg en video"
     },
-    "description": "En toveis flerspråklig tegnspråkoversettelsesapp for datamaskin og mobil",
     "spoken-to-signed": {
       "text": "Muntlig språktekst",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Genererer video"
         }
       }
-    }
+    },
+    "description": "Uanstrengt tegnspråkoversettelse med banebrytende sanntidsmodeller. "
   },
   "landing": {
     "try": "PRØV OVERSETTER",

@@ -27,7 +27,6 @@
       "browse": "Pārlūkot savu datoru",
       "title": "Izvēlieties videoklipu"
     },
-    "description": "Divvirzienu daudzvalodu zīmju valodas tulkošanas lietotne galddatoriem un mobilajām ierīcēm",
     "spoken-to-signed": {
       "text": "Runas valodas teksts",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Notiek video ģenerēšana"
         }
       }
-    }
+    },
+    "description": "Vienkārša zīmju valodas tulkošana ar moderniem reāllaika modeļiem. "
   },
   "landing": {
     "try": "IZMĒĢINIET TULKOTĀJU",

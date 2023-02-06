@@ -27,7 +27,6 @@
       "browse": "Kompüterinizə nəzər salın",
       "title": "Video seçin"
     },
-    "description": "Masaüstü və mobil cihazlar üçün iki istiqamətli çoxdilli işarə dili tərcümə proqramı",
     "spoken-to-signed": {
       "text": "Danışıq Dili Mətni",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Videonun yaradılması"
         }
       }
-    }
+    },
+    "description": "Ən müasir real vaxt modelləri ilə zəhmətsiz işarə dili tərcüməsi. "
   },
   "landing": {
     "try": "TƏRCÜMƏNİ SINAYIN",

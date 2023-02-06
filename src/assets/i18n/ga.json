@@ -27,7 +27,6 @@
       "browse": "Brabhsáil do ríomhaire",
       "title": "Roghnaigh físeán"
     },
-    "description": "Aip déthreorach ilteangach aistriúcháin teanga chomharthaíochta do ríomhaire deisce agus do shoghluaiste",
     "spoken-to-signed": {
       "text": "Téacs Teanga Labhartha",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Físeán a ghiniúint"
         }
       }
-    }
+    },
+    "description": "Aistriúchán Teanga Chomharthaíochta Gan stró le Múnlaí Ceannródaíocha Fíor-Ama. "
   },
   "landing": {
     "try": "BAIN TRIAIL AS AISTRIÚCHÁN",

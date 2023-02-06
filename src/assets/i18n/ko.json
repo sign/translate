@@ -27,7 +27,6 @@
       "browse": "컴퓨터에서 찾아보기",
       "title": "동영상 선택"
     },
-    "description": "데스크톱 및 모바일용 양방향 다국어 수화 번역 앱",
     "spoken-to-signed": {
       "text": "구어체 텍스트",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "비디오 생성"
         }
       }
-    }
+    },
+    "description": "최첨단 실시간 모델을 통한 손쉬운 수화 번역. "
   },
   "landing": {
     "try": "번역 사용해 보기",

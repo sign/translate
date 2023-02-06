@@ -27,7 +27,6 @@
       "browse": "Leita í tölvunni",
       "title": "Veldu myndband"
     },
-    "description": "Tvíátta fjöltyngt táknmálsþýðingarforrit fyrir skjáborð og farsíma",
     "spoken-to-signed": {
       "text": "Talað tungumál texti",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Búa til myndband"
         }
       }
-    }
+    },
+    "description": "Áreynslulaus táknmálsþýðing með nýjustu rauntímalíkönum. "
   },
   "landing": {
     "try": "PRÓFAÐU AÐ ÞÝÐA",

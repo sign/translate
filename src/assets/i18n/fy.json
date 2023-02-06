@@ -27,7 +27,6 @@
       "browse": "Op dyn kompjûter sykje",
       "title": "Kies in fideo"
     },
-    "description": "In bidirectionele meartalige oersettingsapp foar gebeartetaal foar buroblêd en mobyl",
     "spoken-to-signed": {
       "text": "Sprektaal Tekst",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "It generearjen fan fideo"
         }
       }
-    }
+    },
+    "description": "Moeiteleaze oersetting fan gebeartetaal mei moderne realtime modellen. "
   },
   "landing": {
     "try": "BESYKJE TRANSLATE",

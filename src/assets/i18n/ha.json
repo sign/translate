@@ -27,7 +27,6 @@
       "browse": "Binciki kwamfutarka",
       "title": "Zaɓi bidiyo"
     },
-    "description": "Ƙa'idar fassarar harshe na alamar harshe guda biyu don tebur da wayar hannu",
     "spoken-to-signed": {
       "text": "Rubutun Harshen Magana",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Samar da bidiyo"
         }
       }
-    }
+    },
+    "description": "Fassarar Harshen Alamu mara Ƙoƙari tare da Samfuran Yanke-Edge na Gaskiya. "
   },
   "landing": {
     "try": "GWADA FASSARA",

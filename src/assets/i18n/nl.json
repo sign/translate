@@ -27,7 +27,6 @@
       "browse": "Browsen op uw computer",
       "title": "Kies een video"
     },
-    "description": "Een bidirectionele meertalige app voor gebarentaalvertaling voor desktop en mobiel",
     "spoken-to-signed": {
       "text": "Tekst in gesproken taal",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Video genereren"
         }
       }
-    }
+    },
+    "description": "Moeiteloze gebarentaalvertaling met geavanceerde real-time modellen. "
   },
   "landing": {
     "try": "PROBEER TRANSLATE",

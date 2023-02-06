@@ -27,7 +27,6 @@
       "browse": "Pori eich cyfrifiadur",
       "title": "Dewiswch fideo"
     },
-    "description": "Ap cyfieithu iaith arwyddion dwy-gyfeiriadol ar gyfer bwrdd gwaith a ffôn symudol",
     "spoken-to-signed": {
       "text": "Testun Iaith Lafar",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Cynhyrchu fideo"
         }
       }
-    }
+    },
+    "description": "Cyfieithu Iaith Arwyddion Ddiymdrech gyda Modelau Amser Real blaengar. "
   },
   "landing": {
     "try": "Rhowch Gynnig Ar Sign Cyfieithu",

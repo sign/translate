@@ -27,7 +27,6 @@
       "browse": "Semak imbas komputer anda",
       "title": "Pilih video"
     },
-    "description": "Apl terjemahan bahasa isyarat berbilang hala dua arah untuk desktop dan mudah alih",
     "spoken-to-signed": {
       "text": "Teks Bahasa Pertuturan",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Menjana video"
         }
       }
-    }
+    },
+    "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Masa Nyata Termaju. "
   },
   "landing": {
     "try": "CUBA TERJEMAH",

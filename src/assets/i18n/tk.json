@@ -27,7 +27,6 @@
       "browse": "Выбрать на компьютере",
       "title": "Wideo saýlaň"
     },
-    "description": "Iş stoly we ykjam üçin iki taraplaýyn köp dilli alamat dilini terjime etmek programmasy",
     "spoken-to-signed": {
       "text": "Gepleşik diliniň teksti",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Wideo döretmek"
         }
       }
-    }
+    },
+    "description": "“Cutting-Edge” real wagt modelleri bilen yhlasly dil diliniň terjimesi. "
   },
   "landing": {
     "try": "TERJIME EDIP GÖRÜŇ",

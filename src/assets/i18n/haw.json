@@ -27,7 +27,6 @@
       "browse": "Browse your computer",
       "title": "E koho i kahi wikiō"
     },
-    "description": "He polokalamu unuhi ʻōlelo hōʻailona ʻelua ʻaoʻao no ka papapihi a me ka paʻa lima",
     "spoken-to-signed": {
       "text": "Palapala ʻŌlelo Haʻiʻōlelo",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Hoʻopuka wikiō"
         }
       }
-    }
+    },
+    "description": "ʻO ka unuhi ʻōlelo hōʻailona ʻoluʻolu me nā hiʻohiʻona ʻokiʻoki i ka manawa maoli. "
   },
   "landing": {
     "try": "E HOʻOPĀ",

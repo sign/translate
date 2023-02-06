@@ -27,7 +27,6 @@
       "browse": "Mag-browse sa computer mo",
       "title": "Pumili ng video"
     },
-    "description": "Isang bi-directional multilingual sign language translation app para sa desktop at mobile",
     "spoken-to-signed": {
       "text": "Teksto ng Binigkas na Wika",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Bumubuo ng video"
         }
       }
-    }
+    },
+    "description": "Walang Kahirap-hirap na Pagsasalin ng Sign Language sa Mga Cutting-Edge na Real-Time na Modelo. "
   },
   "landing": {
     "try": "SUBUKAN ANG TRANSLATE",

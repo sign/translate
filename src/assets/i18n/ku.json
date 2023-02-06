@@ -27,7 +27,6 @@
       "browse": "Bilgisayarınıza göz atın",
       "title": "Vîdyoyek hilbijêrin"
     },
-    "description": "Serlêdanek wergera zimanê îşaretek pirzimanî ya du-alî ji bo sermaseya û mobîl",
     "spoken-to-signed": {
       "text": "Nivîsara Ziman Axaftinê",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Vîdyoyê diafirîne"
         }
       }
-    }
+    },
+    "description": "Wergera Zimanê Îşaretê ya Bêhêz bi Modelên Dem-Rast ên Berbiçav. "
   },
   "landing": {
     "try": "WERGERÊ BICERIBÎNE",

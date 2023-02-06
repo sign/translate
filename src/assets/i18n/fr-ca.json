@@ -27,7 +27,6 @@
       "browse": "Parcourir les fichiers sur votre ordinateur",
       "title": "Choisissez une vidéo"
     },
-    "description": "Une application de traduction en langue des signes multilingue bidirectionnelle pour ordinateur et mobile",
     "spoken-to-signed": {
       "text": "Texte en langue parlée",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Génération de vidéo"
         }
       }
-    }
+    },
+    "description": "Traduction en langue des signes sans effort avec des modèles en temps réel de pointe. "
   },
   "landing": {
     "try": "Essayer Sign Traduction",

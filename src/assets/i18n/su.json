@@ -27,7 +27,6 @@
       "browse": "Kotéktak komputer anjeun",
       "title": "Pilih pidéo"
     },
-    "description": "Aplikasi tarjamahan basa isyarat multi-arah dua arah pikeun desktop sareng mobile",
     "spoken-to-signed": {
       "text": "Téks Basa Sunda",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ngahasilkeun video"
         }
       }
-    }
+    },
+    "description": "Tarjamahan Basa Isyarat Effortless kalawan Modél Real-Time Motong-Tepi. "
   },
   "landing": {
     "try": "COBA TARJAMAHKEUN",

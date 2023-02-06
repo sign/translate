@@ -27,7 +27,6 @@
       "browse": "Selaa tietokonetta",
       "title": "Valitse video"
     },
-    "description": "Kaksisuuntainen monikielinen viittomakielen käännössovellus pöytäkoneille ja mobiililaitteille",
     "spoken-to-signed": {
       "text": "Puhutun kielen teksti",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Luodaan videota"
         }
       }
-    }
+    },
+    "description": "Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. "
   },
   "landing": {
     "try": "KOKEILE KÄÄNTÄJÄÄ",

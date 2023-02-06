@@ -27,7 +27,6 @@
       "browse": "Computer durchsuchen",
       "title": "Wählen Sie ein Video aus"
     },
-    "description": "Eine bidirektionale mehrsprachige Gebärdensprachübersetzungs-App für Desktop und Handy",
     "spoken-to-signed": {
       "text": "Text in gesprochener Sprache",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Video generieren"
         }
       }
-    }
+    },
+    "description": "Mühelose Übersetzung in Gebärdensprache mit modernsten Echtzeitmodellen. "
   },
   "landing": {
     "try": "ÜBERSETZER TESTEN",

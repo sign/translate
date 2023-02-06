@@ -27,7 +27,6 @@
       "browse": "Cerca a l'ordinador",
       "title": "Tria un vídeo"
     },
-    "description": "Una aplicació de traducció multilingüe bidireccional en llengua de signes per a ordinadors i mòbils",
     "spoken-to-signed": {
       "text": "Text en llengua parlada",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generació de vídeo"
         }
       }
-    }
+    },
+    "description": "Traducció sense esforç de la llengua de signes amb models d'avantguarda en temps real. "
   },
   "landing": {
     "try": "PROVEU EL TRADUCTOR",

@@ -27,7 +27,6 @@
       "browse": "Ibbrawżja l-kompjuter tiegħek",
       "title": "Agħżel vidjo"
     },
-    "description": "App bi-direzzjonali tat-traduzzjoni tal-lingwa tas-sinjali multilingwi għal desktop u mobbli",
     "spoken-to-signed": {
       "text": "Test tal-Lingwa Mitkellma",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ġenerazzjoni tal-vidjo"
         }
       }
-    }
+    },
+    "description": "Traduzzjoni tal-Lingwa tas-Sinjali mingħajr Sforz b'Mudelli ta' l-Avanti f'Ħin Reali. "
   },
   "landing": {
     "try": "IPPROVA ITTRADUĊI",

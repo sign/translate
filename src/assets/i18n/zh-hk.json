@@ -27,7 +27,6 @@
       "browse": "瀏覽你的電腦",
       "title": "選擇一個視頻"
     },
-    "description": "適用於桌面和移動設備的雙向多語言手語翻譯應用程序",
     "spoken-to-signed": {
       "text": "口語文本",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "生成視頻"
         }
       }
-    }
+    },
+    "description": "使用尖端實時模型輕鬆進行手語翻譯。"
   },
   "landing": {
     "try": "試用「翻譯」",

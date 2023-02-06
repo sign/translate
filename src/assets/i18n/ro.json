@@ -27,7 +27,6 @@
       "browse": "Răsfoiți pe computer",
       "title": "Alegeți un videoclip"
     },
-    "description": "O aplicație de traducere bidirecțională în limbajul semnelor multilingv pentru desktop și mobil",
     "spoken-to-signed": {
       "text": "Text în limba vorbită",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generare video"
         }
       }
-    }
+    },
+    "description": "Traducere fără efort în limbajul semnelor cu modele de ultimă oră în timp real. "
   },
   "landing": {
     "try": "ÎNCERCAȚI TRADUCERE",

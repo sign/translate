@@ -27,7 +27,6 @@
       "browse": "Navige sou òdinatè w lan",
       "title": "Chwazi yon videyo"
     },
-    "description": "Yon aplikasyon tradiksyon lang siy bi-direksyon miltiling pou Desktop ak mobil",
     "spoken-to-signed": {
       "text": "Tèks langaj pale",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Jenere videyo"
         }
       }
-    }
+    },
+    "description": "Tradiksyon lang siy san efò ak modèl dènye kri an tan reyèl. "
   },
   "landing": {
     "try": "ESEYE TRANSLATE",

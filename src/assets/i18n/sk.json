@@ -27,7 +27,6 @@
       "browse": "Prehliadať počítač",
       "title": "Vyberte video"
     },
-    "description": "Obojsmerná viacjazyčná aplikácia na preklad posunkovej reči pre stolné počítače a mobilné zariadenia",
     "spoken-to-signed": {
       "text": "Text v hovorenom jazyku",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generovanie videa"
         }
       }
-    }
+    },
+    "description": "Preklad posunkovej reči bez námahy so špičkovými modelmi v reálnom čase. "
   },
   "landing": {
     "try": "VYSKÚŠAŤ PREKLADAČ",

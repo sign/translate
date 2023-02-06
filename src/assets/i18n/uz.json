@@ -27,7 +27,6 @@
       "browse": "Kompyuter ichidan tanlash",
       "title": "Videoni tanlang"
     },
-    "description": "Ish stoli va mobil qurilmalar uchun ikki yoʻnalishli koʻp tilli imo-ishora tilini tarjima qilish ilovasi",
     "spoken-to-signed": {
       "text": "Og'zaki til matni",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Video yaratish"
         }
       }
-    }
+    },
+    "description": "Haqiqiy vaqtda zamonaviy modellar bilan imo-ishora tilini qiyinchiliksiz tarjima qilish. "
   },
   "landing": {
     "try": "SINAB KO‘RISH",

@@ -27,7 +27,6 @@
       "browse": "Ṣàwákiri kọ̀npútà rẹ",
       "title": "Yan fidio kan"
     },
-    "description": "Ìṣàfilọ́lẹ̀ ìtúmọ̀ èdè àfọwọ́sí onísọ̀rọ̀ onísọ̀rọ̀ onísọ̀nà méjì-méjì kan fún tabili àti alágbèéká",
     "spoken-to-signed": {
       "text": "Ọrọ Èdè Sọ",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Ti o npese fidio"
         }
       }
-    }
+    },
+    "description": "Itumọ Èdè Adití Lọ́nà Lailakitiyan pẹlu Awọn awoṣe Ige Gige Gidigidi. "
   },
   "landing": {
     "try": "GBÌYÀNJÚ TRANSLATE",

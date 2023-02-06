@@ -27,7 +27,6 @@
       "browse": "Przeglądaj komputer",
       "title": "Wybierz film"
     },
-    "description": "Dwukierunkowa wielojęzyczna aplikacja do tłumaczenia języka migowego na komputery i urządzenia mobilne",
     "spoken-to-signed": {
       "text": "Tekst w języku mówionym",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Generowanie wideo"
         }
       }
-    }
+    },
+    "description": "Bezproblemowe tłumaczenie na język migowy z najnowocześniejszymi modelami czasu rzeczywistego. "
   },
   "landing": {
     "try": "WYPRÓBUJ TŁUMACZA",

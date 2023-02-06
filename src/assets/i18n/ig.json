@@ -27,7 +27,6 @@
       "browse": "Lenye anya na kọmputa gị",
       "title": "Họrọ vidiyo"
     },
-    "description": "Ngwa ntụgharị asụsụ ogbi asụsụ ọtụtụ asụsụ abụọ maka desktọpụ na mkpanaka",
     "spoken-to-signed": {
       "text": "Ederede Asụsụ Asụsụ",
       "actions": {
@@ -41,7 +40,8 @@
           "generating": "Na-emepụta vidiyo"
         }
       }
-    }
+    },
+    "description": "Ntụgharị asụsụ ogbi na-enweghị mgbakasị ike na ụdị igbu oge. "
   },
   "landing": {
     "try": "NWAA TỤGHARỊA ASỤSỤ",
