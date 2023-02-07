@@ -1,5 +1,5 @@
 <ng-container *transloco="let t; read: 'text-to-speech'">
-  <ng-container *ngIf="text">
+  <ng-container *ngIf="text.trim()">
     <!-- As a single button it is uglier code, but nice ripple animation -->
     <button
       mat-icon-button
