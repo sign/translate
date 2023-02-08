@@ -28,6 +28,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
         tap(async () => {
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
           await this.startRecording(poseCanvas as any);
+          pose.currentTime = 0; // Force time back to 0
 
           // Some browsers videos can't have a transparent background
           const isTransparencySupported = 'chrome' in window; // transparency is currently not supported in firefox and safari

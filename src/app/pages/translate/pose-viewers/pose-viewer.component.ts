@@ -23,6 +23,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   // Using cache and MediaRecorder for older browsers, and safari
   mimeTypes = ['video/webm;codecs:vp9', 'video/webm;codecs:vp8', 'video/webm', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
+  mediaSubscriptions: Subscription[] = [];
 
   // Use a writeable stream on supported browsers
   streamWriter: WritableStreamDefaultWriter;
@@ -78,24 +79,22 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       return;
     }
 
-    fromEvent(this.mediaRecorder, 'dataavailable')
-      .pipe(
-        tap((event: BlobEvent) => recordedChunks.push(event.data)),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
+    const dataAvailableEvent = fromEvent(this.mediaRecorder, 'dataavailable').pipe(
+      tap((event: BlobEvent) => recordedChunks.push(event.data)),
+      takeUntil(this.ngUnsubscribe)
+    );
+    this.mediaSubscriptions.push(dataAvailableEvent.subscribe());
 
-    fromEvent(this.mediaRecorder, 'stop')
-      .pipe(
-        tap(() => {
-          stream.getTracks().forEach(track => track.stop());
-          const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
-          const url = URL.createObjectURL(blob);
-          this.setVideo(url);
-        }),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
+    const stopEvent = fromEvent(this.mediaRecorder, 'stop').pipe(
+      tap(() => {
+        stream.getTracks().forEach(track => track.stop());
+        const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
+        const url = URL.createObjectURL(blob);
+        this.setVideo(url);
+      }),
+      takeUntil(this.ngUnsubscribe)
+    );
+    this.mediaSubscriptions.push(stopEvent.subscribe());
 
     const duration = this.poseEl.nativeElement.duration * 1000;
     this.mediaRecorder.start(duration);
@@ -156,6 +155,11 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
     this.cache = [];
     this.frameIndex = 0;
+
+    for (const subscription of this.mediaSubscriptions) {
+      subscription.unsubscribe();
+    }
+    this.mediaSubscriptions = [];
 
     // Reset media recorder
     if (this.mediaRecorder) {

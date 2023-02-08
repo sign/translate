@@ -164,17 +164,14 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(SetSignedLanguageVideo)
   async setSignedLanguageVideo(
-    {patchState, dispatch}: StateContext<TranslateStateModel>,
+    {patchState}: StateContext<TranslateStateModel>,
     {url}: SetSignedLanguageVideo
   ): Promise<void> {
     patchState({signedLanguageVideo: url});
   }
 
   @Action(SetSignWritingText)
-  async setSignWritingText(
-    {patchState, dispatch}: StateContext<TranslateStateModel>,
-    {text}: SetSignWritingText
-  ): Promise<void> {
+  async setSignWritingText({patchState}: StateContext<TranslateStateModel>, {text}: SetSignWritingText): Promise<void> {
     // signNormalize only works after the SignWriting font is loaded
     await SignWritingService.loadFonts();
     await SignWritingService.cssLoaded();
