@@ -5,6 +5,13 @@ mat-toolbar {
     position: sticky;
     top: 0;
     z-index: 2;
+
+    @media #{$mat-lt-md} {
+      nav,
+      a {
+        display: none;
+      }
+    }
   }
 
   nav {
@@ -13,11 +20,6 @@ mat-toolbar {
   }
 
   @media #{$mat-lt-md} {
-    nav,
-    a {
-      display: none;
-    }
-
     span {
       flex: 1 1 auto;
     }
@@ -40,6 +42,16 @@ mat-toolbar {
 
     @media #{$mat-lt-md} {
       display: unset;
+    }
+  }
+}
+
+:host ::ng-deep {
+  .cards-container {
+    display: flex;
+    gap: 2rem;
+    @media #{$mat-lt-md} {
+      flex-direction: column;
     }
   }
 }

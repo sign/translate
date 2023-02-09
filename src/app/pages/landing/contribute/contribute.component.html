@@ -1,1 +1,27 @@
-<p>contribute works!</p>
+<div class="container">
+  <h1>Join Our Efforts</h1>
+  <p>
+    Our sign language translation app is open source and always improving, but we need your help! By contributing to the
+    project, you can help make the app more accessible to more users.
+  </p>
+
+  <div class="cards-container">
+    <mat-card *ngFor="let card of cards">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>{{ card.icon }}</mat-icon>
+          {{ card.title }}</mat-card-title
+        >
+        <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ card.content }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button [href]="card.action.url" target="_blank">
+          {{ card.action.text }}
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

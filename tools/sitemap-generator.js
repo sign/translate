@@ -6,13 +6,19 @@ const now = new Date();
 const baseUrls = [
   '/',
   '/about',
-  '/about/languages', //'/about/contribute', '/about/tools',
-  // '/legal/terms', '/legal/privacy', '/legal/licenses'
+  // '/about/tools',
+  // '/legal/terms', '/legal/privacy',
+];
+
+const additionalUrls = [
+  '/about/languages', // TODO move to baseUrls once translated
+  '/about/contribute', // TODO move to baseUrls once translated
+  '/legal/licenses', // TODO move to baseUrls once translated
 ];
 
 const baseDir = __dirname + `${path.sep}..${path.sep}`;
 
-const urls = [...baseUrls];
+const urls = [...baseUrls, ...additionalUrls];
 
 // Add language urls
 const langsDir = `${baseDir}src${path.sep}assets${path.sep}i18n`;

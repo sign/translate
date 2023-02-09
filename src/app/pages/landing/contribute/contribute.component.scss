@@ -1,0 +1,18 @@
+@import '../../../../theme/variables';
+
+:host {
+  padding: 50px;
+  display: block;
+}
+
+.cards-container {
+  mat-card {
+    flex: 1;
+  }
+
+  mat-card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+}

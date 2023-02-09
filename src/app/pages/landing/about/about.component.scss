@@ -22,13 +22,3 @@
 app-stores {
   text-align: center;
 }
-
-:host ::ng-deep {
-  .cards-container {
-    display: flex;
-    gap: 2rem;
-    @media #{$mat-lt-md} {
-      flex-direction: column;
-    }
-  }
-}
