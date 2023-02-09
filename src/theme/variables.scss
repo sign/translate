@@ -34,7 +34,7 @@ $app-dark-theme: mat.define-dark-theme(
 $mat-xs: 'screen and (max-width: 599px)';
 $mat-sm: 'screen and (min-width: 600px) and (max-width: 959px)';
 $mat-md: 'screen and (min-width: 960px) and (max-width: 1279px)';
-$mat-lg: 'screen and (min-width: 1280px) and (max-width: 1919px)';
+$mat-lg: 'screen and (min-width: 1200px) and (max-width: 1919px)';
 $mat-xl: 'screen and (min-width: 1920px) and (max-width: 5000px)';
 $mat-lt-sm: 'screen and (max-width: 599px)';
 $mat-lt-md: 'screen and (max-width: 959px)';
@@ -42,5 +42,5 @@ $mat-lt-lg: 'screen and (max-width: 1279px)';
 $mat-lt-xl: 'screen and (max-width: 1919px)';
 $mat-gt-xs: 'screen and (min-width: 600px)';
 $mat-gt-sm: 'screen and (min-width: 960px)';
-$mat-gt-md: 'screen and (min-width: 1280px)';
+$mat-gt-md: 'screen and (min-width: 1200px)';
 $mat-gt-xl: 'screen and (min-width: 1920px)';

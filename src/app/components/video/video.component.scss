@@ -4,7 +4,6 @@
   position: relative;
 
   color: white;
-  text-align: center;
   align-items: center;
   overflow: hidden;
 
@@ -13,6 +12,7 @@
 
 p {
   margin: auto;
+  text-align: center;
   font-size: 36px;
   line-height: 48px;
 }
@@ -20,7 +20,6 @@ p {
 #video-container {
   height: 100%;
   overflow: hidden;
-  transform: scaleX(-1);
 
   video {
     display: none;

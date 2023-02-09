@@ -135,7 +135,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
       const width = Math.min(bbox.width, documentBbox.width);
       const scale = width / this.canvasEl.nativeElement.width;
-      this.canvasEl.nativeElement.style.transform = `scale(${scale})`;
+      this.canvasEl.nativeElement.style.transform = `scale(-${scale}, ${scale}) translateX(-100%)`;
 
       // Set parent element height
       this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';
