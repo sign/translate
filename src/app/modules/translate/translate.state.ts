@@ -19,10 +19,8 @@ import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/vi
 import {EMPTY, Observable} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
-import {signNormalize} from '@sutton-signwriting/font-ttf/fsw/fsw';
 import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
-import {blobToBase64} from 'base64-blob';
 import {SignWritingTranslationService} from './signwriting-translation.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
@@ -176,10 +174,12 @@ export class TranslateState implements NgxsOnInit {
     await SignWritingService.loadFonts();
     await SignWritingService.cssLoaded();
 
-    const signWriting: string[] = text.map(sign => {
-      const box = sign.startsWith('M') ? sign : 'M500x500' + sign;
-      return signNormalize(box);
-    });
+    const signWriting: string[] = await Promise.all(
+      text.map(sign => {
+        const box = sign.startsWith('M') ? sign : 'M500x500' + sign;
+        return SignWritingService.normalizeFSW(box);
+      })
+    );
     patchState({signWriting});
   }
 
@@ -234,14 +234,18 @@ export class TranslateState implements NgxsOnInit {
 
   async shareNative(file: File) {
     // Save video to file system
-    const {Directory, Filesystem} = await import('@capacitor/filesystem');
+    const {Directory, Filesystem} = await import(
+      /* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem'
+    );
+    const {blobToBase64} = await import(/* webpackChunkName: "base64-blob" */ 'base64-blob');
+
     const data = await blobToBase64(file);
     const fileOptions = {directory: Directory.Cache, path: 'video.mp4'};
     await Filesystem.writeFile({...fileOptions, data});
     const {uri} = await Filesystem.getUri(fileOptions);
 
     // Share video
-    const {Share} = await import('@capacitor/share');
+    const {Share} = await import(/* webpackChunkName: "@capacitor/share" */ '@capacitor/share');
     await Share.share({url: uri});
   }
 

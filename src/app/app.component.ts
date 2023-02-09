@@ -33,7 +33,9 @@ export class AppComponent implements AfterViewInit {
 
   async ngAfterViewInit() {
     if (Capacitor.isNativePlatform()) {
-      const {SplashScreen} = await import('@capacitor/splash-screen');
+      const {SplashScreen} = await import(
+        /* webpackChunkName: "@capacitor/splash-screen" */ '@capacitor/splash-screen'
+      );
       await SplashScreen.hide();
     }
   }

@@ -22,7 +22,7 @@ export class SignWritingTranslationService {
     if (this.worker) {
       return;
     }
-    const {createBergamotWorker} = await import('@sign-mt/browsermt');
+    const {createBergamotWorker} = await import(/* webpackChunkName: "@sign-mt/browsermt" */ '@sign-mt/browsermt');
     this.worker = createBergamotWorker('/browsermt/worker.js');
 
     await this.worker.importBergamotWorker('bergamot-translator-worker.js', 'bergamot-translator-worker.wasm');

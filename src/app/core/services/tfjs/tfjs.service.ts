@@ -1,4 +1,4 @@
-import * as tf from '@tensorflow/tfjs';
+import type * as tf from '@tensorflow/tfjs';
 import {Injectable} from '@angular/core';
 import {loadTFDS} from './tfjs.loader';
 

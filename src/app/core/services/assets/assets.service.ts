@@ -238,13 +238,17 @@ export class AssetsService {
   }
 
   async deleteCapacitorGetFileUri(path: string) {
-    const {Directory, Filesystem} = await import('@capacitor/filesystem');
+    const {Directory, Filesystem} = await import(
+      /* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem'
+    );
     const fileOptions = {directory: Directory.External, path};
     await Filesystem.deleteFile(fileOptions);
   }
 
   async capacitorGetFileUri(path: string, download: CallableFunction, downloadDone: CallableFunction) {
-    const {Directory, Filesystem} = await import('@capacitor/filesystem');
+    const {Directory, Filesystem} = await import(
+      /* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem'
+    );
 
     const fileOptions = {directory: Directory.External, path};
     try {

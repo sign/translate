@@ -1,10 +1,9 @@
-import {Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {BaseComponent} from '../../../components/base/base.component';
 import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
-import {defineCustomElements as defineCustomElementsPoseViewer} from 'pose-viewer/loader';
 
 interface CanvasElement extends HTMLCanvasElement {
   captureStream(frameRate?: number): MediaStream;
@@ -17,7 +16,7 @@ const BPS = 1_000_000_000; // 1GBps, to act as infinity
   template: ``,
   styles: [],
 })
-export abstract class BasePoseViewerComponent extends BaseComponent implements OnDestroy {
+export abstract class BasePoseViewerComponent extends BaseComponent implements OnInit, OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
   // Using cache and MediaRecorder for older browsers, and safari
@@ -36,11 +35,19 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
   protected constructor(protected store: Store) {
     super();
+  }
 
+  async ngOnInit() {
+    await this.definePoseViewerElement();
+  }
+
+  async definePoseViewerElement() {
     // Load the `pose-viewer` custom element
     if (!BasePoseViewerComponent.isCustomElementDefined) {
-      defineCustomElementsPoseViewer().then().catch();
       BasePoseViewerComponent.isCustomElementDefined = true;
+
+      const {defineCustomElements} = await import(/* webpackChunkName: "pose-viewer" */ 'pose-viewer/loader');
+      await defineCustomElements();
     }
   }
 

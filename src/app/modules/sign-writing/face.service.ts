@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Vector2, Vector3} from 'three';
+import type {Vector2, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
-import {LayersModel} from '@tensorflow/tfjs-layers';
-import {Tensor} from '@tensorflow/tfjs';
+import type {LayersModel} from '@tensorflow/tfjs-layers';
+import type {Tensor} from '@tensorflow/tfjs';
 import {PoseNormalizationService} from '../pose/pose-normalization.service';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';

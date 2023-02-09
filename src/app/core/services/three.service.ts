@@ -1,4 +1,4 @@
-import * as three from 'three';
+import type * as three from 'three';
 import {Injectable} from '@angular/core';
 
 @Injectable({

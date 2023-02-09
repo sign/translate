@@ -50,7 +50,9 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
         SignWritingService.loadFonts().then().catch();
 
         // Load the SignWriting custom elements
-        import('@sutton-signwriting/sgnw-components/loader')
+        import(
+          /* webpackChunkName: "@sutton-signwriting/sgnw-components" */ '@sutton-signwriting/sgnw-components/loader'
+        )
           .then(({defineCustomElements}) => defineCustomElements())
           .then()
           .catch();

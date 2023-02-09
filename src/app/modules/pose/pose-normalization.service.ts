@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Tensor} from '@tensorflow/tfjs-core';
+import type {Tensor} from '@tensorflow/tfjs-core';
+import type {Vector3} from 'three';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
-import {Vector3} from 'three';
 
 export interface PlaneNormal {
   center: Vector3;

@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
-import {Box3, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
-import {LayersModel} from '@tensorflow/tfjs-layers';
-import {Tensor} from '@tensorflow/tfjs';
+import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {PlaneNormal, PoseNormalizationService} from '../pose/pose-normalization.service';
-import {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {ThreeService} from '../../core/services/three.service';
+import type {ModelArtifacts} from '@tensorflow/tfjs-core/dist/io/types';
+import type {Box3, Vector3} from 'three';
+import type {Tensor} from '@tensorflow/tfjs';
 
 export type HandPlane = 'wall' | 'floor';
 export type HandDirection = 'me' | 'you' | 'side';

@@ -12,7 +12,6 @@ import {
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Capacitor} from '@capacitor/core';
-import {Keyboard} from '@capacitor/keyboard';
 import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
@@ -83,7 +82,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
 
   async initKeyboardListeners() {
     if (Capacitor.isNativePlatform()) {
-      const {Keyboard} = await import('@capacitor/keyboard');
+      const {Keyboard} = await import(/* webpackChunkName: "@capacitor/keyboard" */ '@capacitor/keyboard');
       Keyboard.addListener('keyboardWillShow', () => (this.keyboardOpen = true));
       Keyboard.addListener('keyboardWillHide', () => (this.keyboardOpen = false));
     }

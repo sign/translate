@@ -1,5 +1,5 @@
-import {Tensor, Tensor3D} from '@tensorflow/tfjs';
-import {LayersModel} from '@tensorflow/tfjs-layers';
+import type {Tensor, Tensor3D} from '@tensorflow/tfjs';
+import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {loadTFDS} from '../../core/services/tfjs/tfjs.loader';
 import {Dropout} from '@tensorflow/tfjs-layers/dist/layers/core';
 
