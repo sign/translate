@@ -96,6 +96,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       tap(() => {
         stream.getTracks().forEach(track => track.stop());
         const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
+        // TODO: maybe use Filesystem and blobToBase64 because this does not seem to be working on iOS
         const url = URL.createObjectURL(blob);
         this.setVideo(url);
       }),

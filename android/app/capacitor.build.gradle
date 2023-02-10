@@ -17,7 +17,6 @@ dependencies {
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-share')
     implementation project(':capacitor-splash-screen')
-    implementation project(':capacitor-blob-writer')
 
 }
 

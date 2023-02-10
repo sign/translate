@@ -26,7 +26,8 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
     // Load the `model-viewer` custom element
     if (!AnimationComponent.isCustomElementDefined) {
-      import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer');
+      // Import lib to avoid pre-bundled version https://github.com/google/model-viewer/issues/2747
+      import(/* webpackChunkName: "@google/model-viewer" */ '@google/model-viewer/lib/model-viewer');
       AnimationComponent.isCustomElementDefined = true;
     }
   }

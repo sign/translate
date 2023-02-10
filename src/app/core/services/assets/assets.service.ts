@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Capacitor} from '@capacitor/core';
-import write_blob from 'capacitor-blob-writer';
 
 /**
  * Navigator.storage is used as iOS service worker cache is limited to 50MB.
@@ -261,7 +260,8 @@ export class AssetsService {
     } catch (e) {
       // File does not exist
       const blob = await download(true);
-      await write_blob({
+      const writeBlob = await import(/* webpackChunkName: "@capacitor/blob-writer" */ 'capacitor-blob-writer');
+      await writeBlob.default({
         path,
         directory: Directory.External,
         blob,
@@ -271,7 +271,7 @@ export class AssetsService {
       await downloadDone();
     }
 
-    if (Capacitor.getPlatform() !== 'web') {
+    if (Capacitor.isNativePlatform()) {
       const {uri} = await Filesystem.getUri(fileOptions);
       return Capacitor.convertFileSrc(uri);
     }

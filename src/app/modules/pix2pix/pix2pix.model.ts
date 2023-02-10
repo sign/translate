@@ -1,7 +1,6 @@
 import type {Tensor, Tensor3D} from '@tensorflow/tfjs';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {loadTFDS} from '../../core/services/tfjs/tfjs.loader';
-import {Dropout} from '@tensorflow/tfjs-layers/dist/layers/core';
 
 class ModelNotLoadedError extends Error {
   constructor() {
@@ -15,12 +14,19 @@ let upscaler: LayersModel;
 
 function resetDropout(layers: any[]) {
   for (const layer of layers) {
+    // For Sequential models, the layers are in the layers property
     if (layer.layers) {
       resetDropout(layer.layers);
     }
 
-    if (layer instanceof Dropout) {
-      (layer as any).rate = 0;
+    // For TimeDistributed models, the layer is in the layer property
+    if (layer.layer) {
+      resetDropout([layer.layer]);
+    }
+
+    // If the layer is a dropout layer, reset the rate
+    if (layer.rate) {
+      layer.rate = 0;
     }
   }
 }
