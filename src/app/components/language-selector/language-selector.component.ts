@@ -160,7 +160,6 @@ export class LanguageSelectorComponent {
     }
 
     languageGroups.push(lastGroup);
-    console.log(languageGroups);
     return languageGroups;
   }
 

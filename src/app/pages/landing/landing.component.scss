@@ -7,7 +7,6 @@ mat-toolbar {
     z-index: 2;
 
     @media #{$mat-lt-md} {
-      nav,
       a {
         display: none;
       }
@@ -17,6 +16,10 @@ mat-toolbar {
   nav {
     margin-inline-start: 3em;
     flex: 1 1 auto;
+
+    @media #{$mat-lt-md} {
+      display: none;
+    }
   }
 
   @media #{$mat-lt-md} {

@@ -1,0 +1,94 @@
+\subsection{3D Avatar}
+
+Humanoid avatars have garnered significant attention in recent years due to their potential use in virtual and augmented reality applications.
+One key aspect of these avatars is their ability to mimic human movement and expressions.
+The advancement of 3D pose estimation techniques has enabled the creation of avatars that can move in real-time,
+reflecting the movements of a human in the physical world.
+However, the generation of human-like appearances for these avatars remains a challenge.
+
+
+The application of Generative Adversarial Networks (GANs) has demonstrated promising results in generating realistic human images.
+However, the high computational requirements of GANs make them unsuitable for real-time applications on most devices.
+On the other hand, the use of avatars, despite their limitations in appearance, has been demonstrated to be more feasible for real-time applications.
+
+In this section, we propose a system for creating a humanoid avatar based on 3D pose estimation, with a focus on the avatar's movement and animation.
+Our system is built using the \emph{model-viewer} \fix{\citep{@}} library from Google, with a Three.js \fix{\citep{@}} backend,
+and makes use of animations from the website Mixamo \fix{\citep{@}}.
+The goal of this system is to generate animation rotations (quaternions) for the avatar in real-time using 3D pose estimation data.
+
+We conducted an experiment in which we collected data by estimating 3D poses from pre-defined animations
+and used a neural network to convert the pose estimation data back into the format required by the avatar's articulation system.
+Our results show the feasibility of driving the avatar's animation system using 3D pose estimation in real-time.
+Furthermore, we discuss the challenges encountered and the potential for future work in this area.
+
+\subsubsection{Background}
+
+% TODO: add background on avatars
+\fix{TODO ADD FROM TASKS}
+
+\subsubsection{Data}
+
+The data used in this study was sourced from the Mixamo website \fix{\citep{@}}.
+The website offers a large collection of 3D characters and animations.
+For our experiments, we utilized \emph{Remy}, a 3D humanoid male character, which has properly articulated hands
+with 21 skeletal joints per hand and a properly articulated body with joints for the neck, shoulders, elbows, and wrists.
+Unfortunately, Remy has an under-articulated face with only three joints.
+The website offered a wide range of animations for Remy, including \emph{Defeated}, \emph{Capoeira}, \emph{Dying}, etc.
+
+The animations were not specifically designed for sign language, but they did have some articulation of the hands,
+which was viewed as a positive aspect, as it allowed for the generalization of the system to other types of animation.
+However, the ideal scenario would have been to work directly with animations of sign language,
+but this was not possible as the data was not available.
+
+\subsubsection{Experiment}
+
+We first imported all of the animations into the \emph{model-viewer} and used
+Mediapipe Holistic pose estimation \fix{\citep{@}} on each frame to obtain the 3D pose data.
+Mediapipe Holistic pose estimation is a real-time multi-person pose estimation library
+that can estimate the 3D pose of a person in an image or video stream.
+For each frame of the animation, the estimated 3D pose data was saved along with the animation state.
+
+Next, we trained a neural network to take the entire 3D pose as input and predict the animation rotations as output.
+We utilized an LSTM network and implemented it using the Keras library \fix{\citep{@}} and TensorFlow \fix{\citep{@}} as the backend.
+The architecture of the network is shown in the following pseudo code:
+
+\fix{The architecture of the network is shown in the following pseudo code:}
+\fix{TODO: find input_dim and output_dim in the code, and redo the pseudo code}
+\begin{verbatim}
+model = Sequential()
+model.add(LSTM(units=128,
+               input_shape=(time_steps, input_dim),
+               return_sequences=True,
+               stateful=True))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(output_dim, activation='softmax'))
+model.compile(loss='mean_squared_error', optimizer='adam')
+\end{verbatim}
+
+Finally, the trained model was integrated into the \emph{model-viewer} in real-time.
+The real-time integration was done using JavaScript and WebGL with Three.js \fix{\citep{@}}.
+When a 3D pose is available, either from a camera or an offline file, the pose data is fed into the model,
+and the relevant rotations are generated to control Remy's animation, frame by frame.
+
+\subsubsection{Results}
+
+The results of our experiment showed that using 3D pose estimation to drive the animation of
+humanoid avatars has potential, but the system still requires improvement.
+While the LSTM network was able to generate animation rotations for Remy, the resulting animation was not entirely accurate,
+and there were discrepancies between the predicted rotations and the ground truth rotations from the original animations.
+
+The real-time integration of the trained model into the \emph{model-viewer} was successful,
+but the system's performance was limited.
+The avatar responded to the 3D pose data, but the movements were not always accurate or smooth.
+For example, the avatar was able to animate basic hand movements such as opening and closing,
+but single-finger articulation did not transfer well to the avatar.
+
+Our experiment highlights the challenges that still need to be addressed in this area,
+including the limitations in the accuracy of the 3D pose estimation and the under-articulation of the avatar.
+Improving the performance of the system will require further research and development,
+including the incorporation of additional data sources and the optimization of the neural network architecture.
+
+In conclusion, while our experiment shows that the use of 3D pose estimation to drive the animation of
+humanoid avatars is a promising approach, there is still much work to be done to
+fully realize its potential in virtual and augmented reality applications, and beyond.
