@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 @import '../../../theme/variables';
 
 :host {
@@ -8,6 +9,10 @@
     height: 100vh;
     // Only on iOS, in case of viewport cover
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+    @media (prefers-color-scheme: dark) {
+      background: map-get(mat.$dark-theme-background-palette, status-bar);
+    }
   }
 
   > * {
