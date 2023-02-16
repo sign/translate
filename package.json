@@ -16,7 +16,7 @@
     "deploy": "firebase deploy --only=hosting",
     "mobile:sync": "tsx tools/mobile/sync.ts",
     "mobile:metadata": "tsx tools/mobile/metadata/metadata.ts",
-    "prepare:husky": "cp -r ./node_modules/@sign-mt/configuration/.husky/* .husky/",
+    "prepare:husky": "node -e \"require('fs').cpSync('node_modules/@sign-mt/configuration/.husky/', '.husky/', {recursive: true})\"",
     "prepare": "husky install && npm run prepare:husky",
     "dev:ssr": "ng run sign-translate:serve-ssr",
     "serve:ssr": "node dist/sign-translate/server/main.js",
