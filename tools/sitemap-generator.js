@@ -5,15 +5,15 @@ const fs = require('fs');
 const now = new Date();
 const baseUrls = [
   '/',
-  '/about',
-  // '/about/tools',
-  // '/legal/terms', '/legal/privacy',
+  '/about/',
+  // '/about/tools/',
+  // '/legal/terms/', '/legal/privacy/',
 ];
 
 const additionalUrls = [
-  '/about/languages', // TODO move to baseUrls once translated
-  '/about/contribute', // TODO move to baseUrls once translated
-  '/legal/licenses', // TODO move to baseUrls once translated
+  '/about/languages/', // TODO move to baseUrls once translated
+  '/about/contribute/', // TODO move to baseUrls once translated
+  '/legal/licenses/', // TODO move to baseUrls once translated
 ];
 
 const baseDir = __dirname + `${path.sep}..${path.sep}`;

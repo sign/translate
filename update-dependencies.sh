@@ -17,10 +17,17 @@ curl -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 # Step 2: Extract the URL for the WOFF2 file and download it to the appropriate location
 woff2_url=$(sed -nE 's#.*url\((https?://.*)\) .*#\1#p' material-icons-temp.css)
 curl $woff2_url -o src/assets/fonts/material-icons/material.woff2
-# TODO: subset the material icons font to only relevenat icons (see src/assets/fonts/material-icons/font-config.json)
+# TODO: subset the material icons font to only relevant icons (see src/assets/fonts/material-icons/font-config.json)
 # Step 3: Update the CSS file to use the new local font path
 echo "/* Automatically Updated via update-dependencies.sh */" > src/theme/fonts/material-icons.css
 sed "s#url($woff2_url)#url(/assets/fonts/material-icons/material.woff2)#" "material-icons-temp.css" >> src/theme/fonts/material-icons.css
 # Clean up: Delete the temporary CSS file
 rm material-icons-temp.css
 
+# Build native assets
+npm run capacitor:assets
+npm run mobile:sync
+npx cap sync
+
+# Lint to fix wrongly formatted files
+prettier --write --ignore-unknown src
