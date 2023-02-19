@@ -23,11 +23,3 @@ echo "/* Automatically Updated via update-dependencies.sh */" > src/theme/fonts/
 sed "s#url($woff2_url)#url(/assets/fonts/material-icons/material.woff2)#" "material-icons-temp.css" >> src/theme/fonts/material-icons.css
 # Clean up: Delete the temporary CSS file
 rm material-icons-temp.css
-
-# Build native assets
-npm run capacitor:assets
-npm run mobile:sync
-npx cap sync
-
-# Lint to fix wrongly formatted files
-prettier --write --ignore-unknown src

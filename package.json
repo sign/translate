@@ -59,7 +59,7 @@
     "@google/model-viewer": "^2.1.1",
     "@mediapipe/drawing_utils": "^0.3.1675466124",
     "@mediapipe/holistic": "^0.5.1675471629",
-    "@ngneat/transloco": "^4.2.2",
+    "@ngneat/transloco": "^4.2.4",
     "@nguniversal/express-engine": "^15.1.0",
     "@ngxs/store": "3.7.6",
     "@sign-mt/browsermt": "^0.2.1",
