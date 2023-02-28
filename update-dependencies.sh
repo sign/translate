@@ -1,12 +1,12 @@
 # Update client dependencies
 rm package-lock.json
-ncu --cacheClear -u --reject filesize,typescript,@google/model-viewer
+ncu --cacheClear -u --reject filesize,typescript
 npm install
 
 
 # Update server dependencies
 rm functions/package-lock.json
-ncu --cacheClear --cwd functions --reject node-fetch,typescript -u
+ncu --cacheClear --cwd functions -u --reject node-fetch,typescript
 npm install --prefix functions
 
 
