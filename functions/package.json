@@ -19,8 +19,8 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@firebase/database-types": "^0.10.3",
-    "@google-cloud/storage": "^6.9.3",
+    "@firebase/database-types": "^0.10.4",
+    "@google-cloud/storage": "^6.9.4",
     "@sign-mt/browsermt": "^0.2.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
