@@ -1,49 +1,75 @@
-<ion-content [fullscreen]="true">
-  <mat-drawer-container>
-    <mat-drawer #menu position="start" mode="over">
-      <mat-nav-list>
-        <a mat-list-item *ngFor="let page of pages" [routerLink]="page" (click)="menu.close()">
+<ion-menu contentId="main-content" *ngIf="isMobile.matches">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-list-header lines="full">
+        <ion-label>Pages</ion-label>
+      </ion-list-header>
+      <ion-menu-toggle>
+        <ion-item *ngFor="let page of pages" [routerLink]="['/about', page]" queryParamsHandling="preserve">
+          <ion-label>{{ 'landing.' + page + '.title' | transloco }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header lines="full">
+        <ion-label>Legal</ion-label>
+      </ion-list-header>
+      <ion-menu-toggle>
+        <ion-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+          <ion-label>{{ 'legal.' + page + '.title' | transloco }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-button routerLink="/" color="primary" queryParamsHandling="preserve" fill="clear">
+      {{ 'landing.try' | transloco }}
+    </ion-button>
+  </ion-footer>
+</ion-menu>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="isMobile.matches">
+      <ion-menu-button auto-hide="true"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ 'translate.title' | transloco }}</ion-title>
+    <ng-container *ngIf="!isMobile.matches">
+      <ion-buttons slot="primary">
+        <ion-button routerLink="/" color="primary" queryParamsHandling="preserve">
+          {{ 'landing.try' | transloco }}
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="secondary">
+        <ion-button *ngFor="let page of pages" [routerLink]="['/about', page]" queryParamsHandling="preserve">
           {{ 'landing.' + page + '.title' | transloco }}
-        </a>
-        <mat-divider></mat-divider>
-        <a mat-list-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+        </ion-button>
+      </ion-buttons>
+    </ng-container>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="main-content">
+  <router-outlet></router-outlet>
+
+  <ion-toolbar>
+    <ng-container *ngIf="!isMobile.matches">
+      <ion-buttons slot="start">
+        <ion-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
           {{ 'legal.' + page + '.title' | transloco }}
-        </a>
-      </mat-nav-list>
+        </ion-button>
+      </ion-buttons>
+    </ng-container>
 
-      <mat-divider></mat-divider>
-      <mat-toolbar>
-        <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">
-          {{ 'landing.try' | transloco }}
-        </a>
-      </mat-toolbar>
-    </mat-drawer>
-    <mat-drawer-content>
-      <mat-toolbar id="header">
-        <mat-icon (click)="menu.open()" id="menu-handler">menu</mat-icon>
-        <mat-icon>waving_hand</mat-icon>
-        <span>&nbsp;{{ 'translate.title' | transloco }}</span>
-        <nav [attr.aria-label]="'landing.nav.pages' | transloco">
-          <a mat-button *ngFor="let page of pages" [routerLink]="page" queryParamsHandling="preserve">
-            {{ 'landing.' + page + '.title' | transloco }}
-          </a>
-        </nav>
-        <a mat-raised-button routerLink="/" color="primary" queryParamsHandling="preserve">
-          {{ 'landing.try' | transloco }}
-        </a>
-      </mat-toolbar>
-
-      <router-outlet></router-outlet>
-
-      <mat-toolbar>
-        <nav [attr.aria-label]="'landing.nav.legal' | transloco">
-          <a mat-button *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
-            {{ 'legal.' + page + '.title' | transloco }}
-          </a>
-        </nav>
-
-        <app-language-selector></app-language-selector>
-      </mat-toolbar>
-    </mat-drawer-content>
-  </mat-drawer-container>
+    <ion-buttons slot="primary">
+      <app-language-selector></app-language-selector>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-content>

@@ -2,14 +2,14 @@
   <h2>Why sign?</h2>
 
   <div class="cards-container">
-    <mat-card *ngFor="let benefit of benefits">
-      <mat-card-header>
-        <mat-card-title>{{ benefit.title }}</mat-card-title>
-        <mat-card-subtitle>{{ benefit.subtitle }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
+    <ion-card *ngFor="let benefit of benefits">
+      <ion-card-header>
+        <ion-card-title>{{ benefit.title }}</ion-card-title>
+        <ion-card-subtitle>{{ benefit.subtitle }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
         <p>{{ benefit.content }}</p>
-      </mat-card-content>
-    </mat-card>
+      </ion-card-content>
+    </ion-card>
   </div>
 </div>

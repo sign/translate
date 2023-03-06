@@ -2,19 +2,20 @@
   <h2>Pricing and Subscription Options</h2>
 
   <div class="cards-container">
-    <mat-card class="pricing-option" *ngFor="let option of pricingOptions">
-      <mat-card-header>
-        <mat-card-title>{{ option.name }}</mat-card-title>
-        <mat-card-subtitle>{{ option.price }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
+    <ion-card class="pricing-option" *ngFor="let option of pricingOptions">
+      <ion-card-header>
+        <ion-card-title>{{ option.name }}</ion-card-title>
+        <ion-card-subtitle>{{ option.price }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
         <ul>
           <li *ngFor="let feature of option.features">{{ feature }}</li>
         </ul>
-      </mat-card-content>
-      <mat-card-actions>
-        <a mat-raised-button [href]="option.link" color="primary">{{ option.action }}</a>
-      </mat-card-actions>
-    </mat-card>
+      </ion-card-content>
+
+      <a [href]="option.link" color="primary">
+        <ion-button fill="clear">{{ option.action }}</ion-button>
+      </a>
+    </ion-card>
   </div>
 </div>
