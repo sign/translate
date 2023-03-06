@@ -59,6 +59,11 @@
                 "glob": "worker.js",
                 "input": "node_modules/@sign-mt/browsermt/build/bundled/",
                 "output": "./browsermt/"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
               }
             ],
             "styles": [
@@ -178,6 +183,11 @@
                 "glob": "**/*.json",
                 "input": "node_modules/@sign-mt/i18n/build/",
                 "output": "./assets/i18n/"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
               }
             ],
             "styles": ["src/theme/styles.scss"],

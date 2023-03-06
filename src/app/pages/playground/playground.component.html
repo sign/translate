@@ -1,13 +1,15 @@
-<mat-toolbar *transloco="let t; read: 'playground'">
-  <mat-icon>hearing</mat-icon>
-  <span>{{ t('title') }}</span>
-</mat-toolbar>
+<ion-content [fullscreen]="true">
+  <mat-toolbar *transloco="let t; read: 'playground'">
+    <mat-icon>hearing</mat-icon>
+    <span>{{ t('title') }}</span>
+  </mat-toolbar>
 
-<mat-drawer-container>
-  <mat-drawer mode="side" opened>
-    <app-settings></app-settings>
-  </mat-drawer>
-  <mat-drawer-content>
-    <app-video></app-video>
-  </mat-drawer-content>
-</mat-drawer-container>
+  <mat-drawer-container>
+    <mat-drawer mode="side" opened>
+      <app-settings></app-settings>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-video></app-video>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</ion-content>

@@ -3,11 +3,9 @@
 
 :host > * {
   display: block;
-  width: calc(100% - 100px);
   padding: 50px;
 
   @media #{$mat-lt-md} {
-    width: calc(100% - 50px);
     padding: 50px 25px;
   }
 

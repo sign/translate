@@ -28,6 +28,7 @@ import {AboutObjectivesComponent} from './about/about-objectives/about-objective
 import {AboutApiComponent} from './about/about-api/about-api.component';
 import {BusinessComponent} from './business/business.component';
 import {SettingsPageModule} from '../settings/settings.module';
+import {IonicModule} from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import {SettingsPageModule} from '../settings/settings.module';
     CdkTreeModule,
     MatExpansionModule,
     SettingsPageModule,
+    IonicModule,
   ],
   bootstrap: [LandingComponent],
 })

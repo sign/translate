@@ -43,6 +43,8 @@ import {SignWritingModule} from './modules/sign-writing/sign-writing.module';
 import {DetectorModule} from './modules/detector/detector.module';
 import {AnimationModule} from './modules/animation/animation.module';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {RouteReuseStrategy} from '@angular/router';
+import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,7 @@ import {NotFoundComponent} from './pages/not-found/not-found.component';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
+    IonicModule.forRoot(),
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
@@ -93,7 +96,11 @@ import {NotFoundComponent} from './pages/not-found/not-found.component';
       registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
-  providers: [NavigatorService, {provide: TRANSLOCO_LOADER, useClass: HttpLoader}],
+  providers: [
+    NavigatorService,
+    {provide: TRANSLOCO_LOADER, useClass: HttpLoader},
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
