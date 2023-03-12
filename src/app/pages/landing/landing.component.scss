@@ -3,7 +3,7 @@
 :host ::ng-deep {
   .cards-container {
     display: flex;
-    @media #{$mat-lt-md} {
+    @media #{$breakpoint-lt-md} {
       flex-direction: column;
     }
   }

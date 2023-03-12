@@ -5,7 +5,7 @@
   display: block;
   padding: 50px;
 
-  @media #{$mat-lt-md} {
+  @media #{$breakpoint-lt-md} {
     padding: 50px 25px;
   }
 

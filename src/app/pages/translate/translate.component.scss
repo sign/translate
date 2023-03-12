@@ -4,7 +4,7 @@
 :host {
   min-height: 100vh;
 
-  @media #{$mat-gt-xs} {
+  @media #{$breakpoint-gt-xs} {
     &::before {
       background-color: map-get(mat.$grey-palette, 50);
       border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
@@ -39,7 +39,7 @@ mat-toolbar {
 .container {
   transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media #{$mat-gt-md} {
+  @media #{$breakpoint-gt-md} {
     padding: 0 48px;
   }
 
@@ -50,11 +50,11 @@ mat-toolbar {
     display: flex;
     gap: 0.5em;
 
-    @media #{$mat-lt-lg} {
+    @media #{$breakpoint-lt-lg} {
       padding: 0 12px;
     }
 
-    @media #{$mat-lt-sm} {
+    @media #{$breakpoint-lt-sm} {
       display: none;
     }
   }
@@ -69,11 +69,11 @@ mat-toolbar {
       background-color: #101010;
     }
 
-    @media #{$mat-gt-xs} {
+    @media #{$breakpoint-gt-xs} {
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
     }
 
-    @media #{$mat-gt-md} {
+    @media #{$breakpoint-gt-md} {
       border-radius: 8px;
       overflow: hidden;
     }
@@ -106,7 +106,7 @@ mat-toolbar {
   margin: 8px 0;
   text-decoration: none;
 
-  @media #{$mat-lt-lg} {
+  @media #{$breakpoint-lt-lg} {
     padding: 0 12px;
   }
 

@@ -7,15 +7,15 @@
   grid-template-areas: 'spoken signwriting signed';
   grid-template-columns: auto 100px 50%;
 
-  @media #{$mat-lt-sm} {
-    grid-template-areas: 'spoken signwriting' 'signed signed';
+  @media #{$breakpoint-lt-sm} {
+    grid-template-areas: 'signed signed' 'spoken signwriting';
     grid-template-columns: auto 100px;
 
     .sign-language {
-      border-top: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+      border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
 
       @media (prefers-color-scheme: dark) {
-        border-top: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
+        border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
       }
     }
   }
@@ -30,7 +30,7 @@
 }
 
 app-sign-writing {
-  @media #{$mat-lt-sm} {
+  @media #{$breakpoint-lt-sm} {
     border: none !important;
     height: 195px;
   }

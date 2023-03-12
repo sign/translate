@@ -30,7 +30,7 @@ button.menu-language-button {
   text-overflow: ellipsis;
 }
 
-@media #{$mat-lt-md} {
+@media #{$breakpoint-lt-md} {
   button.menu-icon-button,
   mat-tab-group {
     display: none;

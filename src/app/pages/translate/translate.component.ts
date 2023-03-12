@@ -13,6 +13,7 @@ import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Capacitor} from '@capacitor/core';
 import {Meta, Title} from '@angular/platform-browser';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-translate',
@@ -20,6 +21,8 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./translate.component.scss'],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
+  isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
+
   spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
   spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
   detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
@@ -32,7 +35,8 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     private transloco: TranslocoService,
     public translation: TranslationService,
     private meta: Meta,
-    private title: Title
+    private title: Title,
+    private mediaMatcher: MediaMatcher
   ) {
     super();
 

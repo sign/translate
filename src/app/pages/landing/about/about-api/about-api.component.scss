@@ -5,7 +5,7 @@
   gap: 2rem;
   align-items: center;
 
-  @media #{$mat-lt-md} {
+  @media #{$breakpoint-lt-md} {
     flex-direction: column;
   }
 

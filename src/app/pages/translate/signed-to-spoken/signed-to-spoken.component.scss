@@ -11,7 +11,7 @@
   grid-template-areas: 'signed spoken signwriting';
   grid-template-columns: 50% 100px auto;
 
-  @media #{$mat-lt-sm} {
+  @media #{$breakpoint-lt-sm} {
     grid-template-areas: 'signed signed' 'spoken signwriting';
     grid-template-columns: 100px auto;
   }
@@ -23,7 +23,7 @@
       border-inline-end: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
     }
 
-    @media #{$mat-lt-sm} {
+    @media #{$breakpoint-lt-sm} {
       height: 235px;
     }
   }
