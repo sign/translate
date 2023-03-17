@@ -1,15 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
+    <ion-title>Translate</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Translate</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-textarea placeholder="Type to translate..."></ion-textarea>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+      </ion-button>
+      <!-- TODO -->
+      <!--      <app-speech-to-text></app-speech-to-text>-->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

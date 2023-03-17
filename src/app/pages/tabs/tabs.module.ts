@@ -6,9 +6,12 @@ import {FormsModule} from '@angular/forms';
 import {TabsPageRoutingModule} from './tabs-routing.module';
 
 import {TabsPageComponent} from './tabs.page';
+import {MatIconModule} from '@angular/material/icon';
+import {TranslocoModule} from '@ngneat/transloco';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
-  imports: [IonicModule, CommonModule, FormsModule, TabsPageRoutingModule],
+  imports: [IonicModule, CommonModule, TabsPageRoutingModule, MatIconModule, TranslocoModule, RouterModule],
   declarations: [TabsPageComponent],
 })
 export class TabsPageModule {}

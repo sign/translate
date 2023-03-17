@@ -11,9 +11,7 @@ import {
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
-import {Capacitor} from '@capacitor/core';
 import {Meta, Title} from '@angular/platform-browser';
-import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-translate',
@@ -21,22 +19,18 @@ import {MediaMatcher} from '@angular/cdk/layout';
   styleUrls: ['./translate.component.scss'],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
-  isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
-
   spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
   spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
   detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
-  @HostBinding('class.keyboard-open') keyboardOpen: boolean;
 
   constructor(
     private store: Store,
     private transloco: TranslocoService,
     public translation: TranslationService,
     private meta: Meta,
-    private title: Title,
-    private mediaMatcher: MediaMatcher
+    private title: Title
   ) {
     super();
 
@@ -79,17 +73,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       )
       .subscribe();
 
-    this.initKeyboardListeners();
-
     this.playVideos();
-  }
-
-  async initKeyboardListeners() {
-    if (Capacitor.isNativePlatform()) {
-      const {Keyboard} = await import(/* webpackChunkName: "@capacitor/keyboard" */ '@capacitor/keyboard');
-      Keyboard.addListener('keyboardWillShow', () => (this.keyboardOpen = true));
-      Keyboard.addListener('keyboardWillHide', () => (this.keyboardOpen = false));
-    }
   }
 
   async playVideos(): Promise<void> {

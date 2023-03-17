@@ -29,6 +29,7 @@ export class AppComponent implements AfterViewInit {
     this.logRouterNavigation();
     this.checkURLEmbedding();
     this.checkURLText();
+    this.setPageKeyboardClass();
   }
 
   async ngAfterViewInit() {
@@ -104,5 +105,40 @@ export class AppComponent implements AfterViewInit {
     if (urlParam !== null) {
       this.store.dispatch(new SetSpokenLanguageText(urlParam));
     }
+  }
+
+  // setPageSizeClass() {
+  //   // const html = document.documentElement;
+  //   // const breakpoints = [
+  //   //   {size: 'page-xs', query: 'screen and (max-width: 599px)'},
+  //   //   {size: 'page-sm', query: 'screen and (min-width: 600px) and (max-width: 959px)'},
+  //   //   {size: 'page-md', query: 'screen and (min-width: 960px) and (max-width: 1279px)'},
+  //   //   {size: 'page-lg', query: 'screen and (min-width: 1280px) and (max-width: 1919px)'},
+  //   //   {size: 'page-xl', query: 'screen and (min-width: 1920px)'},
+  //   // ];
+  //   //
+  //   // for (const breakpoint of breakpoints) {
+  //   //   const match = window.matchMedia(breakpoint.query);
+  //   //   const listener = ({matches}) => {
+  //   //     if (matches) {
+  //   //       html.classList.add(breakpoint.size);
+  //   //     } else {
+  //   //       html.classList.remove(breakpoint.size);
+  //   //     }
+  //   //   };
+  //   //   match.addEventListener('change', listener);
+  //   //   listener(match);
+  //   // }
+  // }
+  //
+  async setPageKeyboardClass() {
+    if (!Capacitor.isNativePlatform()) {
+      return;
+    }
+    const {Keyboard} = await import(/* webpackChunkName: "@capacitor/keyboard" */ '@capacitor/keyboard');
+    const html = document.documentElement;
+    const className = 'keyboard-is-open';
+    Keyboard.addListener('keyboardWillShow', () => html.classList.add(className));
+    Keyboard.addListener('keyboardWillHide', () => html.classList.remove(className));
   }
 }

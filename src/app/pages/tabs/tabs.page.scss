@@ -1,0 +1,7 @@
+@import '../../../theme/variables';
+
+@media #{$breakpoint-gt-xs} {
+  ion-tab-bar {
+    display: none;
+  }
+}

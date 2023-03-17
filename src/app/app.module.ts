@@ -103,5 +103,6 @@ import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [SpeechToTextComponent],
 })
 export class AppModule {}
