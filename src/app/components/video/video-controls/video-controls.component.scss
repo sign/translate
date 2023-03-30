@@ -1,11 +1,11 @@
-button[mat-fab] {
+ion-fab {
   position: absolute;
   right: 16px;
   bottom: 0;
   margin: 0 6px;
 
-  &.transparent {
-    box-shadow: 0 0 0 1px inset white;
-    background: transparent;
+  ion-fab-button.transparent {
+    --background: transparent;
+    --box-shadow: 0 0 0 1px inset white;
   }
 }

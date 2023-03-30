@@ -10,7 +10,7 @@ mat-tab-group {
 }
 
 // Make language expansion menu show the correct icon
-button.menu-icon-button {
+ion-button.menu-icon-button {
   mat-icon {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -20,22 +20,24 @@ button.menu-icon-button {
   }
 }
 
-button.menu-language-button {
+ion-button.menu-language-button {
   display: none;
 
   width: 100%;
   height: 100%;
+  margin: 0;
   text-transform: uppercase;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media #{$breakpoint-lt-md} {
-  button.menu-icon-button,
+  ion-button.menu-icon-button,
   mat-tab-group {
     display: none;
   }
-  button.menu-language-button {
+  ion-button.menu-language-button {
     display: block;
   }
 }
@@ -48,10 +50,4 @@ button.menu-language-button {
 
 ::ng-deep .language-selector-menu {
   max-height: calc(100vh - 64px - 68px - 48px) !important;
-}
-
-button.menu-language-button {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }

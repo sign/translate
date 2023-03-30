@@ -25,29 +25,40 @@
 
   <!-- Language button for small screens -->
   <ng-container *ngIf="hasLanguageDetection && detectedLanguage$ | async as detectedLanguage; else detectLanguage">
-    <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
+    <ion-button
+      [matMenuTriggerFor]="signedLanguagesMenu"
+      class="menu-language-button"
+      color="primary"
+      expand="full"
+      fill="clear">
       <app-flag-icon *ngIf="flags" [country]="detectedLanguage" [squared]="true"></app-flag-icon>
       {{ t('detected', {lang: langNames[detectedLanguage]}) }}
-    </button>
+    </ion-button>
   </ng-container>
   <ng-template #detectLanguage>
-    <button [matMenuTriggerFor]="signedLanguagesMenu" class="menu-language-button" color="primary" mat-button>
+    <ion-button
+      [matMenuTriggerFor]="signedLanguagesMenu"
+      class="menu-language-button"
+      color="primary"
+      expand="full"
+      fill="clear">
       <ng-container *ngIf="language; else noLanguage">
         <app-flag-icon *ngIf="flags" [country]="language" [squared]="true"></app-flag-icon>
         {{ langNames[language] }}
       </ng-container>
       <ng-template #noLanguage>{{ t('detect') }}</ng-template>
-    </button>
+    </ion-button>
   </ng-template>
 
   <!-- Expand icon for large screens -->
-  <button
+  <ion-button
+    fill="clear"
+    color="medium"
     [matMenuTriggerFor]="signedLanguagesMenu"
     class="menu-icon-button"
-    mat-icon-button
     [attr.aria-label]="t('more')">
-    <mat-icon>expand_more</mat-icon>
-  </button>
+    <ion-icon name="chevron-down"></ion-icon>
+  </ion-button>
   <mat-menu #signedLanguagesMenu class="language-selector-menu">
     <ng-template matMenuContent>
       <button (click)="selectLanguage(null)" mat-menu-item *ngIf="hasLanguageDetection">

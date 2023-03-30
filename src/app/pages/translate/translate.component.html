@@ -13,11 +13,11 @@
   <div class="container">
     <div id="input-mode-group">
       <ng-container *ngIf="spokenToSigned">
-        <app-translate-input-button mode="text" icon="translate"></app-translate-input-button>
+        <app-translate-input-button mode="text" icon="language"></app-translate-input-button>
       </ng-container>
       <ng-container *ngIf="!spokenToSigned">
         <app-translate-input-button mode="webcam" icon="videocam"></app-translate-input-button>
-        <app-translate-input-button mode="upload" icon="upload"></app-translate-input-button>
+        <app-translate-input-button mode="upload" icon="cloud-upload"></app-translate-input-button>
       </ng-container>
     </div>
 
@@ -33,15 +33,17 @@
             (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
           <!-- disabled -->
-          <button
+          <ion-button
             (click)="swapLanguages()"
             id="swap-languages"
-            mat-icon-button
+            fill="clear"
+            expand="full"
+            color="dark"
             [disabled]="(spokenLanguage$ | async) === null && (detectedLanguage$ | async) === null"
-            [matTooltip]="'translate.swapLanguages' | transloco"
+            [title]="'translate.swapLanguages' | transloco"
             [attr.aria-label]="'translate.swapLanguages' | transloco">
-            <mat-icon>swap_horiz</mat-icon>
-          </button>
+            <ion-icon name="swap-horizontal"></ion-icon>
+          </ion-button>
 
           <app-language-selector
             [hasLanguageDetection]="spokenToSigned"

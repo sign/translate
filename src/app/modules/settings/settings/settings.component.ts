@@ -3,6 +3,7 @@ import {BaseSettingsComponent} from '../settings.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SettingsStateModel} from '../settings.state';
+import {CheckboxCustomEvent} from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -17,8 +18,7 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
     'drawSignWriting',
     'animatePose',
   ];
-  lastSettings = [];
-  currentSettings = [];
+  settings = {};
 
   constructor(store: Store) {
     super(store);
@@ -28,20 +28,15 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
     this.settingsState$
       .pipe(
         tap(settings => {
-          this.currentSettings = this.lastSettings = this.availableSettings.filter(s => settings[s]);
+          console.log('settings', settings);
+          this.settings = settings;
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
   }
 
-  onSettingsChange(currentSettings: Array<keyof SettingsStateModel>): void {
-    this.availableSettings.forEach(s => {
-      if (this.lastSettings.includes(s) && !currentSettings.includes(s)) {
-        this.applySetting(s, false);
-      } else if (!this.lastSettings.includes(s) && currentSettings.includes(s)) {
-        this.applySetting(s, true);
-      }
-    });
+  changeSetting(setting: keyof SettingsStateModel, event: Event) {
+    this.applySetting(setting, (event as any).detail.checked);
   }
 }

@@ -1,23 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="analytics"></ion-icon>
+      {{ 'benchmark.title' | transloco }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <ng-container *transloco="let t; read: 'benchmark'">
-    <mat-toolbar>
-      <mat-icon>analytics</mat-icon>
-      <span>{{ t('title') }}</span>
-    </mat-toolbar>
-
     <div class="container">
-      <button mat-raised-button color="primary" (click)="bench()">Start Benchmarking!</button>
+      <ion-button (click)="bench()">Start Benchmarking!</ion-button>
 
-      <mat-card *ngFor="let stat of stats | keyvalue">
-        <mat-card-title>{{ t('stats.' + stat.key + '.title') }}</mat-card-title>
-        <mat-card-content>
-          <br />
-          <app-benchmark-item
-            *ngFor="let item of stat.value | keyvalue"
-            [title]="t('stats.' + stat.key + '.' + item.key)"
-            [timings]="item.value"></app-benchmark-item>
-        </mat-card-content>
-      </mat-card>
+      <ion-card *ngFor="let stat of stats | keyvalue">
+        <ion-card-header>
+          <ion-card-title>{{ t('stats.' + stat.key + '.title') }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>
+            <app-benchmark-item
+              *ngFor="let item of stat.value | keyvalue"
+              [title]="t('stats.' + stat.key + '.' + item.key)"
+              [timings]="item.value"></app-benchmark-item>
+          </p>
+        </ion-card-content>
+      </ion-card>
     </div>
   </ng-container>
 </ion-content>

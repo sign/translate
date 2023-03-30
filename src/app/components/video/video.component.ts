@@ -30,7 +30,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
   @ViewChild('stats') statsEl: ElementRef;
-  appRootEl = document.querySelector('app-root') ?? document.body;
+  appRootEl = document.querySelector('ion-app') ?? document.body;
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
 
@@ -203,12 +203,12 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   setStats(): void {
     this.fpsStats.showPanel(0);
-    this.fpsStats.domElement.style.position = 'absolute';
+    this.fpsStats.dom.style.position = 'absolute';
     this.statsEl.nativeElement.appendChild(this.fpsStats.dom);
 
     // TODO this on change of input property
     if (!this.displayFps) {
-      this.fpsStats.domElement.style.display = 'none';
+      this.fpsStats.dom.style.display = 'none';
     }
 
     // Sign detection panel
@@ -216,8 +216,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.signingStats.dom.innerHTML = '';
     this.signingStats.addPanel(signingPanel);
     this.signingStats.showPanel(0);
-    this.signingStats.domElement.style.position = 'absolute';
-    this.signingStats.domElement.style.left = '80px';
+    this.signingStats.dom.style.position = 'absolute';
+    this.signingStats.dom.style.left = '80px';
     this.statsEl.nativeElement.appendChild(this.signingStats.dom);
 
     this.setDetectorListener(signingPanel);
@@ -232,13 +232,14 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
       )
       .subscribe();
 
+    // TODO
     // Show hide panel
     this.settingsState$
       .pipe(
         map(settings => settings.detectSign),
         distinctUntilChanged(),
         tap(detectSign => {
-          this.signingStats.domElement.style.display = detectSign ? 'block' : 'none';
+          this.signingStats.dom.style.display = detectSign ? 'block' : 'none';
         }),
         takeUntil(this.ngUnsubscribe)
       )

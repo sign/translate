@@ -4,6 +4,7 @@ import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {SetVideo, StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {TranslocoService} from '@ngneat/transloco';
+import {SetSetting} from '../../modules/settings/settings.actions';
 
 @Component({
   selector: 'app-playground',

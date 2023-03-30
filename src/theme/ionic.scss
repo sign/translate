@@ -24,3 +24,9 @@
 @import '@ionic/angular/css/text-alignment.css';
 @import '@ionic/angular/css/text-transformation.css';
 @import '@ionic/angular/css/flex-utils.css';
+
+ion-button.circle-icon {
+  /* To make the button circle */
+  --padding-start: 5.4px;
+  --padding-end: var(--padding-start);
+}

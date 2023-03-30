@@ -13,6 +13,7 @@ import {SettingsAppearanceComponent} from './settings-appearance/settings-appear
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {NgxFilesizeModule} from 'ngx-filesize';
+import {IonicModule} from '@ionic/angular';
 
 export {SettingsPageComponent};
 
@@ -34,6 +35,7 @@ export {SettingsPageComponent};
     NgxFilesizeModule,
     MatTreeModule,
     CdkTreeModule,
+    IonicModule,
   ],
   bootstrap: [SettingsPageComponent],
   exports: [SettingsAppearanceComponent],
