@@ -200,7 +200,7 @@ export class TranslationService {
       const api = 'https://us-central1-sign-mt.cloudfunctions.net/concatenate_signs';
       return `${api}?text=${encodeURIComponent(text)}&spoken=${spokenLanguage}&signed=${signLanguageCode}`;
     }
-    const api = 'https://spoken-to-signed-sxie2r74ua-uc.a.run.app/';
+    const api = 'https://spoken-to-signed-sxie2r74ua-zf.a.run.app/';
     return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
   }
 }
