@@ -10,6 +10,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {IonicModule} from '@ionic/angular';
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -22,6 +23,7 @@ describe('LanguageSelectorComponent', () => {
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
         NoopAnimationsModule,
+        IonicModule,
         HttpClientTestingModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
       ],

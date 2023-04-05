@@ -1,27 +1,18 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {PlaygroundComponent} from './pages/playground/playground.component';
-import {TranslateComponent} from './pages/translate/translate.component';
-import {BenchmarkComponent} from './pages/benchmark/benchmark.component';
 import {environment} from '../environments/environment';
-import {LazyDialogEntryComponent} from './pages/translate/dialog-entry.component';
-import {NotFoundComponent} from './pages/not-found/not-found.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: TranslateComponent,
-    children: [
-      {
-        path: 'settings',
-        outlet: 'dialog',
-        component: LazyDialogEntryComponent,
-      },
-    ],
-  },
+  {path: '', loadChildren: () => import('./pages/translate/translate.module').then(m => m.TranslatePageModule)},
   {path: 'tabs', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)},
-  {path: 'playground', component: PlaygroundComponent},
-  {path: 'benchmark', component: BenchmarkComponent},
+  {
+    path: 'playground',
+    loadChildren: () => import('./pages/playground/playground.module').then(m => m.PlaygroundPageModule),
+  },
+  {
+    path: 'benchmark',
+    loadChildren: () => import('./pages/benchmark/benchmark.module').then(m => m.BenchmarkPageModule),
+  },
   {path: 'about', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
   {path: 'legal', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
   {
@@ -31,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponent,
+    loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundPageModule),
   },
 ];
 

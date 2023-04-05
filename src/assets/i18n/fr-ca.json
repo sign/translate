@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Squelette",
       "avatar": "Avatar",
-      "human": "Humain"
+      "person": "Humain"
     },
     "title": "Réglages",
     "close": "Fermer les paramètres",

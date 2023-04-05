@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "해골",
       "avatar": "화신",
-      "human": "인간"
+      "person": "인간"
     },
     "title": "설정",
     "close": "설정 닫기",

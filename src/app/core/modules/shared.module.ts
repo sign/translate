@@ -8,7 +8,7 @@ import {ThreeService} from '../services/three.service';
 
 const components = [];
 
-const modules = [AppNgxsModule, AppTranslocoModule, AppAngularMaterialModule, CommonModule];
+const modules = [CommonModule, AppNgxsModule, AppTranslocoModule, AppAngularMaterialModule];
 
 @NgModule({
   declarations: components,

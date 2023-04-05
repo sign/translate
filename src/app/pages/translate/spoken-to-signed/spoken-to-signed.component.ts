@@ -76,7 +76,7 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
   }
 
   shareIcon(): string {
-    return isIOS || isMacLike ? 'ios_share' : 'share';
+    return isIOS || isMacLike ? 'share-outline' : 'share-social-outline';
   }
 
   copyTranslation(): void {

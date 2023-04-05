@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skelett",
       "avatar": "Avatar",
-      "human": "Inimene"
+      "person": "Inimene"
     },
     "title": "Seaded",
     "close": "Sulge seaded",

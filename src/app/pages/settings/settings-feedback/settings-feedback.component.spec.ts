@@ -7,6 +7,7 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {IonicModule} from '@ionic/angular';
 
 describe('SettingsFeedbackComponent', () => {
   let component: SettingsFeedbackComponent;
@@ -15,7 +16,12 @@ describe('SettingsFeedbackComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsFeedbackComponent],
-      imports: [AppAngularMaterialModule, AppTranslocoTestingModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [
+        AppAngularMaterialModule,
+        AppTranslocoTestingModule,
+        IonicModule,
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsFeedbackComponent);

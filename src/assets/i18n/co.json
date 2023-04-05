@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "scheletru",
       "avatar": "Avatar",
-      "human": "umanu"
+      "person": "umanu"
     },
     "title": "Settings",
     "close": "Chiudi i paràmetri",

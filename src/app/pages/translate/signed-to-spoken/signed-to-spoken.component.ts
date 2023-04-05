@@ -46,7 +46,7 @@ const FAKE_WORDS = [
     sw: [
       'M507x523S15a28494x496S26500493x477',
       'M522x525S11541498x491S11549479x498S20600489x476',
-      'AS14c31S14c39S27102S27116S30300S30a00S36e00M554x585S30a00481x488S14c39465x545S14c31508x546',
+      'M554x585S30a00481x488S14c39465x545S14c31508x546',
     ],
     text: 'Your name',
   },
@@ -55,7 +55,7 @@ const FAKE_WORDS = [
     sw: [
       'M507x523S15a28494x496S26500493x477',
       'M522x525S11541498x491S11549479x498S20600489x476',
-      'AS14c31S14c39S27102S27116S30300S30a00S36e00M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S26506539x545S26512445x545',
+      'M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S26506539x545S26512445x545',
     ],
     text: 'Your name',
   },
@@ -64,7 +64,7 @@ const FAKE_WORDS = [
     sw: [
       'M507x523S15a28494x496S26500493x477',
       'M522x525S11541498x491S11549479x498S20600489x476',
-      'AS14c31S14c39S27102S27116S30300S30a00S36e00M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S27102539x545S27116445x545',
+      'M554x585S30a00481x488S30300481x477S14c31508x546S14c39465x545S27102539x545S27116445x545',
     ],
     text: 'What is your name?',
   },
@@ -93,11 +93,18 @@ export class SignedToSpokenComponent implements OnInit {
 
       const video = document.querySelector('video');
       if (video) {
+        let lastArray = [];
+        let resultArray = [];
         for (const step of FAKE_WORDS) {
           if (step.time <= video.currentTime) {
             this.translation = step.text;
-            this.store.dispatch(new SetSignWritingText(step.sw));
+            resultArray = step.sw;
           }
+        }
+
+        if (JSON.stringify(resultArray) !== JSON.stringify(lastArray)) {
+          this.store.dispatch(new SetSignWritingText(resultArray));
+          lastArray = resultArray;
         }
       }
 

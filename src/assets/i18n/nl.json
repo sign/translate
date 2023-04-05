@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skelet",
       "avatar": "Avatar",
-      "human": "Menselijk"
+      "person": "Menselijk"
     },
     "title": "Instellingen",
     "close": "Instellingen sluiten",

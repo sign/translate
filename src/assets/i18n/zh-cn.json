@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "骨骼",
       "avatar": "阿凡达",
-      "human": "人类"
+      "person": "人类"
     },
     "title": "设置",
     "close": "关闭设置",

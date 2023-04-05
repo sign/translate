@@ -1,0 +1,63 @@
+@use '@angular/material' as mat;
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$app-accent: mat.define-palette(mat.$pink-palette);
+$app-warn: mat.define-palette(mat.$red-palette);
+$app-typography: mat.define-typography-config(
+  $font-family: 'Roboto,Helvetica Neue,sans-serif',
+);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-color: (
+  primary: mat.define-palette(mat.$blue-palette, $default: 700),
+  accent: $app-accent,
+  warn: $app-warn,
+);
+$app-theme: mat.define-light-theme(
+  (
+    color: $app-color,
+  )
+);
+$app-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$blue-palette, $default: 400),
+      accent: $app-accent,
+      warn: $app-warn,
+    ),
+  )
+);
+
+@include mat.core();
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@mixin theme-components($theme) {
+  //@include mat.core-color($theme);
+  //@include mat.sidenav-color($theme);
+  //@include mat.button-color($theme);
+  //@include mat.progress-spinner-color($theme);
+  //@include mat.progress-bar-color($theme);
+  //@include mat.card-color($theme);
+  //@include mat.dialog-color($theme);
+  //@include mat.expansion-color($theme);
+
+  @include mat.tree-color($theme);
+  @include mat.tooltip-color($theme);
+  @include mat.menu-color($theme);
+  @include mat.tabs-color($theme);
+}
+
+// Include typography and density styles once, for light and dark modes
+@include mat.all-component-typographies($app-theme);
+@include mat.all-component-densities($app-theme);
+
+@include theme-components($app-theme);
+
+@media (prefers-color-scheme: dark) {
+  @include theme-components($app-dark-theme);
+}

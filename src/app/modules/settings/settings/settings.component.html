@@ -1,7 +1,6 @@
 <ion-list *transloco="let t; read: 'settings'" [attr.aria-label]="t('title')">
   <ion-item *ngFor="let s of availableSettings">
-    <ion-checkbox [checked]="settings[s]" (ionChange)="changeSetting(s, $event)">
-      {{ t(s) }}
+    <ion-checkbox [checked]="settings[s]" [attr.aria-label]="t(s)" (ionChange)="changeSetting(s, $event)">
     </ion-checkbox>
   </ion-item>
 </ion-list>

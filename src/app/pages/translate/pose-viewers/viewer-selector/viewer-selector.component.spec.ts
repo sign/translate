@@ -8,6 +8,7 @@ import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('ViewerSelectorComponent', () => {
   let component: ViewerSelectorComponent;
@@ -19,6 +20,7 @@ describe('ViewerSelectorComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
+        IonicModule,
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],

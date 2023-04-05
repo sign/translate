@@ -6,7 +6,7 @@
         <ion-fab-button
           (click)="applySetting('receiveVideo', false)"
           [attr.aria-label]="t('receiveVideo.on')"
-          [title]="t('receiveVideo.on')"
+          [matTooltip]="t('receiveVideo.on')"
           class="transparent">
           <ion-icon name="videocam-outline"></ion-icon>
         </ion-fab-button>
@@ -16,7 +16,7 @@
         <ion-fab-button
           (click)="applySetting('receiveVideo', true)"
           [attr.aria-label]="t('receiveVideo.off')"
-          [title]="t('receiveVideo.off')"
+          [matTooltip]="t('receiveVideo.off')"
           color="danger">
           <ion-icon name="videocam-off-outline"></ion-icon>
         </ion-fab-button>

@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Esquelet",
       "avatar": "Avatar",
-      "human": "Humans"
+      "person": "Humans"
     },
     "title": "Configuració",
     "close": "Tanca la configuració",

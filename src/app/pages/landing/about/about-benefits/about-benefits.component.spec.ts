@@ -4,6 +4,7 @@ import {AboutBenefitsComponent} from './about-benefits.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('AboutBenefitsComponent', () => {
   let component: AboutBenefitsComponent;
@@ -12,7 +13,7 @@ describe('AboutBenefitsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutBenefitsComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutBenefitsComponent);

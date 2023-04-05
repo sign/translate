@@ -7,7 +7,5 @@ import {MediaMatcher} from '@angular/cdk/layout';
   styleUrls: ['tabs.page.scss'],
 })
 export class TabsPageComponent {
-  isMobile = this.mediaMatcher.matchMedia('(max-width: 599px)');
-
   constructor(private mediaMatcher: MediaMatcher) {}
 }

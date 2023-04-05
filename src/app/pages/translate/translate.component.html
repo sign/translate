@@ -1,7 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="primary">
-      <ion-button>
+      <ion-button
+        [attr.aria-label]="'settings.title' | transloco"
+        [routerLink]="['', {outlets: {settings: ['s'], dialog: ['settings']}}]"
+        [queryParamsHandling]="'preserve'">
         <ion-icon slot="icon-only" name="settings-sharp"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -40,7 +43,7 @@
             expand="full"
             color="dark"
             [disabled]="(spokenLanguage$ | async) === null && (detectedLanguage$ | async) === null"
-            [title]="'translate.swapLanguages' | transloco"
+            [matTooltip]="'translate.swapLanguages' | transloco"
             [attr.aria-label]="'translate.swapLanguages' | transloco">
             <ion-icon name="swap-horizontal"></ion-icon>
           </ion-button>
@@ -62,9 +65,7 @@
       </div>
     </app-drop-pose-file>
 
-    <a id="feedback" href="https://github.com/sign/translate/issues" target="_blank">
-      {{ 'settings.support.feedback.send' | transloco }}
-    </a>
+    <app-send-feedback />
   </div>
 </ion-content>
 

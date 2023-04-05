@@ -75,6 +75,7 @@ app-sign-writing {
     font-size: 12px;
     line-height: 40px;
     padding-inline: 10px;
+    white-space: nowrap;
   }
 }
 
@@ -103,11 +104,6 @@ app-sign-writing {
   text-align: end;
   //width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
   width: calc(100% - 2 * 14px);
-
-  mat-spinner {
-    display: inline-block;
-    margin: 0 8px -8px;
-  }
 }
 
 video {

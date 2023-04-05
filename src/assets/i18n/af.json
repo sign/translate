@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Geraamte",
       "avatar": "Avatar",
-      "human": "Mens"
+      "person": "Mens"
     },
     "title": "Instellings",
     "close": "Maak instellings toe",

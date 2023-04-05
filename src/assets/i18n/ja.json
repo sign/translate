@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "スケルトン",
       "avatar": "アバター",
-      "human": "人間"
+      "person": "人間"
     },
     "title": "設定",
     "close": "設定を閉じる",

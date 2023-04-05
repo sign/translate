@@ -8,6 +8,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {RouterTestingModule} from '@angular/router/testing';
+import {IonicModule} from '@ionic/angular';
 
 describe('SettingsAboutComponent', () => {
   let component: SettingsAboutComponent;
@@ -19,6 +20,7 @@ describe('SettingsAboutComponent', () => {
       imports: [
         AppAngularMaterialModule,
         AppTranslocoTestingModule,
+        IonicModule,
         RouterTestingModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],

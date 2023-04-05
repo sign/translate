@@ -4,6 +4,7 @@ import {AboutTeamComponent} from './about-team.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('AboutTeamComponent', () => {
   let component: AboutTeamComponent;
@@ -12,7 +13,7 @@ describe('AboutTeamComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutTeamComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutTeamComponent);

@@ -8,6 +8,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {LanguageSelectorComponent} from '../../components/language-selector/language-selector.component';
 import {AboutComponent} from './about/about.component';
+import {IonicModule} from '@ionic/angular';
 
 describe('LandingComponent', () => {
   let component: LandingComponent;
@@ -19,6 +20,7 @@ describe('LandingComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
+        IonicModule,
         NoopAnimationsModule,
         RouterModule.forRoot([{path: '', component: AboutComponent}]),
       ],

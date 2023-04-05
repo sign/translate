@@ -3,7 +3,6 @@ import {BaseSettingsComponent} from '../settings.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SettingsStateModel} from '../settings.state';
-import {CheckboxCustomEvent} from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -27,10 +26,7 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
   ngOnInit(): void {
     this.settingsState$
       .pipe(
-        tap(settings => {
-          console.log('settings', settings);
-          this.settings = settings;
-        }),
+        tap(settings => (this.settings = settings)),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();

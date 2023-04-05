@@ -51,7 +51,7 @@ describe('TranslateInputButtonComponent', () => {
   it('button click should dispatch set mode action', fakeAsync(() => {
     component.mode = 'test' as any;
     const spy = spyOn(store, 'dispatch');
-    const button = fixture.nativeElement.querySelector('button');
+    const button = fixture.nativeElement.querySelector('ion-button');
     button.click();
 
     expect(spy).toHaveBeenCalledWith(new SetInputMode('test' as any));

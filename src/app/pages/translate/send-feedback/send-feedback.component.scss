@@ -1,0 +1,19 @@
+@import '../../../../theme/variables';
+
+a {
+  float: right;
+  color: var(--ion-text-color);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 8px 0;
+  text-decoration: none;
+
+  @media #{$breakpoint-lt-lg} {
+    padding: 0 12px;
+  }
+}
+
+::ng-deep html[dir='rtl'] a {
+  float: left;
+}

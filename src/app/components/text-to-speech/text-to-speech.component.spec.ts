@@ -5,6 +5,7 @@ import {TextToSpeechComponent} from './text-to-speech.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {SimpleChange} from '@angular/core';
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
+import {IonicModule} from '@ionic/angular';
 import Spy = jasmine.Spy;
 
 describe('TextToSpeechComponent', () => {
@@ -26,7 +27,7 @@ describe('TextToSpeechComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TextToSpeechComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
     }).compileComponents();
   });
 

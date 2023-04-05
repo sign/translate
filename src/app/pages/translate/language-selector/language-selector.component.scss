@@ -11,11 +11,14 @@ mat-tab-group {
 
 // Make language expansion menu show the correct icon
 ion-button.menu-icon-button {
-  mat-icon {
+  height: 100%;
+  margin: 0;
+
+  ion-icon {
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &[aria-expanded='true'] mat-icon {
+  &[aria-expanded='true'] ion-icon {
     transform: rotateZ(-180deg);
   }
 }
@@ -26,7 +29,6 @@ ion-button.menu-language-button {
   width: 100%;
   height: 100%;
   margin: 0;
-  text-transform: uppercase;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

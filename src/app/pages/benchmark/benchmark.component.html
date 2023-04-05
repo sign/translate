@@ -20,7 +20,7 @@
           <p>
             <app-benchmark-item
               *ngFor="let item of stat.value | keyvalue"
-              [title]="t('stats.' + stat.key + '.' + item.key)"
+              [matTooltip]="t('stats.' + stat.key + '.' + item.key)"
               [timings]="item.value"></app-benchmark-item>
           </p>
         </ion-card-content>

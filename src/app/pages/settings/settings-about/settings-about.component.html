@@ -1,5 +1,5 @@
-<mat-nav-list>
-  <a mat-list-item *ngFor="let page of legalPages" (click)="navigateToLegalPage(page)">
-    {{ 'legal.' + page + '.title' | transloco }}
-  </a>
-</mat-nav-list>
+<ion-list>
+  <ion-item *ngFor="let page of legalPages" (click)="navigateToLegalPage(page)" [button]="true">
+    <ion-label>{{ 'legal.' + page + '.title' | transloco }}</ion-label>
+  </ion-item>
+</ion-list>

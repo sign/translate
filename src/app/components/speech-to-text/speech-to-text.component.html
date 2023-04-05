@@ -8,8 +8,9 @@
     (click)="isRecording ? stop() : start()"
     *ngIf="!supportError"
     [attr.aria-label]="t(isRecording ? 'stop' : 'start')"
-    [title]="t(isRecording ? 'stop' : 'start')">
-    <ion-icon [name]="isRecording ? 'stop-circle-outline' : 'mic-outline'" slot="icon-only"></ion-icon>
+    [matTooltip]="t(isRecording ? 'stop' : 'start')"
+    matTooltipPosition="above">
+    <ion-icon [name]="isRecording ? 'stop-circle-outline' : 'mic'" slot="icon-only"></ion-icon>
   </ion-button>
 
   <!-- If language is not supported -->
@@ -20,7 +21,8 @@
     color="medium"
     *ngIf="supportError"
     [attr.aria-label]="t(supportError)"
-    [title]="t(supportError)">
+    [matTooltip]="t(supportError)"
+    matTooltipPosition="above">
     <ion-icon name="mic-off-outline" slot="icon-only"></ion-icon>
   </ion-button>
 </ng-container>

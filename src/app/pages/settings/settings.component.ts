@@ -25,22 +25,22 @@ export class SettingsPageComponent implements OnInit {
     {
       name: 'support',
       pages: [
-        {path: 'feedback', icon: 'rate_review'},
-        {path: 'about', icon: 'info'},
+        {path: 'feedback', icon: 'chatbubbles'},
+        {path: 'about', icon: 'information-circle'},
       ],
     },
     {
       name: 'voice',
       pages: [
         {path: 'input', icon: 'mic'},
-        {path: 'output', icon: 'volume_up'},
+        {path: 'output', icon: 'volume-medium'},
       ],
     },
     {
       name: 'other',
       pages: [
-        {path: 'offline', icon: 'airplanemode_active'},
-        {path: 'appearance', icon: 'account_box'},
+        {path: 'offline', icon: 'airplane'},
+        {path: 'appearance', icon: 'person-circle'},
       ],
     },
   ];

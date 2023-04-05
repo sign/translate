@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {environment} from '../../../../environments/environment';
 import {NgxsModule, NgxsModuleOptions} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {VideoState} from './store/video/video.state';
 
 export const ngxsConfig: NgxsModuleOptions = {
   developmentMode: !environment.production,
@@ -18,6 +17,6 @@ export const ngxsConfig: NgxsModuleOptions = {
 };
 
 @NgModule({
-  imports: [NgxsModule.forRoot([SettingsState, VideoState], ngxsConfig)],
+  imports: [NgxsModule.forRoot([SettingsState], ngxsConfig)],
 })
 export class AppNgxsModule {}

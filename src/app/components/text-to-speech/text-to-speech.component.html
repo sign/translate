@@ -9,7 +9,8 @@
       (click)="isSpeaking ? cancel() : play()"
       *ngIf="isSupported"
       [attr.aria-label]="t(isSpeaking ? 'cancel' : 'play')"
-      [title]="t(isSpeaking ? 'cancel' : 'play')">
+      [matTooltip]="t(isSpeaking ? 'cancel' : 'play')"
+      matTooltipPosition="above">
       <ion-icon [name]="isSpeaking ? 'stop-circle-outline' : 'volume-medium'" slot="icon-only"></ion-icon>
     </ion-button>
 
@@ -21,7 +22,8 @@
       color="medium"
       *ngIf="!isSupported"
       [attr.aria-label]="t('unavailable')"
-      [title]="t('unavailable')">
+      [matTooltip]="t('unavailable')"
+      matTooltipPosition="above">
       <ion-icon name="volume-mute-outline" slot="icon-only"></ion-icon>
     </ion-button>
   </ng-container>

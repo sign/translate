@@ -41,31 +41,34 @@
 
   <div class="actions" *ngIf="pose$ | async as pose">
     <ng-container *ngIf="videoUrl; else spinner">
-      <button
-        mat-icon-button
-        [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
+      <ion-button
+        class="circle-icon"
+        fill="clear"
+        shape="round"
+        color="dark"
         (click)="downloadTranslation()"
-        [matTooltipPosition]="'above'"
-        [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco">
-        <mat-icon>download</mat-icon>
-      </button>
-      <!-- Currently, no platform I know of allows copying video
-      <button mat-icon-button [attr.aria-label]="t('actions.copy')"
-              (click)="copyTranslation()"
-              [matTooltipPosition]="'above'" [matTooltip]="t('actions.copy')">
-        <mat-icon>file_copy</mat-icon>
-      </button> -->
-      <button
-        mat-icon-button
-        [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
+        [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
+        [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
+        [matTooltipPosition]="'above'">
+        <ion-icon name="download-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <ion-button
+        class="circle-icon"
+        fill="clear"
+        shape="round"
+        color="dark"
         (click)="shareTranslation()"
-        [matTooltipPosition]="'above'"
-        [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco">
-        <mat-icon>{{ shareIcon() }}</mat-icon>
-      </button>
+        [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
+        [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
+        [matTooltipPosition]="'above'">
+        <ion-icon [name]="shareIcon()" slot="icon-only"></ion-icon>
+      </ion-button>
     </ng-container>
     <ng-template #spinner>
-      <mat-spinner diameter="24"></mat-spinner>
+      <ion-button [disabled]="true" class="circle-icon" fill="clear" shape="round">
+        <ion-spinner name="crescent" color="dark"></ion-spinner>
+      </ion-button>
     </ng-template>
     <app-viewer-selector></app-viewer-selector>
   </div>

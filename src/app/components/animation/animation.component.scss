@@ -1,6 +1,3 @@
-@use '@angular/material' as mat;
-@use '../../../theme/variables' as theme;
-
 :host {
   position: absolute;
   width: 100%;
@@ -12,5 +9,5 @@ model-viewer {
   height: 100%;
   --poster-color: transparent;
   --progress-mask: transparent;
-  --progress-bar-color: #{mat.get-color-from-palette(map-get(theme.$app-color, primary))};
+  --progress-bar-color: var(--ion-color-primary);
 }

@@ -5,6 +5,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
+import {Router} from '@angular/router';
 
 describe('AppComponent', () => {
   let store: Store;
@@ -60,5 +61,31 @@ describe('AppComponent', () => {
     transloco.setActiveLang('he');
     expect(document.dir).toEqual('rtl');
     document.dir = 'ltr'; // Restore state if succeeded
+  });
+
+  it('should navigate to home page and not show app-not-found element when button is clicked', async () => {
+    const router = TestBed.inject(Router);
+    router.initialNavigation();
+    await router.navigate(['/not-found-path-does-not-exist']);
+
+    // Wait for the router to navigate
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const getElement = () => fixture.nativeElement.querySelector('app-not-found');
+
+    // Check if the app navigated to the not found page
+    expect(getElement()).not.toBeNull();
+
+    // Simulate button click
+    const button = fixture.nativeElement.querySelector('ion-button');
+    button.click();
+
+    // Wait for the router to navigate
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    // Check if the app-not-found element is not in the DOM
+    expect(getElement()).toBeNull();
   });
 });

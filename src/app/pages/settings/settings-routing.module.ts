@@ -16,6 +16,15 @@ const routes: Routes = [
   {path: 'appearance', component: SettingsAppearanceComponent},
 ];
 
+// TODO use this when getting away from modal
+// const mainRoute = [
+//   {
+//     path: '',
+//     component: SettingsPageComponent,
+//     children: routes,
+//   }
+// ]
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

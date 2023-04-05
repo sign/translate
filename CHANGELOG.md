@@ -4,7 +4,20 @@ This file is used to list changes made over time to `sign/translate`.
 
 ## Unreleased
 
-### 0.0.1
+### 0.0.2
+
+#### Features
+
+- **core**: split app into modules to decrease chunk sizes
+
+#### Style
+
+- **core**: migrated app from `angular/material` to `ionic`
+- **ios/safari**: add iOS style for iOS devices / Safari
+
+## Released
+
+### 0.0.1 (2023/03/13)
 
 #### Style
 
@@ -19,8 +32,6 @@ This file is used to list changes made over time to `sign/translate`.
 
 - **install**: fix `npm install` on Windows using PowerShell
 - **sitemap**: utilise page alternates for different page languages
-
-## Released
 
 ### 0.0.0 (2023/02/13)
 

@@ -28,7 +28,6 @@ export class BenchmarkComponent {
 
   async bench() {
     for (const bench of Object.values(this.benchmarks)) {
-      console.log('Benching...', bench);
       try {
         await bench();
       } catch (e) {

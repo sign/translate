@@ -29,4 +29,8 @@ ion-button.circle-icon {
   /* To make the button circle */
   --padding-start: 5.4px;
   --padding-end: var(--padding-start);
+
+  &[size='small'] {
+    --padding-start: 1.95px;
+  }
 }

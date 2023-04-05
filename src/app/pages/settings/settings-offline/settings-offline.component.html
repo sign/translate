@@ -9,30 +9,38 @@
       [value]="node.progress * 100"
       [diameter]="20"></mat-progress-spinner>
 
-    <button
-      mat-icon-button
-      color="accent"
+    <ion-button
+      class="circle-icon"
+      color="secondary"
+      shape="round"
+      size="small"
       [attr.aria-label]="'settings.other.offline.actions.reDownload' | transloco"
       *ngIf="node.exists"
       (click)="reDownload(node)">
-      <mat-icon>cached</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      color="warn"
+      <ion-icon slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
+
+    <ion-button
+      class="circle-icon"
+      color="danger"
+      shape="round"
+      size="small"
       [attr.aria-label]="'settings.other.offline.actions.delete' | transloco"
       *ngIf="node.exists"
       (click)="deleteCache(node)">
-      <mat-icon>delete</mat-icon>
-    </button>
-    <button
-      mat-icon-button
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+
+    <ion-button
+      class="circle-icon"
       color="primary"
+      shape="round"
+      size="small"
       [attr.aria-label]="'settings.other.offline.actions.download' | transloco"
       *ngIf="!node.exists && !node.progress"
       (click)="download(node)">
-      <mat-icon>download</mat-icon>
-    </button>
+      <ion-icon slot="icon-only" name="cloud-download-outline"></ion-icon>
+    </ion-button>
   </ng-container>
 </ng-template>
 
