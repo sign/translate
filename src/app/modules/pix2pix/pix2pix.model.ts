@@ -85,29 +85,20 @@ export async function loadModel(
   resetDropout(model.layers); // Extremely important, as we are performing inference in training mode
 }
 
-function isGreen(r: number, g: number, b: number) {
-  return g > 255 / 2 && g > r * 1.5 && g > b * 1.5;
-}
-
-function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
-  // TODO consider
-  //  https://github.com/bhj/gl-chromakey
-  //  https://github.com/Sean-Bradley/Three.js-TypeScript-Boilerplate/blob/webcam/src/client/client.ts
-  //  (easiest) https://developer.vonage.com/blog/2020/06/24/use-a-green-screen-in-javascript-with-vonage-video
-
-  // This takes 0.15ms for 256x256 images, would perhaps be good to do this in wasm.
-  for (let i = 0; i < data.length; i += 4) {
-    if (isGreen(data[i], data[i + 1], data[i + 2])) {
-      data[i + 3] = 0;
-    }
-  }
-  return data;
+function removeGreenScreenTensorflow(image: Tensor, tf): Tensor {
+  const [red, green, blue] = tf.split(image, 3, -1);
+  const greenMask = green.greater(0.5);
+  const redMask = green.greater(red.mul(1.5));
+  const blueMask = green.greater(blue.mul(1.5));
+  const alpha = tf.logicalNot(greenMask.logicalAnd(redMask).logicalAnd(blueMask)).cast('float32');
+  return tf.concat([red, green, blue, alpha], -1);
 }
 
 let queuePromise: Promise<any> = Promise.resolve([null]);
 let globalQueueId = 0;
 
 let imageQueue: Image[] = [];
+
 // const BATCH_TIMEOUT = 50; // Adjust this based on the desired maximum waiting time for new images (in ms)
 
 export async function translateQueue(queueId: number, image: ImageBitmap | ImageData): Promise<Uint8ClampedArray> {
@@ -143,14 +134,12 @@ export async function translateQueue(queueId: number, image: ImageBitmap | Image
     return tensor.unstack();
   });
 
-  const outputImages = await queuePromise; // Get first image from batch
+  const outputImages = await queuePromise; // Get output images from batch
   if (outputImages === null) {
     return null;
   }
-  let outputImage = await tf.browser.toPixels(outputImages[0]); // ~1-3ms
-  outputImage = removeGreenScreen(outputImage); // ~0.1-0.2ms
 
-  return outputImage;
+  return tf.browser.toPixels(outputImages[0]); // ~1-3ms
 }
 
 function upscale(tensor: Tensor) {
@@ -167,19 +156,27 @@ async function translate(images: Image[]): Promise<Tensor4D> {
   const tf = await tfPromise;
 
   return tf.tidy(() => {
-    const pixels = tf.stack(images.map(image => tf.browser.fromPixels(image, 3))); // 0.1-0.3ms
-    const pixelsTensor = pixels.toFloat();
-    const input = tf.sub(tf.div(pixelsTensor, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
-    const tensor = tf.stack([input]); // Add batch dimension, model expects Tensor5D
+    const one = tf.scalar(1);
+    const half = tf.scalar(0.5);
+
+    const pixelsBatch = images.map(image => tf.browser.fromPixels(image, 3));
+    const pixelsTensor = tf
+      .stack(pixelsBatch) // 0.1-0.3ms
+      .toFloat()
+      // Normalizing the images to [-1, 1]
+      .div(tf.scalar(255 / 2))
+      .sub(one);
+    const tensor = tf.stack([pixelsTensor]); // Add batch dimension, model expects Tensor5D
 
     // Must apply model in training=True mode to avoid using aggregated norm statistics
     let pred = model.apply(tensor, {training: true}) as Tensor; //6-8ms, but works
 
-    // let pred = model.predict(tensor) as Tensor; // 3-4ms, but returns black screen
-    pred = pred.mul(tf.scalar(0.5)).add(tf.scalar(0.5)); // Normalization to range [0, 1]
+    pred = pred.mul(half).add(half); // Normalization to range [0, 1]
 
     pred = tf.squeeze(pred, [0]); // Remove time dimension
     pred = upscale(pred);
+
+    pred = removeGreenScreenTensorflow(pred, tf);
 
     return pred as Tensor4D;
   });

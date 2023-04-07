@@ -77,7 +77,6 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
               return image;
             });
             const image = await nextFramePromise;
-            await pose.nextFrame();
             this.translateFrame(image, canvas, ctx).then(() => {
               queued--;
               iterFrame();
