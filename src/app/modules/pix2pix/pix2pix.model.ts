@@ -1,6 +1,8 @@
-import type {Tensor, Tensor3D} from '@tensorflow/tfjs';
+import type {Tensor, Tensor4D} from '@tensorflow/tfjs';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {loadTFDS} from '../../core/services/tfjs/tfjs.loader';
+
+type Image = ImageBitmap | ImageData;
 
 class ModelNotLoadedError extends Error {
   constructor() {
@@ -62,7 +64,7 @@ async function loadGeneratorModel(layers: Map<string, string>) {
   lstmSequence[2].config.recurrent_initializer.class_name = 'Zeros';
   // Make model stateful
   lstmSequence[0].config.batch_input_shape[0] = 1;
-  lstmSequence[0].config.batch_input_shape[1] = 1;
+  // lstmSequence[0].config.batch_input_shape[1] = 1;
   lstmSequence[2].config.stateful = true;
 
   // Convert JSON to blob
@@ -102,33 +104,55 @@ function removeGreenScreen(data: Uint8ClampedArray): Uint8ClampedArray {
   return data;
 }
 
-let queuePromise: Promise<any> = Promise.resolve();
+let queuePromise: Promise<any> = Promise.resolve([null]);
 let globalQueueId = 0;
+
+let imageQueue: Image[] = [];
+// const BATCH_TIMEOUT = 50; // Adjust this based on the desired maximum waiting time for new images (in ms)
 
 export async function translateQueue(queueId: number, image: ImageBitmap | ImageData): Promise<Uint8ClampedArray> {
   globalQueueId = queueId;
+  imageQueue.push(image);
 
-  const tensor = await translate(image); // Lazy tensor evaluation
   const tf = await tfPromise;
 
+  // Adjust this based on your hardware and performance requirements
+  const MAX_BATCH_SIZE = tf.getBackend() === 'webgpu' ? 8 : 1;
+
   // Chain the model evaluation per frame
-  queuePromise = queuePromise.then(() => {
+  queuePromise = queuePromise.then(async (lastImages: any[]) => {
     if (globalQueueId !== queueId) {
       return null;
     }
 
-    return tensor.buffer(); // 60-70ms
+    // Remove the oldest image from the results
+    lastImages.shift();
+    if (lastImages.length > 0) {
+      return lastImages;
+    }
+
+    const now = performance.now();
+
+    // Dequeue images up to max batch size
+    const randomBatchSize = Math.floor(Math.random() * MAX_BATCH_SIZE) + 1;
+    const images = imageQueue.splice(0, randomBatchSize);
+
+    const lazyTensor = await translate(images);
+    const buffer = await lazyTensor.buffer(); // 60-70ms
+    const tensor = buffer.toTensor();
+    console.log('Batching', images.length, (performance.now() - now).toFixed(1), 'ms');
+    return tensor.unstack();
   });
 
-  const imageBuffer = await queuePromise;
-  let outputImage = await tf.browser.toPixels(imageBuffer.toTensor()); // ~1-3ms
+  const outputImages = await queuePromise; // Get first image from batch
+  if (outputImages === null) {
+    return null;
+  }
+  let outputImage = await tf.browser.toPixels(outputImages[0]); // ~1-3ms
   outputImage = removeGreenScreen(outputImage); // ~0.1-0.2ms
 
   return outputImage;
 }
-
-const frameTimes = [];
-let lastFrameTime = null;
 
 function upscale(tensor: Tensor) {
   return (upscaler.predict(tensor) as Tensor)
@@ -136,16 +160,7 @@ function upscale(tensor: Tensor) {
     .clipByValue(0, 1); // Clipping to [0, 1] as upscale model may output values greater than 1
 }
 
-async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
-  if (lastFrameTime) {
-    frameTimes.push(Date.now() - lastFrameTime);
-    if (frameTimes.length > 20) {
-      const totalTime = frameTimes.slice(frameTimes.length - 20).reduce((a, b) => a + b, 0);
-      console.log('average', (totalTime / 20).toFixed(1), 'ms');
-    }
-  }
-  lastFrameTime = Date.now();
-
+async function translate(images: Image[]): Promise<Tensor4D> {
   if (!model) {
     throw new ModelNotLoadedError();
   }
@@ -153,10 +168,10 @@ async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
   const tf = await tfPromise;
 
   return tf.tidy(() => {
-    const pixels = tf.browser.fromPixels(image, 3); // 0.1-0.3ms
+    const pixels = tf.stack(images.map(image => tf.browser.fromPixels(image, 3))); // 0.1-0.3ms
     const pixelsTensor = pixels.toFloat();
     const input = tf.sub(tf.div(pixelsTensor, tf.scalar(255 / 2)), tf.scalar(1)); // # Normalizing the images to [-1, 1]
-    const tensor = tf.reshape(input, [1, 1, ...input.shape]); // Add batch and time dimensions
+    const tensor = tf.stack([input]); // Add batch dimension, model expects Tensor5D
 
     // Must apply model in training=True mode to avoid using aggregated norm statistics
     let pred = model.apply(tensor, {training: true}) as Tensor; //6-8ms, but works
@@ -167,7 +182,6 @@ async function translate(image: ImageBitmap | ImageData): Promise<Tensor3D> {
     pred = tf.squeeze(pred, [0]); // Remove time dimension
     pred = upscale(pred);
 
-    pred = tf.squeeze(pred); // Remove batch dimension
-    return pred as Tensor3D;
+    return pred as Tensor4D;
   });
 }

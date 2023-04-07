@@ -51,6 +51,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
           // To avoid communication time losses, we create a queue sent to be translated
           let queued = 0;
+          let nextFramePromise: Promise<any> = Promise.resolve();
 
           const iterFrame = async () => {
             // Verify element is not destroyed
@@ -68,8 +69,14 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             }
 
             queued++;
-            await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
-            const image = await transferableImage(poseCanvas, poseCtx);
+            // Await animation frame due to canvas change, prevent multiple sends for the same frame
+            nextFramePromise = nextFramePromise.then(async () => {
+              await new Promise(requestAnimationFrame);
+              const image = await transferableImage(poseCanvas, poseCtx);
+              await pose.nextFrame();
+              return image;
+            });
+            const image = await nextFramePromise;
             await pose.nextFrame();
             this.translateFrame(image, canvas, ctx).then(() => {
               queued--;
@@ -77,8 +84,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             });
           };
 
-          for (let i = 0; i < 3; i++) {
-            // Leaving at 1, need to fix VideoEncoder timestamps
+          for (let i = 0; i < 8; i++) {
             await iterFrame();
           }
         }),
