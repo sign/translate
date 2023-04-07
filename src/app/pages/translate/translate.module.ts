@@ -15,7 +15,9 @@ import {TranslateLanguageSelectorModule} from './language-selector/language-sele
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../modules/translate/translate.state';
-import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
+import {AppNgxsModule, ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
+import {SettingsState} from '../../modules/settings/settings.state';
+import {DetectorState} from '../../modules/detector/detector.state';
 
 const routes = [
   {
@@ -41,7 +43,6 @@ const components = [SendFeedbackComponent, TranslateInputButtonComponent, Transl
 @NgModule({
   imports: [
     CommonModule,
-    AppNgxsModule,
     IonicModule,
     AppTranslocoModule,
     NgxsModule.forFeature([TranslateState]),
