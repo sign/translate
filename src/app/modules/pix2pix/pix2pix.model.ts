@@ -134,8 +134,7 @@ export async function translateQueue(queueId: number, image: ImageBitmap | Image
     const now = performance.now();
 
     // Dequeue images up to max batch size
-    const randomBatchSize = Math.floor(Math.random() * MAX_BATCH_SIZE) + 1;
-    const images = imageQueue.splice(0, randomBatchSize);
+    const images = imageQueue.splice(0, MAX_BATCH_SIZE);
 
     const lazyTensor = await translate(images);
     const buffer = await lazyTensor.buffer(); // 60-70ms
