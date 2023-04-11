@@ -5,7 +5,8 @@ import {SettingsModule} from '../../modules/settings/settings.module';
 import {VideoModule} from '../../components/video/video.module';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {RouterModule} from '@angular/router';
-import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
+import {NgxsModule} from '@ngxs/store';
+import {SettingsState} from '../../modules/settings/settings.state';
 
 const routes = [
   {
@@ -15,7 +16,14 @@ const routes = [
 ];
 
 @NgModule({
-  imports: [AppTranslocoModule, AppNgxsModule, IonicModule, SettingsModule, VideoModule, RouterModule.forChild(routes)],
+  imports: [
+    AppTranslocoModule,
+    NgxsModule.forFeature([SettingsState]),
+    IonicModule,
+    SettingsModule,
+    VideoModule,
+    RouterModule.forChild(routes),
+  ],
   declarations: [PlaygroundComponent],
 })
 export class PlaygroundPageModule {}

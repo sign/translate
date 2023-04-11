@@ -1,7 +1,7 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
-import {fromEvent} from 'rxjs';
+import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {
@@ -19,9 +19,9 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./translate.component.scss'],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
-  spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
-  spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
-  detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
+  spokenToSigned$: Observable<boolean>;
+  spokenLanguage$: Observable<boolean>;
+  detectedLanguage$: Observable<boolean>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
@@ -33,6 +33,10 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     private title: Title
   ) {
     super();
+
+    this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
+    this.spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
+    this.detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
 
     // Default settings
     this.store.dispatch([

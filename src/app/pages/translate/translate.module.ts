@@ -15,9 +15,6 @@ import {TranslateLanguageSelectorModule} from './language-selector/language-sele
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../modules/translate/translate.state';
-import {AppNgxsModule, ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
-import {SettingsState} from '../../modules/settings/settings.state';
-import {DetectorState} from '../../modules/detector/detector.state';
 
 const routes = [
   {
@@ -38,7 +35,7 @@ const componentModules = [
   TranslateLanguageSelectorModule,
 ];
 
-const components = [SendFeedbackComponent, TranslateInputButtonComponent, TranslateComponent];
+const components = [SendFeedbackComponent, TranslateInputButtonComponent, TranslateComponent, LazyDialogEntryComponent];
 
 @NgModule({
   imports: [

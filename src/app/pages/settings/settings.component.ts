@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {map} from 'rxjs/operators';
 import {MatDialogRef} from '@angular/material/dialog';
+import {Observable} from 'rxjs';
 
 interface Page {
   path: string;
@@ -19,7 +20,7 @@ interface PagesGroup {
   styleUrls: ['./settings.component.scss'],
 })
 export class SettingsPageComponent implements OnInit {
-  isLargePage$ = this.observer.observe(['(min-width: 600px)']).pipe(map(res => res.matches));
+  isLargePage$: Observable<boolean>;
 
   groups: PagesGroup[] = [
     {
@@ -52,7 +53,9 @@ export class SettingsPageComponent implements OnInit {
     private route: ActivatedRoute,
     private observer: BreakpointObserver,
     private dialogRef: MatDialogRef<SettingsPageComponent>
-  ) {}
+  ) {
+    this.isLargePage$ = this.observer.observe(['(min-width: 600px)']).pipe(map(res => res.matches));
+  }
 
   ngOnInit(): void {
     this.updateContentPage();

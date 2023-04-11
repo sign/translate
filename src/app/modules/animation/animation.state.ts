@@ -4,6 +4,7 @@ import {AnimationService} from './animation.service';
 import {filter, first, tap} from 'rxjs/operators';
 import {Pose} from '../pose/pose.state';
 import {AnimatePose} from './animation.actions';
+import {Observable} from 'rxjs';
 
 export interface AnimationStateModel {
   tracks: {[key: string]: [number, number, number, number][]};
@@ -20,10 +21,13 @@ const initialState: AnimationStateModel = {
 })
 export class AnimationState implements NgxsOnInit {
   isAnimatePose = false;
-  pose$ = this.store.select<Pose>(state => state.pose.pose);
-  animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+  pose$!: Observable<Pose>;
+  animatePose$!: Observable<boolean>;
 
-  constructor(private store: Store, private animation: AnimationService) {}
+  constructor(private store: Store, private animation: AnimationService) {
+    this.pose$ = this.store.select<Pose>(state => state.pose.pose);
+    this.animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+  }
 
   ngxsOnInit({dispatch}: StateContext<any>): void {
     // Load model once setting turns on

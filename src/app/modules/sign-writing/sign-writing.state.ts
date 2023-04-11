@@ -9,6 +9,7 @@ import {FaceService, FaceStateModel} from './face.service';
 import {ThreeService} from '../../core/services/three.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 import {SignWritingService} from './sign-writing.service';
+import {Observable} from 'rxjs';
 
 export interface SignWritingStateModel {
   timestamp: number;
@@ -33,8 +34,8 @@ const initialState: SignWritingStateModel = {
 })
 export class SignWritingState implements NgxsOnInit {
   drawSignWriting = false;
-  pose$ = this.store.select<Pose>(state => state.pose.pose);
-  drawSignWriting$ = this.store.select<boolean>(state => state.settings.drawSignWriting);
+  pose$: Observable<Pose>;
+  drawSignWriting$: Observable<boolean>;
 
   constructor(
     private store: Store,
@@ -43,7 +44,10 @@ export class SignWritingState implements NgxsOnInit {
     private handsService: HandsService,
     private three: ThreeService,
     private holistic: MediapipeHolisticService
-  ) {}
+  ) {
+    this.pose$ = this.store.select<Pose>(state => state.pose.pose);
+    this.drawSignWriting$ = this.store.select<boolean>(state => state.settings.drawSignWriting);
+  }
 
   ngxsOnInit({patchState, dispatch}: StateContext<any>): void {
     // Load model once setting turns on

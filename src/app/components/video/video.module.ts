@@ -10,6 +10,7 @@ import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module'
 import {PoseState} from '../../modules/pose/pose.state';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {DetectorState} from '../../modules/detector/detector.state';
+import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import {DetectorState} from '../../modules/detector/detector.state';
     AnimationModule,
     AppTranslocoModule,
     MatTooltipModule,
-    NgxsModule.forFeature([VideoState, PoseState, DetectorState]),
+    NgxsModule.forFeature([VideoState, SignWritingState, PoseState, DetectorState]),
   ],
   declarations: [VideoComponent, VideoControlsComponent],
   exports: [VideoComponent],

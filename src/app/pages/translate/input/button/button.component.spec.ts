@@ -11,6 +11,7 @@ import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/tran
 import {HttpClientModule} from '@angular/common/http';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {SetInputMode} from '../../../../modules/translate/translate.actions';
+import {IonicModule} from '@ionic/angular';
 
 describe('TranslateInputButtonComponent', () => {
   let store: Store;
@@ -21,8 +22,7 @@ describe('TranslateInputButtonComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [TranslateInputButtonComponent],
       imports: [
-        MatButtonModule,
-        MatIconModule,
+        IonicModule,
         AppTranslocoTestingModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         HttpClientModule,

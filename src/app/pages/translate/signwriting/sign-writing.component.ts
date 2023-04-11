@@ -3,6 +3,7 @@ import {BaseComponent} from '../../../components/base/base.component';
 import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {SignWritingService} from '../../../modules/sign-writing/sign-writing.service';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-sign-writing',
@@ -14,13 +15,15 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
 
   static isCustomElementDefined = false;
 
-  colorSchemeMedia = this.matchMedia();
+  colorSchemeMedia!: MediaQueryList;
 
-  constructor() {
+  constructor(private mediaMatcher: MediaMatcher) {
     super();
+
+    this.colorSchemeMedia = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
   }
 
-  matchMedia() {
+  matchMedia(query: string) {
     if ('matchMedia' in globalThis) {
       return globalThis.matchMedia('(prefers-color-scheme: dark)');
     }

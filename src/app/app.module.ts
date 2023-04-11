@@ -10,10 +10,8 @@ import {RouteReuseStrategy} from '@angular/router';
 import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 import {isSafari} from './core/constants';
 import {AppTranslocoModule} from './core/modules/transloco/transloco.module';
-import {AppNgxsModule, ngxsConfig} from './core/modules/ngxs/ngxs.module';
+import {AppNgxsModule} from './core/modules/ngxs/ngxs.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgxsModule} from '@ngxs/store';
-import {SettingsState} from './modules/settings/settings.state';
 
 const mode = isSafari ? 'ios' : 'md';
 
@@ -22,7 +20,7 @@ const mode = isSafari ? 'ios' : 'md';
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
-    NgxsModule.forRoot([SettingsState], ngxsConfig),
+    AppNgxsModule,
     IonicModule.forRoot({mode}),
     AppRoutingModule,
     AppTranslocoModule,

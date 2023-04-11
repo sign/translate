@@ -2,10 +2,13 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsPageComponent} from './settings.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {RouterTestingModule} from '@angular/router/testing';
 import {MatDialogRef} from '@angular/material/dialog';
+import {IonicModule} from '@ionic/angular';
+import {MatTreeModule} from '@angular/material/tree';
+import {CdkTreeModule} from '@angular/cdk/tree';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 describe('SettingsPageComponent', () => {
   let component: SettingsPageComponent;
@@ -14,7 +17,14 @@ describe('SettingsPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsPageComponent],
-      imports: [AppAngularMaterialModule, AppTranslocoTestingModule, RouterTestingModule],
+      imports: [
+        IonicModule,
+        MatTreeModule,
+        CdkTreeModule,
+        MatSidenavModule,
+        AppTranslocoTestingModule,
+        RouterTestingModule,
+      ],
       providers: [{provide: MatDialogRef, useValue: {}}],
     }).compileComponents();
 

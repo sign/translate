@@ -7,14 +7,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
 import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
-import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
+import {NgxsModule} from '@ngxs/store';
+import {TranslateState} from '../../../modules/translate/translate.state';
 
 @NgModule({
   imports: [
     CommonModule,
     IonicModule,
     AppTranslocoModule,
-    AppNgxsModule,
+    NgxsModule.forFeature([TranslateState]),
     MatTabsModule,
     MatMenuModule,
     MatTooltipModule,

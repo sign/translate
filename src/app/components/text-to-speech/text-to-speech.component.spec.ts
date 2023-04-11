@@ -27,7 +27,7 @@ describe('TextToSpeechComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TextToSpeechComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
+      imports: [AppTranslocoTestingModule, IonicModule],
     }).compileComponents();
   });
 

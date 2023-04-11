@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {BaseComponent} from '../../../components/base/base.component';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
-import {interval} from 'rxjs';
+import {interval, Observable} from 'rxjs';
 import {Store} from '@ngxs/store';
 import {
   CopySignedLanguageVideo,
@@ -21,12 +21,12 @@ import {isIOS, isMacLike} from 'src/app/core/constants';
   styleUrls: ['./spoken-to-signed.component.scss'],
 })
 export class SpokenToSignedComponent extends BaseComponent implements OnInit {
-  poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
-  translate$ = this.store.select<TranslateStateModel>(state => state.translate);
-  text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
-  signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
-  pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
-  video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
+  poseViewerSetting$!: Observable<PoseViewerSetting>;
+  translate$!: Observable<TranslateStateModel>;
+  text$!: Observable<string>;
+  signWriting$!: Observable<string[]>;
+  pose$!: Observable<string>;
+  video$!: Observable<string>;
 
   videoUrl: SafeUrl;
   spokenLanguage: string;
@@ -36,6 +36,13 @@ export class SpokenToSignedComponent extends BaseComponent implements OnInit {
 
   constructor(private store: Store, private domSanitizer: DomSanitizer) {
     super();
+
+    this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
+    this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
+    this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
+    this.signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
+    this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
+    this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
   }
 
   ngOnInit(): void {

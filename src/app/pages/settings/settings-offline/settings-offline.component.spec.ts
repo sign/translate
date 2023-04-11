@@ -5,11 +5,12 @@ import {AppAngularMaterialModule} from '../../../core/modules/angular-material/a
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {AppNgxsModule, ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {NgxFilesizeModule} from 'ngx-filesize';
+import {IonicModule} from '@ionic/angular';
 
 describe('SettingsOfflineComponent', () => {
   let component: SettingsOfflineComponent;
@@ -21,10 +22,11 @@ describe('SettingsOfflineComponent', () => {
       imports: [
         AppAngularMaterialModule,
         MatTreeModule,
+        IonicModule,
         CdkTreeModule,
         NgxFilesizeModule,
         AppTranslocoTestingModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        AppNgxsModule,
       ],
     }).compileComponents();
 

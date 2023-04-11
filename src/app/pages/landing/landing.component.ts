@@ -10,7 +10,9 @@ export class LandingComponent {
   pages: string[] = ['about', 'languages', 'contribute', 'tools'];
   legalPages: string[] = ['terms', 'privacy', 'licenses'];
 
-  isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
+  isMobile!: MediaQueryList;
 
-  constructor(private mediaMatcher: MediaMatcher) {}
+  constructor(private mediaMatcher: MediaMatcher) {
+    this.isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
+  }
 }

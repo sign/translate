@@ -5,13 +5,12 @@ import {Store} from '@ngxs/store';
 import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {TranslocoService} from '@ngneat/transloco';
 import {IonicModule} from '@ionic/angular';
 import {SettingsModule} from '../../modules/settings/settings.module';
 import {VideoModule} from '../../components/video/video.module';
 
-fdescribe('PlaygroundComponent', () => {
+describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
   let fixture: ComponentFixture<PlaygroundComponent>;
   let store: Store;
@@ -19,20 +18,15 @@ fdescribe('PlaygroundComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PlaygroundComponent],
-      imports: [
-        AppTranslocoTestingModule,
-        AppNgxsModule,
-        IonicModule,
-        SettingsModule,
-        VideoModule,
-        NoopAnimationsModule,
-      ],
+      imports: [AppTranslocoTestingModule, AppNgxsModule, IonicModule, SettingsModule, VideoModule],
     }).compileComponents();
   });
 
   beforeEach(() => {
     store = TestBed.inject(Store);
-    store.reset({settings: {receiveVideo: false}});
+    const snapshot = {...store.snapshot()};
+    snapshot.settings = {...snapshot.settings, receiveVideo: false};
+    store.reset(snapshot);
 
     fixture = TestBed.createComponent(PlaygroundComponent);
     component = fixture.componentInstance;

@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
 import {Store} from '@ngxs/store';
-import {combineLatest, firstValueFrom} from 'rxjs';
+import {combineLatest, firstValueFrom, Observable} from 'rxjs';
 import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
@@ -19,13 +19,13 @@ import {SignWritingService} from '../../modules/sign-writing/sign-writing.servic
   styleUrls: ['./video.component.scss'],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
-  settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
-  animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+  settingsState$!: Observable<SettingsStateModel>;
+  animatePose$!: Observable<boolean>;
 
-  videoState$ = this.store.select<VideoStateModel>(state => state.video);
-  poseState$ = this.store.select<PoseStateModel>(state => state.pose);
-  signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
-  signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
+  videoState$!: Observable<VideoStateModel>;
+  poseState$!: Observable<PoseStateModel>;
+  signWritingState$!: Observable<SignWritingStateModel>;
+  signingProbability$!: Observable<number>;
 
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
@@ -49,6 +49,13 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     private elementRef: ElementRef
   ) {
     super();
+
+    this.settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
+    this.animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+    this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
+    this.poseState$ = this.store.select<PoseStateModel>(state => state.pose);
+    this.signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
+    this.signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
   }
 
   ngAfterViewInit(): void {
