@@ -55,6 +55,7 @@ export class SettingsPageComponent implements OnInit {
     private dialogRef: MatDialogRef<SettingsPageComponent>
   ) {
     this.isLargePage$ = this.observer.observe(['(min-width: 600px)']).pipe(map(res => res.matches));
+    alert('hi');
   }
 
   ngOnInit(): void {

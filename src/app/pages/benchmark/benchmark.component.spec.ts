@@ -2,7 +2,6 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {BenchmarkComponent} from './benchmark.component';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {IonicModule} from '@ionic/angular';

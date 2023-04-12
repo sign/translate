@@ -4,8 +4,6 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {TranslateInputButtonComponent} from './button.component';
 import {NgxsModule, Store} from '@ngxs/store';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import {TranslateState} from '../../../../modules/translate/translate.state';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {HttpClientModule} from '@angular/common/http';

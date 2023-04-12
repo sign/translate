@@ -1,7 +1,3 @@
-import {Component} from '@angular/core';
-import {TranslocoService} from '@ngneat/transloco';
-import {ActivatedRoute, Router} from '@angular/router';
-
 export const SITE_LANGUAGES = [
   {key: 'af', value: 'Afrikaans'},
   {key: 'az', value: 'Azərbaycanca'},
@@ -124,53 +120,4 @@ export function languageCodeNormalizer(languageCode) {
     navigatorParam = 'he';
   }
   return navigatorParam;
-}
-
-@Component({
-  selector: 'app-language-selector',
-  templateUrl: './language-selector.component.html',
-  styleUrls: ['./language-selector.component.scss'],
-})
-export class LanguageSelectorComponent {
-  current: string;
-
-  languages = this.groupLanguages();
-
-  constructor(private router: Router, private route: ActivatedRoute, private transloco: TranslocoService) {
-    this.current = transloco.getActiveLang();
-  }
-
-  private groupLanguages() {
-    const languageGroups = [];
-    let lastGroup = {label: 'A', languages: []};
-    let didCrossZ = false;
-    for (const language of SITE_LANGUAGES) {
-      let label = language.value.charAt(0);
-      const isAZ = label.charCodeAt(0) > 64 && label.charCodeAt(0) < 91;
-      if (!isAZ || didCrossZ) {
-        didCrossZ = true;
-        label = 'OTHER';
-      }
-
-      if (label !== lastGroup.label) {
-        languageGroups.push(lastGroup);
-        lastGroup = {label, languages: []};
-      }
-      lastGroup.languages.push(language);
-    }
-
-    languageGroups.push(lastGroup);
-    return languageGroups;
-  }
-
-  async change(event: Event) {
-    const lang = (event.target as HTMLSelectElement).value;
-    this.transloco.setActiveLang(lang);
-
-    await this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: {lang},
-      queryParamsHandling: 'merge',
-    });
-  }
 }

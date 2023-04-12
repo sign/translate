@@ -8,7 +8,6 @@ import {ToolsComponent} from './tools/tools.component';
 import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {LandingRoutingModule} from './landing-routing.module';
-import {LanguageSelectorComponent} from '../../components/language-selector/language-selector.component';
 import {StoresComponent} from '../../components/stores/stores.component';
 import {AboutHeroComponent} from './about/about-hero/about-hero.component';
 import {AboutDirectionComponent} from './about/about-direction/about-direction.component';
@@ -29,6 +28,7 @@ import {AboutApiComponent} from './about/about-api/about-api.component';
 import {BusinessComponent} from './business/business.component';
 import {SettingsPageModule} from '../settings/settings.module';
 import {IonicModule} from '@ionic/angular';
+import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import {IonicModule} from '@ionic/angular';
     LanguagesComponent,
     ContributeComponent,
     ToolsComponent,
-    LanguageSelectorComponent,
+    I18NLanguageSelectorComponent,
     StoresComponent,
     AboutHeroComponent,
     AboutDirectionComponent,

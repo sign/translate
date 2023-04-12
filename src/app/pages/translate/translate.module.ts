@@ -15,6 +15,7 @@ import {TranslateLanguageSelectorModule} from './language-selector/language-sele
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../modules/translate/translate.state';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: 'settings',
     outlet: 'dialog',
     component: LazyDialogEntryComponent,
+  },
+  {
+    path: 's', // to prevent the settings from loading on page load, adding one level of route (i.e. s/offline)
+    outlet: 'settings',
+    loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule),
   },
 ];
 
@@ -44,7 +50,9 @@ const components = [SendFeedbackComponent, TranslateInputButtonComponent, Transl
     AppTranslocoModule,
     NgxsModule.forFeature([TranslateState]),
     MatTooltipModule,
+    MatDialogModule,
     RouterModule.forChild(routes),
+
     ...componentModules,
   ],
   declarations: components,

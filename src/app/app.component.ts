@@ -8,7 +8,7 @@ import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
 import {Capacitor} from '@capacitor/core';
-import {languageCodeNormalizer} from './components/language-selector/language-selector.component';
+import {languageCodeNormalizer} from './core/modules/transloco/languages';
 
 @Component({
   selector: 'app-root',
