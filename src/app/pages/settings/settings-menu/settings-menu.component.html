@@ -1,0 +1,25 @@
+<ng-container *transloco="let t; read: 'settings'">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>{{ t('title') }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">{{ t('title') }}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list *ngFor="let group of groups">
+      <ion-list-header>
+        <ion-label>{{ t(group.name + '.title') }}</ion-label>
+      </ion-list-header>
+      <ion-nav-link router-direction="forward" *ngFor="let page of group.pages" [component]="page.component">
+        <ion-item [button]="true">
+          <ion-icon slot="start" [name]="page.icon" color="dark" />
+          <ion-label>{{ t(group.name + '.' + page.path + '.title') }}</ion-label>
+        </ion-item>
+      </ion-nav-link>
+    </ion-list>
+  </ion-content>
+</ng-container>
