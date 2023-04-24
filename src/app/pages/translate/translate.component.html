@@ -1,12 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="primary">
-      <ion-button
-        [attr.aria-label]="'settings.title' | transloco"
-        [routerLink]="['', {outlets: {settings: ['s'], dialog: ['settings']}}]"
-        [queryParamsHandling]="'preserve'">
-        <ion-icon slot="icon-only" name="settings-sharp"></ion-icon>
-      </ion-button>
+      <ntkme-github-button user="sign" repo="translate" [count]="true" size="large" />
     </ion-buttons>
     <ion-title>{{ 'translate.title' | transloco }}</ion-title>
   </ion-toolbar>

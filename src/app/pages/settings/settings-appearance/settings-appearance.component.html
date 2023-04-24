@@ -1,28 +1,25 @@
 <ng-container *transloco="let t; read: 'settings.other.appearance'">
-  <div id="appearance-options" *ngIf="settingsState$ | async as settings" [style.--appearance-scale]="scale">
-    <button
-      mat-fab
-      *ngFor="let appearance of appearances"
-      class="image"
-      [style.backgroundImage]="'url(' + appearance.src + ')'"
-      [attr.aria-label]="appearance.title"
-      [matTooltip]="appearance.title"
-      [disabled]="appearance.disabled"
-      [class.selected]="settings.appearance === appearance.value"
-      (click)="applySetting('appearance', appearance.value)"></button>
-    <!-- TODO "random" should open a dialog, using thispersondoesnotexist.com to create a random person -->
-    <button mat-fab [attr.aria-label]="t('random')" [matTooltip]="t('random')" [disabled]="true">
-      <ion-icon name="dice-outline"></ion-icon>
-    </button>
-    <!-- TODO "random" should open file selection to select a file from the device -->
-    <button mat-fab [attr.aria-label]="t('upload')" [matTooltip]="t('upload')" [disabled]="true">
-      <ion-icon slot="icon-only" name="images"></ion-icon>
-    </button>
-  </div>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ t('title') }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">{{ t('title') }}</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <p style="padding: 1.5em">
-    <u>Note</u>: Supporting custom photos is possible.<br />
-    However, not a current priority. <br />
-    <a href="https://github.com/sign/translate/issues/33" target="_blank">GitHub Issue</a>.
-  </p>
+    <app-settings-appearance-images />
+
+    <p style="padding: 1.5em">
+      <u>Note</u>: Supporting custom photos is possible.<br />
+      However, not a current priority. <br />
+      <a href="https://github.com/sign/translate/issues/33" target="_blank">GitHub Issue</a>.
+    </p>
+  </ion-content>
 </ng-container>

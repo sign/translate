@@ -9,6 +9,8 @@ This file is used to list changes made over time to `sign/translate`.
 #### Features
 
 - **core**: split app into modules to decrease chunk sizes
+- **github**: add github star button
+- **settings**: moved settings to a tabs page
 
 #### Style
 

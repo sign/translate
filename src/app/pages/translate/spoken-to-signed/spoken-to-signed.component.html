@@ -32,7 +32,7 @@
     <ng-container *ngIf="pose$ | async as pose; else noPose">
       <ng-container *ngIf="poseViewerSetting$ | async as poseViewerSetting">
         <app-skeleton-pose-viewer *ngIf="poseViewerSetting === 'pose'" [src]="pose"></app-skeleton-pose-viewer>
-        <app-human-pose-viewer *ngIf="poseViewerSetting === 'human'" [src]="pose"></app-human-pose-viewer>
+        <app-human-pose-viewer *ngIf="poseViewerSetting === 'person'" [src]="pose"></app-human-pose-viewer>
         <app-avatar-pose-viewer *ngIf="poseViewerSetting === 'avatar'" [src]="pose"></app-avatar-pose-viewer>
       </ng-container>
     </ng-container>

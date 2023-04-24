@@ -11,9 +11,6 @@ const materialModules = [
   MatProgressSpinnerModule, // Ionic does not have a spinner with "progress"
   MatTabsModule, // Unclear how to implement scrolling tabs in Ionic
   MatMenuModule, // Ionic does have "Popover", but the implementation is not comfortable to work with
-
-  MatSidenavModule, // TODO remove once settings page is revamped
-  MatDialogModule, // TODO remove once settings page is revamped
 ];
 
 @NgModule({

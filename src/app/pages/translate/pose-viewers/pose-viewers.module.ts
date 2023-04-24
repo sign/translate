@@ -7,6 +7,7 @@ import {SkeletonPoseViewerComponent} from './skeleton-pose-viewer/skeleton-pose-
 import {HumanPoseViewerComponent} from './human-pose-viewer/human-pose-viewer.component';
 import {AnimationModule} from '../../../components/animation/animation.module';
 import {AppSharedModule} from '../../../core/modules/shared.module';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 const components = [
   ViewerSelectorComponent,
@@ -16,7 +17,7 @@ const components = [
 ];
 
 @NgModule({
-  imports: [AppSharedModule, IonicModule, AnimationModule],
+  imports: [AppSharedModule, IonicModule, AnimationModule, MatProgressBarModule],
   declarations: components,
   exports: components,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

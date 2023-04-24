@@ -3,7 +3,8 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {environment} from '../environments/environment';
 
 const routes: Routes = [
-  {path: '', loadChildren: () => import('./pages/translate/translate.module').then(m => m.TranslatePageModule)},
+  // {path: '', loadChildren: () => import('./pages/translate/translate.module').then(m => m.TranslatePageModule)},
+  {path: '', loadChildren: () => import('./pages/main.module').then(m => m.MainPageModule)},
   {
     path: 'playground',
     loadChildren: () => import('./pages/playground/playground.module').then(m => m.PlaygroundPageModule),
