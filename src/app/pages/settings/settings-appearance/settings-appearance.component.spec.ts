@@ -8,6 +8,7 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {IonicModule} from '@ionic/angular';
+import {SettingsAppearanceImagesComponent} from './settings-appearance-images/settings-appearance-images.component';
 
 describe('SettingsAppearanceComponent', () => {
   let component: SettingsAppearanceComponent;
@@ -15,7 +16,7 @@ describe('SettingsAppearanceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsAppearanceComponent],
+      declarations: [SettingsAppearanceComponent, SettingsAppearanceImagesComponent],
       imports: [
         AppAngularMaterialModule,
         AppTranslocoTestingModule,
