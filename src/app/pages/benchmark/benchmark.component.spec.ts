@@ -13,7 +13,7 @@ describe('BenchmarkComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [BenchmarkComponent],
-      imports: [AppTranslocoTestingModule, IonicModule, HttpClientModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), HttpClientModule],
     }).compileComponents();
   });
 

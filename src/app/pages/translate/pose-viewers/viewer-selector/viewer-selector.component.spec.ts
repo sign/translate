@@ -20,7 +20,7 @@ describe('ViewerSelectorComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
-        IonicModule,
+        IonicModule.forRoot(),
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],

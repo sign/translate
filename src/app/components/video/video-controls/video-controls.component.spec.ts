@@ -19,7 +19,7 @@ describe('VideoControlsComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
-        IonicModule,
+        IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],
     }).compileComponents();

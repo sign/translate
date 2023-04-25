@@ -20,7 +20,7 @@ describe('SettingsOfflineComponent', () => {
       imports: [
         AppAngularMaterialModule,
         MatTreeModule,
-        IonicModule,
+        IonicModule.forRoot(),
         CdkTreeModule,
         NgxFilesizeModule,
         AppTranslocoTestingModule,

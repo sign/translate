@@ -20,7 +20,7 @@ describe('TranslateInputButtonComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [TranslateInputButtonComponent],
       imports: [
-        IonicModule,
+        IonicModule.forRoot(),
         AppTranslocoTestingModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         HttpClientModule,

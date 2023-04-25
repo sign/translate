@@ -31,7 +31,13 @@ describe('AboutComponent', () => {
         AboutOfflineComponent,
         StoresComponent,
       ],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule, AppNgxsModule, SettingsPageModule],
+      imports: [
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
+        IonicModule.forRoot(),
+        AppNgxsModule,
+        SettingsPageModule,
+      ],
     }).compileComponents();
   });
 

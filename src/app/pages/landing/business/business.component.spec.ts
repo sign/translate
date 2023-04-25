@@ -47,7 +47,7 @@ describe('BusinessComponent', () => {
         AppTranslocoTestingModule,
         SettingsPageModule,
         AppAngularMaterialModule,
-        IonicModule,
+        IonicModule.forRoot(),
         MatExpansionModule,
         AppNgxsModule,
         NoopAnimationsModule,

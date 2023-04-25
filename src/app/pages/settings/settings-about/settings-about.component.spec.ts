@@ -20,7 +20,7 @@ describe('SettingsAboutComponent', () => {
       imports: [
         AppAngularMaterialModule,
         AppTranslocoTestingModule,
-        IonicModule,
+        IonicModule.forRoot(),
         RouterTestingModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],

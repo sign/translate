@@ -13,7 +13,7 @@ describe('AboutObjectivesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutObjectivesComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutObjectivesComponent);

@@ -12,7 +12,7 @@ describe('BenchmarkItemComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [BenchmarkItemComponent],
-      imports: [AppAngularMaterialModule, IonicModule],
+      imports: [AppAngularMaterialModule, IonicModule.forRoot()],
     }).compileComponents();
   });
 

@@ -14,7 +14,7 @@ describe('AboutCustomersComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutCustomersComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule, NoopAnimationsModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot(), NoopAnimationsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutCustomersComponent);

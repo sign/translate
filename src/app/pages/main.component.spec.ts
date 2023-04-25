@@ -12,7 +12,7 @@ describe('MainComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MainComponent],
-      imports: [IonicModule, RouterTestingModule],
+      imports: [IonicModule.forRoot(), RouterTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MainComponent);

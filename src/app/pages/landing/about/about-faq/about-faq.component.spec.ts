@@ -14,7 +14,7 @@ describe('AboutFaqComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutFaqComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule, NoopAnimationsModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot(), NoopAnimationsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutFaqComponent);

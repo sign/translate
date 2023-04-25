@@ -25,7 +25,7 @@ describe('VideoComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
-        IonicModule,
+        IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
       ],
     }).compileComponents();

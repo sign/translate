@@ -13,7 +13,7 @@ describe('SpeechToTextComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SpeechToTextComponent],
-      imports: [AppTranslocoTestingModule, MatTooltipModule, IonicModule],
+      imports: [AppTranslocoTestingModule, MatTooltipModule, IonicModule.forRoot()],
     }).compileComponents();
   });
 

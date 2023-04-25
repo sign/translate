@@ -18,7 +18,7 @@ describe('SettingsPageComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsPageComponent],
       imports: [
-        IonicModule,
+        IonicModule.forRoot(),
         MatTreeModule,
         CdkTreeModule,
         MatSidenavModule,

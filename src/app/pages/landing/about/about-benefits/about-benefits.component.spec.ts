@@ -13,7 +13,7 @@ describe('AboutBenefitsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutBenefitsComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutBenefitsComponent);

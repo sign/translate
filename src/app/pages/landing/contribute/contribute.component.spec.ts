@@ -12,7 +12,7 @@ describe('ContributeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ContributeComponent],
-      imports: [AppAngularMaterialModule, IonicModule],
+      imports: [AppAngularMaterialModule, IonicModule.forRoot()],
     }).compileComponents();
   });
 

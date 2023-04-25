@@ -23,7 +23,7 @@ describe('LanguageSelectorComponent', () => {
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
         NoopAnimationsModule,
-        IonicModule,
+        IonicModule.forRoot(),
         HttpClientTestingModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
       ],

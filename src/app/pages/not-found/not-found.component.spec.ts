@@ -10,7 +10,7 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
       declarations: [NotFoundComponent],
     }).compileComponents();
 

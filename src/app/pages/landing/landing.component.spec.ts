@@ -20,7 +20,7 @@ describe('LandingComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         AppAngularMaterialModule,
-        IonicModule,
+        IonicModule.forRoot(),
         NoopAnimationsModule,
         RouterModule.forRoot([{path: '', component: AboutComponent}]),
       ],

@@ -12,7 +12,7 @@ describe('SettingsMenuComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsMenuComponent],
-      imports: [AppTranslocoTestingModule, IonicModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsMenuComponent);

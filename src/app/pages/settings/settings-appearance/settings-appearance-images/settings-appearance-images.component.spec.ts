@@ -19,7 +19,7 @@ describe('SettingsAppearanceImagesComponent', () => {
       imports: [
         AppAngularMaterialModule,
         AppTranslocoTestingModule,
-        IonicModule,
+        IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],
     }).compileComponents();

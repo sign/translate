@@ -13,7 +13,7 @@ describe('AboutOfflineComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutOfflineComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule],
+      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot()],
     }).compileComponents();
   });
 
