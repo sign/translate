@@ -1,3 +1,8 @@
 :host.hovering {
   filter: blur(3px);
 }
+
+:host,
+div {
+  height: 100%;
+}

@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Csontváz",
       "avatar": "Avatar",
-      "human": "Emberi"
+      "person": "Emberi"
     },
     "title": "Beállítások",
     "close": "Zárja be a beállításokat",

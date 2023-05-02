@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skelets",
       "avatar": "Iemiesojums",
-      "human": "Cilvēks"
+      "person": "Cilvēks"
     },
     "title": "Iestatījumi",
     "close": "Aizveriet iestatījumus",

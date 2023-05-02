@@ -3,12 +3,11 @@ import {BaseSettingsComponent} from '../../../../modules/settings/settings.compo
 import {Store} from '@ngxs/store';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {takeUntil, tap} from 'rxjs/operators';
-import {ThemePalette} from '@angular/material/core';
 
 export interface MatFabMenu {
   id: string;
   icon?: string;
-  color?: ThemePalette;
+  color?: string;
 }
 
 @Component({
@@ -20,9 +19,9 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
   poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
 
   buttons: MatFabMenu[] = [
-    {id: 'human', icon: 'emoji_people', color: 'warn'},
-    {id: 'avatar', icon: 'view_in_ar', color: 'accent'},
-    {id: 'pose', icon: 'timeline', color: 'primary'},
+    {id: 'pose', icon: 'git-network', color: 'primary'},
+    {id: 'avatar', icon: 'logo-apple-ar', color: 'success'},
+    {id: 'person', icon: 'accessibility', color: 'danger'},
   ];
 
   fab: MatFabMenu;

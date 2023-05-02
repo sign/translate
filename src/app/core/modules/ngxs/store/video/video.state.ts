@@ -4,6 +4,7 @@ import {filter, tap} from 'rxjs/operators';
 import {SetVideo, StartCamera, StopVideo} from './video.actions';
 import {SetSetting} from '../../../../../modules/settings/settings.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
+import {Observable} from 'rxjs';
 
 export type AspectRatio = '16-9' | '4-3' | '2-1' | '1-1';
 
@@ -34,9 +35,11 @@ const initialState: VideoStateModel = {
   defaults: initialState,
 })
 export class VideoState implements NgxsOnInit {
-  receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);
+  receiveVideo$: Observable<boolean>;
 
-  constructor(private store: Store, private navigator: NavigatorService) {}
+  constructor(private store: Store, private navigator: NavigatorService) {
+    this.receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);
+  }
 
   ngxsOnInit({dispatch}: StateContext<VideoStateModel>): void {
     this.receiveVideo$

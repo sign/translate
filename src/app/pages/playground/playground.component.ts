@@ -4,6 +4,7 @@ import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {SetVideo, StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {TranslocoService} from '@ngneat/transloco';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-playground',
@@ -11,10 +12,12 @@ import {TranslocoService} from '@ngneat/transloco';
   styleUrls: ['./playground.component.scss'],
 })
 export class PlaygroundComponent extends BaseComponent implements OnInit {
-  receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);
+  receiveVideo$: Observable<boolean>;
 
   constructor(private store: Store, private translocoService: TranslocoService) {
     super();
+
+    this.receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);
   }
 
   ngOnInit(): void {

@@ -4,12 +4,15 @@ import {MatDialog} from '@angular/material/dialog';
 import {ComponentType} from '@angular/cdk/overlay';
 
 @Component({
-  template: '',
+  template: '<div id="amit123"></div>',
 })
 export class LazyDialogEntryComponent implements OnInit {
   static component: ComponentType<unknown> = null;
 
-  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router) {}
+  constructor(public dialog: MatDialog, private route: ActivatedRoute, private router: Router) {
+    console.log(new Error());
+    alert('test');
+  }
 
   async ngOnInit() {
     // Load component dynamically

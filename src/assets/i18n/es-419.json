@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Esqueleto",
       "avatar": "Avatar",
-      "human": "Humano"
+      "person": "Humano"
     },
     "title": "Ajustes",
     "close": "Cerrar configuración",

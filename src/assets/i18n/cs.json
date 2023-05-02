@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Kostra",
       "avatar": "Avatar",
-      "human": "Člověk"
+      "person": "Člověk"
     },
     "title": "Nastavení",
     "close": "Zavřete nastavení",

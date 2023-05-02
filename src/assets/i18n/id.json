@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Kerangka",
       "avatar": "Avatar",
-      "human": "Manusia"
+      "person": "Manusia"
     },
     "title": "Pengaturan",
     "close": "Tutup pengaturan",

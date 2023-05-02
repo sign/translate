@@ -33,7 +33,7 @@ export class ContributeComponent {
     },
     {
       id: 'feedback',
-      icon: 'feedback',
+      icon: 'alert-circle-outline',
       title: 'Provide Feedback',
       subtitle: 'Let us know how to make the app better!',
       content:

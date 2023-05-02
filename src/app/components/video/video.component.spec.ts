@@ -2,7 +2,6 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {VideoComponent} from './video.component';
-import {AppSharedModule} from '../../core/modules/shared.module';
 import {VideoControlsComponent} from './video-controls/video-controls.component';
 import {AnimationComponent} from '../animation/animation.component';
 import {NgxsModule} from '@ngxs/store';
@@ -12,6 +11,9 @@ import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
 import {PoseState} from '../../modules/pose/pose.state';
 import {DetectorState} from '../../modules/detector/detector.state';
+import {IonicModule} from '@ionic/angular';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 
 describe('VideoComponent', () => {
   let component: VideoComponent;
@@ -21,7 +23,9 @@ describe('VideoComponent', () => {
     TestBed.configureTestingModule({
       declarations: [VideoComponent, VideoControlsComponent, AnimationComponent],
       imports: [
-        AppSharedModule,
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
+        IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
       ],
     }).compileComponents();

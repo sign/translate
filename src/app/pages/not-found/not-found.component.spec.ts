@@ -1,8 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {NotFoundComponent} from './not-found.component';
-import {MatButtonModule} from '@angular/material/button';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('NotFoundComponent', () => {
   let component: NotFoundComponent;
@@ -10,7 +10,7 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatButtonModule, AppTranslocoTestingModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
       declarations: [NotFoundComponent],
     }).compileComponents();
 

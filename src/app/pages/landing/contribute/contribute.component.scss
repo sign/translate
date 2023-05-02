@@ -1,16 +1,16 @@
 @import '../../../../theme/variables';
 
 :host {
-  padding: 50px;
+  padding: 34px 0;
   display: block;
 }
 
-.cards-container {
-  mat-card {
-    flex: 1;
-  }
+#contribute-header {
+  padding: 16px;
+}
 
-  mat-card-title {
+.cards-container {
+  ion-card-title {
     display: flex;
     align-items: center;
     gap: 0.5em;

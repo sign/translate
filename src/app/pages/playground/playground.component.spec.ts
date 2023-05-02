@@ -1,20 +1,14 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {PlaygroundComponent} from './playground.component';
-import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
-import {SettingsState} from '../../modules/settings/settings.state';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
+import {Store} from '@ngxs/store';
+import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {SettingsComponent} from '../../modules/settings/settings/settings.component';
-import {TranslateState} from '../../modules/translate/translate.state';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpClientModule} from '@angular/common/http';
-import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
-import {PoseState} from '../../modules/pose/pose.state';
 import {TranslocoService} from '@ngneat/transloco';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {IonicModule} from '@ionic/angular';
+import {SettingsModule} from '../../modules/settings/settings.module';
+import {VideoModule} from '../../components/video/video.module';
 
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
@@ -23,21 +17,16 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PlaygroundComponent, SettingsComponent],
-      imports: [
-        AppAngularMaterialModule,
-        NoopAnimationsModule,
-        AppTranslocoTestingModule,
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState, PoseState], ngxsConfig),
-        HttpClientModule,
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      declarations: [PlaygroundComponent],
+      imports: [AppTranslocoTestingModule, AppNgxsModule, IonicModule.forRoot(), SettingsModule, VideoModule],
     }).compileComponents();
   });
 
   beforeEach(() => {
     store = TestBed.inject(Store);
-    store.reset({settings: {receiveVideo: false}});
+    const snapshot = {...store.snapshot()};
+    snapshot.settings = {...snapshot.settings, receiveVideo: false};
+    store.reset(snapshot);
 
     fixture = TestBed.createComponent(PlaygroundComponent);
     component = fixture.componentInstance;

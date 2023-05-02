@@ -7,6 +7,7 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('VideoControlsComponent', () => {
   let component: VideoControlsComponent;
@@ -15,7 +16,12 @@ describe('VideoControlsComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [VideoControlsComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
+        IonicModule.forRoot(),
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+      ],
     }).compileComponents();
   }));
 

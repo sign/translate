@@ -2,7 +2,7 @@
 @import '../../../../../theme/variables';
 
 :host {
-  @media #{$mat-gt-sm} {
+  @media #{$breakpoint-gt-sm} {
     padding: 200px 50px !important;
   }
 }
@@ -18,7 +18,7 @@
 
   max-width: 1200px;
 
-  @media #{$mat-lt-md} {
+  @media #{$breakpoint-lt-md} {
     grid-auto-flow: row;
     div {
       order: -1;

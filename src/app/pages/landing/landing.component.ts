@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-landing',
@@ -8,4 +9,10 @@ import {Component} from '@angular/core';
 export class LandingComponent {
   pages: string[] = ['about', 'languages', 'contribute', 'tools'];
   legalPages: string[] = ['terms', 'privacy', 'licenses'];
+
+  isMobile!: MediaQueryList;
+
+  constructor(private mediaMatcher: MediaMatcher) {
+    this.isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
+  }
 }

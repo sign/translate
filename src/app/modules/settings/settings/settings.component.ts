@@ -17,8 +17,7 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
     'drawSignWriting',
     'animatePose',
   ];
-  lastSettings = [];
-  currentSettings = [];
+  settings = {};
 
   constructor(store: Store) {
     super(store);
@@ -27,21 +26,13 @@ export class SettingsComponent extends BaseSettingsComponent implements OnInit {
   ngOnInit(): void {
     this.settingsState$
       .pipe(
-        tap(settings => {
-          this.currentSettings = this.lastSettings = this.availableSettings.filter(s => settings[s]);
-        }),
+        tap(settings => (this.settings = settings)),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
   }
 
-  onSettingsChange(currentSettings: Array<keyof SettingsStateModel>): void {
-    this.availableSettings.forEach(s => {
-      if (this.lastSettings.includes(s) && !currentSettings.includes(s)) {
-        this.applySetting(s, false);
-      } else if (!this.lastSettings.includes(s) && currentSettings.includes(s)) {
-        this.applySetting(s, true);
-      }
-    });
+  changeSetting(setting: keyof SettingsStateModel, event: Event) {
+    this.applySetting(setting, (event as any).detail.checked);
   }
 }

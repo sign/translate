@@ -7,7 +7,7 @@ import {SettingsState} from '../settings.state';
 import {FormsModule} from '@angular/forms';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {MatListModule} from '@angular/material/list';
+import {IonicModule} from '@ionic/angular';
 
 describe('SettingsComponent', () => {
   let store: Store;
@@ -17,7 +17,12 @@ describe('SettingsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsComponent],
-      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig), FormsModule, AppTranslocoTestingModule, MatListModule],
+      imports: [
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        FormsModule,
+        AppTranslocoTestingModule,
+        IonicModule.forRoot(),
+      ],
     }).compileComponents();
   });
 
@@ -48,27 +53,14 @@ describe('SettingsComponent', () => {
     expect(snapshot.settings.drawVideo).toBeTrue();
   });
 
-  it('empty onSettingsChange should set all settings to false', () => {
-    component.availableSettings = ['drawVideo', 'drawSignWriting', 'drawPose'];
-    store.reset({settings: {drawVideo: true, drawSignWriting: true, drawPose: true}});
+  it('changeSetting should modify setting', () => {
+    component.availableSettings = ['drawVideo'];
+    store.reset({settings: {drawVideo: true}});
 
     const spy = spyOn(component, 'applySetting');
 
-    component.onSettingsChange([]);
+    component.changeSetting('drawVideo', {detail: {checked: false}} as any);
 
     expect(spy.calls.argsFor(0)).toEqual(['drawVideo', false]);
-    expect(spy.calls.argsFor(1)).toEqual(['drawSignWriting', false]);
-    expect(spy.calls.argsFor(2)).toEqual(['drawPose', false]);
-  });
-
-  it('onSettingsChange should only set selected settings', () => {
-    component.availableSettings = ['drawVideo', 'drawSignWriting', 'drawPose'];
-    store.reset({settings: {drawVideo: false, drawSignWriting: false, drawPose: false}});
-
-    const spy = spyOn(component, 'applySetting');
-
-    component.onSettingsChange(['drawVideo']);
-
-    expect(spy.calls.argsFor(0)).toEqual(['drawVideo', true]);
   });
 });

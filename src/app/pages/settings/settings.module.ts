@@ -13,8 +13,9 @@ import {SettingsAppearanceComponent} from './settings-appearance/settings-appear
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {NgxFilesizeModule} from 'ngx-filesize';
-
-export {SettingsPageComponent};
+import {IonicModule} from '@ionic/angular';
+import {SettingsMenuComponent} from './settings-menu/settings-menu.component';
+import {SettingsAppearanceImagesComponent} from './settings-appearance/settings-appearance-images/settings-appearance-images.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ export {SettingsPageComponent};
     SettingsAboutComponent,
     SettingsVoiceInputComponent,
     SettingsVoiceOutputComponent,
+    SettingsMenuComponent,
+    SettingsAppearanceImagesComponent,
   ],
   imports: [
     CommonModule,
@@ -34,8 +37,9 @@ export {SettingsPageComponent};
     NgxFilesizeModule,
     MatTreeModule,
     CdkTreeModule,
+    IonicModule,
   ],
   bootstrap: [SettingsPageComponent],
-  exports: [SettingsAppearanceComponent],
+  exports: [SettingsAppearanceComponent, SettingsAppearanceImagesComponent],
 })
 export class SettingsPageModule {}

@@ -59,6 +59,11 @@
                 "glob": "worker.js",
                 "input": "node_modules/@sign-mt/browsermt/build/bundled/",
                 "output": "./browsermt/"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
               }
             ],
             "styles": [
@@ -161,7 +166,7 @@
               },
               {
                 "glob": "*.wasm",
-                "input": "./node_modules/@tensorflow/tfjs-backend-wasm/dist",
+                "input": "./node_modules/@tensorflow/tfjs-backend-wasm/dist/",
                 "output": "./assets/models/tfjs-backend-wasm/"
               },
               {
@@ -178,6 +183,21 @@
                 "glob": "**/*.json",
                 "input": "node_modules/@sign-mt/i18n/build/",
                 "output": "./assets/i18n/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@sign-mt/browsermt/artifacts/",
+                "output": "./browsermt/"
+              },
+              {
+                "glob": "worker.js",
+                "input": "node_modules/@sign-mt/browsermt/build/bundled/",
+                "output": "./browsermt/"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
               }
             ],
             "styles": ["src/theme/styles.scss"],

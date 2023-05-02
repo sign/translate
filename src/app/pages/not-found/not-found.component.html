@@ -1,6 +1,9 @@
-<div *transloco="let t; read: '404'">
-  <h1><b>404</b>: {{ t('title') }}</h1>
-  <p>{{ t('doesNotExist') }}</p>
-  <p>{{ t('errorLogged') }}</p>
-  <button mat-raised-button color="primary" routerLink="/">{{ t('goHome') }}</button>
-</div>
+<ion-content [fullscreen]="true">
+  <h1><b>404</b>: {{ '404.title' | transloco }}</h1>
+  <p>{{ '404.doesNotExist' | transloco }}</p>
+  <p>{{ '404.errorLogged' | transloco }}</p>
+
+  <ion-button color="primary" routerLink="/translate">
+    {{ '404.goHome' | transloco }}
+  </ion-button>
+</ion-content>

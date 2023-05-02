@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
 import {Store} from '@ngxs/store';
-import {combineLatest, firstValueFrom} from 'rxjs';
+import {combineLatest, firstValueFrom, Observable} from 'rxjs';
 import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
@@ -19,18 +19,18 @@ import {SignWritingService} from '../../modules/sign-writing/sign-writing.servic
   styleUrls: ['./video.component.scss'],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
-  settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
-  animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+  settingsState$!: Observable<SettingsStateModel>;
+  animatePose$!: Observable<boolean>;
 
-  videoState$ = this.store.select<VideoStateModel>(state => state.video);
-  poseState$ = this.store.select<PoseStateModel>(state => state.pose);
-  signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
-  signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
+  videoState$!: Observable<VideoStateModel>;
+  poseState$!: Observable<PoseStateModel>;
+  signWritingState$!: Observable<SignWritingStateModel>;
+  signingProbability$!: Observable<number>;
 
   @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
   @ViewChild('stats') statsEl: ElementRef;
-  appRootEl = document.querySelector('app-root') ?? document.body;
+  appRootEl = document.querySelector('ion-app') ?? document.body;
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
 
@@ -49,6 +49,13 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     private elementRef: ElementRef
   ) {
     super();
+
+    this.settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
+    this.animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+    this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
+    this.poseState$ = this.store.select<PoseStateModel>(state => state.pose);
+    this.signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
+    this.signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
   }
 
   ngAfterViewInit(): void {
@@ -203,12 +210,12 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   setStats(): void {
     this.fpsStats.showPanel(0);
-    this.fpsStats.domElement.style.position = 'absolute';
+    this.fpsStats.dom.style.position = 'absolute';
     this.statsEl.nativeElement.appendChild(this.fpsStats.dom);
 
     // TODO this on change of input property
     if (!this.displayFps) {
-      this.fpsStats.domElement.style.display = 'none';
+      this.fpsStats.dom.style.display = 'none';
     }
 
     // Sign detection panel
@@ -216,8 +223,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.signingStats.dom.innerHTML = '';
     this.signingStats.addPanel(signingPanel);
     this.signingStats.showPanel(0);
-    this.signingStats.domElement.style.position = 'absolute';
-    this.signingStats.domElement.style.left = '80px';
+    this.signingStats.dom.style.position = 'absolute';
+    this.signingStats.dom.style.left = '80px';
     this.statsEl.nativeElement.appendChild(this.signingStats.dom);
 
     this.setDetectorListener(signingPanel);
@@ -232,13 +239,14 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
       )
       .subscribe();
 
+    // TODO
     // Show hide panel
     this.settingsState$
       .pipe(
         map(settings => settings.detectSign),
         distinctUntilChanged(),
         tap(detectSign => {
-          this.signingStats.domElement.style.display = detectSign ? 'block' : 'none';
+          this.signingStats.dom.style.display = detectSign ? 'block' : 'none';
         }),
         takeUntil(this.ngUnsubscribe)
       )

@@ -1,13 +1,23 @@
-<mat-toolbar *transloco="let t; read: 'playground'">
-  <mat-icon>hearing</mat-icon>
-  <span>{{ t('title') }}</span>
-</mat-toolbar>
+<ion-split-pane when="xs" contentId="main">
+  <ion-menu contentId="main">
+    <ion-content>
+      <app-settings></app-settings>
+    </ion-content>
+  </ion-menu>
 
-<mat-drawer-container>
-  <mat-drawer mode="side" opened>
-    <app-settings></app-settings>
-  </mat-drawer>
-  <mat-drawer-content>
-    <app-video></app-video>
-  </mat-drawer-content>
-</mat-drawer-container>
+  <div class="ion-page" id="main">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-title>
+          <ion-icon name="ear-outline"></ion-icon>
+          {{ 'playground.title' | transloco }}
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div id="video-page-container">
+        <app-video></app-video>
+      </div>
+    </ion-content>
+  </div>
+</ion-split-pane>

@@ -1,22 +1,4 @@
-@use '@angular/material' as mat;
-
-::ng-deep {
-  body {
-    background-color: mat.get-color-from-palette(mat.$gray-palette, 50);
-  }
-}
-
-:host {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-mat-drawer-container {
-  height: 100%;
-}
-
-mat-drawer-content {
+#video-page-container {
   display: flex;
   height: 100%;
   align-items: center;

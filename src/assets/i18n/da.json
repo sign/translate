@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skelet",
       "avatar": "Avatar",
-      "human": "Human"
+      "person": "Human"
     },
     "title": "Indstillinger",
     "close": "Luk indstillinger",

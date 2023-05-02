@@ -3,7 +3,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AboutDirectionComponent} from './about-direction.component';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {MatIconModule} from '@angular/material/icon';
+import {IonicModule} from '@ionic/angular';
 
 describe('AboutDirectionComponent', () => {
   let component: AboutDirectionComponent;
@@ -12,7 +12,7 @@ describe('AboutDirectionComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutDirectionComponent],
-      imports: [AppTranslocoTestingModule, MatIconModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
     }).compileComponents();
   });
 

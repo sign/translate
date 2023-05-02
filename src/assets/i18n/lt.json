@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skeletas",
       "avatar": "Avataras",
-      "human": "Žmogus"
+      "person": "Žmogus"
     },
     "title": "Nustatymai",
     "close": "Uždaryti nustatymus",

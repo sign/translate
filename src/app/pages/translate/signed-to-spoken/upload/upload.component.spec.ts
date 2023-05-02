@@ -6,6 +6,7 @@ import {NgxsModule, Store} from '@ngxs/store';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
+import {IonicModule} from '@ionic/angular';
 import createSpy = jasmine.createSpy;
 
 function createFileFromMockFile(name: string, body: string, mimeType: string): File {
@@ -23,7 +24,7 @@ describe('UploadComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [UploadComponent],
-      imports: [AppTranslocoTestingModule, NgxsModule.forRoot([], ngxsConfig)],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([], ngxsConfig)],
     }).compileComponents();
   });
 

@@ -2,15 +2,17 @@
   <h2>Meet the Team</h2>
 
   <div class="cards-container">
-    <mat-card *ngFor="let member of teamMembers">
-      <mat-card-header>
-        <img [src]="member.avatar" [alt]="member.name" mat-card-avatar />
-        <mat-card-title>{{ member.name }}</mat-card-title>
-        <mat-card-subtitle>{{ member.title }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
+    <ion-card *ngFor="let member of teamMembers">
+      <ion-card-header>
+        <ion-avatar>
+          <img [src]="member.avatar" [alt]="member.name" />
+        </ion-avatar>
+        <ion-card-title>{{ member.name }}</ion-card-title>
+        <ion-card-subtitle>{{ member.title }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
         <p>{{ member.bio }}</p>
-      </mat-card-content>
-    </mat-card>
+      </ion-card-content>
+    </ion-card>
   </div>
 </div>

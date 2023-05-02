@@ -1,7 +1,7 @@
-<mat-selection-list
-  *transloco="let t; read: 'settings'"
-  [attr.aria-label]="t('title')"
-  (ngModelChange)="onSettingsChange($event)"
-  [(ngModel)]="this.currentSettings">
-  <mat-list-option *ngFor="let s of availableSettings" [value]="s">{{ t(s) }}</mat-list-option>
-</mat-selection-list>
+<ion-list *transloco="let t; read: 'settings'" [attr.aria-label]="t('title')">
+  <ion-item *ngFor="let s of availableSettings">
+    <ion-checkbox [checked]="settings[s]" [attr.aria-label]="t(s)" (ionChange)="changeSetting(s, $event)">
+      {{ t(s) }}
+    </ion-checkbox>
+  </ion-item>
+</ion-list>

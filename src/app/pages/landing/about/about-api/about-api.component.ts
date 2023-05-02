@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngxs/store';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-about-api',
@@ -7,7 +8,7 @@ import {Store} from '@ngxs/store';
   styleUrls: ['./about-api.component.scss'],
 })
 export class AboutApiComponent {
-  appearance$ = this.store.select<string>(state => state.settings.appearance);
+  appearance$: Observable<string>;
 
   code = `curl -X POST \\
   https://api.sign.mt/translate \\
@@ -23,6 +24,8 @@ export class AboutApiComponent {
   videoUrl = '';
 
   constructor(private store: Store) {
+    this.appearance$ = this.store.select<string>(state => state.settings.appearance);
+
     this.appearance$.subscribe(appearance => {
       const cleanAppearance = appearance.replace('#', '');
       this.videoUrl = `assets/promotional/about/appearance/${cleanAppearance}.mp4`;

@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Szkielet",
       "avatar": "Awatara",
-      "human": "Człowiek"
+      "person": "Człowiek"
     },
     "title": "Ustawienia",
     "close": "Zamknij ustawienia",

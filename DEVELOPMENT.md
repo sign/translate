@@ -24,5 +24,13 @@ Test the application:
 npm test
 ```
 
+Run the application on iOS:
+
+```bash
+npm run build
+npx cap sync
+npx cap run ios
+```
+
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm

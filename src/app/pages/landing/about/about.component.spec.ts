@@ -13,6 +13,7 @@ import {AboutBenefitsComponent} from './about-benefits/about-benefits.component'
 import {AboutApiComponent} from './about-api/about-api.component';
 import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {SettingsPageModule} from '../../settings/settings.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -30,7 +31,13 @@ describe('AboutComponent', () => {
         AboutOfflineComponent,
         StoresComponent,
       ],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, AppNgxsModule, SettingsPageModule],
+      imports: [
+        AppTranslocoTestingModule,
+        AppAngularMaterialModule,
+        IonicModule.forRoot(),
+        AppNgxsModule,
+        SettingsPageModule,
+      ],
     }).compileComponents();
   });
 

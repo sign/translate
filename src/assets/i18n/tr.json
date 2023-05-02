@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "iskelet",
       "avatar": "avatar",
-      "human": "İnsan"
+      "person": "İnsan"
     },
     "title": "Ayarlar",
     "close": "Ayarları kapat",

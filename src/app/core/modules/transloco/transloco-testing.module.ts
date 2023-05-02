@@ -1,5 +1,5 @@
 import {TranslocoTestingModule} from '@ngneat/transloco';
-import {SITE_LANGUAGES} from '../../../components/language-selector/language-selector.component';
+import {SITE_LANGUAGES} from './languages';
 
 const availableLangs = SITE_LANGUAGES.map(l => l.key.toLocaleLowerCase());
 

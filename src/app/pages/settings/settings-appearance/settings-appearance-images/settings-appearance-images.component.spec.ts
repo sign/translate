@@ -1,32 +1,30 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-import {ViewerSelectorComponent} from './viewer-selector.component';
+import {SettingsAppearanceImagesComponent} from './settings-appearance-images.component';
+import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
+import {IonicModule} from '@ionic/angular';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-describe('ViewerSelectorComponent', () => {
-  let component: ViewerSelectorComponent;
-  let fixture: ComponentFixture<ViewerSelectorComponent>;
+describe('SettingsAppearanceImagesComponent', () => {
+  let component: SettingsAppearanceImagesComponent;
+  let fixture: ComponentFixture<SettingsAppearanceImagesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ViewerSelectorComponent],
+      declarations: [SettingsAppearanceImagesComponent],
       imports: [
-        AppTranslocoTestingModule,
         AppAngularMaterialModule,
-        NoopAnimationsModule,
+        AppTranslocoTestingModule,
+        IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],
     }).compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ViewerSelectorComponent);
+    fixture = TestBed.createComponent(SettingsAppearanceImagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

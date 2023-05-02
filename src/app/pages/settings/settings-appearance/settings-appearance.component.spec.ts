@@ -7,6 +7,8 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {IonicModule} from '@ionic/angular';
+import {SettingsAppearanceImagesComponent} from './settings-appearance-images/settings-appearance-images.component';
 
 describe('SettingsAppearanceComponent', () => {
   let component: SettingsAppearanceComponent;
@@ -14,8 +16,13 @@ describe('SettingsAppearanceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsAppearanceComponent],
-      imports: [AppAngularMaterialModule, AppTranslocoTestingModule, NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      declarations: [SettingsAppearanceComponent, SettingsAppearanceImagesComponent],
+      imports: [
+        AppAngularMaterialModule,
+        AppTranslocoTestingModule,
+        IonicModule.forRoot(),
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsAppearanceComponent);

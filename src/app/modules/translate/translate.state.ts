@@ -59,13 +59,15 @@ const initialState: TranslateStateModel = {
   defaults: initialState,
 })
 export class TranslateState implements NgxsOnInit {
-  poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
+  poseViewerSetting$!: Observable<PoseViewerSetting>;
 
   constructor(
     private store: Store,
     private service: TranslationService,
     private swService: SignWritingTranslationService
-  ) {}
+  ) {
+    this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
+  }
 
   ngxsOnInit({dispatch}: StateContext<TranslateStateModel>): any {
     dispatch(ChangeTranslation);

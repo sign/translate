@@ -4,13 +4,12 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {TranslateInputButtonComponent} from './button.component';
 import {NgxsModule, Store} from '@ngxs/store';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import {TranslateState} from '../../../../modules/translate/translate.state';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {SetInputMode} from '../../../../modules/translate/translate.actions';
+import {IonicModule} from '@ionic/angular';
 
 describe('TranslateInputButtonComponent', () => {
   let store: Store;
@@ -21,8 +20,7 @@ describe('TranslateInputButtonComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [TranslateInputButtonComponent],
       imports: [
-        MatButtonModule,
-        MatIconModule,
+        IonicModule.forRoot(),
         AppTranslocoTestingModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         HttpClientModule,
@@ -51,7 +49,7 @@ describe('TranslateInputButtonComponent', () => {
   it('button click should dispatch set mode action', fakeAsync(() => {
     component.mode = 'test' as any;
     const spy = spyOn(store, 'dispatch');
-    const button = fixture.nativeElement.querySelector('button');
+    const button = fixture.nativeElement.querySelector('ion-button');
     button.click();
 
     expect(spy).toHaveBeenCalledWith(new SetInputMode('test' as any));

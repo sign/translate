@@ -1,0 +1,23 @@
+<ng-container *transloco="let t; read: 'settings.poseViewer'">
+  <ion-fab vertical="center">
+    <ion-fab-button
+      size="small"
+      [color]="fab.color"
+      [attr.aria-label]="t(fab.id)"
+      [matTooltip]="t(fab.id)"
+      matTooltipPosition="before">
+      <ion-icon [name]="fab.icon"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button
+        *ngFor="let button of fabButtons"
+        [color]="button.color"
+        [attr.aria-label]="t(button.id)"
+        [matTooltip]="t(button.id)"
+        matTooltipPosition="before"
+        (click)="applySetting('poseViewer', button.id)">
+        <ion-icon [name]="button.icon"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ng-container>

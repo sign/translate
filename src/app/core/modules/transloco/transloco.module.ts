@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {environment} from '../../../../environments/environment';
-import {TRANSLOCO_CONFIG, translocoConfig, TranslocoModule} from '@ngneat/transloco';
-import {translocoScopes} from './transloco.loader';
+import {TRANSLOCO_CONFIG, TRANSLOCO_LOADER, translocoConfig, TranslocoModule} from '@ngneat/transloco';
+import {HttpLoader, translocoScopes} from './transloco.loader';
 import {HttpClientModule} from '@angular/common/http';
-import {SITE_LANGUAGES} from '../../../components/language-selector/language-selector.component';
+import {SITE_LANGUAGES} from './languages';
 
 @NgModule({
   imports: [HttpClientModule],
@@ -19,6 +19,7 @@ import {SITE_LANGUAGES} from '../../../components/language-selector/language-sel
         reRenderOnLangChange: true,
       }),
     },
+    {provide: TRANSLOCO_LOADER, useClass: HttpLoader},
     translocoScopes,
   ],
 })

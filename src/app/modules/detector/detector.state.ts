@@ -4,6 +4,7 @@ import {DetectorService} from './detector.service';
 import {DetectSigning} from './detector.actions';
 import {filter, first, tap} from 'rxjs/operators';
 import {Pose} from '../pose/pose.state';
+import {Observable} from 'rxjs';
 
 export interface DetectorStateModel {
   signingProbability: number;
@@ -22,10 +23,13 @@ const initialState: DetectorStateModel = {
 })
 export class DetectorState implements NgxsOnInit {
   detectSign = false;
-  pose$ = this.store.select<Pose>(state => state.pose.pose);
-  detectSign$ = this.store.select<boolean>(state => state.settings.detectSign);
+  pose$: Observable<Pose>;
+  detectSign$: Observable<boolean>;
 
-  constructor(private store: Store, private detector: DetectorService) {}
+  constructor(private store: Store, private detector: DetectorService) {
+    this.pose$ = this.store.select<Pose>(state => state.pose.pose);
+    this.detectSign$ = this.store.select<boolean>(state => state.settings.detectSign);
+  }
 
   ngxsOnInit({dispatch}: StateContext<any>): void {
     // Load model once setting turns on

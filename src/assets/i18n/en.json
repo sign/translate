@@ -203,7 +203,7 @@
     "poseViewer": {
       "pose": "Skeleton",
       "avatar": "Avatar",
-      "human": "Human"
+      "person": "Human"
     }
   }
 }

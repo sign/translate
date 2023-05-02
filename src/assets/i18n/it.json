@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Scheletro",
       "avatar": "Avatar",
-      "human": "Umano"
+      "person": "Umano"
     },
     "title": "Impostazioni",
     "close": "Chiudi le impostazioni",

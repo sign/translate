@@ -1,6 +1,24 @@
-<mat-nav-list>
-  <a mat-list-item href="https://github.com/sign/translate/issues" target="_blank">
-    {{ 'settings.support.feedback.send' | transloco }}
-  </a>
-  <!-- TODO rate on app/play store depending on the platform -->
-</mat-nav-list>
+<ng-container *transloco="let t; read: 'settings.support.feedback'">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ t('title') }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">{{ t('title') }}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-list>
+      <ion-item href="https://github.com/sign/translate/issues" target="_blank">
+        <ion-label>{{ 'settings.support.feedback.send' | transloco }}</ion-label>
+      </ion-item>
+      <!-- TODO rate on app/play store depending on the platform -->
+    </ion-list>
+  </ion-content>
+</ng-container>

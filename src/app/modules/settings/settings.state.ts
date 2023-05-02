@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Action, State, StateContext} from '@ngxs/store';
 import {SetSetting} from './settings.actions';
 
-export type PoseViewerSetting = 'pose' | 'avatar' | 'human';
+export type PoseViewerSetting = 'pose' | 'avatar' | 'person';
 
 export interface SettingsStateModel {
   receiveVideo: boolean;

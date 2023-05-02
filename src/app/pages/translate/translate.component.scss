@@ -1,45 +1,34 @@
 @use '@angular/material' as mat;
 @import '../../../theme/variables';
 
-:host {
-  min-height: 100vh;
+@media #{$breakpoint-gt-xs} {
+  .container::before {
+    background-color: map-get(mat.$grey-palette, 50);
+    border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+    content: '';
+    display: block;
+    height: 106px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
 
-  @media #{$mat-gt-xs} {
-    &::before {
-      background-color: map-get(mat.$grey-palette, 50);
-      border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
-      content: '';
-      display: block;
-      height: 162px;
-      width: 100%;
-      position: absolute;
-      z-index: -1;
-
-      @media (prefers-color-scheme: dark) {
-        background-color: #151515;
-        border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
-      }
+    @media (prefers-color-scheme: dark) {
+      background-color: #151515;
+      border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
     }
   }
 }
 
-mat-toolbar {
-  overflow: hidden;
-  transition: height 0.15s ease-out;
-
-  span {
-    flex: 1 1 auto;
-  }
-}
-
-:host.keyboard-open mat-toolbar {
-  height: 0;
+#swap-languages {
+  height: 48px;
+  margin: 0;
 }
 
 .container {
   transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media #{$mat-gt-md} {
+  @media #{$breakpoint-gt-md} {
     padding: 0 48px;
   }
 
@@ -50,11 +39,11 @@ mat-toolbar {
     display: flex;
     gap: 0.5em;
 
-    @media #{$mat-lt-lg} {
+    @media #{$breakpoint-lt-lg} {
       padding: 0 12px;
     }
 
-    @media #{$mat-lt-sm} {
+    @media #{$breakpoint-lt-sm} {
       display: none;
     }
   }
@@ -62,6 +51,7 @@ mat-toolbar {
   #translation-card {
     background-color: white;
     width: 100%;
+    height: 100%;
     transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
 
@@ -69,11 +59,11 @@ mat-toolbar {
       background-color: #101010;
     }
 
-    @media #{$mat-gt-xs} {
+    @media #{$breakpoint-gt-xs} {
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
     }
 
-    @media #{$mat-gt-md} {
+    @media #{$breakpoint-gt-md} {
       border-radius: 8px;
       overflow: hidden;
     }
@@ -97,30 +87,18 @@ mat-toolbar {
   }
 }
 
-#feedback {
-  float: right;
-  color: map-get(mat.$light-theme-foreground-palette, text);
-  font-size: 12px;
-  font-style: italic;
-  font-weight: 400;
-  margin: 8px 0;
-  text-decoration: none;
-
-  @media #{$mat-lt-lg} {
-    padding: 0 12px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: map-get(mat.$dark-theme-foreground-palette, text);
-  }
-}
-
-::ng-deep html[dir='rtl'] #feedback {
-  float: left;
-}
-
 :host(.spoken-to-signed) {
   #language-selector {
     flex-direction: row-reverse;
   }
+}
+
+@media #{$breakpoint-lt-sm} {
+  app-send-feedback {
+    display: none;
+  }
+}
+
+ntkme-github-button {
+  margin: 0 8px;
 }

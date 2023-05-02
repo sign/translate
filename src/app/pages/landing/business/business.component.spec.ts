@@ -2,7 +2,6 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {BusinessComponent} from './business.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {AboutComponent} from '../about/about.component';
 import {AboutHeroComponent} from '../about/about-hero/about-hero.component';
 import {AboutAppearanceComponent} from '../about/about-appearance/about-appearance.component';
 import {AboutBenefitsComponent} from '../about/about-benefits/about-benefits.component';
@@ -21,6 +20,7 @@ import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {AboutTeamComponent} from '../about/about-team/about-team.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {IonicModule} from '@ionic/angular';
 
 describe('BusinessComponent', () => {
   let component: BusinessComponent;
@@ -47,6 +47,7 @@ describe('BusinessComponent', () => {
         AppTranslocoTestingModule,
         SettingsPageModule,
         AppAngularMaterialModule,
+        IonicModule.forRoot(),
         MatExpansionModule,
         AppNgxsModule,
         NoopAnimationsModule,

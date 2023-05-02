@@ -1,7 +1,7 @@
 import {Component, HostBinding, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
-import {fromEvent} from 'rxjs';
+import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {
@@ -11,7 +11,6 @@ import {
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
-import {Capacitor} from '@capacitor/core';
 import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
@@ -20,12 +19,11 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./translate.component.scss'],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
-  spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
-  spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
-  detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
+  spokenToSigned$: Observable<boolean>;
+  spokenLanguage$: Observable<boolean>;
+  detectedLanguage$: Observable<boolean>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
-  @HostBinding('class.keyboard-open') keyboardOpen: boolean;
 
   constructor(
     private store: Store,
@@ -35,6 +33,10 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     private title: Title
   ) {
     super();
+
+    this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
+    this.spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
+    this.detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
 
     // Default settings
     this.store.dispatch([
@@ -75,17 +77,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       )
       .subscribe();
 
-    this.initKeyboardListeners();
-
     this.playVideos();
-  }
-
-  async initKeyboardListeners() {
-    if (Capacitor.isNativePlatform()) {
-      const {Keyboard} = await import(/* webpackChunkName: "@capacitor/keyboard" */ '@capacitor/keyboard');
-      Keyboard.addListener('keyboardWillShow', () => (this.keyboardOpen = true));
-      Keyboard.addListener('keyboardWillHide', () => (this.keyboardOpen = false));
-    }
   }
 
   async playVideos(): Promise<void> {

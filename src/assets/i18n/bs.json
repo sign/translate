@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skeleton",
       "avatar": "Avatar",
-      "human": "Čovjek"
+      "person": "Čovjek"
     },
     "title": "Postavke",
     "close": "Zatvorite postavke",

@@ -151,7 +151,7 @@
     "poseViewer": {
       "pose": "Skelett",
       "avatar": "Benutzerbild",
-      "human": "Menschlich"
+      "person": "Menschlich"
     },
     "title": "Einstellungen",
     "close": "Einstellungen schließen",

@@ -6,6 +6,7 @@ import {map, takeUntil, tap} from 'rxjs/operators';
 import {ThreeService} from '../../core/services/three.service';
 import {isIOS} from '../../core/constants';
 import {AssetsService} from 'src/app/core/services/assets/assets.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-animation',
@@ -13,7 +14,7 @@ import {AssetsService} from 'src/app/core/services/assets/assets.service';
   styleUrls: ['./animation.component.scss'],
 })
 export class AnimationComponent extends BaseComponent implements AfterViewInit {
-  animationState$ = this.store.select<AnimationStateModel>(state => state.animation);
+  animationState$: Observable<AnimationStateModel>;
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
 
@@ -23,6 +24,8 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   constructor(private store: Store, private three: ThreeService, private assets: AssetsService) {
     super();
+
+    this.animationState$ = this.store.select<AnimationStateModel>(state => state.animation);
 
     // Load the `model-viewer` custom element
     if (!AnimationComponent.isCustomElementDefined) {

@@ -3,6 +3,7 @@ import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-skeleton-pose-viewer',
@@ -12,12 +13,14 @@ import {Store} from '@ngxs/store';
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
 
-  colorSchemeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+  colorSchemeMedia!: MediaQueryList;
 
   background: string = '';
 
-  constructor(store: Store) {
+  constructor(store: Store, private mediaMatcher: MediaMatcher) {
     super(store);
+
+    this.colorSchemeMedia = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
   }
 
   ngAfterViewInit(): void {
