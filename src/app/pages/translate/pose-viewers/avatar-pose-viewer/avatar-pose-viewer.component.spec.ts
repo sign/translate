@@ -4,7 +4,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {AppNgxsModule} from '../../../../core/modules/ngxs/ngxs.module';
 import {AvatarPoseViewerComponent} from './avatar-pose-viewer.component';
 
-fdescribe('AvatarPoseViewerComponent', () => {
+describe('AvatarPoseViewerComponent', () => {
   let component: AvatarPoseViewerComponent;
   let fixture: ComponentFixture<AvatarPoseViewerComponent>;
   beforeEach(async () => {
