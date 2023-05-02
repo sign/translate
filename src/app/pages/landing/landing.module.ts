@@ -29,6 +29,8 @@ import {BusinessComponent} from './business/business.component';
 import {SettingsPageModule} from '../settings/settings.module';
 import {IonicModule} from '@ionic/angular';
 import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
+import {TermsComponent} from './terms/terms.component';
+import {PrivacyComponent} from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import {I18NLanguageSelectorComponent} from '../../components/i18n-language-sele
     AboutObjectivesComponent,
     AboutApiComponent,
     BusinessComponent,
+    TermsComponent,
+    PrivacyComponent,
   ],
   imports: [
     CommonModule,

@@ -1,22 +1,18 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {LicensesComponent} from './licenses.component';
-import {HttpClientModule} from '@angular/common/http';
-import {MatTreeModule} from '@angular/material/tree';
-import {CdkTreeModule} from '@angular/cdk/tree';
+import {TermsComponent} from './terms.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
-describe('LicensesComponent', () => {
-  let component: LicensesComponent;
-  let fixture: ComponentFixture<LicensesComponent>;
+describe('TermsComponent', () => {
+  let component: TermsComponent;
+  let fixture: ComponentFixture<TermsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LicensesComponent],
-      imports: [HttpClientModule, MatTreeModule, CdkTreeModule],
+      declarations: [TermsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LicensesComponent);
+    fixture = TestBed.createComponent(TermsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

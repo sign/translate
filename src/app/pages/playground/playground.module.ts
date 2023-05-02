@@ -7,6 +7,7 @@ import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module'
 import {RouterModule} from '@angular/router';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../modules/settings/settings.state';
+import {AnimationState} from '../../modules/animation/animation.state';
 
 const routes = [
   {

@@ -1,10 +1,8 @@
 import {NgModule} from '@angular/core';
 import {MatMenuModule} from '@angular/material/menu';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatDialogModule} from '@angular/material/dialog';
 
 const materialModules = [
   MatTooltipModule, // Ionic does not have tooltips

@@ -17,6 +17,10 @@ This file is used to list changes made over time to `sign/translate`.
 - **core**: migrated app from `angular/material` to `ionic`
 - **ios/safari**: add iOS style for iOS devices / Safari
 
+#### Fixes
+
+- **avatar**: fix avatar rotation names
+
 ## Released
 
 ### 0.0.1 (2023/03/13)
