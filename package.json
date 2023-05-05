@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "scripts": {
     "ng": "ng",
-    "lint": "NODE_OPTIONS=--max_old_space_size=8048 ng lint",
+    "lint": "NODE_OPTIONS=--max_old_space_size=16384 ng lint",
     "start": "ng serve --host 0.0.0.0 --disable-host-check",
     "build": "ng build --configuration=production --base-href=/",
     "build:stats": "ng build --stats-json",
@@ -21,7 +21,7 @@
     "dev:ssr": "ng run sign-translate:serve-ssr",
     "serve:ssr": "node dist/sign-translate/server/main.js",
     "build:ssr": "ng build && ng run sign-translate:server",
-    "prerender": "ng run sign-translate:prerender:production"
+    "prerender": "NODE_OPTIONS=--max_old_space_size=16384 ng run sign-translate:prerender:production"
   },
   "engines": {
     "node": "18",

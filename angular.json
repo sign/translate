@@ -120,7 +120,7 @@
               ]
             }
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -134,6 +134,9 @@
           "configurations": {
             "production": {
               "browserTarget": "sign-translate:build:production"
+            },
+            "development": {
+              "browserTarget": "sign-translate:build:development"
             }
           }
         },
@@ -283,9 +286,7 @@
       }
     }
   },
-  "defaultProject": "sign-translate",
   "cli": {
-    "analytics": "da7f7e1b-ea69-47b0-a971-5d7f28b86a48",
-    "defaultCollection": "@angular-eslint/schematics"
+    "analytics": "da7f7e1b-ea69-47b0-a971-5d7f28b86a48"
   }
 }
