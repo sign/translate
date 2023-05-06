@@ -3,7 +3,6 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LandingComponent} from './landing.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {AboutComponent} from './about/about.component';
@@ -19,7 +18,6 @@ describe('LandingComponent', () => {
       declarations: [LandingComponent, I18NLanguageSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
-        AppAngularMaterialModule,
         IonicModule.forRoot(),
         NoopAnimationsModule,
         RouterModule.forRoot([{path: '', component: AboutComponent}]),

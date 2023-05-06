@@ -6,6 +6,7 @@ import {BenchmarkItemComponent} from './benchmark-item/benchmark-item.component'
 import {AppGoogleAnalyticsModule} from '../../core/modules/google-analytics/google-analytics.module';
 import {AppSharedModule} from '../../core/modules/shared.module';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const routes = [
   {
@@ -15,7 +16,7 @@ const routes = [
 ];
 
 @NgModule({
-  imports: [AppSharedModule, IonicModule, RouterModule.forChild(routes), AppGoogleAnalyticsModule],
+  imports: [AppSharedModule, MatTooltipModule, IonicModule, RouterModule.forChild(routes), AppGoogleAnalyticsModule],
   declarations: [BenchmarkComponent, BenchmarkItemComponent],
 })
 export class BenchmarkPageModule {}

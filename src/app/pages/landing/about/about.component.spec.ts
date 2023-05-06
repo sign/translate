@@ -14,6 +14,7 @@ import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {SettingsPageModule} from '../../settings/settings.module';
 import {IonicModule} from '@ionic/angular';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -31,7 +32,14 @@ describe('AboutComponent', () => {
         AboutOfflineComponent,
         StoresComponent,
       ],
-      imports: [AppTranslocoTestingModule, MatTooltipModule, IonicModule.forRoot(), AppNgxsModule, SettingsPageModule],
+      imports: [
+        AppTranslocoTestingModule,
+        MatTooltipModule,
+        MatTabsModule,
+        IonicModule.forRoot(),
+        AppNgxsModule,
+        SettingsPageModule,
+      ],
     }).compileComponents();
   });
 

@@ -3,7 +3,6 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AboutOfflineComponent} from './about-offline.component';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
 import {IonicModule} from '@ionic/angular';
 
 describe('AboutOfflineComponent', () => {
@@ -13,7 +12,7 @@ describe('AboutOfflineComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutOfflineComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
     }).compileComponents();
   });
 

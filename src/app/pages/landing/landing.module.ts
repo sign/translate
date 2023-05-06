@@ -5,7 +5,6 @@ import {AboutComponent} from './about/about.component';
 import {LanguagesComponent} from './languages/languages.component';
 import {ContributeComponent} from './contribute/contribute.component';
 import {ToolsComponent} from './tools/tools.component';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {LandingRoutingModule} from './landing-routing.module';
 import {StoresComponent} from '../../components/stores/stores.component';
@@ -31,6 +30,7 @@ import {IonicModule} from '@ionic/angular';
 import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
 import {TermsComponent} from './terms/terms.component';
 import {PrivacyComponent} from './privacy/privacy.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -60,12 +60,12 @@ import {PrivacyComponent} from './privacy/privacy.component';
   ],
   imports: [
     CommonModule,
-    AppAngularMaterialModule,
     AppTranslocoModule,
     LandingRoutingModule,
     MatTreeModule,
     CdkTreeModule,
     MatExpansionModule,
+    MatTabsModule,
     SettingsPageModule,
     IonicModule,
   ],

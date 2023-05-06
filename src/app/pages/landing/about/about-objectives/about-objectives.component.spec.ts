@@ -3,7 +3,6 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AboutObjectivesComponent} from './about-objectives.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
 import {IonicModule} from '@ionic/angular';
 
 describe('AboutObjectivesComponent', () => {
@@ -13,7 +12,7 @@ describe('AboutObjectivesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutObjectivesComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutObjectivesComponent);
