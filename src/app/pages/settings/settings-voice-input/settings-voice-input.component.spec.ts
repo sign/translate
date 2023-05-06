@@ -1,13 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsVoiceInputComponent} from './settings-voice-input.component';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('SettingsVoiceInputComponent', () => {
   let component: SettingsVoiceInputComponent;
@@ -17,7 +17,7 @@ describe('SettingsVoiceInputComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsVoiceInputComponent],
       imports: [
-        AppAngularMaterialModule,
+        MatTooltipModule,
         AppTranslocoTestingModule,
         IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),

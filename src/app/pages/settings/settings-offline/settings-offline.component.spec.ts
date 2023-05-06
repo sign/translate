@@ -1,7 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsOfflineComponent} from './settings-offline.component';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
@@ -18,7 +17,6 @@ describe('SettingsOfflineComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsOfflineComponent],
       imports: [
-        AppAngularMaterialModule,
         MatTreeModule,
         IonicModule.forRoot(),
         CdkTreeModule,

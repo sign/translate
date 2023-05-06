@@ -6,8 +6,8 @@ import {AppTranslocoTestingModule} from '../../../core/modules/transloco/translo
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('VideoControlsComponent', () => {
   let component: VideoControlsComponent;
@@ -18,7 +18,7 @@ describe('VideoControlsComponent', () => {
       declarations: [VideoControlsComponent],
       imports: [
         AppTranslocoTestingModule,
-        AppAngularMaterialModule,
+        MatTooltipModule,
         IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],

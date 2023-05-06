@@ -3,7 +3,6 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LanguageSelectorComponent} from './language-selector.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
@@ -11,6 +10,9 @@ import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatMenuModule} from '@angular/material/menu';
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -21,7 +23,9 @@ describe('LanguageSelectorComponent', () => {
       declarations: [LanguageSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
-        AppAngularMaterialModule,
+        MatTooltipModule,
+        MatTabsModule,
+        MatMenuModule,
         NoopAnimationsModule,
         IonicModule.forRoot(),
         HttpClientTestingModule,

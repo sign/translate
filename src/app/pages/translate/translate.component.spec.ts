@@ -6,7 +6,6 @@ import {NgxsModule, Store} from '@ngxs/store';
 import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {LanguageSelectorComponent} from './language-selector/language-selector.component';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../modules/translate/translate.state';
 import {SettingsState} from '../../modules/settings/settings.state';
@@ -15,6 +14,8 @@ import {TranslocoService} from '@ngneat/transloco';
 import {RouterTestingModule} from '@angular/router/testing';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -26,7 +27,8 @@ describe('TranslateComponent', () => {
       declarations: [TranslateComponent, LanguageSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
-        AppAngularMaterialModule,
+        MatTabsModule,
+        MatTooltipModule,
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
         HttpClientTestingModule,

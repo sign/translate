@@ -7,8 +7,8 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('ViewerSelectorComponent', () => {
   let component: ViewerSelectorComponent;
@@ -19,7 +19,7 @@ describe('ViewerSelectorComponent', () => {
       declarations: [ViewerSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
-        AppAngularMaterialModule,
+        MatTooltipModule,
         IonicModule.forRoot(),
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig),

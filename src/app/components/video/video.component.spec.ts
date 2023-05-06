@@ -13,7 +13,7 @@ import {PoseState} from '../../modules/pose/pose.state';
 import {DetectorState} from '../../modules/detector/detector.state';
 import {IonicModule} from '@ionic/angular';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('VideoComponent', () => {
   let component: VideoComponent;
@@ -24,7 +24,7 @@ describe('VideoComponent', () => {
       declarations: [VideoComponent, VideoControlsComponent, AnimationComponent],
       imports: [
         AppTranslocoTestingModule,
-        AppAngularMaterialModule,
+        MatTooltipModule,
         IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
       ],

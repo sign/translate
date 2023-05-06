@@ -3,9 +3,9 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AboutCustomersComponent} from './about-customers.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../../../core/modules/angular-material/angular-material.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {IonicModule} from '@ionic/angular';
+import {MatTabsModule} from '@angular/material/tabs';
 
 describe('AboutCustomersComponent', () => {
   let component: AboutCustomersComponent;
@@ -14,7 +14,7 @@ describe('AboutCustomersComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutCustomersComponent],
-      imports: [AppTranslocoTestingModule, AppAngularMaterialModule, IonicModule.forRoot(), NoopAnimationsModule],
+      imports: [AppTranslocoTestingModule, MatTabsModule, IonicModule.forRoot(), NoopAnimationsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutCustomersComponent);

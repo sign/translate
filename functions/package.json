@@ -38,7 +38,7 @@
     "@types/node-fetch": "^2.6.3",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "firebase-functions-test": "^3.1.0",
     "firebase-tools": "^11.30.0",
     "jest": "^29.5.0",

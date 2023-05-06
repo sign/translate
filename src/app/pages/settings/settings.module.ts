@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {SettingsRoutingModule} from './settings-routing.module';
 import {SettingsPageComponent} from './settings.component';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
-import {AppAngularMaterialModule} from '../../core/modules/angular-material/angular-material.module';
 import {SettingsFeedbackComponent} from './settings-feedback/settings-feedback.component';
 import {SettingsAboutComponent} from './settings-about/settings-about.component';
 import {SettingsVoiceInputComponent} from './settings-voice-input/settings-voice-input.component';
@@ -16,6 +15,8 @@ import {NgxFilesizeModule} from 'ngx-filesize';
 import {IonicModule} from '@ionic/angular';
 import {SettingsMenuComponent} from './settings-menu/settings-menu.component';
 import {SettingsAppearanceImagesComponent} from './settings-appearance/settings-appearance-images/settings-appearance-images.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,10 @@ import {SettingsAppearanceImagesComponent} from './settings-appearance/settings-
   imports: [
     CommonModule,
     AppTranslocoModule,
-    AppAngularMaterialModule,
     SettingsRoutingModule,
     NgxFilesizeModule,
+    MatTooltipModule,
+    MatProgressSpinnerModule,
     MatTreeModule,
     CdkTreeModule,
     IonicModule,

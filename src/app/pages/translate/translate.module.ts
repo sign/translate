@@ -4,7 +4,6 @@ import {CommonModule} from '@angular/common';
 
 import {RouterModule} from '@angular/router';
 import {TranslateComponent} from './translate.component';
-import {LazyDialogEntryComponent} from './dialog-entry.component';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {SpokenToSignedModule} from './spoken-to-signed/spoken-to-signed.module';
 import {SendFeedbackComponent} from './send-feedback/send-feedback.component';
@@ -32,7 +31,7 @@ const componentModules = [
   TranslateLanguageSelectorModule,
 ];
 
-const components = [SendFeedbackComponent, TranslateInputButtonComponent, TranslateComponent, LazyDialogEntryComponent];
+const components = [SendFeedbackComponent, TranslateInputButtonComponent, TranslateComponent];
 
 @NgModule({
   imports: [

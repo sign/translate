@@ -7,13 +7,13 @@ import {AboutDirectionComponent} from './about-direction/about-direction.compone
 import {AboutOfflineComponent} from './about-offline/about-offline.component';
 import {StoresComponent} from '../../../components/stores/stores.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {AboutAppearanceComponent} from './about-appearance/about-appearance.component';
 import {AboutBenefitsComponent} from './about-benefits/about-benefits.component';
 import {AboutApiComponent} from './about-api/about-api.component';
 import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {SettingsPageModule} from '../../settings/settings.module';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -31,13 +31,7 @@ describe('AboutComponent', () => {
         AboutOfflineComponent,
         StoresComponent,
       ],
-      imports: [
-        AppTranslocoTestingModule,
-        AppAngularMaterialModule,
-        IonicModule.forRoot(),
-        AppNgxsModule,
-        SettingsPageModule,
-      ],
+      imports: [AppTranslocoTestingModule, MatTooltipModule, IonicModule.forRoot(), AppNgxsModule, SettingsPageModule],
     }).compileComponents();
   });
 

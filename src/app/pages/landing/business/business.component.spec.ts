@@ -15,12 +15,13 @@ import {AboutPricingComponent} from '../about/about-pricing/about-pricing.compon
 import {AboutObjectivesComponent} from '../about/about-objectives/about-objectives.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {SettingsPageModule} from '../../settings/settings.module';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {AboutTeamComponent} from '../about/about-team/about-team.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {IonicModule} from '@ionic/angular';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatTabsModule} from '@angular/material/tabs';
 
 describe('BusinessComponent', () => {
   let component: BusinessComponent;
@@ -46,9 +47,10 @@ describe('BusinessComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         SettingsPageModule,
-        AppAngularMaterialModule,
+        MatTooltipModule,
         IonicModule.forRoot(),
         MatExpansionModule,
+        MatTabsModule,
         AppNgxsModule,
         NoopAnimationsModule,
       ],

@@ -1,14 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsAboutComponent} from './settings-about.component';
-import {AppAngularMaterialModule} from '../../../core/modules/angular-material/angular-material.module';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {NgxsModule} from '@ngxs/store';
-import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {RouterTestingModule} from '@angular/router/testing';
 import {IonicModule} from '@ionic/angular';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('SettingsAboutComponent', () => {
   let component: SettingsAboutComponent;
@@ -17,13 +13,8 @@ describe('SettingsAboutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SettingsAboutComponent],
-      imports: [
-        AppAngularMaterialModule,
-        AppTranslocoTestingModule,
-        IonicModule.forRoot(),
-        RouterTestingModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-      ],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsAboutComponent);

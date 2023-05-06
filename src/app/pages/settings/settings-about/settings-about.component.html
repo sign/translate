@@ -15,7 +15,7 @@
     </ion-header>
 
     <ion-list>
-      <ion-item *ngFor="let page of legalPages" (click)="navigateToLegalPage(page)" [button]="true">
+      <ion-item *ngFor="let page of legalPages" [routerLink]="['/legal', page]" queryParamsHandling="preserve">
         <ion-label>{{ 'legal.' + page + '.title' | transloco }}</ion-label>
       </ion-item>
     </ion-list>
