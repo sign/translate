@@ -45,7 +45,11 @@ describe('PlaygroundComponent', () => {
 
   it('should start camera when receiveVideo', () => {
     const dispatchSpy = spyOn(store, 'dispatch');
-    store.reset({settings: {receiveVideo: true}});
+
+    const snapshot = {...store.snapshot()};
+    const settings = {...snapshot.settings, receiveVideo: true};
+    store.reset({settings});
+
     expect(dispatchSpy).toHaveBeenCalledWith(StartCamera);
   });
 

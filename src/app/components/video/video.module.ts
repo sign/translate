@@ -11,6 +11,7 @@ import {PoseState} from '../../modules/pose/pose.state';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {DetectorState} from '../../modules/detector/detector.state';
 import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
+import {PoseModule} from '../../modules/pose/pose.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
     AnimationModule,
     AppTranslocoModule,
     MatTooltipModule,
-    NgxsModule.forFeature([VideoState, SignWritingState, PoseState, DetectorState]),
+    PoseModule,
+    NgxsModule.forFeature([VideoState, SignWritingState, DetectorState]),
   ],
   declarations: [VideoComponent, VideoControlsComponent],
   exports: [VideoComponent],

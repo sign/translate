@@ -8,6 +8,7 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 describe('HumanPoseViewerComponent', () => {
   let component: HumanPoseViewerComponent;
@@ -16,7 +17,12 @@ describe('HumanPoseViewerComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HumanPoseViewerComponent],
-      imports: [Pix2PixModule, NgxsModule.forRoot([SettingsState], ngxsConfig), AppTranslocoTestingModule],
+      imports: [
+        Pix2PixModule,
+        MatProgressSpinnerModule,
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        AppTranslocoTestingModule,
+      ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });

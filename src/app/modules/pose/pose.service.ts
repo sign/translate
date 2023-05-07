@@ -11,7 +11,9 @@ const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18
 })
 export class PoseService {
   model?: any;
-  loadPromise: Promise<any>;
+
+  // loadPromise must be static, in case multiple PoseService instances are created (during testing)
+  static loadPromise: Promise<any>;
 
   isFirstFrame = true;
   onResultsCallbacks = [];
@@ -23,14 +25,14 @@ export class PoseService {
   }
 
   async load(): Promise<void> {
-    if (!this.loadPromise) {
-      this.loadPromise = this._load();
+    if (!PoseService.loadPromise) {
+      PoseService.loadPromise = this._load();
     }
 
     // Holistic loading may fail for various reasons.
     // If that fails, show an alert to the user, for further investigation.
     try {
-      await this.loadPromise;
+      await PoseService.loadPromise;
     } catch (e) {
       console.error(e);
       alert(e.message);
