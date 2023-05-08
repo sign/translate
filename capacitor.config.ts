@@ -6,7 +6,6 @@ const config: CapacitorConfig = {
   appId: 'mt.sign.translate',
   appName: 'sign',
   webDir: 'dist/sign-translate/browser',
-  bundledWebRuntime: false,
   server: getServer(),
   plugins: {
     SplashScreen: {

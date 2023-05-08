@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import {NoPreloading, PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {environment} from '../environments/environment';
 
 const routes: Routes = [
@@ -25,7 +25,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {
       initialNavigation: environment.initialNavigation,
-      preloadingStrategy: PreloadAllModules,
+      preloadingStrategy: NoPreloading,
     }),
   ],
   exports: [RouterModule],
