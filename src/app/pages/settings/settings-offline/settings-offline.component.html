@@ -7,7 +7,7 @@
       <ion-title>{{ t('title') }}</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content [fullscreen]="true" class="ion-padding">
+  <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
       <ion-toolbar>
         <ion-title size="large">{{ t('title') }}</ion-title>
@@ -26,6 +26,7 @@
           [diameter]="20"></mat-progress-spinner>
 
         <ion-button
+          fill="clear"
           class="circle-icon"
           color="secondary"
           shape="round"
@@ -37,6 +38,7 @@
         </ion-button>
 
         <ion-button
+          fill="clear"
           class="circle-icon"
           color="danger"
           shape="round"
@@ -48,6 +50,7 @@
         </ion-button>
 
         <ion-button
+          fill="clear"
           class="circle-icon"
           color="primary"
           shape="round"

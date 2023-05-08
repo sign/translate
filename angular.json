@@ -118,9 +118,12 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "development": {
+              "serviceWorker": false
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",

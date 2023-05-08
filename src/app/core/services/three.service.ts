@@ -5,15 +5,15 @@ import {Injectable} from '@angular/core';
   providedIn: 'root',
 })
 export class ThreeService {
-  private importPromise: Promise<typeof three>;
+  private static importPromise: Promise<typeof three>;
   private three: typeof three;
 
-  async load(): Promise<typeof three> {
-    if (!this.importPromise) {
-      this.importPromise = import(/* webpackChunkName: "three" */ 'three').then(module => (this.three = module));
+  async load(): Promise<void> {
+    if (!ThreeService.importPromise) {
+      ThreeService.importPromise = import(/* webpackChunkName: "three" */ 'three');
     }
 
-    return this.importPromise;
+    this.three = await ThreeService.importPromise;
   }
 
   // TODO implement a global getter to get all properties from three

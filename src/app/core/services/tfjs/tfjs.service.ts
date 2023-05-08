@@ -6,15 +6,17 @@ import {loadTFDS} from './tfjs.loader';
   providedIn: 'root',
 })
 export class TensorflowService {
-  private importPromise: Promise<typeof tf>;
+  private static importPromise: Promise<typeof tf>;
   private tf: typeof tf;
 
-  async load(): Promise<typeof tf> {
-    if (!this.importPromise) {
-      this.importPromise = loadTFDS().then(module => (this.tf = module));
+  async load(): Promise<void> {
+    if (!TensorflowService.importPromise) {
+      TensorflowService.importPromise = loadTFDS();
     }
 
-    return this.importPromise;
+    this.tf = await TensorflowService.importPromise;
+
+    return this.tf.ready();
   }
 
   // TODO implement a global getter to get all properties from tf
