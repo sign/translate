@@ -1,4 +1,3 @@
-@use '@angular/material' as mat;
 @import '../../../../theme/variables';
 
 :host {
@@ -9,7 +8,7 @@ mat-tab-group {
   display: inline-block;
 }
 
-// Make language expansion menu show the correct icon
+/* Make language expansion menu show the correct icon */
 ion-button.menu-icon-button {
   height: 100%;
   margin: 0;

@@ -21,9 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Bun Runtime
-        uses: antongolub/action-setup-bun@v1
-
       - name: Cache node_modules
         uses: actions/cache@v3
         with:
@@ -32,13 +29,13 @@ jobs:
           key: client-${{ runner.os }} # Key is generic as for frequent package updates
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps # https://github.com/oven-sh/bun/issues/82
+        run: npm install
 
       - name: Lint code
-        run: bun run lint
+        run: npm run lint
 
       - name: Test code
-        run: bun run test:ci
+        run: npm run test:ci
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
@@ -46,7 +43,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
-        run: bun run prerender
+        run: npm run prerender
 
       - name: Generate Sitemap
         run: node tools/sitemap-generator.js # https://github.com/oven-sh/bun/issues/311

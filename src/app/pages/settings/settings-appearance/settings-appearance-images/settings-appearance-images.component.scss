@@ -4,7 +4,7 @@
   gap: 1em;
 
   button {
-    border: 0 solid white; // For the animation
+    border: 0 solid white; /* For the animation */
     border-radius: 4px;
     width: calc(5em * var(--appearance-scale));
     height: calc(5em * var(--appearance-scale));

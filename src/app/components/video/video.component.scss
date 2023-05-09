@@ -30,7 +30,7 @@ p {
   }
 }
 
-// Transform origin does not support "start". For RTL languages, we need to flip the transform origin.
+/* Transform origin does not support "start". For RTL languages, we need to flip the transform origin. */
 ::ng-deep html[dir='rtl'] #video-container canvas {
   transform-origin: top right !important;
 }

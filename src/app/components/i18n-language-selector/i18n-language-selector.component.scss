@@ -11,8 +11,10 @@ select {
     color: white;
 
     * {
-      // Only required for Windows, Chrome
-      // https://github.com/sign/translate/issues/54
+      /*
+      Only required for Windows, Chrome
+      https://github.com/sign/translate/issues/54
+       */
       background: black;
     }
   }
