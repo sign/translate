@@ -8,6 +8,7 @@ import {
   FlipTranslationDirection,
   SetSignedLanguage,
   SetSpokenLanguage,
+  SetSpokenLanguageText,
 } from '../../modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
@@ -112,6 +113,11 @@ export class TranslateComponent extends BaseComponent implements OnInit {
 
   setSpokenLanguage(lang: string): void {
     this.store.dispatch(new SetSpokenLanguage(lang));
+  }
+
+  setSpokenLanguageText(event: Event): void {
+    const text = (event.target as any).value;
+    this.store.dispatch(new SetSpokenLanguageText(text));
   }
 
   swapLanguages(): void {

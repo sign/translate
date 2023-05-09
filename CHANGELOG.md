@@ -10,7 +10,7 @@ This file is used to list changes made over time to `sign/translate`.
 
 - **core**: split app into modules to decrease chunk sizes
 - **github**: add github star button
-- **settings**: moved settings to a tabs page
+- **settings**: moved settings to a tabs page instead of a dialog
 
 #### Style
 
@@ -20,6 +20,7 @@ This file is used to list changes made over time to `sign/translate`.
 #### Fixes
 
 - **avatar**: fix avatar rotation names
+- **tests**: fix flaky tests, cuased by race conditions
 
 ## Released
 
