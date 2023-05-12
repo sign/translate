@@ -1,0 +1,51 @@
+@use '@angular/material' as mat;
+
+.translation-text {
+  position: relative;
+  height: 100%;
+  padding: 20px 24px;
+  color: map-get(mat.$light-theme-foreground-palette, text);
+  flex: 1;
+
+  @media (prefers-color-scheme: dark) {
+    color: map-get(mat.$dark-theme-foreground-palette, text);
+  }
+
+  > div {
+    display: flex;
+  }
+}
+
+#spoken-language-label {
+  display: none;
+}
+
+textarea {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  direction: unset; /* Important for initial cursor position */
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  resize: none;
+  outline: none;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+#char-count {
+  flex-grow: 1;
+  align-self: center;
+  text-align: end;
+  font-size: 12px;
+  line-height: 40px;
+  padding-inline: 10px;
+  white-space: nowrap;
+}
+
+/* Numbers should always be left-to-right */
+::ng-deep html[dir='rtl'] #char-count {
+  direction: ltr;
+  text-align: start !important;
+}

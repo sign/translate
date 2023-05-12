@@ -1,11 +1,11 @@
 PODS:
-  - Capacitor (5.0.1):
+  - Capacitor (5.0.3):
     - CapacitorCordova
   - CapacitorBlobWriter (0.0.1):
     - Capacitor
     - GCDWebServer (~> 3.0)
-  - CapacitorCordova (5.0.1)
-  - CapacitorFilesystem (5.0.1):
+  - CapacitorCordova (5.0.3)
+  - CapacitorFilesystem (5.0.2):
     - Capacitor
   - CapacitorFirebaseAnalytics (5.0.0):
     - Capacitor
@@ -24,11 +24,11 @@ PODS:
   - CapacitorFirebasePerformance (5.0.0):
     - Capacitor
     - FirebasePerformance (= 10.8.0)
-  - CapacitorKeyboard (5.0.1):
+  - CapacitorKeyboard (5.0.2):
     - Capacitor
-  - CapacitorShare (5.0.1):
+  - CapacitorShare (5.0.2):
     - Capacitor
-  - CapacitorSplashScreen (5.0.1):
+  - CapacitorSplashScreen (5.0.2):
     - Capacitor
   - FirebaseABTesting (10.9.0):
     - FirebaseCore (~> 10.0)
@@ -210,17 +210,17 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
-  Capacitor: c550a8485d00d5d92b4f91a245f43555a2230eb6
+  Capacitor: 304a960e431f9e6f78556554ca71c41c1b2b9680
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
-  CapacitorCordova: 4f8cf089c691f0e21032d22b1014808308cbc467
-  CapacitorFilesystem: d8ea223e82008ee25dd305cf4d5ca3acba8aa172
+  CapacitorCordova: def732a63679698df6fb392bbe6d269a0b61e937
+  CapacitorFilesystem: 3a7bb944feb5b7e9473adeb08662c73141510aa8
   CapacitorFirebaseAnalytics: 07ff0166f6c97ea85f6d8ad59f462fbe0cc33f41
   CapacitorFirebaseApp: 4b052e5901138f1bd06a3f41f4456eac225a3ea8
   CapacitorFirebaseCrashlytics: e65645d9aa1f55787479e7e77c3373583676562a
   CapacitorFirebasePerformance: 087ef5d7270a3b988baf0f824c44bd5a9076bdaf
-  CapacitorKeyboard: 5e1667b7b70e23b147f9fc91bafa458be41cba77
-  CapacitorShare: e43f5a93cab2948b8d05d4f6ff3c96d203831334
-  CapacitorSplashScreen: b3aa7304627a561e98d894d6fb301eced671e599
+  CapacitorKeyboard: e628d4e66d621c69e449945ebabded17c5b9c2e8
+  CapacitorShare: 931224a0e17615e799d35b26286ab1d05f37d8fb
+  CapacitorSplashScreen: bd2a056394ba0b8807e7bb3e746424f67c426e03
   FirebaseABTesting: 005b70969e2817e2a1e631e8dba29134a04c0622
   FirebaseAnalytics: e1fc758bd5d71823bba970c076abee4b2450a5f4
   FirebaseCore: e78636a990b54be427ce300aa09a0e359f4e0e87

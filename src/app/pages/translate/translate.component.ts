@@ -1,18 +1,13 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
-import {takeUntil, tap} from 'rxjs/operators';
-import {
-  FlipTranslationDirection,
-  SetSignedLanguage,
-  SetSpokenLanguage,
-  SetSpokenLanguageText,
-} from '../../modules/translate/translate.actions';
+import {filter, takeUntil, tap} from 'rxjs/operators';
 import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Meta, Title} from '@angular/platform-browser';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-translate',
@@ -21,23 +16,22 @@ import {Meta, Title} from '@angular/platform-browser';
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;
-  spokenLanguage$: Observable<boolean>;
-  detectedLanguage$: Observable<boolean>;
+  spokenToSigned: boolean;
 
-  @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
+  isMobile: MediaQueryList;
 
   constructor(
     private store: Store,
     private transloco: TranslocoService,
     public translation: TranslationService,
+    private mediaMatcher: MediaMatcher,
     private meta: Meta,
     private title: Title
   ) {
     super();
 
     this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
-    this.spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
-    this.detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
+    this.isMobile = this.mediaMatcher.matchMedia('screen and (max-width: 599px)');
 
     // Default settings
     this.store.dispatch([
@@ -68,11 +62,9 @@ export class TranslateComponent extends BaseComponent implements OnInit {
 
     this.spokenToSigned$
       .pipe(
-        tap(spokenToSigned => {
-          this.spokenToSigned = spokenToSigned;
-          if (!this.spokenToSigned) {
-            this.store.dispatch(new SetSetting('drawSignWriting', true));
-          }
+        filter(spokenToSigned => !spokenToSigned),
+        tap(() => {
+          this.store.dispatch(new SetSetting('drawSignWriting', true));
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -105,22 +97,5 @@ export class TranslateComponent extends BaseComponent implements OnInit {
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
-  }
-
-  setSignedLanguage(lang: string): void {
-    this.store.dispatch(new SetSignedLanguage(lang));
-  }
-
-  setSpokenLanguage(lang: string): void {
-    this.store.dispatch(new SetSpokenLanguage(lang));
-  }
-
-  setSpokenLanguageText(event: Event): void {
-    const text = (event.target as any).value;
-    this.store.dispatch(new SetSpokenLanguageText(text));
-  }
-
-  swapLanguages(): void {
-    this.store.dispatch(FlipTranslationDirection);
   }
 }

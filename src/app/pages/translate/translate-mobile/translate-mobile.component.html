@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-language-selectors />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-signed-language-output />
+</ion-content>
+
+<!-- Footer with input and submit button -->
+<ion-footer collapse="fade">
+  <ion-searchbar
+    animated="true"
+    search-icon="code-working-outline"
+    placeholder="Enter Text"
+    (ionChange)="setSpokenLanguageText($event)"></ion-searchbar>
+</ion-footer>

@@ -17,7 +17,6 @@ import {AppTranslocoTestingModule} from '../../../core/modules/transloco/translo
 describe('SpokenToSignedComponent', () => {
   let component: SpokenToSignedComponent;
   let fixture: ComponentFixture<SpokenToSignedComponent>;
-  let store: Store;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -37,8 +36,6 @@ describe('SpokenToSignedComponent', () => {
     fixture = TestBed.createComponent(SpokenToSignedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-
-    store = TestBed.inject(Store);
   });
 
   it('should create', () => {
@@ -50,15 +47,6 @@ describe('SpokenToSignedComponent', () => {
     const a11y = await axe(fixture.nativeElement);
     expect(a11y).toHaveNoViolations();
   });
-
-  it('text change should dispatch action', fakeAsync(() => {
-    const spy = spyOn(store, 'dispatch');
-    component.text.patchValue('test');
-    tick(300);
-
-    expect(spy).toHaveBeenCalledWith(new SetSpokenLanguageText('test'));
-    expect(spy).toHaveBeenCalledTimes(1);
-  }));
 
   // TODO test state
   // it('empty text should set pose to null', fakeAsync(() => {

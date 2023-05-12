@@ -23,14 +23,24 @@ body {
   @media (prefers-color-scheme: dark) {
     background-color: black !important;
   }
+
+  &.embed {
+    ion-header,
+    #input-mode-group,
+    app-send-feedback {
+      display: none !important;
+    }
+  }
 }
 
-body.embed {
-  ion-header,
-  #input-mode-group,
-  app-send-feedback {
-    display: none !important;
-  }
+.actions-row {
+  position: absolute;
+  margin: 14px;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+  //width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
+  width: calc(100% - 2 * 14px);
 }
 
 //.mat-drawer-container {

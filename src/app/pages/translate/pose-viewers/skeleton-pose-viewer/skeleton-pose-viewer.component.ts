@@ -36,7 +36,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
           // Some browsers videos can't have a transparent background
           const isTransparencySupported = 'chrome' in window; // transparency is currently not supported in firefox and safari
           if (this.mediaRecorder && !isTransparencySupported && !this.colorSchemeMedia.matches) {
-            this.background = 'white';
+            this.background = '#f5f5f5';
           }
         }),
         takeUntil(this.ngUnsubscribe)

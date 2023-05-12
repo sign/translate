@@ -19,9 +19,9 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
   poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
 
   buttons: MatFabMenu[] = [
-    {id: 'pose', icon: 'git-network', color: 'primary'},
-    {id: 'avatar', icon: 'logo-apple-ar', color: 'success'},
-    {id: 'person', icon: 'accessibility', color: 'danger'},
+    {id: 'pose', icon: 'git-commit', color: 'light'},
+    {id: 'avatar', icon: 'logo-apple-ar', color: 'primary'},
+    {id: 'person', icon: 'accessibility', color: 'success'},
   ];
 
   fab: MatFabMenu;

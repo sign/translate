@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {LanguageSelectorComponent} from './language-selector.component';
+import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -9,6 +9,7 @@ import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.compone
 import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../../modules/translate/translate.state';
+import {LanguageSelectorsComponent} from './language-selectors.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import {TranslateState} from '../../../modules/translate/translate.state';
     MatMenuModule,
     MatTooltipModule,
   ],
-  declarations: [LanguageSelectorComponent, FlagIconComponent],
-  exports: [LanguageSelectorComponent],
+  declarations: [LanguageSelectorsComponent, LanguageSelectorComponent, FlagIconComponent],
+  exports: [LanguageSelectorsComponent],
 })
-export class TranslateLanguageSelectorModule {}
+export class TranslateLanguageSelectorsModule {}

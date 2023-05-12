@@ -1,0 +1,84 @@
+@use '@angular/material' as mat;
+@import '../../../../theme/variables';
+
+@media #{$breakpoint-gt-xs} {
+  .container::before {
+    background-color: map-get(mat.$grey-palette, 50);
+    border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+    content: '';
+    display: block;
+    height: 106px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #151515;
+      border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
+    }
+  }
+}
+
+.container {
+  transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media #{$breakpoint-gt-md} {
+    padding: 0 48px;
+  }
+
+  #input-mode-group {
+    height: 68px;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    align-items: center;
+    display: flex;
+    gap: 0.5em;
+
+    @media #{$breakpoint-lt-lg} {
+      padding: 0 12px;
+    }
+
+    @media #{$breakpoint-lt-sm} {
+      display: none;
+    }
+  }
+
+  #translation-card {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #101010;
+    }
+
+    @media #{$breakpoint-gt-xs} {
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    @media #{$breakpoint-gt-md} {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    app-language-selectors {
+      border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+
+      @media (prefers-color-scheme: dark) {
+        border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
+      }
+    }
+  }
+}
+
+@media #{$breakpoint-lt-sm} {
+  app-send-feedback {
+    display: none;
+  }
+}
+
+ntkme-github-button {
+  margin: 0 8px;
+}

@@ -20,88 +20,10 @@ import {isIOS, isMacLike} from 'src/app/core/constants';
   templateUrl: './spoken-to-signed.component.html',
   styleUrls: ['./spoken-to-signed.component.scss'],
 })
-export class SpokenToSignedComponent extends BaseComponent implements OnInit {
-  poseViewerSetting$!: Observable<PoseViewerSetting>;
-  translate$!: Observable<TranslateStateModel>;
-  text$!: Observable<string>;
+export class SpokenToSignedComponent {
   signWriting$!: Observable<string[]>;
-  pose$!: Observable<string>;
-  video$!: Observable<string>;
 
-  videoUrl: SafeUrl;
-  spokenLanguage: string;
-
-  text = new FormControl();
-  maxTextLength = 500;
-
-  constructor(private store: Store, private domSanitizer: DomSanitizer) {
-    super();
-
-    this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
-    this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
-    this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
+  constructor(private store: Store) {
     this.signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
-    this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
-    this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
-  }
-
-  ngOnInit(): void {
-    this.translate$
-      .pipe(
-        tap(({spokenLanguage, detectedLanguage}) => (this.spokenLanguage = spokenLanguage || detectedLanguage)),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
-
-    // Local text changes
-    this.text.valueChanges
-      .pipe(
-        debounce(() => interval(300)),
-        skipWhile(text => !text), // Don't run on empty text, on app launch
-        distinctUntilChanged((a, b) => a.trim() === b.trim()),
-        tap(text => this.store.dispatch(new SetSpokenLanguageText(text))),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
-
-    // Changes from the store
-    this.text$
-      .pipe(
-        tap(text => this.text.setValue(text)),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
-
-    this.video$
-      .pipe(
-        tap(url => {
-          this.videoUrl = url ? this.domSanitizer.bypassSecurityTrustUrl(url) : null;
-        }),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
-  }
-
-  shareIcon(): string {
-    return isIOS || isMacLike ? 'share-outline' : 'share-social-outline';
-  }
-
-  copyTranslation(): void {
-    this.store.dispatch(CopySignedLanguageVideo);
-  }
-
-  downloadTranslation(): void {
-    this.store.dispatch(DownloadSignedLanguageVideo);
-  }
-
-  shareTranslation(): void {
-    this.store.dispatch(ShareSignedLanguageVideo);
-  }
-
-  playVideoIfPaused(event: MouseEvent): void {
-    const video = event.target as HTMLPoseViewerElement;
-    if (video.paused) {
-      video.play().then().catch();
-    }
   }
 }

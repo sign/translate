@@ -10,11 +10,13 @@ import {SendFeedbackComponent} from './send-feedback/send-feedback.component';
 import {SignedToSpokenModule} from './signed-to-spoken/signed-to-spoken.module';
 import {TranslateInputButtonComponent} from './input/button/button.component';
 import {DropPoseFileModule} from './drop-pose-file/drop-pose-file.module';
-import {TranslateLanguageSelectorModule} from './language-selector/language-selector.module';
+import {TranslateLanguageSelectorsModule} from './language-selectors/language-selectors.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../modules/translate/translate.state';
 import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
+import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
+import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
 
 const routes = [
   {
@@ -27,10 +29,16 @@ const componentModules = [
   SpokenToSignedModule,
   SignedToSpokenModule,
   DropPoseFileModule,
-  TranslateLanguageSelectorModule,
+  TranslateLanguageSelectorsModule,
 ];
 
-const components = [SendFeedbackComponent, TranslateInputButtonComponent, TranslateComponent];
+const components = [
+  SendFeedbackComponent,
+  TranslateInputButtonComponent,
+  TranslateComponent,
+  TranslateDesktopComponent,
+  TranslateMobileComponent,
+];
 
 @NgModule({
   imports: [

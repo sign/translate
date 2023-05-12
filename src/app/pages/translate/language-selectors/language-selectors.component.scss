@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+
+  &.spoken-to-signed {
+    flex-direction: row-reverse;
+  }
+}
+
+app-language-selector {
+  width: calc(50% - 24px);
+}
+
+#swap-languages {
+  height: 48px;
+  margin: 0;
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}

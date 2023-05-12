@@ -27,8 +27,6 @@ export class AvatarPoseViewerComponent extends BasePoseViewerComponent implement
           const pose = await poseEl.getPose();
 
           this.effectiveFps = pose.body.fps;
-          console.log('FPS', this.effectiveFps);
-          console.log('Pose', pose);
           // TODO send pose tensor to the animation service (through the store)
         }),
         takeUntil(this.ngUnsubscribe)
