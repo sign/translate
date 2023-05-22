@@ -6,6 +6,10 @@ This file is used to list changes made over time to `sign/translate`.
 
 ### 0.0.2
 
+#### Documentation
+
+- **readme**: redo README to be more developer friendly
+
 #### Features
 
 - **core**: split app into modules to decrease chunk sizes
