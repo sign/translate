@@ -23,13 +23,6 @@ export class SignWritingComponent extends BaseComponent implements OnInit, OnDes
     this.colorSchemeMedia = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
   }
 
-  matchMedia(query: string) {
-    if ('matchMedia' in globalThis) {
-      return globalThis.matchMedia('(prefers-color-scheme: dark)');
-    }
-    return new EventTarget();
-  }
-
   ngOnInit(): void {
     fromEvent(this.colorSchemeMedia, 'change')
       .pipe(
