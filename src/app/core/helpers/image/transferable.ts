@@ -38,8 +38,7 @@ export async function transferableImage(
   image: HTMLCanvasElement | HTMLImageElement | HTMLVideoElement,
   ctx?: CanvasRenderingContext2D
 ): Promise<ImageBitmap | ImageData> {
-  // createImageBitmap is supported in multiple browsers, but only Chrome supports WebGL in WebWorker
-  if ('window' in globalThis && window.createImageBitmap && 'chrome' in window) {
+  if ('window' in globalThis && window.createImageBitmap && window.OffscreenCanvas) {
     return transferableImageBitmap(image);
   }
 

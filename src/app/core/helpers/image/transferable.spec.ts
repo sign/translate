@@ -17,17 +17,10 @@ describe('transferableImage', () => {
     // video.src = img.src;
   });
 
-  if ('chrome' in window) {
-    it('Chrome should get an image bitmap', async () => {
-      const bitmap = await transferableImage(canvas);
-      expect(bitmap instanceof ImageBitmap).toBeTrue();
-    });
-  } else {
-    it('Non-Chrome should get an image data object', async () => {
-      const data = await transferableImage(canvas);
-      expect(data instanceof ImageData).toBeTrue();
-    });
-  }
+  it('All latest browsers should get an image bitmap', async () => {
+    const bitmap = await transferableImage(canvas);
+    expect(bitmap instanceof ImageBitmap).toBeTrue();
+  });
 
   it('should create the same size objects for images, videos, and canvas', async () => {
     const canvasObj = await transferableImage(canvas);
