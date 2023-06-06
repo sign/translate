@@ -23,6 +23,7 @@
     "swapLanguages": "Swap languages",
     "spoken-to-signed": {
       "text": "Spoken Language Text",
+      "placeholder": "Enter Text",
       "actions": {
         "download": "Download Translation",
         "copy": "Copy Translation",

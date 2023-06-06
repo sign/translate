@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
@@ -19,6 +19,8 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
   text = new FormControl();
   maxTextLength = 500;
   spokenLanguage: string;
+
+  @Input() isMobile = false;
 
   constructor(private store: Store) {
     super();

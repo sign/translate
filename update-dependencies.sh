@@ -1,6 +1,6 @@
 # Update client dependencies
 rm package-lock.json
-ncu --cacheClear -u --reject filesize,@types/dom-mediacapture-transform,@types/dom-webcodecs
+ncu --cacheClear -u --reject filesize,@types/dom-mediacapture-transform,@types/dom-webcodecs,typescript
 npm install
 
 # Update server dependencies

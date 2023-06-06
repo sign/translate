@@ -10,9 +10,5 @@
 
 <!-- Footer with input and submit button -->
 <ion-footer collapse="fade">
-  <ion-searchbar
-    animated="true"
-    search-icon="code-working-outline"
-    placeholder="Enter Text"
-    (ionChange)="setSpokenLanguageText($event)"></ion-searchbar>
+  <app-spoken-language-input [isMobile]="true" />
 </ion-footer>

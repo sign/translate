@@ -1,16 +1,43 @@
-<div class="translation-text">
-  <label id="spoken-language-label">{{ 'translate.spoken-to-signed.text' | transloco }}</label>
-  <textarea
-    [formControl]="text"
-    [maxLength]="maxTextLength"
-    dir="auto"
-    [lang]="spokenLanguage"
-    aria-labelledby="spoken-language-label"
-    autofocus
-    data-gramm_editor="false"></textarea>
-  <div class="actions-row">
-    <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
-    <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
-    <div id="char-count">{{ text.value.length | number }} / {{ maxTextLength | number }}</div>
+<ng-container *ngIf="!isMobile">
+  <div class="translation-text">
+    <label id="spoken-language-label">{{ 'translate.spoken-to-signed.text' | transloco }}</label>
+    <textarea
+      [formControl]="text"
+      [maxLength]="maxTextLength"
+      [lang]="spokenLanguage"
+      dir="auto"
+      aria-labelledby="spoken-language-label"
+      aria-autocomplete="list"
+      autocapitalize="off"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+      autofocus
+      data-gramm_editor="false"></textarea>
+    <div class="actions-row">
+      <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
+      <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
+      <div id="char-count">{{ text.value.length | number }} / {{ maxTextLength | number }}</div>
+    </div>
   </div>
-</div>
+</ng-container>
+
+<ng-container *ngIf="isMobile">
+  <ion-searchbar
+    animated="true"
+    search-icon="code-working-outline"
+    [placeholder]="'translate.spoken-to-signed.placeholder' | transloco"
+    [attr.aria-label]="'translate.spoken-to-signed.text' | transloco"
+    [lang]="spokenLanguage"
+    [formControl]="text"
+    [attr.maxLength]="maxTextLength"
+    dir="auto"
+    aria-autocomplete="list"
+    autocapitalize="off"
+    autocomplete="off"
+    autocorrect="off"
+    spellcheck="false"
+    autofocus
+    data-gramm_editor="false" />
+  <!-- (ionChange)="setSpokenLanguageText($event)" -->
+</ng-container>
