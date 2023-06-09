@@ -39,7 +39,8 @@
           "loading": "Chargement du modèle vidéo humain",
           "generating": "Génération de vidéo"
         }
-      }
+      },
+      "placeholder": "Entrez du texte"
     },
     "description": "Traduction en langue des signes sans effort avec des modèles en temps réel de pointe. "
   },

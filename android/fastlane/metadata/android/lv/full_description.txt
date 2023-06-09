@@ -1,1 +1,1 @@
-Divvirzienu daudzvalodu zīmju valodas tulkošanas lietotne galddatoriem un mobilajām ierīcēm
+Vienkārša zīmju valodas tulkošana ar moderniem reāllaika modeļiem. 

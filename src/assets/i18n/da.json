@@ -39,7 +39,8 @@
           "loading": "Indlæser menneskelig videomodel",
           "generating": "Generering af video"
         }
-      }
+      },
+      "placeholder": "Indtast tekst"
     },
     "description": "Ubesværet tegnsprogsoversættelse med banebrydende realtidsmodeller. "
   },

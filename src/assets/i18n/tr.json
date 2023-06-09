@@ -39,7 +39,8 @@
           "loading": "İnsan video modeli yükleniyor",
           "generating": "Video oluşturuluyor"
         }
-      }
+      },
+      "placeholder": "Metni Girin"
     },
     "description": "Son Teknoloji Gerçek Zamanlı Modellerle Zahmetsiz İşaret Dili Tercümesi. "
   },

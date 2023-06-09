@@ -39,7 +39,8 @@
           "loading": "Tagħbija tal-mudell tal-vidjo uman",
           "generating": "Ġenerazzjoni tal-vidjo"
         }
-      }
+      },
+      "placeholder": "Daħħal it-Test"
     },
     "description": "Traduzzjoni tal-Lingwa tas-Sinjali mingħajr Sforz b'Mudelli ta' l-Avanti f'Ħin Reali. "
   },

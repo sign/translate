@@ -39,7 +39,8 @@
           "loading": "Načítání modelu lidského videa",
           "generating": "Generování videa"
         }
-      }
+      },
+      "placeholder": "Zadejte text"
     },
     "description": "Překlad znakové řeči bez námahy se špičkovými modely v reálném čase. "
   },

@@ -39,7 +39,8 @@
           "loading": "Načítava sa model ľudského videa",
           "generating": "Generovanie videa"
         }
-      }
+      },
+      "placeholder": "Zadajte text"
     },
     "description": "Preklad posunkovej reči bez námahy so špičkovými modelmi v reálnom čase. "
   },

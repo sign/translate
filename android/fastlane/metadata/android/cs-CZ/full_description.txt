@@ -1,1 +1,1 @@
-Obousměrná vícejazyčná aplikace pro překlad znakového jazyka pro počítače a mobilní zařízení
+Překlad znakové řeči bez námahy se špičkovými modely v reálném čase. 

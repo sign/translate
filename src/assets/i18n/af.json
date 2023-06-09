@@ -39,7 +39,8 @@
           "loading": "Laai tans menslike videomodel",
           "generating": "Genereer video"
         }
-      }
+      },
+      "placeholder": "Voer teks in"
     },
     "description": "Moeitelose gebaretaalvertaling met die nuutste intydse modelle. "
   },

@@ -39,7 +39,8 @@
           "loading": "Menselijk videomodel laden",
           "generating": "Video genereren"
         }
-      }
+      },
+      "placeholder": "Tekst invoeren"
     },
     "description": "Moeiteloze gebarentaalvertaling met geavanceerde real-time modellen. "
   },

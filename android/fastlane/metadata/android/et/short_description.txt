@@ -1,1 +1,1 @@
-Kahesuunaline mitmekeelne viipekeele tõlkerakendus lauaarvutitele ja mobiiltelefonidele
+Lihtne viipekeelte tõlge tipptasemel reaalajas mudelitega. 

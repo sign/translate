@@ -39,7 +39,8 @@
           "loading": "Memuat model video manusia",
           "generating": "Membuat video"
         }
-      }
+      },
+      "placeholder": "Masukkan teks"
     },
     "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Real-Time Mutakhir. "
   },

@@ -39,7 +39,8 @@
           "loading": "Laddar mänsklig videomodell",
           "generating": "Genererar video"
         }
-      }
+      },
+      "placeholder": "Skriv text"
     },
     "description": "Enkel översättning av teckenspråk med banbrytande realtidsmodeller. "
   },

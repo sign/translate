@@ -1,1 +1,1 @@
-Dviejų krypčių daugiakalbė gestų kalbos vertimo programa, skirta staliniams kompiuteriams ir mobiliesiems telefonams
+Nesudėtingas vertimas į gestų kalbą naudojant pažangiausius realiojo laiko modelius. 

@@ -39,7 +39,8 @@
           "loading": "Učitavanje ljudskog video modela",
           "generating": "Generiranje videa"
         }
-      }
+      },
+      "placeholder": "Unesite tekst"
     },
     "description": "Prevođenje znakovnog jezika bez napora s vrhunskim modelima u stvarnom vremenu. "
   },

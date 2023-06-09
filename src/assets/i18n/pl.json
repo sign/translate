@@ -39,7 +39,8 @@
           "loading": "Ładowanie ludzkiego modelu wideo",
           "generating": "Generowanie wideo"
         }
-      }
+      },
+      "placeholder": "Wprowadź tekst"
     },
     "description": "Bezproblemowe tłumaczenie na język migowy z najnowocześniejszymi modelami czasu rzeczywistego. "
   },

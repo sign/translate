@@ -39,7 +39,8 @@
           "loading": "Inson video modeli yuklanmoqda",
           "generating": "Video yaratish"
         }
-      }
+      },
+      "placeholder": "Matnni kiriting"
     },
     "description": "Haqiqiy vaqtda zamonaviy modellar bilan imo-ishora tilini qiyinchiliksiz tarjima qilish. "
   },

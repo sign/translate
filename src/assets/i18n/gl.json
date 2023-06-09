@@ -39,7 +39,8 @@
           "loading": "Cargando modelo de vídeo humano",
           "generating": "Xerando vídeo"
         }
-      }
+      },
+      "placeholder": "Introduce texto"
     },
     "description": "Tradución sen esforzo á lingua de signos con modelos de vangarda en tempo real. "
   },

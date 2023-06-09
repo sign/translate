@@ -39,7 +39,8 @@
           "loading": "Caricà u mudellu di video umanu",
           "generating": "Generazione di video"
         }
-      }
+      },
+      "placeholder": "Entre u testu"
     },
     "description": "Traduzzione in lingua di i segni senza sforzu cù mudelli di punta in tempu reale. "
   },

@@ -39,7 +39,8 @@
           "loading": "Nilo-load ang modelo ng video ng tao",
           "generating": "Bumubuo ng video"
         }
-      }
+      },
+      "placeholder": "Ipasok ang Teksto"
     },
     "description": "Walang Kahirap-hirap na Pagsasalin ng Sign Language sa Mga Cutting-Edge na Real-Time na Modelo. "
   },

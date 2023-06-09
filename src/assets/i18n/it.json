@@ -39,7 +39,8 @@
           "loading": "Caricamento del modello video umano",
           "generating": "Generazione video"
         }
-      }
+      },
+      "placeholder": "Inserire il testo"
     },
     "description": "Traduzione semplificata della lingua dei segni con modelli in tempo reale all'avanguardia. "
   },

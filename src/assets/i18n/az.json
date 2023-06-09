@@ -39,7 +39,8 @@
           "loading": "İnsan video modeli yüklənir",
           "generating": "Videonun yaradılması"
         }
-      }
+      },
+      "placeholder": "Mətni daxil edin"
     },
     "description": "Ən müasir real vaxt modelləri ilə zəhmətsiz işarə dili tərcüməsi. "
   },

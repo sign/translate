@@ -39,7 +39,8 @@
           "loading": "Įkeliamas žmogaus vaizdo modelis",
           "generating": "Kuriamas vaizdo įrašas"
         }
-      }
+      },
+      "placeholder": "Įveskite tekstą"
     },
     "description": "Nesudėtingas vertimas į gestų kalbą naudojant pažangiausius realiojo laiko modelius. "
   },

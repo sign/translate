@@ -1,1 +1,1 @@
-Dvosmerna večjezična aplikacija za prevajanje znakovnega jezika za namizne in mobilne naprave
+Enostavno prevajanje znakovnega jezika z najsodobnejšimi modeli v realnem času. 

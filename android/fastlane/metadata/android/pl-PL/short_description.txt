@@ -1,1 +1,1 @@
-Dwukierunkowa wielojęzyczna aplikacja do tłumaczenia języka migowego na komputery i urządzenia mobilne
+Bezproblemowe tłumaczenie na język migowy z najnowocześniejszymi modelami czasu rzeczywistego. 

@@ -39,7 +39,8 @@
           "loading": "Laster inn menneskelig videomodell",
           "generating": "Genererer video"
         }
-      }
+      },
+      "placeholder": "Skriv inn tekst"
     },
     "description": "Uanstrengt tegnspråkoversettelse med banebrytende sanntidsmodeller. "
   },

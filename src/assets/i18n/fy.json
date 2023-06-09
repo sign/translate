@@ -39,7 +39,8 @@
           "loading": "Laden fan minsklik fideomodel",
           "generating": "It generearjen fan fideo"
         }
-      }
+      },
+      "placeholder": "Tekst ynfiere"
     },
     "description": "Moeiteleaze oersetting fan gebeartetaal mei moderne realtime modellen. "
   },

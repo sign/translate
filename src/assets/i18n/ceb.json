@@ -39,7 +39,8 @@
           "loading": "Nag-load sa modelo sa video sa tawo",
           "generating": "Paghimo og video"
         }
-      }
+      },
+      "placeholder": "Pagsulod sa Teksto"
     },
     "description": "Walay Kusog nga Paghubad sa Sign Language uban sa Cutting-Edge Real-Time nga mga Modelo. "
   },

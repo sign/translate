@@ -39,7 +39,8 @@
           "loading": "Carregando modelo de vídeo humano",
           "generating": "Gerando vídeo"
         }
-      }
+      },
+      "placeholder": "Digite o Texto"
     },
     "description": "Tradução de linguagem de sinais sem esforço com modelos de ponta em tempo real. "
   },

@@ -39,7 +39,8 @@
           "loading": "Nalaganje človeškega video modela",
           "generating": "Ustvarjanje videa"
         }
-      }
+      },
+      "placeholder": "Vnesite besedilo"
     },
     "description": "Enostavno prevajanje znakovnega jezika z najsodobnejšimi modeli v realnem času. "
   },

@@ -39,7 +39,8 @@
           "loading": "加載人類視頻模型",
           "generating": "生成視頻"
         }
-      }
+      },
+      "placeholder": "輸入文字"
     },
     "description": "使用尖端實時模型輕鬆進行手語翻譯。"
   },

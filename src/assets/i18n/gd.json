@@ -39,7 +39,8 @@
           "loading": "Luchdaich a-nuas video duine model",
           "generating": "A ' cruthachadh bhidio"
         }
-      }
+      },
+      "placeholder": "Cuir a-steach Teacsa"
     },
     "description": "Eadar-theangachadh cànan soidhnidh gun oidhirp le modalan fìor-ùine adhartach. "
   },

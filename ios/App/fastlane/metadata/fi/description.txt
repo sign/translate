@@ -1,1 +1,1 @@
-Kaksisuuntainen monikielinen viittomakielen käännössovellus pöytäkoneille ja mobiililaitteille
+Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. 

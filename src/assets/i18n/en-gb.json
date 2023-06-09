@@ -39,7 +39,8 @@
           "loading": "Loading human video model",
           "generating": "Generating video"
         }
-      }
+      },
+      "placeholder": "Enter Text"
     },
     "description": "Effortless Sign Language Translation with Cutting-Edge Real-Time Models. Translate Sign Language instantly on desktop and mobile."
   },

@@ -39,7 +39,8 @@
           "loading": "Menschliches Videomodell wird geladen",
           "generating": "Video generieren"
         }
-      }
+      },
+      "placeholder": "Text eingeben"
     },
     "description": "Mühelose Übersetzung in Gebärdensprache mit modernsten Echtzeitmodellen. "
   },

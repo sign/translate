@@ -39,7 +39,8 @@
           "loading": "Memuatkan model video manusia",
           "generating": "Menjana video"
         }
-      }
+      },
+      "placeholder": "Masukkan Teks"
     },
     "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Masa Nyata Termaju. "
   },

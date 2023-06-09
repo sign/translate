@@ -39,7 +39,8 @@
           "loading": "Đang tải mô hình video của con người",
           "generating": "Tạo video"
         }
-      }
+      },
+      "placeholder": "Nhập văn bản"
     },
     "description": "Dịch ngôn ngữ ký hiệu dễ dàng với các mô hình thời gian thực tiên tiến. "
   },

@@ -39,7 +39,8 @@
           "loading": "Loading model video manungsa",
           "generating": "Nggawe video"
         }
-      }
+      },
+      "placeholder": "Ketik Teks"
     },
     "description": "Terjemahan Basa Isyarat Tanpa Usaha kanthi Model-Model Wektu Nyata. "
   },

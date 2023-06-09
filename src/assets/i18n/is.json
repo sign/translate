@@ -39,7 +39,8 @@
           "loading": "Hleður mannlegt myndbandslíkan",
           "generating": "Búa til myndband"
         }
-      }
+      },
+      "placeholder": "Sláðu inn texta"
     },
     "description": "Áreynslulaus táknmálsþýðing með nýjustu rauntímalíkönum. "
   },

@@ -1,1 +1,1 @@
-Une application de traduction en langue des signes multilingue bidirectionnelle pour ordinateur et mobile
+Traduction en langue des signes sans effort avec des modèles en temps réel de pointe. 

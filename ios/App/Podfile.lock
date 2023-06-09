@@ -1,11 +1,11 @@
 PODS:
-  - Capacitor (5.0.3):
+  - Capacitor (5.0.4):
     - CapacitorCordova
   - CapacitorBlobWriter (0.0.1):
     - Capacitor
     - GCDWebServer (~> 3.0)
-  - CapacitorCordova (5.0.3)
-  - CapacitorFilesystem (5.0.2):
+  - CapacitorCordova (5.0.4)
+  - CapacitorFilesystem (5.0.3):
     - Capacitor
   - CapacitorFirebaseAnalytics (5.0.0):
     - Capacitor
@@ -24,7 +24,7 @@ PODS:
   - CapacitorFirebasePerformance (5.0.0):
     - Capacitor
     - FirebasePerformance (= 10.8.0)
-  - CapacitorKeyboard (5.0.2):
+  - CapacitorKeyboard (5.0.4):
     - Capacitor
   - CapacitorShare (5.0.2):
     - Capacitor
@@ -210,15 +210,15 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
-  Capacitor: 304a960e431f9e6f78556554ca71c41c1b2b9680
+  Capacitor: d3d4463573438b9fa65326d1f3549da6f4c21634
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
-  CapacitorCordova: def732a63679698df6fb392bbe6d269a0b61e937
-  CapacitorFilesystem: 3a7bb944feb5b7e9473adeb08662c73141510aa8
+  CapacitorCordova: b1fe6bf1f36974a8e4a9044b342d22d49c0996d6
+  CapacitorFilesystem: 54acae67a8c79870e9cf88e196d542c3b7ca40fc
   CapacitorFirebaseAnalytics: 07ff0166f6c97ea85f6d8ad59f462fbe0cc33f41
   CapacitorFirebaseApp: 4b052e5901138f1bd06a3f41f4456eac225a3ea8
   CapacitorFirebaseCrashlytics: e65645d9aa1f55787479e7e77c3373583676562a
   CapacitorFirebasePerformance: 087ef5d7270a3b988baf0f824c44bd5a9076bdaf
-  CapacitorKeyboard: e628d4e66d621c69e449945ebabded17c5b9c2e8
+  CapacitorKeyboard: d1b25fde6f19744ad09c890862aefc6e2a7ded3d
   CapacitorShare: 931224a0e17615e799d35b26286ab1d05f37d8fb
   CapacitorSplashScreen: bd2a056394ba0b8807e7bb3e746424f67c426e03
   FirebaseABTesting: 005b70969e2817e2a1e631e8dba29134a04c0622

@@ -39,7 +39,8 @@
           "loading": "Po ngarkohet modeli i videos njerëzore",
           "generating": "Gjenerimi i videos"
         }
-      }
+      },
+      "placeholder": "Futni Tekstin"
     },
     "description": "Përkthim i lehtë i gjuhës së shenjave me modele të avancuara në kohë reale. "
   },

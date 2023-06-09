@@ -39,7 +39,8 @@
           "loading": "S'està carregant el model de vídeo humà",
           "generating": "Generació de vídeo"
         }
-      }
+      },
+      "placeholder": "Introduïu text"
     },
     "description": "Traducció sense esforç de la llengua de signes amb models d'avantguarda en temps real. "
   },

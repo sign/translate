@@ -39,7 +39,8 @@
           "loading": "Ladataan ihmisvideomallia",
           "generating": "Luodaan videota"
         }
-      }
+      },
+      "placeholder": "Kirjoita teksti"
     },
     "description": "Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. "
   },

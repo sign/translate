@@ -39,7 +39,8 @@
           "loading": "Inimese videomudeli laadimine",
           "generating": "Video genereerimine"
         }
-      }
+      },
+      "placeholder": "Sisesta tekst"
     },
     "description": "Lihtne viipekeelte tõlge tipptasemel reaalajas mudelitega. "
   },

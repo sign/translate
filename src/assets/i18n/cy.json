@@ -39,7 +39,8 @@
           "loading": "Llwytho model fideo dynol",
           "generating": "Cynhyrchu fideo"
         }
-      }
+      },
+      "placeholder": "Rhowch Testun"
     },
     "description": "Cyfieithu Iaith Arwyddion Ddiymdrech gyda Modelau Amser Real blaengar. "
   },

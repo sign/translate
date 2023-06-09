@@ -1,1 +1,1 @@
-Sign language translator app for desktop and mobile
+Effortless Real-Time Sign Language Translation. Translate Sign Language instantly on desktop and mobile.

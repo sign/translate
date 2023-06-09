@@ -39,7 +39,8 @@
           "loading": "Kurodha modhi yevhidhiyo yemunhu",
           "generating": "Kugadzira vhidhiyo"
         }
-      }
+      },
+      "placeholder": "Enter Text"
     },
     "description": "Kusashanda Kushandura Mutauro Wemasaini neCutting-Edge Real-Time Models. "
   },

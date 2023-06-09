@@ -39,7 +39,8 @@
           "loading": "Emberi videomodell betöltése",
           "generating": "Videó generálása"
         }
-      }
+      },
+      "placeholder": "Írja be a szöveget"
     },
     "description": "Könnyű jelnyelvi fordítás élvonalbeli valós idejű modellekkel. "
   },

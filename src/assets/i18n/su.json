@@ -39,7 +39,8 @@
           "loading": "Ngamuat modél pidéo manusa",
           "generating": "Ngahasilkeun video"
         }
-      }
+      },
+      "placeholder": "Lebetkeun téks"
     },
     "description": "Tarjamahan Basa Isyarat Effortless kalawan Modél Real-Time Motong-Tepi. "
   },

@@ -39,7 +39,8 @@
           "loading": "Notiek cilvēka video modeļa ielāde",
           "generating": "Notiek video ģenerēšana"
         }
-      }
+      },
+      "placeholder": "Ievadiet tekstu"
     },
     "description": "Vienkārša zīmju valodas tulkošana ar moderniem reāllaika modeļiem. "
   },

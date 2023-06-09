@@ -39,7 +39,8 @@
           "loading": "Se încarcă modelul video uman",
           "generating": "Generare video"
         }
-      }
+      },
+      "placeholder": "Introduceți text"
     },
     "description": "Traducere fără efort în limbajul semnelor cu modele de ultimă oră în timp real. "
   },

@@ -39,7 +39,8 @@
           "loading": "Giza bideo eredua kargatzen",
           "generating": "Bideoa sortzea"
         }
-      }
+      },
+      "placeholder": "Sartu testua"
     },
     "description": "Esfortzurik gabeko zeinu hizkuntzaren itzulpena punta-puntako denbora errealeko ereduekin. "
   },

@@ -1,1 +1,1 @@
-En dubbelriktad flerspråkig app för översättning av teckenspråk för dator och mobil
+Enkel översättning av teckenspråk med banbrytande realtidsmodeller. 
