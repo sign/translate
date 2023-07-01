@@ -1,8 +1,21 @@
 {
-  "functions": {
-    "predeploy": ["cd functions && npm run build"],
-    "source": "functions"
-  },
+  "functions": [
+    {
+      "predeploy": ["cd functions && npm run build"],
+      "source": "functions",
+      "codebase": "default"
+    },
+    {
+      "source": "functions-py",
+      "codebase": "functions-py",
+      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log"]
+    },
+    {
+      "source": "test",
+      "codebase": "test",
+      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log"]
+    }
+  ],
   "emulators": {
     "firestore": {
       "port": 4010
