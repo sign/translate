@@ -11,6 +11,10 @@ on:
       - 'functions/**'
       - '.github/workflows/server.yml'
 
+defaults:
+  run:
+    working-directory: functions
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -32,15 +36,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            functions/node_modules
+            node_modules
           key: server-${{ runner.os }} # Key is generic as for frequent package updates
 
       - name: Install Dependencies
-        working-directory: functions
         run: npm install
 
       - name: Lint code
-        working-directory: functions
         run: npm run lint
 
       #      - name: Test code
@@ -48,5 +50,4 @@ jobs:
       #        run: npm run test:ci
 
       - name: Deploy Cloud Functions
-        working-directory: functions
         run: npx firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"

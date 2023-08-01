@@ -1,6 +1,6 @@
 import type * as tf from '@tensorflow/tfjs';
 import {Injectable} from '@angular/core';
-import {loadTFDS} from './tfjs.loader';
+import {loadTFJS} from './tfjs.loader';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class TensorflowService {
 
   async load(): Promise<void> {
     if (!TensorflowService.importPromise) {
-      TensorflowService.importPromise = loadTFDS();
+      TensorflowService.importPromise = loadTFJS();
     }
 
     this.tf = await TensorflowService.importPromise;

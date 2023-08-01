@@ -21,6 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Bun Runtime
+        uses: antongolub/action-setup-bun@v1
+
       - name: Cache node_modules
         uses: actions/cache@v3
         with:
@@ -32,10 +35,10 @@ jobs:
         run: npm install
 
       - name: Lint code
-        run: npm run lint
+        run: bun run lint
 
       - name: Test code
-        run: npm run test:ci
+        run: bun run test:ci
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
@@ -43,10 +46,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
-        run: npm run prerender
+        run: bun run prerender
 
       - name: Generate Sitemap
-        run: node tools/sitemap-generator.js # https://github.com/oven-sh/bun/issues/311
+        run: bun tools/sitemap-generator.js
 
       - name: Generate Licenses File
         run: npx -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
@@ -56,6 +59,7 @@ jobs:
         with:
           name: build-dist
           path: dist/sign-translate/browser/
+          retention-days: 1
 
   lighthouse:
     name: Lighthouse Test

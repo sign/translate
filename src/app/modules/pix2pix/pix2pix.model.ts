@@ -1,6 +1,6 @@
 import type {Tensor, Tensor3D} from '@tensorflow/tfjs';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
-import {loadTFDS} from '../../core/services/tfjs/tfjs.loader';
+import {loadTFJS} from '../../core/services/tfjs/tfjs.loader';
 
 class ModelNotLoadedError extends Error {
   constructor() {
@@ -8,7 +8,7 @@ class ModelNotLoadedError extends Error {
   }
 }
 
-const tfPromise = loadTFDS();
+const tfPromise = loadTFJS();
 let model: LayersModel;
 let upscaler: LayersModel;
 

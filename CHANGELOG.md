@@ -28,6 +28,7 @@ This file is used to list changes made over time to `sign/translate`.
 - **tests**: fix flaky tests, caused by race conditions
 - **sharing**: removed sharing from the desktop web when unsupported
 - **settings**: navigation back button text matches the main page title
+- **signed-to-spoken**: fix upload videos component
 
 ## Released
 

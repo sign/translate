@@ -1,4 +1,4 @@
-export async function loadTFDS() {
+export async function loadTFJS() {
   const tf = await import(/* webpackChunkName: "@tensorflow/tfjs" */ '@tensorflow/tfjs');
   await tf.ready();
 

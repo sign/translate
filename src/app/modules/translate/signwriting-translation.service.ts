@@ -16,7 +16,7 @@ export class SignWritingTranslationService {
 
   loadedModel: string;
 
-  constructor(private ga: GoogleAnalyticsService, private http: HttpClient, private assets: AssetsService) {}
+  constructor(private http: HttpClient, private assets: AssetsService) {}
 
   async initWorker() {
     if (this.worker) {

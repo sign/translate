@@ -7,11 +7,12 @@ import {UploadComponent} from './upload/upload.component';
 import {VideoModule} from '../../../components/video/video.module';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
+import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
 
 const componentModules = [VideoModule, SignWritingModule, TextToSpeechModule];
 
 @NgModule({
-  imports: [CommonModule, IonicModule, ...componentModules],
+  imports: [CommonModule, AppTranslocoModule, IonicModule, ...componentModules],
   declarations: [SignedToSpokenComponent, UploadComponent],
   exports: [SignedToSpokenComponent],
 })
