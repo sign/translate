@@ -1,6 +1,6 @@
 # Update client dependencies
 rm package-lock.json
-ncu --cacheClear -u --reject filesize,@types/dom-mediacapture-transform,@types/dom-webcodecs,typescript,@google/model-viewer,@angular-devkit/build-angular,@ngneat/transloco
+ncu --cacheClear -u --reject filesize,@types/dom-mediacapture-transform,@types/dom-webcodecs,typescript,@angular-devkit/build-angular,@ngneat/transloco
 npm install
 git add package-lock.json
 
