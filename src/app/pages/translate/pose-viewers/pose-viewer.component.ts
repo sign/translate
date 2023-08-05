@@ -4,6 +4,7 @@ import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
+import {Capacitor} from '@capacitor/core';
 
 interface CanvasElement extends HTMLCanvasElement {
   captureStream(frameRate?: number): MediaStream;
@@ -93,10 +94,14 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     this.mediaSubscriptions.push(dataAvailableEvent.subscribe());
 
     const stopEvent = fromEvent(this.mediaRecorder, 'stop').pipe(
-      tap(() => {
+      tap(async () => {
         stream.getTracks().forEach(track => track.stop());
         const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
-        // TODO: maybe use Filesystem and blobToBase64 because this does not seem to be working on iOS
+        console.log('recordedChunks', recordedChunks);
+        console.log('blob', blob.size, blob.type);
+        // TODO: this does not work in iOS. The blob above is of size 0, and the video does not play.
+        //       Should open an issue that ios mediarecorder dataavailable blob size is 0
+        //       https://webkit.org/blog/11353/mediarecorder-api/
         const url = URL.createObjectURL(blob);
         this.setVideo(url);
       }),
