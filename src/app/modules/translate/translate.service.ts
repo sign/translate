@@ -197,7 +197,7 @@ export class TranslationService {
         l => l.spoken === spokenLanguage && l.country === signedLanguage
       ).signed;
 
-      const api = 'https://us-central1-sign-mt.cloudfunctions.net/concatenate_signs';
+      const api = 'https://us-central1-sign-mt.cloudfunctions.net/spoken_text_to_signed_pose';
       return `${api}?text=${encodeURIComponent(text)}&spoken=${spokenLanguage}&signed=${signLanguageCode}`;
     }
     const api = 'https://spoken-to-signed-sxie2r74ua-zf.a.run.app/';
