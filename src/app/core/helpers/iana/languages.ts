@@ -5,9 +5,11 @@ export const IANASignedLanguages = [
   {signed: 'asp', spoken: 'ar', country: 'dz'}, // Algerian Sign Language
   {signed: 'syy', spoken: 'ar', country: 'ps'}, // Al-Sayyid Bedouin Sign Language
   {signed: 'jks', spoken: 'ja', country: 'jp'}, // Amami Koniya Sign Language
+  {signed: 'jsl', spoken: 'ja', country: 'jp'}, // AJapanese Sign Language
   {signed: 'ase', spoken: 'en', country: 'us'}, // American Sign Language
   {signed: 'aed', spoken: 'es', country: 'ar'}, // Argentine Sign Language
   {signed: 'aen', spoken: 'hy', country: 'am'}, // Armenian Sign Language
+  {signed: 'asf', spoken: 'en', country: 'au'}, // Australian Sign Language
   {signed: 'asw', spoken: 'en', country: 'au'}, // Australian Aborigines Sign Language
   {signed: 'asq', spoken: 'de', country: 'at'}, // Austrian Sign Language
   {signed: 'bog', spoken: 'fr', country: 'ml'}, // Bamako Sign Language
@@ -65,6 +67,7 @@ export const IANASignedLanguages = [
   {signed: 'jsl', spoken: 'ja', country: 'jp'}, // Japanese Sign Language
   {signed: 'jhs', spoken: 'ne', country: 'np'}, // Jhankot Sign Language
   {signed: 'jos', spoken: 'ar', country: 'jo'}, // Jordanian Sign Language
+  {signed: 'jos', spoken: 'ar', country: 'sy'}, // Syrian Sign Language
   {signed: 'jus', spoken: 'ne', country: 'np'}, // Jumla Sign Language
   {signed: 'xki', spoken: 'en', country: 'ke'}, // Kenyan Sign Language
   {signed: 'kvk', spoken: 'ko', country: 'kr'}, // Korean Sign Language
@@ -149,6 +152,11 @@ export const IANASignedLanguages = [
   {signed: 'ygs', spoken: 'en', country: 'au'}, // Yolŋu Sign Language
   {signed: 'msd', spoken: 'es', country: 'my'}, // Yucatec Maya Sign Language
   {signed: 'ysl', spoken: 'sr', country: 'yu'}, // Yugoslavian Sign Language
+  {signed: 'ysl', spoken: 'sr', country: 'rs'}, // Yugoslavian Sign Language
   {signed: 'zsl', spoken: 'en', country: 'zm'}, // Zambian Sign Language
   {signed: 'zib', spoken: 'en', country: 'zw'}, // Zimbabwe Sign Language
+  {signed: 'ils', spoken: '', country: ''}, // International Sign
+
+  {signed: 'rsl-by', spoken: 'be', country: 'by'}, // Russian Sign Language (in Belarus, instead of Belarusian Sign Language)
+  {signed: 'gss-cy', spoken: 'el', country: 'cy'}, // Greek Sign Language (in Cyprus, instead of Cypriot Sign Language)
 ];

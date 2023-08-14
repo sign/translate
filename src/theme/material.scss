@@ -37,14 +37,7 @@ $app-dark-theme: mat.define-dark-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @mixin theme-components($theme) {
-  //@include mat.core-color($theme);
-  //@include mat.sidenav-color($theme);
-  //@include mat.button-color($theme);
-  //@include mat.progress-spinner-color($theme);
-  //@include mat.progress-bar-color($theme);
-  //@include mat.card-color($theme);
-  //@include mat.dialog-color($theme);
-  //@include mat.expansion-color($theme);
+  @include mat.core-color($theme);
 
   @include mat.tree-color($theme);
   @include mat.tooltip-color($theme);
