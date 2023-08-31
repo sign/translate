@@ -5,7 +5,6 @@ export const IANASignedLanguages = [
   {signed: 'asp', spoken: 'ar', country: 'dz'}, // Algerian Sign Language
   {signed: 'syy', spoken: 'ar', country: 'ps'}, // Al-Sayyid Bedouin Sign Language
   {signed: 'jks', spoken: 'ja', country: 'jp'}, // Amami Koniya Sign Language
-  {signed: 'jsl', spoken: 'ja', country: 'jp'}, // AJapanese Sign Language
   {signed: 'ase', spoken: 'en', country: 'us'}, // American Sign Language
   {signed: 'aed', spoken: 'es', country: 'ar'}, // Argentine Sign Language
   {signed: 'aen', spoken: 'hy', country: 'am'}, // Armenian Sign Language
@@ -125,6 +124,7 @@ export const IANASignedLanguages = [
   {signed: 'svk', spoken: 'sk', country: 'sk'}, // Slovakian Sign Language
   {signed: 'sls', spoken: 'en', country: 'sg'}, // Singapore Sign Language
   {signed: 'szs', spoken: 'en', country: 'sb'}, // Solomon Islands Sign Language
+  {signed: 'sfb', spoken: 'fr', country: 'be'}, // French Belgian Sign Language
   {signed: 'sfs', spoken: 'af', country: 'za'}, // South African Sign Language
   {signed: 'ssp', spoken: 'es', country: 'es'}, // Spanish Sign Language
   {signed: 'sqs', spoken: 'si', country: 'lk'}, // Sri Lankan Sign Language
@@ -139,11 +139,12 @@ export const IANASignedLanguages = [
   {signed: 'tsq', spoken: 'th', country: 'th'}, // Thai Sign Language
   {signed: 'lst', spoken: 'en', country: 'tt'}, // Trinidad and Tobago Sign Language
   {signed: 'tse', spoken: 'ar', country: 'tn'}, // Tunisian Sign Language
-  {signed: 'tsm', spoken: 'tr', country: 'tm'}, // Turkish Sign Language
+  {signed: 'tsm', spoken: 'tr', country: 'tr'}, // Turkish Sign Language
   {signed: 'ugn', spoken: 'en', country: 'ug'}, // Ugandan Sign Language
   {signed: 'ukl', spoken: 'uk', country: 'ua'}, // Ukrainian Sign Language
   {signed: 'uks', spoken: 'pt', country: 'br'}, // Urubú-Kaapor Sign Language
   {signed: 'ugy', spoken: 'es', country: 'uy'}, // Uruguayan Sign Language
+  {signed: 'vgt', spoken: 'nl', country: 'be'}, // Flemish Sign Language
   {signed: 'vsv', spoken: 'ca', country: 'es'}, // Valencian Sign Language
   {signed: 'vsl', spoken: 'es', country: 've'}, // Venezuelan Sign Language
   {signed: 'wbs', spoken: 'bn', country: 'in'}, // West Bengal Sign Language

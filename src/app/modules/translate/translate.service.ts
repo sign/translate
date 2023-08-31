@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
-import {IANASignedLanguages} from '../../core/helpers/iana/languages';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he',
@@ -15,53 +14,55 @@ export class TranslationService {
   private cld: LanguageIdentifier;
 
   signedLanguages = [
-    'us',
-    'gb',
-    'fr',
-    'es',
-    'sy',
-    'by',
-    'bg',
-    'cn',
-    'hr',
-    'ch',
-    'cz',
-    'dk',
-    'in',
-    'nz',
-    'ee',
-    'fi',
-    'at',
-    'de',
-    'cy',
-    'gr',
-    'is',
-    'isl',
-    'it',
-    'jp',
-    'lv',
-    'lt',
-    'ir',
-    'pl',
-    'br',
-    'pt',
-    'ro',
-    'ru',
-    'sk',
-    'ar',
-    'cl',
-    'cu',
-    'mx',
-    'se',
-    'tr',
-    'ua',
-    'pk',
+    'ase',
+    'gsg',
+    'fsl',
+    'bfi',
+    'ils',
+    'sgg',
+    'ssr',
+    'slf',
+    'ssp',
+    'jos',
+    'rsl-by',
+    'bqn',
+    'csl',
+    'csq',
+    'cse',
+    'dsl',
+    'ins',
+    'nzs',
+    'eso',
+    'fse',
+    'asq',
+    'gss-cy',
+    'gss',
+    'icl',
+    'ise',
+    'jsl',
+    'lsl',
+    'lls',
+    'psc',
+    'pso',
+    'bzs',
+    'psr',
+    'rms',
+    'rsl',
+    'svk',
+    'aed',
+    'csg',
+    'csf',
+    'mfs',
+    'swl',
+    'tsm',
+    'ukl',
+    'pks',
   ];
 
   spokenLanguages = [
     'en',
+    'de',
     'fr',
-    'es',
     'af',
     'sq',
     'am',
@@ -89,7 +90,7 @@ export class TranslationService {
     'fy',
     'gl',
     'ka',
-    'de',
+    'es',
     'el',
     'gu',
     'ht',
@@ -192,15 +193,7 @@ export class TranslationService {
   }
 
   translateSpokenToSigned(text: string, spokenLanguage: string, signedLanguage: string): string {
-    if (signedLanguage === 'ch' && ['de', 'fr', 'it'].includes(spokenLanguage)) {
-      const signLanguageCode = IANASignedLanguages.find(
-        l => l.spoken === spokenLanguage && l.country === signedLanguage
-      ).signed;
-
-      const api = 'https://us-central1-sign-mt.cloudfunctions.net/spoken_text_to_signed_pose';
-      return `${api}?text=${encodeURIComponent(text)}&spoken=${spokenLanguage}&signed=${signLanguageCode}`;
-    }
-    const api = 'https://spoken-to-signed-sxie2r74ua-zf.a.run.app/';
-    return `${api}?slang=${spokenLanguage}&dlang=${signedLanguage}&sentence=${encodeURIComponent(text)}`;
+    const api = 'https://us-central1-sign-mt.cloudfunctions.net/spoken_text_to_signed_pose';
+    return `${api}?text=${encodeURIComponent(text)}&spoken=${spokenLanguage}&signed=${signedLanguage}`;
   }
 }

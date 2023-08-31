@@ -4,6 +4,9 @@ import {Observable, switchMap} from 'rxjs';
 import {TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
+import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
+
+const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'language', countries: 'region'};
 
 @Component({
   selector: 'app-language-selector',
@@ -28,6 +31,7 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
 
   displayNames: Intl.DisplayNames;
   langNames: {[lang: string]: string} = {};
+  langCountries: {[lang: string]: string} = {};
 
   constructor(private store: Store, private transloco: TranslocoService) {
     super();
@@ -54,6 +58,8 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+
+    this.setLangCountries();
   }
 
   langName(lang: string): string {
@@ -69,16 +75,28 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
   }
 
   setLangNames(locale: string) {
-    const type = this.translationKey === 'languages' ? 'language' : 'region';
-    this.displayNames = new Intl.DisplayNames([locale], {type});
-    if (this.displayNames.resolvedOptions().locale !== locale) {
-      console.error('Failed to set language display names for locale', locale);
-      delete this.displayNames;
+    if (this.translationKey in IntlTypeMap) {
+      this.displayNames = new Intl.DisplayNames([locale], {type: IntlTypeMap[this.translationKey]});
+      if (this.displayNames.resolvedOptions().locale !== locale) {
+        console.error('Failed to set language display names for locale', locale);
+        delete this.displayNames;
+      }
     }
 
     for (const lang of this.languages) {
       this.langNames[lang] = this.langName(lang);
     }
+  }
+
+  setLangCountries() {
+    const key = this.translationKey === 'languages' ? 'language' : 'signed';
+    for (const lang of this.languages) {
+      const match = IANASignedLanguages.find(l => l[key] === lang);
+      this.langCountries[lang] = match?.country ?? 'xx';
+    }
+
+    // World flag
+    this.langCountries.ils = 'ils';
   }
 
   selectLanguage(lang: string): void {

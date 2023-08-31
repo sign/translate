@@ -44,7 +44,7 @@ const initialState: TranslateStateModel = {
   inputMode: 'text',
 
   spokenLanguage: 'en',
-  signedLanguage: 'us',
+  signedLanguage: 'ase',
   detectedLanguage: null,
 
   spokenLanguageText: '',

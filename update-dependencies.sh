@@ -4,7 +4,6 @@ ncu --cacheClear -u --reject filesize,@types/dom-mediacapture-transform,@types/d
 npm install
 git add package-lock.json
 
-# TODO: @angular-devkit/build-angular 16.1.6 does not install its own dependencies for some reason. Revisit.
 # TODO: @ngneat/transloco needs to be updated to v5, not sure what changed
 
 # Update server dependencies

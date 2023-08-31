@@ -17,7 +17,7 @@
     </ng-container>
     <mat-tab (select)="selectLanguage(lang)" *ngFor="let lang of topLanguages">
       <ng-template mat-tab-label>
-        <app-flag-icon *ngIf="flags" [country]="lang" [squared]="true"></app-flag-icon>
+        <app-flag-icon *ngIf="flags" [country]="langCountries[lang]" [squared]="true"></app-flag-icon>
         {{ langNames[lang] }}
       </ng-template>
     </mat-tab>
@@ -31,7 +31,7 @@
       color="primary"
       expand="full"
       fill="clear">
-      <app-flag-icon *ngIf="flags" [country]="detectedLanguage" [squared]="true"></app-flag-icon>
+      <app-flag-icon *ngIf="flags" [country]="langCountries[detectedLanguage]" [squared]="true"></app-flag-icon>
       {{ t('detected', {lang: langNames[detectedLanguage]}) }}
     </ion-button>
   </ng-container>
@@ -43,7 +43,7 @@
       expand="full"
       fill="clear">
       <ng-container *ngIf="language; else noLanguage">
-        <app-flag-icon *ngIf="flags" [country]="language" [squared]="true"></app-flag-icon>
+        <app-flag-icon *ngIf="flags" [country]="langCountries[language]" [squared]="true"></app-flag-icon>
         {{ langNames[language] }}
       </ng-container>
       <ng-template #noLanguage>{{ t('detect') }}</ng-template>
@@ -65,7 +65,7 @@
         {{ t('detect') }}
       </button>
       <button (click)="selectLanguage(language)" *ngFor="let language of languages" mat-menu-item>
-        <app-flag-icon *ngIf="flags" [country]="language" [squared]="true"></app-flag-icon>
+        <app-flag-icon *ngIf="flags" [country]="langCountries[language]" [squared]="true"></app-flag-icon>
         {{ langNames[language] }}
       </button>
     </ng-template>

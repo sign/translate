@@ -1,15 +1,8 @@
-@use '@angular/material' as mat;
-
 .translation-text {
   position: relative;
   height: 100%;
   padding: 20px 24px;
-  color: map-get(mat.$light-theme-foreground-palette, text);
   flex: 1;
-
-  @media (prefers-color-scheme: dark) {
-    color: map-get(mat.$dark-theme-foreground-palette, text);
-  }
 
   > div {
     display: flex;

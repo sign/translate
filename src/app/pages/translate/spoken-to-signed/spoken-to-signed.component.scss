@@ -11,7 +11,7 @@
     grid-template-areas: 'signed signed' 'spoken signwriting';
     grid-template-columns: auto 100px;
 
-    .sign-language {
+    app-signed-language-output {
       border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
 
       @media (prefers-color-scheme: dark) {

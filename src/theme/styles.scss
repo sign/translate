@@ -39,44 +39,8 @@ body {
   bottom: 0;
   right: 0;
   text-align: end;
-  //width: calc(100% - 2 * 14px - 56px); // 56px for AR on mobile
   width: calc(100% - 2 * 14px);
 }
-
-//.mat-drawer-container {
-//  height: 100%;
-//  background: transparent;
-//}
-//
-//.mat-toolbar {
-//  box-sizing: border-box;
-//  background-color: black;
-//  border-color: map-get(mat.$dark-theme-foreground-palette, divider);
-//  border-style: solid;
-//  border-width: 0;
-//  font-weight: 400;
-//
-//  &:first-child {
-//    border-bottom-width: 1px;
-//  }
-//
-//  &:last-child {
-//    border-top-width: 1px;
-//  }
-//
-//  @media (prefers-color-scheme: light) {
-//    background-color: white;
-//    border-color: map-get(mat.$light-theme-foreground-palette, divider);
-//    color: map-get(mat.$gray-palette, 800);
-//  }
-//}
-//
-//a {
-//  color: mat.get-color-from-palette(map-get($app-color, primary), 700);
-//  @media (prefers-color-scheme: dark) {
-//    color: mat.get-color-from-palette(map-get($app-color, primary), 300);
-//  }
-//}
 
 @import './ionic-variables';
 @import './ionic';

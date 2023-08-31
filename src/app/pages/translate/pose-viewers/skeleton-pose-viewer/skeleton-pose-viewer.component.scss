@@ -1,6 +1,3 @@
-@use '@angular/material' as mat;
-@import '../../../../../theme/variables';
-
 :host {
   display: block;
 }
@@ -11,11 +8,6 @@ pose-viewer {
   font-size: 2em;
   align-items: center;
   justify-content: center;
+  text-align: center;
   aspect-ratio: 1;
-
-  color: map-get(mat.$light-theme-foreground-palette, text);
-
-  @media (prefers-color-scheme: dark) {
-    color: map-get(mat.$dark-theme-foreground-palette, text);
-  }
 }
