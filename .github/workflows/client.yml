@@ -78,13 +78,15 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-dist
-          path: browser-dist.zip
+          path: browser-dist
 
       - name: list files
-        run: ls -la
+        run: ls -la browser-dist
 
       - name: Unzip dist
-        run: unzip browser-dist.zip
+        run: |
+          mv browser-dist/browser.zip browser.zip
+          unzip browser.zip
 
       - name: list files
         run: ls -la
