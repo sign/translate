@@ -2,6 +2,7 @@
   <div class="translation-text">
     <label id="spoken-language-label">{{ 'translate.spoken-to-signed.text' | transloco }}</label>
     <textarea
+      id="desktop"
       [formControl]="text"
       [maxLength]="maxTextLength"
       [lang]="spokenLanguage"
@@ -23,20 +24,32 @@
 </ng-container>
 
 <ng-container *ngIf="isMobile">
-  <ion-searchbar
-    animated="true"
-    search-icon="code-working-outline"
-    [placeholder]="'translate.spoken-to-signed.placeholder' | transloco"
-    [attr.aria-label]="'translate.spoken-to-signed.text' | transloco"
-    [lang]="spokenLanguage"
-    [formControl]="text"
-    [attr.maxLength]="maxTextLength"
-    dir="auto"
-    aria-autocomplete="list"
-    autocapitalize="off"
-    autocomplete="off"
-    autocorrect="off"
-    spellcheck="false"
-    autofocus
-    data-gramm_editor="false" />
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button disabled>
+        <ion-icon slot="icon-only" name="add-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-textarea
+      id="mobile"
+      autoGrow
+      rows="1"
+      [formControl]="text"
+      [attr.maxLength]="maxTextLength"
+      [lang]="spokenLanguage"
+      dir="auto"
+      aria-labelledby="spoken-language-label"
+      aria-autocomplete="list"
+      autocapitalize="off"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+      autofocus
+      [attr.data-gramm_editor]="false"></ion-textarea>
+
+    <ion-buttons slot="end">
+      <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
+    </ion-buttons>
+  </ion-toolbar>
 </ng-container>

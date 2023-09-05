@@ -11,7 +11,10 @@
       [attr.aria-label]="t(isSpeaking ? 'cancel' : 'play')"
       [matTooltip]="t(isSpeaking ? 'cancel' : 'play')"
       matTooltipPosition="above">
-      <ion-icon [name]="isSpeaking ? 'stop-circle-outline' : 'volume-medium'" slot="icon-only"></ion-icon>
+      <ion-icon
+        [name]="isSpeaking ? 'stop-circle-outline' : 'volume-medium-outline'"
+        slot="icon-only"
+        color="primary"></ion-icon>
     </ion-button>
 
     <!-- If language is not supported -->
