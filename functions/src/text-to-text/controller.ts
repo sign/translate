@@ -17,7 +17,7 @@ export class TextToTextTranslationEndpoint {
   async modelFiles(direction: string, from: string, to: string): Promise<string[] | null> {
     const query = {prefix: `models/browsermt/${direction}/${from}-${to}`};
     const [files] = await this.bucket.getFiles(query);
-    const paths = files.map(f => f.metadata.name).filter(p => !p.endsWith('/'));
+    const paths = files.map(f => f.metadata.name as string).filter(p => !p.endsWith('/'));
     return paths.length > 0 ? paths : null;
   }
 
