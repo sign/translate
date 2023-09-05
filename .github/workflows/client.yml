@@ -71,34 +71,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: list files
-        run: ls -la
-
       - name: Download built dist artifact
         uses: actions/download-artifact@v3
         with:
           name: build-dist
-          path: browser-dist
-
-      - name: list files
-        run: ls -la browser-dist
+          path: .
 
       - name: Unzip dist
-        run: |
-          mv browser-dist/browser.zip browser.zip
-          unzip browser.zip
-
-      - name: list files
-        run: ls -la
-
-      - name: list dist files
-        run: ls -la dist
-
-      - name: list dist files
-        run: ls -la dist/sign-language
-
-      - name: list dist files
-        run: ls -la dist/sign-language/browser
+        run: unzip browser.zip
 
       - name: Remove original html file from before prerendering
         run: rm -f dist/sign-translate/browser/index.original.html || true
@@ -122,10 +102,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-dist
-          path: browser-dist.zip
+          path: .
 
       - name: Unzip dist
-        run: unzip browser-dist.zip
+        run: unzip browser.zip
 
       # Experimentally, HTTP/2 Push degrades performance with prerendered pages
       # - name: Create HTTP/2 Server Push Headers
