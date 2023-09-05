@@ -22,7 +22,7 @@
     "serve:ssr": "node dist/sign-translate/server/main.js",
     "build:ssr": "ng build && ng run sign-translate:server",
     "prerender": "NODE_OPTIONS=--max_old_space_size=16384  ng run sign-translate:prerender:production",
-    "test:workflow": "act --artifact-server-path /tmp/artifacts -W .github/workflows/client.yml"
+    "test:workflow": "act --container-architecture linux/amd64 --artifact-server-path /tmp/artifacts -W .github/workflows/client.yml"
   },
   "engines": {
     "node": "18",
