@@ -53,7 +53,7 @@ jobs:
         run: bun tools/sitemap-generator.js
 
       - name: Generate Licenses File
-        run: bunx -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
+        run: bun x -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
 
       - name: Zip dist
         run: zip -r dist/sign-translate/browser.zip dist/sign-translate/browser/

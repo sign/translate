@@ -32,22 +32,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Cache node_modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: server-${{ runner.os }} # Key is generic as for frequent package updates
+      - name: Setup Bun Runtime
+        uses: antongolub/action-setup-bun@v1
 
       - name: Install Dependencies
-        run: npm install
+        run: bun install
 
       - name: Lint code
-        run: npm run lint
+        run: bun run lint
 
       #      - name: Test code
       #        working-directory: functions
       #        run: npm run test:ci
 
       - name: Deploy Cloud Functions
-        run: npx firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"
+        run: bun x firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"
