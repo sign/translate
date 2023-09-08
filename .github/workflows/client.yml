@@ -24,15 +24,16 @@ jobs:
       - name: Setup Bun Runtime
         uses: antongolub/action-setup-bun@v1
 
-      - name: Cache node_modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            node_modules
-          key: client-${{ runner.os }} # Key is generic as for frequent package updates
+      # Using npm it is faster to cache the node modules. Using bun it seems like it is not.
+      #- name: Cache node_modules
+      #  uses: actions/cache@v3
+      #  with:
+      #    path: |
+      #      node_modules
+      #    key: client-${{ runner.os }} # Key is generic as for frequent package updates
 
       - name: Install Dependencies
-        run: npm install
+        run: bun install
 
       - name: Lint code
         run: bun run lint
@@ -52,7 +53,7 @@ jobs:
         run: bun tools/sitemap-generator.js
 
       - name: Generate Licenses File
-        run: npx -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
+        run: bunx -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
 
       - name: Zip dist
         run: zip -r dist/sign-translate/browser.zip dist/sign-translate/browser/

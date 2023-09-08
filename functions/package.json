@@ -20,7 +20,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@firebase/database-types": "^1.0.0",
-    "@google-cloud/storage": "^7.0.1",
+    "@google-cloud/storage": "^7.1.0",
     "@sign-mt/browsermt": "^0.2.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
