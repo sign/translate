@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
+import {isSafari} from '../../core/constants';
 
 @Component({
   selector: 'app-speech-to-text',
@@ -25,6 +26,7 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
 
     this.speechRecognition = new this.SpeechRecognition();
     this.speechRecognition.interimResults = true;
+    this.speechRecognition.continuous = false;
     this.speechRecognition.lang = this.lang;
 
     fromEvent(this.speechRecognition, 'result').subscribe((event: SpeechRecognitionEvent) => {
@@ -33,6 +35,8 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     });
 
     fromEvent(this.speechRecognition, 'error').subscribe((event: SpeechRecognitionErrorEvent) => {
+      console.error('error', event.error);
+
       if (['not-allowed', 'language-not-supported', 'service-not-allowed'].includes(event.error)) {
         this.supportError = event.error;
       } else {
@@ -46,10 +50,18 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     });
 
     fromEvent(this.speechRecognition, 'start').subscribe(() => {
+      console.error('start');
+
       this.changeText.emit('');
       this.isRecording = true;
     });
-    fromEvent(this.speechRecognition, 'end').subscribe(() => (this.isRecording = false));
+
+    // TODO: ongoing safari bug: on end, microphone is still active
+    // https://stackoverflow.com/questions/75498609/safari-webkitspeechrecognition-continuous-bug
+    fromEvent(this.speechRecognition, 'end').subscribe(() => {
+      this.isRecording = false;
+      this.speechRecognition.stop(); // Explicitly stop the recognition service, to disengage the microphone
+    });
 
     fromEvent(this.speechRecognition, 'speechend').subscribe(this.stop.bind(this));
   }
@@ -61,6 +73,7 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   }
 
   requestPermission() {
+    alert();
     navigator.mediaDevices.getUserMedia({video: false, audio: true}).then(stream => {
       stream.getTracks().forEach(track => track.stop());
       this.supportError = null;
