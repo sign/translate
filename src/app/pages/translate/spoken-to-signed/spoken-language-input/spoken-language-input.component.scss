@@ -46,13 +46,17 @@ textarea#desktop {
 ion-textarea#mobile {
   margin-top: 6px;
   margin-bottom: 6px;
-  background-color: #fff;
   border-radius: 20px;
   --padding-start: 10px;
   --highlight-color: var(--ion-color-primary);
 
-  /* Address strange height on iOS */
   &.sc-ion-textarea-ios-h {
+    /* Address strange height on iOS */
     min-height: initial;
+
+    background-color: white;
+    @media (prefers-color-scheme: dark) {
+      background-color: #202124;
+    }
   }
 }
