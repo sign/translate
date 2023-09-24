@@ -33,7 +33,7 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
     this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
 
-    this.isSharingSupported = Capacitor.isNativePlatform() || 'share' in navigator;
+    this.isSharingSupported = Capacitor.isNativePlatform() || ('navigator' in globalThis && 'share' in navigator);
   }
 
   ngOnInit(): void {

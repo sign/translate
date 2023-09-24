@@ -51,7 +51,10 @@
       [attr.data-gramm_editor]="false"></ion-textarea>
 
     <ion-buttons slot="end">
-      <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
+      <app-speech-to-text
+        [lang]="spokenLanguage"
+        (changeText)="text.setValue($event)"
+        matTooltipPosition="before"></app-speech-to-text>
     </ion-buttons>
   </ion-toolbar>
 </ng-container>

@@ -9,7 +9,7 @@
     *ngIf="!supportError"
     [attr.aria-label]="t(isRecording ? 'stop' : 'start')"
     [matTooltip]="t(isRecording ? 'stop' : 'start')"
-    matTooltipPosition="above">
+    [matTooltipPosition]="matTooltipPosition">
     <ion-icon [name]="isRecording ? 'stop-circle-outline' : 'mic-outline'" slot="icon-only" color="primary"></ion-icon>
   </ion-button>
 
@@ -22,7 +22,7 @@
     *ngIf="supportError"
     [attr.aria-label]="t(supportError)"
     [matTooltip]="t(supportError)"
-    matTooltipPosition="above">
+    [matTooltipPosition]="matTooltipPosition">
     <ion-icon name="mic-off-outline" slot="icon-only"></ion-icon>
   </ion-button>
 </ng-container>

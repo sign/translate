@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
-import {isSafari} from '../../core/constants';
+import {TooltipPosition} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-speech-to-text',
@@ -11,6 +11,7 @@ import {isSafari} from '../../core/constants';
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
   @Input() lang = 'en';
   @Output() changeText: EventEmitter<string> = new EventEmitter<string>();
+  @Input() matTooltipPosition: TooltipPosition = 'above';
 
   SpeechRecognition = globalThis.SpeechRecognition || globalThis.webkitSpeechRecognition;
   speechRecognition!: SpeechRecognition;
