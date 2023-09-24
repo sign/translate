@@ -9,6 +9,7 @@ import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
 import {Capacitor} from '@capacitor/core';
 import {languageCodeNormalizer} from './core/modules/transloco/languages';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,7 @@ export class AppComponent implements AfterViewInit {
   urlParams = this.getUrlParams();
 
   constructor(
-    private platform: Platform,
+    private meta: Meta,
     private ga: GoogleAnalyticsService,
     private transloco: TranslocoService,
     private router: Router,
@@ -34,6 +35,12 @@ export class AppComponent implements AfterViewInit {
 
   async ngAfterViewInit() {
     if (Capacitor.isNativePlatform()) {
+      this.meta.updateTag({
+        name: 'viewport',
+        content:
+          'minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1.0, viewport-fit=cover, width=device-width',
+      });
+
       const {SplashScreen} = await import(
         /* webpackChunkName: "@capacitor/splash-screen" */ '@capacitor/splash-screen'
       );
