@@ -6,6 +6,7 @@
       [formControl]="text"
       [maxLength]="maxTextLength"
       [lang]="spokenLanguage"
+      enterkeyhint="enter"
       dir="auto"
       aria-labelledby="spoken-language-label"
       aria-autocomplete="list"
@@ -24,7 +25,7 @@
 </ng-container>
 
 <ng-container *ngIf="isMobile">
-  <ion-toolbar>
+  <ion-toolbar keyboardFlying>
     <ion-buttons slot="start">
       <ion-button disabled>
         <ion-icon slot="icon-only" name="add-outline" color="primary"></ion-icon>
@@ -40,6 +41,7 @@
       [formControl]="text"
       [attr.maxLength]="maxTextLength"
       [lang]="spokenLanguage"
+      enterkeyhint="enter"
       dir="auto"
       aria-labelledby="spoken-language-label"
       aria-autocomplete="list"

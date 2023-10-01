@@ -137,8 +137,8 @@ npm test
 Run the application on iOS:
 
 ```bash
-bun run build
-bun x cap sync
+bun run build && \
+bun x cap sync && \
 bun x cap run ios
 ```
 
