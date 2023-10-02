@@ -121,8 +121,13 @@ export async function translateQueue(queueId: number, image: ImageBitmap | Image
   });
 
   const imageBuffer = await queuePromise;
-  let outputImage = await tf.browser.toPixels(imageBuffer.toTensor()); // ~1-3ms
+  const imageTensor = imageBuffer.toTensor();
+  let outputImage = await tf.browser.toPixels(imageTensor); // ~1-3ms
   outputImage = removeGreenScreen(outputImage); // ~0.1-0.2ms
+
+  // Manually cleanup memory
+  tensor.dispose();
+  imageTensor.dispose();
 
   return outputImage;
 }
