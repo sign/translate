@@ -85,6 +85,7 @@
     "flag-icons": "6.11.1",
     "ionicons": "7.1.2",
     "leaflet": "1.9.4",
+    "mp4-muxer": "2.2.2",
     "ngx-filesize": "3.0.2",
     "pose-viewer": "0.6.2",
     "rxjs": "7.8.1",
@@ -92,6 +93,7 @@
     "three": "0.157.0",
     "tslib": "2.6.2",
     "web-vitals": "3.5.0",
+    "webm-muxer": "3.1.2",
     "zone.js": "0.14.0"
   },
   "devDependencies": {
@@ -120,6 +122,7 @@
     "@types/three": "0.155.1",
     "@types/web-app-manifest": "1.0.5",
     "@types/webgl2": "0.0.8",
+    "@types/wicg-file-system-access": "2020.9.8",
     "@typescript-eslint/eslint-plugin": "6.7.3",
     "@typescript-eslint/parser": "6.7.3",
     "deepmerge": "4.3.1",

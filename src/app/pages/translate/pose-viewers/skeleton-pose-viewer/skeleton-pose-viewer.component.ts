@@ -30,6 +30,8 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
       .pipe(
         tap(async () => {
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
+          // TODO: startRecording is imperfect, specifically when the tab is out of focus.
+          //  When VideoEncoder is supported, should use addCacheFrame instead, after every render
           await this.startRecording(poseCanvas as any);
           pose.currentTime = 0; // Force time back to 0
 

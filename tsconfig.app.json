@@ -8,6 +8,7 @@
       "@types/node",
       "@types/offscreencanvas",
       "@types/dom-mediacapture-transform",
+      "@types/wicg-file-system-access",
       "@types/long"
     ]
   },

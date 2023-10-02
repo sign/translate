@@ -78,7 +78,6 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
           };
 
           for (let i = 0; i < 3; i++) {
-            // Leaving at 1, need to fix VideoEncoder timestamps
             await iterFrame();
           }
         }),
@@ -104,7 +103,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
   async drawCache(): Promise<void> {
     // Supported in selected browsers https://caniuse.com/?search=MediaStreamTrackGenerator
-    if (this.streamWriter) {
+    if (this.videoEncoder) {
       return this.stopRecording();
     }
 
