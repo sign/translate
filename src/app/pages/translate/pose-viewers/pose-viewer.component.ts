@@ -25,6 +25,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
   // Use a video encoder on supported browsers
   videoEncoder: VideoEncoder;
+  videoType: 'webm' | 'mp4';
   muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
 
   cache: ImageData[] = [];
@@ -78,6 +79,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     //  browser's support for the codecs rather than the browser itself
     if (isSafari) {
       const {Muxer, ArrayBufferTarget} = await import('mp4-muxer');
+      this.videoType = 'mp4';
       this.muxer = new Muxer({
         target: new ArrayBufferTarget(),
         video: {
@@ -91,6 +93,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
 
     const {Muxer, ArrayBufferTarget} = await import('webm-muxer');
+    this.videoType = 'webm';
     this.muxer = new Muxer({
       target: new ArrayBufferTarget(),
       video: {
@@ -118,6 +121,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       height: image.height,
       bitrate: BPS,
       framerate: await this.fps(),
+      // alpha: 'keep' TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#242
     });
   }
 
@@ -126,8 +130,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     this.muxer.finalize();
 
     let {buffer} = this.muxer.target; // Buffer contains final muxed file
-    // TODO: the type of the buffer should be inferred from the muxer
-    const blob = new Blob([buffer], {type: 'video/mp4'});
+    const blob = new Blob([buffer], {type: `video/${this.videoType}`});
     const url = URL.createObjectURL(blob);
     this.setVideo(url);
 
@@ -211,7 +214,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
         timestamp: (ms * this.frameIndex) / fps,
         duration: ms / fps,
       });
-      this.videoEncoder.encode(frame, {keyFrame: true});
+      this.videoEncoder.encode(frame);
       frame.close();
     } else {
       this.cache.push(image);

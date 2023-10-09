@@ -293,19 +293,16 @@ export class TranslateState implements NgxsOnInit {
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {signedLanguageVideo, spokenLanguageText} = getState();
 
-    const uriExt = signedLanguageVideo.split('.').pop();
-    const ext = ['webm', 'mp4'].includes(uriExt) ? uriExt : 'mp4';
     const filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
-    const downloadName = `${filename}.${ext}`;
 
     const a = document.createElement('a');
     a.href = signedLanguageVideo;
-    a.download = downloadName;
+    a.download = filename;
     document.body.appendChild(a);
     try {
       a.click();
     } catch (e) {
-      alert(`Downloading "${downloadName}" on this device is not supported`);
+      alert(`Downloading "${filename}" on this device is not supported`);
     }
     document.body.removeChild(a);
   }
