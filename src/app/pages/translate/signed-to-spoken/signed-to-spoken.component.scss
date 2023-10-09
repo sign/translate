@@ -1,4 +1,3 @@
-@use '@angular/material' as mat;
 @import '../../../../theme/variables';
 
 :host {
@@ -17,11 +16,7 @@
   }
 
   app-sign-writing {
-    border-inline-end: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
-
-    @media (prefers-color-scheme: dark) {
-      border-inline-end: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
-    }
+    border-inline-end: 1px solid var(--app-divider-color);
 
     @media #{$breakpoint-lt-sm} {
       height: 235px;

@@ -1,10 +1,9 @@
-@use '@angular/material' as mat;
 @import '../../../../theme/variables';
 
 @media #{$breakpoint-gt-xs} {
   .container::before {
-    background-color: map-get(mat.$grey-palette, 50);
-    border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
+    background-color: var(--app-tinted-background-color);
+    border-bottom: 1px solid var(--app-divider-color);
     content: '';
     display: block;
     height: 106px;
@@ -12,11 +11,6 @@
     position: absolute;
     z-index: -1;
     left: 0;
-
-    @media (prefers-color-scheme: dark) {
-      background-color: #151515;
-      border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
-    }
   }
 }
 
@@ -65,11 +59,7 @@
     }
 
     app-language-selectors {
-      border-bottom: 1px solid map-get(mat.$light-theme-foreground-palette, divider);
-
-      @media (prefers-color-scheme: dark) {
-        border-bottom: 1px solid map-get(mat.$dark-theme-foreground-palette, divider);
-      }
+      border-bottom: 1px solid var(--app-divider-color);
     }
   }
 }
