@@ -132,7 +132,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-dist
-          path: dist/sign-translate/browser/
+          path: .
+
+      - name: Unzip dist
+        run: unzip browser.zip
 
       - name: Deploy Development Channel 🚀
         uses: FirebaseExtended/action-hosting-deploy@v0
