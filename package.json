@@ -143,7 +143,7 @@
     "karma-jasmine-html-reporter": "2.1.0",
     "karma-safari-launcher": "1.0.0",
     "karma-spec-reporter": "0.0.36",
-    "lint-staged": "15.0.0",
+    "lint-staged": "15.0.1",
     "open": "9.1.0",
     "pwa-asset-generator": "6.3.1",
     "sitemap": "7.1.1",
