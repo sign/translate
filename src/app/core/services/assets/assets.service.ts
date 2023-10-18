@@ -219,7 +219,7 @@ export class AssetsService {
 
       const file = await fileHandle.getFile();
       if (Number(stat.size) !== file.size) {
-        // 2023-02-07: file.size in safari is always 0
+        // 2023-10-18: file.size in safari is always 0
         console.error('File size mismatch', stat, file);
         return null;
       }

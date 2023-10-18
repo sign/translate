@@ -7,21 +7,21 @@ PODS:
   - CapacitorCordova (5.5.0)
   - CapacitorFilesystem (5.1.4):
     - Capacitor
-  - CapacitorFirebaseAnalytics (5.1.0):
+  - CapacitorFirebaseAnalytics (5.2.0):
     - Capacitor
-    - CapacitorFirebaseAnalytics/Lite (= 5.1.0)
-  - CapacitorFirebaseAnalytics/Analytics (5.1.0):
+    - CapacitorFirebaseAnalytics/Lite (= 5.2.0)
+  - CapacitorFirebaseAnalytics/Analytics (5.2.0):
     - Capacitor
     - FirebaseAnalytics (= 10.8.0)
-  - CapacitorFirebaseAnalytics/Lite (5.1.0):
+  - CapacitorFirebaseAnalytics/Lite (5.2.0):
     - Capacitor
-  - CapacitorFirebaseApp (5.1.0):
+  - CapacitorFirebaseApp (5.2.0):
     - Capacitor
     - FirebaseCore (= 10.8.0)
-  - CapacitorFirebaseCrashlytics (5.1.0):
+  - CapacitorFirebaseCrashlytics (5.2.0):
     - Capacitor
     - FirebaseCrashlytics (= 10.8.0)
-  - CapacitorFirebasePerformance (5.1.0):
+  - CapacitorFirebasePerformance (5.2.0):
     - Capacitor
     - FirebasePerformance (= 10.8.0)
   - CapacitorKeyboard (5.0.6):
@@ -214,10 +214,10 @@ SPEC CHECKSUMS:
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
   CapacitorCordova: 3d3908a3d208a11a75f9df3b18c4405c4de76e1d
   CapacitorFilesystem: af704badfbc69f6f8623d9ed313e5490e3723dcb
-  CapacitorFirebaseAnalytics: 8e42f3392e19f4331e21be373f4520412487bb69
-  CapacitorFirebaseApp: 472cf2609c0dd2219cbdc124962d7f939d038873
-  CapacitorFirebaseCrashlytics: 65b525728268133c68f49567f95eb94320f32140
-  CapacitorFirebasePerformance: 6467c91927b31770324a8e80352ff42745b37d80
+  CapacitorFirebaseAnalytics: 3755413bdeea4cf9169c4063ff621a1ab22ee9ce
+  CapacitorFirebaseApp: fbdd325f8d67b7be7950b9b76d2aa3d0e1aede9d
+  CapacitorFirebaseCrashlytics: 9cdcc0bc73167468586794acc5f1c7ace34ef81a
+  CapacitorFirebasePerformance: d8f715abf7317b8798a6280990d2cb0fcc431d9c
   CapacitorKeyboard: b978154b024a5f65e044908e37d15b7de58b9d12
   CapacitorShare: cd41743331cb71d217c029de54b681cbd91e0fcc
   CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd

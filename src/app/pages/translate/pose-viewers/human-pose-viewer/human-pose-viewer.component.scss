@@ -1,5 +1,6 @@
 :host {
-  display: block;
+  display: flex;
+  height: 100%;
 }
 
 pose-viewer {
@@ -9,6 +10,7 @@ pose-viewer {
 canvas {
   width: 100%;
   display: block;
+  align-self: center;
 }
 
 mat-progress-bar {

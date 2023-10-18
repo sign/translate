@@ -5,6 +5,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
+import {wait} from '../../../../core/helpers/wait/wait';
 
 @Component({
   selector: 'app-human-pose-viewer',
