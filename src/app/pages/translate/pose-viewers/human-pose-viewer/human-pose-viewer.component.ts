@@ -136,7 +136,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
       .subscribe();
   }
 
-  progress(): number {
+  get progress(): number {
     if (!this.poseEl) {
       return 0;
     }
@@ -145,6 +145,6 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
       return 0;
     }
 
-    return (100 * this.frameIndex) / this.totalFrames;
+    return this.frameIndex / this.totalFrames;
   }
 }

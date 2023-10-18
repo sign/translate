@@ -8,7 +8,7 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {IonicModule} from '@ionic/angular';
 
 describe('HumanPoseViewerComponent', () => {
   let component: HumanPoseViewerComponent;
@@ -19,7 +19,7 @@ describe('HumanPoseViewerComponent', () => {
       declarations: [HumanPoseViewerComponent],
       imports: [
         Pix2PixModule,
-        MatProgressSpinnerModule,
+        IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
         AppTranslocoTestingModule,
       ],
