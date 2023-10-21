@@ -12,9 +12,9 @@
   "translate": {
     "title": "Tłumacz Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Wykryj język",
-      "more": "Więcej języków"
+      "more": "Więcej języków",
+      "detected": "{{lang}} - Wykryto"
     },
     "input": {
       "text": "Tekst",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Wprowadź tekst"
     },
-    "description": "Bezproblemowe tłumaczenie na język migowy z najnowocześniejszymi modelami czasu rzeczywistego. "
+    "description": "Bezproblemowe tłumaczenie na język migowy z najnowocześniejszymi modelami czasu rzeczywistego. ",
+    "suggestions": {
+      "translate-from": "Przetłumacz z",
+      "did-you-mean": "Miałeś na myśli"
+    }
   },
   "landing": {
     "try": "WYPRÓBUJ TŁUMACZA",

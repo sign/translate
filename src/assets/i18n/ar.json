@@ -12,9 +12,9 @@
   "translate": {
     "title": "ترجمة Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "التعرّف التلقائي على اللغة",
-      "more": "المزيد من اللغات"
+      "more": "المزيد من اللغات",
+      "detected": "{{lang}} - تم الكشف عنه"
     },
     "input": {
       "text": "نص",
@@ -42,7 +42,11 @@
       },
       "placeholder": "أدخل النص"
     },
-    "description": "ترجمة لغة الإشارة بدون مجهود مع أحدث النماذج في الوقت الفعلي. "
+    "description": "ترجمة لغة الإشارة بدون مجهود مع أحدث النماذج في الوقت الفعلي. ",
+    "suggestions": {
+      "translate-from": "الترجمة من",
+      "did-you-mean": "هل تعني"
+    }
   },
   "landing": {
     "try": "تجربة الترجمة",

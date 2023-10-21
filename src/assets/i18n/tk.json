@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Переводчик",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Определить язык",
-      "more": "Has köp dil"
+      "more": "Has köp dil",
+      "detected": "{{lang}} - Tapyldy"
     },
     "input": {
       "text": "Текст",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Tekst giriziň"
     },
-    "description": "“Cutting-Edge” real wagt modelleri bilen yhlasly dil diliniň terjimesi. "
+    "description": "“Cutting-Edge” real wagt modelleri bilen yhlasly dil diliniň terjimesi. ",
+    "suggestions": {
+      "translate-from": "Terjime",
+      "did-you-mean": "Diýjek bolduňmy?"
+    }
   },
   "landing": {
     "try": "TERJIME EDIP GÖRÜŇ",

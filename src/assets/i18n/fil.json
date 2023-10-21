@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Kilalanin ang Wika",
-      "more": "Higit pang mga Wika"
+      "more": "Higit pang mga Wika",
+      "detected": "{{lang}} - Nakita"
     },
     "input": {
       "text": "Text",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Ipasok ang Teksto"
     },
-    "description": "Walang Kahirap-hirap na Pagsasalin ng Sign Language sa Mga Cutting-Edge na Real-Time na Modelo. "
+    "description": "Walang Kahirap-hirap na Pagsasalin ng Sign Language sa Mga Cutting-Edge na Real-Time na Modelo. ",
+    "suggestions": {
+      "translate-from": "Isalin mula sa",
+      "did-you-mean": "Ibig mong sabihin"
+    }
   },
   "landing": {
     "try": "SUBUKAN ANG TRANSLATE",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Eadar-theangadair Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Mothaich dhan chànan",
-      "more": "Tuilleadh Chànanan"
+      "more": "Tuilleadh Chànanan",
+      "detected": "{{lang}} - Air a bhrath"
     },
     "input": {
       "text": "Teacs",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Cuir a-steach Teacsa"
     },
-    "description": "Eadar-theangachadh cànan soidhnidh gun oidhirp le modalan fìor-ùine adhartach. "
+    "description": "Eadar-theangachadh cànan soidhnidh gun oidhirp le modalan fìor-ùine adhartach. ",
+    "suggestions": {
+      "translate-from": "Eadar-theangaich bho",
+      "did-you-mean": "An robh thu a' ciallachadh"
+    }
   },
   "landing": {
     "try": "FEUCH AN t-EADAR-THEANGADAIR",

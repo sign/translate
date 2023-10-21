@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Översätt",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Identifiera språk",
-      "more": "Flera språk"
+      "more": "Flera språk",
+      "detected": "{{lang}} - Upptäckt"
     },
     "input": {
       "text": "Text",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Skriv text"
     },
-    "description": "Enkel översättning av teckenspråk med banbrytande realtidsmodeller. "
+    "description": "Enkel översättning av teckenspråk med banbrytande realtidsmodeller. ",
+    "suggestions": {
+      "translate-from": "Översätt från",
+      "did-you-mean": "Menade du"
+    }
   },
   "landing": {
     "try": "PROVA ÖVERSÄTT",

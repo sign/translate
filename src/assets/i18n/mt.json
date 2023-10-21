@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Induna bil-lingwa",
-      "more": "Aktar Lingwi"
+      "more": "Aktar Lingwi",
+      "detected": "{{lang}} - Individwat"
     },
     "input": {
       "text": "Test",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Daħħal it-Test"
     },
-    "description": "Traduzzjoni tal-Lingwa tas-Sinjali mingħajr Sforz b'Mudelli ta' l-Avanti f'Ħin Reali. "
+    "description": "Traduzzjoni tal-Lingwa tas-Sinjali mingħajr Sforz b'Mudelli ta' l-Avanti f'Ħin Reali. ",
+    "suggestions": {
+      "translate-from": "Ittraduċi minn",
+      "did-you-mean": "Ridt tfisser"
+    }
   },
   "landing": {
     "try": "IPPROVA ITTRADUĊI",

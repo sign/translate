@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Gimatikud ang sinultian",
-      "more": "Dugang Pinulongan"
+      "more": "Dugang Pinulongan",
+      "detected": "{{lang}} - Namatikdan"
     },
     "input": {
       "text": "Teksto",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Pagsulod sa Teksto"
     },
-    "description": "Walay Kusog nga Paghubad sa Sign Language uban sa Cutting-Edge Real-Time nga mga Modelo. "
+    "description": "Walay Kusog nga Paghubad sa Sign Language uban sa Cutting-Edge Real-Time nga mga Modelo. ",
+    "suggestions": {
+      "translate-from": "Hubad gikan sa",
+      "did-you-mean": "Gipasabot ba nimo"
+    }
   },
   "landing": {
     "try": "SULAYI ANG TRANSLATE",

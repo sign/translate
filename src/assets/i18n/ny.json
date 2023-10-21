@@ -12,9 +12,9 @@
   "translate": {
     "title": "Zomasulira za Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Fufuzani chilankhulo",
-      "more": "Zinenero Zambiri"
+      "more": "Zinenero Zambiri",
+      "detected": "{{lang}} - Zapezeka"
     },
     "input": {
       "text": "Malemba",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Lowetsani Mawu"
     },
-    "description": "Kumasulira Kosavuta kwa Chinenero Chamanja ndi Ma Models a Nthawi Yeniyeni. "
+    "description": "Kumasulira Kosavuta kwa Chinenero Chamanja ndi Ma Models a Nthawi Yeniyeni. ",
+    "suggestions": {
+      "translate-from": "Tanthauzirani kuchokera",
+      "did-you-mean": "Kodi mumatanthauza"
+    }
   },
   "landing": {
     "try": "TAYESANI ZOMASULIRA",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "I-Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Hlonza ulimi",
-      "more": "Izilimi Eziningi"
+      "more": "Izilimi Eziningi",
+      "detected": "{{lang}} - Kutholiwe"
     },
     "input": {
       "text": "Umbhalo",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Faka umbhalo"
     },
-    "description": "Ukuhunyushwa Kolimi Lwezandla Okungenamzamo Okunamamodeli Asesikhathini Sangempela. "
+    "description": "Ukuhunyushwa Kolimi Lwezandla Okungenamzamo Okunamamodeli Asesikhathini Sangempela. ",
+    "suggestions": {
+      "translate-from": "Humusha kusuka",
+      "did-you-mean": "Ingabe kade ufuna ukuthi"
+    }
   },
   "landing": {
     "try": "ZAMA I-TRANSLATE",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Tsinkayo harshe",
-      "more": "Ƙarin Harsuna"
+      "more": "Ƙarin Harsuna",
+      "detected": "{{lang}} - An gano"
     },
     "input": {
       "text": "Rubutu",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Shigar da Rubutu"
     },
-    "description": "Fassarar Harshen Alamu mara Ƙoƙari tare da Samfuran Yanke-Edge na Gaskiya. "
+    "description": "Fassarar Harshen Alamu mara Ƙoƙari tare da Samfuran Yanke-Edge na Gaskiya. ",
+    "suggestions": {
+      "translate-from": "Fassara daga",
+      "did-you-mean": "Kana ma'anan"
+    }
   },
   "landing": {
     "try": "GWADA FASSARA",

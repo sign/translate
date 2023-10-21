@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Detekte lang",
-      "more": "Plis Lang"
+      "more": "Plis Lang",
+      "detected": "{{lang}} - Detekte"
     },
     "input": {
       "text": "Tèks",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Antre tèks"
     },
-    "description": "Tradiksyon lang siy san efò ak modèl dènye kri an tan reyèl. "
+    "description": "Tradiksyon lang siy san efò ak modèl dènye kri an tan reyèl. ",
+    "suggestions": {
+      "translate-from": "Tradui soti nan",
+      "did-you-mean": "Èske ou te vle di"
+    }
   },
   "landing": {
     "try": "ESEYE TRANSLATE",

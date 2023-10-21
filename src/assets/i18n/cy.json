@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Cyfieithu",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Synhwyro iaith",
-      "more": "Mwy o Ieithoedd"
+      "more": "Mwy o Ieithoedd",
+      "detected": "{{ lang}} - Wedi canfod"
     },
     "input": {
       "text": "Testun",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Rhowch Testun"
     },
-    "description": "Cyfieithu Iaith Arwyddion Ddiymdrech gyda Modelau Amser Real blaengar. "
+    "description": "Cyfieithu Iaith Arwyddion Ddiymdrech gyda Modelau Amser Real blaengar. ",
+    "suggestions": {
+      "translate-from": "Cyfieithwch o",
+      "did-you-mean": "Oeddech chi'n ei olygu"
+    }
   },
   "landing": {
     "try": "Rhowch Gynnig Ar Sign Cyfieithu",

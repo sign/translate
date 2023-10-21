@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Traducere",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Selectați limba",
-      "more": "Mai multe limbi"
+      "more": "Mai multe limbi",
+      "detected": "{{lang}} - Detectat"
     },
     "input": {
       "text": "Mesaj text",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Introduceți text"
     },
-    "description": "Traducere fără efort în limbajul semnelor cu modele de ultimă oră în timp real. "
+    "description": "Traducere fără efort în limbajul semnelor cu modele de ultimă oră în timp real. ",
+    "suggestions": {
+      "translate-from": "Tradu din",
+      "did-you-mean": "Ai vrut să spui"
+    }
   },
   "landing": {
     "try": "ÎNCERCAȚI TRADUCERE",

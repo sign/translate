@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ენის განსაზღვრა",
-      "more": "მეტი ენები"
+      "more": "მეტი ენები",
+      "detected": "{{lang}} - აღმოჩენილია"
     },
     "input": {
       "text": "SMS",
@@ -42,7 +42,11 @@
       },
       "placeholder": "შეიყვანეთ ტექსტი"
     },
-    "description": "ჟესტების ენის უპრობლემოდ თარგმნა უახლესი რეალურ დროში მოდელებით. "
+    "description": "ჟესტების ენის უპრობლემოდ თარგმნა უახლესი რეალურ დროში მოდელებით. ",
+    "suggestions": {
+      "translate-from": "თარგმნა საწყისი",
+      "did-you-mean": "Იგულისხმე, რომ"
+    }
   },
   "landing": {
     "try": "Translate-ის გამოცდა",

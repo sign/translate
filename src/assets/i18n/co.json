@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Traduction",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Détecter la langue",
-      "more": "Più Lingue"
+      "more": "Più Lingue",
+      "detected": "{{lang}} - Detected"
     },
     "input": {
       "text": "Testu",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Entre u testu"
     },
-    "description": "Traduzzione in lingua di i segni senza sforzu cù mudelli di punta in tempu reale. "
+    "description": "Traduzzione in lingua di i segni senza sforzu cù mudelli di punta in tempu reale. ",
+    "suggestions": {
+      "translate-from": "Traduce da",
+      "did-you-mean": "Vuliti dì"
+    }
   },
   "landing": {
     "try": "ESSAYEZ DE TRADUIRE",

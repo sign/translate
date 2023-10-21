@@ -27,6 +27,18 @@ textarea#desktop {
   height: calc(100% - 40px);
 }
 
+#suggestions {
+  position: absolute;
+  bottom: 60px;
+  white-space: break-spaces;
+  ion-icon {
+    padding: 0 4px;
+  }
+  a {
+    cursor: pointer;
+  }
+}
+
 #char-count {
   flex-grow: 1;
   align-self: center;

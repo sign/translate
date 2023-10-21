@@ -12,9 +12,9 @@
   "translate": {
     "title": "Tradutor de Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Detectar idioma",
-      "more": "Máis Idiomas"
+      "more": "Máis Idiomas",
+      "detected": "{{lang}} - Detectouse"
     },
     "input": {
       "text": "Texto",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Introduce texto"
     },
-    "description": "Tradución sen esforzo á lingua de signos con modelos de vangarda en tempo real. "
+    "description": "Tradución sen esforzo á lingua de signos con modelos de vangarda en tempo real. ",
+    "suggestions": {
+      "translate-from": "Traducir de",
+      "did-you-mean": "Querías dicir"
+    }
   },
   "landing": {
     "try": "PROBA O TRADUTOR",

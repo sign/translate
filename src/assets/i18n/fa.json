@@ -12,9 +12,9 @@
   "translate": {
     "title": "‏‫ترجمه Sign‬",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "شناسایی زبان",
-      "more": "زبان های بیشتر"
+      "more": "زبان های بیشتر",
+      "detected": "{{lang}} - شناسایی شد"
     },
     "input": {
       "text": "نوشتار",
@@ -42,7 +42,11 @@
       },
       "placeholder": "متن را وارد کنید"
     },
-    "description": "ترجمه بی دردسر زبان اشاره با مدل های پیشرفته در زمان واقعی. "
+    "description": "ترجمه بی دردسر زبان اشاره با مدل های پیشرفته در زمان واقعی. ",
+    "suggestions": {
+      "translate-from": "ترجمه از",
+      "did-you-mean": "منظورت این بود"
+    }
   },
   "landing": {
     "try": "Translate را امتحان کنید",

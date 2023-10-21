@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Тілді анықтау",
-      "more": "Қосымша тілдер"
+      "more": "Қосымша тілдер",
+      "detected": "{{lang}} - анықталды"
     },
     "input": {
       "text": "Мәтін",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Мәтінді енгізіңіз"
     },
-    "description": "Нақты уақыттағы ең озық үлгілері бар оңай ым тіліндегі аударма. "
+    "description": "Нақты уақыттағы ең озық үлгілері бар оңай ым тіліндегі аударма. ",
+    "suggestions": {
+      "translate-from": "Аудару",
+      "did-you-mean": "Айтқыңыз келді ме"
+    }
   },
   "landing": {
     "try": "БАЙҚАП КӨРУ",

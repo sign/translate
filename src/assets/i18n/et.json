@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign'i tõlge",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Tuvasta keel",
-      "more": "Rohkem keeli"
+      "more": "Rohkem keeli",
+      "detected": "{{lang}} – tuvastatud"
     },
     "input": {
       "text": "Tekst",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Sisesta tekst"
     },
-    "description": "Lihtne viipekeelte tõlge tipptasemel reaalajas mudelitega. "
+    "description": "Lihtne viipekeelte tõlge tipptasemel reaalajas mudelitega. ",
+    "suggestions": {
+      "translate-from": "Tõlgi keelest",
+      "did-you-mean": "Kas sa mõtlesid"
+    }
   },
   "landing": {
     "try": "PROOVI TÕLGET",

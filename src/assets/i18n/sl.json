@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Prevajalnik",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Zaznaj jezik",
-      "more": "Več jezikov"
+      "more": "Več jezikov",
+      "detected": "{{lang}} – Zaznano"
     },
     "input": {
       "text": "Besedilo",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Vnesite besedilo"
     },
-    "description": "Enostavno prevajanje znakovnega jezika z najsodobnejšimi modeli v realnem času. "
+    "description": "Enostavno prevajanje znakovnega jezika z najsodobnejšimi modeli v realnem času. ",
+    "suggestions": {
+      "translate-from": "Prevedi iz",
+      "did-you-mean": "Si mislil"
+    }
   },
   "landing": {
     "try": "PREIZKUSITE PREVAJALNIK",

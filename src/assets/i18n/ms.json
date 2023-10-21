@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Terjemah",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Kesan bahasa",
-      "more": "Lebih Banyak Bahasa"
+      "more": "Lebih Banyak Bahasa",
+      "detected": "{{lang}} - Dikesan"
     },
     "input": {
       "text": "Teks",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Masukkan Teks"
     },
-    "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Masa Nyata Termaju. "
+    "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Masa Nyata Termaju. ",
+    "suggestions": {
+      "translate-from": "Terjemah dari",
+      "did-you-mean": "Adakah anda maksudkan"
+    }
   },
   "landing": {
     "try": "CUBA TERJEMAH",

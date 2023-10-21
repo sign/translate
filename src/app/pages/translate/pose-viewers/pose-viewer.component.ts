@@ -166,7 +166,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       tap(async () => {
         stream.getTracks().forEach(track => track.stop());
         const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
-        console.log('recordedChunks', recordedChunks);
         console.log('blob', blob.size, blob.type);
         // TODO: this does not work in iOS. The blob above is of size 0, and the video does not play.
         //       Should open an issue that ios mediarecorder dataavailable blob size is 0

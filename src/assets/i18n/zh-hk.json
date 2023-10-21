@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 翻譯",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "偵測語言",
-      "more": "更多語言"
+      "more": "更多語言",
+      "detected": "{{lang}} - 偵測到"
     },
     "input": {
       "text": "文字",
@@ -42,7 +42,11 @@
       },
       "placeholder": "輸入文字"
     },
-    "description": "使用尖端實時模型輕鬆進行手語翻譯。"
+    "description": "使用尖端實時模型輕鬆進行手語翻譯。",
+    "suggestions": {
+      "translate-from": "翻譯自",
+      "did-you-mean": "你的意思"
+    }
   },
   "landing": {
     "try": "試用「翻譯」",

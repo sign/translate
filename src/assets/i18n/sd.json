@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ترجمو",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ٻولي کوجيو",
-      "more": "وڌيڪ ٻوليون"
+      "more": "وڌيڪ ٻوليون",
+      "detected": "{{lang}} - معلوم ٿيو"
     },
     "input": {
       "text": "متن",
@@ -42,7 +42,11 @@
       },
       "placeholder": "ٽيڪسٽ داخل ڪريو"
     },
-    "description": "ڪٽنگ-ايج حقيقي-وقت ماڊلز سان بي محنت نشاني ٻوليءَ جو ترجمو. "
+    "description": "ڪٽنگ-ايج حقيقي-وقت ماڊلز سان بي محنت نشاني ٻوليءَ جو ترجمو. ",
+    "suggestions": {
+      "translate-from": "مان ترجمو ڪريو",
+      "did-you-mean": "ڇا توھان جو مطلب آھي"
+    }
   },
   "landing": {
     "try": "ترجمي جي ڪوشش ڪريو",

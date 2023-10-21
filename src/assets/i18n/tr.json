@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Dili algıla",
-      "more": "Diğer Diller"
+      "more": "Diğer Diller",
+      "detected": "{{lang}} - Algılandı"
     },
     "input": {
       "text": "Metin",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Metni Girin"
     },
-    "description": "Son Teknoloji Gerçek Zamanlı Modellerle Zahmetsiz İşaret Dili Tercümesi. "
+    "description": "Son Teknoloji Gerçek Zamanlı Modellerle Zahmetsiz İşaret Dili Tercümesi. ",
+    "suggestions": {
+      "translate-from": "Den çeviri",
+      "did-you-mean": "Demek istediğin"
+    }
   },
   "landing": {
     "try": "ÇEVİRİ'Yİ DENEYİN",

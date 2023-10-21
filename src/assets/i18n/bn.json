@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ভাষা শনাক্ত করুন",
-      "more": "আরও ভাষা"
+      "more": "আরও ভাষা",
+      "detected": "{{lang}} - সনাক্ত করা হয়েছে৷"
     },
     "input": {
       "text": "টেক্সট",
@@ -42,7 +42,11 @@
       },
       "placeholder": "লেখা অন্তর্ভুক্ত করুন"
     },
-    "description": "কাটিং-এজ রিয়েল-টাইম মডেল সহ অনায়াস সাংকেতিক ভাষা অনুবাদ। "
+    "description": "কাটিং-এজ রিয়েল-টাইম মডেল সহ অনায়াস সাংকেতিক ভাষা অনুবাদ। ",
+    "suggestions": {
+      "translate-from": "থেকে অনুবাদ করুন",
+      "did-you-mean": "মানে?"
+    }
   },
   "landing": {
     "try": "অনুবাদ ব্যবহার করে দেখুন",

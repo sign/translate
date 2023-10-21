@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ແປພາສາ",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ກວດສອບພາສາ",
-      "more": "ພາສາເພີ່ມເຕີມ"
+      "more": "ພາສາເພີ່ມເຕີມ",
+      "detected": "{{lang}} - ກວດພົບ"
     },
     "input": {
       "text": "ຂໍ້ຄວາມ",
@@ -42,7 +42,11 @@
       },
       "placeholder": "ໃສ່ຂໍ້ຄວາມ"
     },
-    "description": "ການແປພາສາມືບໍ່ສະດວກດ້ວຍຕົວແບບເວລາຈິງທີ່ທັນສະໄໝ. "
+    "description": "ການແປພາສາມືບໍ່ສະດວກດ້ວຍຕົວແບບເວລາຈິງທີ່ທັນສະໄໝ. ",
+    "suggestions": {
+      "translate-from": "ແປຈາກ",
+      "did-you-mean": "ເຈົ້າ​ຫມາຍ​ຄວາມ​ວ່າ"
+    }
   },
   "landing": {
     "try": "ລອງແປພາສາ",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Hauteman hizkuntza",
-      "more": "Hizkuntza gehiago"
+      "more": "Hizkuntza gehiago",
+      "detected": "{{lang}} - Detektatua"
     },
     "input": {
       "text": "Testuak",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Sartu testua"
     },
-    "description": "Esfortzurik gabeko zeinu hizkuntzaren itzulpena punta-puntako denbora errealeko ereduekin. "
+    "description": "Esfortzurik gabeko zeinu hizkuntzaren itzulpena punta-puntako denbora errealeko ereduekin. ",
+    "suggestions": {
+      "translate-from": "Itzul ezazu",
+      "did-you-mean": "Esan nahi zenuen"
+    }
   },
   "landing": {
     "try": "PROBATU TRANSLATE",

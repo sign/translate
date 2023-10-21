@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Vertaal",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Bespeur taal",
-      "more": "Meer tale"
+      "more": "Meer tale",
+      "detected": "{{lang}} - Bespeur"
     },
     "input": {
       "text": "Teks",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Voer teks in"
     },
-    "description": "Moeitelose gebaretaalvertaling met die nuutste intydse modelle. "
+    "description": "Moeitelose gebaretaalvertaling met die nuutste intydse modelle. ",
+    "suggestions": {
+      "translate-from": "Vertaal uit",
+      "did-you-mean": "Het jy bedoel"
+    }
   },
   "landing": {
     "try": "Probeer Sign Vertaal",

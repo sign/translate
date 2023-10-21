@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ભાષા શોધો",
-      "more": "વધુ ભાષાઓ"
+      "more": "વધુ ભાષાઓ",
+      "detected": "{{lang}} - શોધાયેલ"
     },
     "input": {
       "text": "ટેક્સ્ટ",
@@ -42,7 +42,11 @@
       },
       "placeholder": "ટેક્સ્ટ દાખલ કરો"
     },
-    "description": "કટીંગ-એજ રીઅલ-ટાઇમ મોડલ્સ સાથે સહેલો સાઇન લેંગ્વેજ અનુવાદ. "
+    "description": "કટીંગ-એજ રીઅલ-ટાઇમ મોડલ્સ સાથે સહેલો સાઇન લેંગ્વેજ અનુવાદ. ",
+    "suggestions": {
+      "translate-from": "થી અનુવાદ કરો",
+      "did-you-mean": "શું તમારો મતલબ હતો"
+    }
   },
   "landing": {
     "try": "અનુવાદને અજમાવી જુઓ",

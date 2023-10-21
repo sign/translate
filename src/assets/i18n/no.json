@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Oversetter",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Gjenkjenn språk",
-      "more": "Flere språk"
+      "more": "Flere språk",
+      "detected": "{{lang}} – oppdaget"
     },
     "input": {
       "text": "Tekst",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Skriv inn tekst"
     },
-    "description": "Uanstrengt tegnspråkoversettelse med banebrytende sanntidsmodeller. "
+    "description": "Uanstrengt tegnspråkoversettelse med banebrytende sanntidsmodeller. ",
+    "suggestions": {
+      "translate-from": "Oversett fra",
+      "did-you-mean": "Mente du"
+    }
   },
   "landing": {
     "try": "PRØV OVERSETTER",

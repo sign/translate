@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "भाषा शोधा",
-      "more": "अधिक भाषा"
+      "more": "अधिक भाषा",
+      "detected": "{{lang}} - आढळले"
     },
     "input": {
       "text": "एसएमएस",
@@ -42,7 +42,11 @@
       },
       "placeholder": "मजकूर प्रविष्ट करा"
     },
-    "description": "अत्याधुनिक रिअल-टाइम मॉडेल्ससह प्रयत्नरहित सांकेतिक भाषेचे भाषांतर. "
+    "description": "अत्याधुनिक रिअल-टाइम मॉडेल्ससह प्रयत्नरहित सांकेतिक भाषेचे भाषांतर. ",
+    "suggestions": {
+      "translate-from": "वरून भाषांतर करा",
+      "did-you-mean": "तुम्हाला म्हणायचे होते"
+    }
   },
   "landing": {
     "try": "भाषांतर वापरून पहा",

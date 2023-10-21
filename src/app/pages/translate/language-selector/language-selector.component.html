@@ -4,7 +4,7 @@
     [(selectedIndex)]="selectedIndex"
     [disablePagination]="true">
     <ng-container *ngIf="hasLanguageDetection">
-      <ng-container *ngIf="detectedLanguage$ | async as detectedLanguage; else detectLanguage">
+      <ng-container *ngIf="detectedLanguage && !language; else detectLanguage">
         <mat-tab>
           <ng-template mat-tab-label>
             {{ t('detected', {lang: langNames[detectedLanguage]}) }}
@@ -24,7 +24,7 @@
   </mat-tab-group>
 
   <!-- Language button for small screens -->
-  <ng-container *ngIf="hasLanguageDetection && detectedLanguage$ | async as detectedLanguage; else detectLanguage">
+  <ng-container *ngIf="hasLanguageDetection && detectedLanguage && !language; else detectLanguage">
     <ion-button
       [matMenuTriggerFor]="signedLanguagesMenu"
       class="menu-language-button"

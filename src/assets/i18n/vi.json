@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Dịch",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Phát hiện ngôn ngữ",
-      "more": "Nhiều ngôn ngữ hơn"
+      "more": "Nhiều ngôn ngữ hơn",
+      "detected": "{{lang}} - Đã phát hiện"
     },
     "input": {
       "text": "Văn bản",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Nhập văn bản"
     },
-    "description": "Dịch ngôn ngữ ký hiệu dễ dàng với các mô hình thời gian thực tiên tiến. "
+    "description": "Dịch ngôn ngữ ký hiệu dễ dàng với các mô hình thời gian thực tiên tiến. ",
+    "suggestions": {
+      "translate-from": "Dịch từ",
+      "did-you-mean": "Ý bạn là"
+    }
   },
   "landing": {
     "try": "THỬ DỊCH",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Fordító",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Nyelvfelismerés",
-      "more": "További nyelvek"
+      "more": "További nyelvek",
+      "detected": "{{lang}} – Észlelve"
     },
     "input": {
       "text": "Szöveg",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Írja be a szöveget"
     },
-    "description": "Könnyű jelnyelvi fordítás élvonalbeli valós idejű modellekkel. "
+    "description": "Könnyű jelnyelvi fordítás élvonalbeli valós idejű modellekkel. ",
+    "suggestions": {
+      "translate-from": "Fordítás innen",
+      "did-you-mean": "Úgy értetted"
+    }
   },
   "landing": {
     "try": "PRÓBÁLJA KI A FORDÍTÓT",

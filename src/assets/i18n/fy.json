@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Taal werkenne",
-      "more": "Mear talen"
+      "more": "Mear talen",
+      "detected": "{{lang}} - ûntdutsen"
     },
     "input": {
       "text": "Tekst",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Tekst ynfiere"
     },
-    "description": "Moeiteleaze oersetting fan gebeartetaal mei moderne realtime modellen. "
+    "description": "Moeiteleaze oersetting fan gebeartetaal mei moderne realtime modellen. ",
+    "suggestions": {
+      "translate-from": "Oersette fan",
+      "did-you-mean": "Bedoelde jo"
+    }
   },
   "landing": {
     "try": "BESYKJE TRANSLATE",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Terjemahan",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Deteksi basa",
-      "more": "Liyane Basa"
+      "more": "Liyane Basa",
+      "detected": "{{lang}} - Dideteksi"
     },
     "input": {
       "text": "Teks",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Ketik Teks"
     },
-    "description": "Terjemahan Basa Isyarat Tanpa Usaha kanthi Model-Model Wektu Nyata. "
+    "description": "Terjemahan Basa Isyarat Tanpa Usaha kanthi Model-Model Wektu Nyata. ",
+    "suggestions": {
+      "translate-from": "Nerjemahake saka",
+      "did-you-mean": "Opo sing mbok maksud"
+    }
   },
   "landing": {
     "try": "COBA TERJEMAHAN",

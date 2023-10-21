@@ -12,7 +12,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
+      "detected": "{{lang}} - Detected",
       "detect": "Detect language",
       "more": "More Languages"
     },
@@ -42,7 +42,11 @@
       },
       "placeholder": "Enter Text"
     },
-    "description": "Effortless Sign Language Translation with Cutting-Edge Real-Time Models. Translate Sign Language instantly on desktop and mobile."
+    "description": "Effortless Sign Language Translation with Cutting-Edge Real-Time Models. Translate Sign Language instantly on desktop and mobile.",
+    "suggestions": {
+      "translate-from": "Translate from",
+      "did-you-mean": "Did you mean"
+    }
   },
   "landing": {
     "try": "Try Translating!",

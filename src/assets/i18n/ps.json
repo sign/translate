@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ژباړونکی",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "د ژبې موندل",
-      "more": "نورې ژبې"
+      "more": "نورې ژبې",
+      "detected": "{{lang}} - کشف شوی"
     },
     "input": {
       "text": "متن",
@@ -42,7 +42,11 @@
       },
       "placeholder": "متن دننه کړئ"
     },
-    "description": "په ریښتیني وخت کې د کټنګ ایج ماډلونو سره د اشارې ژبې په زړه پورې ژباړه. "
+    "description": "په ریښتیني وخت کې د کټنګ ایج ماډلونو سره د اشارې ژبې په زړه پورې ژباړه. ",
+    "suggestions": {
+      "translate-from": "څخه ژباړه",
+      "did-you-mean": "ستاسو مطلب دی"
+    }
   },
   "landing": {
     "try": "د ژباړې هڅه وکړئ",

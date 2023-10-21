@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Garo luuqada",
-      "more": "Luuqado badan"
+      "more": "Luuqado badan",
+      "detected": "{{lang}} - La ogaaday"
     },
     "input": {
       "text": "Qoraal",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Geli Qoraalka"
     },
-    "description": "Turjumaada Luqadda Calaamadaha oo aan Dedaal lahayn oo leh Qaabab-Waqtiga Dhabta ah ee Goynta "
+    "description": "Turjumaada Luqadda Calaamadaha oo aan Dedaal lahayn oo leh Qaabab-Waqtiga Dhabta ah ee Goynta ",
+    "suggestions": {
+      "translate-from": "Ka soo tarjun",
+      "did-you-mean": "Ma waxaad ka waddaa"
+    }
   },
   "landing": {
     "try": "ISKU DAY TARJUMIN",

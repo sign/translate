@@ -12,9 +12,9 @@
   "translate": {
     "title": "Liphetolelo tsa Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Fumana puo",
-      "more": "Lipuo Tse Eketsehileng"
+      "more": "Lipuo Tse Eketsehileng",
+      "detected": "{{lang}} - E fumanwe"
     },
     "input": {
       "text": "Mongolo",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Kenya Mongolo"
     },
-    "description": "Phetolelo ea Puo ea Matsoho e sa Lekanyetsoang e nang le Meetso ea Nako ea Sebele ea Cutting-Edge. "
+    "description": "Phetolelo ea Puo ea Matsoho e sa Lekanyetsoang e nang le Meetso ea Nako ea Sebele ea Cutting-Edge. ",
+    "suggestions": {
+      "translate-from": "Fetolela ho tsoa ho",
+      "did-you-mean": "Na u ne u bolela"
+    }
   },
   "landing": {
     "try": "lLEKA HO FETOLELA",

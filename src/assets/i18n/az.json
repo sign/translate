@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tərcümə",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Dili seç",
-      "more": "Daha çox dil"
+      "more": "Daha çox dil",
+      "detected": "{{lang}} - Aşkarlandı"
     },
     "input": {
       "text": "Mətn",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Mətni daxil edin"
     },
-    "description": "Ən müasir real vaxt modelləri ilə zəhmətsiz işarə dili tərcüməsi. "
+    "description": "Ən müasir real vaxt modelləri ilə zəhmətsiz işarə dili tərcüməsi. ",
+    "suggestions": {
+      "translate-from": "Tərcümə et",
+      "did-you-mean": "nəzərdə tutdun"
+    }
   },
   "landing": {
     "try": "TƏRCÜMƏNİ SINAYIN",

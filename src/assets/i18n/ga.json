@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Aimsigh teanga",
-      "more": "Tuilleadh Teangacha"
+      "more": "Tuilleadh Teangacha",
+      "detected": "{{lang}} - Braitheadh"
     },
     "input": {
       "text": "Téacs",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Iontráil Téacs"
     },
-    "description": "Aistriúchán Teanga Chomharthaíochta Gan stró le Múnlaí Ceannródaíocha Fíor-Ama. "
+    "description": "Aistriúchán Teanga Chomharthaíochta Gan stró le Múnlaí Ceannródaíocha Fíor-Ama. ",
+    "suggestions": {
+      "translate-from": "Aistrigh ó",
+      "did-you-mean": "Raibh i gceist agat"
+    }
   },
   "landing": {
     "try": "BAIN TRIAIL AS AISTRIÚCHÁN",

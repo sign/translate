@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Übersetzer",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Sprache erkennen",
-      "more": "Mehr Sprachen"
+      "more": "Mehr Sprachen",
+      "detected": "{{lang}} – Erkannt"
     },
     "input": {
       "text": "Text",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Text eingeben"
     },
-    "description": "Mühelose Übersetzung in Gebärdensprache mit modernsten Echtzeitmodellen. "
+    "description": "Mühelose Übersetzung in Gebärdensprache mit modernsten Echtzeitmodellen. ",
+    "suggestions": {
+      "translate-from": "Übersetzen von",
+      "did-you-mean": "Meinten Sie"
+    }
   },
   "landing": {
     "try": "ÜBERSETZER TESTEN",

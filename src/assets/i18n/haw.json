@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Detect language",
-      "more": "ʻŌlelo hou aku"
+      "more": "ʻŌlelo hou aku",
+      "detected": "{{lang}} - ʻIke ʻia"
     },
     "input": {
       "text": "Text",
@@ -42,7 +42,11 @@
       },
       "placeholder": "E komo i ke kikokikona"
     },
-    "description": "ʻO ka unuhi ʻōlelo hōʻailona ʻoluʻolu me nā hiʻohiʻona ʻokiʻoki i ka manawa maoli. "
+    "description": "ʻO ka unuhi ʻōlelo hōʻailona ʻoluʻolu me nā hiʻohiʻona ʻokiʻoki i ka manawa maoli. ",
+    "suggestions": {
+      "translate-from": "Unuhi mai",
+      "did-you-mean": "Ua manao anei oe"
+    }
   },
   "landing": {
     "try": "E HOʻOPĀ",

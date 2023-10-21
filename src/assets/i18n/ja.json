@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 翻訳",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "言語を検出する",
-      "more": "その他の言語"
+      "more": "その他の言語",
+      "detected": "{{lang}} - 検出されました"
     },
     "input": {
       "text": "テキスト",
@@ -42,7 +42,11 @@
       },
       "placeholder": "テキストを入力してください"
     },
-    "description": "最先端のリアルタイム モデルによる簡単な手話翻訳。"
+    "description": "最先端のリアルタイム モデルによる簡単な手話翻訳。",
+    "suggestions": {
+      "translate-from": "から翻訳",
+      "did-you-mean": "ということでしたか"
+    }
   },
   "landing": {
     "try": "翻訳を試してみる",

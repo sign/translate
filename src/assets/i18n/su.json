@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tarjamah",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Détéksi basa",
-      "more": "Langkung Basa"
+      "more": "Langkung Basa",
+      "detected": "{{lang}} - Dideteksi"
     },
     "input": {
       "text": "Téks",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Lebetkeun téks"
     },
-    "description": "Tarjamahan Basa Isyarat Effortless kalawan Modél Real-Time Motong-Tepi. "
+    "description": "Tarjamahan Basa Isyarat Effortless kalawan Modél Real-Time Motong-Tepi. ",
+    "suggestions": {
+      "translate-from": "Tarjamahkeun tina",
+      "did-you-mean": "Maksad anjeun"
+    }
   },
   "landing": {
     "try": "COBA TARJAMAHKEUN",

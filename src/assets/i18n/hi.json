@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "भाषा का पता लगाएं",
-      "more": "अधिक भाषाएँ"
+      "more": "अधिक भाषाएँ",
+      "detected": "{{lang}} - पता चला"
     },
     "input": {
       "text": "लेख",
@@ -42,7 +42,11 @@
       },
       "placeholder": "पाठ दर्ज करें"
     },
-    "description": "अत्याधुनिक रीयल-टाइम मॉडल के साथ सहज सांकेतिक भाषा अनुवाद। "
+    "description": "अत्याधुनिक रीयल-टाइम मॉडल के साथ सहज सांकेतिक भाषा अनुवाद। ",
+    "suggestions": {
+      "translate-from": "से अनुवाद करें",
+      "did-you-mean": "क्या आपका मतलब यह था"
+    }
   },
   "landing": {
     "try": "अनुवाद को आज़माएं",

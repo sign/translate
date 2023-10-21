@@ -17,16 +17,18 @@ import {takeUntil, tap} from 'rxjs/operators';
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;
-  spokenLanguage$: Observable<boolean>;
-  detectedLanguage$: Observable<boolean>;
+  spokenLanguage$: Observable<string>;
+  signedLanguage$: Observable<string>;
+  detectedLanguage$: Observable<string>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
   constructor(private store: Store, public translation: TranslationService) {
     super();
     this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
-    this.spokenLanguage$ = this.store.select<boolean>(state => state.translate.spokenLanguage);
-    this.detectedLanguage$ = this.store.select<boolean>(state => state.translate.detectedLanguage);
+    this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);
+    this.signedLanguage$ = this.store.select<string>(state => state.translate.signedLanguage);
+    this.detectedLanguage$ = this.store.select<string>(state => state.translate.detectedLanguage);
   }
 
   ngOnInit() {

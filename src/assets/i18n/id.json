@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Terjemahan",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Deteksi bahasa",
-      "more": "Lebih Banyak Bahasa"
+      "more": "Lebih Banyak Bahasa",
+      "detected": "{{lang}} - Terdeteksi"
     },
     "input": {
       "text": "Teks",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Masukkan teks"
     },
-    "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Real-Time Mutakhir. "
+    "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Real-Time Mutakhir. ",
+    "suggestions": {
+      "translate-from": "Diterjemahkan dari",
+      "did-you-mean": "Apakah yang kamu maksud"
+    }
   },
   "landing": {
     "try": "COBA TERJEMAHAN",

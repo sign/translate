@@ -12,9 +12,9 @@
   "translate": {
     "title": "IToliki kaSign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Fumana ulwimi",
-      "more": "Iilwimi ezingakumbi"
+      "more": "Iilwimi ezingakumbi",
+      "detected": "{{lang}} - Ichongiwe"
     },
     "input": {
       "text": "Umbhalo",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Ngenisa Okubhaliweyo"
     },
-    "description": "Ukuguqulela ngolwimi lwezandla olungenamgudu oluneMifuziselo yeXesha lokwenyani le-Cutting-Edge. "
+    "description": "Ukuguqulela ngolwimi lwezandla olungenamgudu oluneMifuziselo yeXesha lokwenyani le-Cutting-Edge. ",
+    "suggestions": {
+      "translate-from": "Guqulela ukusuka",
+      "did-you-mean": "Ingaba ubuthetha ukuba"
+    }
   },
   "landing": {
     "try": "ZAMA UKUGUQULELA",

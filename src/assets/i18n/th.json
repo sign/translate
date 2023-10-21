@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign แปลภาษา",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ตรวจหาภาษา",
-      "more": "ภาษาอื่น ๆ"
+      "more": "ภาษาอื่น ๆ",
+      "detected": "{{lang}} - ตรวจพบแล้ว"
     },
     "input": {
       "text": "ข้อความ",
@@ -42,7 +42,11 @@
       },
       "placeholder": "ป้อนข้อความ"
     },
-    "description": "การแปลภาษามือที่ง่ายดายด้วยโมเดลแบบเรียลไทม์ที่ทันสมัย "
+    "description": "การแปลภาษามือที่ง่ายดายด้วยโมเดลแบบเรียลไทม์ที่ทันสมัย ",
+    "suggestions": {
+      "translate-from": "แปลจาก",
+      "did-you-mean": "คุณหมายถึง"
+    }
   },
   "landing": {
     "try": "ลองใช้แปลภาษา",

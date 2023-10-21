@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Dikanteny",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Haminany fiteny",
-      "more": "Fiteny bebe kokoa"
+      "more": "Fiteny bebe kokoa",
+      "detected": "{{lang}} - Hita"
     },
     "input": {
       "text": "Soratra",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Ampidiro Text"
     },
-    "description": "Fandikana amin'ny tenin'ny tanana tsy misy ezaka be miaraka amin'ny maodely tena misy fotoana. "
+    "description": "Fandikana amin'ny tenin'ny tanana tsy misy ezaka be miaraka amin'ny maodely tena misy fotoana. ",
+    "suggestions": {
+      "translate-from": "Adika avy amin'ny",
+      "did-you-mean": "Ny tianao tenenina ve"
+    }
   },
   "landing": {
     "try": "ANDRAMO ADIKA",

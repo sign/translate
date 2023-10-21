@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Greina tungumál",
-      "more": "Fleiri tungumál"
+      "more": "Fleiri tungumál",
+      "detected": "{{lang}} - Greinist"
     },
     "input": {
       "text": "Texti",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Sláðu inn texta"
     },
-    "description": "Áreynslulaus táknmálsþýðing með nýjustu rauntímalíkönum. "
+    "description": "Áreynslulaus táknmálsþýðing með nýjustu rauntímalíkönum. ",
+    "suggestions": {
+      "translate-from": "Þýða úr",
+      "did-you-mean": "Áttirðu við"
+    }
   },
   "landing": {
     "try": "PRÓFAÐU AÐ ÞÝÐA",

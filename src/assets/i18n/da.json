@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Oversæt",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Registrer sprog",
-      "more": "Flere sprog"
+      "more": "Flere sprog",
+      "detected": "{{lang}} - fundet"
     },
     "input": {
       "text": "Tekst",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Indtast tekst"
     },
-    "description": "Ubesværet tegnsprogsoversættelse med banebrydende realtidsmodeller. "
+    "description": "Ubesværet tegnsprogsoversættelse med banebrydende realtidsmodeller. ",
+    "suggestions": {
+      "translate-from": "Oversæt fra",
+      "did-you-mean": "Mente du"
+    }
   },
   "landing": {
     "try": "PRØV OVERSÆT",

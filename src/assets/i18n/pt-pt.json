@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tradutor",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Detetar idioma",
-      "more": "Mais idiomas"
+      "more": "Mais idiomas",
+      "detected": "{{lang}} - Detectado"
     },
     "input": {
       "text": "Texto",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Digite o Texto"
     },
-    "description": "Tradução de linguagem de sinais sem esforço com modelos de ponta em tempo real. "
+    "description": "Tradução de linguagem de sinais sem esforço com modelos de ponta em tempo real. ",
+    "suggestions": {
+      "translate-from": "Traduzir de",
+      "did-you-mean": "Você quis dizer"
+    }
   },
   "landing": {
     "try": "EXPERIMENTAR O TRADUTOR",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ארפינד שפראך",
-      "more": "מער שפּראַכן"
+      "more": "מער שפּראַכן",
+      "detected": "{{לאַנג}} - דיטעקטאַד"
     },
     "input": {
       "text": "טעקסט",
@@ -42,7 +42,11 @@
       },
       "placeholder": "אַרייַן טעקסט"
     },
-    "description": "עפערטלאַס איבערזעצונג פון צייכן שפּראַך מיט פאַקטיש-צייט מאָדעלס. "
+    "description": "עפערטלאַס איבערזעצונג פון צייכן שפּראַך מיט פאַקטיש-צייט מאָדעלס. ",
+    "suggestions": {
+      "translate-from": "איבערזעצן פון",
+      "did-you-mean": "האסטו געמיינט"
+    }
   },
   "landing": {
     "try": "פּרוּבירט איבערזעץ",

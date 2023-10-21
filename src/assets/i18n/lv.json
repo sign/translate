@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign tulkotājs",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Noteikt valodu",
-      "more": "Vairāk valodu"
+      "more": "Vairāk valodu",
+      "detected": "{{lang}} — konstatēts"
     },
     "input": {
       "text": "Teksts",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Ievadiet tekstu"
     },
-    "description": "Vienkārša zīmju valodas tulkošana ar moderniem reāllaika modeļiem. "
+    "description": "Vienkārša zīmju valodas tulkošana ar moderniem reāllaika modeļiem. ",
+    "suggestions": {
+      "translate-from": "Tulkot no",
+      "did-you-mean": "Vai tu domāji"
+    }
   },
   "landing": {
     "try": "IZMĒĢINIET TULKOTĀJU",

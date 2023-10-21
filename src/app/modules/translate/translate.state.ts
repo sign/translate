@@ -69,7 +69,18 @@ export class TranslateState implements NgxsOnInit {
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
   }
 
-  ngxsOnInit({dispatch}: StateContext<TranslateStateModel>): any {
+  ngxsOnInit({dispatch, patchState}: StateContext<TranslateStateModel>): any {
+    const searchParams = 'window' in globalThis ? window.location.search : '';
+    const urlParams = new URLSearchParams(searchParams);
+    const urlSignedLanguage = urlParams.get('sil');
+    if (urlSignedLanguage) {
+      patchState({signedLanguage: urlSignedLanguage});
+    }
+    const urlSpokenLanguage = urlParams.get('spl');
+    if (urlSpokenLanguage) {
+      patchState({spokenLanguage: urlSpokenLanguage});
+    }
+
     dispatch(ChangeTranslation);
 
     // Reset video whenever viewer setting changes
@@ -118,21 +129,28 @@ export class TranslateState implements NgxsOnInit {
     }
   }
 
+  async detectLanguage(spokenLanguageText: string, patchState: StateContext<TranslateStateModel>['patchState']) {
+    if (spokenLanguageText.length === 0) {
+      patchState({detectedLanguage: null});
+      return;
+    }
+
+    await this.service.initCld();
+    const detectedLanguage = await this.service.detectSpokenLanguage(spokenLanguageText);
+    patchState({detectedLanguage});
+  }
+
   @Action(SetSpokenLanguage)
   async setSpokenLanguage(
     {patchState, getState, dispatch}: StateContext<TranslateStateModel>,
     {language}: SetSpokenLanguage
   ): Promise<void> {
-    patchState({spokenLanguage: language, detectedLanguage: null});
+    patchState({spokenLanguage: language});
 
     // Load and apply language detection if selected
     if (!language) {
-      await this.service.initCld();
       const {spokenLanguageText} = getState();
-      if (spokenLanguageText) {
-        const detectedLanguage = await this.service.detectSpokenLanguage(spokenLanguageText);
-        patchState({detectedLanguage});
-      }
+      await this.detectLanguage(spokenLanguageText, patchState);
     }
 
     dispatch(ChangeTranslation);
@@ -154,10 +172,14 @@ export class TranslateState implements NgxsOnInit {
   ): Promise<void> {
     const {spokenLanguage} = getState();
     const trimmedText = text.trim();
-    patchState({
-      spokenLanguageText: text,
-      detectedLanguage: !trimmedText || spokenLanguage ? null : await this.service.detectSpokenLanguage(trimmedText),
-    });
+
+    patchState({spokenLanguageText: text});
+    const detectLanguage = this.detectLanguage(trimmedText, patchState);
+
+    // Wait for language detection if language is not selected
+    if (!spokenLanguage) {
+      await detectLanguage;
+    }
 
     dispatch(ChangeTranslation);
   }

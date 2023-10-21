@@ -12,7 +12,7 @@
   "translate": {
     "title": "תרגום סימנים",
     "language-selector": {
-      "detected": "{lang} - זוהתה",
+      "detected": "{{lang}} - זוהתה",
       "more": "עוד שפות",
       "detect": "זיהוי שפה"
     },
@@ -42,7 +42,11 @@
       "types": "צריך להעלות קובץ MP4,‏ OGV,‏ או WEBM.",
       "browse": "עיון במחשב"
     },
-    "description": "תרגום שפת סימנים ללא מאמץ עם מודלים חדישים בזמן אמת. "
+    "description": "תרגום שפת סימנים ללא מאמץ עם מודלים חדישים בזמן אמת. ",
+    "suggestions": {
+      "translate-from": "תרגם מ",
+      "did-you-mean": "האם התכוונת"
+    }
   },
   "landing": {
     "try": "נסו את Translate‏",

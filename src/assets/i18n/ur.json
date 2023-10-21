@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ترجمہ",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "زبان کی شناخت کریں",
-      "more": "مزید زبانیں"
+      "more": "مزید زبانیں",
+      "detected": "{{lang}} - پتہ چلا"
     },
     "input": {
       "text": "متن",
@@ -42,7 +42,11 @@
       },
       "placeholder": "متن درج کریں۔"
     },
-    "description": "جدید ترین ریئل ٹائم ماڈلز کے ساتھ اشاراتی زبان کا آسان ترجمہ۔ "
+    "description": "جدید ترین ریئل ٹائم ماڈلز کے ساتھ اشاراتی زبان کا آسان ترجمہ۔ ",
+    "suggestions": {
+      "translate-from": "سے ترجمہ کریں۔",
+      "did-you-mean": "کیا آپ کا مطلب تھا؟"
+    }
   },
   "landing": {
     "try": "ترجمہ آزمائیں",

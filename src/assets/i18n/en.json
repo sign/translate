@@ -39,6 +39,10 @@
       "title": "Choose a video",
       "types": "Upload a .mp4, .ogv, or .webm.",
       "browse": "Browse your computer"
+    },
+    "suggestions": {
+      "translate-from": "Translate from",
+      "did-you-mean": "Did you mean"
     }
   },
   "landing": {

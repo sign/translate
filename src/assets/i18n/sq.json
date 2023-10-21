@@ -12,9 +12,9 @@
   "translate": {
     "title": "Përkthe me Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Zbulo gjuhën",
-      "more": "Më shumë gjuhë"
+      "more": "Më shumë gjuhë",
+      "detected": "{{lang}} - U zbulua"
     },
     "input": {
       "text": "Teksti",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Futni Tekstin"
     },
-    "description": "Përkthim i lehtë i gjuhës së shenjave me modele të avancuara në kohë reale. "
+    "description": "Përkthim i lehtë i gjuhës së shenjave me modele të avancuara në kohë reale. ",
+    "suggestions": {
+      "translate-from": "Përkthe nga",
+      "did-you-mean": "A do të thuash"
+    }
   },
   "landing": {
     "try": "PROVO APL. \"PËRKTHE\"",

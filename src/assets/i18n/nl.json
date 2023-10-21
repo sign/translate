@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Taal herkennen",
-      "more": "Meer talen"
+      "more": "Meer talen",
+      "detected": "{{lang}} - Gedetecteerd"
     },
     "input": {
       "text": "Tekst",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Tekst invoeren"
     },
-    "description": "Moeiteloze gebarentaalvertaling met geavanceerde real-time modellen. "
+    "description": "Moeiteloze gebarentaalvertaling met geavanceerde real-time modellen. ",
+    "suggestions": {
+      "translate-from": "Vertalen vanuit",
+      "did-you-mean": "Bedoelde je"
+    }
   },
   "landing": {
     "try": "PROBEER TRANSLATE",

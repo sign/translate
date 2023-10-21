@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tarjimon",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Avtomatik aniqlash",
-      "more": "Ko'proq tillar"
+      "more": "Ko'proq tillar",
+      "detected": "{{lang}} - Aniqlandi"
     },
     "input": {
       "text": "Matn",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Matnni kiriting"
     },
-    "description": "Haqiqiy vaqtda zamonaviy modellar bilan imo-ishora tilini qiyinchiliksiz tarjima qilish. "
+    "description": "Haqiqiy vaqtda zamonaviy modellar bilan imo-ishora tilini qiyinchiliksiz tarjima qilish. ",
+    "suggestions": {
+      "translate-from": "dan tarjima qiling",
+      "did-you-mean": "Nazarda tutdingizmi"
+    }
   },
   "landing": {
     "try": "SINAB KO‘RISH",

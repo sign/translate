@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Ṣawari ede",
-      "more": "Awọn ede diẹ sii"
+      "more": "Awọn ede diẹ sii",
+      "detected": "{{lang}} - Ti ṣe awari"
     },
     "input": {
       "text": "Àyọkà",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Tẹ Ọrọ sii"
     },
-    "description": "Itumọ Èdè Adití Lọ́nà Lailakitiyan pẹlu Awọn awoṣe Ige Gige Gidigidi. "
+    "description": "Itumọ Èdè Adití Lọ́nà Lailakitiyan pẹlu Awọn awoṣe Ige Gige Gidigidi. ",
+    "suggestions": {
+      "translate-from": "Tumọ lati",
+      "did-you-mean": "Se nkan ti o so"
+    }
   },
   "landing": {
     "try": "GBÌYÀNJÚ TRANSLATE",

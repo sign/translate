@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tafsiri",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Tambua lugha",
-      "more": "Lugha Zaidi"
+      "more": "Lugha Zaidi",
+      "detected": "{{lang}} - Imegunduliwa"
     },
     "input": {
       "text": "Matini",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Ingiza Maandishi"
     },
-    "description": "Tafsiri ya Lugha ya Alama isiyo na Jitihada yenye Miundo ya Muda Halisi. "
+    "description": "Tafsiri ya Lugha ya Alama isiyo na Jitihada yenye Miundo ya Muda Halisi. ",
+    "suggestions": {
+      "translate-from": "Tafsiri kutoka",
+      "did-you-mean": "Ulimaanisha"
+    }
   },
   "landing": {
     "try": "IJARIBU TRANSLATE",

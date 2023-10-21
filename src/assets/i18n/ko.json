@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 번역",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "언어 감지",
-      "more": "더 많은 언어"
+      "more": "더 많은 언어",
+      "detected": "{{lang}} - 감지됨"
     },
     "input": {
       "text": "텍스트",
@@ -42,7 +42,11 @@
       },
       "placeholder": "텍스트 입력"
     },
-    "description": "최첨단 실시간 모델을 통한 손쉬운 수화 번역. "
+    "description": "최첨단 실시간 모델을 통한 손쉬운 수화 번역. ",
+    "suggestions": {
+      "translate-from": "번역:",
+      "did-you-mean": "그런 뜻 이었습니까"
+    }
   },
   "landing": {
     "try": "번역 사용해 보기",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Prekladač Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "rozpoznaný jazyk",
-      "more": "Viac jazykov"
+      "more": "Viac jazykov",
+      "detected": "{{lang}} – Zistené"
     },
     "input": {
       "text": "Text",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Zadajte text"
     },
-    "description": "Preklad posunkovej reči bez námahy so špičkovými modelmi v reálnom čase. "
+    "description": "Preklad posunkovej reči bez námahy so špičkovými modelmi v reálnom čase. ",
+    "suggestions": {
+      "translate-from": "Preložiť z",
+      "did-you-mean": "Myslel si"
+    }
   },
   "landing": {
     "try": "VYSKÚŠAŤ PREKLADAČ",

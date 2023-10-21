@@ -12,9 +12,9 @@
   "translate": {
     "title": "Whakamāori Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "tautuhi reo",
-      "more": "Ētahi atu Reo"
+      "more": "Ētahi atu Reo",
+      "detected": "{{lang}} - Kua kitea"
     },
     "input": {
       "text": "Kuputuhi",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Whakauru Kuputuhi"
     },
-    "description": "Te Whakamaoritanga Reo Waitohu Maamaa me nga Tauira Waa Tuturu. "
+    "description": "Te Whakamaoritanga Reo Waitohu Maamaa me nga Tauira Waa Tuturu. ",
+    "suggestions": {
+      "translate-from": "Whakamaori mai",
+      "did-you-mean": "Ko koe te tikanga"
+    }
   },
   "landing": {
     "try": "WHAKAMĀTAURIA A WHAKAMĀORI",

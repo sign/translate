@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Kääntäjä",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Tunnista kieli",
-      "more": "Lisää kieliä"
+      "more": "Lisää kieliä",
+      "detected": "{{lang}} - Havaittu"
     },
     "input": {
       "text": "Teksti",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Kirjoita teksti"
     },
-    "description": "Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. "
+    "description": "Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. ",
+    "suggestions": {
+      "translate-from": "Kääntää",
+      "did-you-mean": "Tarkoititko"
+    }
   },
   "landing": {
     "try": "KOKEILE KÄÄNTÄJÄÄ",

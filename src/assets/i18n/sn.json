@@ -12,9 +12,9 @@
   "translate": {
     "title": "Shandura mutauro uchishandisa Sign",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Ziva zita remutauro",
-      "more": "More Mitauro"
+      "more": "More Mitauro",
+      "detected": "{{lang}} - Zvaonekwa"
     },
     "input": {
       "text": "Mashoko",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Enter Text"
     },
-    "description": "Kusashanda Kushandura Mutauro Wemasaini neCutting-Edge Real-Time Models. "
+    "description": "Kusashanda Kushandura Mutauro Wemasaini neCutting-Edge Real-Time Models. ",
+    "suggestions": {
+      "translate-from": "Shandura kubva",
+      "did-you-mean": "Waireva here"
+    }
   },
   "landing": {
     "try": "Edza Kushandura Nesign",

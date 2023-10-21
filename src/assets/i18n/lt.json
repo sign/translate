@@ -12,9 +12,9 @@
   "translate": {
     "title": "„Sign“ vertėjas",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Nustatyti kalbą",
-      "more": "Daugiau kalbų"
+      "more": "Daugiau kalbų",
+      "detected": "{{lang}} – aptikta"
     },
     "input": {
       "text": "Tekstas",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Įveskite tekstą"
     },
-    "description": "Nesudėtingas vertimas į gestų kalbą naudojant pažangiausius realiojo laiko modelius. "
+    "description": "Nesudėtingas vertimas į gestų kalbą naudojant pažangiausius realiojo laiko modelius. ",
+    "suggestions": {
+      "translate-from": "Išversti iš",
+      "did-you-mean": "Ar turėjote omenyje"
+    }
   },
   "landing": {
     "try": "IŠBANDYKITE VERTĖJĄ",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "የSign ተርጓሚ",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ቋንቋ  አግኝ",
-      "more": "ተጨማሪ ቋንቋዎች"
+      "more": "ተጨማሪ ቋንቋዎች",
+      "detected": "{{lang}} - ተገኝቷል"
     },
     "input": {
       "text": "ጽሑፍ",
@@ -42,7 +42,11 @@
       },
       "placeholder": "ጽሑፍ ያስገቡ"
     },
-    "description": "ልፋት የሌለበት የምልክት ቋንቋ ትርጉም በእውነተኛ ጊዜ ሞዴሎች። "
+    "description": "ልፋት የሌለበት የምልክት ቋንቋ ትርጉም በእውነተኛ ጊዜ ሞዴሎች። ",
+    "suggestions": {
+      "translate-from": "ከ ተርጉም።",
+      "did-you-mean": "ማለትሽ ነው"
+    }
   },
   "landing": {
     "try": "ለመተርጎም ይሞክሩ",

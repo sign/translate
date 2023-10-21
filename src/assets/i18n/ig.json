@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Chọpụta asụsụ",
-      "more": "Asụsụ ndị ọzọ"
+      "more": "Asụsụ ndị ọzọ",
+      "detected": "{{lang}} - Achọpụtara"
     },
     "input": {
       "text": "Ederede",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Tinye ederede"
     },
-    "description": "Ntụgharị asụsụ ogbi na-enweghị mgbakasị ike na ụdị igbu oge. "
+    "description": "Ntụgharị asụsụ ogbi na-enweghị mgbakasị ike na ụdị igbu oge. ",
+    "suggestions": {
+      "translate-from": "Tụgharịa asụsụ site na",
+      "did-you-mean": "Ị na-eche"
+    }
   },
   "landing": {
     "try": "NWAA TỤGHARỊA ASỤSỤ",

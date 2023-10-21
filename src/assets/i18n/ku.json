@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "Dili algıla",
-      "more": "Zêdetir Ziman"
+      "more": "Zêdetir Ziman",
+      "detected": "{{lang}} - Hat dîtin"
     },
     "input": {
       "text": "Metin",
@@ -42,7 +42,11 @@
       },
       "placeholder": "Nivîsar binivîse"
     },
-    "description": "Wergera Zimanê Îşaretê ya Bêhêz bi Modelên Dem-Rast ên Berbiçav. "
+    "description": "Wergera Zimanê Îşaretê ya Bêhêz bi Modelên Dem-Rast ên Berbiçav. ",
+    "suggestions": {
+      "translate-from": "Wergerandin ji",
+      "did-you-mean": "Mebesta te bû"
+    }
   },
   "landing": {
     "try": "WERGERÊ BICERIBÎNE",

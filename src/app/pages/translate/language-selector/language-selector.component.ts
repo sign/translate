@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {Store} from '@ngxs/store';
-import {Observable, switchMap} from 'rxjs';
+import {switchMap} from 'rxjs';
 import {TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
@@ -13,16 +13,15 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
 })
-export class LanguageSelectorComponent extends BaseComponent implements OnInit {
-  detectedLanguage$: Observable<string>;
+export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
+  detectedLanguage: string;
 
   @Input() flags = false;
   @Input() hasLanguageDetection = false;
   @Input() languages: string[];
   @Input() translationKey: string;
-  @Input() urlParameter: string;
 
-  @Input() language: string;
+  @Input() language: string | null;
 
   @Output() languageChange = new EventEmitter<string>();
 
@@ -35,17 +34,12 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
 
   constructor(private store: Store, private transloco: TranslocoService) {
     super();
-
-    this.detectedLanguage$ = this.store.select<string>(state => state.translate.detectedLanguage);
   }
 
   ngOnInit(): void {
-    this.topLanguages = this.languages.slice(0, 3);
-
-    const searchParams = 'window' in globalThis ? window.location.search : '';
-    const urlParams = new URLSearchParams(searchParams);
-    const initial = urlParams.get(this.urlParameter) || this.languages[0];
-    this.selectLanguage(initial);
+    if (!this.language) {
+      this.selectLanguage(this.languages[0]);
+    }
 
     // Initialize langNames, relevant for SSR
     this.setLangNames(this.transloco.getActiveLang());
@@ -60,6 +54,21 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
       .subscribe();
 
     this.setLangCountries();
+
+    // Get detected language
+    this.store
+      .select<string>(state => state.translate.detectedLanguage)
+      .pipe(
+        tap(detectedLanguage => (this.detectedLanguage = detectedLanguage)),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.language) {
+      this.selectLanguage(changes.language.currentValue);
+    }
   }
 
   langName(lang: string): string {
@@ -100,18 +109,20 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit {
   }
 
   selectLanguage(lang: string): void {
-    if (lang === this.language) {
-      return;
+    if (!this.topLanguages) {
+      this.topLanguages = this.languages.slice(0, 3);
+    }
+
+    if (lang !== this.language) {
+      // Update selected language
+      this.language = lang;
+      this.languageChange.emit(this.language);
     }
 
     if (lang && !this.topLanguages.includes(lang)) {
       this.topLanguages.unshift(lang);
       this.topLanguages.pop();
     }
-
-    // Update selected language
-    this.language = lang;
-    this.languageChange.emit(this.language);
 
     const index = this.topLanguages.indexOf(this.language);
     this.selectedIndex = index + Number(this.hasLanguageDetection);

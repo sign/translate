@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
-import {SetSpokenLanguageText} from '../../../../modules/translate/translate.actions';
+import {SetSpokenLanguage, SetSpokenLanguageText} from '../../../../modules/translate/translate.actions';
 import {Store} from '@ngxs/store';
 import {TranslateStateModel} from '../../../../modules/translate/translate.state';
 import {BaseComponent} from '../../../../components/base/base.component';
@@ -18,6 +18,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
 
   text = new FormControl();
   maxTextLength = 500;
+  detectedLanguage: string;
   spokenLanguage: string;
 
   @Input() isMobile = false;
@@ -31,7 +32,10 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
   ngOnInit() {
     this.translate$
       .pipe(
-        tap(({spokenLanguage, detectedLanguage}) => (this.spokenLanguage = spokenLanguage || detectedLanguage)),
+        tap(({spokenLanguage, detectedLanguage}) => {
+          this.detectedLanguage = detectedLanguage;
+          this.spokenLanguage = spokenLanguage ?? detectedLanguage;
+        }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
@@ -54,5 +58,9 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+  }
+
+  setDetectedLanguage() {
+    this.store.dispatch(new SetSpokenLanguage(this.detectedLanguage));
   }
 }

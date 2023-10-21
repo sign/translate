@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{lang}}",
       "detect": "ਭਾਸ਼ਾ ਖੋਜੋ",
-      "more": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ"
+      "more": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ",
+      "detected": "{{lang}} - ਖੋਜਿਆ ਗਿਆ"
     },
     "input": {
       "text": "ਲਿਖਤ",
@@ -42,7 +42,11 @@
       },
       "placeholder": "ਟੈਕਸਟ ਦਰਜ ਕਰੋ"
     },
-    "description": "ਕਟਿੰਗ-ਐਜ ਰੀਅਲ-ਟਾਈਮ ਮਾਡਲਾਂ ਦੇ ਨਾਲ ਅਣਥੱਕ ਸੈਨਤ ਭਾਸ਼ਾ ਅਨੁਵਾਦ। "
+    "description": "ਕਟਿੰਗ-ਐਜ ਰੀਅਲ-ਟਾਈਮ ਮਾਡਲਾਂ ਦੇ ਨਾਲ ਅਣਥੱਕ ਸੈਨਤ ਭਾਸ਼ਾ ਅਨੁਵਾਦ। ",
+    "suggestions": {
+      "translate-from": "ਤੋਂ ਅਨੁਵਾਦ ਕਰੋ",
+      "did-you-mean": "ਕੀ ਤੁਹਾਡਾ ਮਤਲਬ"
+    }
   },
   "landing": {
     "try": "ਅਨੁਵਾਦ ਅਜ਼ਮਾਓ",

@@ -9,12 +9,19 @@
       enterkeyhint="enter"
       dir="auto"
       aria-labelledby="spoken-language-label"
-      aria-autocomplete="list"
-      autocapitalize="off"
-      autocomplete="off"
-      autocorrect="off"
       autofocus
       data-gramm_editor="false"></textarea>
+    <div id="suggestions" *transloco="let t; read: 'translate.suggestions'">
+      <ng-container *ngIf="detectedLanguage && detectedLanguage !== spokenLanguage">
+        <ion-icon name="sparkles" color="primary"></ion-icon>
+        {{ t('translate-from') }}:
+        <a (click)="setDetectedLanguage()">{{ 'languages.' + detectedLanguage | transloco }}</a>
+      </ng-container>
+      <ng-container *ngIf="false">
+        <ion-icon name="sparkles"></ion-icon>
+        {{ t('did-you-mean') }}: <a>todo add text suggestion</a>
+      </ng-container>
+    </div>
     <div class="actions-row">
       <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
       <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
@@ -43,10 +50,6 @@
       enterkeyhint="enter"
       dir="auto"
       aria-labelledby="spoken-language-label"
-      aria-autocomplete="list"
-      autocapitalize="off"
-      autocomplete="off"
-      autocorrect="off"
       autofocus
       [attr.data-gramm_editor]="false"></ion-textarea>
 
