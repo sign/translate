@@ -12,6 +12,7 @@ import {
   SetSpokenLanguage,
   SetSpokenLanguageText,
   ShareSignedLanguageVideo,
+  SuggestAlternativeText,
   UploadPoseFile,
 } from './translate.actions';
 import {TranslationService} from './translate.service';
@@ -34,6 +35,7 @@ export interface TranslateStateModel {
   detectedLanguage: string;
 
   spokenLanguageText: string;
+  normalizedSpokenLanguageText?: string;
   signWriting: string[];
   signedLanguagePose: string;
   signedLanguageVideo: string;
@@ -48,6 +50,7 @@ const initialState: TranslateStateModel = {
   detectedLanguage: null,
 
   spokenLanguageText: '',
+  normalizedSpokenLanguageText: null,
   signWriting: [],
   signedLanguagePose: null,
   signedLanguageVideo: null,
@@ -173,7 +176,7 @@ export class TranslateState implements NgxsOnInit {
     const {spokenLanguage} = getState();
     const trimmedText = text.trim();
 
-    patchState({spokenLanguageText: text});
+    patchState({spokenLanguageText: text, normalizedSpokenLanguageText: null});
     const detectLanguage = this.detectLanguage(trimmedText, patchState);
 
     // Wait for language detection if language is not selected
@@ -182,6 +185,24 @@ export class TranslateState implements NgxsOnInit {
     }
 
     dispatch(ChangeTranslation);
+  }
+
+  @Action(SuggestAlternativeText)
+  async suggestAlternativeText({patchState, getState}: StateContext<TranslateStateModel>): Promise<void> {
+    const {spokenLanguageText, spokenLanguage, detectedLanguage} = getState();
+    const trimmedText = spokenLanguageText.trim();
+    if (!trimmedText || spokenLanguage !== detectedLanguage) {
+      return;
+    }
+
+    if ('navigator' in globalThis && !navigator.onLine) {
+      return;
+    }
+
+    const alternativeText = await this.service.normalizeSpokenLanguageText(spokenLanguage, trimmedText);
+    if (alternativeText !== trimmedText) {
+      patchState({normalizedSpokenLanguageText: alternativeText});
+    }
   }
 
   @Action(SetSignedLanguageVideo)

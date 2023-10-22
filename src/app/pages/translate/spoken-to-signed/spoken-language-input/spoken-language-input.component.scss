@@ -4,8 +4,26 @@
   padding: 20px 24px;
   flex: 1;
 
-  > div {
+  > .actions-row {
     display: flex;
+  }
+
+  > #suggestions {
+    position: absolute;
+    bottom: 60px;
+
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 24px;
+
+    ion-icon {
+      padding: 0 4px;
+    }
+
+    a {
+      cursor: pointer;
+    }
   }
 }
 
@@ -25,18 +43,6 @@ textarea#desktop {
   outline: none;
   width: 100%;
   height: calc(100% - 40px);
-}
-
-#suggestions {
-  position: absolute;
-  bottom: 60px;
-  white-space: break-spaces;
-  ion-icon {
-    padding: 0 4px;
-  }
-  a {
-    cursor: pointer;
-  }
 }
 
 #char-count {

@@ -8,6 +8,10 @@
 		"classpath": "io.capawesome.capacitorjs.plugins.firebase.app.FirebaseAppPlugin"
 	},
 	{
+		"pkg": "@capacitor-firebase/app-check",
+		"classpath": "io.capawesome.capacitorjs.plugins.firebase.appcheck.FirebaseAppCheckPlugin"
+	},
+	{
 		"pkg": "@capacitor-firebase/crashlytics",
 		"classpath": "io.capawesome.capacitorjs.plugins.firebase.crashlytics.FirebaseCrashlyticsPlugin"
 	},

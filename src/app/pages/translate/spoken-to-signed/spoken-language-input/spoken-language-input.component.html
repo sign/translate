@@ -17,9 +17,10 @@
         {{ t('translate-from') }}:
         <a (click)="setDetectedLanguage()">{{ 'languages.' + detectedLanguage | transloco }}</a>
       </ng-container>
-      <ng-container *ngIf="false">
-        <ion-icon name="sparkles"></ion-icon>
-        {{ t('did-you-mean') }}: <a>todo add text suggestion</a>
+      <ng-container *ngIf="normalizedText$ | async as normalizedText">
+        <ion-icon name="sparkles" color="primary"></ion-icon>
+        {{ t('did-you-mean') }}:
+        <a (click)="setText(normalizedText)">{{ normalizedText }}</a>
       </ng-container>
     </div>
     <div class="actions-row">

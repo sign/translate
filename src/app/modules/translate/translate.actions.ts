@@ -62,3 +62,7 @@ export class UploadPoseFile {
 
   constructor(public url: string) {}
 }
+
+export class SuggestAlternativeText {
+  static readonly type = '[Translate] Suggest Alternative Text';
+}

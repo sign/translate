@@ -1,6 +1,6 @@
 # Changelog
 
-This file is used to list changes made over time to `sign/translate`.
+This file is used to list important changes made over time to `sign/translate`.
 
 ## Unreleased
 
@@ -8,7 +8,9 @@ This file is used to list changes made over time to `sign/translate`.
 
 #### Features
 
-- **spoken-to-signed**: add language detection suggestion "Translate from Hebrew" instead
+- **api**: add text-normalization API with appCheck support
+- **spoken-to-signed**: add language detection suggestion "Translate from: \_\_\_"
+- **spoken-to-signed**: add text edit suggestions "Did you mean: \_\_\_"
 
 ## Released
 
@@ -32,11 +34,11 @@ This file is used to list changes made over time to `sign/translate`.
 - **core**: migrated app from `angular/material` to `ionic`
 - **ios/safari**: add iOS style for iOS devices / Safari
 - **translation**: integrate a new interface for mobile devices
+- **human**: position human in center of screen
 
 #### Fixes
 
 - **avatar**: fix avatar rotation names
-- **human**: position human in center of screen
 - **tests**: fix flaky tests, caused by race conditions
 - **sharing**: removed sharing from the desktop web when unsupported
 - **settings**: navigation back button text matches the main page title

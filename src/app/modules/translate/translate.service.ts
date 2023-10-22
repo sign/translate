@@ -1,6 +1,11 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
+import {firstValueFrom, Observable} from 'rxjs';
+import {TranslationResponse} from '@sign-mt/browsermt';
+import {map} from 'rxjs/operators';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {AppCheck} from '../../core/helpers/app-check/app-check';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he',
@@ -170,7 +175,7 @@ export class TranslationService {
     'zu',
   ];
 
-  constructor(private ga: GoogleAnalyticsService) {}
+  constructor(private ga: GoogleAnalyticsService, private http: HttpClient) {}
 
   async initCld(): Promise<void> {
     if (this.cld) {
@@ -190,6 +195,20 @@ export class TranslationService {
     const languageCode = language.is_reliable ? language.language : DEFAULT_SPOKEN_LANGUAGE;
     const correctedCode = OBSOLETE_LANGUAGE_CODES[languageCode] ?? languageCode;
     return this.spokenLanguages.includes(correctedCode) ? correctedCode : DEFAULT_SPOKEN_LANGUAGE;
+  }
+
+  async normalizeSpokenLanguageText(language: string, text: string): Promise<string> {
+    const params = new URLSearchParams();
+    params.set('lang', language);
+    params.set('text', text);
+    // TODO change URL to https://sign.mt/api/text-normalization/ when deployed
+    const url = 'https://translate-textnormalization-sxie2r74ua-uc.a.run.app/?' + params.toString();
+
+    const appCheckToken = await AppCheck.getToken();
+    const headers = {'X-AppCheck-Token': appCheckToken};
+
+    const response = await firstValueFrom(this.http.get<{text: string}>(url, {headers}));
+    return response.text;
   }
 
   translateSpokenToSigned(text: string, spokenLanguage: string, signedLanguage: string): string {

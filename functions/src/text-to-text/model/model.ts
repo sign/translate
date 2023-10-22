@@ -46,7 +46,7 @@ export class TextToTextTranslationModel {
   }
 
   async translate(text: string, from?: string, to?: string, format?: string) {
-    const tags = [];
+    const tags: string[] = [];
     // Format is: $FORMAT$ $COUNTRY$ $ISO$? $LANGUAGE$ | text
     if (format) {
       tags.push(`$${format}$`);

@@ -4,16 +4,6 @@
       "predeploy": ["cd functions && npm run build"],
       "source": "functions",
       "codebase": "default"
-    },
-    {
-      "source": "functions-py",
-      "codebase": "functions-py",
-      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log"]
-    },
-    {
-      "source": "test",
-      "codebase": "test",
-      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log"]
     }
   ],
   "emulators": {
@@ -85,12 +75,16 @@
         "function": "translate-prerender"
       },
       {
-        "source": "/api/**",
-        "function": "translate-textToText"
-      },
-      {
         "source": "/robots.txt",
         "destination": "/assets/robots.txt"
+      },
+      {
+        "source": "/api/text-normalization",
+        "function": "translate-textNormalization"
+      },
+      {
+        "source": "/api/**",
+        "function": "translate-textToText"
       },
       {
         "source": "about",

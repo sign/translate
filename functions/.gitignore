@@ -15,4 +15,5 @@ database-debug.log
 firestore-debug.log
 
 coverage/
-!.env
+.env
+.runtimeconfig.json

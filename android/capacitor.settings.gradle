@@ -8,6 +8,9 @@ project(':capacitor-firebase-analytics').projectDir = new File('../node_modules/
 include ':capacitor-firebase-app'
 project(':capacitor-firebase-app').projectDir = new File('../node_modules/@capacitor-firebase/app/android')
 
+include ':capacitor-firebase-app-check'
+project(':capacitor-firebase-app-check').projectDir = new File('../node_modules/@capacitor-firebase/app-check/android')
+
 include ':capacitor-firebase-crashlytics'
 project(':capacitor-firebase-crashlytics').projectDir = new File('../node_modules/@capacitor-firebase/crashlytics/android')
 

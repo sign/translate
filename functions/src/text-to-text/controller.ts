@@ -86,7 +86,6 @@ export class TextToTextTranslationEndpoint {
   }
 
   async request(req: express.Request, res: express.Response) {
-    // Only in-browser cache, not CDN cache, to have a more accurate cache hits counter
     res.set('Cache-Control', 'public, max-age=86400, s-maxage=0');
 
     const {direction, from, to, text} = this.parseParameters(req);

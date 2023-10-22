@@ -9,6 +9,7 @@ import {prerenderFunctions} from './prerender/controller';
 import {textToTextFunctions} from './text-to-text/controller';
 import {logConsoleMemory} from './utils/memory';
 import {FirebaseDatabase} from '@firebase/database-types';
+import {textNormalizationFunctions} from './text-normalization/controller';
 
 logConsoleMemory(process.env.NODE_ENV === 'production' ? functions.logger : console);
 
@@ -19,5 +20,6 @@ module.exports = {
   translate: {
     prerender: prerenderFunctions(),
     textToText: textToTextFunctions(database, storage),
+    textNormalization: textNormalizationFunctions(database),
   },
 };

@@ -2,7 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
-import {SetSpokenLanguage, SetSpokenLanguageText} from '../../../../modules/translate/translate.actions';
+import {
+  SetSpokenLanguage,
+  SetSpokenLanguageText,
+  SuggestAlternativeText,
+} from '../../../../modules/translate/translate.actions';
 import {Store} from '@ngxs/store';
 import {TranslateStateModel} from '../../../../modules/translate/translate.state';
 import {BaseComponent} from '../../../../components/base/base.component';
@@ -15,6 +19,7 @@ import {BaseComponent} from '../../../../components/base/base.component';
 export class SpokenLanguageInputComponent extends BaseComponent implements OnInit {
   translate$!: Observable<TranslateStateModel>;
   text$!: Observable<string>;
+  normalizedText$!: Observable<string>;
 
   text = new FormControl();
   maxTextLength = 500;
@@ -27,6 +32,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
     super();
     this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
     this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
+    this.normalizedText$ = this.store.select<string>(state => state.translate.normalizedSpokenLanguageText);
   }
 
   ngOnInit() {
@@ -51,6 +57,15 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
       )
       .subscribe();
 
+    this.text.valueChanges
+      .pipe(
+        debounce(() => interval(1000)),
+        distinctUntilChanged((a, b) => a.trim() === b.trim()),
+        tap(text => this.store.dispatch(new SuggestAlternativeText())),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+
     // Changes from the store
     this.text$
       .pipe(
@@ -58,6 +73,10 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+  }
+
+  setText(text: string) {
+    this.store.dispatch(new SetSpokenLanguageText(text));
   }
 
   setDetectedLanguage() {
