@@ -1,7 +1,7 @@
 import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 
 import {SpokenLanguageInputComponent} from './spoken-language-input.component';
-import {SetSpokenLanguageText} from '../../../../modules/translate/translate.actions';
+import {SetSpokenLanguageText, SuggestAlternativeText} from '../../../../modules/translate/translate.actions';
 import {NgxsModule, Store} from '@ngxs/store';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {SettingsState} from '../../../../modules/settings/settings.state';
@@ -47,12 +47,15 @@ describe('SpokenLanguageInputComponent', () => {
     expect(a11y).toHaveNoViolations();
   });
 
-  it('text change should dispatch action', fakeAsync(() => {
+  it('text change should dispatch actions', fakeAsync(() => {
     const spy = spyOn(store, 'dispatch');
     component.text.patchValue('test');
     tick(300);
 
     expect(spy).toHaveBeenCalledWith(new SetSpokenLanguageText('test'));
     expect(spy).toHaveBeenCalledTimes(1);
+    tick(700);
+    expect(spy).toHaveBeenCalledWith(new SuggestAlternativeText());
+    expect(spy).toHaveBeenCalledTimes(2);
   }));
 });

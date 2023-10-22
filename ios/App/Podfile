@@ -11,6 +11,7 @@ def capacitor_pods
   pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
   pod 'CapacitorFirebaseAnalytics', :path => '../../node_modules/@capacitor-firebase/analytics'
   pod 'CapacitorFirebaseApp', :path => '../../node_modules/@capacitor-firebase/app'
+  pod 'CapacitorFirebaseAppCheck', :path => '../../node_modules/@capacitor-firebase/app-check'
   pod 'CapacitorFirebaseCrashlytics', :path => '../../node_modules/@capacitor-firebase/crashlytics'
   pod 'CapacitorFirebasePerformance', :path => '../../node_modules/@capacitor-firebase/performance'
   pod 'CapacitorFilesystem', :path => '../../node_modules/@capacitor/filesystem'

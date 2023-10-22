@@ -156,7 +156,7 @@ export class TranslateState implements NgxsOnInit {
       await this.detectLanguage(spokenLanguageText, patchState);
     }
 
-    dispatch(ChangeTranslation);
+    dispatch([ChangeTranslation, SuggestAlternativeText]);
   }
 
   @Action(SetSignedLanguage)
@@ -189,9 +189,9 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(SuggestAlternativeText)
   async suggestAlternativeText({patchState, getState}: StateContext<TranslateStateModel>): Promise<void> {
-    const {spokenLanguageText, spokenLanguage, detectedLanguage} = getState();
+    const {spokenToSigned, spokenLanguageText, spokenLanguage, detectedLanguage} = getState();
     const trimmedText = spokenLanguageText.trim();
-    if (!trimmedText || spokenLanguage !== detectedLanguage) {
+    if (!spokenToSigned || !trimmedText || spokenLanguage !== detectedLanguage) {
       return;
     }
 

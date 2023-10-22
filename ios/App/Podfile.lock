@@ -18,6 +18,9 @@ PODS:
   - CapacitorFirebaseApp (5.2.0):
     - Capacitor
     - FirebaseCore (= 10.8.0)
+  - CapacitorFirebaseAppCheck (5.2.0):
+    - Capacitor
+    - FirebaseAppCheck (= 10.8.0)
   - CapacitorFirebaseCrashlytics (5.2.0):
     - Capacitor
     - FirebaseCrashlytics (= 10.8.0)
@@ -50,6 +53,10 @@ PODS:
     - GoogleUtilities/Network (~> 7.8)
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAppCheck (10.8.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - PromisesObjC (~> 2.1)
   - FirebaseCore (10.8.0):
     - FirebaseCoreInternal (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
@@ -159,6 +166,7 @@ DEPENDENCIES:
   - "CapacitorFirebaseAnalytics (from `../../node_modules/@capacitor-firebase/analytics`)"
   - "CapacitorFirebaseAnalytics/Analytics (from `../../node_modules/@capacitor-firebase/analytics`)"
   - "CapacitorFirebaseApp (from `../../node_modules/@capacitor-firebase/app`)"
+  - "CapacitorFirebaseAppCheck (from `../../node_modules/@capacitor-firebase/app-check`)"
   - "CapacitorFirebaseCrashlytics (from `../../node_modules/@capacitor-firebase/crashlytics`)"
   - "CapacitorFirebasePerformance (from `../../node_modules/@capacitor-firebase/performance`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
@@ -169,6 +177,7 @@ SPEC REPOS:
   trunk:
     - FirebaseABTesting
     - FirebaseAnalytics
+    - FirebaseAppCheck
     - FirebaseCore
     - FirebaseCoreExtension
     - FirebaseCoreInternal
@@ -198,6 +207,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor-firebase/analytics"
   CapacitorFirebaseApp:
     :path: "../../node_modules/@capacitor-firebase/app"
+  CapacitorFirebaseAppCheck:
+    :path: "../../node_modules/@capacitor-firebase/app-check"
   CapacitorFirebaseCrashlytics:
     :path: "../../node_modules/@capacitor-firebase/crashlytics"
   CapacitorFirebasePerformance:
@@ -216,6 +227,7 @@ SPEC CHECKSUMS:
   CapacitorFilesystem: af704badfbc69f6f8623d9ed313e5490e3723dcb
   CapacitorFirebaseAnalytics: 3755413bdeea4cf9169c4063ff621a1ab22ee9ce
   CapacitorFirebaseApp: fbdd325f8d67b7be7950b9b76d2aa3d0e1aede9d
+  CapacitorFirebaseAppCheck: eba071266612be9f851d6caffed4aaa24ada4134
   CapacitorFirebaseCrashlytics: 9cdcc0bc73167468586794acc5f1c7ace34ef81a
   CapacitorFirebasePerformance: d8f715abf7317b8798a6280990d2cb0fcc431d9c
   CapacitorKeyboard: b978154b024a5f65e044908e37d15b7de58b9d12
@@ -223,6 +235,7 @@ SPEC CHECKSUMS:
   CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd
   FirebaseABTesting: 005b70969e2817e2a1e631e8dba29134a04c0622
   FirebaseAnalytics: e1fc758bd5d71823bba970c076abee4b2450a5f4
+  FirebaseAppCheck: 8bde2c5f393518ab98290151188bf196b4bab91e
   FirebaseCore: e78636a990b54be427ce300aa09a0e359f4e0e87
   FirebaseCoreExtension: d3e9bba2930a8033042112397cd9f006a1bb203d
   FirebaseCoreInternal: d2b4acb827908e72eca47a9fd896767c3053921e
@@ -239,6 +252,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   PromisesSwift: cf9eb58666a43bbe007302226e510b16c1e10959
 
-PODFILE CHECKSUM: d5797d5ec75023063cb4c657a32466e329f8bec8
+PODFILE CHECKSUM: d76aee4438d97af52b49960cf18e0f19851aa1ab
 
 COCOAPODS: 1.13.0
