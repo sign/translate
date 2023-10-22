@@ -1,6 +1,6 @@
 {
   "name": "@sign/translate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "lint": "NODE_OPTIONS=--max_old_space_size=16384 ng lint",
@@ -48,6 +48,7 @@
     "@asymmetrik/ngx-leaflet": "16.0.1",
     "@capacitor-firebase/analytics": "5.2.0",
     "@capacitor-firebase/app": "5.2.0",
+    "@capacitor-firebase/app-check": "5.2.0",
     "@capacitor-firebase/crashlytics": "5.2.0",
     "@capacitor-firebase/performance": "5.2.0",
     "@capacitor/android": "5.5.0",
@@ -67,7 +68,7 @@
     "@ngxs/store": "3.8.1",
     "@sign-mt/browsermt": "0.2.1",
     "@sign-mt/i18n": "git://github.com/sign/i18n.git",
-    "@sutton-signwriting/font-ttf": "1.5.1",
+    "@sutton-signwriting/font-ttf": "1.5.2",
     "@sutton-signwriting/sgnw-components": "1.1.0",
     "@tensorflow/tfjs": "4.10.0",
     "@tensorflow/tfjs-backend-wasm": "4.10.0",

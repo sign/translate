@@ -4,7 +4,15 @@ This file is used to list changes made over time to `sign/translate`.
 
 ## Unreleased
 
-### 0.0.2
+### 0.0.3
+
+#### Features
+
+- **spoken-to-signed**: add language detection suggestion "Translate from Hebrew" instead
+
+## Released
+
+### 0.0.2 (2023/10/20)
 
 #### Documentation
 
@@ -15,6 +23,9 @@ This file is used to list changes made over time to `sign/translate`.
 - **core**: split app into modules to decrease chunk sizes
 - **github**: add github star button
 - **settings**: moved settings to a tabs page instead of a dialog
+- **human**: mux human videos instead of screen recording
+- **build**: move CI to using bun, and speed up builds
+- **translation**: change signed languages from countries to language codes
 
 #### Style
 
@@ -25,12 +36,12 @@ This file is used to list changes made over time to `sign/translate`.
 #### Fixes
 
 - **avatar**: fix avatar rotation names
+- **human**: position human in center of screen
 - **tests**: fix flaky tests, caused by race conditions
 - **sharing**: removed sharing from the desktop web when unsupported
 - **settings**: navigation back button text matches the main page title
 - **signed-to-spoken**: fix upload videos component
-
-## Released
+- **avatars**: add missing tooltips
 
 ### 0.0.1 (2023/03/13)
 
