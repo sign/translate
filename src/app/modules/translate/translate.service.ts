@@ -201,8 +201,7 @@ export class TranslationService {
     const params = new URLSearchParams();
     params.set('lang', language);
     params.set('text', text);
-    // TODO change URL to https://sign.mt/api/text-normalization/ when deployed
-    const url = 'https://translate-textnormalization-sxie2r74ua-uc.a.run.app/?' + params.toString();
+    const url = 'https://sign.mt/api/text-normalization?' + params.toString();
 
     const appCheckToken = await AppCheck.getToken();
     const headers = {'X-AppCheck-Token': appCheckToken};

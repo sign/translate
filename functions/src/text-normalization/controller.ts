@@ -100,11 +100,13 @@ export class TextNormalizationEndpoint {
 export const textNormalizationFunctions = (database: FirebaseDatabase) => {
   const openAIKey = defineString('OPENAI_API_KEY');
   const endpoint = new TextNormalizationEndpoint(database, openAIKey);
+  const request = endpoint.request.bind(endpoint);
 
   const app = express();
   app.use(cors());
   app.options('*', (req, res) => res.status(200).end());
-  app.get('/', endpoint.request.bind(endpoint));
+  app.get('/', request);
+  app.get('/api/text-normalization', request); // Hosting redirect
   app.use(errorMiddleware);
   return onRequest({enforceAppCheck: true}, app);
 };
