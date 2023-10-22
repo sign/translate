@@ -11,6 +11,6 @@ export const environment = {
     appId: '1:665830225099:web:18e0669d5847a4b047974e',
     measurementId: 'G-1LXY5W5Z9H',
   },
-  reCAPTCHAKey: '6Le6rbwoAAAAABOHJ80tHDRyHEZCo9Hmi-MC-P1Z',
+  reCAPTCHAKey: '6Ldsxb8oAAAAAGyUZbyd0QruivPSudqAWFygR-4t',
   initialNavigation: 'enabledBlocking' as InitialNavigation,
 };
