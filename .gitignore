@@ -67,4 +67,5 @@ database-debug.log
 src/assets/promotional/about/iphone/*.png
 src/assets/promotional/about/android/*.png
 
+package-lock.json
 bun.lockb

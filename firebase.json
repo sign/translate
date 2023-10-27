@@ -56,6 +56,15 @@
         ]
       },
       {
+        "source": "/api/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400, s-maxage=0"
+          }
+        ]
+      },
+      {
         "source": "**",
         "headers": [
           {
