@@ -4,7 +4,7 @@ import {getAppCheck} from 'firebase-admin/app-check';
 import * as httpErrors from 'http-errors';
 
 export const appCheckVerification: RequestHandler = async (req, res, next) => {
-  const appCheckToken = req.header('X-Firebase-AppCheck');
+  const appCheckToken = req.header('X-Appcheck-Token');
 
   if (!appCheckToken) {
     throw new httpErrors.Unauthorized('Missing App Check token');
