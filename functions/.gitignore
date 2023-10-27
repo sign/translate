@@ -17,3 +17,6 @@ firestore-debug.log
 coverage/
 .env
 .runtimeconfig.json
+
+package-lock.json
+bun.lockb

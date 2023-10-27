@@ -7,6 +7,7 @@ import {FirebaseDatabase, Reference} from '@firebase/database-types';
 import {TextNormalizationModel} from './model';
 import {onRequest} from 'firebase-functions/v2/https';
 import {defineString} from 'firebase-functions/params';
+import {appCheckVerification} from '../middlewares/appcheck.middleware';
 import type {StringParam} from 'firebase-functions/lib/params/types';
 
 export class TextNormalizationEndpoint {
@@ -104,9 +105,19 @@ export const textNormalizationFunctions = (database: FirebaseDatabase) => {
 
   const app = express();
   app.use(cors());
+  app.use(appCheckVerification);
   app.options('*', (req, res) => res.status(200).end());
   app.get('/', request);
   app.get('/api/text-normalization', request); // Hosting redirect
   app.use(errorMiddleware);
-  return onRequest({enforceAppCheck: true}, app);
+
+  return onRequest(
+    {
+      invoker: 'public',
+      cpu: 'gcf_gen1',
+      concurrency: 1,
+      timeoutSeconds: 30,
+    },
+    app
+  );
 };
