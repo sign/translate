@@ -63,7 +63,7 @@
     "@ionic/angular": "7.5.2",
     "@mediapipe/drawing_utils": "0.3.1675466124",
     "@mediapipe/holistic": "0.5.1675471629",
-    "@ngneat/transloco": "4.3.0",
+    "@ngneat/transloco": "6.0.0",
     "@nguniversal/express-engine": "16.2.0",
     "@ngxs/store": "3.8.1",
     "@sign-mt/browsermt": "0.2.1",
