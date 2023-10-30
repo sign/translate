@@ -82,6 +82,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       this.videoType = 'mp4';
       this.muxer = new Muxer({
         target: new ArrayBufferTarget(),
+        fastStart: 'in-memory',
         video: {
           codec: 'avc',
           width: image.width,
