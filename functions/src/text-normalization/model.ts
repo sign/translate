@@ -40,7 +40,11 @@ const FEW_SHOTS = [
   },
   {
     user: 'normalize("de", "klein kinder essen pizza")',
-    assistant: 'kleine Kinder essen Pizza.',
+    assistant: 'Kleine Kinder essen Pizza.',
+  },
+  {
+    user: 'normalize("de", "Zwölftausend Dreihundert Fünfundvierzig")',
+    assistant: 'zwölftausenddreihundertfünfundvierzig',
   },
   {
     user: 'normalize("en", "A important part of my life have been a people that stood by me.")',

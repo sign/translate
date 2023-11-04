@@ -6,7 +6,6 @@ bun install
 
 # TODO @playwright/test 0.140 is buggy for us until updating typescript probably
 # TODO @tensorflow/tfjs 4.11.0 https://github.com/tensorflow/tfjs/issues/7974
-# TODO test capacitor assets after https://github.com/lovell/sharp/issues/3779
 
 # Update server dependencies
 bun x npm-check-updates --cacheClear --cwd functions -u --reject node-fetch
