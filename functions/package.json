@@ -29,16 +29,16 @@
     "firebase-functions": "4.5.0",
     "http-errors": "2.0.0",
     "node-fetch": "2.6.7",
-    "openai": "4.15.1"
+    "openai": "4.16.1"
   },
   "devDependencies": {
     "@firebase/firestore-types": "3.0.0",
     "@firebase/rules-unit-testing": "3.0.1",
-    "@types/http-errors": "2.0.3",
+    "@types/http-errors": "2.0.4",
     "@types/jest": "29.5.7",
     "@types/node-fetch": "2.6.8",
-    "@typescript-eslint/eslint-plugin": "6.9.1",
-    "@typescript-eslint/parser": "6.9.1",
+    "@typescript-eslint/eslint-plugin": "6.10.0",
+    "@typescript-eslint/parser": "6.10.0",
     "eslint": "8.53.0",
     "firebase-functions-test": "3.1.0",
     "firebase-tools": "12.8.0",

@@ -17,7 +17,7 @@ import {
 } from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
-import {EMPTY, Observable} from 'rxjs';
+import {EMPTY, filter, Observable} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 import {Capacitor} from '@capacitor/core';
@@ -187,22 +187,22 @@ export class TranslateState implements NgxsOnInit {
     dispatch(ChangeTranslation);
   }
 
-  @Action(SuggestAlternativeText)
-  async suggestAlternativeText({patchState, getState}: StateContext<TranslateStateModel>): Promise<void> {
+  @Action(SuggestAlternativeText, {cancelUncompleted: true})
+  suggestAlternativeText({patchState, getState}: StateContext<TranslateStateModel>) {
     const {spokenToSigned, spokenLanguageText, spokenLanguage, detectedLanguage} = getState();
     const trimmedText = spokenLanguageText.trim();
     if (!spokenToSigned || !trimmedText || spokenLanguage !== detectedLanguage) {
-      return;
+      return EMPTY;
     }
 
     if ('navigator' in globalThis && !navigator.onLine) {
-      return;
+      return EMPTY;
     }
 
-    const alternativeText = await this.service.normalizeSpokenLanguageText(spokenLanguage, trimmedText);
-    if (alternativeText !== trimmedText) {
-      patchState({normalizedSpokenLanguageText: alternativeText});
-    }
+    return this.service.normalizeSpokenLanguageText(spokenLanguage, trimmedText).pipe(
+      filter(text => text !== trimmedText),
+      tap(text => patchState({normalizedSpokenLanguageText: text}))
+    );
   }
 
   @Action(SetSignedLanguageVideo)

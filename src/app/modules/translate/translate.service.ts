@@ -1,10 +1,9 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
-import {firstValueFrom, Observable} from 'rxjs';
-import {TranslationResponse} from '@sign-mt/browsermt';
+import {firstValueFrom, from, Observable, switchMap} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {AppCheck} from '../../core/helpers/app-check/app-check';
 
 const OBSOLETE_LANGUAGE_CODES = {
@@ -197,17 +196,18 @@ export class TranslationService {
     return this.spokenLanguages.includes(correctedCode) ? correctedCode : DEFAULT_SPOKEN_LANGUAGE;
   }
 
-  async normalizeSpokenLanguageText(language: string, text: string): Promise<string> {
+  normalizeSpokenLanguageText(language: string, text: string): Observable<string> {
     const params = new URLSearchParams();
     params.set('lang', language);
     params.set('text', text);
     const url = 'https://sign.mt/api/text-normalization?' + params.toString();
 
-    const appCheckToken = await AppCheck.getToken();
-    const headers = {'X-AppCheck-Token': appCheckToken};
+    const appCheckToken$ = from(AppCheck.getToken());
 
-    const response = await firstValueFrom(this.http.get<{text: string}>(url, {headers}));
-    return response.text;
+    return appCheckToken$.pipe(
+      switchMap(token => this.http.get<{text: string}>(url, {headers: {'X-AppCheck-Token': token}})),
+      map(response => response.text)
+    );
   }
 
   translateSpokenToSigned(text: string, spokenLanguage: string, signedLanguage: string): string {
