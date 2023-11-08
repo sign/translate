@@ -128,25 +128,25 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sign-translate:build",
             "headers": {
               "Cross-Origin-Opener-Policy": "same-origin",
               "Cross-Origin-Embedder-Policy": "require-corp"
-            }
+            },
+            "buildTarget": "sign-translate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sign-translate:build:production"
+              "buildTarget": "sign-translate:build:production"
             },
             "development": {
-              "browserTarget": "sign-translate:build:development"
+              "buildTarget": "sign-translate:build:development"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sign-translate:build"
+            "buildTarget": "sign-translate:build"
           }
         },
         "test": {
@@ -247,7 +247,7 @@
           "defaultConfiguration": "production"
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "configurations": {
             "development": {
               "browserTarget": "sign-translate:build",
@@ -261,7 +261,7 @@
           "defaultConfiguration": "development"
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "routes": [
               "/",
