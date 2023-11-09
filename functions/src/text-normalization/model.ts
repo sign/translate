@@ -1,5 +1,5 @@
 import type OpenAI from 'openai';
-import type {ChatCompletionMessageParam} from 'openai/src/resources/chat/completions';
+import type {ChatCompletionMessageParam} from 'openai/resources/chat/completions';
 
 const SYSTEM_PROMPT = `
 You are a proficient assistant, responsible for data sanitization for a machine translation model. Your main task involves operating the \`normalize\` function:
