@@ -20,7 +20,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@firebase/database-types": "1.0.0",
-    "@google-cloud/storage": "7.5.0",
+    "@google-cloud/storage": "7.6.0",
     "@sign-mt/browsermt": "0.2.1",
     "cors": "2.8.5",
     "express": "4.18.2",
@@ -29,7 +29,7 @@
     "firebase-functions": "4.5.0",
     "http-errors": "2.0.0",
     "node-fetch": "2.6.7",
-    "openai": "4.16.1"
+    "openai": "4.17.0"
   },
   "devDependencies": {
     "@firebase/firestore-types": "3.0.0",
