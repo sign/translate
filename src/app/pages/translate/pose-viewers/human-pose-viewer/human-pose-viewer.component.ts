@@ -5,7 +5,6 @@ import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
-import {wait} from '../../../../core/helpers/wait/wait';
 
 @Component({
   selector: 'app-human-pose-viewer',
@@ -92,9 +91,10 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     this.modelReady = true; // Stop loading after first model inference
 
     const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-    await this.addCacheFrame(imageData);
-
     ctx.putImageData(imageData, 0, 0);
+
+    const imageBitmap = await createImageBitmap(imageData);
+    await this.addCacheFrame(imageBitmap);
   }
 
   override reset(): void {
@@ -124,7 +124,12 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         tap(() => {
           i++;
           if (i < this.cache.length) {
-            ctx.putImageData(this.cache[i], 0, 0);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            if (this.background) {
+              ctx.fillStyle = this.background;
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+            ctx.drawImage(this.cache[i], 0, 0);
             delete this.cache[i]; // Free up memory after cached frame is no longer necessary
           } else {
             this.cacheSubscription.unsubscribe();

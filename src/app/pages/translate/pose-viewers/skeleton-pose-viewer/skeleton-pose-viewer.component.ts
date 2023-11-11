@@ -15,8 +15,6 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
 
   colorSchemeMedia!: MediaQueryList;
 
-  background: string = '';
-
   constructor(store: Store, private mediaMatcher: MediaMatcher) {
     super(store);
 
@@ -30,26 +28,65 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
       .pipe(
         tap(async () => {
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
-          // TODO: startRecording is imperfect, specifically when the tab is out of focus.
-          //  When VideoEncoder is supported, should use addCacheFrame instead, after every render
-          await this.startRecording(poseCanvas as any);
           pose.currentTime = 0; // Force time back to 0
 
-          // Some browsers videos can't have a transparent background
-          const isTransparencySupported = 'chrome' in window; // transparency is currently not supported in firefox and safari
-          if (this.mediaRecorder && !isTransparencySupported) {
-            // Make the video background the same as the element's background
-            const el = document.querySelector('app-signed-language-output');
-            this.background = getComputedStyle(el).backgroundColor;
+          // startRecording is imperfect, specifically when the tab is out of focus.
+          if (!this.supportsVideoEncoder) {
+            await this.startRecording(poseCanvas as any);
           }
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
 
+    // Most reliable method to create a video from a canvas
+    if (this.supportsVideoEncoder) {
+      let lastRendered = NaN;
+      fromEvent(pose, 'render$')
+        .pipe(
+          tap(async () => {
+            if (pose.currentTime === lastRendered) {
+              // There are possibly redundant renders when video is paused or tab is out of focus
+              return;
+            }
+            const poseCanvas = pose.shadowRoot.querySelector('canvas');
+            const imageBitmap = await createImageBitmap(poseCanvas);
+            await this.addCacheFrame(imageBitmap);
+            lastRendered = pose.currentTime;
+          }),
+          takeUntil(this.ngUnsubscribe)
+        )
+        .subscribe();
+    }
+
     fromEvent(pose, 'ended$')
       .pipe(
         tap(async () => this.stopRecording()),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+
+    this.pauseInvisible();
+  }
+
+  pauseInvisible() {
+    const pose = this.poseEl.nativeElement;
+
+    fromEvent(document, 'visibilitychange')
+      .pipe(
+        tap(async () => {
+          if (document.visibilityState === 'visible') {
+            await pose.play();
+            if (this.mediaRecorder) {
+              this.mediaRecorder.resume();
+            }
+          } else {
+            await pose.pause();
+            if (this.mediaRecorder) {
+              this.mediaRecorder.pause();
+            }
+          }
+        }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();

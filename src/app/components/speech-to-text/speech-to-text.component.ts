@@ -74,7 +74,6 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   }
 
   requestPermission() {
-    alert();
     navigator.mediaDevices.getUserMedia({video: false, audio: true}).then(stream => {
       stream.getTracks().forEach(track => track.stop());
       this.supportError = null;
