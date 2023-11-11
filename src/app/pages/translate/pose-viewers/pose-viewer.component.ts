@@ -4,11 +4,16 @@ import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
-import {ArrayBufferTarget as WebmArrayBufferTarget, Muxer as WebmMuxer} from 'webm-muxer';
-import {Muxer as Mp4Muxer, ArrayBufferTarget as Mp4ArrayBufferTarget} from 'mp4-muxer';
+import type {ArrayBufferTarget as WebmArrayBufferTarget, Muxer as WebmMuxer} from 'webm-muxer';
+import type {ArrayBufferTarget as Mp4ArrayBufferTarget, Muxer as Mp4Muxer} from 'mp4-muxer';
 import {isSafari} from '../../../core/constants';
 
 const BPS = 1_000_000_000; // 1GBps, to act as infinity
+
+interface VideoCodecInfo {
+  codec: string;
+  forceEvenSizedFrames: boolean;
+}
 
 @Component({
   selector: 'app-pose-viewer',
@@ -18,14 +23,15 @@ const BPS = 1_000_000_000; // 1GBps, to act as infinity
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnInit, OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
 
+  background: string = '';
+
   // Using cache and MediaRecorder for older browsers, and safari
-  mimeTypes = ['video/webm;codecs:vp9', 'video/webm;codecs:vp8', 'video/webm', 'video/mp4', 'video/ogv'];
+  mimeTypes = ['video/webm; codecs:vp9', 'video/webm; codecs:vp8', 'video/webm', 'video/mp4', 'video/ogv'];
   mediaRecorder: MediaRecorder;
   mediaSubscriptions: Subscription[] = [];
 
   // Use a video encoder on supported browsers
-  // supportsVideoEncoder = ('VideoEncoder' in window);
-  supportsVideoEncoder = false;
+  supportsVideoEncoder = 'VideoEncoder' in window;
   videoEncoder: VideoEncoder;
   videoType: 'webm' | 'mp4';
   muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
@@ -42,6 +48,16 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   async ngOnInit() {
+    // Some browsers videos can't have a transparent background
+    const isTransparencySupported =
+      'chrome' in window && // transparency is currently not supported in firefox and safari
+      !this.supportsVideoEncoder; // alpha is not yet supported in chrome VideoEncoder
+    if (!isTransparencySupported) {
+      // Make the video background the same as the element's background
+      const el = document.querySelector('app-signed-language-output');
+      this.background = getComputedStyle(el).backgroundColor;
+    }
+
     await this.definePoseViewerElement();
   }
 
@@ -72,7 +88,23 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     return pose.body.fps;
   }
 
-  async createMuxer(image: ImageBitmap): Promise<string> {
+  videoDimensions(image: ImageBitmap, forceEvenSizedFrames: boolean = false) {
+    let width = image.width;
+    let height = image.height;
+
+    if (forceEvenSizedFrames) {
+      if (image.width % 2 !== 0) {
+        width += 1;
+      }
+      if (image.height % 2 !== 0) {
+        height += 1;
+      }
+    }
+
+    return {width, height};
+  }
+
+  async createMuxer(image: ImageBitmap): Promise<VideoCodecInfo> {
     // Creates the muxer and returns the relevant codec
 
     const fps = await this.fps();
@@ -82,17 +114,21 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     if (isSafari) {
       const {Muxer, ArrayBufferTarget} = await import('mp4-muxer');
       this.videoType = 'mp4';
+
       this.muxer = new Muxer({
         target: new ArrayBufferTarget(),
         fastStart: 'in-memory',
         video: {
           codec: 'avc',
-          width: image.width,
-          height: image.height,
+          ...this.videoDimensions(image, true),
         },
       });
 
-      return 'avc1.42001f';
+      return {
+        codec: 'avc1.42001f',
+        // H264 only supports even sized frames
+        forceEvenSizedFrames: true,
+      };
     }
 
     const {Muxer, ArrayBufferTarget} = await import('webm-muxer');
@@ -101,31 +137,33 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       target: new ArrayBufferTarget(),
       video: {
         codec: 'V_VP9',
-        width: image.width,
-        height: image.height,
+        ...this.videoDimensions(image),
         frameRate: fps,
         alpha: true,
       },
     });
 
-    return 'vp09.00.10.08';
+    return {
+      codec: 'avc1.42001f',
+      forceEvenSizedFrames: false,
+    };
   }
 
   async initVideoEncoder(image: ImageBitmap) {
-    const codec = await this.createMuxer(image);
+    const {codec, forceEvenSizedFrames} = await this.createMuxer(image);
 
     this.videoEncoder = new VideoEncoder({
       output: (chunk, meta) => this.muxer.addVideoChunk(chunk, meta),
       error: e => console.error(e),
     });
-    this.videoEncoder.configure({
+    const config = {
       codec,
-      width: image.width,
-      height: image.height,
+      ...this.videoDimensions(image, forceEvenSizedFrames),
       bitrate: BPS,
       framerate: await this.fps(),
-      // alpha: 'keep' TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#242
-    });
+      // alpha: 'keep' as AlphaOption // TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#242
+    };
+    this.videoEncoder.configure(config);
   }
 
   async createEncodedVideo() {
@@ -148,7 +186,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     for (const mimeType of this.mimeTypes) {
       if (MediaRecorder.isTypeSupported(mimeType)) {
         this.mediaRecorder = new MediaRecorder(stream, {mimeType, videoBitsPerSecond: BPS});
-        console.log(this.mediaRecorder.state, this.mediaRecorder.mimeType);
         supportedMimeType = mimeType;
         break;
       } else {
@@ -161,10 +198,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
 
     const dataAvailableEvent = fromEvent(this.mediaRecorder, 'dataavailable').pipe(
-      tap((event: BlobEvent) => {
-        recordedChunks.push(event.data);
-        console.log(this.mediaRecorder.state, this.mediaRecorder.mimeType, event);
-      }),
+      tap((event: BlobEvent) => recordedChunks.push(event.data)),
       takeUntil(this.ngUnsubscribe)
     );
     this.mediaSubscriptions.push(dataAvailableEvent.subscribe());
@@ -174,7 +208,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
         stream.getTracks().forEach(track => track.stop());
         const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
         console.log('blob', blob.size, blob.type);
-        console.error(this.mediaRecorder.mimeType);
         // TODO: this does not work in iOS. The blob above is of size 0, and the video does not play.
         //       Should open an issue that ios mediarecorder dataavailable blob size is 0
         //       https://webkit.org/blog/11353/mediarecorder-api/

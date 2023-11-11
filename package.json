@@ -88,7 +88,7 @@
     "leaflet": "1.9.4",
     "mp4-muxer": "3.0.2",
     "ngx-filesize": "3.0.2",
-    "pose-viewer": "0.7.3",
+    "pose-viewer": "0.7.4",
     "rxjs": "7.8.1",
     "stats.js": "0.17.0",
     "three": "0.158.0",

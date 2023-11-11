@@ -140,9 +140,9 @@ npm test
 Run the application on iOS:
 
 ```bash
-bun run build && \
-bun x cap sync && \
-bun x cap run ios
+npm run build && \
+npx cap sync && \
+npx cap run ios
 ```
 
 [node.js]: https://nodejs.org/
