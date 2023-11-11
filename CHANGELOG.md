@@ -6,11 +6,21 @@ This file is used to list important changes made over time to `sign/translate`.
 
 ### 0.0.3
 
+#### Documentation
+
+- **wiki**: redo wiki to be more transparent about the project's progress
+-
+
 #### Features
 
 - **api**: add text-normalization API with appCheck support
 - **spoken-to-signed**: add language detection suggestion "Translate from: \_\_\_"
 - **spoken-to-signed**: add text edit suggestions "Did you mean: \_\_\_"
+- **core**: upgraded to angular 17, and all relevant dependencies
+
+#### Fixes
+
+- **normalization**: cancel normalization requests when user changes text
 
 ## Released
 

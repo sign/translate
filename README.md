@@ -23,6 +23,9 @@
   <a href="https://github.com/sign/translate/actions/workflows/client.yml">
     <img src="https://github.com/sign/translate/actions/workflows/client.yml/badge.svg" alt="Client Build Test Status Badge" />
   </a>
+  <a href="https://github.com/sign/translate/actions/workflows/server.yml">
+    <img src="https://github.com/sign/translate/actions/workflows/server.yml/badge.svg" alt="Server Build Test Status Badge" />
+  </a>
   <a href="https://coveralls.io/github/sign/translate?branch=master">
     <img src="https://coveralls.io/repos/github/sign/translate/badge.svg?branch=master" alt="Coverage Status Badge" />
   </a>

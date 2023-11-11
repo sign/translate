@@ -30,14 +30,15 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
       .pipe(
         tap(async () => {
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
-          // TODO: startRecording is imperfect, specifically when the tab is out of focus.
-          //  When VideoEncoder is supported, should use addCacheFrame instead, after every render
-          await this.startRecording(poseCanvas as any);
+          // startRecording is imperfect, specifically when the tab is out of focus.
+          if (!this.supportsVideoEncoder) {
+            await this.startRecording(poseCanvas as any);
+          }
           pose.currentTime = 0; // Force time back to 0
 
           // Some browsers videos can't have a transparent background
           const isTransparencySupported = 'chrome' in window; // transparency is currently not supported in firefox and safari
-          if (this.mediaRecorder && !isTransparencySupported) {
+          if (!isTransparencySupported) {
             // Make the video background the same as the element's background
             const el = document.querySelector('app-signed-language-output');
             this.background = getComputedStyle(el).backgroundColor;
@@ -46,6 +47,20 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+
+    // Most reliable method to create a video from a canvas
+    if (this.supportsVideoEncoder) {
+      fromEvent(pose, 'render$')
+        .pipe(
+          tap(async () => {
+            const poseCanvas = pose.shadowRoot.querySelector('canvas');
+            const imageBitmap = await createImageBitmap(poseCanvas);
+            await this.addCacheFrame(imageBitmap);
+          }),
+          takeUntil(this.ngUnsubscribe)
+        )
+        .subscribe();
+    }
 
     fromEvent(pose, 'ended$')
       .pipe(

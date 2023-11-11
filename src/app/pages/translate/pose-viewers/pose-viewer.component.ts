@@ -24,11 +24,13 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   mediaSubscriptions: Subscription[] = [];
 
   // Use a video encoder on supported browsers
+  // supportsVideoEncoder = ('VideoEncoder' in window);
+  supportsVideoEncoder = false;
   videoEncoder: VideoEncoder;
   videoType: 'webm' | 'mp4';
   muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
 
-  cache: ImageData[] = [];
+  cache: ImageBitmap[] = [];
   cacheSubscription: Subscription;
 
   frameIndex = 0;
@@ -70,7 +72,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     return pose.body.fps;
   }
 
-  async createMuxer(image: ImageData): Promise<string> {
+  async createMuxer(image: ImageBitmap): Promise<string> {
     // Creates the muxer and returns the relevant codec
 
     const fps = await this.fps();
@@ -109,7 +111,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     return 'vp09.00.10.08';
   }
 
-  async initVideoEncoder(image: ImageData) {
+  async initVideoEncoder(image: ImageBitmap) {
     const codec = await this.createMuxer(image);
 
     this.videoEncoder = new VideoEncoder({
@@ -146,6 +148,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     for (const mimeType of this.mimeTypes) {
       if (MediaRecorder.isTypeSupported(mimeType)) {
         this.mediaRecorder = new MediaRecorder(stream, {mimeType, videoBitsPerSecond: BPS});
+        console.log(this.mediaRecorder.state, this.mediaRecorder.mimeType);
         supportedMimeType = mimeType;
         break;
       } else {
@@ -158,7 +161,10 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
 
     const dataAvailableEvent = fromEvent(this.mediaRecorder, 'dataavailable').pipe(
-      tap((event: BlobEvent) => recordedChunks.push(event.data)),
+      tap((event: BlobEvent) => {
+        recordedChunks.push(event.data);
+        console.log(this.mediaRecorder.state, this.mediaRecorder.mimeType, event);
+      }),
       takeUntil(this.ngUnsubscribe)
     );
     this.mediaSubscriptions.push(dataAvailableEvent.subscribe());
@@ -168,6 +174,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
         stream.getTracks().forEach(track => track.stop());
         const blob = new Blob(recordedChunks, {type: this.mediaRecorder.mimeType});
         console.log('blob', blob.size, blob.type);
+        console.error(this.mediaRecorder.mimeType);
         // TODO: this does not work in iOS. The blob above is of size 0, and the video does not play.
         //       Should open an issue that ios mediarecorder dataavailable blob size is 0
         //       https://webkit.org/blog/11353/mediarecorder-api/
@@ -203,14 +210,14 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
   }
 
-  async addCacheFrame(image: ImageData): Promise<void> {
-    if ('VideoEncoder' in window) {
+  async addCacheFrame(image: ImageBitmap): Promise<void> {
+    if (this.supportsVideoEncoder) {
       if (!this.videoEncoder) {
         await this.initVideoEncoder(image);
       }
       const ms = 1_000_000; // 1µs
       const fps = await this.fps();
-      const frame = new VideoFrame(await createImageBitmap(image), {
+      const frame = new VideoFrame(image, {
         timestamp: (ms * this.frameIndex) / fps,
         duration: ms / fps,
       });

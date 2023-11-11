@@ -92,9 +92,10 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     this.modelReady = true; // Stop loading after first model inference
 
     const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
-    await this.addCacheFrame(imageData);
-
     ctx.putImageData(imageData, 0, 0);
+
+    const imageBitmap = await createImageBitmap(imageData);
+    await this.addCacheFrame(imageBitmap);
   }
 
   override reset(): void {
@@ -124,7 +125,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         tap(() => {
           i++;
           if (i < this.cache.length) {
-            ctx.putImageData(this.cache[i], 0, 0);
+            ctx.drawImage(this.cache[i], 0, 0);
             delete this.cache[i]; // Free up memory after cached frame is no longer necessary
           } else {
             this.cacheSubscription.unsubscribe();
