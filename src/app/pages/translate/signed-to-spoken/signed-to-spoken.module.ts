@@ -8,12 +8,16 @@ import {VideoModule} from '../../../components/video/video.module';
 import {CommonModule} from '@angular/common';
 import {IonicModule} from '@ionic/angular';
 import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
+import {SignedLanguageInputComponent} from './signed-language-input/signed-language-input.component';
+import {SpokenToSignedModule} from '../spoken-to-signed/spoken-to-signed.module';
 
 const componentModules = [VideoModule, SignWritingModule, TextToSpeechModule];
 
+const components = [SignedToSpokenComponent, SignedLanguageInputComponent, UploadComponent];
+
 @NgModule({
-  imports: [CommonModule, AppTranslocoModule, IonicModule, ...componentModules],
-  declarations: [SignedToSpokenComponent, UploadComponent],
-  exports: [SignedToSpokenComponent],
+  imports: [CommonModule, AppTranslocoModule, IonicModule, ...componentModules, SpokenToSignedModule],
+  declarations: components,
+  exports: components,
 })
 export class SignedToSpokenModule {}

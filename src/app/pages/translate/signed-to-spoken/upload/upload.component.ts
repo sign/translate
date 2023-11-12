@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
 
@@ -8,12 +8,13 @@ import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions'
   styleUrls: ['./upload.component.scss'],
 })
 export class UploadComponent {
+  @Input() isMobile = false;
+
   uploadEl: HTMLInputElement = document.createElement('input');
 
   constructor(private store: Store) {
     this.uploadEl.setAttribute('type', 'file');
-    this.uploadEl.setAttribute('accept', '.mp4, .ogv, .webm');
-
+    this.uploadEl.setAttribute('accept', 'video/*');
     this.uploadEl.addEventListener('change', this.onFileUpload.bind(this));
   }
 

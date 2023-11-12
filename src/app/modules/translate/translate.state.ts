@@ -37,7 +37,7 @@ export interface TranslateStateModel {
   spokenLanguageText: string;
   normalizedSpokenLanguageText?: string;
   signWriting: string[];
-  signedLanguagePose: string;
+  signedLanguagePose: string; // TODO: use Pose object instead of URL
   signedLanguageVideo: string;
 }
 

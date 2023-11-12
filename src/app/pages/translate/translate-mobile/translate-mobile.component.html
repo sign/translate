@@ -5,10 +5,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-signed-language-output />
+  <app-signed-language-output *ngIf="spokenToSigned" />
 </ion-content>
 
 <!-- Footer with input and submit button -->
 <ion-footer>
-  <app-spoken-language-input [isMobile]="true" />
+  <app-spoken-language-input [isMobile]="true" *ngIf="spokenToSigned" />
+  <app-signed-language-input *ngIf="!spokenToSigned" />
 </ion-footer>

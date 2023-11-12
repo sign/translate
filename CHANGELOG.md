@@ -9,7 +9,6 @@ This file is used to list important changes made over time to `sign/translate`.
 #### Documentation
 
 - **wiki**: redo wiki to be more transparent about the project's progress
--
 
 #### Features
 
@@ -17,10 +16,17 @@ This file is used to list important changes made over time to `sign/translate`.
 - **spoken-to-signed**: add language detection suggestion "Translate from: \_\_\_"
 - **spoken-to-signed**: add text edit suggestions "Did you mean: \_\_\_"
 - **core**: upgraded to angular 17, and all relevant dependencies
+- **skeleton-viewer**: add VideoEncoder video rendering for consistent and controllable rendering
+
+#### Style
+
+- **signed-to-spoken**: integrate a new interface for mobile devices
 
 #### Fixes
 
 - **normalization**: cancel normalization requests when user changes text
+- **skeleton-viewer**: video recordings don't lag when user hides the page
+- **mobile**: lock screen to portrait orientation
 
 ## Released
 
