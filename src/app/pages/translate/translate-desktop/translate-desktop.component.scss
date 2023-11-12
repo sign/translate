@@ -64,12 +64,11 @@
   }
 }
 
-@media #{$breakpoint-lt-sm} {
-  app-send-feedback {
-    display: none;
-  }
-}
-
 ntkme-github-button {
   margin: 0 8px;
+}
+
+#version {
+  cursor: help;
+  font-family: monospace;
 }

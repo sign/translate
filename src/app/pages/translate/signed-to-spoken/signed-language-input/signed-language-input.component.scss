@@ -1,0 +1,15 @@
+ion-toolbar {
+  --background: transparent;
+  height: 5em;
+}
+
+ion-title {
+  text-align: center;
+
+  ion-fab-button {
+    margin: auto;
+    ion-icon {
+      font-size: 5em;
+    }
+  }
+}
