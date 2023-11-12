@@ -9,7 +9,7 @@
 </ion-content>
 
 <!-- Footer with input and submit button -->
-<ion-footer>
+<ion-footer [class.signed-to-spoken]="!spokenToSigned">
   <app-spoken-language-input [isMobile]="true" *ngIf="spokenToSigned" />
   <app-signed-language-input *ngIf="!spokenToSigned" />
 </ion-footer>

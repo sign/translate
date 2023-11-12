@@ -8,6 +8,8 @@ ion-title {
 
   ion-fab-button {
     margin: auto;
+    --box-shadow: none;
+
     ion-icon {
       font-size: 5em;
     }
