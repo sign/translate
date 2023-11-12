@@ -53,9 +53,12 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       'chrome' in window && // transparency is currently not supported in firefox and safari
       !this.supportsVideoEncoder; // alpha is not yet supported in chrome VideoEncoder
     if (!isTransparencySupported) {
-      // Make the video background the same as the element's background
+      // Make the video background the same as the parent element's background
       const el = document.querySelector('app-signed-language-output');
-      this.background = getComputedStyle(el).backgroundColor;
+      if (el) {
+        // el does not exist during testing
+        this.background = getComputedStyle(el).backgroundColor;
+      }
     }
 
     await this.definePoseViewerElement();
@@ -67,7 +70,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       BasePoseViewerComponent.isCustomElementDefined = true;
 
       const {defineCustomElements} = await import(/* webpackChunkName: "pose-viewer" */ 'pose-viewer/loader');
-      await defineCustomElements();
+      defineCustomElements();
     }
   }
 
