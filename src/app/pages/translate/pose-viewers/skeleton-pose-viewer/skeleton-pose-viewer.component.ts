@@ -72,6 +72,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
   pauseInvisible() {
     const pose = this.poseEl.nativeElement;
 
+    // TODO: this should be on the current element, not document
     fromEvent(document, 'visibilitychange')
       .pipe(
         tap(async () => {

@@ -147,7 +147,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     });
 
     return {
-      codec: 'avc1.42001f',
+      codec: 'vp09.00.10.08',
       forceEvenSizedFrames: false,
     };
   }
