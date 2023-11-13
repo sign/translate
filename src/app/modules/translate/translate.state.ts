@@ -19,7 +19,7 @@ import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
 import {EMPTY, filter, Observable} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
-import {tap} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';

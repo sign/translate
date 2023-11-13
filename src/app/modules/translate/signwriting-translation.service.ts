@@ -64,10 +64,14 @@ export class SignWritingTranslationService {
     to: string
   ): Promise<TranslationResponse> {
     await this.loadOfflineModel(direction, from, to);
+
     let translations = await this.worker.translate(from, to, [text], [{isHtml: false}]);
     if (typeof translations[0] === 'string') {
       translations = translations.map((t: any) => ({text: t}));
     }
+
+    translations = translations.map(({text}) => ({text: this.detokenizeSignWriting(text)}));
+
     return translations[0];
   }
 
@@ -108,13 +112,12 @@ export class SignWritingTranslationService {
   ): Observable<TranslationResponse> {
     const direction: TranslationDirection = 'spoken-to-signed';
     const offlineSpecific = () => {
-      const newText = `$SW$ | ${text}`;
+      const newText = `${this.tokenizeSpokenText(text)}`;
       return from(this.translateOffline(direction, newText, spokenLanguage, signedLanguage));
     };
 
     const offlineGeneric = () => {
-      // Format is: $SW/HNS$ $COUNTRY$ $ISO$? $LANGUAGE$ | text
-      const newText = `$SW$ $${signedLanguage}$ $${spokenLanguage}$ | ${text}`;
+      const newText = `$${spokenLanguage} $${signedLanguage} ${this.tokenizeSpokenText(text)}`;
       return from(this.translateOffline(direction, newText, 'spoken', 'signed'));
     };
 
@@ -125,5 +128,25 @@ export class SignWritingTranslationService {
       filter(() => !('navigator' in globalThis) || navigator.onLine),
       catchError(online)
     );
+  }
+
+  tokenizeSpokenText(text: string) {
+    return Array.from(text.replaceAll(' ', '_')).join(' ');
+  }
+
+  detokenizeSignWriting(text: string) {
+    // first, remove all tokens that start with a $
+    text = text.replace(/\$[^\s]+/g, '');
+
+    // detokenize the rest
+    text = text.replace(/p(\d*) p(\d*)/g, '$1x$2');
+    text = text.replace(/c(\d)\d? r(.)/g, '$1$2');
+    text = text.replace(/c(\d)\d?/g, '$1 0');
+    text = text.replace(/r(.)/g, '0$1');
+
+    text = text.replace(/ /g, '');
+    text = text.replace(/(\d)M/g, '$1 M');
+
+    return text;
   }
 }
