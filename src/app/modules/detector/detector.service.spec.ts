@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 
 import {DetectorService} from './detector.service';
-import {Pose, PoseLandmark} from '../pose/pose.state';
+import {EstimatedPose, PoseLandmark} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 import createSpy = jasmine.createSpy;
@@ -55,7 +55,7 @@ describe('DetectorService', () => {
       poseLandmarks: null,
       rightHandLandmarks: null,
       leftHandLandmarks: null,
-    } as Pose;
+    } as EstimatedPose;
 
     const normalized = service.normalizePose(pose);
 
@@ -71,7 +71,7 @@ describe('DetectorService', () => {
       poseLandmarks: null,
       rightHandLandmarks: null,
       leftHandLandmarks: null,
-    } as Pose;
+    } as EstimatedPose;
 
     const normalized = service.normalizePose(pose);
 

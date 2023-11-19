@@ -1,5 +1,5 @@
 import type {Tensor} from '@tensorflow/tfjs';
-import {EMPTY_LANDMARK, Pose} from '../pose/pose.state';
+import {EMPTY_LANDMARK, EstimatedPose} from '../pose/pose.state';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
@@ -79,7 +79,7 @@ export class AnimationService {
       .then(model => (this.sequentialModel = model as unknown as LayersModel));
   }
 
-  normalizePose(pose: Pose): Tensor {
+  normalizePose(pose: EstimatedPose): Tensor {
     const bodyLandmarks =
       pose.poseLandmarks || new Array(Object.keys(this.holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
@@ -100,7 +100,7 @@ export class AnimationService {
     return normTensor;
   }
 
-  estimate(poses: Pose[]): {[key: string]: [number, number, number, number][]} {
+  estimate(poses: EstimatedPose[]): {[key: string]: [number, number, number, number][]} {
     if (!this.sequentialModel) {
       return null;
     }

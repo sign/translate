@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {AnimationService} from './animation.service';
 import {filter, first, tap} from 'rxjs/operators';
-import {Pose} from '../pose/pose.state';
+import {EstimatedPose} from '../pose/pose.state';
 import {AnimatePose} from './animation.actions';
 import {Observable} from 'rxjs';
 
@@ -21,11 +21,11 @@ const initialState: AnimationStateModel = {
 })
 export class AnimationState implements NgxsOnInit {
   isAnimatePose = false;
-  pose$!: Observable<Pose>;
+  pose$!: Observable<EstimatedPose>;
   animatePose$!: Observable<boolean>;
 
   constructor(private store: Store, private animation: AnimationService) {
-    this.pose$ = this.store.select<Pose>(state => state.pose.pose);
+    this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
     this.animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
   }
 
@@ -44,7 +44,7 @@ export class AnimationState implements NgxsOnInit {
       .pipe(
         filter(Boolean),
         filter(() => this.isAnimatePose), // Only run if needed
-        tap((pose: Pose) => dispatch(new AnimatePose(pose)))
+        tap((pose: EstimatedPose) => dispatch(new AnimatePose(pose)))
       )
       .subscribe();
   }

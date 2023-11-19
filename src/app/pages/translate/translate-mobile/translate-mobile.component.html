@@ -6,6 +6,10 @@
 
 <ion-content [fullscreen]="true">
   <app-signed-language-output *ngIf="spokenToSigned" />
+
+  <ng-container *ngIf="!spokenToSigned">
+    <app-video [displayControls]="false" [displayFps]="false"></app-video>
+  </ng-container>
 </ion-content>
 
 <!-- Footer with input and submit button -->

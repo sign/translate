@@ -1,13 +1,13 @@
 import {TestBed} from '@angular/core/testing';
 
 import {PoseService} from './pose.service';
-import {Pose, PoseLandmark} from './pose.state';
+import {EstimatedPose, PoseLandmark} from './pose.state';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
 describe('PoseService', () => {
   let service: PoseService;
 
-  let pose: Pose;
+  let pose: EstimatedPose;
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
 

@@ -1,4 +1,4 @@
-import {Pose, PoseLandmark} from '../pose/pose.state';
+import {EstimatedPose, PoseLandmark} from '../pose/pose.state';
 
 export class EstimateHandShape {
   static readonly type = '[SignWriting - Hands] Estimate Hand Shape';
@@ -19,5 +19,5 @@ export class EstimateFaceShape {
 export class CalculateBodyFactors {
   static readonly type = '[SignWriting - Body] Calculate Body Factors';
 
-  constructor(public pose: Pose) {}
+  constructor(public pose: EstimatedPose) {}
 }

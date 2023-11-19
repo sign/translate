@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
-import {Pose} from '../pose/pose.state';
+import {EstimatedPose} from '../pose/pose.state';
 import {filter, first, tap} from 'rxjs/operators';
 import {HandsService, HandStateModel} from './hands.service';
 import {CalculateBodyFactors, EstimateFaceShape, EstimateHandShape} from './sign-writing.actions';
@@ -34,7 +34,7 @@ const initialState: SignWritingStateModel = {
 })
 export class SignWritingState implements NgxsOnInit {
   drawSignWriting = false;
-  pose$: Observable<Pose>;
+  pose$: Observable<EstimatedPose>;
   drawSignWriting$: Observable<boolean>;
 
   constructor(
@@ -45,7 +45,7 @@ export class SignWritingState implements NgxsOnInit {
     private three: ThreeService,
     private holistic: MediapipeHolisticService
   ) {
-    this.pose$ = this.store.select<Pose>(state => state.pose.pose);
+    this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
     this.drawSignWriting$ = this.store.select<boolean>(state => state.settings.drawSignWriting);
   }
 
@@ -70,7 +70,7 @@ export class SignWritingState implements NgxsOnInit {
       .pipe(
         filter(Boolean),
         filter(() => this.drawSignWriting), // Only run if needed
-        tap((pose: Pose) => {
+        tap((pose: EstimatedPose) => {
           dispatch([
             new CalculateBodyFactors(pose),
             new EstimateFaceShape(pose.faceLandmarks, pose.image),

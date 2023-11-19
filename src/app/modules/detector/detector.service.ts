@@ -1,5 +1,5 @@
 import type {Tensor} from '@tensorflow/tfjs';
-import {EMPTY_LANDMARK, Pose, PoseLandmark} from '../pose/pose.state';
+import {EMPTY_LANDMARK, EstimatedPose, PoseLandmark} from '../pose/pose.state';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
@@ -37,7 +37,7 @@ export class DetectorService {
     return Math.sqrt(xs * xs + ys * ys);
   }
 
-  normalizePose(pose: Pose): PoseLandmark[] {
+  normalizePose(pose: EstimatedPose): PoseLandmark[] {
     const bodyLandmarks =
       pose.poseLandmarks || new Array(Object.keys(this.holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
     const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
@@ -135,7 +135,7 @@ export class DetectorService {
     });
   }
 
-  detect(pose: Pose): number {
+  detect(pose: EstimatedPose): number {
     const timestamp = performance.now() / 1000;
     let confidence = 0;
 

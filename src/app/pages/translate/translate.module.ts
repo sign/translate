@@ -20,6 +20,7 @@ import {TranslateMobileComponent} from './translate-mobile/translate-mobile.comp
 import {FormsModule} from '@angular/forms';
 import {SpeechToTextModule} from '../../components/speech-to-text/speech-to-text.module';
 import {TextToSpeechModule} from '../../components/text-to-speech/text-to-speech.module';
+import {VideoModule} from '../../components/video/video.module';
 
 const routes = [
   {
@@ -57,6 +58,7 @@ const components = [
     FormsModule,
     SpeechToTextModule,
     TextToSpeechModule,
+    VideoModule,
   ],
   declarations: components,
 })

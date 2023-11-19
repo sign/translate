@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
-import {Pose, PoseLandmark} from './pose.state';
+import {EstimatedPose, PoseLandmark} from './pose.state';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
@@ -135,7 +135,7 @@ export class PoseService {
     }
   }
 
-  drawElbowHandsConnection(pose: Pose, ctx: CanvasRenderingContext2D): void {
+  drawElbowHandsConnection(pose: EstimatedPose, ctx: CanvasRenderingContext2D): void {
     ctx.lineWidth = 5;
 
     if (pose.rightHandLandmarks) {
@@ -152,7 +152,7 @@ export class PoseService {
     }
   }
 
-  draw(pose: Pose, ctx: CanvasRenderingContext2D): void {
+  draw(pose: EstimatedPose, ctx: CanvasRenderingContext2D): void {
     if (pose.poseLandmarks) {
       this.drawBody(pose.poseLandmarks, ctx);
       this.drawElbowHandsConnection(pose, ctx);

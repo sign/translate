@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 import {AnimationService} from './animation.service';
-import {Pose} from '../pose/pose.state';
+import {EstimatedPose} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
@@ -134,7 +134,7 @@ describe('AnimationService', () => {
         width: 1280,
         height: 720,
       },
-    } as Pose;
+    } as EstimatedPose;
 
     // eslint-disable-next-line max-len
     const y = [

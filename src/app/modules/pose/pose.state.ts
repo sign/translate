@@ -12,7 +12,7 @@ export interface PoseLandmark {
 
 export const EMPTY_LANDMARK: PoseLandmark = {x: 0, y: 0, z: 0};
 
-export interface Pose {
+export interface EstimatedPose {
   faceLandmarks: PoseLandmark[];
   poseLandmarks: PoseLandmark[];
   rightHandLandmarks: PoseLandmark[];
@@ -22,7 +22,7 @@ export interface Pose {
 
 export interface PoseStateModel {
   isLoaded: boolean;
-  pose: Pose;
+  pose: EstimatedPose;
 }
 
 const initialState: PoseStateModel = {

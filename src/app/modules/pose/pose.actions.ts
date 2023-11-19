@@ -1,4 +1,4 @@
-import {Pose} from './pose.state';
+import {EstimatedPose} from './pose.state';
 
 export class LoadPoseEstimationModel {
   static readonly type = '[Pose] Load Pose Estimation Model';
@@ -15,5 +15,5 @@ export class PoseVideoFrame {
 export class StoreFramePose {
   static readonly type = '[Pose] Store Frame Pose';
 
-  constructor(public pose: Pose) {}
+  constructor(public pose: EstimatedPose) {}
 }

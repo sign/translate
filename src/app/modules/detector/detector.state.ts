@@ -3,7 +3,7 @@ import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {DetectorService} from './detector.service';
 import {DetectSigning} from './detector.actions';
 import {filter, first, tap} from 'rxjs/operators';
-import {Pose} from '../pose/pose.state';
+import {EstimatedPose} from '../pose/pose.state';
 import {Observable} from 'rxjs';
 
 export interface DetectorStateModel {
@@ -23,11 +23,11 @@ const initialState: DetectorStateModel = {
 })
 export class DetectorState implements NgxsOnInit {
   detectSign = false;
-  pose$: Observable<Pose>;
+  pose$: Observable<EstimatedPose>;
   detectSign$: Observable<boolean>;
 
   constructor(private store: Store, private detector: DetectorService) {
-    this.pose$ = this.store.select<Pose>(state => state.pose.pose);
+    this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
     this.detectSign$ = this.store.select<boolean>(state => state.settings.detectSign);
   }
 
@@ -46,7 +46,7 @@ export class DetectorState implements NgxsOnInit {
       .pipe(
         filter(Boolean),
         filter(() => this.detectSign), // Only run if needed
-        tap((pose: Pose) => dispatch(new DetectSigning(pose)))
+        tap((pose: EstimatedPose) => dispatch(new DetectSigning(pose)))
       )
       .subscribe();
   }
