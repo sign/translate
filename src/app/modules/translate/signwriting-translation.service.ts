@@ -70,7 +70,7 @@ export class SignWritingTranslationService {
       translations = translations.map((t: any) => ({text: t}));
     }
 
-    translations = translations.map(({text}) => ({text: this.detokenizeSignWriting(text)}));
+    translations = translations.map(({text}) => ({text: this.postProcessSignWriting(text)}));
 
     return translations[0];
   }
@@ -112,12 +112,12 @@ export class SignWritingTranslationService {
   ): Observable<TranslationResponse> {
     const direction: TranslationDirection = 'spoken-to-signed';
     const offlineSpecific = () => {
-      const newText = `${this.tokenizeSpokenText(text)}`;
+      const newText = `${this.preProcessSpokenText(text)}`;
       return from(this.translateOffline(direction, newText, spokenLanguage, signedLanguage));
     };
 
     const offlineGeneric = () => {
-      const newText = `$${spokenLanguage} $${signedLanguage} ${this.tokenizeSpokenText(text)}`;
+      const newText = `$${spokenLanguage} $${signedLanguage} ${this.preProcessSpokenText(text)}`;
       return from(this.translateOffline(direction, newText, 'spoken', 'signed'));
     };
 
@@ -130,20 +130,15 @@ export class SignWritingTranslationService {
     );
   }
 
-  tokenizeSpokenText(text: string) {
-    return Array.from(text.replaceAll(' ', '_')).join(' ');
+  preProcessSpokenText(text: string) {
+    return text.replace('\n', ' ');
   }
 
-  detokenizeSignWriting(text: string) {
-    // first, remove all tokens that start with a $
+  postProcessSignWriting(text: string) {
+    // remove all tokens that start with a $
     text = text.replace(/\$[^\s]+/g, '');
 
-    // detokenize the rest
-    text = text.replace(/p(\d*) p(\d*)/g, '$1x$2');
-    text = text.replace(/c(\d)\d? r(.)/g, '$1$2');
-    text = text.replace(/c(\d)\d?/g, '$1 0');
-    text = text.replace(/r(.)/g, '0$1');
-
+    // space signs correctly
     text = text.replace(/ /g, '');
     text = text.replace(/(\d)M/g, '$1 M');
 

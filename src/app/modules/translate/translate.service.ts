@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
-import {firstValueFrom, from, Observable, switchMap} from 'rxjs';
+import {from, Observable, switchMap} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {AppCheck} from '../../core/helpers/app-check/app-check';
