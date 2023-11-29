@@ -31,6 +31,11 @@
                 "output": "./assets/models/holistic/"
               },
               {
+                "glob": "**/*",
+                "input": "./node_modules/@mediapipe/tasks-text/wasm/",
+                "output": "./assets/models/mediapipe-language-detector/"
+              },
+              {
                 "glob": "*.wasm",
                 "input": "./node_modules/@tensorflow/tfjs-backend-wasm/dist/",
                 "output": "./assets/models/tfjs-backend-wasm/"
@@ -169,6 +174,11 @@
                 "glob": "**/*",
                 "input": "./node_modules/@mediapipe/holistic/",
                 "output": "./assets/models/holistic/"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@mediapipe/tasks-text/wasm/",
+                "output": "./assets/models/mediapipe-language-detector/"
               },
               {
                 "glob": "*.wasm",

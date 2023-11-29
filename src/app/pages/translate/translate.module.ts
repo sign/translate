@@ -21,6 +21,7 @@ import {FormsModule} from '@angular/forms';
 import {SpeechToTextModule} from '../../components/speech-to-text/speech-to-text.module';
 import {TextToSpeechModule} from '../../components/text-to-speech/text-to-speech.module';
 import {VideoModule} from '../../components/video/video.module';
+import {TranslateModule} from '../../modules/translate/translate.module';
 
 const routes = [
   {
@@ -49,7 +50,7 @@ const components = [
     CommonModule,
     IonicModule,
     AppTranslocoModule,
-    NgxsModule.forFeature([TranslateState]),
+    TranslateModule,
     MatTooltipModule,
     RouterModule.forChild(routes),
 

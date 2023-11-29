@@ -7,24 +7,24 @@ PODS:
   - CapacitorCordova (5.5.1)
   - CapacitorFilesystem (5.1.4):
     - Capacitor
-  - CapacitorFirebaseAnalytics (5.2.0):
+  - CapacitorFirebaseAnalytics (5.3.0):
     - Capacitor
-    - CapacitorFirebaseAnalytics/Lite (= 5.2.0)
-  - CapacitorFirebaseAnalytics/Analytics (5.2.0):
+    - CapacitorFirebaseAnalytics/Lite (= 5.3.0)
+  - CapacitorFirebaseAnalytics/Analytics (5.3.0):
     - Capacitor
     - FirebaseAnalytics (= 10.8.0)
-  - CapacitorFirebaseAnalytics/Lite (5.2.0):
+  - CapacitorFirebaseAnalytics/Lite (5.3.0):
     - Capacitor
-  - CapacitorFirebaseApp (5.2.0):
+  - CapacitorFirebaseApp (5.3.0):
     - Capacitor
     - FirebaseCore (= 10.8.0)
-  - CapacitorFirebaseAppCheck (5.2.0):
+  - CapacitorFirebaseAppCheck (5.3.0):
     - Capacitor
     - FirebaseAppCheck (= 10.8.0)
-  - CapacitorFirebaseCrashlytics (5.2.0):
+  - CapacitorFirebaseCrashlytics (5.3.0):
     - Capacitor
     - FirebaseCrashlytics (= 10.8.0)
-  - CapacitorFirebasePerformance (5.2.0):
+  - CapacitorFirebasePerformance (5.3.0):
     - Capacitor
     - FirebasePerformance (= 10.8.0)
   - CapacitorKeyboard (5.0.6):
@@ -225,11 +225,11 @@ SPEC CHECKSUMS:
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
   CapacitorCordova: e128cc7688c070ca0bfa439898a5f609da8dbcfe
   CapacitorFilesystem: af704badfbc69f6f8623d9ed313e5490e3723dcb
-  CapacitorFirebaseAnalytics: 3755413bdeea4cf9169c4063ff621a1ab22ee9ce
-  CapacitorFirebaseApp: fbdd325f8d67b7be7950b9b76d2aa3d0e1aede9d
-  CapacitorFirebaseAppCheck: eba071266612be9f851d6caffed4aaa24ada4134
-  CapacitorFirebaseCrashlytics: 9cdcc0bc73167468586794acc5f1c7ace34ef81a
-  CapacitorFirebasePerformance: d8f715abf7317b8798a6280990d2cb0fcc431d9c
+  CapacitorFirebaseAnalytics: 3608521b33801562622c05ce29f8a1d7e34ec68a
+  CapacitorFirebaseApp: ca0583791fafaae11607c8a643eb1ad4398c59d7
+  CapacitorFirebaseAppCheck: cdab78d08aa0a85d4748e405739d168514e7c7af
+  CapacitorFirebaseCrashlytics: b3e1c8491f2ac10affbbdb7fe0edde4424b35b9a
+  CapacitorFirebasePerformance: ad18ad5633f37047a3f49ec0b9cdea99ffd990d0
   CapacitorKeyboard: b978154b024a5f65e044908e37d15b7de58b9d12
   CapacitorShare: cd41743331cb71d217c029de54b681cbd91e0fcc
   CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd

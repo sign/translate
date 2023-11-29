@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Inject, Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {
   ChangeTranslation,
@@ -19,10 +19,11 @@ import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
 import {EMPTY, filter, Observable} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
-import {map, tap} from 'rxjs/operators';
+import {tap} from 'rxjs/operators';
 import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';
+import {LanguageDetectionService} from './language-detection/language-detection.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -67,7 +68,8 @@ export class TranslateState implements NgxsOnInit {
   constructor(
     private store: Store,
     private service: TranslationService,
-    private swService: SignWritingTranslationService
+    private swService: SignWritingTranslationService,
+    private languageDetectionService: LanguageDetectionService
   ) {
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
   }
@@ -138,8 +140,8 @@ export class TranslateState implements NgxsOnInit {
       return;
     }
 
-    await this.service.initCld();
-    const detectedLanguage = await this.service.detectSpokenLanguage(spokenLanguageText);
+    await this.languageDetectionService.init();
+    const detectedLanguage = await this.languageDetectionService.detectSpokenLanguage(spokenLanguageText);
     patchState({detectedLanguage});
   }
 

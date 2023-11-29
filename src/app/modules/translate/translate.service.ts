@@ -1,22 +1,13 @@
 import {Injectable} from '@angular/core';
-import {LanguageIdentifier} from 'cld3-asm';
-import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {from, Observable, switchMap} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {AppCheck} from '../../core/helpers/app-check/app-check';
 
-const OBSOLETE_LANGUAGE_CODES = {
-  iw: 'he',
-};
-const DEFAULT_SPOKEN_LANGUAGE = 'en';
-
 @Injectable({
   providedIn: 'root',
 })
 export class TranslationService {
-  private cld: LanguageIdentifier;
-
   signedLanguages = [
     'ase',
     'gsg',
@@ -174,27 +165,7 @@ export class TranslationService {
     'zu',
   ];
 
-  constructor(private ga: GoogleAnalyticsService, private http: HttpClient) {}
-
-  async initCld(): Promise<void> {
-    if (this.cld) {
-      return;
-    }
-    const cld3 = await this.ga.trace('cld', 'import', () => import(/* webpackChunkName: "cld3-asm" */ 'cld3-asm'));
-    const cldFactory = await this.ga.trace('cld', 'load', () => cld3.loadModule());
-    this.cld = await this.ga.trace('cld', 'create', () => cldFactory.create(1, 500));
-  }
-
-  async detectSpokenLanguage(text: string): Promise<string> {
-    if (!this.cld) {
-      return DEFAULT_SPOKEN_LANGUAGE;
-    }
-
-    const language = await this.ga.trace('cld', 'find', () => this.cld.findLanguage(text));
-    const languageCode = language.is_reliable ? language.language : DEFAULT_SPOKEN_LANGUAGE;
-    const correctedCode = OBSOLETE_LANGUAGE_CODES[languageCode] ?? languageCode;
-    return this.spokenLanguages.includes(correctedCode) ? correctedCode : DEFAULT_SPOKEN_LANGUAGE;
-  }
+  constructor(private http: HttpClient) {}
 
   normalizeSpokenLanguageText(language: string, text: string): Observable<string> {
     const params = new URLSearchParams();

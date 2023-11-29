@@ -8,12 +8,9 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {RouteReuseStrategy} from '@angular/router';
 import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
-import {isSafari} from './core/constants';
 import {AppTranslocoModule} from './core/modules/transloco/transloco.module';
 import {AppNgxsModule} from './core/modules/ngxs/ngxs.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-const mode = isSafari ? 'ios' : 'md';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +18,7 @@ const mode = isSafari ? 'ios' : 'md';
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
     AppNgxsModule,
-    IonicModule.forRoot({mode}),
+    IonicModule.forRoot(),
     AppRoutingModule,
     AppTranslocoModule,
 

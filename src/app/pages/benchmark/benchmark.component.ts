@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
-import {TranslationService} from '../../modules/translate/translate.service';
 import {PoseService} from '../../modules/pose/pose.service';
 import {transferableImage} from '../../core/helpers/image/transferable';
+import {LanguageDetectionService} from '../../modules/translate/language-detection/language-detection.service';
 
 @Component({
   selector: 'app-benchmark',
@@ -22,7 +22,7 @@ export class BenchmarkComponent {
   constructor(
     private ga: GoogleAnalyticsService,
     private pix2pix: Pix2PixService,
-    private translation: TranslationService,
+    private languageDetection: LanguageDetectionService,
     private pose: PoseService
   ) {}
 
@@ -74,12 +74,12 @@ export class BenchmarkComponent {
   }
 
   async cldBench() {
-    await this.translation.initCld();
+    await this.languageDetection.init();
     this.buildStats();
 
     // Evaluate 30 texts
     for (let i = 0; i < 30; i++) {
-      await this.translation.detectSpokenLanguage('Lorem ipsum dolor sit amet');
+      await this.languageDetection.detectSpokenLanguage('Lorem ipsum dolor sit amet');
       this.buildStats();
     }
   }
