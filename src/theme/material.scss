@@ -54,3 +54,7 @@ $app-dark-theme: mat.define-dark-theme(
 @media (prefers-color-scheme: dark) {
   @include theme-components($app-dark-theme);
 }
+
+mat-tab-group {
+  --mat-tab-header-divider-height: 0;
+}
