@@ -33,7 +33,7 @@ const initialState: SettingsStateModel = {
 
   poseViewer: 'pose',
 
-  appearance: '#ffc8c8',
+  appearance: '#ffffff',
 };
 
 @Injectable()
