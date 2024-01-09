@@ -3,8 +3,7 @@
   "compilerOptions": {
     "outDir": "./out-tsc/worker",
     "lib": ["es2018", "webworker"],
-    "types": [],
-    "skipLibCheck": true
+    "types": []
   },
   "include": ["src/**/*.worker.ts"]
 }
