@@ -96,7 +96,7 @@
     "tslib": "2.6.2",
     "web-vitals": "3.5.1",
     "webm-muxer": "4.0.1",
-    "zone.js": "0.14.2"
+    "zone.js": "0.14.3"
   },
   "devDependencies": {
     "@angular-devkit/architect": "0.1700.9",

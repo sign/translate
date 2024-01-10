@@ -116,7 +116,7 @@
         "destination": "about/tools/index.html"
       },
       {
-        "source": "**",
+        "source": "!/assets/**",
         "destination": "/index.html"
       }
     ]
