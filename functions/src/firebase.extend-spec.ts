@@ -56,6 +56,14 @@ export function setupFirebaseTestEnvironment(clearStorage = true): FirebaseTestE
       file: (p: string) => {
         const ref = storage.ref(p);
         return {
+          exists: async () => {
+            return [
+              await ref
+                .getMetadata()
+                .then(() => true)
+                .catch(() => false),
+            ];
+          },
           save: (data: any) => {
             if (typeof data === 'string') {
               return ref.putString(data);

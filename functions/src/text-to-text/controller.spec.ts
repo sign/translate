@@ -93,7 +93,7 @@ describe('TextToTextTranslationEndpoint', () => {
       direction: 'spoken-to-signed',
       from: 'en',
       to: 'ru',
-      text: 'Здравствуйте,',
+      text: 'Здравствуйте, здравствуйте',
     });
   });
 

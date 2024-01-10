@@ -1,6 +1,6 @@
 import {TextNormalizationEndpoint} from './controller';
 import {setupFirebaseTestEnvironment} from '../firebase.extend-spec';
-import {StringParam} from 'firebase-functions/lib/params/types';
+import {defineString} from 'firebase-functions/params';
 
 const MockExpressRequest = require('mock-express-request');
 const MockExpressResponse = require('mock-express-response');
@@ -10,9 +10,9 @@ describe('TextNormalizationEndpoint', () => {
 
   let controller: TextNormalizationEndpoint;
   beforeEach(() => {
-    const key = new StringParam('mock-key');
+    const key = defineString('mock-key');
     controller = new TextNormalizationEndpoint(testEnvironment.database, key);
-    spyOn(controller, 'normalize').and.returnValue(Promise.resolve('mock normalized text'));
+    jest.spyOn(controller, 'normalize').mockResolvedValue('mock normalized text');
   });
 
   it('should error missing "lang"', async () => {
@@ -23,7 +23,7 @@ describe('TextNormalizationEndpoint', () => {
     });
     const mockRes = new MockExpressResponse({request: mockReq});
 
-    await expect(controller.request(mockReq, mockRes)).rejects.toThrow(new Error('Missing "from" query parameter'));
+    await expect(controller.request(mockReq, mockRes)).rejects.toThrow(new Error('Missing "lang" query parameter'));
   });
 
   it('should error missing "text"', async () => {
@@ -54,7 +54,7 @@ describe('TextNormalizationEndpoint', () => {
 
     expect(response).toEqual({
       lang: 'en',
-      text: 'mock normalized text,',
+      text: 'mock normalized text',
     });
   });
 
@@ -77,17 +77,16 @@ describe('TextNormalizationEndpoint', () => {
   });
 
   it('should respond with cached response if exists', async () => {
-    const helloMd5 = '5d41402abc4b2a76b9719d911017c592';
-    const ref = testEnvironment.database.ref('/normalizations/en/' + helloMd5);
+    const ref = controller.getDBRef('en', 'hello');
     await ref.set({
       input: 'hello',
-      output: 'fake translation',
+      output: 'fake response',
       counter: 1,
       timestamp: Date.now(),
     });
 
     const response = await normalizeExample();
-    expect(response.text).toEqual('fake translation');
+    expect(response.text).toEqual('fake response');
 
     const snapshot = await ref.once('value');
     expect(snapshot.exists()).toBe(true);
