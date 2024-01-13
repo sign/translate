@@ -1,4 +1,4 @@
-# License for `sign/translate`
+# License for [`sign/translate`](https://github.com/sign/translate)
 
 The license for `sign/translate` is divided into two tiers, based on the type of your legal entity.
 Individuals, non-profit organizations, and educational institutions are permitted to use `sign/translate` for sign language translation without charge,
@@ -187,4 +187,4 @@ d. Nothing in this Public License constitutes or may be interpreted as a limitat
 The commercial license is required for organizations that do not meet the criteria for the free license.
 
 Detailed information about the commercial license, including the scope of its usage and the licensing fee, will be provided upon request.
-Please direct all inquiries regarding the commercial license to `license@sign.mt`.
+Please direct all inquiries regarding the commercial license to <a href="mailto:license@sign.mt">license&#64;sign.mt</a>.

@@ -1,1 +1,41 @@
-<p>privacy works!</p>
+<h1>
+  Privacy Policy for <a href="https://github.com/sign/translate"><code>sign/translate</code></a>
+</h1>
+<p>
+  This policy is work in progress, and will be updated periodically to reflect changes in our practices or regulatory
+  requirements. Users are encouraged to review it regularly.
+</p>
+
+<h2>Our Commitment to Privacy</h2>
+<p>
+  At <code>sign.mt</code>, privacy is a top priority. We are dedicated to processing data locally whenever possible,
+  minimizing the need to send information over the internet. However, in some instances, online processing is necessary
+  to provide the best experience.
+</p>
+
+<h2>Data Collection and Usage</h2>
+<h3>HTTP Requests and Logging</h3>
+<ul>
+  <li>
+    Every HTTP request made to our backend is recorded, along with diagnostic details, the request URL, and the body of
+    the request.
+  </li>
+  <li>This data is stored in Google BigQuery and Google Cloud Logs.</li>
+  <li>
+    Currently, we primarily log requests from the spoken-to-signed translation feature, including user inputs for
+    translation and selected languages.
+  </li>
+</ul>
+<h3>Text Normalization and Vocalization</h3>
+<ul>
+  <li>For text normalization and vocalization services, we utilize ChatGPT by OpenAI.</li>
+  <li>
+    Textual inputs are sent to OpenAI for processing. For more details on how OpenAI handles data, please refer to their
+    <a href="https://openai.com/policies/privacy-policy">Privacy Policy</a>.
+  </li>
+</ul>
+<h3>General User Metadata</h3>
+<ul>
+  <li>We collect general user metadata like language preference, device type, and IP address.</li>
+  <li>This information is logged by Google Analytics and is used for aggregated analytics purposes.</li>
+</ul>

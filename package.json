@@ -145,6 +145,7 @@
     "karma-safari-launcher": "1.0.0",
     "karma-spec-reporter": "0.0.36",
     "lint-staged": "15.2.0",
+    "marked": "11.1.1",
     "open": "10.0.3",
     "pwa-asset-generator": "6.3.1",
     "sitemap": "7.1.1",

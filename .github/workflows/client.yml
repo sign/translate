@@ -35,6 +35,9 @@ jobs:
       - name: Install Dependencies
         run: bun install
 
+      - name: Create terms and conditions
+        run: bun x marked -i LICENSE.md -o src/app/pages/landing/terms/terms.component.html
+
       - name: Lint code
         run: bun run lint
 

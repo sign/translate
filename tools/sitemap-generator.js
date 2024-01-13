@@ -22,7 +22,9 @@ const baseUrls = [
 const additionalUrls = [
   '/about/languages/', // TODO move to baseUrls once translated
   '/about/contribute/', // TODO move to baseUrls once translated
-  '/legal/licenses/', // TODO move to baseUrls once translated
+  '/legal/licenses/',
+  '/legal/terms/',
+  '/legal/privacy/',
 ];
 
 const sourceData = [];
