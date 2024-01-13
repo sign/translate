@@ -4,7 +4,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {PlayableVideoEncoder} from '../playable-muxer';
+import {PlayableVideoEncoder} from '../playable-video-encoder';
 
 @Component({
   selector: 'app-skeleton-pose-viewer',

@@ -4,7 +4,7 @@ import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
-import {PlayableVideoEncoder} from './playable-muxer';
+import {PlayableVideoEncoder} from './playable-video-encoder';
 
 @Component({
   selector: 'app-pose-viewer',
