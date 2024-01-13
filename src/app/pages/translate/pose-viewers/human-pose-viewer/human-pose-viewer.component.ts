@@ -97,6 +97,15 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     await this.addCacheFrame(imageBitmap);
   }
 
+  drawFrame(bitmap: ImageBitmap, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (this.background) {
+      ctx.fillStyle = this.background;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    ctx.drawImage(bitmap, 0, 0);
+  }
+
   override reset(): void {
     super.reset();
     this.ready = false;
@@ -124,12 +133,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
         tap(() => {
           i++;
           if (i < this.cache.length) {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            if (this.background) {
-              ctx.fillStyle = this.background;
-              ctx.fillRect(0, 0, canvas.width, canvas.height);
-            }
-            ctx.drawImage(this.cache[i], 0, 0);
+            this.drawFrame(this.cache[i], canvas, ctx);
             delete this.cache[i]; // Free up memory after cached frame is no longer necessary
           } else {
             this.cacheSubscription.unsubscribe();

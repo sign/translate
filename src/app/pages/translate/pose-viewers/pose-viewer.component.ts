@@ -52,6 +52,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     const isTransparencySupported =
       'chrome' in window && // transparency is currently not supported in firefox and safari
       !this.supportsVideoEncoder; // alpha is not yet supported in chrome VideoEncoder
+    // TODO check if alpha is supported in Video Muxer
     if (!isTransparencySupported) {
       // Make the video background the same as the parent element's background
       const el = document.querySelector('app-signed-language-output');
