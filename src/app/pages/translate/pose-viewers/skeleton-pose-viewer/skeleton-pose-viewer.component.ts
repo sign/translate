@@ -4,6 +4,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {PlayableVideoEncoder} from '../playable-muxer';
 
 @Component({
   selector: 'app-skeleton-pose-viewer',
@@ -31,7 +32,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
           pose.currentTime = 0; // Force time back to 0
 
           // startRecording is imperfect, specifically when the tab is out of focus.
-          if (!this.supportsVideoEncoder) {
+          if (!PlayableVideoEncoder.isSupported()) {
             await this.startRecording(poseCanvas as any);
           }
         }),
@@ -40,7 +41,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
       .subscribe();
 
     // Most reliable method to create a video from a canvas
-    if (this.supportsVideoEncoder) {
+    if (PlayableVideoEncoder.isSupported()) {
       let lastRendered = NaN;
       fromEvent(pose, 'render$')
         .pipe(

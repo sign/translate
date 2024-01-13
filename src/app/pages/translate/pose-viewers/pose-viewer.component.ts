@@ -4,16 +4,7 @@ import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
-import type {ArrayBufferTarget as WebmArrayBufferTarget, Muxer as WebmMuxer} from 'webm-muxer';
-import type {ArrayBufferTarget as Mp4ArrayBufferTarget, Muxer as Mp4Muxer} from 'mp4-muxer';
-import {isSafari} from '../../../core/constants';
-
-const BPS = 1_000_000_000; // 1GBps, to act as infinity
-
-interface VideoCodecInfo {
-  codec: string;
-  forceEvenSizedFrames: boolean;
-}
+import {PlayableVideoEncoder} from './playable-muxer';
 
 @Component({
   selector: 'app-pose-viewer',
@@ -31,10 +22,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   mediaSubscriptions: Subscription[] = [];
 
   // Use a video encoder on supported browsers
-  supportsVideoEncoder = 'VideoEncoder' in window;
-  videoEncoder: VideoEncoder;
-  videoType: 'webm' | 'mp4';
-  muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
+  videoEncoder: PlayableVideoEncoder;
 
   cache: ImageBitmap[] = [];
   cacheSubscription: Subscription;
@@ -51,7 +39,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     // Some browsers videos can't have a transparent background
     const isTransparencySupported =
       'chrome' in window && // transparency is currently not supported in firefox and safari
-      !this.supportsVideoEncoder; // alpha is not yet supported in chrome VideoEncoder
+      !PlayableVideoEncoder.isSupported(); // alpha is not yet supported in chrome VideoEncoder
     // TODO check if alpha is supported in Video Muxer
     if (!isTransparencySupported) {
       // Make the video background the same as the parent element's background
@@ -78,9 +66,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   override ngOnDestroy(): void {
     super.ngOnDestroy();
 
-    if (this.mediaRecorder && this.mediaRecorder.state !== 'inactive') {
-      this.mediaRecorder.stop();
-    }
+    this.reset();
   }
 
   setVideo(url: string): void {
@@ -92,95 +78,16 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     return pose.body.fps;
   }
 
-  videoDimensions(image: ImageBitmap, forceEvenSizedFrames: boolean = false) {
-    let width = image.width;
-    let height = image.height;
-
-    if (forceEvenSizedFrames) {
-      if (image.width % 2 !== 0) {
-        width += 1;
-      }
-      if (image.height % 2 !== 0) {
-        height += 1;
-      }
-    }
-
-    return {width, height};
-  }
-
-  async createMuxer(image: ImageBitmap): Promise<VideoCodecInfo> {
-    // Creates the muxer and returns the relevant codec
-
-    const fps = await this.fps();
-
-    // TODO: this condition can be improved, to be based on the
-    //  browser's support for the codecs rather than the browser itself
-    if (isSafari) {
-      const {Muxer, ArrayBufferTarget} = await import('mp4-muxer');
-      this.videoType = 'mp4';
-
-      this.muxer = new Muxer({
-        target: new ArrayBufferTarget(),
-        fastStart: 'in-memory',
-        video: {
-          codec: 'avc',
-          ...this.videoDimensions(image, true),
-        },
-      });
-
-      return {
-        codec: 'avc1.42001f',
-        // H264 only supports even sized frames
-        forceEvenSizedFrames: true,
-      };
-    }
-
-    const {Muxer, ArrayBufferTarget} = await import('webm-muxer');
-    this.videoType = 'webm';
-    this.muxer = new Muxer({
-      target: new ArrayBufferTarget(),
-      video: {
-        codec: 'V_VP9',
-        ...this.videoDimensions(image),
-        frameRate: fps,
-        alpha: true,
-      },
-    });
-
-    return {
-      codec: 'vp09.00.10.08',
-      forceEvenSizedFrames: false,
-    };
-  }
-
   async initVideoEncoder(image: ImageBitmap) {
-    const {codec, forceEvenSizedFrames} = await this.createMuxer(image);
-
-    this.videoEncoder = new VideoEncoder({
-      output: (chunk, meta) => this.muxer.addVideoChunk(chunk, meta),
-      error: e => console.error(e),
-    });
-    const config = {
-      codec,
-      ...this.videoDimensions(image, forceEvenSizedFrames),
-      bitrate: BPS,
-      framerate: await this.fps(),
-      // alpha: 'keep' as AlphaOption // TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#242
-    };
-    this.videoEncoder.configure(config);
+    const fps = await this.fps();
+    this.videoEncoder = new PlayableVideoEncoder(image, fps);
+    await this.videoEncoder.init();
   }
 
   async createEncodedVideo() {
-    await this.videoEncoder.flush();
-    this.muxer.finalize();
-
-    let {buffer} = this.muxer.target; // Buffer contains final muxed file
-    const blob = new Blob([buffer], {type: `video/${this.videoType}`});
+    const blob = await this.videoEncoder.finalize();
     const url = URL.createObjectURL(blob);
     this.setVideo(url);
-
-    this.videoEncoder.close();
-    delete this.videoEncoder;
   }
 
   initMediaRecorder(stream: MediaStream) {
@@ -189,7 +96,8 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     let supportedMimeType: string;
     for (const mimeType of this.mimeTypes) {
       if (MediaRecorder.isTypeSupported(mimeType)) {
-        this.mediaRecorder = new MediaRecorder(stream, {mimeType, videoBitsPerSecond: BPS});
+        const videoBitsPerSecond = 1_000_000_000; // 1Gbps to act as infinity
+        this.mediaRecorder = new MediaRecorder(stream, {mimeType, videoBitsPerSecond});
         supportedMimeType = mimeType;
         break;
       } else {
@@ -248,18 +156,11 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   async addCacheFrame(image: ImageBitmap): Promise<void> {
-    if (this.supportsVideoEncoder) {
+    if (PlayableVideoEncoder.isSupported()) {
       if (!this.videoEncoder) {
         await this.initVideoEncoder(image);
       }
-      const ms = 1_000_000; // 1µs
-      const fps = await this.fps();
-      const frame = new VideoFrame(image, {
-        timestamp: (ms * this.frameIndex) / fps,
-        duration: ms / fps,
-      });
-      this.videoEncoder.encode(frame);
-      frame.close();
+      this.videoEncoder.addFrame(this.frameIndex, image);
     } else {
       this.cache.push(image);
     }
@@ -281,15 +182,15 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
     // Reset media recorder
     if (this.mediaRecorder) {
-      this.mediaRecorder.stop();
+      if (this.mediaRecorder.state !== 'inactive') {
+        this.mediaRecorder.stop();
+      }
       delete this.mediaRecorder;
     }
 
     // Reset video encoder
     if (this.videoEncoder) {
       this.videoEncoder.close();
-      delete this.videoEncoder;
-      delete this.muxer;
     }
   }
 }
