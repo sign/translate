@@ -43,16 +43,14 @@ export class PlayableVideoEncoder {
 
     const videoConfig = {
       contentType: `video/${this.container}; codecs="${this.codec}"`,
-      width: 1280, // Replace with actual width
-      height: 720, // Replace with actual height
+      width: this.width,
+      height: this.height,
       bitrate: this.bitrate,
       framerate: this.fps,
       hasAlphaChannel: this.alpha,
     };
 
-    const result = await navigator.mediaCapabilities.decodingInfo({type: 'file', video: videoConfig});
-    console.log(result);
-    const {supported} = result;
+    const {supported} = await navigator.mediaCapabilities.decodingInfo({type: 'file', video: videoConfig});
     return supported;
   }
 
