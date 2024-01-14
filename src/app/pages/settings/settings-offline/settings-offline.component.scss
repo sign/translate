@@ -19,6 +19,10 @@ mat-progress-spinner {
 }
 
 mat-nested-tree-node mat-nested-tree-node {
-  padding-inline-start: 20px;
   display: block;
+}
+
+mat-nested-tree-node mat-nested-tree-node,
+mat-nested-tree-node mat-tree-node {
+  padding-inline-start: 20px;
 }
