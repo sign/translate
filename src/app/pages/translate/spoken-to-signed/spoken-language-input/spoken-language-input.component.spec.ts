@@ -10,7 +10,6 @@ import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {SpeechToTextModule} from '../../../../components/speech-to-text/speech-to-text.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('SpokenLanguageInputComponent', () => {

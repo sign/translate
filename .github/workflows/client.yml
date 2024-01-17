@@ -36,7 +36,7 @@ jobs:
         run: bun install
 
       - name: Create terms and conditions
-        run: bun x marked -i LICENSE.md -o src/app/pages/landing/terms/terms.component.html
+        run: bun run generate:terms
 
       - name: Lint code
         run: bun run lint
@@ -53,10 +53,10 @@ jobs:
         run: bun run prerender
 
       - name: Generate Sitemap
-        run: bun tools/sitemap-generator.js
+        run: bun run generate:sitemap
 
       - name: Generate Licenses File
-        run: bun x -y npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions
+        run: bun run generate:licenses
 
       - name: Zip dist
         run: zip -r dist/sign-translate/browser.zip dist/sign-translate/browser/

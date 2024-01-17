@@ -12,8 +12,6 @@ import {TranslateInputButtonComponent} from './input/button/button.component';
 import {DropPoseFileModule} from './drop-pose-file/drop-pose-file.module';
 import {TranslateLanguageSelectorsModule} from './language-selectors/language-selectors.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {NgxsModule} from '@ngxs/store';
-import {TranslateState} from '../../modules/translate/translate.state';
 import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
 import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';

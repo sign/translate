@@ -17,7 +17,6 @@ import {SettingsMenuComponent} from './settings-menu/settings-menu.component';
 import {SettingsAppearanceImagesComponent} from './settings-appearance/settings-appearance-images/settings-appearance-images.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [

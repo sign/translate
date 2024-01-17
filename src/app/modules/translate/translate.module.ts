@@ -4,7 +4,6 @@ import {TranslateState} from './translate.state';
 import {TranslationService} from './translate.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';
 import {LanguageDetectionService} from './language-detection/language-detection.service';
-import {CLD3LanguageDetectionService} from './language-detection/cld3.service';
 import {MediaPipeLanguageDetectionService} from './language-detection/mediapipe.service';
 
 @NgModule({

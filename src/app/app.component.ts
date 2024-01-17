@@ -3,7 +3,6 @@ import {TranslocoService} from '@ngneat/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';
-import {Platform} from '@angular/cdk/platform';
 import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';

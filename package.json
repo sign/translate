@@ -22,7 +22,11 @@
     "serve:ssr": "node dist/sign-translate/server/main.js",
     "build:ssr": "ng build && ng run sign-translate:server",
     "prerender": "NODE_OPTIONS=--max_old_space_size=16384  ng run sign-translate:prerender:production",
-    "test:workflow": "act --container-architecture linux/amd64 --artifact-server-path /tmp/artifacts -W .github/workflows/client.yml"
+    "test:workflow": "act --container-architecture linux/amd64 --artifact-server-path /tmp/artifacts -W .github/workflows/client.yml",
+    "generate:terms": "marked -i LICENSE.md -o src/app/pages/landing/terms/terms.component.html",
+    "generate:sitemap": "node tools/sitemap-generator.js",
+    "generate:licenses": "npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions",
+    "build:full": "npm run generate:terms && npm run prerender && npm run generate:sitemap && npm run generate:licenses"
   },
   "engines": {
     "node": ">=18",
@@ -111,7 +115,7 @@
     "@capacitor/assets": "3.0.4",
     "@capacitor/cli": "5.6.0",
     "@ionic/angular-server": "7.6.4",
-    "@playwright/test": "1.40.1",
+    "@playwright/test": "1.41.0",
     "@sign-mt/configuration": "git://github.com/sign/.github.git",
     "@trapezedev/project": "7.0.10",
     "@types/dom-mediacapture-transform": "0.1.9",
@@ -124,8 +128,8 @@
     "@types/web-app-manifest": "1.0.7",
     "@types/webgl2": "0.0.10",
     "@types/wicg-file-system-access": "2023.10.4",
-    "@typescript-eslint/eslint-plugin": "6.18.1",
-    "@typescript-eslint/parser": "6.18.1",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
     "deepmerge": "4.3.1",
     "dotenv": "16.3.1",
     "eslint": "8.56.0",
@@ -154,6 +158,7 @@
     "tsx": "4.7.0",
     "typescript": "5.2.2",
     "webpack-bundle-analyzer": "4.10.1",
-    "zod": "3.22.4"
+    "zod": "3.22.4",
+    "npm-license-crawler": "0.2.1"
   }
 }
