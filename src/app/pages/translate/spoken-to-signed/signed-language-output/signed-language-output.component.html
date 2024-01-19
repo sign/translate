@@ -1,12 +1,13 @@
 <ng-container *ngIf="videoUrl; else noVideo">
   <video
-    [src]="videoUrl"
+    [src]="safeVideoUrl"
     autoplay
     loop
     muted
     playsinline
     height="100%"
     width="100%"
+    (error)="onVideoError($event)"
     (click)="playVideoIfPaused($event)"></video>
 </ng-container>
 <ng-template #noVideo>

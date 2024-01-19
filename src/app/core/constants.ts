@@ -10,3 +10,8 @@ export const isSafari =
   !/crios/i.test(nav('userAgent')) &&
   !/fxios/i.test(nav('userAgent')) &&
   !/Opera|OPT\//.test(nav('userAgent'));
+
+const isChrome = /(Chrome|Chromium)/i.test(nav('userAgent'));
+
+// Safari, mobile Chrome, not including desktop Chrome
+export const isWebKit = /AppleWebKit/i.test(nav('userAgent')) && (!isChrome || (isIOS && isChrome));

@@ -23,7 +23,8 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   pose$!: Observable<string>;
   video$!: Observable<string>;
 
-  videoUrl: SafeUrl;
+  videoUrl: string;
+  safeVideoUrl: SafeUrl;
   isSharingSupported: boolean;
 
   constructor(private store: Store, private domSanitizer: DomSanitizer) {
@@ -40,7 +41,8 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.video$
       .pipe(
         tap(url => {
-          this.videoUrl = url ? this.domSanitizer.bypassSecurityTrustUrl(url) : null;
+          this.videoUrl = url;
+          this.safeVideoUrl = url ? this.domSanitizer.bypassSecurityTrustUrl(url) : null;
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -64,9 +66,41 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   }
 
   playVideoIfPaused(event: MouseEvent): void {
-    const video = event.target as HTMLPoseViewerElement;
+    const video = event.target as HTMLVideoElement;
     if (video.paused) {
       video.play().then().catch();
+    }
+  }
+
+  async createVideoMediaSource() {
+    const res = await fetch(this.videoUrl);
+    const blob = await res.blob();
+
+    const mediaSource = new MediaSource();
+    mediaSource.addEventListener('sourceopen', async () => {
+      const sourceBuffer = mediaSource.addSourceBuffer(blob.type);
+      sourceBuffer.addEventListener('updateend', () => {
+        if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
+          mediaSource.endOfStream();
+        }
+      });
+      sourceBuffer.appendBuffer(await blob.arrayBuffer());
+    });
+
+    return mediaSource;
+  }
+
+  async onVideoError(event: ErrorEvent) {
+    // https://github.com/sign/translate/issues/127
+    if (this.safeVideoUrl === null) {
+      return;
+    }
+
+    const video = event.target as HTMLVideoElement;
+    if (!video.srcObject) {
+      // Fallback behavior to make sure the browser can play the video
+      this.safeVideoUrl = null;
+      video.srcObject = await this.createVideoMediaSource();
     }
   }
 }
