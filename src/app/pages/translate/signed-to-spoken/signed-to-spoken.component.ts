@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
-import {InputMode} from '../../../modules/translate/translate.state';
+import {InputMode, SignWritingObj} from '../../../modules/translate/translate.state';
 import {SetSignWritingText} from '../../../modules/translate/translate.actions';
 import {Observable} from 'rxjs';
 
@@ -80,7 +80,7 @@ export class SignedToSpokenComponent implements OnInit {
   videoState$!: Observable<VideoStateModel>;
   inputMode$!: Observable<InputMode>;
   spokenLanguage$!: Observable<string>;
-  signWriting$!: Observable<string[]>;
+  signWriting$!: Observable<SignWritingObj[]>;
 
   // This is bullshit for now
   translation = 'Translation';
@@ -89,17 +89,17 @@ export class SignedToSpokenComponent implements OnInit {
     this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
     this.inputMode$ = this.store.select<InputMode>(state => state.translate.inputMode);
     this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);
-    this.signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
+    this.signWriting$ = this.store.select<SignWritingObj[]>(state => state.translate.signWriting);
   }
 
   ngOnInit(): void {
     // To get the fake translation
+    let lastArray = [];
     const f = () => {
       this.translation = 'Translation';
 
       const video = document.querySelector('video');
       if (video) {
-        let lastArray = [];
         let resultArray = [];
         for (const step of FAKE_WORDS) {
           if (step.time <= video.currentTime) {

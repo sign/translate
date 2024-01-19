@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Store} from '@ngxs/store';
+import {SignWritingObj} from '../../../modules/translate/translate.state';
 
 @Component({
   selector: 'app-spoken-to-signed',
@@ -8,9 +9,9 @@ import {Store} from '@ngxs/store';
   styleUrls: ['./spoken-to-signed.component.scss'],
 })
 export class SpokenToSignedComponent {
-  signWriting$!: Observable<string[]>;
+  signWriting$!: Observable<SignWritingObj[]>;
 
   constructor(private store: Store) {
-    this.signWriting$ = this.store.select<string[]>(state => state.translate.signWriting);
+    this.signWriting$ = this.store.select<SignWritingObj[]>(state => state.translate.signWriting);
   }
 }

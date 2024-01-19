@@ -1,5 +1,5 @@
 <div id="signs" *ngIf="signs; else loading">
-  <fsw-sign *ngFor="let sign of signs" [attr.sign]="sign"></fsw-sign>
+  <fsw-sign *ngFor="let sign of signs" [attr.sign]="sign.fsw"></fsw-sign>
 </div>
 <ng-template #loading>
   <ion-progress-bar type="indeterminate"></ion-progress-bar>

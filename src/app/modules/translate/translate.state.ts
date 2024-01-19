@@ -27,6 +27,12 @@ import {LanguageDetectionService} from './language-detection/language-detection.
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
+export interface SignWritingObj {
+  fsw: string;
+  description?: string;
+  illustration?: string;
+}
+
 export interface TranslateStateModel {
   spokenToSigned: boolean;
   inputMode: InputMode;
@@ -37,7 +43,7 @@ export interface TranslateStateModel {
 
   spokenLanguageText: string;
   normalizedSpokenLanguageText?: string;
-  signWriting: string[];
+  signWriting: SignWritingObj[];
   signedLanguagePose: string; // TODO: use Pose object instead of URL
   signedLanguageVideo: string;
 }
@@ -221,12 +227,13 @@ export class TranslateState implements NgxsOnInit {
     await SignWritingService.loadFonts();
     await SignWritingService.cssLoaded();
 
-    const signWriting: string[] = await Promise.all(
+    const signWritingTexts: string[] = await Promise.all(
       text.map(sign => {
         const box = sign.startsWith('M') ? sign : 'M500x500' + sign;
         return SignWritingService.normalizeFSW(box);
       })
     );
+    const signWriting = signWritingTexts.map(fsw => ({fsw}));
     patchState({signWriting});
   }
 

@@ -4,6 +4,7 @@ import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {SignWritingService} from '../../../modules/sign-writing/sign-writing.service';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {SignWritingObj} from '../../../modules/translate/translate.state';
 
 @Component({
   selector: 'app-sign-writing',
@@ -11,7 +12,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
   styleUrls: ['./sign-writing.component.scss'],
 })
 export class SignWritingComponent extends BaseComponent implements OnInit, OnDestroy, OnChanges {
-  @Input() signs: string[];
+  @Input() signs: SignWritingObj[];
 
   static isCustomElementDefined = false;
 
