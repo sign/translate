@@ -66,3 +66,9 @@ export class UploadPoseFile {
 export class SuggestAlternativeText {
   static readonly type = '[Translate] Suggest Alternative Text';
 }
+
+export class DescribeSignWritingSign {
+  static readonly type = '[Translate] Describe a Single SignWriting Sign';
+
+  constructor(public fsw: string) {}
+}

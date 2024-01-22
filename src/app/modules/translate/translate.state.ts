@@ -3,6 +3,7 @@ import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {
   ChangeTranslation,
   CopySignedLanguageVideo,
+  DescribeSignWritingSign,
   DownloadSignedLanguageVideo,
   FlipTranslationDirection,
   SetInputMode,
@@ -17,7 +18,7 @@ import {
 } from './translate.actions';
 import {TranslationService} from './translate.service';
 import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/video/video.actions';
-import {EMPTY, filter, Observable} from 'rxjs';
+import {catchError, EMPTY, filter, Observable, of} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
 import {Capacitor} from '@capacitor/core';
@@ -210,6 +211,28 @@ export class TranslateState implements NgxsOnInit {
     return this.service.normalizeSpokenLanguageText(spokenLanguage, trimmedText).pipe(
       filter(text => text !== trimmedText),
       tap(text => patchState({normalizedSpokenLanguageText: text}))
+    );
+  }
+
+  @Action(DescribeSignWritingSign, {cancelUncompleted: true})
+  describeSignWritingSign({patchState, getState}: StateContext<TranslateStateModel>, {fsw}: DescribeSignWritingSign) {
+    if ('navigator' in globalThis && !navigator.onLine) {
+      return EMPTY;
+    }
+
+    return this.service.describeSignWriting(fsw).pipe(
+      catchError(e => of(e.message)),
+      tap((description: string) => {
+        const {signWriting} = getState();
+        const newSignWriting = signWriting.map(s => {
+          const obj: SignWritingObj = {...s};
+          if (obj.fsw === fsw) {
+            obj.description = description;
+          }
+          return obj;
+        });
+        patchState({signWriting: newSignWriting});
+      })
     );
   }
 

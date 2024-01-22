@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {from, Observable, switchMap} from 'rxjs';
+import {delay, from, Observable, of, switchMap} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {AppCheck} from '../../core/helpers/app-check/app-check';
@@ -178,6 +178,19 @@ export class TranslationService {
     return appCheckToken$.pipe(
       switchMap(token => this.http.get<{text: string}>(url, {headers: {'X-AppCheck-Token': token}})),
       map(response => response.text)
+    );
+  }
+
+  describeSignWriting(fsw: string): Observable<string> {
+    const url = 'https://sign.mt/api/signwriting-description';
+
+    const appCheckToken$ = from(AppCheck.getToken());
+
+    return appCheckToken$.pipe(
+      switchMap(token =>
+        this.http.post<{result: {description: string}}>(url, {data: {fsw}}, {headers: {'X-Firebase-AppCheck': token}})
+      ),
+      map(response => response.result.description)
     );
   }
 

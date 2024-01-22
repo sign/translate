@@ -6,7 +6,7 @@
         <div class="sign-language">
           <app-video [displayControls]="false" [displayFps]="false"></app-video>
         </div>
-        <app-sign-writing [signs]="signWriting$ | async"></app-sign-writing>
+        <app-sign-writing />
         <div class="translation-text">{{ translation }}</div>
       </div>
     </ng-container>
@@ -17,7 +17,7 @@
       <app-video [displayControls]="false" [displayFps]="false"></app-video>
     </div>
 
-    <app-sign-writing [signs]="signWriting$ | async"></app-sign-writing>
+    <app-sign-writing />
 
     <div class="translation-text">
       <div>Translation</div>

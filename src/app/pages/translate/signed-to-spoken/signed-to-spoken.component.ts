@@ -80,7 +80,6 @@ export class SignedToSpokenComponent implements OnInit {
   videoState$!: Observable<VideoStateModel>;
   inputMode$!: Observable<InputMode>;
   spokenLanguage$!: Observable<string>;
-  signWriting$!: Observable<SignWritingObj[]>;
 
   // This is bullshit for now
   translation = 'Translation';
@@ -89,7 +88,6 @@ export class SignedToSpokenComponent implements OnInit {
     this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
     this.inputMode$ = this.store.select<InputMode>(state => state.translate.inputMode);
     this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);
-    this.signWriting$ = this.store.select<SignWritingObj[]>(state => state.translate.signWriting);
   }
 
   ngOnInit(): void {

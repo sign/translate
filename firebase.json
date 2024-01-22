@@ -96,6 +96,10 @@
         "function": "translate-textToText"
       },
       {
+        "source": "/api/signwriting-description",
+        "function": "signwriting_description"
+      },
+      {
         "source": "about",
         "destination": "about/index.html"
       },
