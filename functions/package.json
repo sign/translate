@@ -37,8 +37,8 @@
     "@types/http-errors": "2.0.4",
     "@types/jest": "29.5.11",
     "@types/node-fetch": "2.6.11",
-    "@typescript-eslint/eslint-plugin": "6.19.0",
-    "@typescript-eslint/parser": "6.19.0",
+    "@typescript-eslint/eslint-plugin": "6.19.1",
+    "@typescript-eslint/parser": "6.19.1",
     "eslint": "8.56.0",
     "firebase-functions-test": "3.1.1",
     "firebase-tools": "13.0.3",
@@ -46,7 +46,7 @@
     "minimatch": "^9.0.3",
     "mock-express-request": "0.2.2",
     "mock-express-response": "0.3.0",
-    "ts-jest": "29.1.1",
+    "ts-jest": "29.1.2",
     "typescript": "5.3.3"
   }
 }

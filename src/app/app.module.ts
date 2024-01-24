@@ -11,6 +11,7 @@ import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 import {AppTranslocoModule} from './core/modules/transloco/transloco.module';
 import {AppNgxsModule} from './core/modules/ngxs/ngxs.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {isSafari} from './core/constants';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
     AppNgxsModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({mode: isSafari ? 'ios' : 'md'}),
     AppRoutingModule,
     AppTranslocoModule,
 
