@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {NavigatorService} from './core/services/navigator/navigator.service';
 import {AppRoutingModule} from './app-routing.module';
@@ -16,7 +15,7 @@ import {isSafari} from './core/constants';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule.withServerTransition({appId: 'serverApp'}),
+    BrowserModule,
     BrowserAnimationsModule,
     AppNgxsModule,
     IonicModule.forRoot({mode: isSafari ? 'ios' : 'md'}),
