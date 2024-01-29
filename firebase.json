@@ -92,12 +92,12 @@
         "function": "translate-textNormalization"
       },
       {
-        "source": "/api/**",
-        "function": "translate-textToText"
-      },
-      {
         "source": "/api/signwriting-description",
         "function": "signwriting_description"
+      },
+      {
+        "source": "{/api/spoken-to-signed,/api/signed-to-spoken}",
+        "function": "translate-textToText"
       },
       {
         "source": "about",
@@ -120,7 +120,7 @@
         "destination": "about/tools/index.html"
       },
       {
-        "source": "!/assets/**",
+        "source": "!{/assets/**,/api/**}",
         "destination": "/index.html"
       }
     ]

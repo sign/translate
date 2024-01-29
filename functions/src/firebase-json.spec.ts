@@ -34,9 +34,17 @@ describe('firebase.json', () => {
     expect(resolveRewrite('/random-path')).toEqual('/index.html');
   });
 
+  it('firebase.json should redirect "/api/spoken-to-signed" to the translate-textToText', async () => {
+    expect(resolveRewrite('/api/spoken-to-signed')).toEqual('translate-textToText');
+  });
+
   it('firebase.json should not redirect assets to the index.html', async () => {
     // Fixed in https://github.com/sign/translate/commit/730546444bf1a35c2097230b1562783ae0dfda2a
     // If even a single i18n asset is redirected instead of 404 error, Transloco reverts everything to English
     expect(resolveRewrite('/assets/random-path')).toEqual('/assets/random-path');
+  });
+
+  it('firebase.json should not redirect api to the index.html', async () => {
+    expect(resolveRewrite('/api/some-service')).toEqual('/api/some-service');
   });
 });
