@@ -5,7 +5,7 @@ PODS:
     - Capacitor
     - GCDWebServer (~> 3.0)
   - CapacitorCordova (5.6.0)
-  - CapacitorFilesystem (5.2.0):
+  - CapacitorFilesystem (5.2.1):
     - Capacitor
   - CapacitorFirebaseAnalytics (5.4.0):
     - Capacitor
@@ -27,11 +27,11 @@ PODS:
   - CapacitorFirebasePerformance (5.4.0):
     - Capacitor
     - FirebasePerformance (~> 10.8)
-  - CapacitorKeyboard (5.0.7):
+  - CapacitorKeyboard (5.0.8):
     - Capacitor
-  - CapacitorShare (5.0.6):
+  - CapacitorShare (5.0.7):
     - Capacitor
-  - CapacitorSplashScreen (5.0.6):
+  - CapacitorSplashScreen (5.0.7):
     - Capacitor
   - FirebaseABTesting (10.9.0):
     - FirebaseCore (~> 10.0)
@@ -224,15 +224,15 @@ SPEC CHECKSUMS:
   Capacitor: ebfc16cdb8116d04c101686b080342872da42d43
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
   CapacitorCordova: 931b48fcdbc9bc985fc2f16cec9f77c794a27729
-  CapacitorFilesystem: 02f9a9053b96e1881ba1fc98d846869413c195c2
+  CapacitorFilesystem: 9f3e3c7fea2fff12f46dd5b07a2914f2103e4cfc
   CapacitorFirebaseAnalytics: 7f6190fba37be5997caedaac402f76be2f740e39
   CapacitorFirebaseApp: fc23dafbf9ba238c8f58b6a915ffceeecbc7db37
   CapacitorFirebaseAppCheck: 33df3ec806a230b40b34e27ab9dcd81052edb6b1
   CapacitorFirebaseCrashlytics: d0a9e0408cd3ef56c7f9eb56e23808a8e726e973
   CapacitorFirebasePerformance: 964b215796522c83767a78ad629b9581558b391a
-  CapacitorKeyboard: ce5e01064cf57a2c05b32565310713b7fe6cc6f9
-  CapacitorShare: cd41743331cb71d217c029de54b681cbd91e0fcc
-  CapacitorSplashScreen: 5fa2ab5e46cf5cc530cf16a51c80c7a986579ccd
+  CapacitorKeyboard: aec619a578235c6ce279075009a2689c2cf5c42c
+  CapacitorShare: c6a1ebbf0114ff9e863b966cd6052678fa25d480
+  CapacitorSplashScreen: dd3de3f3644710fa2a697cfb91ec262eece4d242
   FirebaseABTesting: 005b70969e2817e2a1e631e8dba29134a04c0622
   FirebaseAnalytics: e1fc758bd5d71823bba970c076abee4b2450a5f4
   FirebaseAppCheck: 8bde2c5f393518ab98290151188bf196b4bab91e
@@ -254,4 +254,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d76aee4438d97af52b49960cf18e0f19851aa1ab
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.0
