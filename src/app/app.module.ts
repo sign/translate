@@ -11,6 +11,8 @@ import {AppTranslocoModule} from './core/modules/transloco/transloco.module';
 import {AppNgxsModule} from './core/modules/ngxs/ngxs.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {isSafari} from './core/constants';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {TokenInterceptor} from './core/services/http/token-interceptor.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,7 +31,11 @@ import {isSafari} from './core/constants';
       registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
-  providers: [NavigatorService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [
+    NavigatorService,
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
