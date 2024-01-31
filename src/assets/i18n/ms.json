@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Terjemah dari",
       "did-you-mean": "Adakah anda maksudkan"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Salin Terjemahan"
+      }
     }
   },
   "landing": {

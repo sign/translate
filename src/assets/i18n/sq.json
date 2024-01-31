@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Përkthe nga",
       "did-you-mean": "A do të thuash"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopjo Përkthim"
+      }
     }
   },
   "landing": {

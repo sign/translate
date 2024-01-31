@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Eadar-theangaich bho",
       "did-you-mean": "An robh thu a' ciallachadh"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Dèan lethbhreac den eadar-theangachadh"
+      }
     }
   },
   "landing": {

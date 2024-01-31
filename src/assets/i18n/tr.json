@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Den çeviri",
       "did-you-mean": "Demek istediğin"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Çeviriyi Kopyala"
+      }
     }
   },
   "landing": {

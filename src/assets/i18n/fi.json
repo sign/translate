@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Kääntää",
       "did-you-mean": "Tarkoititko"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopioi käännös"
+      }
     }
   },
   "landing": {

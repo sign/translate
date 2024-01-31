@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Unuhi mai",
       "did-you-mean": "Ua manao anei oe"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "E kope i ka unuhi"
+      }
     }
   },
   "landing": {

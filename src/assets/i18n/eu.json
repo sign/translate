@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Itzul ezazu",
       "did-you-mean": "Esan nahi zenuen"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopiatu Itzulpena"
+      }
     }
   },
   "landing": {

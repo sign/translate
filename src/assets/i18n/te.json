@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "నుండి అనువదించండి",
       "did-you-mean": "అంటే నువ్వు అనేది"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "అనువాదం కాపీ"
+      }
     }
   },
   "landing": {

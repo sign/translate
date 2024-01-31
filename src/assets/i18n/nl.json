@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Vertalen vanuit",
       "did-you-mean": "Bedoelde je"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopieer vertaling"
+      }
     }
   },
   "landing": {

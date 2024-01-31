@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Cyfieithwch o",
       "did-you-mean": "Oeddech chi'n ei olygu"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copi Cyfieithiad"
+      }
     }
   },
   "landing": {

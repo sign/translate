@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "ترجمه از",
       "did-you-mean": "منظورت این بود"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ترجمه کپی"
+      }
     }
   },
   "landing": {

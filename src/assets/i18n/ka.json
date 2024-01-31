@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "თარგმნა საწყისი",
       "did-you-mean": "Იგულისხმე, რომ"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "დააკოპირეთ თარგმანი"
+      }
     }
   },
   "landing": {

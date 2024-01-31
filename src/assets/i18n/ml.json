@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "എന്നതിൽ നിന്ന് വിവർത്തനം ചെയ്യുക",
       "did-you-mean": "ഇതാണോ നിങ്ങൾ അർത്ഥമാക്കുന്നത്"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "വിവർത്തനം പകർത്തുക"
+      }
     }
   },
   "landing": {

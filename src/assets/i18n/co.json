@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Traduce da",
       "did-you-mean": "Vuliti dì"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copy Translation"
+      }
     }
   },
   "landing": {

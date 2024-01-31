@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Перакласці з",
       "did-you-mean": "Вы мелі на ўвазе"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Капіяваць пераклад"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tụgharịa asụsụ site na",
       "did-you-mean": "Ị na-eche"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Detuo ntụgharị asụsụ"
+      }
     }
   },
   "landing": {

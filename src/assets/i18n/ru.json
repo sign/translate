@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Переведи с",
       "did-you-mean": "Вы имели в виду"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Копировать перевод"
+      }
     }
   },
   "landing": {

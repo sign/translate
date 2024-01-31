@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tõlgi keelest",
       "did-you-mean": "Kas sa mõtlesid"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopeeri tõlge"
+      }
     }
   },
   "landing": {

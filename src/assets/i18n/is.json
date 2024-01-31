@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Þýða úr",
       "did-you-mean": "Áttirðu við"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Afrita þýðing"
+      }
     }
   },
   "landing": {

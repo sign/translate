@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Аудару",
       "did-you-mean": "Айтқыңыз келді ме"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Аударманы көшіру"
+      }
     }
   },
   "landing": {

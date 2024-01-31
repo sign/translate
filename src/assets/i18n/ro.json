@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tradu din",
       "did-you-mean": "Ai vrut să spui"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copiați traducerea"
+      }
     }
   },
   "landing": {

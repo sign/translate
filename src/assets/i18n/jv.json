@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Nerjemahake saka",
       "did-you-mean": "Opo sing mbok maksud"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Salin Terjemahan"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "翻譯自",
       "did-you-mean": "你的意思"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "複製翻譯"
+      }
     }
   },
   "landing": {

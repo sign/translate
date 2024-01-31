@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Översätt från",
       "did-you-mean": "Menade du"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopiera översättning"
+      }
     }
   },
   "landing": {

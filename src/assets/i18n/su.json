@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tarjamahkeun tina",
       "did-you-mean": "Maksad anjeun"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Salin Tarjamahan"
+      }
     }
   },
   "landing": {

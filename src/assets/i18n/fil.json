@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Isalin mula sa",
       "did-you-mean": "Ibig mong sabihin"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopyahin ang Pagsasalin"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tafsiri kutoka",
       "did-you-mean": "Ulimaanisha"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Nakili Tafsiri"
+      }
     }
   },
   "landing": {

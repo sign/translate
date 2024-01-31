@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "ከ ተርጉም።",
       "did-you-mean": "ማለትሽ ነው"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ትርጉም ቅዳ"
+      }
     }
   },
   "landing": {

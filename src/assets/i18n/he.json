@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "תרגם מ",
       "did-you-mean": "האם התכוונת"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "העתק תרגום"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Преведи са",
       "did-you-mean": "Да ли сте мислили"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Цопи Транслатион"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tulkot no",
       "did-you-mean": "Vai tu domāji"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopēt tulkojumu"
+      }
     }
   },
   "landing": {

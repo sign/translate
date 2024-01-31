@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tərcümə et",
       "did-you-mean": "nəzərdə tutdun"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Tərcüməni Kopyalayın"
+      }
     }
   },
   "landing": {

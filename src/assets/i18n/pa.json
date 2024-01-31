@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "ਤੋਂ ਅਨੁਵਾਦ ਕਰੋ",
       "did-you-mean": "ਕੀ ਤੁਹਾਡਾ ਮਤਲਬ"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ਅਨੁਵਾਦ ਕਾਪੀ ਕਰੋ"
+      }
     }
   },
   "landing": {

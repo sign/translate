@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "الترجمة من",
       "did-you-mean": "هل تعني"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "نسخ الترجمة"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "वरून भाषांतर करा",
       "did-you-mean": "तुम्हाला म्हणायचे होते"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "भाषांतर कॉपी करा"
+      }
     }
   },
   "landing": {

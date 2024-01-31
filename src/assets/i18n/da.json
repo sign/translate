@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Oversæt fra",
       "did-you-mean": "Mente du"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopi oversættelse"
+      }
     }
   },
   "landing": {

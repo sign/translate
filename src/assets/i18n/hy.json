@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Թարգմանել",
       "did-you-mean": "Դու ի նկատի ունեիր"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Պատճենել թարգմանությունը"
+      }
     }
   },
   "landing": {

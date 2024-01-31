@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Terjime",
       "did-you-mean": "Diýjek bolduňmy?"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Terjimäni göçüriň"
+      }
     }
   },
   "landing": {

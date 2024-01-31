@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "បកប្រែពី",
       "did-you-mean": "តើអ្នកមានន័យថា"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ចម្លងការបកប្រែ"
+      }
     }
   },
   "landing": {

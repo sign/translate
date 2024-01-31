@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "مان ترجمو ڪريو",
       "did-you-mean": "ڇا توھان جو مطلب آھي"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "نقل ڪريو ترجمو"
+      }
     }
   },
   "landing": {

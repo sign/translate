@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "سے ترجمہ کریں۔",
       "did-you-mean": "کیا آپ کا مطلب تھا؟"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ترجمہ کاپی کریں۔"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "बाट अनुवाद गर्नुहोस्",
       "did-you-mean": "भन्न खोजेको हो"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "अनुवाद प्रतिलिपि गर्नुहोस्"
+      }
     }
   },
   "landing": {

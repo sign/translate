@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Oersette fan",
       "did-you-mean": "Bedoelde jo"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopiearje oersetting"
+      }
     }
   },
   "landing": {

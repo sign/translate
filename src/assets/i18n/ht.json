@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tradui soti nan",
       "did-you-mean": "Èske ou te vle di"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopi Tradiksyon"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "번역:",
       "did-you-mean": "그런 뜻 이었습니까"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "번역 복사"
+      }
     }
   },
   "landing": {

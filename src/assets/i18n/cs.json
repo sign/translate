@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Přeložit z",
       "did-you-mean": "Myslel jsi"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopírovat překlad"
+      }
     }
   },
   "landing": {

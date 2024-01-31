@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Prevedi s",
       "did-you-mean": "Jesi li mislio"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopiraj prijevod"
+      }
     }
   },
   "landing": {

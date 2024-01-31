@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Fassara daga",
       "did-you-mean": "Kana ma'anan"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kwafi Fassara"
+      }
     }
   },
   "landing": {

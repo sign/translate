@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "இலிருந்து மொழிபெயர்க்கவும்",
       "did-you-mean": "நீங்கள் சொன்னீர்களா"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "மொழிபெயர்ப்பு நகல்"
+      }
     }
   },
   "landing": {

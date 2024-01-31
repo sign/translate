@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Μετάφραση από",
       "did-you-mean": "Εννοείς"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Αντιγραφή μετάφρασης"
+      }
     }
   },
   "landing": {

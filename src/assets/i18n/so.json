@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Ka soo tarjun",
       "did-you-mean": "Ma waxaad ka waddaa"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Koobi Turjumaada"
+      }
     }
   },
   "landing": {

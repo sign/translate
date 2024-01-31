@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "แปลจาก",
       "did-you-mean": "คุณหมายถึง"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "คัดลอกคำแปล"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "-аас орчуулах",
       "did-you-mean": "гэсэн үг үү"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Орчуулга хуулах"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Adika avy amin'ny",
       "did-you-mean": "Ny tianao tenenina ve"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Adikao Dikanteny"
+      }
     }
   },
   "landing": {

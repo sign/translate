@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "дан которуу",
       "did-you-mean": "Айттыңбы"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Котормосун көчүрүү"
+      }
     }
   },
   "landing": {

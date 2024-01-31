@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "থেকে অনুবাদ করুন",
       "did-you-mean": "মানে?"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "অনুলিপি অনুবাদ"
+      }
     }
   },
   "landing": {

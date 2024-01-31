@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Shandura kubva",
       "did-you-mean": "Waireva here"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copy Translation"
+      }
     }
   },
   "landing": {

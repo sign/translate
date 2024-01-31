@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Traducir de",
       "did-you-mean": "Querías decir"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copiar traducción"
+      }
     }
   },
   "landing": {

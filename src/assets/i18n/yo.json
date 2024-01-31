@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tumọ lati",
       "did-you-mean": "Se nkan ti o so"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Daakọ Itumọ"
+      }
     }
   },
   "landing": {

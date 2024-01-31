@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Fetolela ho tsoa ho",
       "did-you-mean": "Na u ne u bolela"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopitsa Phetolelo"
+      }
     }
   },
   "landing": {

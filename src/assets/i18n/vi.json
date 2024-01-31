@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Dịch từ",
       "did-you-mean": "Ý bạn là"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Sao chép bản dịch"
+      }
     }
   },
   "landing": {

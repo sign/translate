@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Wergerandin ji",
       "did-you-mean": "Mebesta te bû"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Wergerê kopî bikin"
+      }
     }
   },
   "landing": {

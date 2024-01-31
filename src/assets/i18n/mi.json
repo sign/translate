@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Whakamaori mai",
       "did-you-mean": "Ko koe te tikanga"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Tārua Whakamāoritanga"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "ನಿಂದ ಅನುವಾದಿಸಿ",
       "did-you-mean": "ನಿಮ್ಮ ಮಾತಿನ ಅರ್ಥ"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ಅನುವಾದವನ್ನು ನಕಲಿಸಿ"
+      }
     }
   },
   "landing": {

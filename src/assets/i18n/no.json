@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Oversett fra",
       "did-you-mean": "Mente du"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopier oversettelse"
+      }
     }
   },
   "landing": {

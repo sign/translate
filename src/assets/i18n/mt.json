@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Ittraduċi minn",
       "did-you-mean": "Ridt tfisser"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopja tat-Traduzzjoni"
+      }
     }
   },
   "landing": {

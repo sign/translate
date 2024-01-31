@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Humusha kusuka",
       "did-you-mean": "Ingabe kade ufuna ukuthi"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopisha Ukuhumusha"
+      }
     }
   },
   "landing": {

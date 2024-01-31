@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "dan tarjima qiling",
       "did-you-mean": "Nazarda tutdingizmi"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Tarjimani nusxalash"
+      }
     }
   },
   "landing": {

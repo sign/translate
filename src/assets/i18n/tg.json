@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Тарҷума аз",
       "did-you-mean": "Манзурат"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Тарҷумаи нусхабардорӣ"
+      }
     }
   },
   "landing": {

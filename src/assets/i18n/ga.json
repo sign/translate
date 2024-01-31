@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Aistrigh ó",
       "did-you-mean": "Raibh i gceist agat"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Cóipeáil Aistriúchán"
+      }
     }
   },
   "landing": {

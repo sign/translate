@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "ແປຈາກ",
       "did-you-mean": "ເຈົ້າ​ຫມາຍ​ຄວາມ​ວ່າ"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ສຳເນົາການແປ"
+      }
     }
   },
   "landing": {

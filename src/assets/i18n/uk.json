@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Перекласти з",
       "did-you-mean": "Ти мав на увазі"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Копіювати переклад"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tanthauzirani kuchokera",
       "did-you-mean": "Kodi mumatanthauza"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Koperani Kumasulira"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "から翻訳",
       "did-you-mean": "ということでしたか"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "翻訳をコピーする"
+      }
     }
   },
   "landing": {

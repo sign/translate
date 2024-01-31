@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Превеждай от",
       "did-you-mean": "Имаше предвид"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Копиране на превода"
+      }
     }
   },
   "landing": {

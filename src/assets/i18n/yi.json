@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "איבערזעצן פון",
       "did-you-mean": "האסטו געמיינט"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "קאָפּי איבערזעצונג"
+      }
     }
   },
   "landing": {

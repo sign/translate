@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Guqulela ukusuka",
       "did-you-mean": "Ingaba ubuthetha ukuba"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Khuphela Inguqulelo"
+      }
     }
   },
   "landing": {

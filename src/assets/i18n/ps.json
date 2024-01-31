@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "څخه ژباړه",
       "did-you-mean": "ستاسو مطلب دی"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "کاپي ژباړه"
+      }
     }
   },
   "landing": {

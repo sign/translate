@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "से अनुवाद करें",
       "did-you-mean": "क्या आपका मतलब यह था"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "अनुवाद कॉपी करें"
+      }
     }
   },
   "landing": {

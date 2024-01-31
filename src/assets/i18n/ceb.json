@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Hubad gikan sa",
       "did-you-mean": "Gipasabot ba nimo"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopyaha ang Hubad"
+      }
     }
   },
   "landing": {

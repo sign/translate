@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Prevedi iz",
       "did-you-mean": "Si mislil"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopiraj prevod"
+      }
     }
   },
   "landing": {

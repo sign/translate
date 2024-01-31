@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Przetłumacz z",
       "did-you-mean": "Miałeś na myśli"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopiuj tłumaczenie"
+      }
     }
   },
   "landing": {

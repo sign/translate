@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Tradotto da",
       "did-you-mean": "Intendevi"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copia traduzione"
+      }
     }
   },
   "landing": {

@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Išversti iš",
       "did-you-mean": "Ar turėjote omenyje"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Kopijuoti vertimą"
+      }
     }
   },
   "landing": {

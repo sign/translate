@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "မှ ဘာသာပြန်ဆိုပါသည်။",
       "did-you-mean": "သင် ... ဆိုလိုပါသလား"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "ကူးယူဘာသာပြန်ခြင်း။"
+      }
     }
   },
   "landing": {

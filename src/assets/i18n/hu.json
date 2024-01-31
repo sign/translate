@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "Fordítás innen",
       "did-you-mean": "Úgy értetted"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Fordítás másolása"
+      }
     }
   },
   "landing": {

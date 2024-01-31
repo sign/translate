@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "થી અનુવાદ કરો",
       "did-you-mean": "શું તમારો મતલબ હતો"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "અનુવાદની નકલ કરો"
+      }
     }
   },
   "landing": {

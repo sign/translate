@@ -46,6 +46,11 @@
     "suggestions": {
       "translate-from": "වෙතින් පරිවර්තනය කරන්න",
       "did-you-mean": "ඔයා අදහස් කළේ"
+    },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "පරිවර්තනය පිටපත් කරන්න"
+      }
     }
   },
   "landing": {
