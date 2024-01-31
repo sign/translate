@@ -28,9 +28,6 @@ ion-button.menu-language-button {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 @media #{$breakpoint-lt-md} {
@@ -51,4 +48,10 @@ ion-button.menu-language-button {
 
 ::ng-deep .language-selector-menu {
   max-height: calc(100vh - 64px - 68px - 48px) !important;
+}
+
+.wrap-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

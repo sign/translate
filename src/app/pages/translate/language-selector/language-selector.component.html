@@ -32,7 +32,7 @@
       expand="full"
       fill="clear">
       <app-flag-icon *ngIf="flags" [country]="langCountries[detectedLanguage]" [squared]="true"></app-flag-icon>
-      {{ t('detected', {lang: langNames[detectedLanguage]}) }}
+      <span class="wrap-text">{{ t('detected', {lang: langNames[detectedLanguage]}) }}</span>
     </ion-button>
   </ng-container>
   <ng-template #detectLanguage>
@@ -44,7 +44,7 @@
       fill="clear">
       <ng-container *ngIf="language; else noLanguage">
         <app-flag-icon *ngIf="flags" [country]="langCountries[language]" [squared]="true"></app-flag-icon>
-        {{ langNames[language] }}
+        <span class="wrap-text">{{ langNames[language] }}</span>
       </ng-container>
       <ng-template #noLanguage>{{ t('detect') }}</ng-template>
     </ion-button>
