@@ -1,18 +1,17 @@
 <ng-container *ngIf="inputMode$ | async as inputMode">
   <ng-container *ngIf="inputMode === 'upload'">
     <ng-container *ngIf="videoState$ | async as videoState">
-      <app-upload *ngIf="!videoState.src"></app-upload>
-      <div *ngIf="videoState.src" class="interface">
-        <div class="sign-language">
-          <app-video [displayControls]="false" [displayFps]="false"></app-video>
-        </div>
-        <app-sign-writing />
-        <div class="translation-text">{{ translation }}</div>
-      </div>
+      <app-upload *ngIf="!videoState.src; else translationTemplate"></app-upload>
     </ng-container>
   </ng-container>
 
-  <div *ngIf="inputMode === 'webcam'" class="interface">
+  <ng-container *ngIf="inputMode === 'webcam'">
+    <ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #translationTemplate>
+  <div class="interface">
     <div class="sign-language">
       <app-video [displayControls]="false" [displayFps]="false"></app-video>
     </div>
@@ -20,10 +19,11 @@
     <app-sign-writing />
 
     <div class="translation-text">
-      <div>Translation</div>
+      <div>{{ translation }}</div>
+
       <div>
-        <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="'Translation'"></app-text-to-speech>
+        <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="translation"></app-text-to-speech>
       </div>
     </div>
   </div>
-</ng-container>
+</ng-template>
