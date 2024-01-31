@@ -3,6 +3,7 @@ import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {
   ChangeTranslation,
   CopySignedLanguageVideo,
+  CopySpokenLanguageText,
   DescribeSignWritingSign,
   DownloadSignedLanguageVideo,
   FlipTranslationDirection,
@@ -182,10 +183,15 @@ export class TranslateState implements NgxsOnInit {
     {patchState, getState, dispatch}: StateContext<TranslateStateModel>,
     {text}: SetSpokenLanguageText
   ): Promise<void> {
-    const {spokenLanguage} = getState();
+    const {spokenLanguage, spokenToSigned} = getState();
     const trimmedText = text.trim();
 
     patchState({spokenLanguageText: text, normalizedSpokenLanguageText: null});
+
+    if (!spokenToSigned) {
+      return;
+    }
+
     const detectLanguage = this.detectLanguage(trimmedText, patchState);
 
     // Wait for language detection if language is not selected
@@ -306,6 +312,18 @@ export class TranslateState implements NgxsOnInit {
     } catch (e) {
       console.error(e);
       alert(`Copying "${blob.type}" on this device is not supported`);
+    }
+  }
+
+  @Action(CopySpokenLanguageText)
+  async copySpokenLanguageText({getState}: StateContext<TranslateStateModel>): Promise<void> {
+    const {spokenLanguageText} = getState();
+
+    try {
+      await navigator.clipboard.writeText(spokenLanguageText);
+    } catch (e) {
+      console.error(e);
+      alert(`Copying on this device is not supported`);
     }
   }
 

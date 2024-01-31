@@ -35,6 +35,11 @@
         }
       }
     },
+    "signed-to-spoken": {
+      "actions": {
+        "copy": "Copy Translation"
+      }
+    },
     "upload": {
       "title": "Choose a video",
       "types": "Upload a .mp4, .ogv, or .webm.",

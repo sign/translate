@@ -18,11 +18,23 @@
 
     <app-sign-writing />
 
-    <div class="translation-text">
+    <div class="translation-text" *ngIf="spokenLanguageText$ | async as translation">
       <div>{{ translation }}</div>
 
-      <div>
+      <div *ngIf="translation !== ''">
         <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="translation"></app-text-to-speech>
+
+        <ion-button
+          class="circle-icon"
+          fill="clear"
+          shape="round"
+          color="dark"
+          (click)="copyTranslation()"
+          [attr.aria-label]="'translate.signed-to-spoken.actions.copy' | transloco"
+          [matTooltip]="'translate.signed-to-spoken.actions.copy' | transloco"
+          [matTooltipPosition]="'above'">
+          <ion-icon name="copy-outline" slot="icon-only"></ion-icon>
+        </ion-button>
       </div>
     </div>
   </div>

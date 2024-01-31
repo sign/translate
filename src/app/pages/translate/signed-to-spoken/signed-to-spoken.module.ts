@@ -10,13 +10,14 @@ import {IonicModule} from '@ionic/angular';
 import {AppTranslocoModule} from '../../../core/modules/transloco/transloco.module';
 import {SignedLanguageInputComponent} from './signed-language-input/signed-language-input.component';
 import {SpokenToSignedModule} from '../spoken-to-signed/spoken-to-signed.module';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const componentModules = [VideoModule, SignWritingModule, TextToSpeechModule];
 
 const components = [SignedToSpokenComponent, SignedLanguageInputComponent, UploadComponent];
 
 @NgModule({
-  imports: [CommonModule, AppTranslocoModule, IonicModule, ...componentModules, SpokenToSignedModule],
+  imports: [CommonModule, AppTranslocoModule, IonicModule, MatTooltipModule, ...componentModules, SpokenToSignedModule],
   declarations: components,
   exports: components,
 })

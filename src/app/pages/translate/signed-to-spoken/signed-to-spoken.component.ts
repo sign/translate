@@ -2,7 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
 import {InputMode, SignWritingObj} from '../../../modules/translate/translate.state';
-import {SetSignWritingText} from '../../../modules/translate/translate.actions';
+import {
+  CopySpokenLanguageText,
+  SetSignWritingText,
+  SetSpokenLanguageText,
+} from '../../../modules/translate/translate.actions';
 import {Observable} from 'rxjs';
 
 const FAKE_WORDS = [
@@ -80,30 +84,37 @@ export class SignedToSpokenComponent implements OnInit {
   videoState$!: Observable<VideoStateModel>;
   inputMode$!: Observable<InputMode>;
   spokenLanguage$!: Observable<string>;
-
-  // This is bullshit for now
-  translation = 'Translation';
+  spokenLanguageText$!: Observable<string>;
 
   constructor(private store: Store) {
     this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
     this.inputMode$ = this.store.select<InputMode>(state => state.translate.inputMode);
     this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);
+    this.spokenLanguageText$ = this.store.select<string>(state => state.translate.spokenLanguageText);
+
+    this.store.dispatch(new SetSpokenLanguageText(''));
   }
 
   ngOnInit(): void {
     // To get the fake translation
     let lastArray = [];
-    const f = () => {
-      this.translation = 'Translation';
+    let lastText = '';
 
+    const f = () => {
       const video = document.querySelector('video');
       if (video) {
         let resultArray = [];
+        let resultText = '';
         for (const step of FAKE_WORDS) {
           if (step.time <= video.currentTime) {
-            this.translation = step.text;
+            resultText = step.text;
             resultArray = step.sw;
           }
+        }
+
+        if (resultText !== lastText) {
+          this.store.dispatch(new SetSpokenLanguageText(resultText));
+          lastText = resultText;
         }
 
         if (JSON.stringify(resultArray) !== JSON.stringify(lastArray)) {
@@ -115,5 +126,9 @@ export class SignedToSpokenComponent implements OnInit {
       requestAnimationFrame(f);
     };
     f();
+  }
+
+  copyTranslation() {
+    this.store.dispatch(CopySpokenLanguageText);
   }
 }
