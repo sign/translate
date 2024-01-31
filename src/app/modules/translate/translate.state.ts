@@ -320,10 +320,11 @@ export class TranslateState implements NgxsOnInit {
     const {spokenLanguageText} = getState();
 
     try {
-      await navigator.clipboard.writeText(spokenLanguageText);
+      const {Clipboard} = await import(/* webpackChunkName: "@capacitor/clipboard" */ '@capacitor/clipboard');
+      await Clipboard.write({string: spokenLanguageText});
     } catch (e) {
       console.error(e);
-      alert(`Copying on this device is not supported`);
+      alert(e.message);
     }
   }
 

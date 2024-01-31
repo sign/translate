@@ -14,6 +14,7 @@ dependencies {
     implementation project(':capacitor-firebase-app-check')
     implementation project(':capacitor-firebase-crashlytics')
     implementation project(':capacitor-firebase-performance')
+    implementation project(':capacitor-clipboard')
     implementation project(':capacitor-filesystem')
     implementation project(':capacitor-keyboard')
     implementation project(':capacitor-share')

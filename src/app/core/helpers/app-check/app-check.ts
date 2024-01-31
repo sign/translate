@@ -4,7 +4,9 @@ export class AppCheck {
   static isInitialized = false;
 
   static async getToken(): Promise<string> {
-    const {FirebaseAppCheck} = await import('@capacitor-firebase/app-check');
+    const {FirebaseAppCheck} = await import(
+      /* webpackChunkName: "@capacitor-firebase/app-check" */ '@capacitor-firebase/app-check'
+    );
     if (!AppCheck.isInitialized) {
       await FirebaseAppCheck.initialize({siteKey: environment.reCAPTCHAKey, debug: !environment.production});
     }
