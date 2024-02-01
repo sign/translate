@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Capacitor} from '@capacitor/core';
+import type {GetMetadataResult} from '@capacitor-firebase/storage';
 
 /**
  * Navigator.storage is used as iOS service worker cache is limited to 50MB.
@@ -24,6 +25,15 @@ type ProgressCallback = (receivedLength: number, totalLength: number) => void;
 })
 export class AssetsService {
   static BUCKET_URL = 'https://firebasestorage.googleapis.com/v0/b/sign-mt-assets/o/';
+  static BUCKET = 'gs://sign-mt-assets';
+
+  private getStorage() {
+    return import(/* webpackChunkName: "@capacitor-firebase/storage" */ '@capacitor-firebase/storage');
+  }
+
+  private getFilesystem() {
+    return import(/* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem');
+  }
 
   stat(path: string): AssetState {
     if (path.endsWith('/')) {
@@ -44,13 +54,13 @@ export class AssetsService {
     if (!fileStatStr) {
       return {path, exists: false};
     }
-    const fileStat = JSON.parse(fileStatStr);
+    const fileStat = JSON.parse(fileStatStr) as GetMetadataResult;
 
     return {
       path,
       exists: true,
-      size: Number(fileStat.size),
-      modified: new Date(fileStat.updated),
+      size: fileStat.size,
+      modified: new Date(fileStat.updatedAt),
     };
   }
 
@@ -237,17 +247,13 @@ export class AssetsService {
   }
 
   async deleteCapacitorGetFileUri(path: string) {
-    const {Directory, Filesystem} = await import(
-      /* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem'
-    );
+    const {Directory, Filesystem} = await this.getFilesystem();
     const fileOptions = {directory: Directory.External, path};
     await Filesystem.deleteFile(fileOptions);
   }
 
   async capacitorGetFileUri(path: string, download: CallableFunction, downloadDone: CallableFunction) {
-    const {Directory, Filesystem} = await import(
-      /* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem'
-    );
+    const {Directory, Filesystem} = await this.getFilesystem();
 
     const fileOptions = {directory: Directory.External, path};
     try {
@@ -286,27 +292,21 @@ export class AssetsService {
   }
 
   async listDirectory(path: string): Promise<string[]> {
-    const request = await fetch(AssetsService.BUCKET_URL);
-    const bucketContent: {items: {name: string}[]} = await request.json();
-    const files = [];
-    for (const file of bucketContent.items) {
-      if (file.name.startsWith(path)) {
-        files.push(file.name.slice(path.length));
-      }
-    }
-    return files;
+    const {FirebaseStorage} = await this.getStorage();
+    const {items} = await FirebaseStorage.listFiles({path: `${AssetsService.BUCKET}/${path}`});
+    return items.map(i => i.name);
   }
 
   async statRemoteFile(path: string) {
-    const request = await fetch(this.buildRemotePath(path));
-    return request.json();
+    const {FirebaseStorage} = await this.getStorage();
+    return FirebaseStorage.getMetadata({path: `${AssetsService.BUCKET}/${path}`});
   }
 
   async getRemoteFileAsBlob(path: string, progressCallback?: ProgressCallback) {
     let array: Uint8Array = null;
     let arrayIndex = 0;
 
-    const chunks = await this.getRemoteFile(path, (loaded, total) => {
+    const chunks = this.getRemoteFile(path, (loaded, total) => {
       if (!array) {
         array = new Uint8Array(total);
       }
@@ -323,7 +323,11 @@ export class AssetsService {
   }
 
   async *getRemoteFile(path: string, progressCallback?: ProgressCallback) {
-    const response = await fetch(`${this.buildRemotePath(path)}?alt=media`);
+    const {FirebaseStorage} = await this.getStorage();
+    const {downloadUrl} = await FirebaseStorage.getDownloadUrl({
+      path: `${AssetsService.BUCKET}/${path}`,
+    });
+    const response = await fetch(downloadUrl);
 
     const reader = response.body.getReader();
 
