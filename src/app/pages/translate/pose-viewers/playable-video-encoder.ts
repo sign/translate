@@ -4,6 +4,7 @@ import type {ArrayBufferTarget as Mp4ArrayBufferTarget, Muxer as Mp4Muxer} from 
 export class PlayableVideoEncoder {
   muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
   videoEncoder: VideoEncoder;
+  frameBuffer: VideoFrame[] = []; // Buffer frames until the encoder is ready
 
   container: 'webm' | 'mp4';
   codec: string;
@@ -113,6 +114,12 @@ export class PlayableVideoEncoder {
       // alpha: this.muxer.alpha ? 'keep' as AlphaOption : false
     };
     this.videoEncoder.configure(config);
+
+    // Flush the frame buffer
+    for (const frame of this.frameBuffer) {
+      this.encodeFrame(frame);
+    }
+    this.frameBuffer = [];
   }
 
   addFrame(index: number, image: ImageBitmap) {
@@ -121,6 +128,14 @@ export class PlayableVideoEncoder {
       timestamp: (ms * index) / this.fps,
       duration: ms / this.fps,
     });
+    if (this.videoEncoder) {
+      this.encodeFrame(frame);
+    } else {
+      this.frameBuffer.push(frame);
+    }
+  }
+
+  encodeFrame(frame: VideoFrame) {
     this.videoEncoder.encode(frame);
     frame.close();
   }
