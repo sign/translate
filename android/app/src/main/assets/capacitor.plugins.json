@@ -20,6 +20,10 @@
 		"classpath": "io.capawesome.capacitorjs.plugins.firebase.performance.FirebasePerformancePlugin"
 	},
 	{
+		"pkg": "@capacitor-firebase/storage",
+		"classpath": "io.capawesome.capacitorjs.plugins.firebase.storage.FirebaseStoragePlugin"
+	},
+	{
 		"pkg": "@capacitor/clipboard",
 		"classpath": "com.capacitorjs.plugins.clipboard.ClipboardPlugin"
 	},
