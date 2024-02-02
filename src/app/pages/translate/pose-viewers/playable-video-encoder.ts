@@ -1,6 +1,22 @@
 import type {ArrayBufferTarget as WebmArrayBufferTarget, Muxer as WebmMuxer} from 'webm-muxer';
 import type {ArrayBufferTarget as Mp4ArrayBufferTarget, Muxer as Mp4Muxer} from 'mp4-muxer';
 
+export function getMediaSourceClass(): typeof MediaSource {
+  if ('ManagedMediaSource' in window) {
+    return window.ManagedMediaSource as any;
+  }
+  if ('MediaSource' in window) {
+    return MediaSource;
+  }
+  if ('WebKitMediaSource' in window) {
+    return window['WebKitMediaSource'] as any;
+  }
+
+  console.warn('Both ManagedMediaSource and MediaSource are not supported on this device');
+
+  return null;
+}
+
 export class PlayableVideoEncoder {
   muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
   videoEncoder: VideoEncoder;
@@ -23,7 +39,6 @@ export class PlayableVideoEncoder {
   async init() {
     await this.createWebMMuxer();
     let playable = await this.isPlayable();
-
     if (!playable) {
       // If WebM is not playable or undetermined, fall back to MP4
       await this.createMP4Muxer();
@@ -38,8 +53,13 @@ export class PlayableVideoEncoder {
     }
 
     if (!('mediaCapabilities' in navigator)) {
+      const mediaSourceClass = getMediaSourceClass();
+      if (!mediaSourceClass) {
+        return false;
+      }
+
       const mimeType = `video/${this.container}; codecs="${this.codec}"`;
-      return MediaSource.isTypeSupported(mimeType);
+      return mediaSourceClass.isTypeSupported(mimeType);
     }
 
     const videoConfig = {

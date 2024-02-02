@@ -15,6 +15,7 @@ const config: CapacitorConfig = {
   },
   ios: {
     path: 'ios',
+    webContentsDebuggingEnabled: true,
   },
   android: {
     path: 'android',
