@@ -1,1 +1,1 @@
-使用尖端实时模型轻松进行手语翻译。
+Effortless Real-Time Sign Language Translation. Translate Sign Language instantly on desktop and mobile.

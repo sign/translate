@@ -36,4 +36,4 @@ const iPhone8 = devices['iPhone 8'];
   leading: 0,
 };
 
-export const androidDevices = ['Pixel 7'];
+export const androidDevices = ['Pixel 5'];

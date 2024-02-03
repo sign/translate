@@ -76,6 +76,9 @@ export async function aboutScreenshotsWebp(dirPath: string) {
 
   for (const file of framedFiles) {
     const webpFile = file.slice(0, -'png'.length) + 'webp';
+    if (fs.existsSync(webpFile)) {
+      fs.unlinkSync(webpFile);
+    }
     execSync(`magick ${file} ${webpFile}`, {cwd: dirPath, encoding: 'utf8', stdio: 'inherit'});
   }
 }

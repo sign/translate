@@ -6,7 +6,7 @@ import {execSync} from 'child_process';
 import {aboutScreenshotsWebp, frameScreenshots, screenshotFrameLocales} from './framefile';
 import {googlePlayLocales} from './locales.android';
 import {iOSLocales} from './locales.ios';
-import {iosDevices, androidDevices} from './devices';
+import {androidDevices, iosDevices} from './devices';
 
 const assetsDir = `src/assets/promotional/about`;
 mkdir(`${assetsDir}/iphone`);
@@ -59,6 +59,7 @@ async function makeAndroid(
   const cViewport = {
     height: Math.floor(screen.height * deviceScaleFactor),
     width: Math.floor(screen.width * deviceScaleFactor),
+    safeAreaInsets: {},
   };
   await screenshot(page, cViewport, imgPath(locale, cViewport, 'main'));
 

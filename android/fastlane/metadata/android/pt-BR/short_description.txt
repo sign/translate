@@ -1,1 +1,1 @@
-Tradução de linguagem de sinais sem esforço com modelos de ponta em tempo real. 
+Effortless Real-Time Sign Language Translation. Translate Sign Language instantly on desktop and mobile.
