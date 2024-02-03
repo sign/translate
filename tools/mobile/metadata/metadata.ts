@@ -21,7 +21,17 @@ async function asyncPoolAll(...args) {
 }
 
 async function screenshot(page: Page, viewport, path: string, background = 'white') {
+  // Apply safe area insets
+  let styles = '';
+  for (const [key, value] of Object.entries(viewport.safeAreaInsets)) {
+    styles += `--ion-safe-area-${key}: ${value}px;`;
+  }
+  const htmlEl = await page.$('html');
+  await htmlEl.evaluate((el, styles) => el.setAttribute('style', styles), styles);
+
   await page.screenshot({path, fullPage: false});
+
+  // Resize screenshot to required size (including zoom)
   const res = `${viewport.width}x${viewport.height}`;
   const cmd = `convert ${path} -resize ${res} -background ${background} -gravity center -extent ${res} ${path}`;
   console.log(execSync(cmd, {encoding: 'utf8'}).toString());
@@ -81,14 +91,23 @@ async function makeIOS(
   const filePath = (locale, file, base = 'metadata') => `ios/App/fastlane/${base}/${locale}/${file}`;
   const imgPath = (locale, {width, height}, name) => filePath(locale, `${name}_${width}x${height}.png`, 'screenshots');
 
-  const {deviceScaleFactor, screen} = devices[device] as any;
+  const {deviceScaleFactor, screen, safeAreaInsets} = devices[device] as any;
+  const ionSafeAreaInsets = !safeAreaInsets
+    ? {}
+    : {
+        top: safeAreaInsets.top,
+        bottom: safeAreaInsets.bottom,
+        left: safeAreaInsets.trailing,
+        right: safeAreaInsets.leading,
+      };
   const cViewport = {
     height: Math.floor(screen.height * deviceScaleFactor),
     width: Math.floor(screen.width * deviceScaleFactor),
+    safeAreaInsets: ionSafeAreaInsets,
   };
   await screenshot(page, cViewport, imgPath(locale, cViewport, 'main'));
   // Copy main page for the about page
-  if (device === 'iPhone 14 Pro') {
+  if (device === 'iPhone 13 Pro') {
     fs.copyFileSync(imgPath(locale, cViewport, 'main'), `${assetsDir}/iphone/${pageLang}.png`);
   }
 
@@ -148,6 +167,7 @@ async function main() {
       locale,
       ...devices[device],
     };
+    options.viewport = (options as any).screen; // Now that we support safeAreaInsets, we can use the screen size
     const browser = options.defaultBrowserType === 'webkit' ? webkitBrowser : chromiumBrowser;
     const context = await browser.newContext(options);
     const page = await context.newPage();
