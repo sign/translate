@@ -1,1 +1,1 @@
-Effortless Real-Time Sign Language Translation. Translate Sign Language instantly on desktop and mobile.
+nb.translate.description
