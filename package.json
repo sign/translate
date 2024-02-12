@@ -132,6 +132,7 @@
     "@types/wicg-file-system-access": "2023.10.4",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
+    "browser-sync": "3.0.2",
     "deepmerge": "4.3.1",
     "dotenv": "16.4.2",
     "eslint": "8.56.0",
