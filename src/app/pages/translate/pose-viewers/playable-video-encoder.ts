@@ -24,7 +24,7 @@ export class PlayableVideoEncoder {
 
   container: 'webm' | 'mp4';
   codec: string;
-  bitrate = 1_000_000_000; // 1Gbps
+  bitrate = 10_000_000; // 10Mbps max! (https://github.com/Vanilagy/mp4-muxer/issues/36)
   alpha = true;
 
   width: number;
