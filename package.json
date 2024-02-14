@@ -102,7 +102,7 @@
     "tslib": "2.6.2",
     "web-vitals": "3.5.2",
     "webm-muxer": "4.0.1",
-    "zone.js": "0.14.3"
+    "zone.js": "0.14.4"
   },
   "devDependencies": {
     "@angular-devkit/architect": "0.1701.3",
@@ -130,14 +130,14 @@
     "@types/web-app-manifest": "1.0.7",
     "@types/webgl2": "0.0.11",
     "@types/wicg-file-system-access": "2023.10.4",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
-    "@typescript-eslint/parser": "6.21.0",
+    "@typescript-eslint/eslint-plugin": "7.0.1",
+    "@typescript-eslint/parser": "7.0.1",
     "browser-sync": "3.0.2",
     "deepmerge": "4.3.1",
-    "dotenv": "16.4.2",
+    "dotenv": "16.4.4",
     "eslint": "8.56.0",
     "fuzzy": "0.1.3",
-    "husky": "9.0.10",
+    "husky": "9.0.11",
     "inquirer": "9.2.14",
     "inquirer-autocomplete-prompt": "3.0.1",
     "jasmine-axe": "1.1.0",

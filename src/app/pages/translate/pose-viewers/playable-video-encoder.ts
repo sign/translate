@@ -12,7 +12,7 @@ export function getMediaSourceClass(): typeof MediaSource {
     return window['WebKitMediaSource'] as any;
   }
 
-  console.warn('Both ManagedMediaSource and MediaSource are not supported on this device');
+  console.warn('Neither ManagedMediaSource nor MediaSource are supported on this device');
 
   return null;
 }
