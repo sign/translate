@@ -116,6 +116,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
           // Either video feed or camera
           video.src = src || '';
           video.srcObject = camera;
+          return video.play();
         }),
         takeUntil(this.ngUnsubscribe)
       )

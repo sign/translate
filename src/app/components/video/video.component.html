@@ -6,7 +6,7 @@
     </ng-container>
 
     <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
-      <video #video autoplay muted playsinline crossorigin="anonymous"></video>
+      <video #video muted playsinline crossorigin="anonymous"></video>
       <canvas #canvas height="100%" width="100%"></canvas>
       <div #stats></div>
       <div class="video-overlay" *ngIf="videoEnded" (click)="replayVideo()">
