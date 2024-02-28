@@ -39,6 +39,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   canvasCtx!: CanvasRenderingContext2D;
 
+  videoEnded = false;
+
   fpsStats = new Stats();
   signingStats = new Stats();
 
@@ -69,6 +71,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
     this.preloadPoseEstimationModel();
     this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
+    this.videoEl.nativeElement.addEventListener('ended', () => (this.videoEnded = true));
 
     const resizeObserver = new ResizeObserver(this.scaleCanvas.bind(this));
     resizeObserver.observe(this.elementRef.nativeElement);
@@ -109,6 +112,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.videoState$
       .pipe(
         tap(({camera, src}) => {
+          this.videoEnded = false;
           // Either video feed or camera
           video.src = src || '';
           video.srcObject = camera;
@@ -251,5 +255,11 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+  }
+
+  replayVideo() {
+    this.videoEnded = false;
+    this.videoEl.nativeElement.currentTime = 0;
+    return this.videoEl.nativeElement.play();
   }
 }

@@ -48,3 +48,23 @@ app-video-help {
   top: 16px;
   right: 16px;
 }
+
+.video-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ion-icon {
+    font-size: 4em;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}

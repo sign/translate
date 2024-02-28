@@ -6,9 +6,12 @@
     </ng-container>
 
     <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
-      <video #video autoplay loop muted playsinline crossorigin="anonymous"></video>
+      <video #video autoplay muted playsinline crossorigin="anonymous"></video>
       <canvas #canvas height="100%" width="100%"></canvas>
       <div #stats></div>
+      <div class="video-overlay" *ngIf="videoEnded" (click)="replayVideo()">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </div>
     </div>
 
     <!-- [hidden]="videoState.error || !poseState.isLoaded" -->
