@@ -31,6 +31,7 @@ body {
 
   &.embed {
     ion-header,
+    ion-tab-bar,
     #input-mode-group,
     app-send-feedback {
       display: none !important;
