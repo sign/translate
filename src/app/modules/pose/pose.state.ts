@@ -40,7 +40,7 @@ export class PoseState implements NgxsOnInit {
 
   ngxsOnInit(): void {
     this.poseService.onResults(results => {
-      // TODO: passing the `image` canvas through NGXS bugs the pose.
+      // TODO: passing the `image` canvas through NGXS bugs the pose. (last verified 2024/02/28)
       // https://github.com/google/mediapipe/issues/2422
       const fakeImage = document.createElement('canvas');
       fakeImage.width = results.image.width;
