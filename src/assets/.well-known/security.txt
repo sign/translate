@@ -5,10 +5,11 @@ Contact: mailto:security@sign.mt
 Expires: 2024-12-31T23:59:59.000Z
 Canonical: https://sign.mt/.well-known/security.txt
 Encryption: https://sign.mt/.well-known/gpg.asc
+Preferred-Languages: en, he
 -----BEGIN PGP SIGNATURE-----
 
-iHUEABYKAB0WIQR0Dq01VzyciB3i6aUigZiYXF3+lAUCZeGnjwAKCRAigZiYXF3+
-lA+dAPwIz6tD6t2nJxe0KiYeICgx8rcvIaKaTI8voHqZX+1/egD/ZDPIiO/z0om8
-glJu2UHhR6jRKHCb9C4CWOvYr3U4eQU=
-=DoE/
+iHUEABYKAB0WIQR0Dq01VzyciB3i6aUigZiYXF3+lAUCZeGpDwAKCRAigZiYXF3+
+lIvhAQDCu19v6PRAMxJma9+hrdzHsd76dADIYXKPV56YhZJsOgD9HXqBFsjTxOZU
+/uVzEB15nTnFZwx4RG9x+QTPNQprpAU=
+=pPPw
 -----END PGP SIGNATURE-----
