@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Contact: security@sign.mt
+Contact: mailto:security@sign.mt
 Expires: 2024-12-31T23:59:59.000Z
 Canonical: https://sign.mt/.well-known/security.txt
 Encryption: https://sign.mt/.well-known/gpg.asc
 -----BEGIN PGP SIGNATURE-----
 
-iHUEABYKAB0WIQR0Dq01VzyciB3i6aUigZiYXF3+lAUCZeGGyAAKCRAigZiYXF3+
-lI6SAQCK46cGFwRw4BvieyQ9jXEj1L53lhWN3hn4Y4PzUuZ4OAD9EiMuqHVPWQJ3
-mAwXPXPOxDizA+Q+HGUX1VjStF+ZLQk=
-=dU/L
+iHUEABYKAB0WIQR0Dq01VzyciB3i6aUigZiYXF3+lAUCZeGnjwAKCRAigZiYXF3+
+lA+dAPwIz6tD6t2nJxe0KiYeICgx8rcvIaKaTI8voHqZX+1/egD/ZDPIiO/z0om8
+glJu2UHhR6jRKHCb9C4CWOvYr3U4eQU=
+=DoE/
 -----END PGP SIGNATURE-----
