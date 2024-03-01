@@ -60,6 +60,10 @@ jobs:
       - name: Generate Licenses File
         run: bun run generate:licenses
 
+      - name: Move .well-known to root
+        working-directory: dist/sign-translate/browser/
+        run: mv assets/.well-known .well-known
+
       - name: Zip dist
         run: zip -r dist/sign-translate/browser.zip dist/sign-translate/browser/
 
