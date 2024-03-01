@@ -126,7 +126,7 @@
     "@types/jasmine": "5.1.4",
     "@types/jasminewd2": "2.0.13",
     "@types/offscreencanvas": "2019.7.3",
-    "@types/three": "0.161.2",
+    "@types/three": "0.162.0",
     "@types/web-app-manifest": "1.0.8",
     "@types/webgl2": "0.0.11",
     "@types/wicg-file-system-access": "2023.10.4",
