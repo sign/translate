@@ -8,16 +8,16 @@ Enjoy seamless Sign Language Translation on desktop and mobile.
 
 ## Table of Contents
 
-- [Key Features](#key-features)
-- [Development](#development)
-  - [Prerequisites](#prerequisites)
-  - [Setting Up the Project](#setting-up-the-project)
-- [Cite](#cite)
-- [Contributing](#contributing)
-- [Issues](#issues)
-- [Project Board](#project-board)
+- [Key Features](#key-features-🔑)
+- [Development](#development-🔧)
+  - [Prerequisites](#prerequisites-📋)
+  - [Setting Up the Project](#setting-up-the-project-🚀)
+- [Cite](#cite-📖)
+- [Contributing](#contributing-🤝)
+- [Issues](#issues-🐛)
+- [Project Board](#project-board-📋)
 
-## Key Features
+## Key Features 🔑
 
 ### Sign Language Production
 
@@ -39,15 +39,15 @@ The following diagram illustrates the process of translating sign language to sp
                                                 └───► [Spoken Language Text] ───► [Spoken Language Audio]
 ```
 
-## Development
+## Development 🔧
 
-### Prerequisites
+### Prerequisites 📋
 
 Before you begin, ensure you have met the following requirements:
 
 - Install [Node.js](https://nodejs.org/) which includes [Node Package Manager (npm)](https://www.npmjs.com/get-npm).
 
-### Setting Up the Project
+### Setting Up the Project 🚀
 
 To set up the project locally, follow these steps:
 
@@ -75,7 +75,7 @@ To set up the project locally, follow these steps:
    npm start
    ```
 
-## Cite
+## Cite 📖
 
 If you find this project useful, consider citing it:
 
@@ -88,14 +88,14 @@ If you find this project useful, consider citing it:
 }
 ```
 
-## Contributing
+## Contributing 🤝
 
-Contributions to this project are welcome! Please refer to our [Contribution Guidelines](https://github.com/sign/.github/blob/main/CONTRIBUTING.md) for more details. 🚀
+Contributions to this project are welcome! Please refer to our [Contribution Guidelines](https://github.com/sign/.github/blob/main/CONTRIBUTING.md) for more details.
 
-## Issues
+## Issues 🐛
 
-If you encounter any issues or have suggestions for improvements, please [submit an issue](https://github.com/sign/translate/issues). 🐛
+If you encounter any issues or have suggestions for improvements, please [submit an issue](https://github.com/sign/translate/issues).
 
-## Project Board
+## Project Board 📋
 
-Check out our [Project Board](https://github.com/sign/translate/projects/1) to follow our progress and get involved in shaping the project's future. 📋
+Check out our [Project Board](https://github.com/sign/translate/projects/1) to follow our progress and get involved in shaping the project's future.
