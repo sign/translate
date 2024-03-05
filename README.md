@@ -1,154 +1,83 @@
-<h1 align="center">👋 Sign Translate</h1>
+# 👋 LangNexus: Sign Translate
 
-<p align="center">
-  <i>
-    Revolutionizing Sign Language Communication with Cutting-Edge Real-Time Translation Models.
-    <br>
-    Enjoy seamless Sign Language Translation on desktop and mobile.
-  </i>
-</p>
+![Sign Translate](src/assets/promotional/about/hero.webp)
 
-<p align="center">
-  <a href="https://sign.mt/"><strong>sign.mt</strong></a>
-  <br>
-</p>
+**Revolutionizing Sign Language Communication with Cutting-Edge Real-Time Translation Models.**
 
-<p align="center">
-  <a href="https://github.com/sign/.github/blob/main/CONTRIBUTING.md">Contribution Guidelines</a>
-  ·
-  <a href="https://github.com/sign/translate/issues">Submit an Issue</a>
-</p>
+Enjoy seamless Sign Language Translation on desktop and mobile.
 
-<p align="center">
-  <a href="https://github.com/sign/translate/actions/workflows/client.yml">
-    <img src="https://github.com/sign/translate/actions/workflows/client.yml/badge.svg" alt="Client Build Test Status Badge" />
-  </a>
-  <a href="https://github.com/sign/translate/actions/workflows/server.yml">
-    <img src="https://github.com/sign/translate/actions/workflows/server.yml/badge.svg" alt="Server Build Test Status Badge" />
-  </a>
-  <a href="https://coveralls.io/github/sign/translate?branch=master">
-    <img src="https://coveralls.io/repos/github/sign/translate/badge.svg?branch=master" alt="Coverage Status Badge" />
-  </a>
-  <a href="https://github.com/sign/translate/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License: CC BY-NC-SA 4.0 Badge" />
-  </a>
-</p>
+## Table of Contents
 
-<p align="center">
-  <a href="https://github.com/sign/translate/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/stars/sign/translate" alt="GitHub Stars for sign/translate" />
-  </a>
-  <a href="https://github.com/sign/translate/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/sign/translate" alt="GitHub Forks for sign/translate" />
-  </a>
-  <a href="https://github.com/sign/translate/stargazers" target="_blank">
-    <img src="https://img.shields.io/github/contributors/sign/translate" alt="GitHub Contributors for sign/translate" />
-  </a>
-  <a href="https://github.com/sign/translate/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/sign/translate" alt="GitHub Issues for sign/translate" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://sign.mt" target="_blank">
-    <img src="src/assets/promotional/about/hero.webp" alt="Sign Language Translation Demo Image" />
-  </a>
-</p>
-
-<hr>
+- [Key Features](#key-features)
+- [Development](#development)
+  - [Prerequisites](#prerequisites)
+  - [Setting Up the Project](#setting-up-the-project)
+- [Cite](#cite)
+- [Contributing](#contributing)
+- [Issues](#issues)
+- [Project Board](#project-board)
 
 ## Key Features
 
-### [Sign Language Production](https://github.com/sign/translate/wiki/Spoken-to-Signed)
+### Sign Language Production
+
+The following diagram illustrates the process of translating spoken language to sign language:
 
 ```
-┌─────────────────────┐
-│Spoken Language Audio│                                                              ┌─────────┐
-└─────────┬───────────┘                                                  ┌──────────►│Human GAN│
-          │                                                              │           └─────────┘
-          ▼                                                              │
-┌────────────────────┐     ┌───────────────┐     ┌───────────┐    ┌──────┴──────┐    ┌───────────────┐
-│Spoken Language Text├────►│Normalized Text├────►│SignWriting├───►│Pose Sequence├───►│Skeleton Viewer│
-└─────────┬──────────┘     └───────────────┘     └───────────┘    └──────┬──────┘    └───────────────┘
-          │                        ▲                   ▲                 │
-          ▼                        │                   │                 │           ┌─────────┐
-┌───────────────────────┐          │                   │                 └──────────►│3D Avatar│
-│Language Identification├──────────┘───────────────────┘                             └─────────┘
-└───────────────────────┘
+[Spoken Language Audio] ─────► [Human GAN] ─────► [Pose Sequence] ─────► [Skeleton Viewer] ─────► [3D Avatar]
+                            │
+                            └───► [Normalized Text] ─────► [SignWriting] ────► [Language Identification]
 ```
 
-### [Sign Language Translation](https://github.com/sign/translate/wiki/Signed-to-Spoken)
+### Sign Language Translation
+
+The following diagram illustrates the process of translating sign language to spoken language:
 
 ```
-┌──────────────────────────┐                                ┌────────────────────┐
-│Upload Sign Language Video│                      ┌────────►│Spoken Language Text│
-└──────────┬───────────────┘                      │         └──────────┬─────────┘
-           │                                      │                    │
-           │          ┌────────────┐       ┌──────┴────┐               │
-           ├─────────►│Segmentation├──────►│SignWriting│               │
-           │          └────────────┘       └───────────┘               │
-           │                                                           ▼
-┌──────────┴────────────────┐                               ┌─────────────────────┐
-│Camera Sign Language Video │                               │Spoken Language Audio│
-└───────────────────────────┘                               └─────────────────────┘
+[Upload Sign Language Video] ───► [Segmentation] ───► [SignWriting]
+                                                │
+                                                └───► [Spoken Language Text] ───► [Spoken Language Audio]
 ```
-
-### Want to Help?
-
-Join us on the journey to revolutionize sign language communication.
-Follow our progress on the [Project Board][project-board],
-shape the project's future,
-and delve deeper into our vision and plans in the [Wiki][wiki].
-
-Wish to report a bug, contribute some code, or enhance documentation? Fantastic!
-Check our guidelines for [contributing][contributing] and then explore our issues marked as <kbd>[help wanted](https://github.com/sign/translate/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/sign/translate/labels/good%20first%20issue)</kbd>.
-
-**Find this useful? Give our repo a star :star: :arrow_up:.**
-
-[![Stargazers repo roster for @sign/translate](https://reporoster.com/stars/sign/translate)](https://github.com/sign/translate/stargazers)
-
-[wiki]: https://github.com/sign/translate/wiki/Spoken-to-Signed
-[contributing]: https://github.com/sign/.github/blob/main/CONTRIBUTING.md
-[project-board]: https://github.com/sign/translate/projects/1
 
 ## Development
 
 ### Prerequisites
 
-- Install [Node.js] which includes [Node Package Manager][npm]
+Before you begin, ensure you have met the following requirements:
+
+- Install [Node.js](https://nodejs.org/) which includes [Node Package Manager (npm)](https://www.npmjs.com/get-npm).
 
 ### Setting Up the Project
 
-Install dependencies locally:
+To set up the project locally, follow these steps:
 
-```bash
-npm install
-```
+1. Clone the repository:
 
-Run the application:
+   ```bash
+   git clone https://github.com/sign/translate.git
+   ```
 
-```bash
-npm start
-```
+2. Navigate to the project directory:
 
-Test the application:
+   ```bash
+   cd translate
+   ```
 
-```bash
-npm test
-```
+3. Install dependencies:
 
-Run the application on iOS:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run build:full && \
-npx cap sync ios && \
-npx cap run ios
-```
+4. Run the application:
 
-[node.js]: https://nodejs.org/
-[npm]: https://www.npmjs.com/get-npm
+   ```bash
+   npm start
+   ```
 
-### Cite
+## Cite
+
+If you find this project useful, consider citing it:
 
 ```bibtex
 @misc{moryossef2023signmt,
@@ -158,3 +87,15 @@ npx cap run ios
     year={2023}
 }
 ```
+
+## Contributing
+
+Contributions to this project are welcome! Please refer to our [Contribution Guidelines](https://github.com/sign/.github/blob/main/CONTRIBUTING.md) for more details.
+
+## Issues
+
+If you encounter any issues or have suggestions for improvements, please [submit an issue](https://github.com/sign/translate/issues).
+
+## Project Board
+
+Check out our [Project Board](https://github.com/sign/translate/projects/1) to follow our progress and get involved in shaping the project's future.
