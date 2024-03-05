@@ -1,6 +1,6 @@
-# 👋 LangNexus: Sign Translate
+# 👋 LangNexus: Sign Translate!
 
-![Sign Translate](src/assets/promotional/about/hero.webp)
+https://github.com/footcricket05/LangNexus/assets/93007427/a5cd56c1-04e5-4971-a858-a5177f2da827
 
 **Revolutionizing Sign Language Communication with Cutting-Edge Real-Time Translation Models.**
 
