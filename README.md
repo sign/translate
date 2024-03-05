@@ -6,7 +6,7 @@
 
 Enjoy seamless Sign Language Translation on desktop and mobile.
 
-## Table of Contents
+## Table of Contents 📖
 
 - [Key Features](#key-features-🔑)
 - [Development](#development-🔧)
