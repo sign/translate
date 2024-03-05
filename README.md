@@ -90,12 +90,12 @@ If you find this project useful, consider citing it:
 
 ## Contributing
 
-Contributions to this project are welcome! Please refer to our [Contribution Guidelines](https://github.com/sign/.github/blob/main/CONTRIBUTING.md) for more details.
+Contributions to this project are welcome! Please refer to our [Contribution Guidelines](https://github.com/sign/.github/blob/main/CONTRIBUTING.md) for more details. 🚀
 
 ## Issues
 
-If you encounter any issues or have suggestions for improvements, please [submit an issue](https://github.com/sign/translate/issues).
+If you encounter any issues or have suggestions for improvements, please [submit an issue](https://github.com/sign/translate/issues). 🐛
 
 ## Project Board
 
-Check out our [Project Board](https://github.com/sign/translate/projects/1) to follow our progress and get involved in shaping the project's future.
+Check out our [Project Board](https://github.com/sign/translate/projects/1) to follow our progress and get involved in shaping the project's future. 📋
