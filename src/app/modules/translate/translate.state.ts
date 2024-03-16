@@ -80,14 +80,17 @@ const initialState: TranslateStateModel = {
 })
 export class TranslateState implements NgxsOnInit {
   poseViewerSetting$!: Observable<PoseViewerSetting>;
+  pose$!: Observable<EstimatedPose>;
 
   constructor(
     private store: Store,
     private service: TranslationService,
     private swService: SignWritingTranslationService,
+    private poseService: PoseService,
     private languageDetectionService: LanguageDetectionService
   ) {
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
+    this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
   }
 
   ngxsOnInit({dispatch, patchState}: StateContext<TranslateStateModel>): any {
@@ -409,5 +412,15 @@ export class TranslateState implements NgxsOnInit {
       alert(`Downloading "${filename}" on this device is not supported`);
     }
     document.body.removeChild(a);
+  }
+
+  // Listen to pose estimation results from the pose store
+  @Action(StoreFramePose)
+  storePose({getState, patchState}: StateContext<TranslateStateModel>, {pose}: StoreFramePose): void {
+    const {signedLanguagePose} = getState();
+    const components = ['poseLandmarks', 'faceLandmarks', 'leftHandLandmarks', 'rightHandLandmarks'];
+    const normalizedPoseFrame = this.poseService.normalizeHolistic(pose, components);
+
+    // patchState({signedLanguagePose: normalizedPose});
   }
 }

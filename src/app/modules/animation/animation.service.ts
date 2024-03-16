@@ -1,9 +1,9 @@
 import type {Tensor} from '@tensorflow/tfjs';
-import {EMPTY_LANDMARK, EstimatedPose} from '../pose/pose.state';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
 import {Injectable} from '@angular/core';
+import {EstimatedPose} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
-import {MediapipeHolisticService} from '../../core/services/holistic.service';
+import {PoseService} from '../pose/pose.service';
 
 const ANIMATION_KEYS = [
   'mixamorigHead.quaternion',
@@ -70,7 +70,7 @@ const ANIMATION_KEYS = [
 export class AnimationService {
   sequentialModel: LayersModel;
 
-  constructor(private tf: TensorflowService, private holistic: MediapipeHolisticService) {}
+  constructor(private tf: TensorflowService, private poseService: PoseService) {}
 
   async loadModel(): Promise<LayersModel> {
     await this.tf.load();
@@ -80,24 +80,12 @@ export class AnimationService {
   }
 
   normalizePose(pose: EstimatedPose): Tensor {
-    const bodyLandmarks =
-      pose.poseLandmarks || new Array(Object.keys(this.holistic.POSE_LANDMARKS).length).fill(EMPTY_LANDMARK);
-    const leftHandLandmarks = pose.leftHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
-    const rightHandLandmarks = pose.rightHandLandmarks || new Array(21).fill(EMPTY_LANDMARK);
-    const landmarks = bodyLandmarks.concat(leftHandLandmarks, rightHandLandmarks);
-
-    const tensor = this.tf
-      .tensor(landmarks.map(l => [l.x, l.y, l.z]))
-      .mul(this.tf.tensor([pose.image.width, pose.image.height, pose.image.width]));
-
-    const p1 = tensor.slice(this.holistic.POSE_LANDMARKS.LEFT_SHOULDER, 1);
-    const p2 = tensor.slice(this.holistic.POSE_LANDMARKS.RIGHT_SHOULDER, 1);
-
-    const d = this.tf.sqrt(this.tf.pow(p2.sub(p1), 2).sum());
-    let normTensor = this.tf.sub(tensor, p1.add(p2).div(2)).div(d);
-    normTensor = normTensor.mul(tensor.notEqual(0)); // Remove landmarks not detected
-
-    return normTensor;
+    const landmarks = this.poseService.normalizeHolistic(pose, [
+      'poseLandmarks',
+      'leftHandLandmarks',
+      'rightHandLandmarks',
+    ]);
+    return this.tf.tensor(landmarks.map(l => [l.x, l.y, l.z]));
   }
 
   estimate(poses: EstimatedPose[]): {[key: string]: [number, number, number, number][]} {
