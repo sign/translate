@@ -49,6 +49,7 @@ export interface TranslateStateModel {
 
   spokenLanguageText: string;
   normalizedSpokenLanguageText?: string;
+  spokenLanguageSentences: string[];
 
   signWriting: SignWritingObj[];
 
@@ -66,6 +67,7 @@ const initialState: TranslateStateModel = {
 
   spokenLanguageText: '',
   normalizedSpokenLanguageText: null,
+  spokenLanguageSentences: [],
 
   signWriting: [],
 
@@ -209,6 +211,11 @@ export class TranslateState implements NgxsOnInit {
     if (!spokenLanguage) {
       await detectLanguage;
     }
+
+    // Get spoken language
+    const {detectedLanguage} = getState();
+    const assumedSpokenLanguage = spokenLanguage || detectedLanguage;
+    patchState({spokenLanguageSentences: this.service.splitSpokenSentences(assumedSpokenLanguage, trimmedText)});
 
     dispatch(ChangeTranslation);
   }

@@ -31,20 +31,6 @@
   display: none;
 }
 
-textarea#desktop {
-  background-color: transparent;
-  color: inherit;
-  border: none;
-  direction: unset; /* Important for initial cursor position */
-  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  line-height: 32px;
-  resize: none;
-  outline: none;
-  width: 100%;
-  height: calc(100% - 40px);
-}
-
 #char-count {
   flex-grow: 1;
   align-self: center;

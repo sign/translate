@@ -1,0 +1,22 @@
+<textarea
+  #textarea
+  id="desktop"
+  [formControl]="textControl"
+  [maxLength]="maxLength"
+  [lang]="lang"
+  (mouseleave)="hoveredSentenceIndex = null"
+  enterkeyhint="enter"
+  dir="auto"
+  aria-labelledby="spoken-language-label"
+  autofocus
+  data-gramm_editor="false"></textarea>
+
+<div id="sentences-overlay" *ngIf="sentences$ | async as sentences">
+  <span
+    *ngFor="let sentence of sentences; let i = index"
+    [class.hover]="hoveredSentenceIndex === i"
+    (mouseenter)="hoveredSentenceIndex = i"
+    >{{ sentence }}</span
+  >
+  <span id="filler" (mouseenter)="hoveredSentenceIndex = null"></span>
+</div>

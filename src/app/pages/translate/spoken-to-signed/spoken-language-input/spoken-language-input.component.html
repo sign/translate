@@ -1,16 +1,7 @@
 <ng-container *ngIf="!isMobile">
   <div class="translation-text">
     <label id="spoken-language-label">{{ 'translate.spoken-to-signed.text' | transloco }}</label>
-    <textarea
-      id="desktop"
-      [formControl]="text"
-      [maxLength]="maxTextLength"
-      [lang]="spokenLanguage"
-      enterkeyhint="enter"
-      dir="auto"
-      aria-labelledby="spoken-language-label"
-      autofocus
-      data-gramm_editor="false"></textarea>
+    <app-desktop-textarea dir="auto" [textControl]="text" [maxLength]="maxTextLength" [lang]="spokenLanguage" />
     <div id="suggestions" *transloco="let t; read: 'translate.suggestions'">
       <ng-container *ngIf="detectedLanguage && detectedLanguage !== spokenLanguage">
         <ion-icon name="sparkles" color="primary"></ion-icon>
