@@ -1,12 +1,12 @@
 PODS:
-  - Capacitor (5.7.2):
+  - Capacitor (5.7.3):
     - CapacitorCordova
   - CapacitorBlobWriter (0.0.1):
     - Capacitor
     - GCDWebServer (~> 3.0)
   - CapacitorClipboard (5.0.7):
     - Capacitor
-  - CapacitorCordova (5.7.2)
+  - CapacitorCordova (5.7.3)
   - CapacitorFilesystem (5.2.1):
     - Capacitor
   - CapacitorFirebaseAnalytics (5.4.1):
@@ -245,10 +245,10 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/splash-screen"
 
 SPEC CHECKSUMS:
-  Capacitor: fc7ef6d935eafb0df9eaaf109ca69be16c51a2d2
+  Capacitor: 7b5eb47c6125e9b58a3e3cd02fe366fc58adc89c
   CapacitorBlobWriter: 110eeaf80611f19bf01a8a05ff3672149ed0baad
   CapacitorClipboard: 45e5e25f2271f98712985d422776cdc5a779cca1
-  CapacitorCordova: 70b13b8fddb6f35d8adcfe06cb5045c07f35f6de
+  CapacitorCordova: a377c52a28dbb3b895c0f71187f7b1777fee69db
   CapacitorFilesystem: 9f3e3c7fea2fff12f46dd5b07a2914f2103e4cfc
   CapacitorFirebaseAnalytics: dfccb704820bb7db82debbc05fded24b096bed71
   CapacitorFirebaseApp: 92ca109f6c2051fac981079390a250c2b3a9cd7d
