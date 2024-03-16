@@ -26,6 +26,10 @@ import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';
 import {LanguageDetectionService} from './language-detection/language-detection.service';
+import type {Pose} from 'pose-format';
+import {EstimatedPose} from '../pose/pose.state';
+import {StoreFramePose} from '../pose/pose.actions';
+import {PoseService} from '../pose/pose.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -45,8 +49,10 @@ export interface TranslateStateModel {
 
   spokenLanguageText: string;
   normalizedSpokenLanguageText?: string;
+
   signWriting: SignWritingObj[];
-  signedLanguagePose: string; // TODO: use Pose object instead of URL
+
+  signedLanguagePose: string | Pose; // TODO: use Pose object instead of URL
   signedLanguageVideo: string;
 }
 
@@ -60,7 +66,9 @@ const initialState: TranslateStateModel = {
 
   spokenLanguageText: '',
   normalizedSpokenLanguageText: null,
+
   signWriting: [],
+
   signedLanguagePose: null,
   signedLanguageVideo: null,
 };
@@ -387,7 +395,9 @@ export class TranslateState implements NgxsOnInit {
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {signedLanguageVideo, spokenLanguageText} = getState();
 
-    const filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
+    let filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
+    // File names are limited to 255 characters, so we limit to 250 to be safe with the extension
+    filename = filename.slice(0, 250);
 
     const a = document.createElement('a');
     a.href = signedLanguageVideo;
