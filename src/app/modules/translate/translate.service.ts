@@ -166,6 +166,20 @@ export class TranslationService {
 
   constructor(private http: HttpClient) {}
 
+  private lastSpokenLanguageSegmenter: {language: string; segmenter: Intl.Segmenter};
+
+  splitSpokenSentences(language: string, text: string): string[] {
+    // Construct a segmenter for the given language, can take 1ms~
+    if (this.lastSpokenLanguageSegmenter?.language !== language) {
+      this.lastSpokenLanguageSegmenter = {
+        language,
+        segmenter: new Intl.Segmenter(language, {granularity: 'sentence'}),
+      };
+    }
+    const segments = this.lastSpokenLanguageSegmenter.segmenter.segment(text);
+    return Array.from(segments).map(segment => segment.segment);
+  }
+
   normalizeSpokenLanguageText(language: string, text: string): Observable<string> {
     const params = new URLSearchParams();
     params.set('lang', language);

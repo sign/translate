@@ -26,11 +26,9 @@ export class MediaPipeLanguageDetectionService extends LanguageDetectionService 
     );
 
     this.detector = await this.ga.trace('language-detector', 'create', async () => {
-      const wasmFiles = await textTasks.FilesetResolver.forTextTasks('assets/models/mediapipe-language-detector/');
-      return await textTasks.LanguageDetector.createFromModelPath(
-        wasmFiles,
-        'assets/models/mediapipe-language-detector/model.tflite'
-      );
+      const basePath = 'assets/models/mediapipe-language-detector';
+      const wasmFiles = await textTasks.FilesetResolver.forTextTasks(basePath);
+      return await textTasks.LanguageDetector.createFromModelPath(wasmFiles, `${basePath}/model.tflite`);
     });
   }
 

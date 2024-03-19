@@ -26,6 +26,10 @@ import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';
 import {LanguageDetectionService} from './language-detection/language-detection.service';
+import type {Pose} from 'pose-format';
+import {EstimatedPose} from '../pose/pose.state';
+import {StoreFramePose} from '../pose/pose.actions';
+import {PoseService} from '../pose/pose.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -45,8 +49,11 @@ export interface TranslateStateModel {
 
   spokenLanguageText: string;
   normalizedSpokenLanguageText?: string;
+  spokenLanguageSentences: string[];
+
   signWriting: SignWritingObj[];
-  signedLanguagePose: string; // TODO: use Pose object instead of URL
+
+  signedLanguagePose: string | Pose; // TODO: use Pose object instead of URL
   signedLanguageVideo: string;
 }
 
@@ -60,7 +67,10 @@ const initialState: TranslateStateModel = {
 
   spokenLanguageText: '',
   normalizedSpokenLanguageText: null,
+  spokenLanguageSentences: [],
+
   signWriting: [],
+
   signedLanguagePose: null,
   signedLanguageVideo: null,
 };
@@ -72,14 +82,17 @@ const initialState: TranslateStateModel = {
 })
 export class TranslateState implements NgxsOnInit {
   poseViewerSetting$!: Observable<PoseViewerSetting>;
+  pose$!: Observable<EstimatedPose>;
 
   constructor(
     private store: Store,
     private service: TranslationService,
     private swService: SignWritingTranslationService,
+    private poseService: PoseService,
     private languageDetectionService: LanguageDetectionService
   ) {
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
+    this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
   }
 
   ngxsOnInit({dispatch, patchState}: StateContext<TranslateStateModel>): any {
@@ -198,6 +211,11 @@ export class TranslateState implements NgxsOnInit {
     if (!spokenLanguage) {
       await detectLanguage;
     }
+
+    // Get spoken language
+    const {detectedLanguage} = getState();
+    const assumedSpokenLanguage = spokenLanguage || detectedLanguage;
+    patchState({spokenLanguageSentences: this.service.splitSpokenSentences(assumedSpokenLanguage, trimmedText)});
 
     dispatch(ChangeTranslation);
   }
@@ -387,7 +405,9 @@ export class TranslateState implements NgxsOnInit {
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {signedLanguageVideo, spokenLanguageText} = getState();
 
-    const filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
+    let filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
+    // File names are limited to 255 characters, so we limit to 250 to be safe with the extension
+    filename = filename.slice(0, 250);
 
     const a = document.createElement('a');
     a.href = signedLanguageVideo;
@@ -399,5 +419,15 @@ export class TranslateState implements NgxsOnInit {
       alert(`Downloading "${filename}" on this device is not supported`);
     }
     document.body.removeChild(a);
+  }
+
+  // Listen to pose estimation results from the pose store
+  @Action(StoreFramePose)
+  storePose({getState, patchState}: StateContext<TranslateStateModel>, {pose}: StoreFramePose): void {
+    const {signedLanguagePose} = getState();
+    const components = ['poseLandmarks', 'faceLandmarks', 'leftHandLandmarks', 'rightHandLandmarks'];
+    const normalizedPoseFrame = this.poseService.normalizeHolistic(pose, components);
+
+    // patchState({signedLanguagePose: normalizedPose});
   }
 }

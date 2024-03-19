@@ -13,10 +13,12 @@ import {CommonModule} from '@angular/common';
 import {SpokenLanguageInputComponent} from './spoken-language-input/spoken-language-input.component';
 import {SignedLanguageOutputComponent} from './signed-language-output/signed-language-output.component';
 import {KeyboardFlyingDirective} from '../../../directives/keyboard-flying.directive';
+import {DesktopTextareaComponent} from './spoken-language-input/desktop-textarea/desktop-textarea.component';
 
 const componentModules = [SpeechToTextModule, TextToSpeechModule, SignWritingModule, PoseViewersModule];
 const components = [
   SpokenToSignedComponent,
+  DesktopTextareaComponent,
   SpokenLanguageInputComponent,
   SignedLanguageOutputComponent,
   KeyboardFlyingDirective,
