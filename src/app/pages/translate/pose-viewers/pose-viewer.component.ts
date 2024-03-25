@@ -5,6 +5,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
 import {PlayableVideoEncoder} from './playable-video-encoder';
+import {isChrome} from '../../../core/constants';
 
 @Component({
   selector: 'app-pose-viewer',
@@ -38,7 +39,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   async ngOnInit() {
     // Some browsers videos can't have a transparent background
     const isTransparencySupported =
-      'chrome' in window && // transparency is currently not supported in firefox and safari
+      isChrome && // transparency is currently not supported in firefox and safari
       !PlayableVideoEncoder.isSupported(); // alpha is not yet supported in chrome VideoEncoder
     // TODO check if alpha is supported in Video Muxer
     if (!isTransparencySupported) {
