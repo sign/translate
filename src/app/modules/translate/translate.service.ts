@@ -169,6 +169,11 @@ export class TranslationService {
   private lastSpokenLanguageSegmenter: {language: string; segmenter: Intl.Segmenter};
 
   splitSpokenSentences(language: string, text: string): string[] {
+    // If the browser does not support the Segmenter API (FireFox<127), return the whole text as a single segment
+    if (!('Segmenter' in Intl)) {
+      return [text];
+    }
+
     // Construct a segmenter for the given language, can take 1ms~
     if (this.lastSpokenLanguageSegmenter?.language !== language) {
       this.lastSpokenLanguageSegmenter = {

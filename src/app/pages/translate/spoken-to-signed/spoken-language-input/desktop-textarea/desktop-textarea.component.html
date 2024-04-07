@@ -11,12 +11,13 @@
   autofocus
   data-gramm_editor="false"></textarea>
 
-<div id="sentences-overlay" *ngIf="sentences$ | async as sentences">
-  <span
-    *ngFor="let sentence of sentences; let i = index"
-    [class.hover]="hoveredSentenceIndex === i"
-    (mouseenter)="hoveredSentenceIndex = i"
-    >{{ sentence }}</span
-  >
-  <span id="filler" (mouseenter)="hoveredSentenceIndex = null"></span>
-</div>
+<ng-container *ngIf="sentences$ | async as sentences">
+  <div id="sentences-overlay" *ngIf="sentences.length > 1">
+    <span
+      *ngFor="let sentence of sentences; let i = index"
+      [class.hover]="hoveredSentenceIndex === i"
+      (mouseenter)="hoveredSentenceIndex = i"
+      >{{ sentence }}</span
+    >
+  </div>
+</ng-container>
