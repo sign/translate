@@ -29,7 +29,7 @@
     "firebase-functions": "4.9.0",
     "http-errors": "2.0.0",
     "node-fetch": "2.6.7",
-    "openai": "4.33.0"
+    "openai": "4.33.1"
   },
   "devDependencies": {
     "@firebase/firestore-types": "3.0.1",
@@ -41,12 +41,12 @@
     "@typescript-eslint/parser": "7.6.0",
     "eslint": "9.0.0",
     "firebase-functions-test": "3.2.0",
-    "firebase-tools": "13.7.1",
+    "firebase-tools": "13.7.2",
     "jest": "29.7.0",
     "minimatch": "9.0.4",
     "mock-express-request": "0.2.2",
     "mock-express-response": "0.3.0",
     "ts-jest": "29.1.2",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   }
 }
