@@ -7,5 +7,5 @@ npm install
 # eslint: angular eslint requires eslint < 9.0.0
 
 # Update server dependencies
-bun x npm-check-updates --cacheClear --cwd functions -u --reject node-fetch
+bun x npm-check-updates --cacheClear --cwd functions -u --reject node-fetch,eslint
 cd functions && bun install && cd ..
