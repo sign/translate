@@ -23,7 +23,7 @@ describe('TranslationService', () => {
     const text = sentences.join('');
     const language = 'en';
     const result = service.splitSpokenSentences(language, text);
-    if (isChrome) {
+    if ('Segmenter' in Intl) {
       expect(result).toEqual(sentences);
     } else {
       expect(result).toEqual([text]);
