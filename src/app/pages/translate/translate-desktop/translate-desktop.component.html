@@ -10,13 +10,12 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <div id="input-mode-group">
-      <ng-container *ngIf="spokenToSigned">
-        <app-translate-input-button mode="text" icon="language"></app-translate-input-button>
-      </ng-container>
-      <ng-container *ngIf="!spokenToSigned">
-        <app-translate-input-button mode="webcam" icon="videocam"></app-translate-input-button>
-        <app-translate-input-button mode="upload" icon="cloud-upload"></app-translate-input-button>
-      </ng-container>
+      @if (spokenToSigned) {
+      <app-translate-input-button mode="text" icon="language" />
+      } @else {
+      <app-translate-input-button mode="webcam" icon="videocam" />
+      <app-translate-input-button mode="upload" icon="cloud-upload" />
+      }
     </div>
 
     <app-drop-pose-file>
@@ -24,10 +23,13 @@
         <app-language-selectors />
 
         <div id="content">
+          @if (spokenToSigned) {
           <!-- Spoken to sign requires a text input and video output -->
-          <app-spoken-to-signed *ngIf="spokenToSigned"></app-spoken-to-signed>
+          <app-spoken-to-signed />
+          } @else {
           <!-- Sign to spoken requires a video input and text output -->
-          <app-signed-to-spoken *ngIf="!spokenToSigned"></app-signed-to-spoken>
+          <app-signed-to-spoken />
+          }
         </div>
       </div>
     </app-drop-pose-file>

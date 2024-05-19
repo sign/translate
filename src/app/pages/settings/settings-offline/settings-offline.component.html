@@ -15,52 +15,48 @@
     </ion-header>
 
     <ng-template #nodeTemplate let-node>
-      <span class="node-label" *ngIf="node.name">{{ node.label }}</span>
-      <span class="node-label" *ngIf="!node.name">{{ node.path.split('/').pop() }}</span>
-      <ng-container *ngIf="node.size !== null">
-        <span *ngIf="node.size">{{ node.size | filesize }}</span>
-        <mat-progress-spinner
-          *ngIf="node.progress"
-          mode="determinate"
-          [value]="node.progress * 100"
-          [diameter]="20"></mat-progress-spinner>
+      @if (node.name) {
+      <span class="node-label">{{ node.label }}</span>
+      } @else {
+      <span class="node-label">{{ node.path.split('/').pop() }}</span>
+      } @if (node.size !== null) { @if (node.size) {
+      <span>{{ node.size | filesize }}</span>
+      } @if (node.progress) {
+      <mat-progress-spinner mode="determinate" [value]="node.progress * 100" [diameter]="20"></mat-progress-spinner>
+      } @if (node.exists) {
+      <ion-button
+        fill="clear"
+        class="circle-icon"
+        color="secondary"
+        shape="round"
+        size="small"
+        [attr.aria-label]="'settings.other.offline.actions.reDownload' | transloco"
+        (click)="reDownload(node)">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
 
-        <ion-button
-          fill="clear"
-          class="circle-icon"
-          color="secondary"
-          shape="round"
-          size="small"
-          [attr.aria-label]="'settings.other.offline.actions.reDownload' | transloco"
-          *ngIf="node.exists"
-          (click)="reDownload(node)">
-          <ion-icon slot="icon-only" name="refresh"></ion-icon>
-        </ion-button>
-
-        <ion-button
-          fill="clear"
-          class="circle-icon"
-          color="danger"
-          shape="round"
-          size="small"
-          [attr.aria-label]="'settings.other.offline.actions.delete' | transloco"
-          *ngIf="node.exists"
-          (click)="deleteCache(node)">
-          <ion-icon slot="icon-only" name="trash"></ion-icon>
-        </ion-button>
-
-        <ion-button
-          fill="clear"
-          class="circle-icon"
-          color="primary"
-          shape="round"
-          size="small"
-          [attr.aria-label]="'settings.other.offline.actions.download' | transloco"
-          *ngIf="!node.exists && !node.progress"
-          (click)="download(node)">
-          <ion-icon slot="icon-only" name="cloud-download-outline"></ion-icon>
-        </ion-button>
-      </ng-container>
+      <ion-button
+        fill="clear"
+        class="circle-icon"
+        color="danger"
+        shape="round"
+        size="small"
+        [attr.aria-label]="'settings.other.offline.actions.delete' | transloco"
+        (click)="deleteCache(node)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+      } @if (!node.exists && !node.progress) {
+      <ion-button
+        fill="clear"
+        class="circle-icon"
+        color="primary"
+        shape="round"
+        size="small"
+        [attr.aria-label]="'settings.other.offline.actions.download' | transloco"
+        (click)="download(node)">
+        <ion-icon slot="icon-only" name="cloud-download-outline"></ion-icon>
+      </ion-button>
+      } }
     </ng-template>
 
     <mat-tree [dataSource]="filesTree" [treeControl]="treeControl">

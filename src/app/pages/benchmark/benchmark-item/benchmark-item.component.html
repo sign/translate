@@ -3,7 +3,10 @@
     <ion-card-title>{{ title }}</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <span *ngIf="timings.length === 1">{{ timings[0].toFixed(1) }}ms</span>
-    <span *ngIf="timings.length > 1">~{{ fps() }}fps</span>
+    @if (timings.length === 1) {
+    <span>{{ timings[0].toFixed(1) }}ms</span>
+    } @else if (timings.length > 1) {
+    <span>~{{ fps() }}fps</span>
+    }
   </ion-card-content>
 </ion-card>

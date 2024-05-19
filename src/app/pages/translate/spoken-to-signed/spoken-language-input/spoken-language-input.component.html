@@ -1,55 +1,51 @@
-<ng-container *ngIf="!isMobile">
-  <div class="translation-text">
-    <label id="spoken-language-label">{{ 'translate.spoken-to-signed.text' | transloco }}</label>
-    <app-desktop-textarea dir="auto" [textControl]="text" [maxLength]="maxTextLength" [lang]="spokenLanguage" />
-    <div id="suggestions" *transloco="let t; read: 'translate.suggestions'">
-      <ng-container *ngIf="detectedLanguage && detectedLanguage !== spokenLanguage">
-        <ion-icon name="sparkles" color="primary"></ion-icon>
-        {{ t('translate-from') }}:
-        <a (click)="setDetectedLanguage()">{{ 'languages.' + detectedLanguage | transloco }}</a>
-      </ng-container>
-      <ng-container *ngIf="normalizedText$ | async as normalizedText">
-        <ion-icon name="sparkles" color="primary"></ion-icon>
-        {{ t('did-you-mean') }}:
-        <a (click)="setText(normalizedText)">{{ normalizedText }}</a>
-      </ng-container>
-    </div>
-    <div class="actions-row">
-      <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
-      <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
-      <div id="char-count">{{ text.value.length | number }} / {{ maxTextLength | number }}</div>
-    </div>
+@if (!isMobile) {
+<div class="translation-text">
+  <label id="spoken-language-label">{{ 'translate.spoken-to-signed.text' | transloco }}</label>
+  <app-desktop-textarea dir="auto" [textControl]="text" [maxLength]="maxTextLength" [lang]="spokenLanguage" />
+  <div id="suggestions" *transloco="let t; read: 'translate.suggestions'">
+    @if (detectedLanguage && detectedLanguage !== spokenLanguage) {
+    <ion-icon name="sparkles" color="primary"></ion-icon>
+    {{ t('translate-from') }}:
+    <a (click)="setDetectedLanguage()">{{ 'languages.' + detectedLanguage | transloco }}</a>
+    } @if (normalizedText$ | async; as normalizedText) {
+    <ion-icon name="sparkles" color="primary"></ion-icon>
+    {{ t('did-you-mean') }}:
+    <a (click)="setText(normalizedText)">{{ normalizedText }}</a>
+    }
   </div>
-</ng-container>
+  <div class="actions-row">
+    <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)"></app-speech-to-text>
+    <app-text-to-speech [lang]="spokenLanguage" [text]="text.value"></app-text-to-speech>
+    <div id="char-count">{{ text.value.length | number }} / {{ maxTextLength | number }}</div>
+  </div>
+</div>
+} @if (isMobile) {
+<ion-toolbar appKeyboardFlying>
+  <ion-buttons slot="start">
+    <ion-button disabled>
+      <ion-icon slot="icon-only" name="add-outline" color="primary"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-textarea
+    id="mobile"
+    autoGrow
+    rows="1"
+    [placeholder]="'translate.spoken-to-signed.placeholder' | transloco"
+    [attr.aria-label]="'translate.spoken-to-signed.text' | transloco"
+    [formControl]="text"
+    [attr.maxLength]="maxTextLength"
+    [lang]="spokenLanguage"
+    enterkeyhint="enter"
+    dir="auto"
+    aria-labelledby="spoken-language-label"
+    autofocus
+    [attr.data-gramm_editor]="false"></ion-textarea>
 
-<ng-container *ngIf="isMobile">
-  <ion-toolbar appKeyboardFlying>
-    <ion-buttons slot="start">
-      <ion-button disabled>
-        <ion-icon slot="icon-only" name="add-outline" color="primary"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-
-    <ion-textarea
-      id="mobile"
-      autoGrow
-      rows="1"
-      [placeholder]="'translate.spoken-to-signed.placeholder' | transloco"
-      [attr.aria-label]="'translate.spoken-to-signed.text' | transloco"
-      [formControl]="text"
-      [attr.maxLength]="maxTextLength"
+  <ion-buttons slot="end">
+    <app-speech-to-text
       [lang]="spokenLanguage"
-      enterkeyhint="enter"
-      dir="auto"
-      aria-labelledby="spoken-language-label"
-      autofocus
-      [attr.data-gramm_editor]="false"></ion-textarea>
-
-    <ion-buttons slot="end">
-      <app-speech-to-text
-        [lang]="spokenLanguage"
-        (changeText)="text.setValue($event)"
-        matTooltipPosition="before"></app-speech-to-text>
-    </ion-buttons>
-  </ion-toolbar>
-</ng-container>
+      (changeText)="text.setValue($event)"
+      matTooltipPosition="before"></app-speech-to-text>
+  </ion-buttons>
+</ion-toolbar>
+}

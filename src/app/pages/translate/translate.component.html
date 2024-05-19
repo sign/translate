@@ -1,2 +1,5 @@
-<app-translate-desktop *ngIf="!isMobile.matches" />
-<app-translate-mobile *ngIf="isMobile.matches" />
+@if (isMobile.matches) {
+<app-translate-mobile />
+} @else {
+<app-translate-desktop />
+}

@@ -20,7 +20,8 @@
   <ion-card>
     <ion-card-content>
       <mat-tab-group>
-        <mat-tab *ngFor="let customer of customers" label="{{ customer.name }}">
+        @for (customer of customers; track customer.name) {
+        <mat-tab label="{{ customer.name }}">
           <p>
             <br />
             As of 2022, {{ customer.name }} has <b>{{ customer.locations | number }}</b> locations in the United States.
@@ -29,6 +30,7 @@
             {{ customer.testimonial }}
           </p>
         </mat-tab>
+        }
       </mat-tab-group>
     </ion-card-content>
   </ion-card>

@@ -1,8 +1,13 @@
 <ng-template #nodeTemplate let-node>
-  <a [href]="node.repository" *ngIf="node.repository" target="_blank">{{ node.name }}</a>
-  <span *ngIf="!node.repository">{{ node.name }}</span>
-  <a [href]="node.licenseUrl" *ngIf="node.licenseUrl" target="_blank">{{ node.licenses }}</a>
-  <span *ngIf="!node.licenseUrl">{{ node.licenses }}</span>
+  @if (node.repository) {
+  <a [href]="node.repository" target="_blank">{{ node.name }}</a>
+  } @else {
+  <span>{{ node.name }}</span>
+  } @if (node.licenseUrl) {
+  <a [href]="node.licenseUrl" target="_blank">{{ node.licenses }}</a>
+  } @else {
+  <span>{{ node.licenses }}</span>
+  }
 </ng-template>
 
 <mat-tree [dataSource]="filesTree" [treeControl]="treeControl">
