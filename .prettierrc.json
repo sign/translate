@@ -4,5 +4,13 @@
   "printWidth": 120,
   "bracketSameLine": true,
   "bracketSpacing": false,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular"
+      }
+    }
+  ]
 }
