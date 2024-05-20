@@ -273,6 +273,7 @@
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
+            "discoverRoutes": true,
             "routes": [
               "/",
               "/about",
