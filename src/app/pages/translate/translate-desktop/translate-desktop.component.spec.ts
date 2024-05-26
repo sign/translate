@@ -10,10 +10,11 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {VideoState} from '../../../core/modules/ngxs/store/video/video.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('TranslateDesktopComponent', () => {
   let component: TranslateDesktopComponent;
@@ -22,16 +23,16 @@ describe('TranslateDesktopComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [TranslateDesktopComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         AppTranslocoTestingModule,
         MatTabsModule,
         MatTooltipModule,
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
-        HttpClientTestingModule,
         RouterTestingModule,
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(TranslateDesktopComponent);
     component = fixture.componentInstance;

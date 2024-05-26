@@ -7,8 +7,9 @@ import {SettingsState} from '../../../modules/settings/settings.state';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('LanguageSelectorsComponent', () => {
   let component: LanguageSelectorsComponent;
@@ -17,12 +18,9 @@ describe('LanguageSelectorsComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [LanguageSelectorsComponent],
-      imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
-        HttpClientTestingModule,
-        AppTranslocoTestingModule,
-      ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), AppTranslocoTestingModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(LanguageSelectorsComponent);
     component = fixture.componentInstance;

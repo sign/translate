@@ -13,9 +13,10 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {TranslocoService} from '@ngneat/transloco';
 import {RouterTestingModule} from '@angular/router/testing';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -25,16 +26,16 @@ describe('TranslateComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [TranslateComponent, LanguageSelectorComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         AppTranslocoTestingModule,
         MatTabsModule,
         MatTooltipModule,
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
-        HttpClientTestingModule,
         RouterTestingModule,
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

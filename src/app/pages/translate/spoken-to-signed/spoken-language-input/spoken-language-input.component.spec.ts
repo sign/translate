@@ -5,16 +5,14 @@ import {SetSpokenLanguageText, SuggestAlternativeText} from '../../../../modules
 import {NgxsModule, Store} from '@ngxs/store';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {SettingsState} from '../../../../modules/settings/settings.state';
-import {TranslateState} from '../../../../modules/translate/translate.state';
 import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {DesktopTextareaComponent} from './desktop-textarea/desktop-textarea.component';
-import {LanguageDetectionService} from '../../../../modules/translate/language-detection/language-detection.service';
-import {MediaPipeLanguageDetectionService} from '../../../../modules/translate/language-detection/mediapipe.service';
 import {TranslateModule} from '../../../../modules/translate/translate.module';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('SpokenLanguageInputComponent', () => {
   let component: SpokenLanguageInputComponent;
@@ -24,15 +22,15 @@ describe('SpokenLanguageInputComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [SpokenLanguageInputComponent, DesktopTextareaComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         NgxsModule.forRoot([SettingsState], ngxsConfig),
         TranslateModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule,
         AppTranslocoTestingModule,
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(SpokenLanguageInputComponent);
     component = fixture.componentInstance;

@@ -1,14 +1,14 @@
 import {TestBed} from '@angular/core/testing';
 import {TranslationService} from './translate.service';
-import {HttpClientModule} from '@angular/common/http';
-import {isChrome} from '../../core/constants';
+import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('TranslationService', () => {
   let service: TranslationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     service = TestBed.inject(TranslationService);
   });

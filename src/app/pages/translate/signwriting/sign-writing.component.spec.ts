@@ -5,13 +5,12 @@ import {SignWritingComponent} from './sign-writing.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {defineCustomElements as defineCustomElementsSW} from '@sutton-signwriting/sgnw-components/loader';
 import {NgxsModule, Store} from '@ngxs/store';
-import {NavigatorService} from '../../../core/services/navigator/navigator.service';
-import {VideoState, VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {TranslateState, TranslateStateModel} from '../../../modules/translate/translate.state';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {SettingsState} from '../../../modules/settings/settings.state';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('SignWritingComponent', () => {
   let component: SignWritingComponent;
@@ -28,12 +27,9 @@ describe('SignWritingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SignWritingComponent],
-      imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
-        MatTooltipModule,
-        HttpClientTestingModule,
-      ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), MatTooltipModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     store = TestBed.inject(Store);
