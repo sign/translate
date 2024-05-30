@@ -41,7 +41,9 @@
     {
       "action": "/",
       "accept": {
-        "application/*": [".pose"]
+        "application/*": [
+          ".pose"
+        ]
       },
       "icons": [],
       "launch_type": "multiple-clients"
