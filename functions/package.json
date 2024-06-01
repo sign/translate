@@ -29,7 +29,7 @@
     "firebase-functions": "5.0.1",
     "http-errors": "2.0.0",
     "node-fetch": "2.6.7",
-    "openai": "4.47.2"
+    "openai": "4.47.3"
   },
   "devDependencies": {
     "@firebase/firestore-types": "3.0.2",
