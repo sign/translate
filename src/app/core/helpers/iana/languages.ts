@@ -39,7 +39,7 @@ export const IANASignedLanguages = [
   {signed: 'eth', spoken: 'am', country: 'et', abbreviation: ''}, // Ethiopian Sign Language
   {signed: 'fss', spoken: 'fi', country: 'fi', abbreviation: ''}, // Finland-Swedish Sign Language
   {signed: 'fse', spoken: 'fi', country: 'fi', abbreviation: ''}, // Finnish Sign Language
-  {signed: 'fsl', spoken: 'fr', country: 'fr', abbreviation: ''}, // French Sign Language
+  {signed: 'fsl', spoken: 'fr', country: 'fr', abbreviation: 'LSF'}, // French Sign Language
   {signed: 'gsg', spoken: 'de', country: 'de', abbreviation: 'DGS'}, // German Sign Language
   {signed: 'gds', spoken: 'ne', country: 'np', abbreviation: ''}, // Ghandruk Sign Language
   {signed: 'gse', spoken: 'ak', country: 'gh', abbreviation: ''}, // Ghanaian Sign Language
