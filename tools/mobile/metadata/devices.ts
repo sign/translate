@@ -1,8 +1,8 @@
 // https://help.apple.com/app-store-connect/#/devd274dd925
 import {devices} from '@playwright/test';
 
-export const iosDevices = ['iPhone 13 Pro Max', 'iPhone 13 Pro', 'iPhone 8 Plus', 'iPhone 8'];
-// export const iosDevices = ['iPhone 13 Pro'];
+// export const iosDevices = ['iPhone 13 Pro Max', 'iPhone 13 Pro', 'iPhone 8 Plus', 'iPhone 8'];
+export const iosDevices = ['iPhone 13 Pro'];
 const iPhone8Plus = devices['iPhone 8 Plus'];
 (iPhone8Plus as any).screen = {
   width: 414,

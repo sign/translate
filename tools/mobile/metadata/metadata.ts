@@ -33,7 +33,7 @@ async function screenshot(page: Page, viewport, path: string, background = 'whit
 
   // Resize screenshot to required size (including zoom)
   const res = `${viewport.width}x${viewport.height}`;
-  const cmd = `convert ${path} -resize ${res} -background ${background} -gravity center -extent ${res} ${path}`;
+  const cmd = `magick ${path} -resize ${res} -background ${background} -gravity center -extent ${res} ${path}`;
   console.log(execSync(cmd, {encoding: 'utf8'}).toString());
 }
 
@@ -68,8 +68,12 @@ async function makeAndroid(
     fs.copyFileSync(imgPath(locale, cViewport, 'main'), `${assetsDir}/android/${pageLang}.png`);
   }
 
+  mkdir(filePath(locale, 'changelogs'));
+  const defaultChangelog = 'New release!';
+
   await Promise.all([
     screenshotFrameLocales(f => filePath(locale, f)),
+    promisify(fs.writeFile)(filePath(locale, 'changelogs/default.txt'), defaultChangelog),
     promisify(fs.writeFile)(filePath(locale, 'title.txt'), title),
     promisify(fs.writeFile)(filePath(locale, 'short_description.txt'), description),
     promisify(fs.writeFile)(filePath(locale, 'full_description.txt'), description),
@@ -176,7 +180,7 @@ async function main() {
     await Promise.all([
       page.goto('http://localhost:4200/', {waitUntil: 'networkidle'}),
       page.waitForSelector('mat-tab-group', {state: 'attached'}), // Wait until language file is loaded
-    ]);
+    ] as Promise<any>[]);
 
     const title = await page.title();
     const description = await (await page.$('meta[name="description"]')).getAttribute('content');
