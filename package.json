@@ -73,7 +73,7 @@
     "@mediapipe/holistic": "0.5.1675471629",
     "@mediapipe/tasks-text": "0.10.14",
     "@ngneat/transloco": "6.0.4",
-    "@ngxs/store": "3.8.2",
+    "@ngxs/store": "18.0.0",
     "@sign-mt/browsermt": "0.2.3",
     "@sign-mt/i18n": "git://github.com/sign/i18n.git",
     "@sutton-signwriting/font-ttf": "1.5.2",
