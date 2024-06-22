@@ -1,8 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MapComponent} from './map.component';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('MapComponent', () => {
   let component: MapComponent;
@@ -11,7 +12,8 @@ describe('MapComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MapComponent],
-      imports: [HttpClientModule, LeafletModule],
+      imports: [LeafletModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MapComponent);

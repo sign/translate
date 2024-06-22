@@ -130,7 +130,7 @@ export class PlayableVideoEncoder {
       height: this.height,
       bitrate: this.bitrate,
       framerate: this.fps,
-      // TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#249
+      // TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#279
       // alpha: this.muxer.alpha ? 'keep' as AlphaOption : false
     };
     this.videoEncoder.configure(config);

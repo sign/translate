@@ -1,6 +1,6 @@
 import {Component, NgModule, OnInit} from '@angular/core';
 import {geoJSON, latLng, Map, tileLayer} from 'leaflet';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {firstValueFrom} from 'rxjs';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import {BaseComponent} from '../base/base.component';
@@ -97,6 +97,7 @@ export class MapComponent extends BaseComponent implements OnInit {
 
 @NgModule({
   declarations: [MapComponent],
-  imports: [LeafletModule, HttpClientModule],
+  imports: [LeafletModule],
+  providers: [provideHttpClient()],
 })
 export class MapModule {}

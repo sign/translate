@@ -1,11 +1,10 @@
 import {isDevMode, NgModule} from '@angular/core';
 import {provideTransloco, TranslocoModule} from '@ngneat/transloco';
 import {HttpLoader, translocoScopes} from './transloco.loader';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 import {SITE_LANGUAGES} from './languages';
 
 @NgModule({
-  imports: [HttpClientModule],
   exports: [TranslocoModule],
   providers: [
     provideTransloco({
@@ -19,6 +18,7 @@ import {SITE_LANGUAGES} from './languages';
       loader: HttpLoader,
     }),
     translocoScopes,
+    provideHttpClient(),
   ],
 })
 export class AppTranslocoModule {}

@@ -2,7 +2,8 @@
   <h2>Why sign?</h2>
 
   <div class="cards-container">
-    <ion-card *ngFor="let benefit of benefits">
+    @for (benefit of benefits; track benefit) {
+    <ion-card>
       <ion-card-header>
         <ion-card-title>{{ benefit.title }}</ion-card-title>
         <ion-card-subtitle>{{ benefit.subtitle }}</ion-card-subtitle>
@@ -11,5 +12,6 @@
         <p>{{ benefit.content }}</p>
       </ion-card-content>
     </ion-card>
+    }
   </div>
 </div>

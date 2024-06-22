@@ -6,7 +6,8 @@ import {SettingsState} from '../../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../../core/modules/ngxs/ngxs.module';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {TranslateModule} from '../../../../../modules/translate/translate.module';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('DesktopTextareaComponent', () => {
   let component: DesktopTextareaComponent;
@@ -14,13 +15,9 @@ describe('DesktopTextareaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        HttpClientModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-        TranslateModule,
-      ],
       declarations: [DesktopTextareaComponent],
+      imports: [ReactiveFormsModule, NgxsModule.forRoot([SettingsState], ngxsConfig), TranslateModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DesktopTextareaComponent);

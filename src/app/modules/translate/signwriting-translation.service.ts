@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';

@@ -1,26 +1,25 @@
 <ng-container *transloco="let t; read: 'video.controls'">
-  <ng-container *ngIf="settingsState$ | async as settings">
-    <!-- Video -->
-    <ng-container [ngSwitch]="settings.receiveVideo">
-      <ion-fab *ngSwitchCase="true">
-        <ion-fab-button
-          (click)="applySetting('receiveVideo', false)"
-          [attr.aria-label]="t('receiveVideo.on')"
-          [matTooltip]="t('receiveVideo.on')"
-          class="transparent">
-          <ion-icon name="videocam-outline"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-
-      <ion-fab *ngSwitchCase="false">
-        <ion-fab-button
-          (click)="applySetting('receiveVideo', true)"
-          [attr.aria-label]="t('receiveVideo.off')"
-          [matTooltip]="t('receiveVideo.off')"
-          color="danger">
-          <ion-icon name="videocam-off-outline"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
-    </ng-container>
-  </ng-container>
+  @if (settingsState$ | async; as settings) {
+  <!-- Video -->
+  @if (settings.receiveVideo) {
+  <ion-fab>
+    <ion-fab-button
+      (click)="applySetting('receiveVideo', false)"
+      [attr.aria-label]="t('receiveVideo.on')"
+      [matTooltip]="t('receiveVideo.on')"
+      class="transparent">
+      <ion-icon name="videocam-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  } @else {
+  <ion-fab>
+    <ion-fab-button
+      (click)="applySetting('receiveVideo', true)"
+      [attr.aria-label]="t('receiveVideo.off')"
+      [matTooltip]="t('receiveVideo.off')"
+      color="danger">
+      <ion-icon name="videocam-off-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  } }
 </ng-container>

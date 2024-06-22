@@ -5,7 +5,7 @@ apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     namespace "mt.sign.translate"
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "mt.sign.translate"
         minSdkVersion rootProject.ext.minSdkVersion

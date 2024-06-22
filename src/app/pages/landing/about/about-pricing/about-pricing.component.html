@@ -2,20 +2,23 @@
   <h2>Pricing and Subscription Options</h2>
 
   <div class="cards-container">
-    <ion-card class="pricing-option" *ngFor="let option of pricingOptions">
+    @for (option of pricingOptions; track option) {
+    <ion-card class="pricing-option">
       <ion-card-header>
         <ion-card-title>{{ option.name }}</ion-card-title>
         <ion-card-subtitle>{{ option.price }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ul>
-          <li *ngFor="let feature of option.features">{{ feature }}</li>
+          @for (feature of option.features; track feature) {
+          <li>{{ feature }}</li>
+          }
         </ul>
       </ion-card-content>
-
       <a [href]="option.link" color="primary">
         <ion-button fill="clear">{{ option.action }}</ion-button>
       </a>
     </ion-card>
+    }
   </div>
 </div>

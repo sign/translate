@@ -2,15 +2,16 @@ import {TestBed} from '@angular/core/testing';
 import {AppRoutingModule} from './app-routing.module';
 import {Router} from '@angular/router';
 import {AppNgxsModule} from './core/modules/ngxs/ngxs.module';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('AppRoutingModule', () => {
   let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppRoutingModule, AppNgxsModule, HttpClientModule],
       teardown: {destroyAfterEach: false},
+      imports: [AppRoutingModule, AppNgxsModule],
+      providers: [provideHttpClient()],
     });
   });
 

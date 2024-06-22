@@ -1,28 +1,28 @@
 <ng-container *transloco="let t; read: 'speech-to-text'">
   <!-- As a single button it is uglier code, but nice ripple animation -->
+  @if (!supportError) {
   <ion-button
     class="circle-icon"
     fill="clear"
     shape="round"
     color="dark"
     (click)="isRecording ? stop() : start()"
-    *ngIf="!supportError"
     [attr.aria-label]="t(isRecording ? 'stop' : 'start')"
     [matTooltip]="t(isRecording ? 'stop' : 'start')"
     [matTooltipPosition]="matTooltipPosition">
     <ion-icon [name]="isRecording ? 'stop-circle-outline' : 'mic-outline'" slot="icon-only" color="primary"></ion-icon>
   </ion-button>
-
+  } @else {
   <!-- If language is not supported -->
   <ion-button
     class="circle-icon"
     fill="clear"
     shape="round"
     color="medium"
-    *ngIf="supportError"
     [attr.aria-label]="t(supportError)"
     [matTooltip]="t(supportError)"
     [matTooltipPosition]="matTooltipPosition">
     <ion-icon name="mic-off-outline" slot="icon-only"></ion-icon>
   </ion-button>
+  }
 </ng-container>

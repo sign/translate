@@ -1,57 +1,52 @@
-<ng-container *ngIf="videoUrl; else noVideo">
-  <video
-    [src]="safeVideoUrl"
-    autoplay
-    loop
-    muted
-    playsinline
-    height="100%"
-    width="100%"
-    (error)="onVideoError($event)"
-    (click)="playVideoIfPaused($event)"></video>
-</ng-container>
-<ng-template #noVideo>
-  <ng-container *ngIf="pose$ | async as pose; else noPose">
-    <ng-container *ngIf="poseViewerSetting$ | async as poseViewerSetting">
-      <app-skeleton-pose-viewer *ngIf="poseViewerSetting === 'pose'" [src]="pose" />
-      <app-human-pose-viewer *ngIf="poseViewerSetting === 'person'" [src]="pose" />
-      <app-avatar-pose-viewer *ngIf="poseViewerSetting === 'avatar'" [src]="pose" />
-    </ng-container>
-  </ng-container>
-  <ng-template #noPose></ng-template>
-</ng-template>
-
-<div class="actions-row" *ngIf="pose$ | async as pose">
-  <ng-container *ngIf="videoUrl; else spinner">
-    <ion-button
-      class="circle-icon"
-      fill="clear"
-      shape="round"
-      color="dark"
-      (click)="downloadTranslation()"
-      [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
-      [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
-      [matTooltipPosition]="'above'">
-      <ion-icon name="download-outline" slot="icon-only"></ion-icon>
-    </ion-button>
-
-    <ion-button
-      class="circle-icon"
-      fill="clear"
-      shape="round"
-      color="dark"
-      *ngIf="isSharingSupported"
-      (click)="shareTranslation()"
-      [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
-      [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
-      [matTooltipPosition]="'above'">
-      <ion-icon ios="share-outline" md="share-social-outline" slot="icon-only"></ion-icon>
-    </ion-button>
-  </ng-container>
-  <ng-template #spinner>
-    <ion-button [disabled]="true" class="circle-icon" fill="clear" shape="round">
-      <ion-spinner name="crescent" color="dark"></ion-spinner>
-    </ion-button>
-  </ng-template>
+@if (videoUrl) {
+<video
+  [src]="safeVideoUrl"
+  autoplay
+  loop
+  muted
+  playsinline
+  height="100%"
+  width="100%"
+  (error)="onVideoError($event)"
+  (click)="playVideoIfPaused($event)"></video>
+} @else { @if (pose$ | async; as pose) { @if (poseViewerSetting$ | async; as poseViewerSetting) { @if (poseViewerSetting
+=== 'pose') {
+<app-skeleton-pose-viewer [src]="pose" />
+} @else if (poseViewerSetting === 'person') {
+<app-human-pose-viewer [src]="pose" />
+} @else if (poseViewerSetting === 'avatar') {
+<app-avatar-pose-viewer [src]="pose" />
+} } } } @if (pose$ | async; as pose) {
+<div class="actions-row">
+  @if (videoUrl) {
+  <ion-button
+    class="circle-icon"
+    fill="clear"
+    shape="round"
+    color="dark"
+    (click)="downloadTranslation()"
+    [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
+    [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
+    [matTooltipPosition]="'above'">
+    <ion-icon name="download-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+  @if (isSharingSupported) {
+  <ion-button
+    class="circle-icon"
+    fill="clear"
+    shape="round"
+    color="dark"
+    (click)="shareTranslation()"
+    [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
+    [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
+    [matTooltipPosition]="'above'">
+    <ion-icon ios="share-outline" md="share-social-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+  } } @else {
+  <ion-button [disabled]="true" class="circle-icon" fill="clear" shape="round">
+    <ion-spinner name="crescent" color="dark"></ion-spinner>
+  </ion-button>
+  }
   <app-viewer-selector></app-viewer-selector>
 </div>
+}

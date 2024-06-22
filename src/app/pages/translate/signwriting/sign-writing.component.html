@@ -1,10 +1,9 @@
-<div id="signs" *ngIf="signs; else loading">
-  <fsw-sign
-    *ngFor="let sign of signs"
-    [attr.sign]="sign.fsw"
-    [matTooltip]="sign.description"
-    (dblclick)="describeSign(sign)"></fsw-sign>
+@if (signs) {
+<div id="signs">
+  @for (sign of signs; track sign) {
+  <fsw-sign [attr.sign]="sign.fsw" [matTooltip]="sign.description" (dblclick)="describeSign(sign)"></fsw-sign>
+  }
 </div>
-<ng-template #loading>
-  <ion-progress-bar type="indeterminate"></ion-progress-bar>
-</ng-template>
+} @else {
+<ion-progress-bar type="indeterminate"></ion-progress-bar>
+}

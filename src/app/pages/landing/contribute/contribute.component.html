@@ -8,7 +8,8 @@
   </div>
 
   <div class="cards-container">
-    <ion-card *ngFor="let card of cards">
+    @for (card of cards; track card) {
+    <ion-card>
       <ion-card-header>
         <ion-card-title>
           <ion-icon name="{{ card.icon }}"></ion-icon>
@@ -24,5 +25,6 @@
         <ion-button fill="clear">{{ card.action.text }}</ion-button>
       </a>
     </ion-card>
+    }
   </div>
 </div>

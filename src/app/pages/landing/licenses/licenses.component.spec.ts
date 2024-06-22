@@ -4,7 +4,8 @@ import {LicensesComponent} from './licenses.component';
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {HttpTestingController, provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('LicensesComponent', () => {
   let component: LicensesComponent;
@@ -13,7 +14,8 @@ describe('LicensesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LicensesComponent],
-      imports: [HttpClientTestingModule, MatTreeModule, CdkTreeModule],
+      imports: [MatTreeModule, CdkTreeModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LicensesComponent);

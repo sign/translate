@@ -1,7 +1,11 @@
 <select [attr.aria-label]="'language-selector.label' | transloco" (change)="change($event)">
-  <optgroup *ngFor="let group of languages" [label]="group.label">
-    <option *ngFor="let lang of group.languages" [value]="lang.key" [selected]="lang.key === current">
+  @for (group of languages; track group) {
+  <optgroup [label]="group.label">
+    @for (lang of group.languages; track lang.key) {
+    <option [value]="lang.key" [selected]="lang.key === current">
       {{ lang.value }}
     </option>
+    }
   </optgroup>
+  }
 </select>

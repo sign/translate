@@ -1,14 +1,14 @@
 import {TestBed} from '@angular/core/testing';
 import {TranslationService} from './translate.service';
-import {HttpClientModule} from '@angular/common/http';
-import {isChrome} from '../../core/constants';
+import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('TranslationService', () => {
   let service: TranslationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     service = TestBed.inject(TranslationService);
   });
@@ -23,7 +23,7 @@ describe('TranslationService', () => {
     const text = sentences.join('');
     const language = 'en';
     const result = service.splitSpokenSentences(language, text);
-    if (isChrome) {
+    if ('Segmenter' in Intl) {
       expect(result).toEqual(sentences);
     } else {
       expect(result).toEqual([text]);

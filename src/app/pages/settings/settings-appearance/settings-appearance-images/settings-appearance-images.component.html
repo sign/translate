@@ -1,8 +1,9 @@
 <ng-container *transloco="let t; read: 'settings.other.appearance'">
-  <div id="appearance-options" *ngIf="settingsState$ | async as settings" [style.--appearance-scale]="scale">
+  @if (settingsState$ | async; as settings) {
+  <div id="appearance-options" [style.--appearance-scale]="scale">
+    @for (appearance of appearances; track appearance.value) {
     <button
       mat-fab
-      *ngFor="let appearance of appearances"
       class="image"
       [style.backgroundImage]="'url(' + appearance.src + ')'"
       [attr.aria-label]="appearance.title"
@@ -10,6 +11,7 @@
       [disabled]="appearance.disabled"
       [class.selected]="settings.appearance === appearance.value"
       (click)="applySetting('appearance', appearance.value)"></button>
+    }
     <!-- TODO "random" should open a dialog, using thispersondoesnotexist.com to create a random person -->
     <button mat-fab [attr.aria-label]="t('random')" [matTooltip]="t('random')" [disabled]="true">
       <ion-icon name="dice-outline"></ion-icon>
@@ -19,4 +21,5 @@
       <ion-icon slot="icon-only" name="images"></ion-icon>
     </button>
   </div>
+  }
 </ng-container>

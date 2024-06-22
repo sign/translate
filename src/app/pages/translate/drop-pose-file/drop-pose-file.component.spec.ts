@@ -6,8 +6,9 @@ import {DropzoneDirective} from '../../../directives/dropzone.directive';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
-import {HttpClientModule} from '@angular/common/http';
 import {SettingsState} from '../../../modules/settings/settings.state';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('DropPoseFileComponent', () => {
   let component: DropPoseFileComponent;
@@ -16,7 +17,8 @@ describe('DropPoseFileComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [DropPoseFileComponent, DropzoneDirective],
-      imports: [HttpClientModule, NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig)],
+      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig)],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DropPoseFileComponent);

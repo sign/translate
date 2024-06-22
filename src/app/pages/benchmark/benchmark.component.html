@@ -12,19 +12,22 @@
     <div class="container">
       <ion-button (click)="bench()">Start Benchmarking!</ion-button>
 
-      <ion-card *ngFor="let stat of stats | keyvalue">
+      @for (stat of stats | keyvalue; track stat.key) {
+      <ion-card>
         <ion-card-header>
           <ion-card-title>{{ t('stats.' + stat.key + '.title') }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           <p>
+            @for (item of stat.value | keyvalue; track item.key) {
             <app-benchmark-item
-              *ngFor="let item of stat.value | keyvalue"
               [matTooltip]="t('stats.' + stat.key + '.' + item.key)"
               [timings]="item.value"></app-benchmark-item>
+            }
           </p>
         </ion-card-content>
       </ion-card>
+      }
     </div>
   </ng-container>
 </ion-content>

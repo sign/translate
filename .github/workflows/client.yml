@@ -23,8 +23,6 @@ jobs:
 
       - name: Setup Bun Runtime
         uses: antongolub/action-setup-bun@v1
-        with:
-          bun-version: 1.0.21 # Issue above 1.0.23 https://github.com/oven-sh/bun/issues/8201
 
       # Using npm it is faster to cache the node modules. Using bun it seems like it is not.
       #- name: Cache node_modules

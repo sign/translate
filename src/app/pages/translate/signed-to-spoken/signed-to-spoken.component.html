@@ -1,14 +1,11 @@
-<ng-container *ngIf="inputMode$ | async as inputMode">
-  <ng-container *ngIf="inputMode === 'upload'">
-    <ng-container *ngIf="videoState$ | async as videoState">
-      <app-upload *ngIf="!videoState.src; else translationTemplate"></app-upload>
-    </ng-container>
-  </ng-container>
-
-  <ng-container *ngIf="inputMode === 'webcam'">
-    <ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
-  </ng-container>
-</ng-container>
+@if (inputMode$ | async; as inputMode) { @switch (inputMode) { @case ('upload') { @if (videoState$ | async; as
+videoState) { @if (!videoState.src) {
+<app-upload />
+} @else {
+<ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+} } } @case ('webcam') {
+<ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+} } }
 
 <ng-template #translationTemplate>
   <div class="interface">
@@ -18,10 +15,12 @@
 
     <app-sign-writing />
 
-    <div class="translation-text" *ngIf="spokenLanguageText$ | async as translation">
+    @if (spokenLanguageText$ | async; as translation) {
+    <div class="translation-text">
       <div>{{ translation }}</div>
 
-      <div *ngIf="translation !== ''">
+      @if (translation !== '') {
+      <div>
         <app-text-to-speech [lang]="spokenLanguage$ | async" [text]="translation"></app-text-to-speech>
 
         <ion-button
@@ -36,6 +35,8 @@
           <ion-icon name="copy-outline" slot="icon-only"></ion-icon>
         </ion-button>
       </div>
+      }
     </div>
+    }
   </div>
 </ng-template>

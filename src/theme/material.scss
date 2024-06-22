@@ -4,27 +4,27 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-$app-accent: mat.define-palette(mat.$pink-palette);
-$app-warn: mat.define-palette(mat.$red-palette);
-$app-typography: mat.define-typography-config(
+$app-accent: mat.m2-define-palette(mat.$m2-pink-palette);
+$app-warn: mat.m2-define-palette(mat.$m2-red-palette);
+$app-typography: mat.m2-define-typography-config(
   $font-family: 'Roboto,Helvetica Neue,sans-serif',
 );
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-color: (
-  primary: mat.define-palette(mat.$blue-palette, $default: 700),
+  primary: mat.m2-define-palette(mat.$m2-blue-palette, $default: 700),
   accent: $app-accent,
   warn: $app-warn,
 );
-$app-theme: mat.define-light-theme(
+$app-theme: mat.m2-define-light-theme(
   (
     color: $app-color,
   )
 );
-$app-dark-theme: mat.define-dark-theme(
+$app-dark-theme: mat.m2-define-dark-theme(
   (
     color: (
-      primary: mat.define-palette(mat.$blue-palette, $default: 400),
+      primary: mat.m2-define-palette(mat.$m2-blue-palette, $default: 400),
       accent: $app-accent,
       warn: $app-warn,
     ),

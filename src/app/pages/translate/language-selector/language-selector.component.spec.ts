@@ -8,11 +8,12 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {TranslateState} from '../../../modules/translate/translate.state';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {IonicModule} from '@ionic/angular';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
+import {provideHttpClient} from '@angular/common/http';
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -28,9 +29,9 @@ describe('LanguageSelectorComponent', () => {
         MatMenuModule,
         NoopAnimationsModule,
         IonicModule.forRoot(),
-        HttpClientTestingModule,
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
       ],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

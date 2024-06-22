@@ -10,8 +10,9 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {TranslateState} from '../../../modules/translate/translate.state';
-import {HttpClientModule} from '@angular/common/http';
+import {provideHttpClient} from '@angular/common/http';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('SpokenToSignedComponent', () => {
   let component: SpokenToSignedComponent;
@@ -20,14 +21,14 @@ describe('SpokenToSignedComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [SpokenToSignedComponent, SignWritingComponent, TextToSpeechComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule,
         AppTranslocoTestingModule,
       ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

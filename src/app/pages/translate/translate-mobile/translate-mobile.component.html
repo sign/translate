@@ -5,15 +5,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-signed-language-output *ngIf="spokenToSigned" />
-
-  <ng-container *ngIf="!spokenToSigned">
-    <app-video [displayControls]="false" [displayFps]="false"></app-video>
-  </ng-container>
+  @if (spokenToSigned) {
+  <app-signed-language-output />
+  } @else {
+  <app-video [displayControls]="false" [displayFps]="false" />
+  }
 </ion-content>
 
 <!-- Footer with input and submit button -->
 <ion-footer [class.signed-to-spoken]="!spokenToSigned">
-  <app-spoken-language-input [isMobile]="true" *ngIf="spokenToSigned" />
-  <app-signed-language-input *ngIf="!spokenToSigned" />
+  @if (spokenToSigned) {
+  <app-spoken-language-input [isMobile]="true" />
+  } @else {
+  <app-signed-language-input />
+  }
 </ion-footer>
