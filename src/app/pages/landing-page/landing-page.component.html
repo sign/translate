@@ -1,11 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Welcome to the Translation App</ion-title>
+    <ion-title>Welcome to the Sign Language Lyric Translation App</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="container">
-    <ion-button (click)="navigateToPlayground()">Go to Playground</ion-button>
+    <div class="background">
+      <h1>Turn Any Song Into ASL</h1>
+
+      <form id="songForm" (submit)="navigateToPlayground()">
+        <label for="song-name">Song Name:</label>
+        <input type="text" id="song-name" name="song_name" /><br /><br />
+
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" /><br /><br />
+
+        <ion-button type="submit">Generate</ion-button>
+      </form>
+    </div>
   </div>
 </ion-content>
+
+<!-- <script src="{{ url_for('static', filename='index.js') }}"></script> -->
