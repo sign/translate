@@ -2,8 +2,8 @@
 
 @media #{$breakpoint-gt-xs} {
   .container::before {
-    background-color: var(--app-tinted-background-color);
-    border-bottom: 1px solid var(--app-divider-color);
+    // background-color: var(--app-tinted-background-color);
+    border-bottom: 0px solid var(--app-divider-color);
     content: '';
     display: block;
     height: 106px;
@@ -43,7 +43,7 @@
     width: 100%;
     height: 100%;
     transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: 0 0 2px 0 rgba(0.2, 0.2, 0.2, 0.2);
 
     @media (prefers-color-scheme: dark) {
       background-color: #101010;

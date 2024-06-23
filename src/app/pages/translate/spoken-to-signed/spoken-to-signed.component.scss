@@ -1,6 +1,7 @@
 @import '../../../../theme/variables';
 
 :host {
+  margin-top: 65px;
   display: grid;
   width: 100%;
   grid-template-areas: 'spoken signwriting signed';
