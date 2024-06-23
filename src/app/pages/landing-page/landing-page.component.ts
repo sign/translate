@@ -31,7 +31,7 @@ export class LandingPageComponent {
       },
       error: error => {
         console.error('Error fetching lyrics:', error);
-        this.router.navigate(['/translate']);
+        // this.router.navigate(['/translate']);
       },
     });
   }
