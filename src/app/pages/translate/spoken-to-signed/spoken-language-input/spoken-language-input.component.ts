@@ -10,6 +10,7 @@ import {
 import {Store} from '@ngxs/store';
 import {TranslateStateModel} from '../../../../modules/translate/translate.state';
 import {BaseComponent} from '../../../../components/base/base.component';
+import {TranslateService} from '../../../shared/translate.service';
 
 @Component({
   selector: 'app-spoken-language-input',
@@ -28,7 +29,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
 
   @Input() isMobile = false;
 
-  constructor(private store: Store) {
+  constructor(private store: Store, private translateService: TranslateService) {
     super();
     this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
     this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
@@ -68,6 +69,14 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
 
     // Changes from the store
     this.text$
+      .pipe(
+        tap(text => this.text.setValue(text)),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+
+    // Subscribe to the shared service
+    this.translateService.spokenLanguageText$
       .pipe(
         tap(text => this.text.setValue(text)),
         takeUntil(this.ngUnsubscribe)

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
+import {TranslateService} from '../shared/translate.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,10 +9,10 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent {
-  songName: string = '';
-  artist: string = '';
+  songName: string;
+  artist: string;
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient, private translateService: TranslateService) {}
 
   navigateToPlayground(): void {
     const payload = {
@@ -22,11 +23,10 @@ export class LandingPageComponent {
     console.log('Song name:', this.songName);
     console.log('Artist:', this.artist);
 
-    // this.router.navigate(['/translate']);
-
     this.http.post('http://127.0.0.1:5000/get-lyrics', payload).subscribe({
       next: (response: any) => {
         console.log('Lyrics:', response.lyrics); // Adjust 'lyrics' if the key is different
+        this.translateService.setSpokenLanguageText(response.lyrics);
         this.router.navigate(['/translate']);
       },
       error: error => {
