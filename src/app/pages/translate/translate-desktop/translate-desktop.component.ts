@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-translate-desktop',
@@ -13,9 +14,8 @@ export class TranslateDesktopComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;
   spokenToSigned: boolean;
 
-  constructor(private store: Store) {
+  constructor(private store: Store, private router: Router) {
     super();
-
     this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
   }
 
@@ -26,5 +26,9 @@ export class TranslateDesktopComponent extends BaseComponent implements OnInit {
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+  }
+
+  navigateToLandingPage(): void {
+    this.router.navigate(['/']);
   }
 }
