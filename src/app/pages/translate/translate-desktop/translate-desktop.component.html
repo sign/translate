@@ -3,37 +3,38 @@
     <ion-buttons slot="primary">
       <ntkme-github-button user="sign" repo="translate" [count]="true" size="large" />
     </ion-buttons>
-    <ion-title>{{ 'translate.title' | transloco }}<sup id="version" matTooltip="Alpha">α</sup></ion-title>
+    <ion-title>{{ 'translate.title' | transloco }}<sup id="version">α</sup></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="container">
     <div id="input-mode-group">
-      @if (spokenToSigned) {
-      <app-translate-input-button mode="text" icon="language" />
-      } @else {
+      <!-- @if (spokenToSigned) { -->
+      <!-- <app-translate-input-button mode="text" icon="language" /> -->
+      <!-- } @else {
       <app-translate-input-button mode="webcam" icon="videocam" />
       <app-translate-input-button mode="upload" icon="cloud-upload" />
-      }
+      } -->
     </div>
 
     <app-drop-pose-file>
-      <div id="translation-card">
-        <app-language-selectors />
+      <!-- <div id="translation-card"> -->
+      <!-- <app-language-selectors /> -->
 
-        <div id="content">
-          @if (spokenToSigned) {
-          <!-- Spoken to sign requires a text input and video output -->
-          <app-spoken-to-signed />
-          } @else {
-          <!-- Sign to spoken requires a video input and text output -->
-          <app-signed-to-spoken />
-          }
-        </div>
+      <div id="content">
+        <app-spoken-to-signed />
+        <!-- @if (spokenToSigned) { -->
+        <!-- Spoken to sign requires a text input and video output -->
+        <!-- <app-spoken-to-signed /> -->
+        <!-- } @else { -->
+        <!-- Sign to spoken requires a video input and text output -->
+        <!-- <app-signed-to-spoken /> -->
+        <!-- } -->
       </div>
+      <!-- </div> -->
     </app-drop-pose-file>
 
-    <app-send-feedback />
+    <!-- <app-send-feedback /> -->
   </div>
 </ion-content>
