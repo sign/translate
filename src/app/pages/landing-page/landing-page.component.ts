@@ -19,8 +19,8 @@ export class LandingPageComponent {
       artist: this.artist,
     };
 
-    // console.log('Song name:', this.songName);
-    // console.log('Artist:', this.artist);
+    console.log('Song name:', this.songName);
+    console.log('Artist:', this.artist);
 
     // this.router.navigate(['/translate']);
 
@@ -31,6 +31,7 @@ export class LandingPageComponent {
       },
       error: error => {
         console.error('Error fetching lyrics:', error);
+        this.router.navigate(['/translate']);
       },
     });
   }

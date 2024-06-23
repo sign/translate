@@ -10,12 +10,12 @@
       <div class="background">
         <h1>Turn Any Song Into ASL</h1>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-        <form id="songForm" (submit)="navigateToPlayground()">
+        <form id="songForm" (ngSubmit)="navigateToPlayground()">
           <label for="song-name">Song Name:</label>
-          <input type="text" id="song-name" name="song_name" /><br /><br />
+          <input type="text" id="song-name" name="song_name" [(ngModel)]="songName" /><br /><br />
 
           <label for="artist">Artist:</label>
-          <input type="text" id="artist" name="artist" /><br /><br />
+          <input type="text" id="artist" name="artist" [(ngModel)]="artist" /><br /><br />
 
           <ion-button type="submit">Generate</ion-button>
         </form>
