@@ -14,7 +14,7 @@ const routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, MatTooltipModule, RouterModule.forChild(routes)],
   declarations: [LandingPageComponent],
+  imports: [CommonModule, FormsModule, IonicModule, MatTooltipModule, RouterModule.forChild(routes)],
 })
 export class LandingPageModule {}

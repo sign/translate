@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {isSafari} from './core/constants';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {TokenInterceptor} from './core/services/http/token-interceptor.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import {TokenInterceptor} from './core/services/http/token-interceptor.service';
     IonicModule.forRoot({mode: isSafari ? 'ios' : 'md'}),
     AppRoutingModule,
     AppTranslocoModule,
+    HttpClientModule,
 
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +8,30 @@ import {Router} from '@angular/router';
   styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageComponent {
-  constructor(private router: Router) {}
+  songName: string = '';
+  artist: string = '';
+
+  constructor(private router: Router, private http: HttpClient) {}
 
   navigateToPlayground(): void {
-    this.router.navigate(['/translate']);
+    const payload = {
+      songName: this.songName,
+      artist: this.artist,
+    };
+
+    // console.log('Song name:', this.songName);
+    // console.log('Artist:', this.artist);
+
+    // this.router.navigate(['/translate']);
+
+    this.http.post('http://127.0.0.1:5000/get-lyrics', payload).subscribe({
+      next: (response: any) => {
+        console.log('Lyrics:', response.lyrics); // Adjust 'lyrics' if the key is different
+        this.router.navigate(['/translate']);
+      },
+      error: error => {
+        console.error('Error fetching lyrics:', error);
+      },
+    });
   }
 }
