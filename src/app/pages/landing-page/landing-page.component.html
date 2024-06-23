@@ -7,6 +7,7 @@
 
   <ion-content [fullscreen]="true" class="ion-padding">
     <div class="container">
+      <div class="main-background"></div>
       <div class="background">
         <h1>Turn Any Song Into ASL</h1>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -15,7 +16,19 @@
           <input type="text" id="song-name" name="song_name" [(ngModel)]="songName" /><br /><br />
 
           <label for="artist">Artist:</label>
-          <input type="text" id="artist" name="artist" [(ngModel)]="artist" /><br /><br />
+          <div class="searchbox">
+            <input type="text" id="artist" name="artist" [(ngModel)]="artist" /><br /><br />
+            <!-- <svg class="svg-icon-1" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M382 710.5c0-9.389 7.611-17 17-17s17 7.611 17 17c0 38.137-36.05 67.5-78.997 67.5C294.05 778 258 748.638 258 710.5c0-38.138 36.05-67.5 79.003-67.5 9.389 0 17 7.611 17 17s-7.611 17-17 17C311.467 677 292 692.855 292 710.5s19.467 33.5 45.003 33.5C362.534 744 382 728.145 382 710.5zM671 642.5c0-9.389 7.611-17 17-17s17 7.611 17 17c0 38.137-36.05 67.5-78.997 67.5C583.05 710 547 680.638 547 642.5c0-38.138 36.05-67.5 79.003-67.5 9.389 0 17 7.611 17 17s-7.611 17-17 17C600.467 609 581 624.855 581 642.5s19.467 33.5 45.003 33.5C651.534 676 671 660.145 671 642.5z"  /><path d="M416 709c0 9.389-7.611 17-17 17s-17-7.611-17-17V380.624c0-19.517 12.378-36.883 30.83-43.252l231.517-79.852C674.06 247.282 705 269.35 705 300.774v343.439c0 9.388-7.611 17-17 17s-17-7.612-17-17v-343.44c0-8.073-7.944-13.738-15.572-11.11l-231.508 79.85a11.754 11.754 0 0 0-7.92 11.11V709z"  /><path d="M404.397 456.12c-8.904 2.981-18.537-1.82-21.518-10.723-2.98-8.904 1.821-18.537 10.724-21.518l233-78c8.904-2.98 18.537 1.821 21.518 10.724 2.98 8.904-1.821 18.537-10.724 21.518l-233 78z"  /></svg> -->
+          </div>
+
+          <!-- <div className="searchbox">
+                        <form name="search" >
+                            <label className='searchText'>
+                                I want to teach:
+                                <input type="text" className="searchinput" />
+                            </label>
+                        </form>
+                    </div> -->
 
           <ion-button type="submit">Generate</ion-button>
         </form>
