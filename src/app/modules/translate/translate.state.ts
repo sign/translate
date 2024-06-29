@@ -286,7 +286,14 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(ChangeTranslation, {cancelUncompleted: true})
   changeTranslation({getState, patchState, dispatch}: StateContext<TranslateStateModel>): Observable<any> {
-    const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, spokenLanguageText} = getState();
+    const {
+      spokenToSigned,
+      spokenLanguage,
+      signedLanguage,
+      detectedLanguage,
+      spokenLanguageText,
+      spokenLanguageSentences,
+    } = getState();
     if (spokenToSigned) {
       patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
 
@@ -302,7 +309,12 @@ export class TranslateState implements NgxsOnInit {
         );
         patchState({signedLanguagePose: path});
         return this.swService
-          .translateSpokenToSignWriting(trimmedSpokenLanguageText, actualSpokenLanguage, signedLanguage)
+          .translateSpokenToSignWriting(
+            trimmedSpokenLanguageText,
+            spokenLanguageSentences,
+            actualSpokenLanguage,
+            signedLanguage
+          )
           .pipe(tap(({text}) => dispatch(new SetSignWritingText(text.split(' ')))));
       }
     }

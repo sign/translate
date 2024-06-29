@@ -14,9 +14,7 @@
 @if (sentences$ | async; as sentences) { @if (sentences.length > 1) {
 <div id="sentences-overlay">
   @for (sentence of sentences; track sentence; let i = $index) {
-  <span [class.hover]="hoveredSentenceIndex === i" (mouseenter)="hoveredSentenceIndex = i">
-    {{ sentence }}
-  </span>
+  <span [class.hover]="hoveredSentenceIndex === i" (mouseenter)="hoveredSentenceIndex = i">{{ sentence }}</span>
   }
 </div>
 } }

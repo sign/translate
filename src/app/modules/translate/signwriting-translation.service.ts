@@ -77,6 +77,7 @@ export class SignWritingTranslationService {
   translateOnline(
     direction: TranslationDirection,
     text: string,
+    sentences: string[],
     from: string,
     to: string
   ): Observable<TranslationResponse> {
@@ -87,7 +88,7 @@ export class SignWritingTranslationService {
     const url = 'https://sign.mt/api/spoken-text-to-signwriting';
     const body = {
       data: {
-        texts: [text],
+        texts: sentences.map(s => s.trim()),
         spoken_language: from,
         signed_language: to,
       },
@@ -100,11 +101,14 @@ export class SignWritingTranslationService {
       };
     }
 
-    return this.http.post<SpokenToSignWritingResponse>(url, body).pipe(map(res => ({text: res.result.output[0]})));
+    return this.http
+      .post<SpokenToSignWritingResponse>(url, body)
+      .pipe(map(res => ({text: res.result.output.join(' ')})));
   }
 
   translateSpokenToSignWriting(
     text: string,
+    sentences: string[],
     spokenLanguage: string,
     signedLanguage: string
   ): Observable<TranslationResponse> {
@@ -119,7 +123,7 @@ export class SignWritingTranslationService {
       return from(this.translateOffline(direction, newText, 'spoken', 'signed'));
     };
 
-    const online = () => this.translateOnline(direction, text, spokenLanguage, signedLanguage);
+    const online = () => this.translateOnline(direction, text, sentences, spokenLanguage, signedLanguage);
 
     return offlineSpecific().pipe(
       catchError(offlineGeneric),
