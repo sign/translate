@@ -96,6 +96,10 @@
         "function": "signwriting_description"
       },
       {
+        "source": "/api/spoken-text-to-signwriting",
+        "function": "spoken_text_to_signwriting"
+      },
+      {
         "source": "{/api/spoken-to-signed,/api/signed-to-spoken}",
         "function": "translate-textToText"
       },

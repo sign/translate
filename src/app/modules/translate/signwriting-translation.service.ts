@@ -80,28 +80,27 @@ export class SignWritingTranslationService {
     from: string,
     to: string
   ): Observable<TranslationResponse> {
-    // TODO use the new API
+    // TODO use the new API (when bergamot model is trained)
     // const query = new URLSearchParams({from, to, text});
     // return this.http.get<TranslationResponse>(`https://sign.mt/api/${direction}?${query}`);'
 
+    const url = 'https://sign.mt/api/spoken-text-to-signwriting';
+    const body = {
+      data: {
+        texts: [text],
+        spoken_language: from,
+        signed_language: to,
+      },
+    };
+
     interface SpokenToSignWritingResponse {
-      country_code: string;
-      direction: string;
-      language_code: string;
-      n_best: string;
-      text: string;
-      translation_type: string;
-      translations: string[];
+      result: {
+        input: string[];
+        output: string[];
+      };
     }
 
-    const api = 'https://pub.cl.uzh.ch/demo/signwriting/spoken2sign';
-    const body = {
-      country_code: to,
-      language_code: from,
-      text,
-      translation_type: 'sent',
-    };
-    return this.http.post<SpokenToSignWritingResponse>(api, body).pipe(map(res => ({text: res.translations[0]})));
+    return this.http.post<SpokenToSignWritingResponse>(url, body).pipe(map(res => ({text: res.result.output[0]})));
   }
 
   translateSpokenToSignWriting(
