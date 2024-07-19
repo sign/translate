@@ -70,7 +70,7 @@ export class TextNormalizationModel {
     const newMessage: ChatCompletionMessageParam = {role: 'user', content: `normalize("${lang}", "${text}")`};
     const chatCompletion = await this.client.chat.completions.create({
       messages: [...messages, newMessage],
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-4o-mini',
       temperature: 0,
     });
 

@@ -6,7 +6,11 @@ import {AppCheck} from '../../helpers/app-check/app-check';
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (req.url.includes('/api/') || req.url.includes('cloudfunctions.net')) {
+    if (
+      req.url.includes('/api/') ||
+      req.url.includes('cloudfunctions.net') ||
+      req.url.includes('sign-mt/us-central1')
+    ) {
       const appCheckToken$ = from(AppCheck.getToken());
 
       return appCheckToken$.pipe(
