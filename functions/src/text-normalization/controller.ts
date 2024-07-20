@@ -107,8 +107,7 @@ export const textNormalizationFunctions = (database: FirebaseDatabase) => {
   app.use(cors());
   app.use(appCheckVerification);
   app.options('*', (req, res) => res.status(200).end());
-  app.get('/', request);
-  app.get('/api/text-normalization', request); // Hosting redirect
+  app.get(['/', '/api/text-normalization'], request);
   app.use(errorMiddleware);
 
   return onRequest(
