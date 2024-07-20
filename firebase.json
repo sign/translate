@@ -88,6 +88,10 @@
         "destination": "/assets/robots.txt"
       },
       {
+        "source": "/api/v1/**",
+        "function": "translate-gateway"
+      },
+      {
         "source": "/api/text-normalization",
         "function": "translate-textNormalization"
       },

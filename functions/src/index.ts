@@ -10,6 +10,7 @@ import {textToTextFunctions} from './text-to-text/controller';
 import {logConsoleMemory} from './utils/memory';
 import {FirebaseDatabase} from '@firebase/database-types';
 import {textNormalizationFunctions} from './text-normalization/controller';
+import {gatewayFunction} from './gateway/controller';
 
 logConsoleMemory(process.env.NODE_ENV === 'production' ? functions.logger : console);
 
@@ -18,6 +19,7 @@ const storage = admin.storage() as any;
 
 module.exports = {
   translate: {
+    gateway: gatewayFunction,
     prerender: prerenderFunctions(),
     textToText: textToTextFunctions(database, storage),
     textNormalization: textNormalizationFunctions(database),
