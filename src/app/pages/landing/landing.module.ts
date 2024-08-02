@@ -31,6 +31,7 @@ import {I18NLanguageSelectorComponent} from '../../components/i18n-language-sele
 import {TermsComponent} from './terms/terms.component';
 import {PrivacyComponent} from './privacy/privacy.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MermaidChartComponent} from './mermaid-chart/mermaid-chart.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatTabsModule,
     SettingsPageModule,
     IonicModule,
+    MermaidChartComponent,
   ],
   bootstrap: [LandingComponent],
 })
