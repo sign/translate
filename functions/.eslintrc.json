@@ -57,6 +57,7 @@
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/restrict-plus-operands": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-require-imports": "off",
     "@typescript-eslint/no-explicit-any": "off"
   }
 }
