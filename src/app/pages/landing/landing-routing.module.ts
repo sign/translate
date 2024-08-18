@@ -6,7 +6,6 @@ import {ContributeComponent} from './contribute/contribute.component';
 import {ToolsComponent} from './tools/tools.component';
 import {LandingComponent} from './landing.component';
 import {LicensesComponent} from './licenses/licenses.component';
-import {BusinessComponent} from './business/business.component';
 import {TermsComponent} from './terms/terms.component';
 import {PrivacyComponent} from './privacy/privacy.component';
 
@@ -17,7 +16,6 @@ const routes: Routes = [
     children: [
       {path: '', component: AboutComponent},
       {path: 'about', redirectTo: ''},
-      {path: 'business', component: BusinessComponent},
       {path: 'languages', component: LanguagesComponent},
       {path: 'contribute', component: ContributeComponent},
       {path: 'tools', component: ToolsComponent},

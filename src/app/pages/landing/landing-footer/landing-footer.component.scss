@@ -1,0 +1,51 @@
+@import '../../../../theme/variables';
+
+footer {
+  background-color: #252525;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 1fr;
+  gap: 8px;
+  grid-template-areas: 'brand legal social';
+
+  @media #{$breakpoint-lt-sm} {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'brand brand'
+      'legal social';
+  }
+}
+.brand {
+  grid-area: brand;
+}
+.legal {
+  grid-area: legal;
+}
+.social {
+  grid-area: social;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 4px 0;
+  }
+}
+
+a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.8em;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

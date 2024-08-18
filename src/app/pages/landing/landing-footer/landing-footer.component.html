@@ -1,0 +1,31 @@
+<footer>
+  <div class="container">
+    <div class="brand">
+      <h3>sign.mt</h3>
+      <a href="mailto:hello@sign.mt">hello&#64;sign.mt</a>
+      <br />
+      <app-i18n-language-selector />
+    </div>
+
+    <div class="legal" *transloco="let t; read: 'legal'">
+      <h4>{{ t('title') }}</h4>
+      <ul>
+        @for (page of legalPages; track page) {
+        <li>
+          <a [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+            {{ t(page + '.title') }}
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+
+    <div class="social">
+      <h4>Find Us</h4>
+      <ul>
+        <li><a href="https://twitter.com/signmt_" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/company/sign-mt" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

@@ -1,10 +1,16 @@
 <div class="container">
-  <h2>Frequently Asked Questions</h2>
+  <div class="header">
+    <h1>FAQ</h1>
+    <p>
+      Seamlessly overcome language barriers and engage with people from diverse linguistic and cultural backgrounds,
+      wherever and whenever you need
+    </p>
+  </div>
 
   <ion-accordion-group>
     @for (question of questions; track question) {
     <ion-accordion>
-      <ion-item slot="header">
+      <ion-item slot="header" class="faq-item">
         <ion-label>{{ question.question }}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
@@ -20,4 +26,9 @@
     </ion-accordion>
     }
   </ion-accordion-group>
+
+  <div class="footer">
+    <p>Want to ask a different question?</p>
+    <a href="mailto:hello@sign.mt">hello&#64;sign.mt</a>
+  </div>
 </div>

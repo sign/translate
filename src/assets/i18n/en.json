@@ -106,11 +106,12 @@
     }
   },
   "legal": {
+    "title": "Legal",
     "terms": {
-      "title": "Terms"
+      "title": "Terms of Service"
     },
     "privacy": {
-      "title": "Privacy"
+      "title": "Privacy Policy"
     },
     "licenses": {
       "title": "Software and Licenses"

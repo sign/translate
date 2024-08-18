@@ -18,18 +18,6 @@
         }
       </ion-menu-toggle>
     </ion-list>
-    <ion-list>
-      <ion-list-header lines="full">
-        <ion-label>Legal</ion-label>
-      </ion-list-header>
-      <ion-menu-toggle>
-        @for (page of legalPages; track page) {
-        <ion-item [routerLink]="['/legal', page]" queryParamsHandling="preserve">
-          <ion-label>{{ 'legal.' + page + '.title' | transloco }}</ion-label>
-        </ion-item>
-        }
-      </ion-menu-toggle>
-    </ion-list>
   </ion-content>
   <ion-footer>
     <ion-button routerLink="/" color="primary" queryParamsHandling="preserve" fill="clear">
@@ -66,20 +54,5 @@
 
 <ion-content [fullscreen]="true" id="main-content">
   <router-outlet></router-outlet>
-
-  <ion-toolbar>
-    @if (!isMobile.matches) {
-    <ion-buttons slot="start">
-      @for (page of legalPages; track page) {
-      <ion-button [routerLink]="['/legal', page]" queryParamsHandling="preserve">
-        {{ 'legal.' + page + '.title' | transloco }}
-      </ion-button>
-      }
-    </ion-buttons>
-    }
-
-    <ion-buttons slot="primary">
-      <app-i18n-language-selector></app-i18n-language-selector>
-    </ion-buttons>
-  </ion-toolbar>
+  <app-landing-footer />
 </ion-content>

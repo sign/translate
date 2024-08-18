@@ -8,8 +8,6 @@ import {MediaMatcher} from '@angular/cdk/layout';
 })
 export class LandingComponent {
   pages: string[] = ['about', 'languages', 'contribute', 'tools'];
-  legalPages: string[] = ['terms', 'privacy', 'licenses'];
-
   isMobile!: MediaQueryList;
 
   constructor(private mediaMatcher: MediaMatcher) {

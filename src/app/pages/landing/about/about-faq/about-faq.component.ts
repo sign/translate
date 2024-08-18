@@ -6,7 +6,6 @@ import {Component} from '@angular/core';
   styleUrls: ['./about-faq.component.scss'],
 })
 export class AboutFaqComponent {
-  const;
   questions = [
     {
       question: 'What is sign, and how does it work?',

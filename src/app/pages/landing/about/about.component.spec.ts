@@ -15,6 +15,11 @@ import {SettingsPageModule} from '../../settings/settings.module';
 import {IonicModule} from '@ionic/angular';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
+import {AboutObjectivesComponent} from './about-objectives/about-objectives.component';
+import {AboutFaqComponent} from './about-faq/about-faq.component';
+import {AboutCustomersComponent} from './about-customers/about-customers.component';
+import {AboutTeamComponent} from './about-team/about-team.component';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -26,6 +31,10 @@ describe('AboutComponent', () => {
         AboutComponent,
         AboutHeroComponent,
         AboutAppearanceComponent,
+        AboutObjectivesComponent,
+        AboutFaqComponent,
+        AboutCustomersComponent,
+        AboutTeamComponent,
         AboutBenefitsComponent,
         AboutDirectionComponent,
         AboutApiComponent,
@@ -37,6 +46,7 @@ describe('AboutComponent', () => {
         MatTooltipModule,
         MatTabsModule,
         IonicModule.forRoot(),
+        NoopAnimationsModule,
         AppNgxsModule,
         SettingsPageModule,
       ],
