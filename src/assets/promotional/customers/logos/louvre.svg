@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+  version="1.1"
+  id="Layer_1"
+  xmlns="http://www.w3.org/2000/svg"
+  x="0px"
+  y="0px"
+  width="550px"
+  height="376px"
+  viewBox="0 0 550 376"
+  enable-background="new 0 0 550 376"
+  xml:space="preserve">
+<g>
+	<g>
+
+			<line
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        x1="108.329"
+        y1="356.115"
+        x2="66.698"
+        y2="300.662"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="108.329,245.115 150.031,300.662
+			191.663,356.115 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="150.031,189.662 191.663,245.115
+			233.364,300.662 274.996,356.115 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="191.663,134.115 233.364,189.662
+			274.996,245.115 316.627,300.662 358.329,356.115 358.4,356.209 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="441.733,356.209 441.662,356.115
+			399.961,300.662 358.329,245.115 316.627,189.662 274.996,134.115 233.364,78.662 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="441.592,356.209 441.662,356.115
+			483.294,300.662 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="358.259,356.209 358.329,356.115
+			399.961,300.662 441.662,245.209 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="274.996,356.115 316.627,300.662
+			358.329,245.115 399.961,189.662 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="191.663,356.115 233.364,300.662
+			274.996,245.115 316.627,189.662 358.329,134.209 		"
+      />
+    <polyline
+        fill="none"
+        stroke="#000000"
+        stroke-width="10"
+        stroke-miterlimit="10"
+        points="108.329,356.115 150.031,300.662
+			191.663,245.115 233.364,189.662 274.996,134.115 316.627,78.662 		"
+      />
+	</g>
+  <polygon
+      fill="none"
+      stroke="#000000"
+      stroke-width="10"
+      stroke-miterlimit="10"
+      points="524.999,356.119 24.999,356.119
+		66.699,300.659 108.329,245.119 150.029,189.659 191.659,134.119 233.369,78.659 274.999,23.209 316.629,78.659 358.329,134.119
+		358.329,134.209 399.959,189.659 441.659,245.119 441.659,245.209 483.289,300.659 	"
+    />
+</g>
+</svg>

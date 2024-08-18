@@ -66,7 +66,6 @@ import {LandingFooterComponent} from './landing-footer/landing-footer.component'
     MatTreeModule,
     CdkTreeModule,
     MatExpansionModule,
-    MatTabsModule,
     SettingsPageModule,
     IonicModule,
     MermaidChartComponent,

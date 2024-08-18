@@ -1,0 +1,43 @@
+@import '../../../../../theme/variables';
+
+.container {
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+
+  @media #{$breakpoint-lt-sm} {
+    display: initial;
+    text-align: center;
+  }
+}
+
+ion-item ion-icon {
+  filter: grayscale(1) opacity(0.5);
+}
+
+ion-item.selected ion-icon {
+  filter: none;
+}
+
+.use-case {
+  background-size: cover;
+  background-position: center;
+
+  margin: 0 10px;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  ion-card {
+    border-radius: 24px;
+    margin-top: auto;
+    max-width: 340px;
+
+    background: rgb(from var(--ion-card-background) r g b / 0.8);
+    backdrop-filter: blur(10.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
