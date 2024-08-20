@@ -10,7 +10,6 @@ import {LandingRoutingModule} from './landing-routing.module';
 import {StoresComponent} from '../../components/stores/stores.component';
 import {AboutHeroComponent} from './about/about-hero/about-hero.component';
 import {AboutDirectionComponent} from './about/about-direction/about-direction.component';
-import {AboutOfflineComponent} from './about/about-offline/about-offline.component';
 import {AboutAppearanceComponent} from './about/about-appearance/about-appearance.component';
 import {LazyMapComponent} from './languages/lazy-map/lazy-map.component';
 import {LicensesComponent} from './licenses/licenses.component';
@@ -32,6 +31,7 @@ import {PrivacyComponent} from './privacy/privacy.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MermaidChartComponent} from './mermaid-chart/mermaid-chart.component';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,6 @@ import {LandingFooterComponent} from './landing-footer/landing-footer.component'
     StoresComponent,
     AboutHeroComponent,
     AboutDirectionComponent,
-    AboutOfflineComponent,
     AboutAppearanceComponent,
     LazyMapComponent,
     LicensesComponent,
@@ -69,6 +68,7 @@ import {LandingFooterComponent} from './landing-footer/landing-footer.component'
     SettingsPageModule,
     IonicModule,
     MermaidChartComponent,
+    ReactiveFormsModule,
   ],
   bootstrap: [LandingComponent],
   exports: [I18NLanguageSelectorComponent],

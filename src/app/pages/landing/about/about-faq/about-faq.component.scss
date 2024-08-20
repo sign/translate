@@ -2,7 +2,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 32px;
   grid-template-areas:
@@ -16,6 +16,10 @@
 
 .header {
   grid-area: header;
+}
+
+h1 {
+  font-weight: bold;
 }
 
 ion-accordion-group {

@@ -1,17 +1,17 @@
 <div class="container">
   <h2>Meet our Team</h2>
-  <p class="description">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis, lectus
+  <p>
+    We are innovators and experts committed to excellence, working together to create solutions that shape the future.
   </p>
   <div class="cards-container">
     @for (member of teamMembers; track member) {
     <ion-card>
+      <ion-badge>{{ member.title }}</ion-badge>
       <ion-card-header>
         <ion-avatar>
           <img [src]="member.avatar" [alt]="member.name" />
         </ion-avatar>
         <ion-card-title>{{ member.name }}</ion-card-title>
-        <ion-card-subtitle>{{ member.title }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <p>{{ member.bio }}</p>

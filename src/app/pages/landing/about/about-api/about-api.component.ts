@@ -11,7 +11,7 @@ export class AboutApiComponent {
   appearance$: Observable<string>;
 
   code = `curl -X POST \\
-  https://api.sign.mt/translate \\
+  https://sign.mt/api/v1/spoken-text-to-signed-pose \\
   -H 'Authorization: Bearer YOUR_API_TOKEN' \\
   -H 'Content-Type: application/json' \\
   -d '{

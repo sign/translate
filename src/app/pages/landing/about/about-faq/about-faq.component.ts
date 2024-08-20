@@ -22,14 +22,14 @@ export class AboutFaqComponent {
       answer: 'sign currently supports more than 40 signed and spoken languages, with plans to add more in the future.',
     },
     {
-      question: 'Is sign available for both iOS and Android devices?',
+      question: 'Is sign available for both mobile devices?',
       answer:
         'Yes, sign is available for both iOS and Android devices. You can download it from the App Store or Google Play Store.',
     },
     {
       question: 'How much does sign cost?',
       answer:
-        'sign offers a free app for private users, which is free to download and use. The SaaS platform for businesses has a one-time implementation fee and a monthly subscription fee, which varies depending on the package and customization options chosen. Please contact us for more information on pricing.',
+        'sign offers a free app for private users, which is free to download and use. The SaaS platform for businesses is detailed under the pricing section above. Please contact us for more information on pricing.',
     },
     {
       question: 'Is there a free version of sign available?',
@@ -46,7 +46,7 @@ export class AboutFaqComponent {
       answer: 'The process for implementing sign in a business typically involves the following steps:',
       steps: [
         'Contact us to schedule a demo and discuss your needs and customization options.',
-        'Sign a contract and pay the one-time implementation fee.',
+        'Receive an API-Key and the full documentation.',
         'Work with our team to customize the platform to meet your specific needs and branding.',
         'Train your staff on how to use the platform and provide ongoing support as needed.',
         'Launch the platform and begin using it to communicate with your deaf customers, partners, and employees.',

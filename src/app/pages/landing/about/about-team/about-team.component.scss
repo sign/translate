@@ -4,6 +4,7 @@
 
 .cards-container {
   justify-content: center;
+  margin-top: 32px;
 }
 
 ion-card {
@@ -14,4 +15,27 @@ ion-card {
 
 ion-avatar {
   margin: auto;
+}
+
+p {
+  max-width: 468px;
+  margin: auto;
+}
+
+ion-avatar {
+  width: 140px;
+  height: 140px;
+}
+
+ion-badge {
+  color: var(--ion-color-primary);
+  background: rgb(from var(--ion-color-primary) r g b / 0.05);
+  border: 1px solid var(--ion-color-primary);
+
+  padding: 2px 6px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  border-radius: 1rem;
+  font-weight: normal;
 }

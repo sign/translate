@@ -34,9 +34,9 @@ ion-item.selected ion-icon {
   ion-card {
     border-radius: 24px;
     margin-top: auto;
-    max-width: 340px;
+    max-width: 350px;
 
-    background: rgb(from var(--ion-card-background) r g b / 0.8);
+    background: rgb(from var(--ion-card-background, #fff) r g b / 0.8);
     backdrop-filter: blur(10.2px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }

@@ -1,7 +1,7 @@
 @import '../../../../theme/variables';
 
 footer {
-  background-color: #252525;
+  background-color: #141518;
   color: #ffffff;
   padding: 40px;
 }
@@ -10,7 +10,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-template-rows: 1fr;
-  gap: 8px;
+  gap: 32px;
   grid-template-areas: 'brand legal social';
 
   @media #{$breakpoint-lt-sm} {
@@ -36,7 +36,8 @@ ul {
   padding: 0;
 
   li {
-    margin: 4px 0;
+    margin: 12px 0;
+    color: #ccc;
   }
 }
 
@@ -48,4 +49,12 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+app-i18n-language-selector {
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 16px;
+  padding: 4px;
+  margin-top: 32px;
 }

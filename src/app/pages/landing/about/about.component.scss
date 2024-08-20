@@ -7,10 +7,6 @@
   @media #{$breakpoint-lt-md} {
     padding: 50px 25px;
   }
-
-  &:nth-child(2n + 1) {
-    background-color: var(--app-tinted-background-color);
-  }
 }
 
 app-stores {

@@ -1,24 +1,73 @@
 <div class="container">
-  <h2>Pricing and Subscription Options</h2>
-
+  <h2>Pricing</h2>
+  <p class="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis, lectus
+  </p>
   <div class="cards-container">
-    @for (option of pricingOptions; track option) {
-    <ion-card class="pricing-option">
+    <ion-card>
       <ion-card-header>
-        <ion-card-title>{{ option.name }}</ion-card-title>
-        <ion-card-subtitle>{{ option.price }}</ion-card-subtitle>
+        <ion-card-title>Free App</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ul>
-          @for (feature of option.features; track feature) {
-          <li>{{ feature }}</li>
-          }
+          <li>Real-time translation between signed and spoken languages</li>
+          <li>Multilingual support for over 40 languages</li>
+          <li>Offline capability</li>
         </ul>
       </ion-card-content>
-      <a [href]="option.link" color="primary">
-        <ion-button fill="clear">{{ option.action }}</ion-button>
-      </a>
+      <ion-button href="https://sign.mt" target="_blank" shape="round" color="light">
+        Try it out
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
     </ion-card>
-    }
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Business Solution (API)</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li>Customization and personalization of the avatar to match your needs and design</li>
+        </ul>
+
+        <form [formGroup]="form">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Input</th>
+                <th>Output</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Tokens</th>
+                <td><input id="inputTokens" type="number" formControlName="inputTokens" /></td>
+                <td><input id="outputTokens" type="number" formControlName="outputTokens" /></td>
+              </tr>
+              <tr>
+                <th>Frames</th>
+                <td><input id="inputFrames" type="number" formControlName="inputFrames" /></td>
+                <td><input id="outputFrames" type="number" formControlName="outputFrames" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <div class="presets">
+          @for (preset of presets; track preset.type) {
+          <ion-button (click)="applyPreset(preset)" size="small" [color]="preset.color">
+            {{ preset.type }}
+          </ion-button>
+          }
+        </div>
+
+        {{ calcPrice() | number }}$
+      </ion-card-content>
+      <ion-button href="mailto:hello@sign.mt" target="_blank" shape="round">
+        Contact us
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-card>
   </div>
 </div>

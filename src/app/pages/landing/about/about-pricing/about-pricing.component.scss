@@ -1,0 +1,45 @@
+h2,
+p {
+  text-align: center;
+}
+
+p {
+  max-width: 440px;
+  margin: auto;
+}
+
+.cards-container {
+  background: var(--ion-color-light);
+  margin-top: 32px;
+}
+
+.cards-container,
+ion-card {
+  border-radius: 32px;
+}
+
+ion-card {
+  box-shadow: none;
+  padding: 8px;
+  flex-grow: 1;
+
+  &:first-child {
+    background: transparent;
+
+    ion-button {
+      --ion-color-base: white !important;
+
+      @media (prefers-color-scheme: dark) {
+        --ion-color-base: black !important;
+      }
+    }
+  }
+}
+
+ul {
+  padding: 0 20px;
+}
+
+ion-button {
+  text-transform: none;
+}
