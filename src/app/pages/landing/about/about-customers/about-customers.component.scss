@@ -13,12 +13,23 @@
   }
 }
 
-ion-item ion-icon {
-  filter: grayscale(1) opacity(0.5);
-}
+ion-item {
+  filter: opacity(0.5);
+  border-left: 1px solid var(--ion-color-medium);
+  --border-color: transparent;
 
-ion-item.selected ion-icon {
-  filter: none;
+  ion-icon {
+    filter: grayscale(1);
+  }
+
+  &.selected {
+    border-left-color: var(--ion-color-primary);
+    filter: none;
+
+    ion-icon {
+      filter: none;
+    }
+  }
 }
 
 .use-case {

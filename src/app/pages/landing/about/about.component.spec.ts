@@ -4,7 +4,6 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AboutComponent} from './about.component';
 import {AboutHeroComponent} from './about-hero/about-hero.component';
 import {AboutDirectionComponent} from './about-direction/about-direction.component';
-import {AboutOfflineComponent} from './about-offline/about-offline.component';
 import {StoresComponent} from '../../../components/stores/stores.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {AboutAppearanceComponent} from './about-appearance/about-appearance.component';
@@ -38,7 +37,6 @@ describe('AboutComponent', () => {
         AboutBenefitsComponent,
         AboutDirectionComponent,
         AboutApiComponent,
-        AboutOfflineComponent,
         StoresComponent,
       ],
       imports: [

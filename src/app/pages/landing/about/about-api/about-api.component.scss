@@ -1,7 +1,7 @@
 @import '../../../../../theme/variables';
 
 .cards-container {
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
 
   > div {
@@ -26,7 +26,7 @@ pre {
 }
 
 video {
-  background: #dddddd22;
+  background: var(--ion-color-light);
   display: block;
   max-width: 512px;
   width: 100%;
