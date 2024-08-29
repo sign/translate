@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import mermaid from 'mermaid';
+import mermaid, {MermaidConfig} from 'mermaid';
 
-const config = {
+const config: MermaidConfig = {
   startOnLoad: false,
   flowchart: {
     useMaxWidth: true,

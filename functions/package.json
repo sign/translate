@@ -23,16 +23,16 @@
     "@firebase/database-types": "1.0.4",
     "@google-cloud/storage": "7.12.1",
     "@sign-mt/browsermt": "0.2.3",
-    "@unkey/api": "0.25.0",
+    "@unkey/api": "0.26.1",
     "cors": "2.8.5",
     "express": "4.19.2",
     "express-async-errors": "3.1.1",
-    "firebase-admin": "12.3.1",
+    "firebase-admin": "12.4.0",
     "firebase-functions": "5.1.0",
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.0",
     "node-fetch": "2.6.7",
-    "openai": "4.56.0"
+    "openai": "4.57.0"
   },
   "devDependencies": {
     "@firebase/firestore-types": "3.0.2",
@@ -40,16 +40,16 @@
     "@types/http-errors": "2.0.4",
     "@types/jest": "29.5.12",
     "@types/node-fetch": "2.6.11",
-    "@typescript-eslint/eslint-plugin": "8.2.0",
-    "@typescript-eslint/parser": "8.2.0",
+    "@typescript-eslint/eslint-plugin": "8.3.0",
+    "@typescript-eslint/parser": "8.3.0",
     "eslint": "8.57.0",
     "firebase-functions-test": "3.3.0",
-    "firebase-tools": "13.15.2",
+    "firebase-tools": "13.16.0",
     "jest": "29.7.0",
     "minimatch": "10.0.1",
     "mock-express-request": "0.2.2",
     "mock-express-response": "0.3.0",
-    "ts-jest": "29.2.4",
+    "ts-jest": "29.2.5",
     "typescript": "5.5.4"
   }
 }

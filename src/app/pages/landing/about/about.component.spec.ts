@@ -19,6 +19,8 @@ import {AboutFaqComponent} from './about-faq/about-faq.component';
 import {AboutCustomersComponent} from './about-customers/about-customers.component';
 import {AboutTeamComponent} from './about-team/about-team.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {AboutPricingComponent} from './about-pricing/about-pricing.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -36,6 +38,7 @@ describe('AboutComponent', () => {
         AboutTeamComponent,
         AboutBenefitsComponent,
         AboutDirectionComponent,
+        AboutPricingComponent,
         AboutApiComponent,
         StoresComponent,
       ],
@@ -47,6 +50,7 @@ describe('AboutComponent', () => {
         NoopAnimationsModule,
         AppNgxsModule,
         SettingsPageModule,
+        ReactiveFormsModule,
       ],
     }).compileComponents();
   });

@@ -51,7 +51,7 @@ export class AboutPricingComponent {
     },
   ];
 
-  ngOnInit() {
+  constructor() {
     this.form.valueChanges
       .pipe(
         tap(() => (this.price = this.calcPrice())),
