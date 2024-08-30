@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Avusta"
     },
-    "tools": {
-      "title": "Työkalut"
-    },
     "nav": {
       "pages": "Siirry muille sivuille",
       "legal": "Siirry juridisille sivuille"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Ohjelmistot ja käyttöluvat"
-    }
+    },
+    "title": "Laillinen"
   },
   "playground": {
     "title": "Viittomakielen käsittelyn leikkikenttä"

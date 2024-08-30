@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Etwas beitragen"
     },
-    "tools": {
-      "title": "Tools"
-    },
     "nav": {
       "pages": "Navigieren Sie zu anderen Seiten",
       "legal": "Navigieren Sie zu den rechtlichen Seiten"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software und Lizenzen"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Spielplatz für Gebärdensprachverarbeitung"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Goşant goş"
     },
-    "tools": {
-      "title": "Gurallar"
-    },
     "nav": {
       "pages": "Beýleki sahypalara geçiň",
       "legal": "Hukuk sahypalaryna geçiň"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programma üpjünçiligi we lisenziýalar"
-    }
+    },
+    "title": "Hukuk"
   },
   "playground": {
     "title": "Sözlük dilini gaýtadan işlemek meýdançasy"

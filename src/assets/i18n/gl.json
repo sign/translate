@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Contribuír"
     },
-    "tools": {
-      "title": "Ferramentas"
-    },
     "nav": {
       "pages": "Navega a outras páxinas",
       "legal": "Navega ás páxinas legais"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software e licenzas"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Patio de procesamento da lingua de signos"

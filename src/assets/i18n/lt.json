@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Bendradarbiauti"
     },
-    "tools": {
-      "title": "Įrankiai"
-    },
     "nav": {
       "pages": "Eikite į kitus puslapius",
       "legal": "Eikite į teisinius puslapius"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programinė įranga ir licencijos"
-    }
+    },
+    "title": "Teisinė"
   },
   "playground": {
     "title": "Gestų kalbos apdorojimo žaidimų aikštelė"

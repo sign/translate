@@ -72,9 +72,6 @@
     "contribute": {
       "title": "参与"
     },
-    "tools": {
-      "title": "工具"
-    },
     "nav": {
       "pages": "导航到其他页面",
       "legal": "导航到法律页面"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "软件和许可"
-    }
+    },
+    "title": "合法的"
   },
   "playground": {
     "title": "手语处理游乐场"

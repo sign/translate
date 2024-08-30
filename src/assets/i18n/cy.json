@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Cyfrannu"
     },
-    "tools": {
-      "title": "Offer"
-    },
     "nav": {
       "pages": "Llywiwch i dudalennau eraill",
       "legal": "Llywiwch i dudalennau cyfreithiol"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Meddalwedd a Thrwyddedau"
-    }
+    },
+    "title": "Cyfreithiol"
   },
   "playground": {
     "title": "Maes Chwarae Prosesu Iaith Arwyddion"

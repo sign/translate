@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Thandizirani"
     },
-    "tools": {
-      "title": "Zipangizo"
-    },
     "nav": {
       "pages": "Yendetsani kumasamba ena",
       "legal": "Pitani kumasamba ovomerezeka"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Mapulogalamu ndi Malaisensi"
-    }
+    },
+    "title": "Zalamulo"
   },
   "playground": {
     "title": "Malo Osewerera Chinenero Chamanja"

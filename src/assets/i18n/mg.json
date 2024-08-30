@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Handray anjara"
     },
-    "tools": {
-      "title": "Fitaovana"
-    },
     "nav": {
       "pages": "Mandehana mankany amin'ny pejy hafa",
       "legal": "Mandehana mankany amin'ny pejy ara-dalàna"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Rindram-baiko sy fahazoan-dalana"
-    }
+    },
+    "title": "Ara-dalàna"
   },
   "playground": {
     "title": "kianja filalaovana fanodinana ny tenin'ny tanana"

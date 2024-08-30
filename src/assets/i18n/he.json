@@ -72,9 +72,6 @@
     "contribute": {
       "title": "שיפור הכלי"
     },
-    "tools": {
-      "title": "כלים"
-    },
     "nav": {
       "pages": "נווט לדפים אחרים",
       "legal": "נווט לדפים משפטיים"
@@ -182,7 +179,8 @@
     },
     "licenses": {
       "title": "תוכנה ורישיונות"
-    }
+    },
+    "title": "מִשׁפָּטִי"
   },
   "benchmark": {
     "title": "Benchmark",

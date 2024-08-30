@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Kontribuo"
     },
-    "tools": {
-      "title": "Veglat"
-    },
     "nav": {
       "pages": "Navigoni në faqet e tjera",
       "legal": "Navigoni në faqet ligjore"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Softueri dhe Licencat"
-    }
+    },
+    "title": "Ligjore"
   },
   "playground": {
     "title": "Shesh lojërash për përpunimin e gjuhës së shenjave"

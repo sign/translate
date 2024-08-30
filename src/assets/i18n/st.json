@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Tlatsetsa"
     },
-    "tools": {
-      "title": "Ditshebediso"
-    },
     "nav": {
       "pages": "E ea maqepheng a mang",
       "legal": "E ea maqepheng a molao"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Softewere le Lilaesense"
-    }
+    },
+    "title": "Ea molao"
   },
   "playground": {
     "title": "Lebala la ho Etsa Puo ea Matsoho"

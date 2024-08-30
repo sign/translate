@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Contribute"
     },
-    "tools": {
-      "title": "Tools"
-    },
     "nav": {
       "pages": "Navigate to other pages",
       "legal": "Navigate to legal pages"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software and Licenses"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Sign Language Processing Playground"

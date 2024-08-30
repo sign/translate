@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Kudeeq"
     },
-    "tools": {
-      "title": "Qalabka"
-    },
     "nav": {
       "pages": "U gudub bogag kale",
       "legal": "U gudub boggaga sharciga ah"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Sooofti weerka iyo Ruqsahaha"
-    }
+    },
+    "title": "Sharci"
   },
   "playground": {
     "title": "Garoonka Kubadda Cagta ee ka Hagaajinta Luqadda Calaamadaha"

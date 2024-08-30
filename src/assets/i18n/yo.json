@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Kópa"
     },
-    "tools": {
-      "title": "Àwọn irinṣẹ́"
-    },
     "nav": {
       "pages": "Lilö kiri si awọn oju-iwe miiran",
       "legal": "Lilö kiri si awọn oju-iwe ofin"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Ẹ̀yà àìrídìmú àti Àwọn Ìgbaniláyè"
-    }
+    },
+    "title": "Ofin"
   },
   "playground": {
     "title": "Ibi ibi isere ti Ṣiṣe Èdè Afọwọṣe"

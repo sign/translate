@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Pag-ambag"
     },
-    "tools": {
-      "title": "Mga Galamiton"
-    },
     "nav": {
       "pages": "Pag-navigate sa ubang mga panid",
       "legal": "Pagdala ngadto sa legal nga mga panid"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software ug Mga Lisensya"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Dulaanan sa Pagproseso sa Sign Language"

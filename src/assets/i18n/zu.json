@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Nikela"
     },
-    "tools": {
-      "title": "Amathuluzi"
-    },
     "nav": {
       "pages": "Zulazulela kwamanye amakhasi",
       "legal": "Zulazulela emakhasini asemthethweni"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Isofthiwe namalayisense"
-    }
+    },
+    "title": "Okusemthethweni"
   },
   "playground": {
     "title": "Inkundla Yokucubungula Ulimi Lwezandla"

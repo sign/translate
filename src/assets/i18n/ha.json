@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Ba da gudummuwa"
     },
-    "tools": {
-      "title": "Kayan Aiki"
-    },
     "nav": {
       "pages": "Kewaya zuwa wasu shafuka",
       "legal": "Kewaya zuwa shafukan doka"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software da kuma Zanen Shafin"
-    }
+    },
+    "title": "Shari'a"
   },
   "playground": {
     "title": "Filin Wasan sarrafa Harshen Alama"

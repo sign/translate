@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Contribució"
     },
-    "tools": {
-      "title": "Eines"
-    },
     "nav": {
       "pages": "Navegueu a altres pàgines",
       "legal": "Navegueu a pàgines legals"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programari i llicències"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Pati de processament de la llengua de signes"

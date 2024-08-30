@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Bijdragen"
     },
-    "tools": {
-      "title": "Tools"
-    },
     "nav": {
       "pages": "Navigeer naar andere pagina's",
       "legal": "Navigeer naar juridische pagina's"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software en licenties"
-    }
+    },
+    "title": "Legaal"
   },
   "playground": {
     "title": "Speeltuin voor gebarentaalverwerking"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Egin ekarpena"
     },
-    "tools": {
-      "title": "Tresnak"
-    },
     "nav": {
       "pages": "Nabigatu beste orrietara",
       "legal": "Nabigatu legezko orrietara"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Softwarea eta lizentziak"
-    }
+    },
+    "title": "Legezkoa"
   },
   "playground": {
     "title": "Zeinu Hizkuntza Prozesatzeko Jolastokia"

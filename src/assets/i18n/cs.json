@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Přispět"
     },
-    "tools": {
-      "title": "Nástroje"
-    },
     "nav": {
       "pages": "Přejděte na další stránky",
       "legal": "Přejděte na právní stránky"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software a licence"
-    }
+    },
+    "title": "Právní"
   },
   "playground": {
     "title": "Hřiště na zpracování znakového jazyka"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Kontribusi"
     },
-    "tools": {
-      "title": "Piranti"
-    },
     "nav": {
       "pages": "Navigasi menyang kaca liyane",
       "legal": "Navigasi menyang kaca legal"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Perangkat Lunak lan Lisensi"
-    }
+    },
+    "title": "sah"
   },
   "playground": {
     "title": "Papan Dolanan Pangolahan Basa Isyarat"

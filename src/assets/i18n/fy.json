@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Meihelpe"
     },
-    "tools": {
-      "title": "Ark"
-    },
     "nav": {
       "pages": "Gean nei oare siden",
       "legal": "Gean nei juridyske siden"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software en lisinsjes"
-    }
+    },
+    "title": "Legaal"
   },
   "playground": {
     "title": "Gebeartetaalferwurkingsboarterstún"

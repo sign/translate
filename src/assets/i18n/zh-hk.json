@@ -72,9 +72,6 @@
     "contribute": {
       "title": "提供翻譯"
     },
-    "tools": {
-      "title": "工具"
-    },
     "nav": {
       "pages": "導航到其他頁面",
       "legal": "導航到法律頁面"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "軟件和授權"
-    }
+    },
+    "title": "合法的"
   },
   "playground": {
     "title": "手語處理遊樂場"

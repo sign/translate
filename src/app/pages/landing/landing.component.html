@@ -37,8 +37,9 @@
     <ion-title>{{ 'translate.title' | transloco }}</ion-title>
     @if (!isMobile.matches) {
     <ion-buttons slot="primary">
-      <ion-button routerLink="/" color="primary" queryParamsHandling="preserve">
+      <ion-button routerLink="/" color="primary" queryParamsHandling="preserve" shape="round" fill="solid">
         {{ 'landing.try' | transloco }}
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="secondary">

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Taka þátt"
     },
-    "tools": {
-      "title": "Verkfæri"
-    },
     "nav": {
       "pages": "Farðu á aðrar síður",
       "legal": "Farðu á löglegar síður"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Hugbúnaður og leyfi"
-    }
+    },
+    "title": "Löglegt"
   },
   "playground": {
     "title": "Leikvöllur fyrir táknmálsvinnslu"

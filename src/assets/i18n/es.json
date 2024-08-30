@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Contribuir"
     },
-    "tools": {
-      "title": "Herramientas"
-    },
     "nav": {
       "pages": "Navegar a otras páginas",
       "legal": "Navegar a las páginas legales"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software y licencias"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Área de juegos para el procesamiento del lenguaje de señas"

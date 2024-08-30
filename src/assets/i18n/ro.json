@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Contribuiți"
     },
-    "tools": {
-      "title": "Instrumente"
-    },
     "nav": {
       "pages": "Navigați la alte pagini",
       "legal": "Navigați la paginile legale"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software și licențe"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Loc de joacă pentru procesarea limbajului semnelor"

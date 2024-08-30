@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Katkıda Bulunun"
     },
-    "tools": {
-      "title": "Araçlar"
-    },
     "nav": {
       "pages": "Diğer sayfalara gidin",
       "legal": "Yasal sayfalara gidin"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Yazılım ve Lisanslar"
-    }
+    },
+    "title": "Yasal"
   },
   "playground": {
     "title": "İşaret Dili İşleme Oyun Alanı"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "改善に協力"
     },
-    "tools": {
-      "title": "ツール"
-    },
     "nav": {
       "pages": "他のページに移動",
       "legal": "法定ページに移動"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "ソフトウェアとライセンス"
-    }
+    },
+    "title": "法律上の"
   },
   "playground": {
     "title": "手話処理遊び場"

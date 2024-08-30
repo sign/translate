@@ -4,7 +4,6 @@ import {LandingComponent} from './landing.component';
 import {AboutComponent} from './about/about.component';
 import {LanguagesComponent} from './languages/languages.component';
 import {ContributeComponent} from './contribute/contribute.component';
-import {ToolsComponent} from './tools/tools.component';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {LandingRoutingModule} from './landing-routing.module';
 import {StoresComponent} from '../../components/stores/stores.component';
@@ -39,7 +38,6 @@ import {ReactiveFormsModule} from '@angular/forms';
     AboutComponent,
     LanguagesComponent,
     ContributeComponent,
-    ToolsComponent,
     I18NLanguageSelectorComponent,
     StoresComponent,
     AboutHeroComponent,

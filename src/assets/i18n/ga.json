@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Déan do chuid"
     },
-    "tools": {
-      "title": "Uirlisí"
-    },
     "nav": {
       "pages": "Déan nascleanúint go leathanaigh eile",
       "legal": "Déan nascleanúint chuig leathanaigh dhlíthiúla"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Bogearraí agus Ceadúnais"
-    }
+    },
+    "title": "Dlíthiúil"
   },
   "playground": {
     "title": "Clós Súgartha Próiseála Teanga Chomharthaíochta"

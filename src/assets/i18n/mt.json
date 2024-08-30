@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Ikkontribwixxi"
     },
-    "tools": {
-      "title": "Għodod"
-    },
     "nav": {
       "pages": "Innaviga lejn paġni oħra",
       "legal": "Innaviga lejn paġni legali"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Softwer u Liċenzji"
-    }
+    },
+    "title": "Legali"
   },
   "playground": {
     "title": "Playground tal-Ipproċessar tal-Lingwa tas-Sinjali"

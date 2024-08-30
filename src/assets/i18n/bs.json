@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Dajte svoj doprinos"
     },
-    "tools": {
-      "title": "Alati"
-    },
     "nav": {
       "pages": "Idite na druge stranice",
       "legal": "Idite na pravne stranice"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Softver i licence"
-    }
+    },
+    "title": "Pravni"
   },
   "playground": {
     "title": "Igralište za obradu znakovnog jezika"

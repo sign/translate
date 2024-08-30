@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Beşdar bibe"
     },
-    "tools": {
-      "title": "Amraz"
-    },
     "nav": {
       "pages": "Biçe ser rûpelên din",
       "legal": "Li ser rûpelên qanûnî bigerin"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Nivîsbarî û Lîsans"
-    }
+    },
+    "title": "Mafî"
   },
   "playground": {
     "title": "Lîstika Pêvajoya Zimanê Îşaretê"

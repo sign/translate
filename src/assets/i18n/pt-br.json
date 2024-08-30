@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Contribuir"
     },
-    "tools": {
-      "title": "Ferramentas"
-    },
     "nav": {
       "pages": "Navegue para outras páginas",
       "legal": "Navegue para páginas jurídicas"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software e licenças"
-    }
+    },
+    "title": "Jurídico"
   },
   "playground": {
     "title": "Playground de processamento de linguagem de sinais"

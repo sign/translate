@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Isawo ruwoko rwako pabasa iri"
     },
-    "tools": {
-      "title": "Zvibatiso"
-    },
     "nav": {
       "pages": "Enda kune mamwe mapeji",
       "legal": "Enda kumapeji emutemo"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "MaSofutiwee nemaRaisenzi awo"
-    }
+    },
+    "title": "Zvemutemo"
   },
   "playground": {
     "title": "Mutauro Wemasaini Wokugadzira Nzvimbo Yekutamba"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Piedalīties"
     },
-    "tools": {
-      "title": "Rīki"
-    },
     "nav": {
       "pages": "Pārejiet uz citām lapām",
       "legal": "Pārejiet uz juridiskajām lapām"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programmatūra un licences"
-    }
+    },
+    "title": "Juridisks"
   },
   "playground": {
     "title": "Zīmju valodas apstrādes rotaļu laukums"

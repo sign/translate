@@ -72,9 +72,6 @@
     "contribute": {
       "title": "번역 제안하기"
     },
-    "tools": {
-      "title": "도구"
-    },
     "nav": {
       "pages": "다른 페이지로 이동",
       "legal": "법률 페이지로 이동"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "소프트웨어 및 라이선스"
-    }
+    },
+    "title": "합법적인"
   },
   "playground": {
     "title": "수화 처리 놀이터"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Maparin"
     },
-    "tools": {
-      "title": "Pakakas"
-    },
     "nav": {
       "pages": "Arahkeun ka kaca séjén",
       "legal": "Arahkeun ka kaca légal"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software jeung Lisénsi"
-    }
+    },
+    "title": "sah"
   },
   "playground": {
     "title": "Tanda kaulinan Processing Basa"

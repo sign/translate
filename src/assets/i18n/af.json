@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Dra by"
     },
-    "tools": {
-      "title": "Nutsgoed"
-    },
     "nav": {
       "pages": "Navigeer na ander bladsye",
       "legal": "Gaan na wettige bladsye"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Sagteware en lisensies"
-    }
+    },
+    "title": "Wettig"
   },
   "playground": {
     "title": "Gebaretaalverwerking speelgrond"

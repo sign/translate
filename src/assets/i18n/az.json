@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Töhfə verin"
     },
-    "tools": {
-      "title": "Alətlər"
-    },
     "nav": {
       "pages": "Digər səhifələrə keçin",
       "legal": "Hüquqi səhifələrə keçin"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Proqram və Lisenziya"
-    }
+    },
+    "title": "Hüquqi"
   },
   "playground": {
     "title": "İşarə Dili Emalı Oyun Meydançası"

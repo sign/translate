@@ -72,9 +72,6 @@
     "contribute": {
       "title": "E komo pū"
     },
-    "tools": {
-      "title": "Nā meahana"
-    },
     "nav": {
       "pages": "E hoʻokele i nā ʻaoʻao ʻē aʻe",
       "legal": "E hoʻokele i nā ʻaoʻao kānāwai"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Lako polokalamu a me nā laikini"
-    }
+    },
+    "title": "Kānāwai"
   },
   "playground": {
     "title": "Ke kahua pāʻani hoʻoponopono ʻōlelo hōʻailona"

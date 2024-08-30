@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Prispevajte"
     },
-    "tools": {
-      "title": "Orodja"
-    },
     "nav": {
       "pages": "Pomaknite se na druge strani",
       "legal": "Pomaknite se na pravne strani"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programska oprema in licence"
-    }
+    },
+    "title": "Pravno"
   },
   "playground": {
     "title": "Igrišče za obdelavo znakovnega jezika"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Đóng góp"
     },
-    "tools": {
-      "title": "Công cụ"
-    },
     "nav": {
       "pages": "Điều hướng đến các trang khác",
       "legal": "Điều hướng đến các trang pháp lý"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Phần mềm và giấy phép"
-    }
+    },
+    "title": "Hợp pháp"
   },
   "playground": {
     "title": "Sân chơi xử lý ngôn ngữ ký hiệu"

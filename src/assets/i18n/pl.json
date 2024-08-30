@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Twój wkład"
     },
-    "tools": {
-      "title": "Narzędzia"
-    },
     "nav": {
       "pages": "Przejdź do innych stron",
       "legal": "Przejdź do stron prawnych"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Oprogramowanie i licencje"
-    }
+    },
+    "title": "Prawny"
   },
   "playground": {
     "title": "Plac zabaw przetwarzania języka migowego"

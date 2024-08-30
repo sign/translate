@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Mag-contribute"
     },
-    "tools": {
-      "title": "Mga tool"
-    },
     "nav": {
       "pages": "Mag-navigate sa iba pang mga pahina",
       "legal": "Mag-navigate sa mga legal na pahina"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Software at Mga Lisensya"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Palaruan sa Pagproseso ng Sign Language"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Beri kontribusi"
     },
-    "tools": {
-      "title": "Peralatan"
-    },
     "nav": {
       "pages": "Navigasikan ke halaman lain",
       "legal": "Arahkan ke halaman hukum"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Perangkat Lunak dan Lisensi"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Taman Bermain Pemrosesan Bahasa Isyarat"

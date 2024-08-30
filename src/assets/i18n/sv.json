@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Bidra"
     },
-    "tools": {
-      "title": "Verktyg"
-    },
     "nav": {
       "pages": "Navigera till andra sidor",
       "legal": "Navigera till juridiska sidor"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programvara och licenser"
-    }
+    },
+    "title": "Rättslig"
   },
   "playground": {
     "title": "Lekplats för teckenspråksbearbetning"

@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Nyere aka"
     },
-    "tools": {
-      "title": "Ngwaọrụ"
-    },
     "nav": {
       "pages": "Gaa na ibe ndị ọzọ",
       "legal": "Gaa na ibe iwu"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Ngwanrọ na Ikikere"
-    }
+    },
+    "title": "Iwu"
   },
   "playground": {
     "title": "Ebe egwuregwu na-ahazi asụsụ ogbi"

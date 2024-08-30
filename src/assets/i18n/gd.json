@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Gabh pàirt"
     },
-    "tools": {
-      "title": "Innealan"
-    },
     "nav": {
       "pages": "Seòl gu duilleagan eile",
       "legal": "Seòl gu duilleagan laghail"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Bathar-bog is ceadachasan"
-    }
+    },
+    "title": "Laghail"
   },
   "playground": {
     "title": "Raon-cluiche Giullachd Cànain Soidhnidh"

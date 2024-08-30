@@ -15,7 +15,6 @@ const lastmod = new Date();
 const baseUrls = [
   '/',
   '/about/',
-  // '/about/tools/',
   // '/legal/terms/', '/legal/privacy/',
 ];
 

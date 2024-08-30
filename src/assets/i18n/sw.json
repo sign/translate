@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Changia"
     },
-    "tools": {
-      "title": "Zana"
-    },
     "nav": {
       "pages": "Nenda kwenye kurasa zingine",
       "legal": "Nenda kwenye kurasa za kisheria"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Programu na Leseni"
-    }
+    },
+    "title": "Kisheria"
   },
   "playground": {
     "title": "Uwanja wa Kuchakata Lugha ya Ishara"

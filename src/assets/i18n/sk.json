@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Prispieť"
     },
-    "tools": {
-      "title": "Nástroje"
-    },
     "nav": {
       "pages": "Prejdite na iné stránky",
       "legal": "Prejdite na právne stránky"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Softvér a licencie"
-    }
+    },
+    "title": "Právne"
   },
   "playground": {
     "title": "Ihrisko na spracovanie posunkovej reči"

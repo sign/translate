@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Nikela"
     },
-    "tools": {
-      "title": "Izixhobo"
-    },
     "nav": {
       "pages": "Yiya kwamanye amaphepha",
       "legal": "Yiya kumaphepha asemthethweni"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "iSoftware kunye neMigaqo"
-    }
+    },
+    "title": "Ezomthetho"
   },
   "playground": {
     "title": "Ibala lokudlala lokuLungiselela uLwimi lweZandla"

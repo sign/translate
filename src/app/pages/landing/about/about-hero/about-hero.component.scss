@@ -19,14 +19,29 @@
 
   @media #{$breakpoint-lt-md} {
     grid-auto-flow: row;
-    div {
-      order: -1;
-    }
   }
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 3em;
+
+  @media #{$breakpoint-lt-md} {
+    font-size: 2.5em;
+  }
+
+  @media #{$breakpoint-lt-sm} {
+    font-size: 2em;
+  }
+
+  span {
+    color: var(--ion-color-primary);
+  }
+}
+
+p {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  color: var(--ion-color-medium);
 }
 
 img {

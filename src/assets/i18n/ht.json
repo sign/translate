@@ -72,9 +72,6 @@
     "contribute": {
       "title": "Kontribye"
     },
-    "tools": {
-      "title": "Zouti yo"
-    },
     "nav": {
       "pages": "Navige nan lòt paj",
       "legal": "Navige nan paj legal yo"
@@ -102,7 +99,8 @@
     },
     "licenses": {
       "title": "Lojisyèl ak Lisans yo"
-    }
+    },
+    "title": "Legal"
   },
   "playground": {
     "title": "Lakou rekreyasyon pou trete lang siy"
