@@ -24,6 +24,10 @@ export async function unkeyAuth(req: Request, res: Response, next: NextFunction)
     throw new httpErrors.Unauthorized('Invalid API key');
   }
 
+  if (!result.ownerId) {
+    throw new httpErrors.Forbidden('API key does not have an owner. Please contact support.');
+  }
+
   res.locals.unkey = result;
 
   return next();
