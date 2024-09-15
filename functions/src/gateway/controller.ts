@@ -7,14 +7,12 @@ import {onRequest} from 'firebase-functions/v2/https';
 import {unkeyAuth} from './middleware';
 import {HttpsOptions} from 'firebase-functions/lib/v2/providers/https';
 import {getAppCheck} from 'firebase-admin/app-check';
-import {createProxyMiddleware} from 'http-proxy-middleware';
-import {paths} from './utils';
 import {avatars} from './avatars';
 import {me} from './me';
+import {spokenToSigned} from './spoken-to-signed';
 
 // The public APP ID of the sign-mt web app
 const APP_ID = '1:665830225099:web:18e0669d5847a4b047974e';
-const FUNCTIONS_URL = 'https://us-central1-sign-mt.cloudfunctions.net';
 
 // Create and cache an App Check token for the sign-mt web app
 let appCheckAPIKey = Promise.resolve({token: '', expires: 0});
@@ -39,6 +37,10 @@ export async function getAppCheckKey(req: Request, res: Response, next: NextFunc
   }
 
   res.locals.appCheckToken = token;
+  res.locals.headers = {
+    'X-Firebase-AppCheck': token,
+    'X-AppCheck-Token': token,
+  };
 
   return next();
 }
@@ -50,14 +52,7 @@ app.use(unkeyAuth);
 app.use(getAppCheckKey);
 app.options('*', (req, res) => res.status(200).end());
 
-app.use(
-  paths('spoken-text-to-signed-pose'),
-  createProxyMiddleware({
-    target: `${FUNCTIONS_URL}/spoken_text_to_signed_pose`,
-    changeOrigin: true,
-  })
-);
-
+spokenToSigned(app);
 me(app);
 avatars(app);
 
