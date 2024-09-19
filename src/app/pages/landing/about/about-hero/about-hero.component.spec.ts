@@ -4,6 +4,8 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AboutHeroComponent} from './about-hero.component';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {StoresComponent} from '../../../../components/stores/stores.component';
+import {IonicModule} from '@ionic/angular';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('AboutHeroComponent', () => {
   let component: AboutHeroComponent;
@@ -11,8 +13,8 @@ describe('AboutHeroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutHeroComponent, StoresComponent],
-      imports: [AppTranslocoTestingModule],
+      declarations: [AboutHeroComponent],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NoopAnimationsModule],
     }).compileComponents();
   });
 
