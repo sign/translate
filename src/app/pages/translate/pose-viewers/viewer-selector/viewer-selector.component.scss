@@ -1,8 +1,9 @@
-:host {
-  display: inline-block;
-  width: 56px;
+ion-fab#viewer-selector {
+  top: 0;
+  right: 0;
 }
 
-ion-fab {
-  display: block;
+::ng-deep html[dir='rtl'] ion-fab#viewer-selector {
+  right: auto;
+  left: 0;
 }

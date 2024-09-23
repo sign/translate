@@ -1,5 +1,5 @@
 <ng-container *transloco="let t; read: 'settings.poseViewer'">
-  <ion-fab vertical="center">
+  <ion-fab id="viewer-selector">
     <ion-fab-button
       size="small"
       [color]="fab.color"
@@ -8,7 +8,7 @@
       matTooltipPosition="before">
       <ion-icon [name]="fab.icon"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list side="top">
+    <ion-fab-list side="bottom">
       @for (button of fabButtons; track button) {
       <ion-fab-button
         [color]="button.color"
