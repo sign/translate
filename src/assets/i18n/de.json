@@ -170,7 +170,7 @@
         "send": "Feedback abschicken"
       },
       "about": {
-        "title": "Um"
+        "title": "Über"
       }
     },
     "voice": {
@@ -196,7 +196,7 @@
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {
-          "toggle": "{{Label}} umschalten",
+          "toggle": "{{label}} umschalten",
           "download": "Laden Sie das Offline-Modell herunter",
           "delete": "Leeren Sie den Offline-Modell-Cache",
           "reDownload": "Laden Sie das Offline-Modell erneut herunter"
