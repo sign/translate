@@ -8,54 +8,55 @@ import {Component} from '@angular/core';
 export class AboutFaqComponent {
   questions = [
     {
-      question: 'What is sign, and how does it work?',
+      question: 'What is sign.mt, and how does it work?',
       answer:
-        'sign is a real-time multilingual sign language translation platform that helps businesses communicate easily with their deaf customers, partners, and employees. It consists of a free app for private users and a SaaS platform for businesses. The app uses advanced translation algorithms to convert signed languages into spoken languages and vice versa in real-time, enabling easy communication between deaf and hearing individuals.',
+        'sign.mt is an AI-driven platform that provides real-time sign language translation between spoken and signed languages. Through our API, businesses and organizations can instantly translate text or speech into sign language, creating accessible communication for Deaf users. This ensures inclusivity and a seamless experience for everyone.',
     },
     {
-      question: 'How does sign help businesses?',
+      question: 'How does sign.mt help businesses and organizations?',
       answer:
-        'sign helps businesses communicate more effectively with their deaf customers, partners, and employees by providing a platform that enables two-way translation between signed and spoken languages in real-time. This can improve the customer experience for deaf individuals and increase accessibility for businesses, ultimately leading to increased sales and revenue.',
+        'sign.mt enables businesses and organizations to become more inclusive and compliant with accessibility standards. By integrating our API, companies can offer real-time sign language translation for Deaf customers, employees, and partners, improving communication, customer satisfaction, and brand reputation. This also helps align with ESG goals and enhances accessibility efforts.',
     },
     {
-      question: 'How many languages does sign support?',
-      answer: 'sign currently supports more than 40 signed and spoken languages, with plans to add more in the future.',
-    },
-    {
-      question: 'Is sign available for both mobile devices?',
+      question: 'How many languages does sign.mt support?',
       answer:
-        'Yes, sign is available for both iOS and Android devices. You can download it from the App Store or Google Play Store.',
+        'sign.mt currently supports over 40 signed and spoken languages, allowing for flexible, real-time translation between a wide variety of languages used by Deaf and hearing individuals. We continue to expand our language offerings to meet diverse communication needs.',
     },
     {
-      question: 'How much does sign cost?',
+      question: 'How many languages does sign.mt support?',
       answer:
-        'sign offers a free app for private users, which is free to download and use. The SaaS platform for businesses is detailed under the pricing section above. Please contact us for more information on pricing.',
+        'sign.mt currently supports over 40 signed and spoken languages, allowing for flexible, real-time translation between a wide variety of languages used by Deaf and hearing individuals. These languages are available at different levels of quality, but we are constantly improving and refining our translations. We are committed to delivering a high standard and continue to expand and enhance our language offerings to meet diverse communication needs.',
     },
     {
-      question: 'Is there a free version of sign available?',
+      question: 'How much does sign.mt cost?',
       answer:
-        'Yes, sign offers a free app including all the translation features for private users, which is free to download and use.',
+        'Pricing for sign.mt is based on your specific business needs and usage. We offer flexible API subscription plans tailored to your organization’s requirements. For detailed pricing information, please contact our team.',
     },
     {
-      question: 'How can I get started with sign?',
+      question: 'How can I get started with sign.mt?',
       answer:
-        'To get started with sign, you can download the app from the App Store or Google Play Store. If you are a business interested in implementing the SaaS platform, please contact us for more information and to schedule a demo.',
+        'To get started with sign.mt, businesses can integrate our API into their existing platforms. Simply contact our team for a demo, receive API documentation, and start offering real-time sign language translation. We provide full support and customization to meet your needs.',
     },
     {
-      question: 'What is the process for implementing sign in a business?',
-      answer: 'The process for implementing sign in a business typically involves the following steps:',
+      question: 'What is the process for implementing sign.mt in a business?',
+      answer: 'Implementing sign.mt in your business involves a few key steps:',
       steps: [
-        'Contact us to schedule a demo and discuss your needs and customization options.',
-        'Receive an API-Key and the full documentation.',
-        'Work with our team to customize the platform to meet your specific needs and branding.',
-        'Train your staff on how to use the platform and provide ongoing support as needed.',
-        'Launch the platform and begin using it to communicate with your deaf customers, partners, and employees.',
+        'Contact us to schedule a demo and discuss your specific requirements.',
+        'Receive your API-Key and full documentation.',
+        'Customize the platform with our team to match your needs.',
+        'Train your staff and receive ongoing technical support as required.',
+        'Launch and deploy the solution to enhance communication with Deaf users.',
       ],
     },
     {
-      question: 'How can I get support or help with sign?',
+      question: 'How can I get support or help with sign.mt?',
       answer:
-        'If you have any questions or need help with sign, you can contact us through the app or website, or email us at support@sign.mt. Our team is always happy to assist you.',
+        'We offer comprehensive support for all users. Businesses can contact our technical support team for assistance with API integration, troubleshooting, and maintenance. For general inquiries, reach out to our customer service team via our website or email.',
+    },
+    {
+      question: 'Can sign.mt be customized for specific business needs?',
+      answer:
+        'Yes, our API is highly customizable to fit the unique requirements of your business. Whether you need tailored language support, branding integration, or specific functionality, our team works closely with you to ensure a smooth and effective implementation.',
     },
   ];
 }
