@@ -20,11 +20,6 @@ export class AboutFaqComponent {
     {
       question: 'How many languages does sign.mt support?',
       answer:
-        'sign.mt currently supports over 40 signed and spoken languages, allowing for flexible, real-time translation between a wide variety of languages used by Deaf and hearing individuals. We continue to expand our language offerings to meet diverse communication needs.',
-    },
-    {
-      question: 'How many languages does sign.mt support?',
-      answer:
         'sign.mt currently supports over 40 signed and spoken languages, allowing for flexible, real-time translation between a wide variety of languages used by Deaf and hearing individuals. These languages are available at different levels of quality, but we are constantly improving and refining our translations. We are committed to delivering a high standard and continue to expand and enhance our language offerings to meet diverse communication needs.',
     },
     {
