@@ -58,5 +58,17 @@ export class AboutFaqComponent {
       answer:
         'Yes, our API is highly customizable to fit the unique requirements of your business. Whether you need tailored language support, branding integration, or specific functionality, our team works closely with you to ensure a smooth and effective implementation.',
     },
+    {
+      question: 'What are the most common use cases for sign.mt?',
+      answer:
+        'sign.mt is used across various industries to enhance accessibility and communication. Some of the most common use cases include:',
+      steps: [
+        'Website Translation for Accessibility: Deaf users can select sign language on a website, hover over text, and instantly view a small video rendering of the translated content, providing equal access to information across websites, e-commerce platforms, educational sites, and government portals.',
+        'Accessible Public Information: Real-time announcements, such as delays or emergencies, can be displayed in sign language, ensuring Deaf users receive up-to-date information in public spaces like trains, airports, and bus stations.',
+        'Inclusive Entertainment and News: Platforms like YouTube, Netflix, and live broadcasts can offer sign language translations, allowing Deaf users to access entertainment fully. News websites and apps can provide sign language translations for articles and live news feeds to keep Deaf individuals informed.',
+        'Accessible Customer Service Hotlines: Deaf users can access services from banks, healthcare providers, and telecoms via video calls with sign language interpreters, text chat options, or accessible service portals, ensuring equal access to support.',
+        'End-User Communication App: A potential app could enable real-time, two-way communication between Deaf and hearing users, offering sign language translation, voice-to-text, and text-to-voice features for both personal and professional use.',
+      ],
+    },
   ];
 }
