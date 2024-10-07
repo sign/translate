@@ -7,7 +7,6 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {I18NLanguageSelectorComponent} from '../../../components/i18n-language-selector/i18n-language-selector.component';
 import {RouterModule} from '@angular/router';
-import {AboutComponent} from '../about/about.component';
 
 describe('LandingFooterComponent', () => {
   let component: LandingFooterComponent;

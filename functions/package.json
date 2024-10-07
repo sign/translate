@@ -23,16 +23,16 @@
     "@firebase/database-types": "1.0.5",
     "@google-cloud/storage": "7.13.0",
     "@sign-mt/browsermt": "0.2.3",
-    "@unkey/api": "0.26.1",
+    "@unkey/api": "0.26.2",
     "cors": "2.8.5",
     "express": "4.21.0",
     "express-async-errors": "3.1.1",
     "firebase-admin": "12.6.0",
     "firebase-functions": "6.0.1",
     "http-errors": "2.0.0",
-    "http-proxy-middleware": "^3.0.2",
+    "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.66.1"
+    "openai": "4.67.1"
   },
   "devDependencies": {
     "@firebase/firestore-types": "3.0.2",

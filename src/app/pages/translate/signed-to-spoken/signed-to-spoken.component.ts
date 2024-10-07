@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
-import {InputMode, SignWritingObj} from '../../../modules/translate/translate.state';
+import {InputMode} from '../../../modules/translate/translate.state';
 import {
   CopySpokenLanguageText,
   SetSignWritingText,

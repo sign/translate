@@ -27,7 +27,6 @@ import {IonicModule} from '@ionic/angular';
 import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
 import {TermsComponent} from './terms/terms.component';
 import {PrivacyComponent} from './privacy/privacy.component';
-import {MatTabsModule} from '@angular/material/tabs';
 import {MermaidChartComponent} from './mermaid-chart/mermaid-chart.component';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
 import {ReactiveFormsModule} from '@angular/forms';
