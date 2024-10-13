@@ -10,6 +10,7 @@ import {getAppCheck} from 'firebase-admin/app-check';
 import {avatars} from './avatars';
 import {me} from './me';
 import {spokenToSigned} from './spoken-to-signed';
+import {optionsRequest} from '../middlewares/options.request';
 
 // The public APP ID of the sign-mt web app
 const APP_ID = '1:665830225099:web:18e0669d5847a4b047974e';
@@ -50,7 +51,7 @@ const app: Application = express();
 app.use(cors());
 app.use(unkeyAuth);
 app.use(getAppCheckKey);
-app.options('*', (req, res) => res.status(200).end());
+app.options('*', optionsRequest);
 
 spokenToSigned(app);
 me(app);

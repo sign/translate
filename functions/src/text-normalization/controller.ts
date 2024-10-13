@@ -9,6 +9,7 @@ import {onRequest} from 'firebase-functions/v2/https';
 import {defineString} from 'firebase-functions/params';
 import {appCheckVerification} from '../middlewares/appcheck.middleware';
 import type {StringParam} from 'firebase-functions/lib/params/types';
+import {optionsRequest} from '../middlewares/options.request';
 
 export class TextNormalizationEndpoint {
   constructor(private database: FirebaseDatabase, private OpenAIApiKey: StringParam) {}
@@ -106,7 +107,7 @@ export const textNormalizationFunctions = (database: FirebaseDatabase) => {
   const app = express();
   app.use(cors());
   app.use(appCheckVerification);
-  app.options('*', (req, res) => res.status(200).end());
+  app.options('*', optionsRequest);
   app.get(['/', '/api/text-normalization'], request);
   app.use(errorMiddleware);
 
