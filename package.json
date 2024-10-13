@@ -100,6 +100,7 @@
     "pose-viewer": "0.10.0",
     "rxjs": "7.8.1",
     "stats.js": "0.17.0",
+    "swiper": "^11.1.14",
     "three": "0.169.0",
     "tslib": "2.7.0",
     "web-vitals": "4.2.3",

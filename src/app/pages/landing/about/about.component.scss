@@ -3,6 +3,7 @@
 :host > * {
   display: block;
   padding: 50px;
+  padding-top: 0;
 
   @media #{$breakpoint-lt-md} {
     padding: 50px 25px;

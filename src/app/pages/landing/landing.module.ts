@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {LandingComponent} from './landing.component';
 import {AboutComponent} from './about/about.component';
@@ -30,6 +30,10 @@ import {PrivacyComponent} from './privacy/privacy.component';
 import {MermaidChartComponent} from './mermaid-chart/mermaid-chart.component';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {register} from 'swiper/element/bundle';
+import {SignedToSpokenModule} from '../translate/signed-to-spoken/signed-to-spoken.module';
+
+register();
 
 @NgModule({
   declarations: [
@@ -66,8 +70,10 @@ import {ReactiveFormsModule} from '@angular/forms';
     IonicModule,
     MermaidChartComponent,
     ReactiveFormsModule,
+    SignedToSpokenModule,
   ],
   bootstrap: [LandingComponent],
   exports: [I18NLanguageSelectorComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class LandingModule {}

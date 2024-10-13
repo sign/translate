@@ -11,7 +11,7 @@ export class AboutTeamComponent {
       name: 'Timothy Rabozzi',
       avatar: 'assets/promotional/about/team/timothy-rabozzi.jpg',
       title: 'CEO',
-      bio: 'CEO with a background in LegalTech, campaigning, and business analysis. Holds a Master of Law with a focus on public law and innovation from the University of Bern.',
+      bio: 'Background in LegalTech, campaigning, and business analysis. Holds a Master of Law with a focus on public law and innovation from the University of Bern.',
     },
     {
       name: 'Amit Moryossef',
