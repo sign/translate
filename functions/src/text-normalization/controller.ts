@@ -10,6 +10,7 @@ import {defineString} from 'firebase-functions/params';
 import {appCheckVerification} from '../middlewares/appcheck.middleware';
 import type {StringParam} from 'firebase-functions/lib/params/types';
 import {optionsRequest} from '../middlewares/options.request';
+import {unkeyRatelimit} from '../middlewares/unkey-ratelimit.middleware';
 
 export class TextNormalizationEndpoint {
   constructor(private database: FirebaseDatabase, private OpenAIApiKey: StringParam) {}
@@ -107,6 +108,7 @@ export const textNormalizationFunctions = (database: FirebaseDatabase) => {
   const app = express();
   app.use(cors());
   app.use(appCheckVerification);
+  app.use(unkeyRatelimit('api.text-normalization', 250, '30m'));
   app.options('*', optionsRequest);
   app.get(['/', '/api/text-normalization'], request);
   app.use(errorMiddleware);
