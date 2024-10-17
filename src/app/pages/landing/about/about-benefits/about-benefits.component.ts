@@ -1,29 +1,54 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Swiper} from 'swiper/types';
+import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {TranslocoService} from '@ngneat/transloco';
+import {takeUntil, tap} from 'rxjs/operators';
+import {BaseComponent} from '../../../../components/base/base.component';
 
 @Component({
   selector: 'app-about-benefits',
   templateUrl: './about-benefits.component.html',
   styleUrls: ['./about-benefits.component.scss'],
 })
-export class AboutBenefitsComponent {
-  benefits = [
-    {
-      title: 'Real-time translation',
-      subtitle: 'Translate between 40+ signed and spoken languages in real-time',
-      content:
-        'Our app allows you to communicate naturally and easily with anyone, anywhere, anytime, in your own sign language.',
-    },
-    {
-      title: 'Offline functionality',
-      subtitle: "Communicate even when you're not connected to the internet",
-      content:
-        "Our app works offline, so you can communicate even when you're not connected to the internet or in areas with limited connectivity.",
-    },
-    {
-      title: 'Multilingual support',
-      subtitle: 'Translate between different sign languages and spoken languages',
-      content:
-        'Our app supports multiple sign languages and spoken languages, so you can communicate with people from different countries and cultures.',
-    },
+export class AboutBenefitsComponent extends BaseComponent implements AfterViewInit, OnInit {
+  @ViewChild('swiper', {static: false}) swiper: ElementRef<{swiper: Swiper}>;
+  activeSlide = 0;
+
+  slides = [
+    {id: 'real-time', icon: 'swap-horizontal-outline'},
+    {id: 'multilingual', icon: 'language-outline'},
+    {id: 'appearance', icon: 'options-outline'},
+    {id: 'open-source', icon: 'book-outline'},
+    {id: 'offline', icon: 'cloud-offline-outline'},
   ];
+
+  iOSScreenshot: SafeUrl;
+
+  constructor(private transloco: TranslocoService, private domSanitizer: DomSanitizer) {
+    super();
+  }
+
+  ngOnInit() {
+    this.transloco.langChanges$
+      .pipe(
+        tap(lang => {
+          this.iOSScreenshot = this.domSanitizer.bypassSecurityTrustResourceUrl(
+            `assets/promotional/about/iphone/${lang}_framed.webp`
+          );
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+  }
+
+  // Function to navigate to the specific slide
+  slideTo(slideIndex: number) {
+    this.swiper.nativeElement.swiper.slideTo(slideIndex);
+  }
+
+  ngAfterViewInit() {
+    this.swiper.nativeElement.swiper.on('activeIndexChange', () => {
+      this.activeSlide = this.swiper.nativeElement.swiper.activeIndex;
+    });
+  }
 }

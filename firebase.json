@@ -120,10 +120,6 @@
         "destination": "about/contribute/index.html"
       },
       {
-        "source": "about/languages",
-        "destination": "about/languages/index.html"
-      },
-      {
         "source": "/.well-known/security.txt",
         "destination": ".well-known/security.txt"
       },

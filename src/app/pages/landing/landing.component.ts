@@ -7,7 +7,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent {
-  pages: string[] = ['about', 'languages', 'contribute'];
+  pages: string[] = ['about', 'contribute'];
   isMobile!: MediaQueryList;
 
   constructor(private mediaMatcher: MediaMatcher) {

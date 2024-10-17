@@ -1,17 +1,47 @@
 <div class="container">
-  <h2>Why sign?</h2>
+  <h2>Why use sign.mt?</h2>
+  <p class="subtitle">
+    Overcome language barriers and engage with people from diverse linguistic and cultural backgrounds, wherever and
+    whenever you need.
+  </p>
 
-  <div class="cards-container">
-    @for (benefit of benefits; track benefit) {
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>{{ benefit.title }}</ion-card-title>
-        <ion-card-subtitle>{{ benefit.subtitle }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ benefit.content }}</p>
-      </ion-card-content>
-    </ion-card>
-    }
+  <div class="slides">
+    <swiper-container #swiper>
+      @for (slide of slides; track slide.id; let idx = $index) {
+      <swiper-slide *ngFor="let slide of slides">
+        <ion-card *transloco="let t; read: 'landing.about.benefits'">
+          <ion-card-content>
+            <div class="info">
+              <ion-card-title>
+                <ion-icon [name]="slide.icon" color="primary"></ion-icon>
+                {{ t(slide.id + '.title') }}
+              </ion-card-title>
+              <p>{{ t(slide.id + '.subtitle') }}</p>
+              <p>{{ t(slide.id + '.description') }}</p>
+            </div>
+            <div class="graphic">
+              @switch (slide.id) { @case ('real-time') {
+              <img [src]="iOSScreenshot" aria-labelledby="translate-signed-spoken" class="screenshot" />
+              } @case ('multilingual') {
+              <app-lazy-map></app-lazy-map>
+              } @case ('appearance') { } @case ('open-source') { } @case ('offline') { } }
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </swiper-slide>
+      }
+    </swiper-container>
+
+    <!-- Navigation Buttons -->
+    <div class="horizontal-scroll">
+      <div class="navigation-buttons" *transloco="let t; read: 'landing.about.benefits'">
+        @for (slide of slides; track slide.id; let idx = $index) {
+        <button (click)="slideTo(idx)" [class.selected]="idx === activeSlide">
+          <ion-icon [name]="slide.icon" [color]="idx === activeSlide ? 'primary' : ''"></ion-icon>
+          <span>{{ t(slide.id + '.title') }}</span>
+        </button>
+        }
+      </div>
+    </div>
   </div>
 </div>

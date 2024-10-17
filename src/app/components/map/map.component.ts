@@ -18,16 +18,14 @@ export class MapComponent extends BaseComponent implements OnInit {
   static mapGeoJson = null;
 
   options = {
-    layers: [
-      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '',
-      }),
-    ],
-    zoom: 2,
+    layers: [],
+    zoom: 1.3,
     center: latLng(40.5285, 8.2318),
 
     scrollWheelZoom: false,
     zoomControl: false,
+    zoomDelta: 0.1,
+    zoomSnap: 0.1,
   };
 
   constructor(private http: HttpClient) {
@@ -68,13 +66,23 @@ export class MapComponent extends BaseComponent implements OnInit {
       const countryCode = feature.properties.iso_a2.toLowerCase();
       const opacity = countryCode in statistics ? logMax(Object.values(statistics[countryCode])) / maxOpacity : 0;
 
-      return modifyStyle(feature, {
-        fillColor: '#E31A1C',
-        weight: 1,
-        opacity: 1,
-        color: 'white',
-        fillOpacity: opacity,
-      });
+      if (opacity === 0) {
+        return modifyStyle(feature, {
+          fillColor: '#f3f3f3',
+          weight: 1,
+          opacity: 1,
+          color: '#d1d1db',
+          fillOpacity: 1,
+        });
+      } else {
+        return modifyStyle(feature, {
+          fillColor: '#E31A1C',
+          weight: 1,
+          opacity: 1,
+          color: '#d1d1db',
+          fillOpacity: opacity,
+        });
+      }
     };
 
     if (!MapComponent.mapGeoJson) {

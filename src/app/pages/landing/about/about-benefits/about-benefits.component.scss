@@ -1,0 +1,126 @@
+@import '../../../../../theme/variables';
+
+h2 {
+  text-align: center;
+}
+
+p.subtitle {
+  max-width: 510px;
+  margin: auto;
+  text-align: center;
+}
+
+.slides {
+  background-color: var(--ion-color-light);
+  border-radius: 16px;
+  margin-top: 32px;
+  overflow: hidden;
+}
+
+ion-card {
+  @media #{$breakpoint-gt-sm} {
+    display: flex;
+  }
+  align-items: center;
+  height: 550px;
+  border-radius: 14px;
+  margin: 8px;
+}
+
+.horizontal-scroll {
+  overflow-x: scroll;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  padding-top: 0;
+  min-width: 600px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 14px;
+    font-size: 16px;
+    width: 100%;
+    height: 120px;
+
+    > * {
+      max-width: 120px;
+    }
+
+    background-color: var(--ion-color-light);
+    color: var(--ion-color-light-contrast);
+
+    &.selected {
+      background-color: white;
+      color: black;
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--ion-color-dark);
+        color: var(--ion-color-dark-contrast);
+      }
+    }
+  }
+}
+
+ion-card-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  padding: 0;
+
+  @media #{$breakpoint-lt-md} {
+    flex-direction: column;
+  }
+
+  .info {
+    padding: 64px;
+    @media #{$breakpoint-lt-md} {
+      padding: 32px;
+    }
+  }
+
+  .graphic {
+    height: 100%;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    @media #{$breakpoint-lt-md} {
+      height: auto;
+      width: 100%;
+    }
+
+    .screenshot {
+      max-width: 300px;
+      @media #{$breakpoint-gt-sm} {
+        margin: 64px 32px 0;
+      }
+    }
+  }
+
+  ion-card-title {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    max-width: 600px;
+  }
+
+  app-lazy-map {
+    height: 100%;
+    display: block;
+    @media #{$breakpoint-gt-sm} {
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

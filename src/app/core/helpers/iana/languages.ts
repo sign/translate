@@ -10,7 +10,7 @@ export const IANASignedLanguages = [
   {signed: 'aen', spoken: 'hy', country: 'am', abbreviation: ''}, // Armenian Sign Language
   {signed: 'asf', spoken: 'en', country: 'au', abbreviation: 'Auslan'}, // Australian Sign Language
   {signed: 'asw', spoken: 'en', country: 'au', abbreviation: ''}, // Australian Aborigines Sign Language
-  {signed: 'asq', spoken: 'de', country: 'at', abbreviation: ''}, // Austrian Sign Language
+  {signed: 'asq', spoken: 'de', country: 'at', abbreviation: 'ÖGS'}, // Austrian Sign Language
   {signed: 'bog', spoken: 'fr', country: 'ml', abbreviation: ''}, // Bamako Sign Language
   {signed: 'bfk', spoken: 'th', country: 'th', abbreviation: ''}, // Ban Khor Sign Language
   {signed: 'bqy', spoken: 'id', country: 'id', abbreviation: ''}, // Bengkala Sign Language
@@ -29,7 +29,7 @@ export const IANASignedLanguages = [
   {signed: 'csr', spoken: 'es', country: 'cr', abbreviation: ''}, // Costa Rican Sign Language
   {signed: 'csq', spoken: 'hr', country: 'hr', abbreviation: ''}, // Croatia Sign Language
   {signed: 'csf', spoken: 'es', country: 'cu', abbreviation: ''}, // Cuba Sign Language
-  {signed: 'cse', spoken: 'cs', country: 'cz', abbreviation: ''}, // Czech Sign Language
+  {signed: 'cse', spoken: 'cs', country: 'cz', abbreviation: 'CZJ'}, // Czech Sign Language
   {signed: 'dsl', spoken: 'da', country: 'dk', abbreviation: ''}, // Danish Sign Language
   {signed: 'doq', spoken: 'es', country: 'do', abbreviation: ''}, // Dominican Sign Language
   {signed: 'dse', spoken: 'nl', country: 'nl', abbreviation: 'NGT'}, // Dutch Sign Language
@@ -121,7 +121,7 @@ export const IANASignedLanguages = [
   {signed: 'kgi', spoken: 'ms', country: 'my', abbreviation: ''}, // Selangor Sign Language
   {signed: 'sgx', spoken: 'en', country: 'sl', abbreviation: ''}, // Sierra Leone Sign Language
   {signed: 'lsv', spoken: 'en', country: 'us', abbreviation: ''}, // Sivia Sign Language
-  {signed: 'svk', spoken: 'sk', country: 'sk', abbreviation: ''}, // Slovakian Sign Language
+  {signed: 'svk', spoken: 'sk', country: 'sk', abbreviation: 'SPJ'}, // Slovakian Sign Language
   {signed: 'sls', spoken: 'en', country: 'sg', abbreviation: ''}, // Singapore Sign Language
   {signed: 'szs', spoken: 'en', country: 'sb', abbreviation: ''}, // Solomon Islands Sign Language
   {signed: 'sfb', spoken: 'fr', country: 'be', abbreviation: ''}, // French Belgian Sign Language
@@ -129,9 +129,9 @@ export const IANASignedLanguages = [
   {signed: 'ssp', spoken: 'es', country: 'es', abbreviation: ''}, // Spanish Sign Language
   {signed: 'sqs', spoken: 'si', country: 'lk', abbreviation: ''}, // Sri Lankan Sign Language
   {signed: 'swl', spoken: 'sv', country: 'se', abbreviation: 'STS'}, // Swedish Sign Language
-  {signed: 'ssr', spoken: 'fr', country: 'ch', abbreviation: ''}, // Swiss-French Sign Language
+  {signed: 'ssr', spoken: 'fr', country: 'ch', abbreviation: 'LSF-CH'}, // Swiss-French Sign Language
   {signed: 'sgg', spoken: 'de', country: 'ch', abbreviation: 'DSGS'}, // Swiss-German Sign Language
-  {signed: 'slf', spoken: 'it', country: 'ch', abbreviation: ''}, // Swiss-Italian Sign Language
+  {signed: 'slf', spoken: 'it', country: 'ch', abbreviation: 'LIS-CH'}, // Swiss-Italian Sign Language
   {signed: 'tss', spoken: 'zh', country: 'tw', abbreviation: ''}, // Taiwan Sign Language
   {signed: 'tza', spoken: 'sw', country: 'tz', abbreviation: ''}, // Tanzanian Sign Language
   {signed: 'tsy', spoken: 'en', country: 'ng', abbreviation: ''}, // Tebul Sign Language
@@ -156,7 +156,7 @@ export const IANASignedLanguages = [
   {signed: 'ysl', spoken: 'sr', country: 'rs', abbreviation: ''}, // Yugoslavian Sign Language
   {signed: 'zsl', spoken: 'en', country: 'zm', abbreviation: ''}, // Zambian Sign Language
   {signed: 'zib', spoken: 'en', country: 'zw', abbreviation: ''}, // Zimbabwe Sign Language
-  {signed: 'ils', spoken: '', country: '', abbreviation: ''}, // International Sign
+  {signed: 'ils', spoken: '', country: '', abbreviation: 'IS'}, // International Sign
 
   {signed: 'rsl-by', spoken: 'be', country: 'by', abbreviation: ''}, // Russian Sign Language (in Belarus, instead of Belarusian Sign Language)
   {signed: 'gss-cy', spoken: 'el', country: 'cy', abbreviation: ''}, // Greek Sign Language (in Cyprus, instead of Cypriot Sign Language)

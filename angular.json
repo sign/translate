@@ -274,15 +274,7 @@
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "discoverRoutes": true,
-            "routes": [
-              "/",
-              "/about",
-              "/about/languages",
-              "/about/contribute",
-              "/legal/terms",
-              "/legal/privacy",
-              "/legal/licenses"
-            ]
+            "routes": ["/", "/about", "/about/contribute", "/legal/terms", "/legal/privacy", "/legal/licenses"]
           },
           "configurations": {
             "production": {

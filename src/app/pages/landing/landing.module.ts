@@ -2,7 +2,6 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {LandingComponent} from './landing.component';
 import {AboutComponent} from './about/about.component';
-import {LanguagesComponent} from './languages/languages.component';
 import {ContributeComponent} from './contribute/contribute.component';
 import {AppTranslocoModule} from '../../core/modules/transloco/transloco.module';
 import {LandingRoutingModule} from './landing-routing.module';
@@ -10,7 +9,7 @@ import {StoresComponent} from '../../components/stores/stores.component';
 import {AboutHeroComponent} from './about/about-hero/about-hero.component';
 import {AboutDirectionComponent} from './about/about-direction/about-direction.component';
 import {AboutAppearanceComponent} from './about/about-appearance/about-appearance.component';
-import {LazyMapComponent} from './languages/lazy-map/lazy-map.component';
+import {LazyMapComponent} from './about/lazy-map/lazy-map.component';
 import {LicensesComponent} from './licenses/licenses.component';
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
@@ -39,7 +38,6 @@ register();
   declarations: [
     LandingComponent,
     AboutComponent,
-    LanguagesComponent,
     ContributeComponent,
     I18NLanguageSelectorComponent,
     StoresComponent,

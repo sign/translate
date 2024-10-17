@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AboutComponent} from './about/about.component';
-import {LanguagesComponent} from './languages/languages.component';
 import {ContributeComponent} from './contribute/contribute.component';
 import {LandingComponent} from './landing.component';
 import {LicensesComponent} from './licenses/licenses.component';
@@ -15,7 +14,6 @@ const routes: Routes = [
     children: [
       {path: '', component: AboutComponent},
       {path: 'about', redirectTo: ''},
-      {path: 'languages', component: LanguagesComponent},
       {path: 'contribute', component: ContributeComponent},
       {path: 'terms', component: TermsComponent},
       {path: 'privacy', component: PrivacyComponent},
