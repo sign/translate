@@ -21,6 +21,7 @@ import {AboutTeamComponent} from './about-team/about-team.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {AboutPricingComponent} from './about-pricing/about-pricing.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {LazyMapComponent} from './lazy-map/lazy-map.component';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -41,6 +42,7 @@ describe('AboutComponent', () => {
         AboutPricingComponent,
         AboutApiComponent,
         StoresComponent,
+        LazyMapComponent,
       ],
       imports: [
         AppTranslocoTestingModule,
