@@ -3,6 +3,7 @@ import * as httpErrors from 'http-errors';
 import * as requestIp from 'request-ip';
 import {NextFunction, Request, Response} from 'express';
 import {defineString} from 'firebase-functions/params';
+import {createHash} from 'crypto';
 
 export function rateLimitHeaders(res: Response, ratelimitResponse: RatelimitResponse, duration?: Duration) {
   res.setHeader('X-RateLimit-Limit', ratelimitResponse.limit.toString());
@@ -14,13 +15,15 @@ export function rateLimitHeaders(res: Response, ratelimitResponse: RatelimitResp
 }
 
 export function unkeyRatelimit(namespace: string, limit: number, duration: Duration) {
-  const unkeyRootKey = defineString('UNKEY_ROOT_KEY');
+  const unkeyRootKey = defineString('UNKEY_ROOT_KEY').value();
 
   return async function (req: Request, res: Response, next: NextFunction) {
-    const identifier = requestIp.getClientIp(req) ?? 'unknown';
+    const rawIdentifier = requestIp.getClientIp(req) ?? 'unknown';
+    const saltedIdentifier = rawIdentifier + unkeyRootKey;
+    const identifier = createHash('sha256').update(saltedIdentifier).digest('hex');
 
     const rateLimit = new Ratelimit({
-      rootKey: unkeyRootKey.value(),
+      rootKey: unkeyRootKey,
       namespace,
       limit,
       duration,
