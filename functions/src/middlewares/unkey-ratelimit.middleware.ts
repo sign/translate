@@ -15,15 +15,15 @@ export function rateLimitHeaders(res: Response, ratelimitResponse: RatelimitResp
 }
 
 export function unkeyRatelimit(namespace: string, limit: number, duration: Duration) {
-  const unkeyRootKey = defineString('UNKEY_ROOT_KEY').value();
+  const unkeyRootKey = defineString('UNKEY_ROOT_KEY');
 
   return async function (req: Request, res: Response, next: NextFunction) {
     const rawIdentifier = requestIp.getClientIp(req) ?? 'unknown';
-    const saltedIdentifier = rawIdentifier + unkeyRootKey;
+    const saltedIdentifier = rawIdentifier + unkeyRootKey.value();
     const identifier = createHash('sha256').update(saltedIdentifier).digest('hex');
 
     const rateLimit = new Ratelimit({
-      rootKey: unkeyRootKey,
+      rootKey: unkeyRootKey.value(),
       namespace,
       limit,
       duration,
