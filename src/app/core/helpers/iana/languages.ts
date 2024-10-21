@@ -82,7 +82,7 @@ export const IANASignedLanguages = [
   {signed: 'mdl', spoken: 'mt', country: 'mt', abbreviation: ''}, // Maltese Sign Language
   {signed: 'nsr', spoken: 'en', country: 'ca', abbreviation: ''}, // Maritime Sign Language
   {signed: 'lsy', spoken: 'en', country: 'mu', abbreviation: ''}, // Mauritian Sign Language
-  {signed: 'mre', spoken: 'en', country: 'us', abbreviation: ''}, // Martha's Vineyard Sign Language
+  {signed: 'mre', spoken: 'en', country: 'us', abbreviation: 'MVSL'}, // Martha's Vineyard Sign Language
   {signed: 'mfs', spoken: 'es', country: 'mx', abbreviation: ''}, // Mexican Sign Language
   {signed: 'rsm', spoken: 'en', country: 'au', abbreviation: ''}, // Miriwoong Sign Language
   {signed: 'ehs', spoken: 'ja', country: 'jp', abbreviation: ''}, // Miyakubo Sign Language
@@ -94,7 +94,7 @@ export const IANASignedLanguages = [
   {signed: 'ysm', spoken: 'my', country: 'mm', abbreviation: ''}, // Myanmar Sign Language
   {signed: 'nbs', spoken: 'en', country: 'na', abbreviation: ''}, // Namibian Sign Language
   {signed: 'nsp', spoken: 'ne', country: 'np', abbreviation: ''}, // Nepalese Sign Language
-  {signed: 'nzs', spoken: 'en', country: 'nz', abbreviation: ''}, // New Zealand Sign Language
+  {signed: 'nzs', spoken: 'en', country: 'nz', abbreviation: 'NZSL'}, // New Zealand Sign Language
   {signed: 'ncs', spoken: 'es', country: 'ni', abbreviation: ''}, // Nicaraguan Sign Language
   {signed: 'nsi', spoken: 'en', country: 'ng', abbreviation: ''}, // Nigerian Sign Language
   {signed: 'nsl', spoken: 'no', country: 'no', abbreviation: ''}, // Norwegian Sign Language
@@ -108,11 +108,11 @@ export const IANASignedLanguages = [
   {signed: 'prl', spoken: 'es', country: 'pe', abbreviation: ''}, // Peruvian Sign Language
   {signed: 'psp', spoken: 'en', country: 'ph', abbreviation: ''}, // Philippine Sign Language
   {signed: 'psd', spoken: 'en', country: 'us', abbreviation: ''}, // Plains Indian Sign Language
-  {signed: 'pso', spoken: 'pl', country: 'pl', abbreviation: ''}, // Polish Sign Language (PJM)
+  {signed: 'pso', spoken: 'pl', country: 'pl', abbreviation: 'PJM'}, // Polish Sign Language
   {signed: 'psr', spoken: 'pt', country: 'pt', abbreviation: ''}, // Portuguese Sign Language
   {signed: 'prz', spoken: 'es', country: 'co', abbreviation: ''}, // Providencia Sign Language
-  {signed: 'psl', spoken: 'es', country: 'pr', abbreviation: ''}, // Puerto Rican Sign Language
-  {signed: 'fcs', spoken: 'fr', country: 'ca', abbreviation: ''}, // Quebec Sign Language
+  {signed: 'psl', spoken: 'es', country: 'pr', abbreviation: 'PRSL'}, // Puerto Rican Sign Language
+  {signed: 'fcs', spoken: 'fr', country: 'ca', abbreviation: 'LSQ'}, // Quebec Sign Language
   {signed: 'rsi', spoken: 'en', country: 'sb', abbreviation: ''}, // Rennellese Sign Language
   {signed: 'rms', spoken: 'ro', country: 'ro', abbreviation: ''}, // Romanian Sign Language
   {signed: 'rsl', spoken: 'ru', country: 'ru', abbreviation: ''}, // Russian Sign Language

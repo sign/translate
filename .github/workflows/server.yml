@@ -46,7 +46,9 @@ jobs:
       #        run: npm run test:ci
 
       - name: Create .env file
-        run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
+        run: |
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
+          echo "UNKEY_ROOT_KEY=${{ secrets.UNKEY_ROOT_KEY }}" >> .env
 
       - name: Deploy Cloud Functions
         run: bun x firebase deploy --only functions:translate --token "${{ secrets.FIREBASE_TOKEN }}"
