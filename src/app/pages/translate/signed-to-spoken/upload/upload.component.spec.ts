@@ -75,7 +75,7 @@ describe('UploadComponent', () => {
     component.onFileUpload();
 
     expect(spy).toHaveBeenCalled();
-    const arg = spy.calls.first().args[0];
+    const arg = spy.calls.first().args[0] as any;
     expect(arg instanceof SetVideo).toBeTrue();
     expect(arg.src).toContain('blob:http');
   });
