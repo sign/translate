@@ -21,10 +21,12 @@
             </div>
             <div class="graphic">
               @switch (slide.id) { @case ('real-time') {
-              <img [src]="iOSScreenshot" aria-labelledby="translate-signed-spoken" class="screenshot" />
+              <img [src]="iOSScreenshot" alt="iOS Application Screenshot" class="phone-screenshot" />
               } @case ('multilingual') {
               <app-lazy-map></app-lazy-map>
-              } @case ('appearance') { } @case ('open-source') { } @case ('offline') { } }
+              } @case ('appearance') { } @case ('open-source') {
+              <img src="assets/promotional/about/github-hero.webp" alt="GitHub Screenshot" class="github-screenshot" />
+              } @case ('offline') { } }
             </div>
           </ion-card-content>
         </ion-card>

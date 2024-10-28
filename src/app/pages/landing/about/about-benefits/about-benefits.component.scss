@@ -87,6 +87,7 @@ ion-card-content {
 
   .graphic {
     height: 100%;
+    display: flex;
     text-align: center;
     flex-shrink: 0;
     flex-grow: 1;
@@ -96,10 +97,21 @@ ion-card-content {
       width: 100%;
     }
 
-    .screenshot {
-      max-width: 300px;
+    .phone-screenshot {
+      max-width: calc(100% - 64px);
+      margin: auto;
       @media #{$breakpoint-gt-sm} {
-        margin: 64px 32px 0;
+        max-width: 350px;
+        margin-top: 64px;
+        margin-inline-end: 32px;
+      }
+    }
+
+    .github-screenshot {
+      margin: 32px;
+      max-width: calc(100% - 64px);
+      @media #{$breakpoint-gt-sm} {
+        margin: 64px;
       }
     }
   }
