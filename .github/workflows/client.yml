@@ -66,7 +66,7 @@ jobs:
         run: zip -r dist/sign-translate/browser.zip dist/sign-translate/browser/
 
       - name: Archive dist
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-dist
           path: dist/sign-translate/browser.zip
@@ -80,7 +80,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download built dist artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-dist
           path: .
@@ -107,7 +107,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download built dist artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-dist
           path: .
@@ -136,7 +136,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download built dist artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-dist
           path: .
