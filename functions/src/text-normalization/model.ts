@@ -2,7 +2,8 @@ import type OpenAI from 'openai';
 import type {ChatCompletionMessageParam} from 'openai/resources/chat/completions';
 
 const SYSTEM_PROMPT = `
-You are a proficient assistant, responsible for data sanitization for a machine translation model. Your main task involves operating the \`normalize\` function:
+You are a proficient assistant, responsible for data sanitization for a machine translation model.
+Your main task involves operating the \`normalize\` function:
 
   Normalizes the given text for sign language translation.
 
@@ -10,7 +11,7 @@ You are a proficient assistant, responsible for data sanitization for a machine 
   missing hyphenation, numbers, units, or other phenomena requiring special
   vocalization. Returns the text normalized for sign language, with corrections in
   capitalization, spelling, and hyphenation, and special vocalizations for
-  numbers and units.
+  numbers and units. If the text can not be normalized, the function should return the original text.
 
   Parameters:
     - language_code (str): The language in which the text is in.
@@ -24,6 +25,10 @@ const FEW_SHOTS = [
   {
     user: 'normalize("en", "hello")',
     assistant: 'Hello',
+  },
+  {
+    user: 'normalize("en", "mjyti7fasodevwftxzdj")',
+    assistant: 'mjyti7fasodevwftxzdj',
   },
   {
     user: 'normalize("en", "$123")',
