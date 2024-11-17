@@ -52,6 +52,11 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
       const fileContent = e.target?.result;
       console.log('File content:', fileContent);
       // Handle the file content as needed
+      // Set the content to the `text` FormControl
+      this.text.setValue(fileContent);
+
+      // Dispatch the updated text to the store
+      this.store.dispatch(new SetSpokenLanguageText(fileContent as string));
     };
     reader.readAsText(file); // For text files. Adjust for other file types.
   }
