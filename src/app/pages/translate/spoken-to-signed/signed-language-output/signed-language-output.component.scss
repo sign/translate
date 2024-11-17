@@ -4,7 +4,8 @@
   background-color: white;
 
   position: relative;
-  aspect-ratio: 1;
+  // aspect-ratio: 1;
+  height: 400px;
 
   @media #{$breakpoint-gt-xs} {
     background-color: #f5f5f5;

@@ -1,15 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
+import {Store} from '@ngxs/store';
 import {interval, Observable} from 'rxjs';
+import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
+import {BaseComponent} from '../../../../components/base/base.component';
 import {
   SetSpokenLanguage,
   SetSpokenLanguageText,
   SuggestAlternativeText,
 } from '../../../../modules/translate/translate.actions';
-import {Store} from '@ngxs/store';
 import {TranslateStateModel} from '../../../../modules/translate/translate.state';
-import {BaseComponent} from '../../../../components/base/base.component';
 
 @Component({
   selector: 'app-spoken-language-input',
@@ -52,7 +52,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
         debounce(() => interval(300)),
         skipWhile(text => !text), // Don't run on empty text, on app launch
         distinctUntilChanged((a, b) => a.trim() === b.trim()),
-        tap(text => this.store.dispatch(new SetSpokenLanguageText(text))),
+        tap(text => this.store.dispatch(new SetSpokenLanguageText(text))), // TODO: Find the store
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
