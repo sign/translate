@@ -28,6 +28,34 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
 
   @Input() isMobile = false;
 
+  selectedFile: File | null = null;
+
+  uploadFile(): void {
+    const fileInput = document.getElementById('fileUpload') as HTMLInputElement;
+    fileInput?.click();
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
+      console.log(`Selected file: ${this.selectedFile.name}`);
+
+      // Handle the uploaded file here
+      this.processUploadedFile(this.selectedFile);
+    }
+  }
+
+  processUploadedFile(file: File): void {
+    const reader = new FileReader();
+    reader.onload = e => {
+      const fileContent = e.target?.result;
+      console.log('File content:', fileContent);
+      // Handle the file content as needed
+    };
+    reader.readAsText(file); // For text files. Adjust for other file types.
+  }
+
   constructor(private store: Store) {
     super();
     this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
