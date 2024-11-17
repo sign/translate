@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Store} from '@ngxs/store';
-import {interval, Observable} from 'rxjs';
-import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
+import {from, interval, Observable} from 'rxjs';
+import {concatMap, debounce, distinctUntilChanged, first, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {
   SetSpokenLanguage,
@@ -50,14 +50,41 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
     const reader = new FileReader();
     reader.onload = e => {
       const fileContent = e.target?.result;
-      console.log('File content:', fileContent);
-      // Handle the file content as needed
-      // Set the content to the `text` FormControl
-      this.text.setValue(fileContent);
+      if (fileContent) {
+        console.log('File content:', fileContent);
 
-      // Dispatch the updated text to the store
-      this.store.dispatch(new SetSpokenLanguageText(fileContent as string));
+        // Split the file content into sentences using regex
+        const sentences = (fileContent as string).match(/[^.!?]*[.!?]/g) || [];
+
+        console.log('------', sentences);
+
+        // Create an observable to emit each sentence sequentially
+        from(sentences)
+          .pipe(
+            concatMap(sentence => {
+              // Dispatch the sentence first
+              const trimmedSentence = sentence.trim();
+              this.text.setValue(trimmedSentence);
+              this.store.dispatch(new SetSpokenLanguageText(trimmedSentence));
+
+              // Then wait for the store to update
+              return this.store
+                .select(state => state.translate.signedLanguageVideo)
+                .pipe(
+                  first(videoURL => !!videoURL), // Wait for a valid videoURL to indicate processing is complete
+                  tap(() => {
+                    console.log('Store updated for sentence:', trimmedSentence);
+                  })
+                );
+            })
+          )
+          .subscribe({
+            error: err => console.error('Error processing sentences:', err),
+            complete: () => console.log('All sentences processed'),
+          });
+      }
     };
+
     reader.readAsText(file); // For text files. Adjust for other file types.
   }
 
