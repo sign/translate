@@ -12,12 +12,20 @@ import {PoseService} from '../../modules/pose/pose.service';
 import {SignWritingStateModel} from '../../modules/sign-writing/sign-writing.state';
 import {SettingsStateModel} from '../../modules/settings/settings.state';
 import {SignWritingService} from '../../modules/sign-writing/sign-writing.service';
+import {IonIcon} from '@ionic/angular/standalone';
+import {VideoControlsComponent} from './video-controls/video-controls.component';
+import {AnimationComponent} from '../animation/animation.component';
+import {addIcons} from 'ionicons';
+import {playCircleOutline} from 'ionicons/icons';
+import {AsyncPipe} from '@angular/common';
+import {TranslocoPipe} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [AnimationComponent, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   settingsState$!: Observable<SettingsStateModel>;
@@ -59,6 +67,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.poseState$ = this.store.select<PoseStateModel>(state => state.pose);
     this.signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
     this.signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
+
+    addIcons({playCircleOutline});
   }
 
   ngAfterViewInit(): void {

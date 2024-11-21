@@ -8,6 +8,16 @@ import {
   SetSpokenLanguageText,
 } from '../../../modules/translate/translate.actions';
 import {Observable} from 'rxjs';
+import {MatTooltip} from '@angular/material/tooltip';
+import {SignWritingComponent} from '../signwriting/sign-writing.component';
+import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
+import {VideoComponent} from '../../../components/video/video.component';
+import {UploadComponent} from './upload/upload.component';
+import {addIcons} from 'ionicons';
+import {copyOutline} from 'ionicons/icons';
+import {TranslocoPipe} from '@ngneat/transloco';
+import {AsyncPipe} from '@angular/common';
 
 const FAKE_WORDS = [
   {
@@ -79,7 +89,18 @@ const FAKE_WORDS = [
   selector: 'app-signed-to-spoken',
   templateUrl: './signed-to-spoken.component.html',
   styleUrls: ['./signed-to-spoken.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [
+    MatTooltip,
+    SignWritingComponent,
+    IonButton,
+    TextToSpeechComponent,
+    VideoComponent,
+    UploadComponent,
+    IonIcon,
+    TranslocoPipe,
+    AsyncPipe,
+  ],
 })
 export class SignedToSpokenComponent implements OnInit {
   videoState$!: Observable<VideoStateModel>;
@@ -94,6 +115,8 @@ export class SignedToSpokenComponent implements OnInit {
     this.spokenLanguageText$ = this.store.select<string>(state => state.translate.spokenLanguageText);
 
     this.store.dispatch(new SetSpokenLanguageText(''));
+
+    addIcons({copyOutline});
   }
 
   ngOnInit(): void {

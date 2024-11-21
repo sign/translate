@@ -5,6 +5,13 @@ import {TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
+import {MatTab, MatTabGroup} from '@angular/material/tabs';
+import {IonicModule} from '@ionic/angular';
+import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {MatMenu, MatMenuTrigger} from '@angular/material/menu';
+import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
+import {addIcons} from 'ionicons';
+import {chevronDown} from 'ionicons/icons';
 
 const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'language', countries: 'region'};
 
@@ -12,7 +19,8 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [MatTab, MatTabGroup, IonButton, IonIcon, MatMenuTrigger, FlagIconComponent, MatMenu],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
   detectedLanguage: string;
@@ -35,6 +43,8 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit, 
 
   constructor(private store: Store, private transloco: TranslocoService) {
     super();
+
+    addIcons({chevronDown});
   }
 
   ngOnInit(): void {

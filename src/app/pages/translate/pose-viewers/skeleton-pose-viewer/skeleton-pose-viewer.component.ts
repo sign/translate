@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, Input} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
@@ -10,7 +10,8 @@ import {PlayableVideoEncoder} from '../playable-video-encoder';
   selector: 'app-skeleton-pose-viewer',
   templateUrl: './skeleton-pose-viewer.component.html',
   styleUrls: ['./skeleton-pose-viewer.component.scss'],
-  standalone: false,
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;

@@ -1,14 +1,17 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, Input} from '@angular/core';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
+import {AnimationComponent} from '../../../../components/animation/animation.component';
 
 @Component({
   selector: 'app-avatar-pose-viewer',
   templateUrl: './avatar-pose-viewer.component.html',
   styleUrls: ['./avatar-pose-viewer.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [AnimationComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AvatarPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;

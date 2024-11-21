@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
 import {
@@ -10,12 +10,34 @@ import {
 import {Store} from '@ngxs/store';
 import {TranslateStateModel} from '../../../../modules/translate/translate.state';
 import {BaseComponent} from '../../../../components/base/base.component';
+import {IonButton, IonButtons, IonIcon, IonTextarea, IonToolbar} from '@ionic/angular/standalone';
+import {SpeechToTextComponent} from '../../../../components/speech-to-text/speech-to-text.component';
+import {TranslocoPipe} from '@ngneat/transloco';
+import {addIcons} from 'ionicons';
+import {addOutline, sparkles} from 'ionicons/icons';
+import {AsyncPipe, DecimalPipe} from '@angular/common';
+import {TextToSpeechComponent} from '../../../../components/text-to-speech/text-to-speech.component';
+import {DesktopTextareaComponent} from './desktop-textarea/desktop-textarea.component';
 
 @Component({
   selector: 'app-spoken-language-input',
   templateUrl: './spoken-language-input.component.html',
   styleUrls: ['./spoken-language-input.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [
+    IonToolbar,
+    IonButtons,
+    IonButton,
+    IonIcon,
+    IonTextarea,
+    DesktopTextareaComponent,
+    SpeechToTextComponent,
+    ReactiveFormsModule,
+    TranslocoPipe,
+    DecimalPipe,
+    TextToSpeechComponent,
+    AsyncPipe,
+  ],
 })
 export class SpokenLanguageInputComponent extends BaseComponent implements OnInit {
   translate$!: Observable<TranslateStateModel>;
@@ -34,6 +56,8 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
     this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
     this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
     this.normalizedText$ = this.store.select<string>(state => state.translate.normalizedSpokenLanguageText);
+
+    addIcons({sparkles, addOutline});
   }
 
   ngOnInit() {

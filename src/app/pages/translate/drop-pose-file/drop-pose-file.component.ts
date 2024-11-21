@@ -1,12 +1,14 @@
 import {Component, HostBinding} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {UploadPoseFile} from '../../../modules/translate/translate.actions';
+import {DropzoneDirective} from '../../../directives/dropzone.directive';
 
 @Component({
   selector: 'app-drop-pose-file',
   templateUrl: './drop-pose-file.component.html',
   styleUrls: ['./drop-pose-file.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [DropzoneDirective],
 })
 export class DropPoseFileComponent {
   @HostBinding('class.hovering')

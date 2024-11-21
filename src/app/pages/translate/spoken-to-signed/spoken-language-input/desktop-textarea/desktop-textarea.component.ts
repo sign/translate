@@ -1,13 +1,15 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {Store} from '@ngxs/store';
+import {AsyncPipe} from '@angular/common';
 
 @Component({
   selector: 'app-desktop-textarea',
   templateUrl: './desktop-textarea.component.html',
   styleUrl: './desktop-textarea.component.scss',
-  standalone: false,
+  standalone: true,
+  imports: [ReactiveFormsModule, AsyncPipe],
 })
 export class DesktopTextareaComponent {
   @Input() maxLength: number;

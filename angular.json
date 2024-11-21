@@ -65,11 +65,6 @@
                 "glob": "worker.js",
                 "input": "node_modules/@sign-mt/browsermt/build/bundled/",
                 "output": "./browsermt/"
-              },
-              {
-                "glob": "**/*.svg",
-                "input": "node_modules/ionicons/dist/ionicons/svg",
-                "output": "./svg"
               }
             ],
             "styles": [
@@ -211,11 +206,6 @@
                 "glob": "worker.js",
                 "input": "node_modules/@sign-mt/browsermt/build/bundled/",
                 "output": "./browsermt/"
-              },
-              {
-                "glob": "**/*.svg",
-                "input": "node_modules/ionicons/dist/ionicons/svg",
-                "output": "./svg"
               }
             ],
             "styles": ["src/theme/styles.scss"],

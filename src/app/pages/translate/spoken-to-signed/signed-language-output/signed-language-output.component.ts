@@ -12,12 +12,34 @@ import {
 import {BaseComponent} from '../../../../components/base/base.component';
 import {Capacitor} from '@capacitor/core';
 import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
+import {ViewerSelectorComponent} from '../../pose-viewers/viewer-selector/viewer-selector.component';
+import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
+import {AvatarPoseViewerComponent} from '../../pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
+import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
+import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
+import {TranslocoPipe} from '@ngneat/transloco';
+import {AsyncPipe} from '@angular/common';
+import {MatTooltip} from '@angular/material/tooltip';
+import {addIcons} from 'ionicons';
+import {downloadOutline, shareOutline} from 'ionicons/icons';
 
 @Component({
   selector: 'app-signed-language-output',
   templateUrl: './signed-language-output.component.html',
   styleUrls: ['./signed-language-output.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [
+    IonSpinner,
+    IonButton,
+    ViewerSelectorComponent,
+    AvatarPoseViewerComponent,
+    SkeletonPoseViewerComponent,
+    HumanPoseViewerComponent,
+    TranslocoPipe,
+    AsyncPipe,
+    MatTooltip,
+    IonIcon,
+  ],
 })
 export class SignedLanguageOutputComponent extends BaseComponent implements OnInit {
   poseViewerSetting$!: Observable<PoseViewerSetting>;
@@ -36,6 +58,8 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
 
     this.isSharingSupported = Capacitor.isNativePlatform() || ('navigator' in globalThis && 'share' in navigator);
+
+    addIcons({downloadOutline, shareOutline});
   }
 
   ngOnInit(): void {

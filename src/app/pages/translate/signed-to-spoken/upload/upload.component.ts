@@ -1,12 +1,16 @@
 import {Component, Input} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
+import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {imagesOutline} from 'ionicons/icons';
 
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [IonButton, IonIcon],
 })
 export class UploadComponent {
   @Input() isMobile = false;
@@ -17,6 +21,8 @@ export class UploadComponent {
     this.uploadEl.setAttribute('type', 'file');
     this.uploadEl.setAttribute('accept', 'video/*');
     this.uploadEl.addEventListener('change', this.onFileUpload.bind(this));
+
+    addIcons({imagesOutline});
   }
 
   upload(): void {

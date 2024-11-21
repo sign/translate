@@ -2,7 +2,7 @@ import {Directive, EventEmitter, HostListener, Output} from '@angular/core';
 
 @Directive({
   selector: '[appDropzone]',
-  standalone: false,
+  standalone: true,
 })
 export class DropzoneDirective {
   @Output() dropped = new EventEmitter<FileList>();

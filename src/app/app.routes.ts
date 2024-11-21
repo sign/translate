@@ -1,8 +1,9 @@
 import {Routes} from '@angular/router';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
+import {TranslateComponent} from './pages/translate/translate.component';
 
 export const routes: Routes = [
-  // {path: '', loadChildren: () => import('./pages/translate/translate.module').then(m => m.TranslatePageModule)},
+  {path: '', component: TranslateComponent},
   // {path: '', loadChildren: () => import('./pages/main.module').then(m => m.MainPageModule)},
   // {
   //   path: 'playground',
@@ -14,8 +15,5 @@ export const routes: Routes = [
   // },
   // {path: 'about', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
   // {path: 'legal', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
-  {
-    path: '**',
-    component: NotFoundComponent,
-  },
+  {path: '**', component: NotFoundComponent},
 ];

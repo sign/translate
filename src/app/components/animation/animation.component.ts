@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, ViewChild} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
@@ -12,7 +12,8 @@ import {Observable} from 'rxjs';
   selector: 'app-animation',
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.scss'],
-  standalone: false,
+  standalone: true,
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AnimationComponent extends BaseComponent implements AfterViewInit {
   animationState$: Observable<AnimationStateModel>;

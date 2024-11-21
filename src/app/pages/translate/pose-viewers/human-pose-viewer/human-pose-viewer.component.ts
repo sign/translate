@@ -1,16 +1,21 @@
-import {AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
 import {fromEvent, interval} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
+import {IonProgressBar, IonSpinner} from '@ionic/angular/standalone';
+import {AsyncPipe} from '@angular/common';
+import {MatTooltip} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-human-pose-viewer',
   templateUrl: './human-pose-viewer.component.html',
   styleUrls: ['./human-pose-viewer.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [IonProgressBar, IonSpinner, AsyncPipe, MatTooltip],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {
   appearance$ = this.store.select<string>(state => state.settings.appearance);

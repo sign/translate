@@ -8,12 +8,15 @@ import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
+import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
 
 @Component({
   selector: 'app-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [TranslateMobileComponent, TranslateDesktopComponent],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;
