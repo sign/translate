@@ -4,13 +4,14 @@ import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions'
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {imagesOutline} from 'ionicons/icons';
+import {TranslocoDirective} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.scss'],
   standalone: true,
-  imports: [IonButton, IonIcon],
+  imports: [IonButton, IonIcon, TranslocoDirective],
 })
 export class UploadComponent {
   @Input() isMobile = false;

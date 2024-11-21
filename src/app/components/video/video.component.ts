@@ -18,14 +18,14 @@ import {AnimationComponent} from '../animation/animation.component';
 import {addIcons} from 'ionicons';
 import {playCircleOutline} from 'ionicons/icons';
 import {AsyncPipe} from '@angular/common';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
   standalone: true,
-  imports: [AnimationComponent, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe],
+  imports: [AnimationComponent, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   settingsState$!: Observable<SettingsStateModel>;

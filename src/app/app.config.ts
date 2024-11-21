@@ -52,7 +52,7 @@ export const appConfig: ApplicationConfig = {
 
     // HTTP Requests
     provideHttpClient(withFetch()),
-    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}, // TODO withInterceptors
 
     ...AppTranslocoProviders,
 

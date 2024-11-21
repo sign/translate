@@ -12,7 +12,7 @@ import {TranslateStateModel} from '../../../../modules/translate/translate.state
 import {BaseComponent} from '../../../../components/base/base.component';
 import {IonButton, IonButtons, IonIcon, IonTextarea, IonToolbar} from '@ionic/angular/standalone';
 import {SpeechToTextComponent} from '../../../../components/speech-to-text/speech-to-text.component';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 import {addIcons} from 'ionicons';
 import {addOutline, sparkles} from 'ionicons/icons';
 import {AsyncPipe, DecimalPipe} from '@angular/common';
@@ -37,6 +37,7 @@ import {DesktopTextareaComponent} from './desktop-textarea/desktop-textarea.comp
     DecimalPipe,
     TextToSpeechComponent,
     AsyncPipe,
+    TranslocoDirective,
   ],
 })
 export class SpokenLanguageInputComponent extends BaseComponent implements OnInit {

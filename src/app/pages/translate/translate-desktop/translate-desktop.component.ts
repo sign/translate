@@ -13,6 +13,7 @@ import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 import {SpokenToSignedComponent} from '../spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from '../signed-to-spoken/signed-to-spoken.component';
 import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component';
+import {MatTooltip} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-translate-desktop',
@@ -34,6 +35,7 @@ import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component'
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     DropPoseFileComponent,
+    MatTooltip,
   ],
 })
 export class TranslateDesktopComponent extends BaseComponent implements OnInit {

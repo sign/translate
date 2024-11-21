@@ -1,12 +1,11 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
 import {MatTab, MatTabGroup} from '@angular/material/tabs';
-import {IonicModule} from '@ionic/angular';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {MatMenu, MatMenuTrigger} from '@angular/material/menu';
 import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
@@ -20,7 +19,7 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
   standalone: true,
-  imports: [MatTab, MatTabGroup, IonButton, IonIcon, MatMenuTrigger, FlagIconComponent, MatMenu],
+  imports: [MatTab, MatTabGroup, IonButton, IonIcon, MatMenuTrigger, FlagIconComponent, MatMenu, TranslocoDirective],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
   detectedLanguage: string;

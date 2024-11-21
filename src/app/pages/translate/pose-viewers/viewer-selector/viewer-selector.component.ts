@@ -7,6 +7,7 @@ import {IonFab, IonFabButton, IonFabList, IonIcon} from '@ionic/angular/standalo
 import {accessibility, gitCommit, logoApple} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {MatTooltip} from '@angular/material/tooltip';
+import {TranslocoDirective} from '@ngneat/transloco';
 
 export interface MatFabMenu {
   id: string;
@@ -19,7 +20,7 @@ export interface MatFabMenu {
   templateUrl: './viewer-selector.component.html',
   styleUrls: ['./viewer-selector.component.scss'],
   standalone: true,
-  imports: [IonFab, IonFabList, IonFabButton, IonIcon, MatTooltip],
+  imports: [IonFab, IonFabList, IonFabButton, IonIcon, MatTooltip, TranslocoDirective],
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {
   poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);

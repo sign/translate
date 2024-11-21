@@ -12,7 +12,7 @@ import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
     TranslationService,
     SignWritingTranslationService,
     provideHttpClient(withInterceptorsFromDi()),
-    {provide: LanguageDetectionService, useClass: MediaPipeLanguageDetectionService},
+    provideStore([TranslateState]),
   ],
   imports: [NgxsModule.forFeature([TranslateState])],
 })
