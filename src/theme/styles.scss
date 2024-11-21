@@ -1,5 +1,8 @@
-@import './material.scss';
-@import 'fonts/roboto.css';
+@forward './material.scss';
+@forward 'fonts/roboto.css';
+
+@forward './ionic-variables';
+@forward './ionic';
 
 .container {
   width: auto;
@@ -47,6 +50,3 @@ body {
   text-align: end;
   width: calc(100% - 2 * 14px);
 }
-
-@import './ionic-variables';
-@import './ionic';

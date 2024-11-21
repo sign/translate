@@ -14,7 +14,6 @@ mermaid.initialize(config);
 
 @Component({
   selector: 'app-mermaid-chart',
-  standalone: true,
   imports: [],
   templateUrl: './mermaid-chart.component.html',
   styleUrl: './mermaid-chart.component.scss',

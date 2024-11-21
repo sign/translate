@@ -6,6 +6,7 @@ import {Store} from '@ngxs/store';
   selector: 'app-settings-appearance-images',
   templateUrl: './settings-appearance-images.component.html',
   styleUrls: ['./settings-appearance-images.component.scss'],
+  standalone: false,
 })
 export class SettingsAppearanceImagesComponent extends BaseSettingsComponent {
   @Input() scale = 1;

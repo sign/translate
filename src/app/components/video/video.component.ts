@@ -17,6 +17,7 @@ import {SignWritingService} from '../../modules/sign-writing/sign-writing.servic
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
+  standalone: false,
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   settingsState$!: Observable<SettingsStateModel>;

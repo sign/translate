@@ -79,6 +79,7 @@ const FAKE_WORDS = [
   selector: 'app-signed-to-spoken',
   templateUrl: './signed-to-spoken.component.html',
   styleUrls: ['./signed-to-spoken.component.scss'],
+  standalone: false,
 })
 export class SignedToSpokenComponent implements OnInit {
   videoState$!: Observable<VideoStateModel>;

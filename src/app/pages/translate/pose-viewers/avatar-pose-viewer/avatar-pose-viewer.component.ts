@@ -8,6 +8,7 @@ import {takeUntil, tap} from 'rxjs/operators';
   selector: 'app-avatar-pose-viewer',
   templateUrl: './avatar-pose-viewer.component.html',
   styleUrls: ['./avatar-pose-viewer.component.scss'],
+  standalone: false,
 })
 export class AvatarPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;

@@ -8,6 +8,7 @@ import {BaseComponent} from '../../../components/base/base.component';
   selector: 'app-translate-desktop',
   templateUrl: './translate-desktop.component.html',
   styleUrls: ['./translate-desktop.component.scss'],
+  standalone: false,
 })
 export class TranslateDesktopComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;

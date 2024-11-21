@@ -7,6 +7,7 @@ import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
   selector: 'app-about-pricing',
   templateUrl: './about-pricing.component.html',
   styleUrls: ['./about-pricing.component.scss'],
+  standalone: false,
 })
 export class AboutPricingComponent {
   form = new FormGroup({

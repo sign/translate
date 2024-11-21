@@ -9,11 +9,14 @@ import {GoogleAnalyticsService} from './core/modules/google-analytics/google-ana
 import {Capacitor} from '@capacitor/core';
 import {languageCodeNormalizer} from './core/modules/transloco/languages';
 import {Meta} from '@angular/platform-browser';
+import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  imports: [IonApp, IonRouterOutlet],
+  standalone: true,
 })
 export class AppComponent implements AfterViewInit {
   urlParams = this.getUrlParams();

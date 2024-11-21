@@ -21,6 +21,7 @@ interface PagesGroup {
   selector: 'app-settings-menu',
   templateUrl: './settings-menu.component.html',
   styleUrls: ['./settings-menu.component.scss'],
+  standalone: false,
 })
 export class SettingsMenuComponent {
   groups: PagesGroup[] = [

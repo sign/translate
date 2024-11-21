@@ -7,6 +7,7 @@ import {filter, map} from 'rxjs/operators';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
+  standalone: false,
 })
 export class MainComponent {
   isMainPage$: Observable<boolean>;

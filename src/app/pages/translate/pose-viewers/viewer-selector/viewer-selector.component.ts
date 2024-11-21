@@ -14,6 +14,7 @@ export interface MatFabMenu {
   selector: 'app-viewer-selector',
   templateUrl: './viewer-selector.component.html',
   styleUrls: ['./viewer-selector.component.scss'],
+  standalone: false,
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {
   poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);

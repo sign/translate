@@ -4,6 +4,7 @@ import {Component} from '@angular/core';
   selector: 'app-about-customers',
   templateUrl: './about-customers.component.html',
   styleUrls: ['./about-customers.component.scss'],
+  standalone: false,
 })
 export class AboutCustomersComponent {
   activeCustomer = 0;

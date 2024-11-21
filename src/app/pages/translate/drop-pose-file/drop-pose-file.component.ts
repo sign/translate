@@ -6,6 +6,7 @@ import {UploadPoseFile} from '../../../modules/translate/translate.actions';
   selector: 'app-drop-pose-file',
   templateUrl: './drop-pose-file.component.html',
   styleUrls: ['./drop-pose-file.component.scss'],
+  standalone: false,
 })
 export class DropPoseFileComponent {
   @HostBinding('class.hovering')

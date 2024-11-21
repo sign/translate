@@ -14,6 +14,7 @@ import {takeUntil, tap} from 'rxjs/operators';
   selector: 'app-language-selectors',
   templateUrl: './language-selectors.component.html',
   styleUrls: ['./language-selectors.component.scss'],
+  standalone: false,
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;

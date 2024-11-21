@@ -17,6 +17,7 @@ import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
   selector: 'app-signed-language-output',
   templateUrl: './signed-language-output.component.html',
   styleUrls: ['./signed-language-output.component.scss'],
+  standalone: false,
 })
 export class SignedLanguageOutputComponent extends BaseComponent implements OnInit {
   poseViewerSetting$!: Observable<PoseViewerSetting>;

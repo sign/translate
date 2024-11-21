@@ -10,6 +10,7 @@ import {PlayableVideoEncoder} from '../playable-video-encoder';
   selector: 'app-skeleton-pose-viewer',
   templateUrl: './skeleton-pose-viewer.component.html',
   styleUrls: ['./skeleton-pose-viewer.component.scss'],
+  standalone: false,
 })
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;

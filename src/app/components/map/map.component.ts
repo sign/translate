@@ -13,6 +13,7 @@ function logMax(arr: number[]) {
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
+  standalone: false,
 })
 export class MapComponent extends BaseComponent implements OnInit {
   static mapGeoJson = null;

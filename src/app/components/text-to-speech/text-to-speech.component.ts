@@ -4,6 +4,7 @@ import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@an
   selector: 'app-text-to-speech',
   templateUrl: './text-to-speech.component.html',
   styleUrls: ['./text-to-speech.component.scss'],
+  standalone: false,
 })
 export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   @Input() lang = 'en';

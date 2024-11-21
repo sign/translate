@@ -12,6 +12,7 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
+  standalone: false,
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
   detectedLanguage: string;

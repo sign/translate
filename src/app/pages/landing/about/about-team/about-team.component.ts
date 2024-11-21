@@ -4,6 +4,7 @@ import {Component} from '@angular/core';
   selector: 'app-about-team',
   templateUrl: './about-team.component.html',
   styleUrls: ['./about-team.component.scss'],
+  standalone: false,
 })
 export class AboutTeamComponent {
   teamMembers = [

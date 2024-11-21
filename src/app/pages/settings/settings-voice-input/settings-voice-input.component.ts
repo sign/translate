@@ -4,5 +4,6 @@ import {Component} from '@angular/core';
   selector: 'app-settings-voice-input',
   templateUrl: './settings-voice-input.component.html',
   styleUrls: ['./settings-voice-input.component.scss'],
+  standalone: false,
 })
 export class SettingsVoiceInputComponent {}

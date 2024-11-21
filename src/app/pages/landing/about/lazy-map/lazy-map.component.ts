@@ -5,6 +5,7 @@ import {ComponentType} from '@angular/cdk/overlay';
   selector: 'app-lazy-map',
   templateUrl: './lazy-map.component.html',
   styleUrls: ['./lazy-map.component.scss'],
+  standalone: false,
 })
 export class LazyMapComponent implements AfterViewInit {
   @ViewChild('mapHost', {read: ViewContainerRef}) mapHost: ViewContainerRef;

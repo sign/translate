@@ -8,6 +8,7 @@ import {SettingsStateModel} from '../settings.state';
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css'],
+  standalone: false,
 })
 export class SettingsComponent extends BaseSettingsComponent implements OnInit {
   availableSettings: Array<keyof SettingsStateModel> = [

@@ -9,6 +9,7 @@ import {LanguageDetectionService} from '../../modules/translate/language-detecti
   selector: 'app-benchmark',
   templateUrl: './benchmark.component.html',
   styleUrls: ['./benchmark.component.scss'],
+  standalone: false,
 })
 export class BenchmarkComponent {
   benchmarks = {

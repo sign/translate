@@ -15,11 +15,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sign-translate/browser",
+            "outputPath": {
+              "base": "dist/sign-translate"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -86,15 +87,18 @@
               "includePaths": ["node_modules/"]
             },
             "scripts": [],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json",
-            "vendorChunk": true,
+            "serviceWorker": "ngsw-config.json",
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true,
-            "webWorkerTsConfig": "tsconfig.worker.json"
+            "webWorkerTsConfig": "tsconfig.worker.json",
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -109,8 +113,6 @@
               "sourceMap": true,
               "namedChunks": true,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -226,67 +228,6 @@
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/sign-translate/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
-            "optimization": false,
-            "sourceMap": true,
-            "stylePreprocessorOptions": {
-              "includePaths": ["node_modules/"]
-            },
-            "extractLicenses": false
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "sourceMap": false,
-              "extractLicenses": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@angular-devkit/build-angular:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "sign-translate:build",
-              "serverTarget": "sign-translate:server"
-            },
-            "production": {
-              "browserTarget": "sign-translate:build:production",
-              "serverTarget": "sign-translate:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "discoverRoutes": true,
-            "routes": ["/", "/about", "/about/contribute", "/legal/terms", "/legal/privacy", "/legal/licenses"]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "sign-translate:build:production",
-              "serverTarget": "sign-translate:server:production"
-            },
-            "development": {
-              "browserTarget": "sign-translate:build",
-              "serverTarget": "sign-translate:server"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }

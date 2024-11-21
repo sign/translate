@@ -12,6 +12,7 @@ import {Observable} from 'rxjs';
   selector: 'app-animation',
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.scss'],
+  standalone: false,
 })
 export class AnimationComponent extends BaseComponent implements AfterViewInit {
   animationState$: Observable<AnimationStateModel>;

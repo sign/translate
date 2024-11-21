@@ -1,7 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {NotFoundComponent} from './not-found.component';
-import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {
+  AppTranslocoTestingModule,
+  provideTranslocoTesting,
+} from '../../core/modules/transloco/transloco-testing.module';
 import {IonicModule} from '@ionic/angular';
 
 describe('NotFoundComponent', () => {
@@ -10,8 +13,8 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
       declarations: [NotFoundComponent],
+      providers: [provideTranslocoTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NotFoundComponent);

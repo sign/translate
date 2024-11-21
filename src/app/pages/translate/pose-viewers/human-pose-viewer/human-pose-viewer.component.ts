@@ -10,6 +10,7 @@ import {transferableImage} from '../../../../core/helpers/image/transferable';
   selector: 'app-human-pose-viewer',
   templateUrl: './human-pose-viewer.component.html',
   styleUrls: ['./human-pose-viewer.component.scss'],
+  standalone: false,
 })
 export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {
   appearance$ = this.store.select<string>(state => state.settings.appearance);

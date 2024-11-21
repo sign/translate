@@ -4,6 +4,7 @@ import {Component} from '@angular/core';
   selector: 'app-about-faq',
   templateUrl: './about-faq.component.html',
   styleUrls: ['./about-faq.component.scss'],
+  standalone: false,
 })
 export class AboutFaqComponent {
   questions = [

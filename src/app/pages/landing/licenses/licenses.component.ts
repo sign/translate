@@ -22,6 +22,7 @@ type Node = PackagesParent | PackageLicense;
   selector: 'app-licenses',
   templateUrl: './licenses.component.html',
   styleUrls: ['./licenses.component.scss'],
+  standalone: false,
 })
 export class LicensesComponent implements OnInit {
   treeControl = new NestedTreeControl<Node>((node: any) => node.children);

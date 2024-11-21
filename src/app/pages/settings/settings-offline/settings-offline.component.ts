@@ -28,6 +28,7 @@ if (!isIOS) {
   selector: 'app-settings-offline',
   templateUrl: './settings-offline.component.html',
   styleUrls: ['./settings-offline.component.scss'],
+  standalone: false,
 })
 export class SettingsOfflineComponent extends BaseComponent implements OnInit {
   localFiles: {[key: string]: AssetState} = {};

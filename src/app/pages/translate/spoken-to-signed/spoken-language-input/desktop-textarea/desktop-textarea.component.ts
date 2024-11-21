@@ -7,6 +7,7 @@ import {Store} from '@ngxs/store';
   selector: 'app-desktop-textarea',
   templateUrl: './desktop-textarea.component.html',
   styleUrl: './desktop-textarea.component.scss',
+  standalone: false,
 })
 export class DesktopTextareaComponent {
   @Input() maxLength: number;

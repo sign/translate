@@ -4,6 +4,7 @@ import {Component, Input} from '@angular/core';
   selector: 'app-benchmark-item',
   templateUrl: './benchmark-item.component.html',
   styleUrls: ['./benchmark-item.component.scss'],
+  standalone: false,
 })
 export class BenchmarkItemComponent {
   @Input() title: string;

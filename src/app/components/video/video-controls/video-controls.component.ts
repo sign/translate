@@ -6,6 +6,7 @@ import {BaseSettingsComponent} from '../../../modules/settings/settings.componen
   selector: 'app-video-controls',
   templateUrl: './video-controls.component.html',
   styleUrls: ['./video-controls.component.scss'],
+  standalone: false,
 })
 export class VideoControlsComponent extends BaseSettingsComponent {
   constructor(store: Store) {

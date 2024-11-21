@@ -13,6 +13,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
   selector: 'app-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss'],
+  standalone: false,
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
   spokenToSigned$: Observable<boolean>;

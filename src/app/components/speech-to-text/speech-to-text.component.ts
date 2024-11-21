@@ -7,6 +7,7 @@ import {TooltipPosition} from '@angular/material/tooltip';
   selector: 'app-speech-to-text',
   templateUrl: './speech-to-text.component.html',
   styleUrls: ['./speech-to-text.component.css'],
+  standalone: false,
 })
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
   @Input() lang = 'en';

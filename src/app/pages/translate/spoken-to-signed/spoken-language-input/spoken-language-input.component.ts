@@ -15,6 +15,7 @@ import {BaseComponent} from '../../../../components/base/base.component';
   selector: 'app-spoken-language-input',
   templateUrl: './spoken-language-input.component.html',
   styleUrls: ['./spoken-language-input.component.scss'],
+  standalone: false,
 })
 export class SpokenLanguageInputComponent extends BaseComponent implements OnInit {
   translate$!: Observable<TranslateStateModel>;

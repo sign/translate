@@ -8,6 +8,7 @@ import {Observable} from 'rxjs';
   selector: 'app-translate-input-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
+  standalone: false,
 })
 export class TranslateInputButtonComponent {
   inputMode$!: Observable<InputMode>;

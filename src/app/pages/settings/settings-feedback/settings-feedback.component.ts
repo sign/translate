@@ -4,5 +4,6 @@ import {Component} from '@angular/core';
   selector: 'app-settings-feedback',
   templateUrl: './settings-feedback.component.html',
   styleUrls: ['./settings-feedback.component.scss'],
+  standalone: false,
 })
 export class SettingsFeedbackComponent {}

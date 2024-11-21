@@ -6,6 +6,7 @@ import {Animation, AnimationController} from '@ionic/angular';
 
 @Directive({
   selector: '[appKeyboardFlying]',
+  standalone: false,
 })
 export class KeyboardFlyingDirective implements OnInit, OnDestroy {
   // This class intends to fix the input shows only after the keyboard is shown fully

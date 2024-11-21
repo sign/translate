@@ -6,6 +6,7 @@ import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions'
   selector: 'app-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.scss'],
+  standalone: false,
 })
 export class UploadComponent {
   @Input() isMobile = false;

@@ -8,6 +8,7 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
   selector: 'app-about-direction',
   templateUrl: './about-direction.component.html',
   styleUrls: ['./about-direction.component.scss'],
+  standalone: false,
 })
 export class AboutDirectionComponent extends BaseComponent implements OnInit {
   iOSScreenshot: SafeUrl;

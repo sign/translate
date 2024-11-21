@@ -9,6 +9,7 @@ import {BaseComponent} from '../../../../components/base/base.component';
   selector: 'app-about-benefits',
   templateUrl: './about-benefits.component.html',
   styleUrls: ['./about-benefits.component.scss'],
+  standalone: false,
 })
 export class AboutBenefitsComponent extends BaseComponent implements AfterViewInit, OnInit {
   @ViewChild('swiper', {static: false}) swiper: ElementRef<{swiper: Swiper}>;

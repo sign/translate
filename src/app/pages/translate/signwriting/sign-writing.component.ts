@@ -12,6 +12,7 @@ import {DescribeSignWritingSign} from '../../../modules/translate/translate.acti
   selector: 'app-sign-writing',
   templateUrl: './sign-writing.component.html',
   styleUrls: ['./sign-writing.component.scss'],
+  standalone: false,
 })
 export class SignWritingComponent {
   signs$!: Observable<SignWritingObj[]>;

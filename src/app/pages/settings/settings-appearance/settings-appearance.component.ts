@@ -4,5 +4,6 @@ import {Component} from '@angular/core';
   templateUrl: './settings-appearance.component.html',
   selector: 'app-settings-appearance',
   styleUrls: ['./settings-appearance.component.scss'],
+  standalone: false,
 })
 export class SettingsAppearanceComponent {}
