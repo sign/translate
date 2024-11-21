@@ -11,9 +11,9 @@ import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
 import {PoseState} from '../../modules/pose/pose.state';
 import {DetectorState} from '../../modules/detector/detector.state';
-import {IonicModule} from '@ionic/angular';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {IonFab, IonIcon} from '@ionic/angular/standalone';
 
 describe('VideoComponent', () => {
   let component: VideoComponent;
@@ -25,7 +25,8 @@ describe('VideoComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         MatTooltipModule,
-        IonicModule.forRoot(),
+        IonIcon,
+        IonFab,
         NgxsModule.forRoot([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
       ],
     }).compileComponents();

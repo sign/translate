@@ -1,4 +1,4 @@
-<ion-list *transloco="let t; read: 'settings'" [attr.aria-label]="t('title')">
+<ion-list *transloco="let t; read: 'settings'">
   @for (s of availableSettings; track s) {
   <ion-item>
     <ion-checkbox [checked]="settings[s]" [attr.aria-label]="t(s)" (ionChange)="changeSetting(s, $event)">

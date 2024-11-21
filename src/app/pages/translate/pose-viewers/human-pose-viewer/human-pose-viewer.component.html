@@ -14,7 +14,7 @@
     height="256px"></pose-viewer>
 
   @if (!modelReady) {
-  <ion-spinner [attr.aria-label]="t('loading')" color="primary"></ion-spinner>
+  <ion-spinner [matTooltip]="t('loading')" color="primary"></ion-spinner>
   }
 
   <canvas #canvas width="768" height="768"></canvas>

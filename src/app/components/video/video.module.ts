@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {IonicModule} from '@ionic/angular';
 import {VideoComponent} from './video.component';
 import {VideoControlsComponent} from './video-controls/video-controls.component';
 import {AnimationModule} from '../animation/animation.module';
@@ -11,15 +10,18 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {DetectorState} from '../../modules/detector/detector.state';
 import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
 import {PoseModule} from '../../modules/pose/pose.module';
+import {IonFab, IonFabButton, IonIcon} from '@ionic/angular/standalone';
 
 @NgModule({
   imports: [
     CommonModule,
-    IonicModule,
     AnimationModule,
     AppTranslocoModule,
     MatTooltipModule,
     PoseModule,
+    IonIcon,
+    IonFab,
+    IonFabButton,
     NgxsModule.forFeature([VideoState, SignWritingState, DetectorState]),
   ],
   declarations: [VideoComponent, VideoControlsComponent],

@@ -7,7 +7,7 @@ import {SettingsState} from '../settings.state';
 import {FormsModule} from '@angular/forms';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
+import {IonCheckbox, IonItem, IonList} from '@ionic/angular/standalone';
 
 describe('SettingsComponent', () => {
   let store: Store;
@@ -21,7 +21,9 @@ describe('SettingsComponent', () => {
         NgxsModule.forRoot([SettingsState], ngxsConfig),
         FormsModule,
         AppTranslocoTestingModule,
-        IonicModule.forRoot(),
+        IonItem,
+        IonCheckbox,
+        IonList,
       ],
     }).compileComponents();
   });

@@ -6,8 +6,8 @@ import {AppTranslocoTestingModule} from '../../../core/modules/transloco/translo
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
-import {IonicModule} from '@ionic/angular';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {IonFab, IonFabButton} from '@ionic/angular/standalone';
 
 describe('VideoControlsComponent', () => {
   let component: VideoControlsComponent;
@@ -19,7 +19,8 @@ describe('VideoControlsComponent', () => {
       imports: [
         AppTranslocoTestingModule,
         MatTooltipModule,
-        IonicModule.forRoot(),
+        IonFab,
+        IonFabButton,
         NgxsModule.forRoot([SettingsState], ngxsConfig),
       ],
     }).compileComponents();
