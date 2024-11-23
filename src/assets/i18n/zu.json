@@ -12,9 +12,9 @@
   "translate": {
     "title": "I-Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Kutholiwe",
       "detect": "Hlonza ulimi",
-      "more": "Izilimi Eziningi",
-      "detected": "{{lang}} - Kutholiwe"
+      "more": "Izilimi Eziningi"
     },
     "input": {
       "text": "Umbhalo",

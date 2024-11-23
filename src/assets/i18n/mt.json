@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Individwat",
       "detect": "Induna bil-lingwa",
-      "more": "Aktar Lingwi",
-      "detected": "{{lang}} - Individwat"
+      "more": "Aktar Lingwi"
     },
     "input": {
       "text": "Test",

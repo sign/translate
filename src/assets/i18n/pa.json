@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - ਖੋਜਿਆ ਗਿਆ",
       "detect": "ਭਾਸ਼ਾ ਖੋਜੋ",
-      "more": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ",
-      "detected": "{{lang}} - ਖੋਜਿਆ ਗਿਆ"
+      "more": "ਹੋਰ ਭਾਸ਼ਾਵਾਂ"
     },
     "input": {
       "text": "ਲਿਖਤ",
@@ -167,7 +167,7 @@
       "title": "ਸਪੋਰਟ",
       "feedback": {
         "title": "ਸੁਝਾਅ",
-        "send": "ਫੀਡਬੈਕ ਭੇਜੋ"
+        "send": "ਪ੍ਰਤੀਕਿਰਆ ਭੇਜੋ"
       },
       "about": {
         "title": "ਬਾਰੇ"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - An gano",
       "detect": "Tsinkayo harshe",
-      "more": "Ƙarin Harsuna",
-      "detected": "{{lang}} - An gano"
+      "more": "Ƙarin Harsuna"
     },
     "input": {
       "text": "Rubutu",

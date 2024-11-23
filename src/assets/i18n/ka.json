@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detect": "ენის განსაზღვრა",
-      "more": "მეტი ენები",
-      "detected": "{{lang}} - აღმოჩენილია"
+      "detected": "{{lang}} - აღმოჩენილია",
+      "detect": "ენის ამოცნობა",
+      "more": "მეტი ენები"
     },
     "input": {
       "text": "SMS",

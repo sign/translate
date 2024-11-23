@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 翻譯",
     "language-selector": {
+      "detected": "{{lang}} - 偵測到",
       "detect": "偵測語言",
-      "more": "更多語言",
-      "detected": "{{lang}} - 偵測到"
+      "more": "更多語言"
     },
     "input": {
       "text": "文字",
@@ -167,7 +167,7 @@
       "title": "支持",
       "feedback": {
         "title": "反饋",
-        "send": "發送反饋"
+        "send": "提供意見"
       },
       "about": {
         "title": "關於"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Ti ṣe awari",
       "detect": "Ṣawari ede",
-      "more": "Awọn ede diẹ sii",
-      "detected": "{{lang}} - Ti ṣe awari"
+      "more": "Awọn ede diẹ sii"
     },
     "input": {
       "text": "Àyọkà",
@@ -167,7 +167,7 @@
       "title": "Atilẹyin",
       "feedback": {
         "title": "Esi",
-        "send": "Firanṣẹ esi"
+        "send": "Fi ìjábọ̀ ránṣẹ́"
       },
       "about": {
         "title": "Nipa"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detect": "భాషను కనుగొను",
-      "more": "మరిన్ని భాషలు",
-      "detected": "{{lang}} - గుర్తించబడింది"
+      "detected": "{{lang}} - గుర్తించబడింది",
+      "detect": "భాషను కనుగొనండి",
+      "more": "మరిన్ని భాషలు"
     },
     "input": {
       "text": "వచనం",
@@ -167,7 +167,7 @@
       "title": "మద్దతు",
       "feedback": {
         "title": "అభిప్రాయం",
-        "send": "అభిప్రాయాన్ని పంపండి"
+        "send": "ఫీడ్‌బ్యాక్ పంపండి"
       },
       "about": {
         "title": "గురించి"

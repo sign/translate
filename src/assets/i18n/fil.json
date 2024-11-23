@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Nakita",
       "detect": "Kilalanin ang Wika",
-      "more": "Higit pang mga Wika",
-      "detected": "{{lang}} - Nakita"
+      "more": "Higit pang mga Wika"
     },
     "input": {
       "text": "Text",
@@ -167,7 +167,7 @@
       "title": "Suporta",
       "feedback": {
         "title": "Feedback",
-        "send": "Magbigay ng feedback"
+        "send": "Ipadala ang feedback"
       },
       "about": {
         "title": "Tungkol sa"

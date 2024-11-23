@@ -12,9 +12,9 @@
   "translate": {
     "title": "Tłumacz Sign",
     "language-selector": {
+      "detected": "{{lang}} - Wykryto",
       "detect": "Wykryj język",
-      "more": "Więcej języków",
-      "detected": "{{lang}} - Wykryto"
+      "more": "Więcej języków"
     },
     "input": {
       "text": "Tekst",
@@ -167,7 +167,7 @@
       "title": "Wspierać się",
       "feedback": {
         "title": "Informacja zwrotna",
-        "send": "Wyślij opinię"
+        "send": "Prześlij opinię"
       },
       "about": {
         "title": "O"

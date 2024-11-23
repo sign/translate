@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Detekte",
       "detect": "Detekte lang",
-      "more": "Plis Lang",
-      "detected": "{{lang}} - Detekte"
+      "more": "Plis Lang"
     },
     "input": {
       "text": "Tèks",
@@ -167,7 +167,7 @@
       "title": "Sipò",
       "feedback": {
         "title": "Feedback",
-        "send": "Voye fidbak"
+        "send": "Voye remak w"
       },
       "about": {
         "title": "Konsènan"

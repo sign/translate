@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - ಪತ್ತೆಹಚ್ಚಲಾಗಿದೆ",
       "detect": "ಭಾಷೆ ಗುರುತಿಸು",
-      "more": "ಇನ್ನಷ್ಟು ಭಾಷೆಗಳು",
-      "detected": "{{lang}} - ಪತ್ತೆಹಚ್ಚಲಾಗಿದೆ"
+      "more": "ಇನ್ನಷ್ಟು ಭಾಷೆಗಳು"
     },
     "input": {
       "text": "ಪಠ್ಯ",
@@ -167,7 +167,7 @@
       "title": "ಬೆಂಬಲ",
       "feedback": {
         "title": "ಪ್ರತಿಕ್ರಿಯೆ",
-        "send": "ಪ್ರತಿಕ್ರಿಯೆ ಕಳುಹಿಸಿ"
+        "send": "ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಿ"
       },
       "about": {
         "title": "ಬಗ್ಗೆ"

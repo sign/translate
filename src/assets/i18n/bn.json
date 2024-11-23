@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - সনাক্ত করা হয়েছে৷",
       "detect": "ভাষা শনাক্ত করুন",
-      "more": "আরও ভাষা",
-      "detected": "{{lang}} - সনাক্ত করা হয়েছে৷"
+      "more": "আরও ভাষা"
     },
     "input": {
       "text": "টেক্সট",
@@ -167,7 +167,7 @@
       "title": "সমর্থন",
       "feedback": {
         "title": "প্রতিক্রিয়া",
-        "send": "মতামত পাঠানো"
+        "send": "মতামত জানান"
       },
       "about": {
         "title": "সম্পর্কিত"

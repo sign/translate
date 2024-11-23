@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - ûntdutsen",
       "detect": "Taal werkenne",
-      "more": "Mear talen",
-      "detected": "{{lang}} - ûntdutsen"
+      "more": "Mear talen"
     },
     "input": {
       "text": "Tekst",
@@ -167,7 +167,7 @@
       "title": "Stypje",
       "feedback": {
         "title": "Feedback",
-        "send": "Kommentaar ferstjoere"
+        "send": "Stjoer weromkeppeling"
       },
       "about": {
         "title": "Oer"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Översätt",
     "language-selector": {
+      "detected": "{{lang}} - Upptäckt",
       "detect": "Identifiera språk",
-      "more": "Flera språk",
-      "detected": "{{lang}} - Upptäckt"
+      "more": "Flera språk"
     },
     "input": {
       "text": "Text",
@@ -167,7 +167,7 @@
       "title": "Stöd",
       "feedback": {
         "title": "Respons",
-        "send": "Skicka synpunkter"
+        "send": "Skicka feedback"
       },
       "about": {
         "title": "Handla om"

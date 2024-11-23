@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Terjemahan",
     "language-selector": {
+      "detected": "{{lang}} - Dideteksi",
       "detect": "Deteksi basa",
-      "more": "Liyane Basa",
-      "detected": "{{lang}} - Dideteksi"
+      "more": "Liyane Basa"
     },
     "input": {
       "text": "Teks",
@@ -167,7 +167,7 @@
       "title": "Nyokong",
       "feedback": {
         "title": "Tanggepan",
-        "send": "Ngirim saran"
+        "send": "Kirim umpan balik"
       },
       "about": {
         "title": "Babagan"

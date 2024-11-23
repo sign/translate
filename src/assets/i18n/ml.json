@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - കണ്ടെത്തി",
       "detect": "ഭാഷ കണ്ടെത്തുക",
-      "more": "കൂടുതൽ ഭാഷകൾ",
-      "detected": "{{lang}} - കണ്ടെത്തി"
+      "more": "കൂടുതൽ ഭാഷകൾ"
     },
     "input": {
       "text": "ടെക്‌സ്‌റ്റ്",

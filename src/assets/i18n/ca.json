@@ -12,9 +12,9 @@
   "translate": {
     "title": "Traductor de Sign",
     "language-selector": {
+      "detected": "{{lang}} - Detectat",
       "detect": "Detecta l’idioma",
-      "more": "Més Idiomes",
-      "detected": "{{lang}} - Detectat"
+      "more": "Més Idiomes"
     },
     "input": {
       "text": "Text",
@@ -167,7 +167,7 @@
       "title": "Suport",
       "feedback": {
         "title": "Feedback",
-        "send": "Enviar comentaris"
+        "send": "Envia suggeriments"
       },
       "about": {
         "title": "Sobre"

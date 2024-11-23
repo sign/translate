@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Prevoditelj",
     "language-selector": {
+      "detected": "{{lang}} - Otkriveno",
       "detect": "Otkrij jezik",
-      "more": "Više jezika",
-      "detected": "{{lang}} - Otkriveno"
+      "more": "Više jezika"
     },
     "input": {
       "text": "Tekst",
@@ -167,7 +167,7 @@
       "title": "podrška",
       "feedback": {
         "title": "Povratne informacije",
-        "send": "Pošalji povratne informacije"
+        "send": "Pošaljite povratne informacije"
       },
       "about": {
         "title": "Oko"

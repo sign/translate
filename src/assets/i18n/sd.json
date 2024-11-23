@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ترجمو",
     "language-selector": {
+      "detected": "{{lang}} - معلوم ٿيو",
       "detect": "ٻولي کوجيو",
-      "more": "وڌيڪ ٻوليون",
-      "detected": "{{lang}} - معلوم ٿيو"
+      "more": "وڌيڪ ٻوليون"
     },
     "input": {
       "text": "متن",
@@ -167,7 +167,7 @@
       "title": "حمايت",
       "feedback": {
         "title": "راءِ",
-        "send": "موٽ موڪليو"
+        "send": "جوابي راءِ ڏيو"
       },
       "about": {
         "title": "بابت"

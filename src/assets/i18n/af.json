@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Vertaal",
     "language-selector": {
+      "detected": "{{lang}} - Bespeur",
       "detect": "Bespeur taal",
-      "more": "Meer tale",
-      "detected": "{{lang}} - Bespeur"
+      "more": "Meer tale"
     },
     "input": {
       "text": "Teks",
@@ -167,7 +167,7 @@
       "title": "Ondersteuning",
       "feedback": {
         "title": "Terugvoer",
-        "send": "Stuur terugvoering"
+        "send": "Stuur terugvoer"
       },
       "about": {
         "title": "Oor"

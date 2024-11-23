@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 翻译",
     "language-selector": {
+      "detected": "{{lang}} - 检测到",
       "detect": "检测语言",
-      "more": "更多语言",
-      "detected": "{{lang}} - 检测到"
+      "more": "更多语言"
     },
     "input": {
       "text": "文字",

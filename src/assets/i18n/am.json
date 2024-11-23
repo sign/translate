@@ -12,12 +12,12 @@
   "translate": {
     "title": "የSign ተርጓሚ",
     "language-selector": {
+      "detected": "{{lang}} - ተገኝቷል",
       "detect": "ቋንቋ  አግኝ",
-      "more": "ተጨማሪ ቋንቋዎች",
-      "detected": "{{lang}} - ተገኝቷል"
+      "more": "ተጨማሪ ቋንቋዎች"
     },
     "input": {
-      "text": "ጽሑፍ",
+      "text": "ጽሁፍ",
       "webcam": "የድረገፅ ካሜራ",
       "upload": "ስቀል"
     },
@@ -167,7 +167,7 @@
       "title": "ድጋፍ",
       "feedback": {
         "title": "ግብረ መልስ",
-        "send": "ግብረ - መልስ ላክ"
+        "send": "ግብረ-መልስ ላክ"
       },
       "about": {
         "title": "ስለ"

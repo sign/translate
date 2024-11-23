@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign បកប្រែ",
     "language-selector": {
+      "detected": "{{lang}} - បានរកឃើញ",
       "detect": "កំណត់\\u200bភាសា\\u200bដោយ\\u200bស្វ័យ\\u200bប្រវត្តិ",
-      "more": "ភាសាច្រើនទៀត",
-      "detected": "{{lang}} - បានរកឃើញ"
+      "more": "ភាសាច្រើនទៀត"
     },
     "input": {
       "text": "អត្ថបទ",
@@ -167,7 +167,7 @@
       "title": "គាំទ្រ",
       "feedback": {
         "title": "មតិកែលម្អ",
-        "send": "ផ្ញើមតិកែលម្អ"
+        "send": "ផ្ដល់​មតិ​ស្ថាបនា"
       },
       "about": {
         "title": "អំពី"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ژباړونکی",
     "language-selector": {
+      "detected": "{{lang}} - کشف شوی",
       "detect": "د ژبې موندل",
-      "more": "نورې ژبې",
-      "detected": "{{lang}} - کشف شوی"
+      "more": "نورې ژبې"
     },
     "input": {
       "text": "متن",
@@ -167,7 +167,7 @@
       "title": "ملاتړ",
       "feedback": {
         "title": "فیډبیک",
-        "send": "نظر واستوئ"
+        "send": "کتنې ولیږئ"
       },
       "about": {
         "title": "په اړه"

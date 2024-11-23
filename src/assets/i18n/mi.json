@@ -12,9 +12,9 @@
   "translate": {
     "title": "Whakamāori Sign",
     "language-selector": {
+      "detected": "{{lang}} - Kua kitea",
       "detect": "tautuhi reo",
-      "more": "Ētahi atu Reo",
-      "detected": "{{lang}} - Kua kitea"
+      "more": "Ētahi atu Reo"
     },
     "input": {
       "text": "Kuputuhi",

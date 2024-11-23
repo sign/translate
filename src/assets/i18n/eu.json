@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Detektatua",
       "detect": "Hauteman hizkuntza",
-      "more": "Hizkuntza gehiago",
-      "detected": "{{lang}} - Detektatua"
+      "more": "Hizkuntza gehiago"
     },
     "input": {
       "text": "Testuak",
@@ -167,7 +167,7 @@
       "title": "Laguntza",
       "feedback": {
         "title": "Iritzia",
-        "send": "Bidali iritzia"
+        "send": "Bidali oharrak"
       },
       "about": {
         "title": "Buruz"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Котормочу",
     "language-selector": {
+      "detected": "{{lang}} - Табылды",
       "detect": "Тил тандоо",
-      "more": "Көбүрөөк тилдер",
-      "detected": "{{lang}} - Табылды"
+      "more": "Көбүрөөк тилдер"
     },
     "input": {
       "text": "SMS",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign'i tõlge",
     "language-selector": {
+      "detected": "{{lang}} – tuvastatud",
       "detect": "Tuvasta keel",
-      "more": "Rohkem keeli",
-      "detected": "{{lang}} – tuvastatud"
+      "more": "Rohkem keeli"
     },
     "input": {
       "text": "Tekst",

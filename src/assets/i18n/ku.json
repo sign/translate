@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
+      "detected": "{{lang}} - Hat dîtin",
       "detect": "Dili algıla",
-      "more": "Zêdetir Ziman",
-      "detected": "{{lang}} - Hat dîtin"
+      "more": "Zêdetir Ziman"
     },
     "input": {
       "text": "Metin",
@@ -167,7 +167,7 @@
       "title": "Alîkarî",
       "feedback": {
         "title": "Feedback",
-        "send": "Bersiv bişînin"
+        "send": "Geri bildirim gönder"
       },
       "about": {
         "title": "Ji dor"

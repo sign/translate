@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Prevajalnik",
     "language-selector": {
+      "detected": "{{lang}} – Zaznano",
       "detect": "Zaznaj jezik",
-      "more": "Več jezikov",
-      "detected": "{{lang}} – Zaznano"
+      "more": "Več jezikov"
     },
     "input": {
       "text": "Besedilo",
@@ -167,7 +167,7 @@
       "title": "Podpora",
       "feedback": {
         "title": "Povratne informacije",
-        "send": "Pošlji povratno informacijo"
+        "send": "Pošljite povratne informacije"
       },
       "about": {
         "title": "O tem"

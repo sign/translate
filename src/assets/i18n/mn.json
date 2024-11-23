@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Орчуулагч",
     "language-selector": {
+      "detected": "{{lang}} - Илэрсэн",
       "detect": "Хэл таних",
-      "more": "Илүү олон хэл",
-      "detected": "{{lang}} - Илэрсэн"
+      "more": "Илүү олон хэл"
     },
     "input": {
       "text": "Текст",

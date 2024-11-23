@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tarjamah",
     "language-selector": {
+      "detected": "{{lang}} - Dideteksi",
       "detect": "Détéksi basa",
-      "more": "Langkung Basa",
-      "detected": "{{lang}} - Dideteksi"
+      "more": "Langkung Basa"
     },
     "input": {
       "text": "Téks",
@@ -167,7 +167,7 @@
       "title": "Ngarojong",
       "feedback": {
         "title": "Eupan balik",
-        "send": "Kirim eupan balik"
+        "send": "Kintun dulang"
       },
       "about": {
         "title": "Ngeunaan"

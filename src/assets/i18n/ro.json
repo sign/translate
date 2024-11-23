@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Traducere",
     "language-selector": {
+      "detected": "{{lang}} - Detectat",
       "detect": "Selectați limba",
-      "more": "Mai multe limbi",
-      "detected": "{{lang}} - Detectat"
+      "more": "Mai multe limbi"
     },
     "input": {
       "text": "Mesaj text",
@@ -167,7 +167,7 @@
       "title": "A sustine",
       "feedback": {
         "title": "Părere",
-        "send": "Trimite feedback"
+        "send": "Trimiteți feedback"
       },
       "about": {
         "title": "Despre"

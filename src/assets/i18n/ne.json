@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign अनुवादक",
     "language-selector": {
+      "detected": "{{lang}} - पत्ता लाग्यो",
       "detect": "भाषा पत्ता लगाउनुहोस्",
-      "more": "थप भाषाहरू",
-      "detected": "{{lang}} - पत्ता लाग्यो"
+      "more": "थप भाषाहरू"
     },
     "input": {
       "text": "पाठ",

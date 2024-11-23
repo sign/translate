@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Переводчик",
     "language-selector": {
+      "detected": "{{lang}} - Tapyldy",
       "detect": "Определить язык",
-      "more": "Has köp dil",
-      "detected": "{{lang}} - Tapyldy"
+      "more": "Has köp dil"
     },
     "input": {
       "text": "Текст",
@@ -167,7 +167,7 @@
       "title": "Goldaw",
       "feedback": {
         "title": "Seslenme",
-        "send": "Ters jogap iberiň"
+        "send": "Отправить отзыв"
       },
       "about": {
         "title": "Takmynan"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - La ogaaday",
       "detect": "Garo luuqada",
-      "more": "Luuqado badan",
-      "detected": "{{lang}} - La ogaaday"
+      "more": "Luuqado badan"
     },
     "input": {
       "text": "Qoraal",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
+      "detected": "{{lang}} - Algılandı",
       "detect": "Dili algıla",
-      "more": "Diğer Diller",
-      "detected": "{{lang}} - Algılandı"
+      "more": "Diğer Diller"
     },
     "input": {
       "text": "Metin",
@@ -167,7 +167,7 @@
       "title": "Destek",
       "feedback": {
         "title": "Geri bildirim",
-        "send": "Geribildirim yolla"
+        "send": "Geri bildirim gönder"
       },
       "about": {
         "title": "Hakkında"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Překladač Sign",
     "language-selector": {
+      "detected": "{{lang}} – Zjištěno",
       "detect": "Rozpoznat jazyk",
-      "more": "Více jazyků",
-      "detected": "{{lang}} – Zjištěno"
+      "more": "Více jazyků"
     },
     "input": {
       "text": "Text",
@@ -167,7 +167,7 @@
       "title": "Podpěra, podpora",
       "feedback": {
         "title": "Zpětná vazba",
-        "send": "Poslat zpětnou vazbu"
+        "send": "Odeslat zpětnou vazbu"
       },
       "about": {
         "title": "O"

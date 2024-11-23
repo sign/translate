@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Braitheadh",
       "detect": "Aimsigh teanga",
-      "more": "Tuilleadh Teangacha",
-      "detected": "{{lang}} - Braitheadh"
+      "more": "Tuilleadh Teangacha"
     },
     "input": {
       "text": "Téacs",
@@ -167,7 +167,7 @@
       "title": "Tacaíocht",
       "feedback": {
         "title": "Aiseolas",
-        "send": "Seol Aiseolas"
+        "send": "Seol aiseolas"
       },
       "about": {
         "title": "Faoi"

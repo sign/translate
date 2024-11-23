@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Kääntäjä",
     "language-selector": {
+      "detected": "{{lang}} - Havaittu",
       "detect": "Tunnista kieli",
-      "more": "Lisää kieliä",
-      "detected": "{{lang}} - Havaittu"
+      "more": "Lisää kieliä"
     },
     "input": {
       "text": "Teksti",

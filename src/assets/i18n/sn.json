@@ -12,9 +12,9 @@
   "translate": {
     "title": "Shandura mutauro uchishandisa Sign",
     "language-selector": {
+      "detected": "{{lang}} - Zvaonekwa",
       "detect": "Ziva zita remutauro",
-      "more": "More Mitauro",
-      "detected": "{{lang}} - Zvaonekwa"
+      "more": "More Mitauro"
     },
     "input": {
       "text": "Mashoko",
@@ -167,7 +167,7 @@
       "title": "Support",
       "feedback": {
         "title": "Feedback",
-        "send": "Tumira mhinduro"
+        "send": "Tumira maonero ako"
       },
       "about": {
         "title": "About"

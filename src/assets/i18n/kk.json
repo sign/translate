@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - анықталды",
       "detect": "Тілді анықтау",
-      "more": "Қосымша тілдер",
-      "detected": "{{lang}} - анықталды"
+      "more": "Қосымша тілдер"
     },
     "input": {
       "text": "Мәтін",

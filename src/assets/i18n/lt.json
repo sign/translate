@@ -12,9 +12,9 @@
   "translate": {
     "title": "„Sign“ vertėjas",
     "language-selector": {
+      "detected": "{{lang}} – aptikta",
       "detect": "Nustatyti kalbą",
-      "more": "Daugiau kalbų",
-      "detected": "{{lang}} – aptikta"
+      "more": "Daugiau kalbų"
     },
     "input": {
       "text": "Tekstas",

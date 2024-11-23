@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - आढळले",
       "detect": "भाषा शोधा",
-      "more": "अधिक भाषा",
-      "detected": "{{lang}} - आढळले"
+      "more": "अधिक भाषा"
     },
     "input": {
       "text": "एसएमएस",

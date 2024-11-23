@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ແປພາສາ",
     "language-selector": {
+      "detected": "{{lang}} - ກວດພົບ",
       "detect": "ກວດສອບພາສາ",
-      "more": "ພາສາເພີ່ມເຕີມ",
-      "detected": "{{lang}} - ກວດພົບ"
+      "more": "ພາສາເພີ່ມເຕີມ"
     },
     "input": {
       "text": "ຂໍ້ຄວາມ",
@@ -167,7 +167,7 @@
       "title": "ສະຫນັບສະຫນູນ",
       "feedback": {
         "title": "ຄໍາຕິຊົມ",
-        "send": "ສົ່ງຄໍາຄິດເຫັນ"
+        "send": "ສົ່ງຂໍ້ສະເໜີແນະ"
       },
       "about": {
         "title": "ກ່ຽວກັບ"

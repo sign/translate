@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tərcümə",
     "language-selector": {
+      "detected": "{{lang}} - Aşkarlandı",
       "detect": "Dili seç",
-      "more": "Daha çox dil",
-      "detected": "{{lang}} - Aşkarlandı"
+      "more": "Daha çox dil"
     },
     "input": {
       "text": "Mətn",
@@ -167,7 +167,7 @@
       "title": "Dəstək",
       "feedback": {
         "title": "Əlaqə",
-        "send": "Rəy göndərin"
+        "send": "Rəy göndər"
       },
       "about": {
         "title": "Haqqında"

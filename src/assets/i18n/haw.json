@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - ʻIke ʻia",
       "detect": "Detect language",
-      "more": "ʻŌlelo hou aku",
-      "detected": "{{lang}} - ʻIke ʻia"
+      "more": "ʻŌlelo hou aku"
     },
     "input": {
       "text": "Text",
@@ -167,7 +167,7 @@
       "title": "Kākoʻo",
       "feedback": {
         "title": "Manaʻo manaʻo",
-        "send": "Hoʻouna manaʻo"
+        "send": "Send feedback"
       },
       "about": {
         "title": "E pili ana"

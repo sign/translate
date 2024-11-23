@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Преводач",
     "language-selector": {
+      "detected": "{{lang}} – Открит",
       "detect": "Разпознаване на езика",
-      "more": "Още езици",
-      "detected": "{{lang}} – Открит"
+      "more": "Още езици"
     },
     "input": {
       "text": "Текст",
@@ -167,7 +167,7 @@
       "title": "поддържа",
       "feedback": {
         "title": "Обратна връзка",
-        "send": "Изпратете отзиви"
+        "send": "Изпращане на отзиви"
       },
       "about": {
         "title": "относно"

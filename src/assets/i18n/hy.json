@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Հայտնաբերվել է",
       "detect": "Ճանաչել լեզուն",
-      "more": "Ավելի շատ լեզուներ",
-      "detected": "{{lang}} - Հայտնաբերվել է"
+      "more": "Ավելի շատ լեզուներ"
     },
     "input": {
       "text": "Տեքստ",
@@ -167,7 +167,7 @@
       "title": "Աջակցություն",
       "feedback": {
         "title": "Հետադարձ կապ",
-        "send": "Ուղարկել գնահատական"
+        "send": "Կարծիք հայտնել"
       },
       "about": {
         "title": "Մասին"

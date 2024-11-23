@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign tulkotājs",
     "language-selector": {
+      "detected": "{{lang}} — konstatēts",
       "detect": "Noteikt valodu",
-      "more": "Vairāk valodu",
-      "detected": "{{lang}} — konstatēts"
+      "more": "Vairāk valodu"
     },
     "input": {
       "text": "Teksts",
@@ -167,7 +167,7 @@
       "title": "Atbalsts",
       "feedback": {
         "title": "Atsauksmes",
-        "send": "Sūtiet atsauksmes"
+        "send": "Sūtīt atsauksmes"
       },
       "about": {
         "title": "Par"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign แปลภาษา",
     "language-selector": {
+      "detected": "{{lang}} - ตรวจพบแล้ว",
       "detect": "ตรวจหาภาษา",
-      "more": "ภาษาอื่น ๆ",
-      "detected": "{{lang}} - ตรวจพบแล้ว"
+      "more": "ภาษาอื่น ๆ"
     },
     "input": {
       "text": "ข้อความ",

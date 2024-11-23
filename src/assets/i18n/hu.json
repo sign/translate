@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Fordító",
     "language-selector": {
+      "detected": "{{lang}} – Észlelve",
       "detect": "Nyelvfelismerés",
-      "more": "További nyelvek",
-      "detected": "{{lang}} – Észlelve"
+      "more": "További nyelvek"
     },
     "input": {
       "text": "Szöveg",

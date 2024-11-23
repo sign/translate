@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Dikanteny",
     "language-selector": {
+      "detected": "{{lang}} - Hita",
       "detect": "Haminany fiteny",
-      "more": "Fiteny bebe kokoa",
-      "detected": "{{lang}} - Hita"
+      "more": "Fiteny bebe kokoa"
     },
     "input": {
       "text": "Soratra",
@@ -167,7 +167,7 @@
       "title": "MANAMPY",
       "feedback": {
         "title": "Feedback",
-        "send": "Mandefa hevitra"
+        "send": "Handefa valin-kevitra"
       },
       "about": {
         "title": "About"

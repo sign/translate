@@ -12,9 +12,9 @@
   "translate": {
     "title": "Eadar-theangadair Sign",
     "language-selector": {
+      "detected": "{{lang}} - Air a bhrath",
       "detect": "Mothaich dhan chànan",
-      "more": "Tuilleadh Chànanan",
-      "detected": "{{lang}} - Air a bhrath"
+      "more": "Tuilleadh Chànanan"
     },
     "input": {
       "text": "Teacs",
@@ -167,7 +167,7 @@
       "title": "Taic",
       "feedback": {
         "title": "Fios air ais",
-        "send": "Cuir fios air ais"
+        "send": "Innis dhuinn dè do bheachd"
       },
       "about": {
         "title": "Mu dheidhinn"

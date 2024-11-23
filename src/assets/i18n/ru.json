@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Переводчик",
     "language-selector": {
+      "detected": "{{lang}} – обнаружен",
       "detect": "Определить язык",
-      "more": "Другие языки",
-      "detected": "{{lang}} – обнаружен"
+      "more": "Другие языки"
     },
     "input": {
       "text": "Текст",

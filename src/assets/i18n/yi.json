@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{לאַנג}} - דיטעקטאַד",
       "detect": "ארפינד שפראך",
-      "more": "מער שפּראַכן",
-      "detected": "{{לאַנג}} - דיטעקטאַד"
+      "more": "מער שפּראַכן"
     },
     "input": {
       "text": "טעקסט",
@@ -167,7 +167,7 @@
       "title": "שטיצן",
       "feedback": {
         "title": "באַמערקונגען",
-        "send": "שיק באמערקונגן"
+        "send": "שיקן רוקמעלדונג"
       },
       "about": {
         "title": "וועגן"

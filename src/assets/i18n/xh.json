@@ -12,9 +12,9 @@
   "translate": {
     "title": "IToliki kaSign",
     "language-selector": {
+      "detected": "{{lang}} - Ichongiwe",
       "detect": "Fumana ulwimi",
-      "more": "Iilwimi ezingakumbi",
-      "detected": "{{lang}} - Ichongiwe"
+      "more": "Iilwimi ezingakumbi"
     },
     "input": {
       "text": "Umbhalo",
@@ -167,7 +167,7 @@
       "title": "Inkxaso",
       "feedback": {
         "title": "Ingxelo",
-        "send": "Ukuzisa impendulo"
+        "send": "Thumela ingxelo"
       },
       "about": {
         "title": "Malunga"

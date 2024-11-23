@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Achọpụtara",
       "detect": "Chọpụta asụsụ",
-      "more": "Asụsụ ndị ọzọ",
-      "detected": "{{lang}} - Achọpụtara"
+      "more": "Asụsụ ndị ọzọ"
     },
     "input": {
       "text": "Ederede",
@@ -167,7 +167,7 @@
       "title": "Nkwado",
       "feedback": {
         "title": "Nzaghachi",
-        "send": "Zipu nzaghachi"
+        "send": "Zite nzaghachi"
       },
       "about": {
         "title": "Ihe gbasara"

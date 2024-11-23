@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tafsiri",
     "language-selector": {
+      "detected": "{{lang}} - Imegunduliwa",
       "detect": "Tambua lugha",
-      "more": "Lugha Zaidi",
-      "detected": "{{lang}} - Imegunduliwa"
+      "more": "Lugha Zaidi"
     },
     "input": {
       "text": "Matini",

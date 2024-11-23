@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Oversetter",
     "language-selector": {
+      "detected": "{{lang}} – oppdaget",
       "detect": "Gjenkjenn språk",
-      "more": "Flere språk",
-      "detected": "{{lang}} – oppdaget"
+      "more": "Flere språk"
     },
     "input": {
       "text": "Tekst",

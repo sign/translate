@@ -12,9 +12,9 @@
   "translate": {
     "title": "Перакладчык Sign",
     "language-selector": {
+      "detected": "{{lang}} - Выяўлена",
       "detect": "Выявіць мову",
-      "more": "Больш моў",
-      "detected": "{{lang}} - Выяўлена"
+      "more": "Больш моў"
     },
     "input": {
       "text": "Тэкст",
@@ -167,7 +167,7 @@
       "title": "Падтрымка",
       "feedback": {
         "title": "Зваротная сувязь",
-        "send": "Адправіць водгук"
+        "send": "Адправiць водгук"
       },
       "about": {
         "title": "Аб"

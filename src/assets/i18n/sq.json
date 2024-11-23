@@ -12,9 +12,9 @@
   "translate": {
     "title": "Përkthe me Sign",
     "language-selector": {
+      "detected": "{{lang}} - U zbulua",
       "detect": "Zbulo gjuhën",
-      "more": "Më shumë gjuhë",
-      "detected": "{{lang}} - U zbulua"
+      "more": "Më shumë gjuhë"
     },
     "input": {
       "text": "Teksti",
@@ -167,7 +167,7 @@
       "title": "Mbështetje",
       "feedback": {
         "title": "Feedback",
-        "send": "Dërgo komente"
+        "send": "Dërgo reagimet"
       },
       "about": {
         "title": "Rreth"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Übersetzer",
     "language-selector": {
+      "detected": "{{lang}} – Erkannt",
       "detect": "Sprache erkennen",
-      "more": "Mehr Sprachen",
-      "detected": "{{lang}} – Erkannt"
+      "more": "Mehr Sprachen"
     },
     "input": {
       "text": "Text",
@@ -167,7 +167,7 @@
       "title": "Die Unterstützung",
       "feedback": {
         "title": "Feedback",
-        "send": "Feedback abschicken"
+        "send": "Feedback geben"
       },
       "about": {
         "title": "Über"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "ترجمة Sign",
     "language-selector": {
+      "detected": "{{lang}} - تم الكشف عنه",
       "detect": "التعرّف التلقائي على اللغة",
-      "more": "المزيد من اللغات",
-      "detected": "{{lang}} - تم الكشف عنه"
+      "more": "المزيد من اللغات"
     },
     "input": {
       "text": "نص",
@@ -167,7 +167,7 @@
       "title": "الدعم",
       "feedback": {
         "title": "استجابة",
-        "send": "ارسل رأيك"
+        "send": "إرسال ملاحظات"
       },
       "about": {
         "title": "حول"

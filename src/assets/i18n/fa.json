@@ -12,9 +12,9 @@
   "translate": {
     "title": "‏‫ترجمه Sign‬",
     "language-selector": {
+      "detected": "{{lang}} - شناسایی شد",
       "detect": "شناسایی زبان",
-      "more": "زبان های بیشتر",
-      "detected": "{{lang}} - شناسایی شد"
+      "more": "زبان های بیشتر"
     },
     "input": {
       "text": "نوشتار",

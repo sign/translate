@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Greinist",
       "detect": "Greina tungumál",
-      "more": "Fleiri tungumál",
-      "detected": "{{lang}} - Greinist"
+      "more": "Fleiri tungumál"
     },
     "input": {
       "text": "Texti",
@@ -167,7 +167,7 @@
       "title": "Stuðningur",
       "feedback": {
         "title": "Endurgjöf",
-        "send": "Senda athugasemdir"
+        "send": "Senda ábendingu"
       },
       "about": {
         "title": "Um"

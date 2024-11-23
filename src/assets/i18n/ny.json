@@ -12,9 +12,9 @@
   "translate": {
     "title": "Zomasulira za Sign",
     "language-selector": {
+      "detected": "{{lang}} - Zapezeka",
       "detect": "Fufuzani chilankhulo",
-      "more": "Zinenero Zambiri",
-      "detected": "{{lang}} - Zapezeka"
+      "more": "Zinenero Zambiri"
     },
     "input": {
       "text": "Malemba",
@@ -167,7 +167,7 @@
       "title": "Thandizo",
       "feedback": {
         "title": "Ndemanga",
-        "send": "Tumizani ndemanga"
+        "send": "Tumizani maganizo anu"
       },
       "about": {
         "title": "Za"

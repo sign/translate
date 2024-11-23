@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - पता चला",
       "detect": "भाषा का पता लगाएं",
-      "more": "अधिक भाषाएँ",
-      "detected": "{{lang}} - पता चला"
+      "more": "अधिक भाषाएँ"
     },
     "input": {
       "text": "लेख",
@@ -167,7 +167,7 @@
       "title": "सहायता",
       "feedback": {
         "title": "प्रतिपुष्टि",
-        "send": "प्रतिक्रिया भेजें"
+        "send": "सुझाव भेजें"
       },
       "about": {
         "title": "के बारे में"

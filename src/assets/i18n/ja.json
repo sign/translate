@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 翻訳",
     "language-selector": {
+      "detected": "{{lang}} - 検出されました",
       "detect": "言語を検出する",
-      "more": "その他の言語",
-      "detected": "{{lang}} - 検出されました"
+      "more": "その他の言語"
     },
     "input": {
       "text": "テキスト",

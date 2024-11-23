@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign පරිවර්තනය",
     "language-selector": {
+      "detected": "{{lang}} - අනාවරණය විය",
       "detect": "භාෂාව අනාවරණය කර ගන්න",
-      "more": "තවත් භාෂා",
-      "detected": "{{lang}} - අනාවරණය විය"
+      "more": "තවත් භාෂා"
     },
     "input": {
       "text": "පෙළ",

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign ترجمہ",
     "language-selector": {
+      "detected": "{{lang}} - پتہ چلا",
       "detect": "زبان کی شناخت کریں",
-      "more": "مزید زبانیں",
-      "detected": "{{lang}} - پتہ چلا"
+      "more": "مزید زبانیں"
     },
     "input": {
       "text": "متن",
@@ -167,7 +167,7 @@
       "title": "حمایت",
       "feedback": {
         "title": "تاثرات",
-        "send": "رائے بھیجیں"
+        "send": "تاثرات بھیجیں"
       },
       "about": {
         "title": "کے بارے میں"

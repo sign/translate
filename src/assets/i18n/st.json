@@ -12,9 +12,9 @@
   "translate": {
     "title": "Liphetolelo tsa Sign",
     "language-selector": {
+      "detected": "{{lang}} - E fumanwe",
       "detect": "Fumana puo",
-      "more": "Lipuo Tse Eketsehileng",
-      "detected": "{{lang}} - E fumanwe"
+      "more": "Lipuo Tse Eketsehileng"
     },
     "input": {
       "text": "Mongolo",
@@ -167,7 +167,7 @@
       "title": "Tšehetso",
       "feedback": {
         "title": "Maikutlo",
-        "send": "Romella maikutlo"
+        "send": "Romela maikutlo a hau"
       },
       "about": {
         "title": "About"

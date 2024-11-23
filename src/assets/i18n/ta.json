@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - கண்டறியப்பட்டது",
       "detect": "மொழியைக் கண்டறி",
-      "more": "மேலும் மொழிகள்",
-      "detected": "{{lang}} - கண்டறியப்பட்டது"
+      "more": "மேலும் மொழிகள்"
     },
     "input": {
       "text": "உரை",
@@ -167,7 +167,7 @@
       "title": "ஆதரவு",
       "feedback": {
         "title": "பின்னூட்டம்",
-        "send": "கருத்தினை அனுப்பவும்"
+        "send": "கருத்துத் தெரிவிக்கவும்"
       },
       "about": {
         "title": "பற்றி"

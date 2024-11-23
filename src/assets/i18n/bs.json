@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Prevodilac",
     "language-selector": {
+      "detected": "{{lang}} - Otkriveno",
       "detect": "Otkrij jezik",
-      "more": "Više jezika",
-      "detected": "{{lang}} - Otkriveno"
+      "more": "Više jezika"
     },
     "input": {
       "text": "Tekst",
@@ -167,7 +167,7 @@
       "title": "Podrška",
       "feedback": {
         "title": "Povratne informacije",
-        "send": "Pošaljite povratne informacije"
+        "send": "Slanje povratnih informacija"
       },
       "about": {
         "title": "O"

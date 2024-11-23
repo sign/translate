@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Tarjimon",
     "language-selector": {
+      "detected": "{{lang}} - Aniqlandi",
       "detect": "Avtomatik aniqlash",
-      "more": "Ko'proq tillar",
-      "detected": "{{lang}} - Aniqlandi"
+      "more": "Ko'proq tillar"
     },
     "input": {
       "text": "Matn",
@@ -167,7 +167,7 @@
       "title": "Qo'llab-quvvatlash",
       "feedback": {
         "title": "Fikr-mulohaza",
-        "send": "Fikr-mulohaza yuboring"
+        "send": "Fikr-mulohaza"
       },
       "about": {
         "title": "Haqida"

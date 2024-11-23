@@ -12,9 +12,9 @@
   "translate": {
     "title": "Tradutor de Sign",
     "language-selector": {
+      "detected": "{{lang}} - Detectouse",
       "detect": "Detectar idioma",
-      "more": "Máis Idiomas",
-      "detected": "{{lang}} - Detectouse"
+      "more": "Máis Idiomas"
     },
     "input": {
       "text": "Texto",

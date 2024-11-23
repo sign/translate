@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Gedetecteerd",
       "detect": "Taal herkennen",
-      "more": "Meer talen",
-      "detected": "{{lang}} - Gedetecteerd"
+      "more": "Meer talen"
     },
     "input": {
       "text": "Tekst",
@@ -167,7 +167,7 @@
       "title": "Steun",
       "feedback": {
         "title": "Feedback",
-        "send": "Stuur feedback"
+        "send": "Feedback sturen"
       },
       "about": {
         "title": "Over"
