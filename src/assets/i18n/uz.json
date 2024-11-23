@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Tarjimon",
+    "title": "Sign Tarjima",
     "language-selector": {
       "detected": "{{lang}} - Aniqlandi",
       "detect": "Avtomatik aniqlash",
@@ -54,7 +54,7 @@
     }
   },
   "landing": {
-    "try": "SINAB KO‘RISH",
+    "try": "Tarjima qilish",
     "about": {
       "title": "Xizmat haqida",
       "hero": {

@@ -48,6 +48,18 @@ function replaceBranding(text) {
   return text.replace('Google', 'Sign').replace('GOOGLE', 'SIGN').replace('&#39;', "'").trim();
 }
 
+function checkDiff(a, b, path = '') {
+  if (typeof a === 'object' && typeof b === 'object') {
+    for (const key in a) {
+      checkDiff(a[key], b[key], path + '.' + key);
+    }
+  } else {
+    if (a !== b) {
+      console.log(path, a, b);
+    }
+  }
+}
+
 async function applyGoogleLanguage(language, filePath) {
   console.log({language});
 
@@ -81,13 +93,6 @@ async function applyGoogleLanguage(language, filePath) {
   // //   .replace('xlsx', 'webm')
   // //   .replace('XLSX', 'WEBM')
   // //   .replace(/[,、]? ?.?PPTX/i, '');
-  //
-  // const [privacyTitle, termsTitle, licensesTitle] = [
-  //   ...about.matchAll(/class="h-c-footer__link"[\s\S]*?>\s*(.*?)\s*</g),
-  // ]
-  //   .map(m => m[1])
-  //   .slice(5);
-  //
 
   const extraSuggestion = {
     keyboard: {
@@ -100,11 +105,11 @@ async function applyGoogleLanguage(language, filePath) {
         detected: '{{lang}}',
       },
     },
+  };
+  const extraForce = {
     landing: {
       try: replaceBranding(aboutEl.querySelector('header a.glue-button').innerText),
     },
-  };
-  const extraForce = {
     settings: {
       support: {
         feedback: {
@@ -153,7 +158,8 @@ async function applyGoogleLanguage(language, filePath) {
 
   index = deepmerge(deepmerge(extraSuggestion, index), extraForce);
 
-  console.log(language, extraSuggestion, extraForce);
+  // console.log(language, extraSuggestion, extraForce);
+  checkDiff(extraSuggestion, index);
 
   fs.writeFileSync(filePath, JSON.stringify(index, null, 2) + '\n');
 }
