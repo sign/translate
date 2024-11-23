@@ -11,7 +11,7 @@ export const AppTranslocoProviders = [
       defaultLang: 'en',
       fallbackLang: 'en',
       reRenderOnLangChange: true,
-      prodMode: !isDevMode(),
+      prodMode: true, // TODO !isDevMode(),
       missingHandler: {
         // It will use the first language set in the `fallbackLang` property
         useFallbackTranslation: true,

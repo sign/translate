@@ -12,7 +12,7 @@ import {micOutline, stopCircleOutline} from 'ionicons/icons';
   templateUrl: './speech-to-text.component.html',
   styleUrls: ['./speech-to-text.component.css'],
   standalone: true,
-  imports: [IonButton, IonIcon, TranslocoPipe, MatTooltip, TranslocoDirective],
+  imports: [IonButton, IonIcon, MatTooltip, TranslocoDirective],
 })
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
   @Input() lang = 'en';

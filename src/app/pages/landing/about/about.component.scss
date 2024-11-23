@@ -1,11 +1,11 @@
-@import '../../../../theme/variables';
+@use '../../../../theme/breakpoints' as breakpoints;
 
 :host > * {
   display: block;
   padding: 50px;
   padding-top: 0;
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     padding: 50px 25px;
   }
 }

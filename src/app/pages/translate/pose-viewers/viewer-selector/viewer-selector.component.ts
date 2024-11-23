@@ -4,7 +4,7 @@ import {Store} from '@ngxs/store';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {takeUntil, tap} from 'rxjs/operators';
 import {IonFab, IonFabButton, IonFabList, IonIcon} from '@ionic/angular/standalone';
-import {accessibility, gitCommit, logoApple} from 'ionicons/icons';
+import {accessibility, gitCommit, logoAppleAr} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {MatTooltip} from '@angular/material/tooltip';
 import {TranslocoDirective} from '@ngneat/transloco';
@@ -26,9 +26,9 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
   poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
 
   buttons: MatFabMenu[] = [
-    {id: 'pose', icon: gitCommit, color: 'light'},
-    {id: 'avatar', icon: logoApple, color: 'primary'},
-    {id: 'person', icon: accessibility, color: 'success'},
+    {id: 'pose', icon: 'git-commit', color: 'light'},
+    {id: 'avatar', icon: 'logo-apple-ar', color: 'primary'},
+    {id: 'person', icon: 'accessibility', color: 'success'},
   ];
 
   fab: MatFabMenu;
@@ -37,9 +37,7 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
   constructor(store: Store) {
     super(store);
 
-    for (const button of this.buttons) {
-      addIcons({[button.icon]: button.icon});
-    }
+    addIcons({gitCommit, logoAppleAr, accessibility});
   }
 
   ngOnInit(): void {

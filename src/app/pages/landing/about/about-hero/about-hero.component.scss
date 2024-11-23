@@ -1,7 +1,7 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 :host {
-  @media #{$breakpoint-gt-sm} {
+  @media #{breakpoints.$breakpoint-gt-sm} {
     padding: 200px 50px !important;
   }
 }
@@ -17,7 +17,7 @@
 
   max-width: 1200px;
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     grid-auto-flow: row;
   }
 }
@@ -25,11 +25,11 @@
 h1 {
   font-size: 3em;
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     font-size: 2.5em;
   }
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{breakpoints.$breakpoint-lt-sm} {
     font-size: 2em;
   }
 

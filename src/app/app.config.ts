@@ -5,7 +5,7 @@ import {routes} from './app.routes';
 import {provideClientHydration, withEventReplay} from '@angular/platform-browser';
 import {NavigatorService} from './core/services/navigator/navigator.service';
 import {IonicRouteStrategy} from '@ionic/angular';
-import {HTTP_INTERCEPTORS, provideHttpClient, withFetch} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptorsFromDi} from '@angular/common/http';
 import {TokenInterceptor} from './core/services/http/token-interceptor.service';
 import {AppTranslocoProviders} from './core/modules/transloco/transloco.module';
 import {NgxsModuleOptions, provideStore} from '@ngxs/store';
@@ -14,6 +14,8 @@ import {environment} from '../environments/environment';
 import {provideServiceWorker} from '@angular/service-worker';
 import {provideIonicAngular} from '@ionic/angular/standalone';
 import {isSafari} from './core/constants';
+import {TranslateState} from './modules/translate/translate.state';
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 export const ngxsConfig: NgxsModuleOptions = {
   developmentMode: !environment.production,
@@ -39,6 +41,7 @@ export const appConfig: ApplicationConfig = {
 
     // Ionic theme
     provideIonicAngular({mode: isSafari ? 'ios' : 'md'}),
+    provideAnimations(),
 
     // Service Worker
     provideServiceWorker('ngsw-worker.js', {
@@ -51,7 +54,7 @@ export const appConfig: ApplicationConfig = {
     NavigatorService,
 
     // HTTP Requests
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch(), withInterceptorsFromDi()),
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}, // TODO withInterceptors
 
     ...AppTranslocoProviders,

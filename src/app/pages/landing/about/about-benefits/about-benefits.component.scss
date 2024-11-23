@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 h2 {
   text-align: center;
@@ -18,7 +18,7 @@ p.subtitle {
 }
 
 ion-card {
-  @media #{$breakpoint-gt-sm} {
+  @media #{breakpoints.$breakpoint-gt-sm} {
     display: flex;
   }
   align-items: center;
@@ -74,13 +74,13 @@ ion-card-content {
   max-width: 100%;
   padding: 0;
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     flex-direction: column;
   }
 
   .info {
     padding: 64px;
-    @media #{$breakpoint-lt-md} {
+    @media #{breakpoints.$breakpoint-lt-md} {
       padding: 32px;
     }
   }
@@ -92,7 +92,7 @@ ion-card-content {
     flex-shrink: 0;
     flex-grow: 1;
 
-    @media #{$breakpoint-lt-md} {
+    @media #{breakpoints.$breakpoint-lt-md} {
       height: auto;
       width: 100%;
     }
@@ -100,7 +100,7 @@ ion-card-content {
     .phone-screenshot {
       max-width: calc(100% - 64px);
       margin: auto;
-      @media #{$breakpoint-gt-sm} {
+      @media #{breakpoints.$breakpoint-gt-sm} {
         max-width: 350px;
         margin-top: 64px;
         margin-inline-end: 32px;
@@ -110,7 +110,7 @@ ion-card-content {
     .github-screenshot {
       margin: 32px;
       max-width: calc(100% - 64px);
-      @media #{$breakpoint-gt-sm} {
+      @media #{breakpoints.$breakpoint-gt-sm} {
         margin: 64px;
       }
     }
@@ -131,7 +131,7 @@ ion-card-content {
   app-lazy-map {
     height: 100%;
     display: block;
-    @media #{$breakpoint-gt-sm} {
+    @media #{breakpoints.$breakpoint-gt-sm} {
       aspect-ratio: 1 / 1;
     }
   }

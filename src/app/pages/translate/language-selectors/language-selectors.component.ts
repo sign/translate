@@ -13,9 +13,10 @@ import {addIcons} from 'ionicons';
 import {swapHorizontal} from 'ionicons/icons';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
-import {AsyncPipe} from '@angular/common';
+import {AsyncPipe, CommonModule} from '@angular/common';
 import {MatTooltip} from '@angular/material/tooltip';
 import {TranslocoPipe} from '@ngneat/transloco';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-language-selectors',

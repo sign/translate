@@ -1,7 +1,7 @@
 import {Routes} from '@angular/router';
 import {NotFoundComponent} from './pages/not-found/not-found.component';
 import {TranslateComponent} from './pages/translate/translate.component';
-import {provideStates} from '@ngxs/store';
+import {provideStates, provideStore} from '@ngxs/store';
 import {TranslateState} from './modules/translate/translate.state';
 import {LanguageDetectionService} from './modules/translate/language-detection/language-detection.service';
 import {MediaPipeLanguageDetectionService} from './modules/translate/language-detection/mediapipe.service';
@@ -11,7 +11,7 @@ export const routes: Routes = [
     path: '',
     component: TranslateComponent,
     providers: [
-      provideStates([TranslateState]),
+      provideStore([TranslateState]),
       {provide: LanguageDetectionService, useClass: MediaPipeLanguageDetectionService},
     ],
   },

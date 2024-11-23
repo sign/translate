@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@use 'sass:map';
 
 h3 {
   font-family: 'Google Sans', sans-serif;
@@ -9,14 +10,14 @@ h3 {
 }
 
 p {
-  color: map-get(mat.$m2-light-theme-foreground-palette, secondary-text);
+  color: map.get(mat.$m2-light-theme-foreground-palette, secondary-text);
   font-size: 14px;
   font-weight: 400;
   margin-top: 8px;
   margin-bottom: 26px;
 
   @media (prefers-color-scheme: dark) {
-    color: map-get(mat.$m2-dark-theme-foreground-palette, secondary-text);
+    color: map.get(mat.$m2-dark-theme-foreground-palette, secondary-text);
   }
 }
 

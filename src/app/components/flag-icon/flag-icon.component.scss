@@ -5,6 +5,46 @@ span {
   margin-inline-end: 0.5em;
 }
 
+// fib and fi are copied from the flag-icons package
+.fib {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.fi {
+  @extend .fib;
+  position: relative;
+  display: inline-block;
+  width: 1.333333 * 1em;
+  line-height: 1em;
+
+  &:before {
+    content: '\00a0';
+  }
+
+  &.fis {
+    width: 1em;
+  }
+}
+
+$flag-icons-path: '/assets/flags';
+$flag-icons-rect-path: '/4x3';
+$flag-icons-square-path: '/1x1';
+$flag-icons-use-square: true;
+
+@mixin flag-icon($country) {
+  .fi-#{$country} {
+    background-image: url(#{$flag-icons-path}#{$flag-icons-rect-path}/#{$country}.svg);
+
+    @if $flag-icons-use-square {
+      &.fis {
+        background-image: url(#{$flag-icons-path}#{$flag-icons-square-path}/#{$country}.svg);
+      }
+    }
+  }
+}
+
 /* TODO read from some file? supported languages */
 $flag-icons-included-countries: (
   'sy',
@@ -50,6 +90,6 @@ $flag-icons-included-countries: (
   'pk',
   'ils'
 );
-$flag-icons-path: '/assets/flags';
-
-@import 'flag-icons/sass/flag-icons';
+@each $country in $flag-icons-included-countries {
+  @include flag-icon($country);
+}
