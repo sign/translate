@@ -12,7 +12,7 @@
   "translate": {
     "title": "Sign Cyfieithu",
     "language-selector": {
-      "detected": "{{ lang}} - Wedi canfod",
+      "detected": "{{lang}} - Wedi canfod",
       "detect": "Synhwyro iaith",
       "more": "Mwy o Ieithoedd"
     },

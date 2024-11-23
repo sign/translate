@@ -12,7 +12,7 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
-      "detected": "{{לאַנג}} - דיטעקטאַד",
+      "detected": "{{lang}} - דיטעקטאַד",
       "detect": "ארפינד שפראך",
       "more": "מער שפּראַכן"
     },

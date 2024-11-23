@@ -12,7 +12,7 @@
   "translate": {
     "title": "Sign преводилац",
     "language-selector": {
-      "detected": "{{ланг}} – Откривено",
+      "detected": "{{lang}} – Откривено",
       "detect": "Откриј језик",
       "more": "Више језика"
     },
