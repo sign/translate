@@ -3,7 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AboutPricingComponent} from './about-pricing.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
+
 import {ReactiveFormsModule} from '@angular/forms';
 
 describe('AboutPricingComponent', () => {
@@ -12,7 +12,7 @@ describe('AboutPricingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), ReactiveFormsModule, AboutPricingComponent],
+      imports: [provideTranslocoTesting(), provideIonicAngular(), ReactiveFormsModule, AboutPricingComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutPricingComponent);

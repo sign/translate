@@ -17,6 +17,6 @@ const translocoTestingConfig = {
 
 export const AppTranslocoTestingModule = TranslocoTestingModule.forRoot({...translocoTestingConfig, langs});
 
-export function provideTranslocoTesting() {
+export function provideTranslocoTesting(), {
   return provideTransloco(translocoTestingConfig); // TODO add transloco loader
 }

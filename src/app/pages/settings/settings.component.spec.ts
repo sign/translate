@@ -4,7 +4,7 @@ import {SettingsPageComponent} from './settings.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {RouterTestingModule} from '@angular/router/testing';
-import {IonicModule} from '@ionic/angular';
+
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {SettingsMenuComponent} from './settings-menu/settings-menu.component';
@@ -23,11 +23,11 @@ xdescribe('SettingsPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        IonicModule.forRoot(),
+        provideIonicAngular(),
         RouterTestingModule,
         MatTreeModule,
         CdkTreeModule,
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         SettingsOfflineComponent,
         SettingsAppearanceComponent,
         SettingsFeedbackComponent,

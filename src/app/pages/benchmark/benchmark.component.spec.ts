@@ -4,7 +4,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {BenchmarkComponent} from './benchmark.component';
 import {provideHttpClient} from '@angular/common/http';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
+
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('BenchmarkComponent', () => {
@@ -13,7 +13,7 @@ describe('BenchmarkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), BenchmarkComponent],
+      imports: [provideTranslocoTesting(), provideIonicAngular(), BenchmarkComponent],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });

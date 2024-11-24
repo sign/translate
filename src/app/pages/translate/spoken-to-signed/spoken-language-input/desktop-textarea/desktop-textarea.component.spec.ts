@@ -17,7 +17,7 @@ describe('DesktopTextareaComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         ReactiveFormsModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+       provideStore([SettingsState], ngxsConfig),
         TranslateModule,
         DesktopTextareaComponent,
       ],

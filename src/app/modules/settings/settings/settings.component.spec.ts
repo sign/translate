@@ -5,7 +5,7 @@ import {SettingsComponent} from './settings.component';
 import {NgxsModule, Store} from '@ngxs/store';
 import {SettingsState} from '../settings.state';
 import {FormsModule} from '@angular/forms';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {IonCheckbox, IonItem, IonList} from '@ionic/angular/standalone';
 
@@ -17,9 +17,9 @@ describe('SettingsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+       provideStore([SettingsState], ngxsConfig),
         FormsModule,
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         IonItem,
         IonCheckbox,
         IonList,

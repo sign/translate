@@ -11,7 +11,7 @@ import {AboutBenefitsComponent} from './about-benefits/about-benefits.component'
 import {AboutApiComponent} from './about-api/about-api.component';
 import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
 import {SettingsPageModule} from '../../settings/settings.module';
-import {IonicModule} from '@ionic/angular';
+
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
 import {AboutObjectivesComponent} from './about-objectives/about-objectives.component';
@@ -30,10 +30,10 @@ describe('AboutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTooltipModule,
         MatTabsModule,
-        IonicModule.forRoot(),
+        provideIonicAngular(),
         NoopAnimationsModule,
         AppNgxsModule,
         SettingsPageModule,

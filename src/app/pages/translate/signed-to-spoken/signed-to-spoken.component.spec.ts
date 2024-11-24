@@ -4,7 +4,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {SignedToSpokenComponent} from './signed-to-spoken.component';
 import {NgxsModule} from '@ngxs/store';
 import {VideoState} from '../../../core/modules/ngxs/store/video/video.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../../modules/translate/translate.state';
@@ -20,7 +20,7 @@ describe('SignedToSpokenComponent', () => {
     await TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
+       provideStore([SettingsState, TranslateState, VideoState], ngxsConfig),
         SignedToSpokenComponent,
         TextToSpeechComponent,
       ],

@@ -12,7 +12,7 @@ describe('SpeechToTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, MatTooltipModule, IonIcon, IonButton, SpeechToTextComponent],
+      imports: [provideTranslocoTesting(), MatTooltipModule, IonIcon, IonButton, SpeechToTextComponent],
     }).compileComponents();
   });
 

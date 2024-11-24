@@ -6,7 +6,7 @@ import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {TranslocoService} from '@ngneat/transloco';
-import {IonicModule} from '@ionic/angular';
+
 import {SettingsModule} from '../../modules/settings/settings.module';
 import {VideoModule} from '../../components/video/video.module';
 
@@ -18,9 +18,9 @@ describe('PlaygroundComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         AppNgxsModule,
-        IonicModule.forRoot(),
+        provideIonicAngular(),
         SettingsModule,
         VideoModule,
         PlaygroundComponent,

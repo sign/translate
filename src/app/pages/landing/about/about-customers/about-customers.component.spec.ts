@@ -4,7 +4,7 @@ import {AboutCustomersComponent} from './about-customers.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {IonicModule} from '@ionic/angular';
+
 
 describe('AboutCustomersComponent', () => {
   let component: AboutCustomersComponent;
@@ -12,7 +12,7 @@ describe('AboutCustomersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NoopAnimationsModule, AboutCustomersComponent],
+      imports: [provideTranslocoTesting(), provideIonicAngular(), NoopAnimationsModule, AboutCustomersComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutCustomersComponent);

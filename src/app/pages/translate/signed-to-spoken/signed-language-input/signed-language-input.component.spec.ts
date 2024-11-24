@@ -1,12 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {SignedLanguageInputComponent} from './signed-language-input.component';
-import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
-import {NgxsModule} from '@ngxs/store';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {provideTranslocoTesting} from '../../../../core/modules/transloco/transloco-testing.module';
 import {UploadComponent} from '../upload/upload.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {ngxsConfig} from '../../../../app.config';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 
 describe('SignedLanguageInputComponent', () => {
   let component: SignedLanguageInputComponent;
@@ -15,9 +13,9 @@ describe('SignedLanguageInputComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
-        IonicModule.forRoot(),
-        NgxsModule.forRoot([], ngxsConfig),
+        provideTranslocoTesting(),
+        provideIonicAngular(),
+        provideStore([], ngxsConfig),
         SignedLanguageInputComponent,
         UploadComponent,
       ],

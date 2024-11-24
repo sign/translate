@@ -5,9 +5,9 @@ import {ViewerSelectorComponent} from './viewer-selector.component';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../../app.config';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {IonicModule} from '@ionic/angular';
+
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 describe('ViewerSelectorComponent', () => {
@@ -17,11 +17,11 @@ describe('ViewerSelectorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTooltipModule,
-        IonicModule.forRoot(),
+        provideIonicAngular(),
         NoopAnimationsModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+       provideStore([SettingsState], ngxsConfig),
         ViewerSelectorComponent,
       ],
     }).compileComponents();

@@ -6,9 +6,9 @@ import {Pix2PixModule} from '../../../../modules/pix2pix/pix2pix.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../../app.config';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
+
 
 describe('HumanPoseViewerComponent', () => {
   let component: HumanPoseViewerComponent;
@@ -18,9 +18,9 @@ describe('HumanPoseViewerComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         Pix2PixModule,
-        IonicModule.forRoot(),
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-        AppTranslocoTestingModule,
+        provideIonicAngular(),
+       provideStore([SettingsState], ngxsConfig),
+        provideTranslocoTesting(),
         HumanPoseViewerComponent,
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],

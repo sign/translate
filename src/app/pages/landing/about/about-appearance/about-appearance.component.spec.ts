@@ -12,7 +12,7 @@ describe('AboutAppearanceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, SettingsPageModule, AppNgxsModule, AboutAppearanceComponent],
+      imports: [provideTranslocoTesting(), SettingsPageModule, AppNgxsModule, AboutAppearanceComponent],
     }).compileComponents();
   });
 

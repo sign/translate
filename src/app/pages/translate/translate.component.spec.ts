@@ -2,9 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TranslateComponent} from './translate.component';
-import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
-import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {provideStore, Store} from '@ngxs/store';
 import {LanguageSelectorComponent} from './language-selector/language-selector.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {TranslateState} from '../../modules/translate/translate.state';
@@ -17,6 +15,8 @@ import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {provideHttpClient} from '@angular/common/http';
+import {provideTranslocoTesting} from '../../core/modules/transloco/transloco-testing.module';
+import {ngxsConfig} from '../../app.config';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -27,11 +27,11 @@ describe('TranslateComponent', () => {
     await TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTabsModule,
         MatTooltipModule,
         NoopAnimationsModule,
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
+        provideStore([SettingsState, TranslateState, VideoState], ngxsConfig),
         RouterTestingModule,
         TranslateComponent,
         LanguageSelectorComponent,

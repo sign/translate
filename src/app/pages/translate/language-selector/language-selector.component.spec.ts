@@ -6,10 +6,10 @@ import {AppTranslocoTestingModule} from '../../../core/modules/transloco/translo
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
-import {IonicModule} from '@ionic/angular';
+
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
@@ -22,13 +22,13 @@ describe('LanguageSelectorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTooltipModule,
         MatTabsModule,
         MatMenuModule,
         NoopAnimationsModule,
-        IonicModule.forRoot(),
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        provideIonicAngular(),
+       provideStore([SettingsState, TranslateState], ngxsConfig),
         LanguageSelectorComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],

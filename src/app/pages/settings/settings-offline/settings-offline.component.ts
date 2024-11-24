@@ -13,10 +13,20 @@ import {NestedTreeControl} from '@angular/cdk/tree';
 import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
-import {IonicModule} from '@ionic/angular';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {NgTemplateOutlet} from '@angular/common';
 import {NgxFilesizeModule} from 'ngx-filesize';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
+import {chevronDownOutline, chevronForwardOutline, cloudDownloadOutline, refresh, trash} from 'ionicons/icons';
 
 const OFFLINE_PATHS = {
   avatarGlb: '3d/character.glb',
@@ -41,7 +51,6 @@ if (!isIOS) {
   styleUrls: ['./settings-offline.component.scss'],
   imports: [
     TranslocoDirective,
-    IonicModule,
     MatProgressSpinner,
     MatTree,
     MatTreeNode,
@@ -51,6 +60,14 @@ if (!isIOS) {
     MatTreeNodeOutlet,
     TranslocoPipe,
     NgxFilesizeModule,
+    IonContent,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonBackButton,
+    IonButtons,
+    IonButton,
+    IonIcon,
   ],
 })
 export class SettingsOfflineComponent extends BaseComponent implements OnInit {
@@ -60,6 +77,12 @@ export class SettingsOfflineComponent extends BaseComponent implements OnInit {
   localFiles: {[key: string]: AssetState} = {};
   treeControl = new NestedTreeControl<AssetState>(node => node.children);
   filesTree = new MatTreeNestedDataSource<AssetState>();
+
+  constructor() {
+    super();
+
+    addIcons({refresh, trash, cloudDownloadOutline, chevronDownOutline, chevronForwardOutline});
+  }
 
   async ngOnInit() {
     this.localFiles = this.assetInfo('', OFFLINE_PATHS).children;
@@ -71,7 +94,7 @@ export class SettingsOfflineComponent extends BaseComponent implements OnInit {
     this.transloco.events$
       .pipe(
         tap(() => this.updateLabels()),
-        takeUntil(this.ngUnsubscribe)
+        takeUntil(this.ngUnsubscribe),
       )
       .subscribe();
   }

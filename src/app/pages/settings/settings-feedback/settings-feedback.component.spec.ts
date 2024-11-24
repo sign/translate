@@ -4,9 +4,9 @@ import {SettingsFeedbackComponent} from './settings-feedback.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {IonicModule} from '@ionic/angular';
+
 
 describe('SettingsFeedbackComponent', () => {
   let component: SettingsFeedbackComponent;
@@ -15,9 +15,9 @@ describe('SettingsFeedbackComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
-        IonicModule.forRoot(),
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        provideTranslocoTesting(),
+        provideIonicAngular(),
+       provideStore([SettingsState], ngxsConfig),
         SettingsFeedbackComponent,
       ],
     }).compileComponents();

@@ -6,12 +6,12 @@ import {SignWritingComponent} from '../signwriting/sign-writing.component';
 import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {NgxsModule} from '@ngxs/store';
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {provideHttpClient} from '@angular/common/http';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideTranslocoTesting} from '../../../core/modules/transloco/transloco-testing.module';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('SpokenToSignedComponent', () => {
@@ -22,10 +22,10 @@ describe('SpokenToSignedComponent', () => {
     await TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
         FormsModule,
         ReactiveFormsModule,
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         SpokenToSignedComponent,
         SignWritingComponent,
         TextToSpeechComponent,

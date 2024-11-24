@@ -5,7 +5,7 @@ import {VideoControlsComponent} from './video-controls.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {IonFab, IonFabButton} from '@ionic/angular/standalone';
 
@@ -16,11 +16,11 @@ describe('VideoControlsComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTooltipModule,
         IonFab,
         IonFabButton,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
+       provideStore([SettingsState], ngxsConfig),
         VideoControlsComponent,
       ],
     }).compileComponents();

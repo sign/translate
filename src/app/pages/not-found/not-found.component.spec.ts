@@ -10,7 +10,7 @@ describe('NotFoundComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [NotFoundComponent],
-      providers: [provideTranslocoTesting()],
+      providers: [provideTranslocoTesting(),],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NotFoundComponent);

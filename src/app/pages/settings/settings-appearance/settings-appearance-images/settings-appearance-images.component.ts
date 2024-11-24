@@ -2,14 +2,17 @@ import {Component, Input} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
 import {TranslocoDirective} from '@ngneat/transloco';
 import {MatTooltip} from '@angular/material/tooltip';
-import {IonicModule} from '@ionic/angular';
 import {AsyncPipe} from '@angular/common';
+import {MatFabButton} from '@angular/material/button';
+import {IonIcon} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {diceOutline, images} from 'ionicons/icons';
 
 @Component({
   selector: 'app-settings-appearance-images',
   templateUrl: './settings-appearance-images.component.html',
   styleUrls: ['./settings-appearance-images.component.scss'],
-  imports: [TranslocoDirective, MatTooltip, IonicModule, AsyncPipe],
+  imports: [TranslocoDirective, MatTooltip, AsyncPipe, MatFabButton, IonIcon],
 })
 export class SettingsAppearanceImagesComponent extends BaseSettingsComponent {
   @Input() scale = 1;
@@ -23,4 +26,10 @@ export class SettingsAppearanceImagesComponent extends BaseSettingsComponent {
     {src: 'assets/appearance/random-6.jpg', title: 'Random', value: '', disabled: true},
     {src: 'assets/appearance/random-7.jpg', title: 'Random', value: '', disabled: true},
   ];
+
+  constructor() {
+    super();
+
+    addIcons({diceOutline, images})
+  }
 }

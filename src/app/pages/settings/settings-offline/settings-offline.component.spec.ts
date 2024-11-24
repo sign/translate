@@ -7,7 +7,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {NgxFilesizeModule} from 'ngx-filesize';
-import {IonicModule} from '@ionic/angular';
+
 
 describe('SettingsOfflineComponent', () => {
   let component: SettingsOfflineComponent;
@@ -17,10 +17,10 @@ describe('SettingsOfflineComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         MatTreeModule,
-        IonicModule.forRoot(),
+        provideIonicAngular(),
         CdkTreeModule,
         NgxFilesizeModule,
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         AppNgxsModule,
         SettingsOfflineComponent,
       ],

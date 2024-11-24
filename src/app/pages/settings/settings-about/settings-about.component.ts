@@ -1,13 +1,21 @@
 import {Component} from '@angular/core';
 import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
-import {IonicModule} from '@ionic/angular';
 import {RouterLink} from '@angular/router';
+import {
+  IonBackButton,
+  IonButtons,
+  IonContent,
+  IonHeader, IonItem, IonLabel,
+  IonList,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-settings-about',
   templateUrl: './settings-about.component.html',
   styleUrls: ['./settings-about.component.scss'],
-  imports: [TranslocoDirective, IonicModule, RouterLink, TranslocoPipe],
+  imports: [TranslocoDirective, RouterLink, TranslocoPipe, IonTitle, IonBackButton, IonToolbar, IonHeader, IonButtons, IonContent, IonList, IonItem, IonLabel],
 })
 export class SettingsAboutComponent {
   legalPages: string[] = ['terms', 'privacy', 'licenses'];

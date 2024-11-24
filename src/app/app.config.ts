@@ -4,7 +4,7 @@ import {provideRouter, RouteReuseStrategy} from '@angular/router';
 import {routes} from './app.routes';
 import {provideClientHydration, withEventReplay} from '@angular/platform-browser';
 import {NavigatorService} from './core/services/navigator/navigator.service';
-import {IonicRouteStrategy} from '@ionic/angular';
+import {IonicRouteStrategy, provideIonicAngular} from '@ionic/angular/standalone';
 import {HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptorsFromDi} from '@angular/common/http';
 import {TokenInterceptor} from './core/services/http/token-interceptor.service';
 import {AppTranslocoProviders} from './core/modules/transloco/transloco.module';
@@ -12,7 +12,6 @@ import {NgxsModuleOptions, provideStore} from '@ngxs/store';
 import {SettingsState} from './modules/settings/settings.state';
 import {environment} from '../environments/environment';
 import {provideServiceWorker} from '@angular/service-worker';
-import {provideIonicAngular} from '@ionic/angular/standalone';
 import {isSafari} from './core/constants';
 import {provideAnimations} from '@angular/platform-browser/animations';
 

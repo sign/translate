@@ -6,7 +6,7 @@ import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {AboutComponent} from './about/about.component';
-import {IonicModule} from '@ionic/angular';
+
 import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
 
@@ -17,8 +17,8 @@ describe('LandingComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
-        IonicModule.forRoot(),
+        provideTranslocoTesting(),
+        provideIonicAngular(),
         NoopAnimationsModule,
         RouterModule.forRoot([{path: '', component: AboutComponent}]),
         LandingComponent,

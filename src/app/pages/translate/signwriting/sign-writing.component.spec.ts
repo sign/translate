@@ -5,7 +5,7 @@ import {SignWritingComponent} from './sign-writing.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {defineCustomElements as defineCustomElementsSW} from '@sutton-signwriting/sgnw-components/loader';
 import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {TranslateState, TranslateStateModel} from '../../../modules/translate/translate.state';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
@@ -28,7 +28,7 @@ describe('SignWritingComponent', () => {
     await TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+       provideStore([SettingsState, TranslateState], ngxsConfig),
         MatTooltipModule,
         SignWritingComponent,
       ],

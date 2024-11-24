@@ -6,7 +6,20 @@ import {SettingsVoiceOutputComponent} from '../settings-voice-output/settings-vo
 import {SettingsFeedbackComponent} from '../settings-feedback/settings-feedback.component';
 import {SettingsAppearanceComponent} from '../settings-appearance/settings-appearance.component';
 import {TranslocoDirective} from '@ngneat/transloco';
-import {IonicModule} from '@ionic/angular';
+import {
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonListHeader,
+  IonNavLink,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {airplane, chatbubbles, informationCircle, mic, personCircle, volumeMedium} from 'ionicons/icons';
 
 interface Page {
   path: string;
@@ -23,7 +36,7 @@ interface PagesGroup {
   selector: 'app-settings-menu',
   templateUrl: './settings-menu.component.html',
   styleUrls: ['./settings-menu.component.scss'],
-  imports: [TranslocoDirective, IonicModule],
+  imports: [TranslocoDirective, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonListHeader, IonLabel, IonNavLink, IonItem, IonIcon],
 })
 export class SettingsMenuComponent {
   groups: PagesGroup[] = [
@@ -49,4 +62,8 @@ export class SettingsMenuComponent {
       ],
     },
   ];
+
+  constructor() {
+    addIcons({chatbubbles, informationCircle, mic, volumeMedium, airplane, personCircle});
+  }
 }

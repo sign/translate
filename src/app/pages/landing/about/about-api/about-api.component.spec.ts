@@ -11,7 +11,7 @@ describe('AboutApiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, AppNgxsModule, AboutApiComponent],
+      imports: [provideTranslocoTesting(), AppNgxsModule, AboutApiComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutApiComponent);

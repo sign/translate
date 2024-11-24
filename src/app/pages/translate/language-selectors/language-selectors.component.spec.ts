@@ -5,7 +5,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {TranslateState} from '../../../modules/translate/translate.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
@@ -19,8 +19,8 @@ describe('LanguageSelectorsComponent', () => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
-        AppTranslocoTestingModule,
+       provideStore([SettingsState, TranslateState], ngxsConfig),
+        provideTranslocoTesting(),
         LanguageSelectorsComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],

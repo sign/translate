@@ -3,7 +3,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {SettingsAboutComponent} from './settings-about.component';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {IonicModule} from '@ionic/angular';
+
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 describe('SettingsAboutComponent', () => {
@@ -12,7 +12,7 @@ describe('SettingsAboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), SettingsAboutComponent],
+      imports: [provideTranslocoTesting(), provideIonicAngular(), SettingsAboutComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
 

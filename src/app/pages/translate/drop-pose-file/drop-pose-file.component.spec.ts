@@ -5,7 +5,7 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {DropzoneDirective} from '../../../directives/dropzone.directive';
 import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from '../../../modules/translate/translate.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {provideHttpClient} from '@angular/common/http';
@@ -17,7 +17,7 @@ describe('DropPoseFileComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+       provideStore([SettingsState, TranslateState], ngxsConfig),
         DropPoseFileComponent,
         DropzoneDirective,
       ],

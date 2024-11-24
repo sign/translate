@@ -60,8 +60,9 @@ export class AboutBenefitsComponent extends BaseComponent implements AfterViewIn
   }
 
   ngAfterViewInit() {
-    this.swiper().nativeElement.swiper.on('activeIndexChange', () => {
-      this.activeSlide = this.swiper().nativeElement.swiper.activeIndex;
+    const swiperEl = this.swiper().nativeElement;
+    swiperEl.swiper.on('activeIndexChange', () => {
+      this.activeSlide = swiperEl.swiper.activeIndex;
     });
   }
 }

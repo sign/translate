@@ -22,11 +22,11 @@ describe('VideoComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTooltipModule,
         IonIcon,
         IonFab,
-        NgxsModule.forRoot([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
+       provideStore([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
         VideoComponent,
         VideoControlsComponent,
         AnimationComponent,

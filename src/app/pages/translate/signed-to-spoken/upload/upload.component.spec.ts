@@ -3,10 +3,10 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {UploadComponent} from './upload.component';
 import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../../app.config';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
-import {IonicModule} from '@ionic/angular';
+
 import createSpy = jasmine.createSpy;
 
 function createFileFromMockFile(name: string, body: string, mimeType: string): File {
@@ -23,7 +23,7 @@ describe('UploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([], ngxsConfig), UploadComponent],
+      imports: [provideTranslocoTesting(), provideIonicAngular(),provideStore([], ngxsConfig), UploadComponent],
     }).compileComponents();
   });
 

@@ -9,7 +9,7 @@ import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {VideoState} from '../../../core/modules/ngxs/store/video/video.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
@@ -24,11 +24,11 @@ describe('TranslateMobileComponent', () => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
-        AppTranslocoTestingModule,
+        provideTranslocoTesting(),
         MatTabsModule,
         MatTooltipModule,
         NoopAnimationsModule,
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
+       provideStore([SettingsState, TranslateState, VideoState], ngxsConfig),
         RouterTestingModule,
         TranslateMobileComponent,
       ],
