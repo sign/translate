@@ -25,7 +25,6 @@ describe('TranslateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TranslateComponent, LanguageSelectorComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         AppTranslocoTestingModule,
@@ -34,6 +33,8 @@ describe('TranslateComponent', () => {
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
         RouterTestingModule,
+        TranslateComponent,
+        LanguageSelectorComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();

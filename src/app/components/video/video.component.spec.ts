@@ -21,13 +21,15 @@ describe('VideoComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [VideoComponent, VideoControlsComponent, AnimationComponent],
       imports: [
         AppTranslocoTestingModule,
         MatTooltipModule,
         IonIcon,
         IonFab,
         NgxsModule.forRoot([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
+        VideoComponent,
+        VideoControlsComponent,
+        AnimationComponent,
       ],
     }).compileComponents();
   }));

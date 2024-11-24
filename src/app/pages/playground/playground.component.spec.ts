@@ -17,8 +17,14 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PlaygroundComponent],
-      imports: [AppTranslocoTestingModule, AppNgxsModule, IonicModule.forRoot(), SettingsModule, VideoModule],
+      imports: [
+        AppTranslocoTestingModule,
+        AppNgxsModule,
+        IonicModule.forRoot(),
+        SettingsModule,
+        VideoModule,
+        PlaygroundComponent,
+      ],
     }).compileComponents();
   });
 

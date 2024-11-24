@@ -16,12 +16,14 @@ describe('LandingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LandingComponent, LandingFooterComponent, I18NLanguageSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
         IonicModule.forRoot(),
         NoopAnimationsModule,
         RouterModule.forRoot([{path: '', component: AboutComponent}]),
+        LandingComponent,
+        LandingFooterComponent,
+        I18NLanguageSelectorComponent,
       ],
     }).compileComponents();
   });

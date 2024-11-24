@@ -3,12 +3,14 @@ import {BaseSettingsComponent} from '../settings.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {SettingsStateModel} from '../settings.state';
+import {TranslocoDirective} from '@ngneat/transloco';
+import {IonList, IonItem, IonCheckbox} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css'],
-  standalone: false,
+  imports: [TranslocoDirective, IonList, IonItem, IonCheckbox],
 })
 export class SettingsComponent extends BaseSettingsComponent implements OnInit {
   availableSettings: Array<keyof SettingsStateModel> = [

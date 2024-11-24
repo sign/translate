@@ -22,7 +22,6 @@ describe('TranslateDesktopComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TranslateDesktopComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         AppTranslocoTestingModule,
@@ -31,6 +30,7 @@ describe('TranslateDesktopComponent', () => {
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
         RouterTestingModule,
+        TranslateDesktopComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     });

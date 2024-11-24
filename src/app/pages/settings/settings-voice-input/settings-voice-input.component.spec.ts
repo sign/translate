@@ -15,12 +15,12 @@ describe('SettingsVoiceInputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsVoiceInputComponent],
       imports: [
         MatTooltipModule,
         AppTranslocoTestingModule,
         IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
+        SettingsVoiceInputComponent,
       ],
     }).compileComponents();
 

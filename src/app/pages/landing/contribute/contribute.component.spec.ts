@@ -10,8 +10,7 @@ describe('ContributeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ContributeComponent],
-      imports: [IonicModule.forRoot()],
+      imports: [IonicModule.forRoot(), ContributeComponent],
     }).compileComponents();
   });
 

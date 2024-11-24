@@ -20,13 +20,15 @@ describe('SpokenToSignedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SpokenToSignedComponent, SignWritingComponent, TextToSpeechComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
         FormsModule,
         ReactiveFormsModule,
         AppTranslocoTestingModule,
+        SpokenToSignedComponent,
+        SignWritingComponent,
+        TextToSpeechComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();

@@ -11,8 +11,7 @@ describe('BenchmarkItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BenchmarkItemComponent],
-      imports: [MatTooltipModule, IonicModule.forRoot()],
+      imports: [MatTooltipModule, IonicModule.forRoot(), BenchmarkItemComponent],
     }).compileComponents();
   });
 

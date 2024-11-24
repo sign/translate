@@ -16,7 +16,6 @@ describe('SettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsComponent],
       imports: [
         NgxsModule.forRoot([SettingsState], ngxsConfig),
         FormsModule,
@@ -24,6 +23,7 @@ describe('SettingsComponent', () => {
         IonItem,
         IonCheckbox,
         IonList,
+        SettingsComponent,
       ],
     }).compileComponents();
   });

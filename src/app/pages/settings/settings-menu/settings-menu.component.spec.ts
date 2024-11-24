@@ -11,8 +11,7 @@ describe('SettingsMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsMenuComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), SettingsMenuComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsMenuComponent);

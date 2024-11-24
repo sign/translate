@@ -11,8 +11,7 @@ describe('AboutTeamComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutTeamComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), AboutTeamComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutTeamComponent);

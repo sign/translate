@@ -12,8 +12,7 @@ describe('SettingsAboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsAboutComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), SettingsAboutComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
 

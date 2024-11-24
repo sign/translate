@@ -26,9 +26,12 @@ describe('SignWritingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignWritingComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), MatTooltipModule],
+      imports: [
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        MatTooltipModule,
+        SignWritingComponent,
+      ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 

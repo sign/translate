@@ -9,8 +9,7 @@ describe('AvatarPoseViewerComponent', () => {
   let fixture: ComponentFixture<AvatarPoseViewerComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AvatarPoseViewerComponent],
-      imports: [AppNgxsModule],
+      imports: [AppNgxsModule, AvatarPoseViewerComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });

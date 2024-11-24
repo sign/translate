@@ -16,13 +16,13 @@ describe('ViewerSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ViewerSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
         MatTooltipModule,
         IonicModule.forRoot(),
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState], ngxsConfig),
+        ViewerSelectorComponent,
       ],
     }).compileComponents();
   });

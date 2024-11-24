@@ -18,8 +18,7 @@ describe('AboutBenefitsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutBenefitsComponent, LazyMapComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), AboutBenefitsComponent, LazyMapComponent],
       providers: [provideHttpClient(), provideHttpClientTesting()],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();

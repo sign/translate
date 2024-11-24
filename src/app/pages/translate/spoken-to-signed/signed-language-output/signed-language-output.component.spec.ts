@@ -17,9 +17,12 @@ describe('SignedLanguageOutputComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SignedLanguageOutputComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), AppTranslocoTestingModule],
+      imports: [
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        AppTranslocoTestingModule,
+        SignedLanguageOutputComponent,
+      ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(SignedLanguageOutputComponent);

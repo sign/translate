@@ -12,8 +12,7 @@ describe('MainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MainComponent],
-      imports: [IonLabel, IonIcon, IonTabButton, IonTabBar, IonTabs, RouterTestingModule],
+      imports: [IonLabel, IonIcon, IonTabButton, IonTabBar, IonTabs, RouterTestingModule, MainComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MainComponent);

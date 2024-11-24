@@ -14,8 +14,12 @@ describe('SettingsFeedbackComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsFeedbackComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [
+        AppTranslocoTestingModule,
+        IonicModule.forRoot(),
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        SettingsFeedbackComponent,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsFeedbackComponent);

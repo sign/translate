@@ -1,11 +1,23 @@
 import {Component, OnInit} from '@angular/core';
 import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
-import {MatTreeNestedDataSource} from '@angular/material/tree';
+import {
+  MatTreeNestedDataSource,
+  MatTree,
+  MatTreeNodeDef,
+  MatTreeNode,
+  MatNestedTreeNode,
+  MatTreeNodeToggle,
+  MatTreeNodeOutlet,
+} from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoService, TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
+import {IonicModule} from '@ionic/angular';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import {NgTemplateOutlet} from '@angular/common';
+import {NgxFilesizeModule} from 'ngx-filesize';
 
 const OFFLINE_PATHS = {
   avatarGlb: '3d/character.glb',
@@ -28,7 +40,20 @@ if (!isIOS) {
   selector: 'app-settings-offline',
   templateUrl: './settings-offline.component.html',
   styleUrls: ['./settings-offline.component.scss'],
-  standalone: false,
+  imports: [
+    TranslocoDirective,
+    IonicModule,
+    MatProgressSpinner,
+    MatTree,
+    MatTreeNodeDef,
+    MatTreeNode,
+    NgTemplateOutlet,
+    MatNestedTreeNode,
+    MatTreeNodeToggle,
+    MatTreeNodeOutlet,
+    TranslocoPipe,
+    NgxFilesizeModule,
+  ],
 })
 export class SettingsOfflineComponent extends BaseComponent implements OnInit {
   localFiles: {[key: string]: AssetState} = {};

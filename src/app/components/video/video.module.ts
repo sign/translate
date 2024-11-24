@@ -23,8 +23,9 @@ import {IonFab, IonFabButton, IonIcon} from '@ionic/angular/standalone';
     IonFab,
     IonFabButton,
     NgxsModule.forFeature([VideoState, SignWritingState, DetectorState]),
+    VideoComponent,
+    VideoControlsComponent,
   ],
-  declarations: [VideoComponent, VideoControlsComponent],
   exports: [VideoComponent],
 })
 export class VideoModule {}

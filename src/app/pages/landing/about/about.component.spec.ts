@@ -29,9 +29,17 @@ describe('AboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AboutComponent,
+      imports: [
+        AppTranslocoTestingModule,
+        MatTooltipModule,
+        MatTabsModule,
+        IonicModule.forRoot(),
+        NoopAnimationsModule,
+        AppNgxsModule,
+        SettingsPageModule,
+        ReactiveFormsModule,
         AboutHeroComponent,
+        AboutComponent,
         AboutAppearanceComponent,
         AboutObjectivesComponent,
         AboutFaqComponent,
@@ -43,16 +51,6 @@ describe('AboutComponent', () => {
         AboutApiComponent,
         StoresComponent,
         LazyMapComponent,
-      ],
-      imports: [
-        AppTranslocoTestingModule,
-        MatTooltipModule,
-        MatTabsModule,
-        IonicModule.forRoot(),
-        NoopAnimationsModule,
-        AppNgxsModule,
-        SettingsPageModule,
-        ReactiveFormsModule,
       ],
     }).compileComponents();
   });

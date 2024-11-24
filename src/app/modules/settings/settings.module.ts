@@ -7,9 +7,16 @@ import {FormsModule} from '@angular/forms';
 import {IonCheckbox, IonItem, IonList} from '@ionic/angular/standalone';
 
 @NgModule({
-  declarations: [SettingsComponent],
   providers: [],
-  imports: [NgxsModule.forFeature([SettingsState]), AppSharedModule, FormsModule, IonItem, IonCheckbox, IonList],
+  imports: [
+    NgxsModule.forFeature([SettingsState]),
+    AppSharedModule,
+    FormsModule,
+    IonItem,
+    IonCheckbox,
+    IonList,
+    SettingsComponent,
+  ],
   exports: [SettingsComponent],
 })
 export class SettingsModule {}

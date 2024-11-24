@@ -21,7 +21,6 @@ describe('LanguageSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LanguageSelectorComponent],
       imports: [
         AppTranslocoTestingModule,
         MatTooltipModule,
@@ -30,6 +29,7 @@ describe('LanguageSelectorComponent', () => {
         NoopAnimationsModule,
         IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        LanguageSelectorComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();

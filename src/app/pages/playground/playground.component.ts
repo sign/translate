@@ -10,7 +10,6 @@ import {Observable} from 'rxjs';
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss'],
-  standalone: false,
 })
 export class PlaygroundComponent extends BaseComponent implements OnInit {
   receiveVideo$: Observable<boolean>;

@@ -4,9 +4,8 @@ import {NgxsModule} from '@ngxs/store';
 import {AnimationState} from '../../modules/animation/animation.state';
 
 @NgModule({
-  declarations: [AnimationComponent],
   exports: [AnimationComponent],
-  imports: [NgxsModule.forFeature([AnimationState])],
+  imports: [NgxsModule.forFeature([AnimationState]), AnimationComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AnimationModule {}

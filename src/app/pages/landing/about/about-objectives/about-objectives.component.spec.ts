@@ -11,8 +11,7 @@ describe('AboutObjectivesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutObjectivesComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), AboutObjectivesComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutObjectivesComponent);

@@ -17,9 +17,12 @@ describe('LanguageSelectorsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LanguageSelectorsComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), AppTranslocoTestingModule],
+      imports: [
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        AppTranslocoTestingModule,
+        LanguageSelectorsComponent,
+      ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(LanguageSelectorsComponent);

@@ -5,6 +5,8 @@ import {SettingsVoiceInputComponent} from '../settings-voice-input/settings-voic
 import {SettingsVoiceOutputComponent} from '../settings-voice-output/settings-voice-output.component';
 import {SettingsFeedbackComponent} from '../settings-feedback/settings-feedback.component';
 import {SettingsAppearanceComponent} from '../settings-appearance/settings-appearance.component';
+import {TranslocoDirective} from '@ngneat/transloco';
+import {IonicModule} from '@ionic/angular';
 
 interface Page {
   path: string;
@@ -21,7 +23,7 @@ interface PagesGroup {
   selector: 'app-settings-menu',
   templateUrl: './settings-menu.component.html',
   styleUrls: ['./settings-menu.component.scss'],
-  standalone: false,
+  imports: [TranslocoDirective, IonicModule],
 })
 export class SettingsMenuComponent {
   groups: PagesGroup[] = [

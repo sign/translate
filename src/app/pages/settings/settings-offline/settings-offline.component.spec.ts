@@ -15,7 +15,6 @@ describe('SettingsOfflineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsOfflineComponent],
       imports: [
         MatTreeModule,
         IonicModule.forRoot(),
@@ -23,6 +22,7 @@ describe('SettingsOfflineComponent', () => {
         NgxFilesizeModule,
         AppTranslocoTestingModule,
         AppNgxsModule,
+        SettingsOfflineComponent,
       ],
     }).compileComponents();
 

@@ -23,8 +23,7 @@ describe('UploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UploadComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([], ngxsConfig)],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([], ngxsConfig), UploadComponent],
     }).compileComponents();
   });
 

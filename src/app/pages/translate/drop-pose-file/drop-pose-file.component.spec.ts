@@ -16,8 +16,11 @@ describe('DropPoseFileComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DropPoseFileComponent, DropzoneDirective],
-      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig)],
+      imports: [
+        NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig),
+        DropPoseFileComponent,
+        DropzoneDirective,
+      ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 

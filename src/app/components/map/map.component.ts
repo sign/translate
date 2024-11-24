@@ -13,7 +13,7 @@ function logMax(arr: number[]) {
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
-  standalone: false,
+  imports: [LeafletModule],
 })
 export class MapComponent extends BaseComponent implements OnInit {
   static mapGeoJson = null;
@@ -105,8 +105,7 @@ export class MapComponent extends BaseComponent implements OnInit {
 }
 
 @NgModule({
-  declarations: [MapComponent],
-  imports: [LeafletModule],
+  imports: [LeafletModule, MapComponent],
   providers: [provideHttpClient()],
 })
 export class MapModule {}

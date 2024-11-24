@@ -11,7 +11,6 @@ import {isChrome} from '../../../core/constants';
   selector: 'app-pose-viewer',
   template: ``,
   styles: [],
-  standalone: false,
 })
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnInit, OnDestroy {
   @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;

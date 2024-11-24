@@ -14,8 +14,13 @@ describe('SignedLanguageInputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignedLanguageInputComponent, UploadComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([], ngxsConfig)],
+      imports: [
+        AppTranslocoTestingModule,
+        IonicModule.forRoot(),
+        NgxsModule.forRoot([], ngxsConfig),
+        SignedLanguageInputComponent,
+        UploadComponent,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SignedLanguageInputComponent);

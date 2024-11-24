@@ -13,7 +13,7 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NotFoundComponent],
+      imports: [NotFoundComponent],
       providers: [provideTranslocoTesting()],
     }).compileComponents();
 

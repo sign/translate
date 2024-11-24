@@ -9,7 +9,7 @@ describe('FlagIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FlagIconComponent],
+      imports: [FlagIconComponent],
     }).compileComponents();
   });
 

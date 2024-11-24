@@ -7,7 +7,6 @@ import {SITE_LANGUAGES} from '../../core/modules/transloco/languages';
   selector: 'app-i18n-language-selector',
   templateUrl: './i18n-language-selector.component.html',
   styleUrls: ['./i18n-language-selector.component.scss'],
-  standalone: false,
 })
 export class I18NLanguageSelectorComponent {
   current: string;

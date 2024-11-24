@@ -12,8 +12,7 @@ describe('AboutHeroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutHeroComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NoopAnimationsModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NoopAnimationsModule, AboutHeroComponent],
     }).compileComponents();
   });
 

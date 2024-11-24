@@ -4,7 +4,6 @@ import {Component} from '@angular/core';
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
   styleUrls: ['./contribute.component.scss'],
-  standalone: false,
 })
 export class ContributeComponent {
   cards = [

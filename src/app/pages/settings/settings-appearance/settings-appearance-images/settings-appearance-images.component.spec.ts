@@ -15,12 +15,12 @@ describe('SettingsAppearanceImagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsAppearanceImagesComponent],
       imports: [
         AppTranslocoTestingModule,
         MatTooltipModule,
         IonicModule.forRoot(),
         NgxsModule.forRoot([SettingsState], ngxsConfig),
+        SettingsAppearanceImagesComponent,
       ],
     }).compileComponents();
 

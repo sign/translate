@@ -12,8 +12,7 @@ describe('AboutPricingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutPricingComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), ReactiveFormsModule],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), ReactiveFormsModule, AboutPricingComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutPricingComponent);

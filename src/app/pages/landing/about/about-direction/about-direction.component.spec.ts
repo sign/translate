@@ -11,8 +11,7 @@ describe('AboutDirectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AboutDirectionComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
+      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), AboutDirectionComponent],
     }).compileComponents();
   });
 

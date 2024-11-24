@@ -6,7 +6,6 @@ import {Observable} from 'rxjs';
   selector: 'app-about-api',
   templateUrl: './about-api.component.html',
   styleUrls: ['./about-api.component.scss'],
-  standalone: false,
 })
 export class AboutApiComponent {
   appearance$: Observable<string>;

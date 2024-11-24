@@ -13,8 +13,7 @@ describe('SkeletonPoseViewerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SkeletonPoseViewerComponent],
-      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig), SkeletonPoseViewerComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });

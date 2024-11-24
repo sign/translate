@@ -19,17 +19,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
-  declarations: [
-    SettingsPageComponent,
-    SettingsOfflineComponent,
-    SettingsAppearanceComponent,
-    SettingsFeedbackComponent,
-    SettingsAboutComponent,
-    SettingsVoiceInputComponent,
-    SettingsVoiceOutputComponent,
-    SettingsMenuComponent,
-    SettingsAppearanceImagesComponent,
-  ],
+  declarations: [SettingsPageComponent],
   imports: [
     CommonModule,
     AppTranslocoModule,
@@ -40,6 +30,14 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatTreeModule,
     CdkTreeModule,
     IonicModule,
+    SettingsOfflineComponent,
+    SettingsAppearanceComponent,
+    SettingsFeedbackComponent,
+    SettingsAboutComponent,
+    SettingsVoiceInputComponent,
+    SettingsVoiceOutputComponent,
+    SettingsMenuComponent,
+    SettingsAppearanceImagesComponent,
   ],
   bootstrap: [SettingsPageComponent],
   exports: [SettingsAppearanceComponent, SettingsAppearanceImagesComponent],

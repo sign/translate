@@ -21,7 +21,6 @@ describe('SpokenLanguageInputComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SpokenLanguageInputComponent, DesktopTextareaComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         NgxsModule.forRoot([SettingsState], ngxsConfig),
@@ -29,6 +28,8 @@ describe('SpokenLanguageInputComponent', () => {
         FormsModule,
         ReactiveFormsModule,
         AppTranslocoTestingModule,
+        SpokenLanguageInputComponent,
+        DesktopTextareaComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     });

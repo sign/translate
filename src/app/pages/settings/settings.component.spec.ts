@@ -22,8 +22,12 @@ xdescribe('SettingsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        SettingsPageComponent,
+      imports: [
+        IonicModule.forRoot(),
+        RouterTestingModule,
+        MatTreeModule,
+        CdkTreeModule,
+        AppTranslocoTestingModule,
         SettingsOfflineComponent,
         SettingsAppearanceComponent,
         SettingsFeedbackComponent,
@@ -32,8 +36,8 @@ xdescribe('SettingsPageComponent', () => {
         SettingsVoiceOutputComponent,
         SettingsMenuComponent,
         SettingsAppearanceImagesComponent,
+        SettingsPageComponent,
       ],
-      imports: [IonicModule.forRoot(), RouterTestingModule, MatTreeModule, CdkTreeModule, AppTranslocoTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsPageComponent);

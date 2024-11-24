@@ -15,8 +15,12 @@ describe('DesktopTextareaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DesktopTextareaComponent],
-      imports: [ReactiveFormsModule, NgxsModule.forRoot([SettingsState], ngxsConfig), TranslateModule],
+      imports: [
+        ReactiveFormsModule,
+        NgxsModule.forRoot([SettingsState], ngxsConfig),
+        TranslateModule,
+        DesktopTextareaComponent,
+      ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 

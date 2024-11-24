@@ -22,7 +22,6 @@ describe('TranslateMobileComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TranslateMobileComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         AppTranslocoTestingModule,
@@ -31,6 +30,7 @@ describe('TranslateMobileComponent', () => {
         NoopAnimationsModule,
         NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
         RouterTestingModule,
+        TranslateMobileComponent,
       ],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     });
