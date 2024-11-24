@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {provideStates, provideStore, Store} from '@ngxs/store';
+import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
@@ -10,9 +10,6 @@ import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
 import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
-import {TranslateState} from '../../modules/translate/translate.state';
-import {LanguageDetectionService} from '../../modules/translate/language-detection/language-detection.service';
-import {MediaPipeLanguageDetectionService} from '../../modules/translate/language-detection/mediapipe.service';
 
 @Component({
   selector: 'app-translate',

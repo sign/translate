@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {NgxsModule, provideStore} from '@ngxs/store';
+import {NgxsModule} from '@ngxs/store';
 import {TranslateState} from './translate.state';
 import {TranslationService} from './translate.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';

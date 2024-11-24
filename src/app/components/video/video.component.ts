@@ -72,6 +72,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    console.log(this.videoEl);
     this.setCamera();
     this.setStats();
     this.trackPose();

@@ -17,7 +17,7 @@ import {UploadComponent} from './upload/upload.component';
 import {addIcons} from 'ionicons';
 import {copyOutline} from 'ionicons/icons';
 import {TranslocoPipe} from '@ngneat/transloco';
-import {AsyncPipe} from '@angular/common';
+import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
 
 const FAKE_WORDS = [
   {
@@ -100,6 +100,7 @@ const FAKE_WORDS = [
     IonIcon,
     TranslocoPipe,
     AsyncPipe,
+    NgTemplateOutlet,
   ],
 })
 export class SignedToSpokenComponent implements OnInit {

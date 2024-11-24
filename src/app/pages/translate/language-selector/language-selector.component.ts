@@ -5,14 +5,12 @@ import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
-import {MatTab, MatTabGroup, MatTabLabel, MatTabsModule} from '@angular/material/tabs';
+import {MatTabsModule} from '@angular/material/tabs';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
-import {MatMenu, MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
+import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
 import {addIcons} from 'ionicons';
 import {chevronDown} from 'ionicons/icons';
-import {BrowserAnimationsModule, NoopAnimationsModule, provideAnimations} from '@angular/platform-browser/animations';
-import {CommonModule} from '@angular/common';
 
 const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'language', countries: 'region'};
 

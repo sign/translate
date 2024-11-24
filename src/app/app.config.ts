@@ -14,7 +14,6 @@ import {environment} from '../environments/environment';
 import {provideServiceWorker} from '@angular/service-worker';
 import {provideIonicAngular} from '@ionic/angular/standalone';
 import {isSafari} from './core/constants';
-import {TranslateState} from './modules/translate/translate.state';
 import {provideAnimations} from '@angular/platform-browser/animations';
 
 export const ngxsConfig: NgxsModuleOptions = {
