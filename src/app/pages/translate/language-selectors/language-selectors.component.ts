@@ -1,4 +1,4 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
+import {Component, HostBinding, OnInit, inject} from '@angular/core';
 import {
   FlipTranslationDirection,
   SetSignedLanguage,
@@ -13,10 +13,9 @@ import {addIcons} from 'ionicons';
 import {swapHorizontal} from 'ionicons/icons';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
-import {AsyncPipe, CommonModule} from '@angular/common';
+import {AsyncPipe} from '@angular/common';
 import {MatTooltip} from '@angular/material/tooltip';
 import {TranslocoPipe} from '@ngneat/transloco';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-language-selectors',
@@ -26,6 +25,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [IonButton, IonIcon, LanguageSelectorComponent, AsyncPipe, MatTooltip, TranslocoPipe],
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {
+  private store = inject(Store);
+  translation = inject(TranslationService);
+
   spokenToSigned$: Observable<boolean>;
   spokenLanguage$: Observable<string>;
   signedLanguage$: Observable<string>;
@@ -33,7 +35,7 @@ export class LanguageSelectorsComponent extends BaseComponent implements OnInit 
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
-  constructor(private store: Store, public translation: TranslationService) {
+  constructor() {
     super();
     this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
     this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);

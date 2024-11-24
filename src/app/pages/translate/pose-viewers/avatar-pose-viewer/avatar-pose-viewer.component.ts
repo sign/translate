@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, Input} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, Input, inject} from '@angular/core';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {Store} from '@ngxs/store';
 import {fromEvent} from 'rxjs';
@@ -17,10 +17,6 @@ export class AvatarPoseViewerComponent extends BasePoseViewerComponent implement
   @Input() src: string;
 
   effectiveFps: number = 1;
-
-  constructor(store: Store) {
-    super(store);
-  }
 
   ngAfterViewInit(): void {
     const poseEl = this.poseEl.nativeElement;

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {BaseSettingsComponent} from '../../../modules/settings/settings.component';
 import {MatTooltip} from '@angular/material/tooltip';
@@ -16,9 +16,8 @@ import {TranslocoDirective} from '@ngneat/transloco';
   imports: [MatTooltip, AsyncPipe, IonFab, IonFabButton, IonIcon, TranslocoDirective],
 })
 export class VideoControlsComponent extends BaseSettingsComponent {
-  constructor(store: Store) {
-    super(store);
-
+  constructor() {
+    super();
     addIcons({videocamOutline, videocamOffOutline});
   }
 }

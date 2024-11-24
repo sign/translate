@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, inject} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
 import {Store} from '@ngxs/store';
 import {TranslocoDirective} from '@ngneat/transloco';
@@ -24,8 +24,4 @@ export class SettingsAppearanceImagesComponent extends BaseSettingsComponent {
     {src: 'assets/appearance/random-6.jpg', title: 'Random', value: '', disabled: true},
     {src: 'assets/appearance/random-7.jpg', title: 'Random', value: '', disabled: true},
   ];
-
-  constructor(store: Store) {
-    super(store);
-  }
 }

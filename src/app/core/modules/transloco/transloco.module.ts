@@ -21,9 +21,3 @@ export const AppTranslocoProviders = [
   }),
   translocoScopes,
 ];
-
-@NgModule({
-  exports: [TranslocoModule],
-  providers: AppTranslocoProviders,
-})
-export class AppTranslocoModule {}

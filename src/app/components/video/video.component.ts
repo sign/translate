@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {combineLatest, firstValueFrom, Observable} from 'rxjs';
 import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
@@ -28,6 +28,11 @@ import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
   imports: [AnimationComponent, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
+  private store = inject(Store);
+  private poseService = inject(PoseService);
+  private signWritingService = inject(SignWritingService);
+  private elementRef = inject(ElementRef);
+
   settingsState$!: Observable<SettingsStateModel>;
   animatePose$!: Observable<boolean>;
 
@@ -53,12 +58,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   fpsStats = new Stats();
   signingStats = new Stats();
 
-  constructor(
-    private store: Store,
-    private poseService: PoseService,
-    private signWritingService: SignWritingService,
-    private elementRef: ElementRef
-  ) {
+  constructor() {
     super();
 
     this.settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);

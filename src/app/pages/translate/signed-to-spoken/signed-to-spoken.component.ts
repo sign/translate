@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
 import {InputMode} from '../../../modules/translate/translate.state';
@@ -104,12 +104,14 @@ const FAKE_WORDS = [
   ],
 })
 export class SignedToSpokenComponent implements OnInit {
+  private store = inject(Store);
+
   videoState$!: Observable<VideoStateModel>;
   inputMode$!: Observable<InputMode>;
   spokenLanguage$!: Observable<string>;
   spokenLanguageText$!: Observable<string>;
 
-  constructor(private store: Store) {
+  constructor() {
     this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
     this.inputMode$ = this.store.select<InputMode>(state => state.translate.inputMode);
     this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);

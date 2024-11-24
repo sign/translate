@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import {LanguageIdentifier} from 'cld3-asm';
 import {GoogleAnalyticsService} from '../../../core/modules/google-analytics/google-analytics.service';
 import {TranslationService} from '../translate.service';
@@ -8,9 +8,13 @@ import {LanguageDetectionService} from './language-detection.service';
   providedIn: 'root',
 })
 export class CLD3LanguageDetectionService extends LanguageDetectionService {
+  private ga = inject(GoogleAnalyticsService);
+
   private cld: LanguageIdentifier;
 
-  constructor(private ga: GoogleAnalyticsService, translationService: TranslationService) {
+  constructor() {
+    const translationService = inject(TranslationService);
+
     super(translationService);
   }
 

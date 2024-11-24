@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -39,13 +39,13 @@ import {cloudUpload, language, videocam} from 'ionicons/icons';
   ],
 })
 export class TranslateDesktopComponent extends BaseComponent implements OnInit {
-  spokenToSigned$: Observable<boolean>;
+  private store = inject(Store);
+  spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
+
   spokenToSigned: boolean;
 
-  constructor(private store: Store) {
+  constructor() {
     super();
-
-    this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
 
     addIcons({language, videocam, cloudUpload});
   }

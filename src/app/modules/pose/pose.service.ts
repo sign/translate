@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {EMPTY_LANDMARK, EstimatedPose, PoseLandmark} from './pose.state';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
@@ -10,6 +10,9 @@ const IGNORED_BODY_LANDMARKS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18
   providedIn: 'root',
 })
 export class PoseService {
+  private ga = inject(GoogleAnalyticsService);
+  private holistic = inject(MediapipeHolisticService);
+
   model?: any;
 
   // loadPromise must be static, in case multiple PoseService instances are created (during testing)
@@ -17,8 +20,6 @@ export class PoseService {
 
   isFirstFrame = true;
   onResultsCallbacks = [];
-
-  constructor(private ga: GoogleAnalyticsService, private holistic: MediapipeHolisticService) {}
 
   onResults(onResultsCallback) {
     this.onResultsCallbacks.push(onResultsCallback);

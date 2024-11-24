@@ -7,8 +7,8 @@
 
   <div class="slides">
     <swiper-container #swiper>
-      @for (slide of slides; track slide.id; let idx = $index) {
-      <swiper-slide *ngFor="let slide of slides">
+      @for (slide of slides; track slide.id; let idx = $index) { @for (slide of slides; track slide) {
+      <swiper-slide>
         <ion-card *transloco="let t; read: 'landing.about.benefits'">
           <ion-card-content>
             <div class="info">
@@ -31,7 +31,7 @@
           </ion-card-content>
         </ion-card>
       </swiper-slide>
-      }
+      } }
     </swiper-container>
 
     <!-- Navigation Buttons -->

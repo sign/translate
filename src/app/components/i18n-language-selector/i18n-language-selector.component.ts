@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {ActivatedRoute, Router} from '@angular/router';
 import {SITE_LANGUAGES} from '../../core/modules/transloco/languages';
@@ -9,11 +9,17 @@ import {SITE_LANGUAGES} from '../../core/modules/transloco/languages';
   styleUrls: ['./i18n-language-selector.component.scss'],
 })
 export class I18NLanguageSelectorComponent {
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+  private transloco = inject(TranslocoService);
+
   current: string;
 
   languages = this.groupLanguages();
 
-  constructor(private router: Router, private route: ActivatedRoute, private transloco: TranslocoService) {
+  constructor() {
+    const transloco = this.transloco;
+
     this.current = transloco.getActiveLang();
   }
 

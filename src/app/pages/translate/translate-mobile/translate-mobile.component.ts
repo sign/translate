@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {TranslateDesktopComponent} from '../translate-desktop/translate-desktop.component';
 import {IonContent, IonFooter, IonHeader, IonToolbar} from '@ionic/angular/standalone';
@@ -25,8 +25,4 @@ import {LanguageSelectorsComponent} from '../language-selectors/language-selecto
     LanguageSelectorsComponent,
   ],
 })
-export class TranslateMobileComponent extends TranslateDesktopComponent {
-  constructor(store: Store) {
-    super(store);
-  }
-}
+export class TranslateMobileComponent extends TranslateDesktopComponent {}

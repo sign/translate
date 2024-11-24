@@ -1,4 +1,13 @@
-import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, OnDestroy, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
+  Input,
+  OnDestroy,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
 import {fromEvent, interval} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -19,6 +28,8 @@ import {TranslocoDirective} from '@ngneat/transloco';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {
+  private pix2pix = inject(Pix2PixService);
+
   appearance$ = this.store.select<string>(state => state.settings.appearance);
 
   @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
@@ -31,10 +42,6 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   modelReady = false;
 
   totalFrames = 1;
-
-  constructor(store: Store, private pix2pix: Pix2PixService) {
-    super(store);
-  }
 
   ngAfterViewInit(): void {
     const pose = this.poseEl.nativeElement;

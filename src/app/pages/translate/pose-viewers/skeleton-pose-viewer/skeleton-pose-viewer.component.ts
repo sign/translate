@@ -2,8 +2,6 @@ import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, Input} from '@angular/
 import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
-import {Store} from '@ngxs/store';
-import {MediaMatcher} from '@angular/cdk/layout';
 import {PlayableVideoEncoder} from '../playable-video-encoder';
 
 @Component({
@@ -15,14 +13,6 @@ import {PlayableVideoEncoder} from '../playable-video-encoder';
 })
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
-
-  colorSchemeMedia!: MediaQueryList;
-
-  constructor(store: Store, private mediaMatcher: MediaMatcher) {
-    super(store);
-
-    this.colorSchemeMedia = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
-  }
 
   ngAfterViewInit(): void {
     const pose = this.poseEl.nativeElement;

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
 import {Store} from '@ngxs/store';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
@@ -34,9 +34,8 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
   fab: MatFabMenu;
   fabButtons: MatFabMenu[] = [];
 
-  constructor(store: Store) {
-    super(store);
-
+  constructor() {
+    super();
     addIcons({gitCommit, logoAppleAr, accessibility});
   }
 

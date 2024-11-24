@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
 import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
@@ -22,6 +22,9 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   imports: [IonButton, IonIcon, MatMenuTrigger, FlagIconComponent, MatMenuModule, TranslocoDirective, MatTabsModule],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
+  private store = inject(Store);
+  private transloco = inject(TranslocoService);
+
   detectedLanguage: string;
 
   @Input() flags = false;
@@ -40,7 +43,7 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit, 
   langNames: {[lang: string]: string} = {};
   langCountries: {[lang: string]: string} = {};
 
-  constructor(private store: Store, private transloco: TranslocoService) {
+  constructor() {
     super();
 
     addIcons({chevronDown});

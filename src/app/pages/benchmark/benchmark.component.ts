@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
 import {PoseService} from '../../modules/pose/pose.service';
@@ -11,6 +11,11 @@ import {LanguageDetectionService} from '../../modules/translate/language-detecti
   styleUrls: ['./benchmark.component.scss'],
 })
 export class BenchmarkComponent {
+  private ga = inject(GoogleAnalyticsService);
+  private pix2pix = inject(Pix2PixService);
+  private languageDetection = inject(LanguageDetectionService);
+  private pose = inject(PoseService);
+
   benchmarks = {
     cld: this.cldBench.bind(this),
     pix2pix: this.pix2pixBench.bind(this),
@@ -18,13 +23,6 @@ export class BenchmarkComponent {
   };
 
   stats: {[key: string]: {[key: string]: number[]}} = {};
-
-  constructor(
-    private ga: GoogleAnalyticsService,
-    private pix2pix: Pix2PixService,
-    private languageDetection: LanguageDetectionService,
-    private pose: PoseService
-  ) {}
 
   async bench() {
     for (const bench of Object.values(this.benchmarks)) {

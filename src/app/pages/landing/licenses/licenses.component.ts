@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {AssetState} from '../../../core/services/assets/assets.service';
@@ -24,10 +24,10 @@ type Node = PackagesParent | PackageLicense;
   styleUrls: ['./licenses.component.scss'],
 })
 export class LicensesComponent implements OnInit {
+  private httpClient = inject(HttpClient);
+
   treeControl = new NestedTreeControl<Node>((node: any) => node.children);
   filesTree = new MatTreeNestedDataSource<Node>();
-
-  constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {
     this.httpClient.get('/licenses.json').subscribe((licenses: any) => {

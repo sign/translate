@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject} from '@angular/core';
 import {Swiper} from 'swiper/types';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {TranslocoService} from '@ngneat/transloco';
@@ -11,6 +11,9 @@ import {BaseComponent} from '../../../../components/base/base.component';
   styleUrls: ['./about-benefits.component.scss'],
 })
 export class AboutBenefitsComponent extends BaseComponent implements AfterViewInit, OnInit {
+  private transloco = inject(TranslocoService);
+  private domSanitizer = inject(DomSanitizer);
+
   @ViewChild('swiper', {static: false}) swiper: ElementRef<{swiper: Swiper}>;
   activeSlide = 0;
 
@@ -23,10 +26,6 @@ export class AboutBenefitsComponent extends BaseComponent implements AfterViewIn
   ];
 
   iOSScreenshot: SafeUrl;
-
-  constructor(private transloco: TranslocoService, private domSanitizer: DomSanitizer) {
-    super();
-  }
 
   ngOnInit() {
     this.transloco.langChanges$

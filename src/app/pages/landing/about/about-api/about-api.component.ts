@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 
@@ -8,6 +8,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./about-api.component.scss'],
 })
 export class AboutApiComponent {
+  private store = inject(Store);
+
   appearance$: Observable<string>;
 
   code = `curl -X POST \\
@@ -23,7 +25,7 @@ export class AboutApiComponent {
 
   videoUrl = '';
 
-  constructor(private store: Store) {
+  constructor() {
     this.appearance$ = this.store.select<string>(state => state.settings.appearance);
 
     this.appearance$.subscribe(appearance => {

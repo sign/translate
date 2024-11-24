@@ -1,6 +1,6 @@
 import type {Tensor} from '@tensorflow/tfjs';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import {EstimatedPose} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {PoseService} from '../pose/pose.service';
@@ -68,9 +68,10 @@ const ANIMATION_KEYS = [
   providedIn: 'root',
 })
 export class AnimationService {
-  sequentialModel: LayersModel;
+  private tf = inject(TensorflowService);
+  private poseService = inject(PoseService);
 
-  constructor(private tf: TensorflowService, private poseService: PoseService) {}
+  sequentialModel: LayersModel;
 
   async loadModel(): Promise<LayersModel> {
     await this.tf.load();

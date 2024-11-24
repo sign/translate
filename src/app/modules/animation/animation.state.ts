@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {AnimationService} from './animation.service';
 import {filter, first, tap} from 'rxjs/operators';
@@ -20,11 +20,14 @@ const initialState: AnimationStateModel = {
   defaults: initialState,
 })
 export class AnimationState implements NgxsOnInit {
+  private store = inject(Store);
+  private animation = inject(AnimationService);
+
   isAnimatePose = false;
   pose$!: Observable<EstimatedPose>;
   animatePose$!: Observable<boolean>;
 
-  constructor(private store: Store, private animation: AnimationService) {
+  constructor() {
     this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
     this.animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
   }

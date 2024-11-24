@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import type {Tensor} from '@tensorflow/tfjs-core';
 import type {Vector3} from 'three';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
@@ -13,9 +13,10 @@ export interface PlaneNormal {
   providedIn: 'root',
 })
 export class PoseNormalizationService {
-  model?: any;
+  tf = inject(TensorflowService);
+  private three = inject(ThreeService);
 
-  constructor(public tf: TensorflowService, private three: ThreeService) {}
+  model?: any;
 
   normal(vectors: Vector3[], planeIdx: [number, number, number]): PlaneNormal {
     const triangle = planeIdx.map(i => vectors[i]);

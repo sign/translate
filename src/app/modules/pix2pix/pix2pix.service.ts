@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import * as comlink from 'comlink';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {AssetsService} from '../../core/services/assets/assets.service';
@@ -13,13 +13,14 @@ interface Pix2PixModel {
   providedIn: 'root',
 })
 export class Pix2PixService {
+  private ga = inject(GoogleAnalyticsService);
+  private assets = inject(AssetsService);
+
   worker: comlink.Remote<Pix2PixModel> | Pix2PixModel;
 
   isFirstFrame = true;
 
   queueId = 0;
-
-  constructor(private ga: GoogleAnalyticsService, private assets: AssetsService) {}
 
   async loadModel(): Promise<void> {
     this.queueId++;

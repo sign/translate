@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
@@ -19,15 +19,15 @@ import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
   standalone: true,
 })
 export class AppComponent implements AfterViewInit {
+  private meta = inject(Meta);
+  private ga = inject(GoogleAnalyticsService);
+  private transloco = inject(TranslocoService);
+  private router = inject(Router);
+  private store = inject(Store);
+
   urlParams = this.getUrlParams();
 
-  constructor(
-    private meta: Meta,
-    private ga: GoogleAnalyticsService,
-    private transloco: TranslocoService,
-    private router: Router,
-    private store: Store
-  ) {
+  constructor() {
     this.listenLanguageChange();
     this.logRouterNavigation();
     this.checkURLEmbedding();

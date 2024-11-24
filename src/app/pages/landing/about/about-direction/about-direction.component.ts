@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -10,12 +10,11 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
   styleUrls: ['./about-direction.component.scss'],
 })
 export class AboutDirectionComponent extends BaseComponent implements OnInit {
+  private transloco = inject(TranslocoService);
+  private domSanitizer = inject(DomSanitizer);
+
   iOSScreenshot: SafeUrl;
   androidScreenshot: SafeUrl;
-
-  constructor(private transloco: TranslocoService, private domSanitizer: DomSanitizer) {
-    super();
-  }
 
   ngOnInit() {
     this.transloco.langChanges$

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, inject} from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
@@ -41,6 +41,8 @@ import {DesktopTextareaComponent} from './desktop-textarea/desktop-textarea.comp
   ],
 })
 export class SpokenLanguageInputComponent extends BaseComponent implements OnInit {
+  private store = inject(Store);
+
   translate$!: Observable<TranslateStateModel>;
   text$!: Observable<string>;
   normalizedText$!: Observable<string>;
@@ -52,7 +54,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
 
   @Input() isMobile = false;
 
-  constructor(private store: Store) {
+  constructor() {
     super();
     this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
     this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);

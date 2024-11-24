@@ -1,4 +1,4 @@
-import {Component, NgModule, OnInit} from '@angular/core';
+import {Component, NgModule, OnInit, inject} from '@angular/core';
 import {geoJSON, latLng, Map, tileLayer} from 'leaflet';
 import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {firstValueFrom} from 'rxjs';
@@ -16,6 +16,8 @@ function logMax(arr: number[]) {
   imports: [LeafletModule],
 })
 export class MapComponent extends BaseComponent implements OnInit {
+  private http = inject(HttpClient);
+
   static mapGeoJson = null;
 
   options = {
@@ -28,10 +30,6 @@ export class MapComponent extends BaseComponent implements OnInit {
     zoomDelta: 0.1,
     zoomSnap: 0.1,
   };
-
-  constructor(private http: HttpClient) {
-    super();
-  }
 
   ngOnInit() {
     if (!('document' in globalThis)) {

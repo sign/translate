@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
 import {
@@ -56,13 +56,12 @@ if (!isIOS) {
   ],
 })
 export class SettingsOfflineComponent extends BaseComponent implements OnInit {
+  private assets = inject(AssetsService);
+  private transloco = inject(TranslocoService);
+
   localFiles: {[key: string]: AssetState} = {};
   treeControl = new NestedTreeControl<AssetState>(node => node.children);
   filesTree = new MatTreeNestedDataSource<AssetState>();
-
-  constructor(private assets: AssetsService, private transloco: TranslocoService) {
-    super();
-  }
 
   async ngOnInit() {
     this.localFiles = this.assetInfo('', OFFLINE_PATHS).children;

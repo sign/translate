@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
@@ -42,6 +42,9 @@ import {downloadOutline, shareOutline} from 'ionicons/icons';
   ],
 })
 export class SignedLanguageOutputComponent extends BaseComponent implements OnInit {
+  private store = inject(Store);
+  private domSanitizer = inject(DomSanitizer);
+
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<string>;
   video$!: Observable<string>;
@@ -50,7 +53,7 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   safeVideoUrl: SafeUrl;
   isSharingSupported: boolean;
 
-  constructor(private store: Store, private domSanitizer: DomSanitizer) {
+  constructor() {
     super();
 
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);

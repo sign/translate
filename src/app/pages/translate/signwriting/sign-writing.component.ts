@@ -1,4 +1,4 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, inject} from '@angular/core';
 import {fromEvent, Observable} from 'rxjs';
 import {tap} from 'rxjs/operators';
 import {SignWritingService} from '../../../modules/sign-writing/sign-writing.service';
@@ -19,6 +19,9 @@ import {MatTooltip} from '@angular/material/tooltip';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SignWritingComponent {
+  private mediaMatcher = inject(MediaMatcher);
+  private store = inject(Store);
+
   signs$!: Observable<SignWritingObj[]>;
   signs: SignWritingObj[] = [];
 
@@ -26,7 +29,7 @@ export class SignWritingComponent {
 
   colorSchemeMedia!: MediaQueryList;
 
-  constructor(private mediaMatcher: MediaMatcher, private store: Store) {
+  constructor() {
     this.colorSchemeMedia = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
 
     this.signs$ = this.store.select<SignWritingObj[]>(state => state.translate.signWriting);

@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, inject} from '@angular/core';
 import {GoogleAnalyticsService} from '../../../core/modules/google-analytics/google-analytics.service';
 import {TranslationService} from '../translate.service';
 import {LanguageDetectionService} from './language-detection.service';
@@ -8,9 +8,13 @@ import type {LanguageDetector} from '@mediapipe/tasks-text';
   providedIn: 'root',
 })
 export class MediaPipeLanguageDetectionService extends LanguageDetectionService {
+  private ga = inject(GoogleAnalyticsService);
+
   private detector: LanguageDetector;
 
-  constructor(private ga: GoogleAnalyticsService, translationService: TranslationService) {
+  constructor() {
+    const translationService = inject(TranslationService);
+
     super(translationService);
   }
 

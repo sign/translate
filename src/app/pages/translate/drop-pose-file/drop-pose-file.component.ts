@@ -1,4 +1,4 @@
-import {Component, HostBinding} from '@angular/core';
+import {Component, HostBinding, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {UploadPoseFile} from '../../../modules/translate/translate.actions';
 import {DropzoneDirective} from '../../../directives/dropzone.directive';
@@ -11,10 +11,12 @@ import {DropzoneDirective} from '../../../directives/dropzone.directive';
   imports: [DropzoneDirective],
 })
 export class DropPoseFileComponent {
+  private store = inject(Store);
+
   @HostBinding('class.hovering')
   isHovering = false;
 
-  constructor(private store: Store) {
+  constructor() {
     this.listenExternalFileOpen();
   }
 

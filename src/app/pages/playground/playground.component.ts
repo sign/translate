@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
@@ -12,9 +12,12 @@ import {Observable} from 'rxjs';
   styleUrls: ['./playground.component.scss'],
 })
 export class PlaygroundComponent extends BaseComponent implements OnInit {
+  private store = inject(Store);
+  private translocoService = inject(TranslocoService);
+
   receiveVideo$: Observable<boolean>;
 
-  constructor(private store: Store, private translocoService: TranslocoService) {
+  constructor() {
     super();
 
     this.receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);

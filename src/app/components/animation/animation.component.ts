@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, ViewChild, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
@@ -16,6 +16,10 @@ import {Observable} from 'rxjs';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AnimationComponent extends BaseComponent implements AfterViewInit {
+  private store = inject(Store);
+  private three = inject(ThreeService);
+  private assets = inject(AssetsService);
+
   animationState$: Observable<AnimationStateModel>;
 
   @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
@@ -24,7 +28,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   static isCustomElementDefined = false;
 
-  constructor(private store: Store, private three: ThreeService, private assets: AssetsService) {
+  constructor() {
     super();
 
     this.animationState$ = this.store.select<AnimationStateModel>(state => state.animation);

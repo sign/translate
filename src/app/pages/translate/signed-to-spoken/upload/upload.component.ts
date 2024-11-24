@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, inject} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
@@ -14,11 +14,13 @@ import {TranslocoDirective} from '@ngneat/transloco';
   imports: [IonButton, IonIcon, TranslocoDirective],
 })
 export class UploadComponent {
+  private store = inject(Store);
+
   @Input() isMobile = false;
 
   uploadEl: HTMLInputElement = document.createElement('input');
 
-  constructor(private store: Store) {
+  constructor() {
     this.uploadEl.setAttribute('type', 'file');
     this.uploadEl.setAttribute('accept', 'video/*');
     this.uploadEl.addEventListener('change', this.onFileUpload.bind(this));
