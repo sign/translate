@@ -1,8 +1,19 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {Capacitor} from '@capacitor/core';
 import {Store} from '@ngxs/store';
-import {from, interval, Observable} from 'rxjs';
-import {concatMap, debounce, distinctUntilChanged, first, skipWhile, takeUntil, tap} from 'rxjs/operators';
+import {interval, Observable} from 'rxjs';
+import {
+  debounce,
+  delay,
+  distinctUntilChanged,
+  filter,
+  pairwise,
+  skipWhile,
+  startWith,
+  takeUntil,
+  tap,
+} from 'rxjs/operators';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {
   SetSpokenLanguage,
@@ -18,6 +29,7 @@ import {TranslateStateModel} from '../../../../modules/translate/translate.state
 })
 export class SpokenLanguageInputComponent extends BaseComponent implements OnInit {
   translate$!: Observable<TranslateStateModel>;
+  urlChange$!: Observable<TranslateStateModel>;
   text$!: Observable<string>;
   normalizedText$!: Observable<string>;
 
@@ -25,6 +37,7 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
   maxTextLength = 500;
   detectedLanguage: string;
   spokenLanguage: string;
+  isSharingSupported: boolean;
 
   @Input() isMobile = false;
 
@@ -52,35 +65,27 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
       const fileContent = e.target?.result;
       if (fileContent) {
         console.log('File content:', fileContent);
+        const sentences = (fileContent as string).match(/[^.!?]+[.!?]+/g).map(sentence => sentence.trim());
 
-        // Split the file content into sentences using regex
-        const sentences = (fileContent as string).match(/[^.!?]*[.!?]/g) || [];
+        console.log(sentences);
 
-        console.log('------', sentences);
+        let cnt = 0;
 
-        // Create an observable to emit each sentence sequentially
-        from(sentences)
+        this.urlChange$
           .pipe(
-            concatMap(sentence => {
-              // Dispatch the sentence first
-              const trimmedSentence = sentence.trim();
-              this.text.setValue(trimmedSentence);
-              this.store.dispatch(new SetSpokenLanguageText(trimmedSentence));
-
-              // Then wait for the store to update
-              return this.store
-                .select(state => state.translate.signedLanguageVideo)
-                .pipe(
-                  first(videoURL => !!videoURL), // Wait for a valid videoURL to indicate processing is complete
-                  tap(() => {
-                    console.log('Store updated for sentence:', trimmedSentence);
-                  })
-                );
-            })
+            pairwise(),
+            filter(([prev, curr]) => {
+              console.log({prev, curr});
+              return prev !== curr && curr !== null;
+            }),
+            startWith(true),
+            delay(1)
           )
-          .subscribe({
-            error: err => console.error('Error processing sentences:', err),
-            complete: () => console.log('All sentences processed'),
+          .subscribe(() => {
+            const st = sentences[cnt];
+            this.text.setValue(st);
+            this.store.dispatch(new SetSpokenLanguageText(st as string));
+            cnt++;
           });
       }
     };
@@ -91,8 +96,10 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
   constructor(private store: Store) {
     super();
     this.translate$ = this.store.select<TranslateStateModel>(state => state.translate);
+    this.urlChange$ = this.store.select<TranslateStateModel>(state => state.translate.signedLanguageVideo);
     this.text$ = this.store.select<string>(state => state.translate.spokenLanguageText);
     this.normalizedText$ = this.store.select<string>(state => state.translate.normalizedSpokenLanguageText);
+    this.isSharingSupported = Capacitor.isNativePlatform() || ('navigator' in globalThis && 'share' in navigator);
   }
 
   ngOnInit() {
@@ -105,6 +112,10 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+
+    // this.urlChange$.subscribe(s => {
+    //   console.log('url change', s);
+    // });
 
     // Local text changes
     this.text.valueChanges
