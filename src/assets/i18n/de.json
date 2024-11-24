@@ -56,7 +56,6 @@
   "landing": {
     "try": "Jetzt übersetzen",
     "about": {
-      "title": "Info",
       "hero": {
         "title": "Übersetzen Sie in Echtzeit zwischen mehr als 40 Gebärden- und Lautsprachen.",
         "img": "Beispiel einer Live-Übersetzung zwischen Amerikanischer Gebärdensprache und Englisch"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate funktioniert überall, sogar offline im Flugzeug.",
           "description": "Egal, ob Sie auf Reisen, in einer abgelegenen Gegend oder ohne Internet sind, unsere App stellt sicher, dass Sie gesprochene oder geschriebene Sprache jederzeit in Gebärdensprache übersetzen können und so wichtige Kommunikationsmittel immer zur Hand haben."
         }
-      }
+      },
+      "title": "Über uns"
     },
     "contribute": {
       "title": "Etwas beitragen"

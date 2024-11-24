@@ -56,7 +56,6 @@
   "landing": {
     "try": "Aistrigh anois",
     "about": {
-      "title": "Eolas",
       "hero": {
         "title": "Aistrigh idir 40+ teanga sínithe agus labhartha i bhfíor-am.",
         "img": "Sampla d’aistriúchán beo idir Teanga Chomharthaíochta Mheiriceá agus Béarla"
@@ -91,7 +90,8 @@
           "subtitle": "Oibríonn Sign Translate i ngach áit, fiú as líne ar eitleán.",
           "description": "Cibé an bhfuil tú ag taisteal, i gceantar iargúlta, nó gan idirlíon, cinntíonn ár n-aip gur féidir leat teanga labhartha nó scríofa a aistriú go teanga chomharthaíochta i gcónaí, ag coinneáil uirlisí cumarsáide riachtanacha ar do mhéar."
         }
-      }
+      },
+      "title": "Maidir Linne"
     },
     "contribute": {
       "title": "Déan do chuid"

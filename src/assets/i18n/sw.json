@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tafsiri sasa",
     "about": {
-      "title": "Kuhusu",
       "hero": {
         "title": "Tafsiri kati ya lugha 40+ zilizotiwa sahihi na zinazozungumzwa katika muda halisi.",
         "img": "Mfano wa tafsiri ya moja kwa moja kati ya Lugha ya Ishara ya Marekani na Kiingereza"
@@ -91,7 +90,8 @@
           "subtitle": "Saini kazi ya Tafsiri kila mahali, hata nje ya mtandao kwenye ndege.",
           "description": "Iwe unasafiri, ukiwa katika eneo la mbali, au bila intaneti, programu yetu inahakikisha kuwa unaweza kutafsiri lugha inayozungumzwa au iliyoandikwa kila wakati katika lugha ya ishara, huku ikiweka zana muhimu za mawasiliano kiganjani mwako."
         }
-      }
+      },
+      "title": "Kuhusu Sisi"
     },
     "contribute": {
       "title": "Changia"

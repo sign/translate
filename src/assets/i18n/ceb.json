@@ -56,7 +56,6 @@
   "landing": {
     "try": "Paghubad karon",
     "about": {
-      "title": "Mahitungod Niini",
       "hero": {
         "title": "Paghubad tali sa 40+ nga gipirmahan ug gisulti nga mga sinultian sa tinuud nga oras.",
         "img": "Pananglitan sa live nga paghubad tali sa American Sign Language ug English"
@@ -91,7 +90,8 @@
           "subtitle": "Ang Sign Translate nagtrabaho bisan asa, bisan offline sa eroplano.",
           "description": "Kung nagbiyahe ka, sa usa ka hilit nga lugar, o wala’y internet, gisiguro sa among app nga kanunay nimo mahubad ang sinultian o sinulat nga sinultian sa sign language, nga gitipigan ang hinungdanon nga mga himan sa komunikasyon sa imong mga tudlo."
         }
-      }
+      },
+      "title": "Mahitungod Kanato"
     },
     "contribute": {
       "title": "Pag-ambag"

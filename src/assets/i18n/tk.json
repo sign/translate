@@ -56,7 +56,6 @@
   "landing": {
     "try": "Häzir terjime et",
     "about": {
-      "title": "Hakynda",
       "hero": {
         "title": "40+ gol çekilen we gürlenýän dilleriň arasynda hakyky wagtda terjime ediň.",
         "img": "Amerikan alamat dili bilen iňlis diliniň arasynda göni terjime edilmeginiň mysaly"
@@ -91,7 +90,8 @@
           "subtitle": "Bellik Uçarda hemme ýerde, hatda awtonom görnüşde terjime ediň.",
           "description": "Syýahat edýärsiňizmi, uzak bir sebitde ýa-da internet bolmasa-da, programmamyz möhüm aragatnaşyk gurallaryny eliňizde saklap, elmydama gürlenýän ýa-da ýazuw dilini alamat diline terjime edip biljekdigiňizi üpjün edýär."
         }
-      }
+      },
+      "title": "Biz hakda"
     },
     "contribute": {
       "title": "Goşant goş"

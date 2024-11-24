@@ -56,7 +56,6 @@
   "landing": {
     "try": "Humusha manje",
     "about": {
-      "title": "Mayelana",
       "hero": {
         "title": "Humusha phakathi kwezilimi ezingu-40+ ezisayiniwe nezikhulunywayo ngesikhathi sangempela.",
         "img": "Isibonelo sokuhumusha bukhoma phakathi koLimi Lwezandla LwaseMelika kanye nesiNgisi"
@@ -91,7 +90,8 @@
           "subtitle": "Sayina umsebenzi we-Translate yonke indawo, ngisho noma ungaxhunyiwe ku-inthanethi endizeni.",
           "description": "Kungakhathaliseki ukuthi uhamba, usendaweni ekude, noma ngaphandle kwe-inthanethi, uhlelo lwethu lokusebenza luqinisekisa ukuthi ungakwazi njalo ukuhumusha ulimi olukhulunywayo noma olubhaliwe uluyise olimini lwezandla, ugcina amathuluzi okuxhumana abalulekile ezandleni zakho."
         }
-      }
+      },
+      "title": "Mayelana NATHI"
     },
     "contribute": {
       "title": "Nikela"

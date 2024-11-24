@@ -56,7 +56,6 @@
   "landing": {
     "try": "Ittraduċi issa",
     "about": {
-      "title": "Dwar",
       "hero": {
         "title": "Ittraduċi bejn aktar minn 40 lingwa ffirmata u mitkellma f'ħin reali.",
         "img": "Eżempju ta' traduzzjoni diretta bejn il-Lingwa tas-Sinjali Amerikana u l-Ingliż"
@@ -91,7 +90,8 @@
           "subtitle": "Iffirma Translate xogħol kullimkien, anke offline fuq ajruplan.",
           "description": "Kemm jekk qed tivvjaġġa, f'żona remota, jew mingħajr l-internet, l-app tagħna tiżgura li tista' dejjem tittraduċi l-lingwa mitkellma jew miktuba fil-lingwa tas-sinjali, u żżomm għodod ta' komunikazzjoni essenzjali fuq ponot subgħajk."
         }
-      }
+      },
+      "title": "Dwarna"
     },
     "contribute": {
       "title": "Ikkontribwixxi"

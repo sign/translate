@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tõlgi kohe",
     "about": {
-      "title": "Teave",
       "hero": {
         "title": "Tõlkige reaalajas enam kui 40 viipe- ja kõnekeele vahel.",
         "img": "Näide otsetõlkest Ameerika viipekeele ja inglise keele vahel"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate töötab kõikjal, isegi lennukis võrguühenduseta.",
           "description": "Olenemata sellest, kas olete reisil, kauges piirkonnas või ilma Internetita, meie rakendus tagab, et saate kõne- või kirjakeele alati viipekeelde tõlkida, hoides olulised suhtlusvahendid teie käeulatuses."
         }
-      }
+      },
+      "title": "Meie kohta"
     },
     "contribute": {
       "title": "Panustage"

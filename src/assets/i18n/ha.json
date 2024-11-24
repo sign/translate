@@ -56,7 +56,6 @@
   "landing": {
     "try": "Fassara yanzu",
     "about": {
-      "title": "Game da",
       "hero": {
         "title": "Fassara tsakanin 40+ sa hannu da harsunan magana a ainihin-lokaci.",
         "img": "Misalin fassarar kai tsaye tsakanin Harshen Alamun Amurka da Ingilishi"
@@ -91,7 +90,8 @@
           "subtitle": "Sa hannu Translate aiki a ko'ina, ko da offline a kan jirgin sama.",
           "description": "Ko kuna tafiya, a cikin yanki mai nisa, ko kuma ba tare da intanet ba, app ɗinmu yana tabbatar da cewa koyaushe kuna iya fassara yaren magana ko rubuce-rubuce zuwa yaren kurame, kiyaye mahimman kayan aikin sadarwa a hannunku."
         }
-      }
+      },
+      "title": "Game da Mu"
     },
     "contribute": {
       "title": "Ba da gudummuwa"

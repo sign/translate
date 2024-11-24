@@ -56,7 +56,6 @@
   "landing": {
     "try": "Nu vertalen",
     "about": {
-      "title": "Over",
       "hero": {
         "title": "Vertaal in realtime tussen 40+ ondertekende en gesproken talen.",
         "img": "Voorbeeld van live vertaling tussen Amerikaanse Gebarentaal en Engels"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate werkt overal, zelfs offline in een vliegtuig.",
           "description": "Of u nu op reis bent, in een afgelegen gebied of zonder internet, onze app zorgt ervoor dat u gesproken of geschreven taal altijd in gebarentaal kunt vertalen, zodat u essentiële communicatiemiddelen binnen handbereik heeft."
         }
-      }
+      },
+      "title": "Over ons"
     },
     "contribute": {
       "title": "Bijdragen"

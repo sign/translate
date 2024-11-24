@@ -56,7 +56,6 @@
   "landing": {
     "try": "Preložiť teraz",
     "about": {
-      "title": "O službe",
       "hero": {
         "title": "Prekladajte medzi 40+ podpísanými a hovorenými jazykmi v reálnom čase.",
         "img": "Príklad živého prekladu medzi americkým posunkovým jazykom a angličtinou"
@@ -91,7 +90,8 @@
           "subtitle": "Prekladač znakov funguje všade, dokonca aj offline v lietadle.",
           "description": "Či už ste na cestách, v odľahlej oblasti alebo bez internetu, naša aplikácia zaisťuje, že vždy môžete preložiť hovorený alebo písaný jazyk do posunkovej reči, pričom budete mať základné komunikačné nástroje na dosah ruky."
         }
-      }
+      },
+      "title": "O nás"
     },
     "contribute": {
       "title": "Prispieť"

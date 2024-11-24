@@ -56,7 +56,6 @@
   "landing": {
     "try": "Traducia avà",
     "about": {
-      "title": "À propos de",
       "hero": {
         "title": "Traduce trà più di 40 lingue firmate è parlate in tempu reale.",
         "img": "Esempiu di traduzzione in diretta trà Lingua di i Signi Americana è Inglese"
@@ -91,7 +90,8 @@
           "subtitle": "Firma Traduce u travagliu in ogni locu, ancu offline in un aviò.",
           "description": "Sia chì viaghjate, in una zona remota, o senza Internet, a nostra app assicura chì pudete sempre traduce a lingua parlata o scritta in lingua di i segni, mantenendu strumenti di cumunicazione essenziali à a vostra manu."
         }
-      }
+      },
+      "title": "Nantu à noi"
     },
     "contribute": {
       "title": "Contribuer"

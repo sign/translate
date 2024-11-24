@@ -56,7 +56,6 @@
   "landing": {
     "try": "Þýða núna",
     "about": {
-      "title": "Um",
       "hero": {
         "title": "Þýddu á milli 40+ táknmál og talað tungumál í rauntíma.",
         "img": "Dæmi um lifandi þýðingu á milli amerísks táknmáls og ensku"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate vinnur alls staðar, jafnvel án nettengingar í flugvél.",
           "description": "Hvort sem þú ert að ferðast, á afskekktu svæði eða án internets, þá tryggir appið okkar að þú getir alltaf þýtt talað eða ritað mál yfir á táknmál, með nauðsynleg samskiptatæki innan seilingar."
         }
-      }
+      },
+      "title": "Um okkur"
     },
     "contribute": {
       "title": "Taka þátt"

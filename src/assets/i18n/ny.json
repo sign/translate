@@ -56,7 +56,6 @@
   "landing": {
     "try": "Masulirani panopa",
     "about": {
-      "title": "Zokhudza",
       "hero": {
         "title": "Masulirani pakati pa 40+ zilankhulo zosayinidwa ndi zoyankhulidwa munthawi yeniyeni.",
         "img": "Chitsanzo cha kumasulira kwamoyo pakati pa Chinenero Chamanja cha ku America ndi Chingerezi"
@@ -91,7 +90,8 @@
           "subtitle": "Sainani Zomasulira ntchito kulikonse, ngakhale osalumikizidwa pa ndege.",
           "description": "Kaya mukuyenda, kumadera akutali, kapena opanda intaneti, pulogalamu yathu imaonetsetsa kuti mumamasulira chinenero cholankhulidwa kapena cholembedwa m'chinenero cha manja, ndikusunga zida zofunika zolankhulirana mosavuta."
         }
-      }
+      },
+      "title": "Zambiri zaife"
     },
     "contribute": {
       "title": "Thandizirani"

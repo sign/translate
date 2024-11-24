@@ -56,7 +56,6 @@
   "landing": {
     "try": "Handika teny izao",
     "about": {
-      "title": "Mombamomba",
       "hero": {
         "title": "Mandika teny eo anelanelan'ny fiteny 40+ voasonia sy tenenina amin'ny fotoana tena izy.",
         "img": "Ohatra amin'ny fandikana mivantana eo amin'ny Tenin'ny Tanana Amerikana sy Anglisy"
@@ -91,7 +90,8 @@
           "subtitle": "Miasa amin'ny toerana rehetra ny Sign Translate, eny fa na dia ivelan'ny fiaramanidina aza.",
           "description": "Na mandehandeha ianao, na any amin'ny faritra lavitra, na tsy misy Internet, ny fampiharana anay dia manome antoka fa afaka mandika teny am-bava na an-tsoratra ho amin'ny tenin'ny tanana ianao, mitazona ireo fitaovana ilaina amin'ny fifandraisana eo am-pelatananao."
         }
-      }
+      },
+      "title": "Momba anay"
     },
     "contribute": {
       "title": "Handray anjara"

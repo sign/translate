@@ -56,7 +56,6 @@
   "landing": {
     "try": "Oversett nå",
     "about": {
-      "title": "Info",
       "hero": {
         "title": "Oversett mellom 40+ tegnspråk og talespråk i sanntid.",
         "img": "Eksempel på direkte oversettelse mellom amerikansk tegnspråk og engelsk"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate fungerer overalt, selv offline på et fly.",
           "description": "Enten du reiser, i et avsidesliggende område eller uten internett, sørger appen vår for at du alltid kan oversette muntlig eller skriftlig språk til tegnspråk, og ha viktige kommunikasjonsverktøy for hånden."
         }
-      }
+      },
+      "title": "Om oss"
     },
     "contribute": {
       "title": "Bidra"

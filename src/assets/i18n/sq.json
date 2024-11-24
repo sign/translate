@@ -56,7 +56,6 @@
   "landing": {
     "try": "Përkthe tani",
     "about": {
-      "title": "Rreth apl.",
       "hero": {
         "title": "Përkthe midis 40+ gjuhëve të nënshkruara dhe të folura në kohë reale.",
         "img": "Shembull i përkthimit të drejtpërdrejtë midis gjuhës amerikane të shenjave dhe anglishtes"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate punon kudo, edhe jashtë linje në aeroplan.",
           "description": "Pavarësisht nëse jeni duke udhëtuar, në një zonë të largët ose pa internet, aplikacioni ynë siguron që gjithmonë mund të përktheni gjuhën e folur ose të shkruar në gjuhën e shenjave, duke mbajtur në majë të gishtave mjetet thelbësore të komunikimit."
         }
-      }
+      },
+      "title": "Rreth Nesh"
     },
     "contribute": {
       "title": "Kontribuo"

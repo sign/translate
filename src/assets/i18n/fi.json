@@ -56,7 +56,6 @@
   "landing": {
     "try": "Käännä nyt",
     "about": {
-      "title": "Tietoja",
       "hero": {
         "title": "Käännä yli 40 viittomakielen ja puhutun kielen välillä reaaliajassa.",
         "img": "Esimerkki live-käännöksestä amerikkalaisen viittomakielen ja englannin välillä"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate toimii kaikkialla, myös offline-tilassa lentokoneessa.",
           "description": "Olitpa matkoilla, syrjäisellä alueella tai ilman internetiä, sovelluksemme varmistaa, että voit aina kääntää puhutun tai kirjoitetun kielen viittomakieleksi pitäen tärkeät viestintävälineet käden ulottuvilla."
         }
-      }
+      },
+      "title": "Tietoja meistä"
     },
     "contribute": {
       "title": "Avusta"

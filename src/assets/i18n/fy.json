@@ -56,7 +56,6 @@
   "landing": {
     "try": "No oersette",
     "about": {
-      "title": "Oer",
       "hero": {
         "title": "Oersette tusken 40+ ûndertekene en sprutsen talen yn real-time.",
         "img": "Foarbyld fan live oersetting tusken American Sign Language en Ingelsk"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate wurk oeral, sels offline op in fleantúch.",
           "description": "Oft jo reizgje, yn in ôfstân gebiet, of sûnder ynternet, ús app soarget derfoar dat jo altyd sprutsen of skreaune taal kinne oersette yn gebeartetaal, mei essensjele kommunikaasjemiddels binnen handbereik."
         }
-      }
+      },
+      "title": "Oer Us"
     },
     "contribute": {
       "title": "Meihelpe"

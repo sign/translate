@@ -56,7 +56,6 @@
   "landing": {
     "try": "Whakamāori ināianei",
     "about": {
-      "title": "Mō",
       "hero": {
         "title": "Whakamāoritia i waenganui i te 40+ reo hainatia me te reo korero i te wa-tūturu.",
         "img": "He tauira o te whakamaoritanga ora i waenga i te Reo Waitohu Amerika me te reo Ingarihi"
@@ -91,7 +90,8 @@
           "subtitle": "Waitohu Whakamaori mahi ki nga waahi katoa, ahakoa tuimotu i runga i te waka rererangi.",
           "description": "Ahakoa kei te haere koe, kei tawhiti, me te kore ipurangi ranei, ka whakarite ta maatau taupānga ka taea e koe te whakamaori i te reo korero, i te reo tuhi ranei ki te reo tohu, ma te pupuri i nga taputapu korero nui i o maihao."
         }
-      }
+      },
+      "title": "Mo Tatou"
     },
     "contribute": {
       "title": "Whai wāhi ki"

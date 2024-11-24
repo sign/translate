@@ -56,7 +56,6 @@
   "landing": {
     "try": "Traducir agora",
     "about": {
-      "title": "Acerca de",
       "hero": {
         "title": "Traduce entre máis de 40 idiomas falados e de signos en tempo real.",
         "img": "Exemplo de tradución en directo entre a lingua de signos americana e o inglés"
@@ -91,7 +90,8 @@
           "subtitle": "Asina o traballo de Tradución en todas partes, incluso sen conexión nun avión.",
           "description": "Se estás de viaxe, nunha zona remota ou sen internet, a nosa aplicación garante que sempre podes traducir a linguaxe falada ou escrita á lingua de signos, tendo ao teu alcance as ferramentas de comunicación esenciais."
         }
-      }
+      },
+      "title": "Sobre Nós"
     },
     "contribute": {
       "title": "Contribuír"

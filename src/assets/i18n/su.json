@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tarjamahkeun ayeuna",
     "about": {
-      "title": "Perkawis",
       "hero": {
         "title": "Tarjamahkeun antara 40+ basa anu ditandatanganan sareng diucapkeun sacara real-time.",
         "img": "Conto tarjamahan langsung antara Basa Isyarat Amérika sareng Inggris"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate tiasa dianggo dimana-mana, bahkan offline dina kapal terbang.",
           "description": "Naha anjeun iinditan, di daérah terpencil, atanapi tanpa internét, aplikasi kami ngajamin anjeun tiasa narjamahkeun basa lisan atanapi tulisan kana basa isyarat, ngajaga alat komunikasi anu penting dina ramo anjeun."
         }
-      }
+      },
+      "title": "Tentang Kami"
     },
     "contribute": {
       "title": "Maparin"

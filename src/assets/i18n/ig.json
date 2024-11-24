@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tụgharịa asụsụ ugbu a",
     "about": {
-      "title": "Maka",
       "hero": {
         "title": "Tụgharịa asụsụ n'etiti 40+ mbinye aka na asụsụ a na-asụ ozugbo.",
         "img": "Ọmụmaatụ nke ntụgharị asụsụ dị ndụ n'etiti Asụsụ ogbi nke America na Bekee"
@@ -91,7 +90,8 @@
           "subtitle": "Banye aka na ntụgharị asụsụ na-arụ ọrụ ebe niile, ọbụlagodi na-anọghị n'ịntanetị n'ụgbọelu.",
           "description": "Ma ị na-eme njem, na mpaghara dịpụrụ adịpụ, ma ọ bụ na-enweghị ịntanetị, ngwa anyị na-ahụ na ị nwere ike ịtụgharị asụsụ a na-asụ ma ọ bụ ederede ka ọ bụrụ asụsụ ogbi, na-edobe ngwa nzikọrịta ozi dị mkpa n'aka gị."
         }
-      }
+      },
+      "title": "Gbasara anyị"
     },
     "contribute": {
       "title": "Nyere aka"

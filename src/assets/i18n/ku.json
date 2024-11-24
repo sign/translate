@@ -56,7 +56,6 @@
   "landing": {
     "try": "Niha wergerîne",
     "about": {
-      "title": "ده‌رباره‌ی",
       "hero": {
         "title": "Di navbera 40+ zimanên îmzekirî û axaftinê de di dema rast de wergerînin.",
         "img": "Nimûneya wergera zindî ya di navbera Zimanê îşaretek Amerîkî û Englishngilîzî de"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Werger li her derê dixebite, tewra negirêdayî di balafirê de.",
           "description": "Çi hûn rêwîtiyê dikin, li deverek dûr, an bê înternet, sepana me piştrast dike ku hûn her gav dikarin zimanê axaftinê an nivîskî wergerînin zimanê îşaretan, û amûrên ragihandinê yên bingehîn li ber destên we bigirin."
         }
-      }
+      },
+      "title": "Çûna nava"
     },
     "contribute": {
       "title": "Beşdar bibe"

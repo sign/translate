@@ -56,7 +56,6 @@
   "landing": {
     "try": "Fordítás most",
     "about": {
-      "title": "Névjegy",
       "hero": {
         "title": "Fordítson valós időben több mint 40 aláírt és beszélt nyelv között.",
         "img": "Példa élő fordításra az amerikai jelnyelv és az angol között"
@@ -91,7 +90,8 @@
           "subtitle": "A Sign Fordító mindenhol működik, még offline is repülőgépen.",
           "description": "Akár utazik, akár egy távoli területen, akár internet nélkül, alkalmazásunk biztosítja, hogy a beszélt vagy írott nyelvet mindig jelnyelvre tudja fordítani, így az alapvető kommunikációs eszközök kéznél maradnak."
         }
-      }
+      },
+      "title": "Rólunk"
     },
     "contribute": {
       "title": "Együttműködés"

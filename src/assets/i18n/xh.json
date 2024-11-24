@@ -56,7 +56,6 @@
   "landing": {
     "try": "Guqulela ngoku",
     "about": {
-      "title": "Malunga",
       "hero": {
         "title": "Guqulela phakathi kwe-40+ yeelwimi ezisayiniweyo nezithethwayo ngexesha lokwenyani.",
         "img": "Umzekelo wenguqulelo ephilayo phakathi koLwimi lweZandla lwaseMelika kunye nesiNgesi"
@@ -91,7 +90,8 @@
           "subtitle": "Sayina umsebenzi weToliki kuyo yonke indawo, nokuba akukho intanethi kwinqwelomoya.",
           "description": "Nokuba uyahamba, ukwindawo ekude, okanye ngaphandle kwe-intanethi, iapp yethu iqinisekisa ukuba ungasoloko uguqulela ulwimi oluthethwayo okanye olubhaliweyo kulwimi lwezandla, ukugcina izixhobo zonxibelelwano ezibalulekileyo ezandleni zakho."
         }
-      }
+      },
+      "title": "Ngathi"
     },
     "contribute": {
       "title": "Nikela"

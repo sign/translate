@@ -56,7 +56,6 @@
   "landing": {
     "try": "Terjemah sekarang",
     "about": {
-      "title": "Mengenai",
       "hero": {
         "title": "Terjemah antara 40+ bahasa yang ditandatangani dan dituturkan dalam masa nyata.",
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggeris"
@@ -91,7 +90,8 @@
           "subtitle": "Tandatangan Terjemah berfungsi di mana-mana, walaupun di luar talian dalam kapal terbang.",
           "description": "Sama ada anda melancong, di kawasan terpencil atau tanpa internet, apl kami memastikan anda sentiasa boleh menterjemah bahasa pertuturan atau bertulis ke dalam bahasa isyarat, memastikan alat komunikasi yang penting di hujung jari anda."
         }
-      }
+      },
+      "title": "Tentang Kami"
     },
     "contribute": {
       "title": "Sumbangkan"

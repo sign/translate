@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tarjima qilish",
     "about": {
-      "title": "Xizmat haqida",
       "hero": {
         "title": "Real vaqt rejimida 40 dan ortiq imzo qoʻyilgan va ogʻzaki tillar oʻrtasida tarjima qiling.",
         "img": "Amerika imo-ishora tili va ingliz tili o'rtasidagi jonli tarjimaga misol"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate hamma joyda, hatto samolyotda ham oflayn rejimda ishlaydi.",
           "description": "Sayohatda bo'lasizmi, chekka hududda yoki internetsiz, bizning ilovamiz har doim og'zaki yoki yozma tilni imo-ishora tiliga tarjima qilishingizni ta'minlaydi va muhim aloqa vositalarini qo'lingizda ushlab turadi."
         }
-      }
+      },
+      "title": "Biz haqimizda"
     },
     "contribute": {
       "title": "Hissa qo‘shish"

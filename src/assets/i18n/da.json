@@ -56,7 +56,6 @@
   "landing": {
     "try": "Oversæt nu",
     "about": {
-      "title": "Om",
       "hero": {
         "title": "Oversæt mellem 40+ tegnsprog og talte sprog i realtid.",
         "img": "Eksempel på liveoversættelse mellem amerikansk tegnsprog og engelsk"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Oversæt arbejde overalt, selv offline på et fly.",
           "description": "Uanset om du rejser, i et fjerntliggende område eller uden internet, sikrer vores app, at du altid kan oversætte talt eller skrevet sprog til tegnsprog, og du har vigtige kommunikationsværktøjer lige ved hånden."
         }
-      }
+      },
+      "title": "Om os"
     },
     "contribute": {
       "title": "Bidrag"

@@ -56,7 +56,6 @@
   "landing": {
     "try": "Terjemahkan sekarang",
     "about": {
-      "title": "Tentang",
       "hero": {
         "title": "Terjemahkan antara 40+ bahasa isyarat dan bahasa lisan secara real-time.",
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggris"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate berfungsi di mana saja, bahkan saat offline di pesawat.",
           "description": "Baik Anda sedang bepergian, di daerah terpencil, atau tanpa internet, aplikasi kami memastikan Anda selalu dapat menerjemahkan bahasa lisan atau tulisan ke dalam bahasa isyarat, sehingga alat komunikasi penting tetap mudah dijangkau."
         }
-      }
+      },
+      "title": "Tentang Kami"
     },
     "contribute": {
       "title": "Beri kontribusi"

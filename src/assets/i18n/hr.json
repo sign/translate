@@ -56,7 +56,6 @@
   "landing": {
     "try": "Prevedi sad",
     "about": {
-      "title": "O usluzi",
       "hero": {
         "title": "Prevodite između 40+ znakovnih i govornih jezika u stvarnom vremenu.",
         "img": "Primjer prijevoda uživo između američkog znakovnog jezika i engleskog"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate radi posvuda, čak i izvan mreže u zrakoplovu.",
           "description": "Bilo da putujete, nalazite se na udaljenom području ili nemate internet, naša aplikacija osigurava da uvijek možete prevesti govorni ili pisani jezik u znakovni jezik, držeći osnovne komunikacijske alate na dohvat ruke."
         }
-      }
+      },
+      "title": "O nama"
     },
     "contribute": {
       "title": "Doprinesite"

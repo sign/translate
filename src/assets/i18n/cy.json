@@ -56,7 +56,6 @@
   "landing": {
     "try": "Cyfieithu nawr",
     "about": {
-      "title": "Ynglŷn â",
       "hero": {
         "title": "Cyfieithwch rhwng 40+ o ieithoedd arwyddo a llafar mewn amser real.",
         "img": "Enghraifft o gyfieithiad byw rhwng Iaith Arwyddion America a Saesneg"
@@ -91,7 +90,8 @@
           "subtitle": "Mae Sign Translate yn gweithio ym mhobman, hyd yn oed all-lein ar awyren.",
           "description": "P'un a ydych chi'n teithio, mewn ardal anghysbell, neu heb y rhyngrwyd, mae ein ap yn sicrhau y gallwch chi bob amser gyfieithu iaith lafar neu ysgrifenedig i iaith arwyddion, gan gadw offer cyfathrebu hanfodol ar flaenau eich bysedd."
         }
-      }
+      },
+      "title": "Amdanom Ni"
     },
     "contribute": {
       "title": "Cyfrannu"

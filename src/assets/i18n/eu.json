@@ -56,7 +56,6 @@
   "landing": {
     "try": "Itzuli",
     "about": {
-      "title": "Honi buruz",
       "hero": {
         "title": "Itzuli sinatutako eta ahozko 40 hizkuntza baino gehiago denbora errealean.",
         "img": "Amerikako zeinu hizkuntzaren eta ingelesaren arteko zuzeneko itzulpenaren adibidea"
@@ -91,7 +90,8 @@
           "subtitle": "Sinatu Translate lana nonahi, baita lineaz kanpo hegazkin batean ere.",
           "description": "Bidaiatzen ari zaren, urruneko eremu batean edo Internetik gabe, gure aplikazioak ahozko edo idatzizko hizkuntza zeinu hizkuntzara beti itzul dezakezula bermatzen du, ezinbesteko komunikazio tresnak eskura edukiz."
         }
-      }
+      },
+      "title": "Guri buruz"
     },
     "contribute": {
       "title": "Egin ekarpena"

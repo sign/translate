@@ -56,7 +56,6 @@
   "landing": {
     "try": "Unuhi kēia manawa",
     "about": {
-      "title": "E pili ana",
       "hero": {
         "title": "Unuhi ma waena o 40+ mau ʻōlelo pūlima a ʻōlelo ʻia i ka manawa maoli.",
         "img": "Ka laʻana o ka unuhi ola ma waena o ka ʻōlelo hōʻailona ʻAmelika a me ka ʻōlelo Pelekania"
@@ -91,7 +90,8 @@
           "subtitle": "E hōʻailona i ka Unuhi ma nā wahi a pau, ʻoiai hoʻopahemo ma ka mokulele.",
           "description": "Inā ʻoe e huakaʻi ana, ma kahi mamao, a i ʻole ka punaewele, hōʻoia kā mākou app e hiki iā ʻoe ke unuhi mau i ka ʻōlelo a i ʻole ka ʻōlelo i kākau ʻia i loko o ka ʻōlelo hōʻailona, ​​e mālama ana i nā mea hana kamaʻilio koʻikoʻi ma kou manamana lima."
         }
-      }
+      },
+      "title": "E pili ana iā mākou"
     },
     "contribute": {
       "title": "E komo pū"

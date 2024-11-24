@@ -56,7 +56,6 @@
   "landing": {
     "try": "Traduzir agora",
     "about": {
-      "title": "Acerca de",
       "hero": {
         "title": "Traduza entre mais de 40 idiomas sinalizados e falados em tempo real.",
         "img": "Exemplo de tradução ao vivo entre American Sign Language e Inglês"
@@ -91,7 +90,8 @@
           "subtitle": "O Sign Translate funciona em qualquer lugar, mesmo off-line em um avião.",
           "description": "Esteja você viajando, em uma área remota ou sem internet, nosso aplicativo garante que você sempre possa traduzir a linguagem falada ou escrita para a linguagem de sinais, mantendo as ferramentas de comunicação essenciais ao seu alcance."
         }
-      }
+      },
+      "title": "Sobre nós"
     },
     "contribute": {
       "title": "Contribuir"

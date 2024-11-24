@@ -56,7 +56,6 @@
   "landing": {
     "try": "Vertaal nou",
     "about": {
-      "title": "Meer oor",
       "hero": {
         "title": "Vertaal tussen 40+ gebare- en gesproke tale intyds.",
         "img": "Voorbeeld van lewendige vertaling tussen Amerikaanse Gebaretaal en Engels"
@@ -91,7 +90,8 @@
           "subtitle": "Teken Vertaal werk oral, selfs vanlyn op 'n vliegtuig.",
           "description": "Of jy nou op reis is, in 'n afgeleë gebied, of sonder internet, ons toepassing verseker dat jy altyd gesproke of geskrewe taal in gebaretaal kan vertaal, met noodsaaklike kommunikasiehulpmiddels by jou vingers."
         }
-      }
+      },
+      "title": "Oor ons"
     },
     "contribute": {
       "title": "Dra by"

@@ -56,7 +56,6 @@
   "landing": {
     "try": "Eadar-theangaich an-dràsta",
     "about": {
-      "title": "Mu dhèidhinn",
       "hero": {
         "title": "Eadar-theangaich eadar 40+ cànan soidhnichte agus labhairteach ann an àm fìor.",
         "img": "Eisimpleir de eadar-theangachadh beò eadar Cànan Soidhnidh Ameireagaidh agus Beurla"
@@ -91,7 +90,8 @@
           "subtitle": "Bidh Sign Translate ag obair anns a h-uile àite, eadhon far-loidhne air itealan.",
           "description": "Co-dhiù a tha thu a’ siubhal, ann an àite iomallach, no às aonais eadar-lìn, bidh an app againn a’ dèanamh cinnteach gun urrainn dhut an-còmhnaidh cànan labhairteach no sgrìobhte eadar-theangachadh gu cànan soidhnidh, a’ cumail innealan conaltraidh riatanach aig do chorragan."
         }
-      }
+      },
+      "title": "Mu ar deidhinn"
     },
     "contribute": {
       "title": "Gabh pàirt"

@@ -56,7 +56,6 @@
   "landing": {
     "try": "Översätt nu",
     "about": {
-      "title": "Om",
       "hero": {
         "title": "Översätt mellan 40+ teckenspråk och talade språk i realtid.",
         "img": "Exempel på liveöversättning mellan amerikanskt teckenspråk och engelska"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate fungerar överallt, även offline på ett flygplan.",
           "description": "Oavsett om du reser, i ett avlägset område eller utan internet, säkerställer vår app att du alltid kan översätta talat eller skrivet språk till teckenspråk, och ha viktiga kommunikationsverktyg till hands."
         }
-      }
+      },
+      "title": "Om oss"
     },
     "contribute": {
       "title": "Bidra"

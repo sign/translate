@@ -56,7 +56,6 @@
   "landing": {
     "try": "Traduire",
     "about": {
-      "title": "À propos",
       "hero": {
         "title": "Traduisez entre plus de 40 langues signées et parlées en temps réel.",
         "img": "Exemple de traduction en direct entre la langue des signes américaine et l'anglais"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate fonctionne partout, même hors ligne dans un avion.",
           "description": "Que vous soyez en voyage, dans une région éloignée ou sans Internet, notre application vous permet de toujours traduire la langue parlée ou écrite en langue des signes, en gardant les outils de communication essentiels à portée de main."
         }
-      }
+      },
+      "title": "À propos de nous"
     },
     "contribute": {
       "title": "Contribuer"

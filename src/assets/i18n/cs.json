@@ -56,7 +56,6 @@
   "landing": {
     "try": "Prekladač",
     "about": {
-      "title": "Informace o aplikaci",
       "hero": {
         "title": "Překládejte mezi 40+ podepsanými a mluvenými jazyky v reálném čase.",
         "img": "Příklad živého překladu mezi americkým znakovým jazykem a angličtinou"
@@ -91,7 +90,8 @@
           "subtitle": "Překladač sign funguje všude, dokonce i offline v letadle.",
           "description": "Ať už jste na cestách, v odlehlé oblasti nebo bez internetu, naše aplikace zajišťuje, že vždy můžete přeložit mluvený nebo psaný jazyk do znakové řeči a budete tak mít základní komunikační nástroje na dosah ruky."
         }
-      }
+      },
+      "title": "O nás"
     },
     "contribute": {
       "title": "Přispět"

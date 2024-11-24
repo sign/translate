@@ -56,7 +56,6 @@
   "landing": {
     "try": "Shandura izvezvi",
     "about": {
-      "title": "Maererano",
       "hero": {
         "title": "Shandura pakati pe40+ mitauro yemasaini uye inotaurwa munguva chaiyo.",
         "img": "Muenzaniso weshanduro iripo pakati peMutauro Wemasaini wekuAmerica neChirungu"
@@ -91,7 +90,8 @@
           "subtitle": "Saina Translate kushanda kwese kwese, kunyangwe pasina Indaneti pandege.",
           "description": "Ungave uri parwendo, uri kure, kana kuti usina internet, app yedu inoita kuti ugone kushandura mutauro unotaurwa kana wakanyorwa uchiisa mumutauro wemasaini, uchichengeta maturusi ekutaura akakosha ari pamunwe wako."
         }
-      }
+      },
+      "title": "Nezvedu"
     },
     "contribute": {
       "title": "Isawo ruwoko rwako pabasa iri"

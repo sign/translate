@@ -56,7 +56,6 @@
   "landing": {
     "try": "Przetłumacz teraz",
     "about": {
-      "title": "Informacje",
       "hero": {
         "title": "Tłumacz w czasie rzeczywistym między ponad 40 językami migowymi i mówionymi.",
         "img": "Przykład tłumaczenia na żywo między amerykańskim językiem migowym a angielskim"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate działa wszędzie, nawet offline, w samolocie.",
           "description": "Niezależnie od tego, czy podróżujesz, jesteś na odludziu, czy nie masz internetu, nasza aplikacja gwarantuje, że zawsze będziesz w stanie przetłumaczyć język mówiony lub pisany na język migowy, dzięki czemu niezbędne narzędzia komunikacji będą w zasięgu ręki."
         }
-      }
+      },
+      "title": "O nas"
     },
     "contribute": {
       "title": "Twój wkład"

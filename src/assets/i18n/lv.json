@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tulkot tūlīt",
     "about": {
-      "title": "Par",
       "hero": {
         "title": "Reāllaikā tulkojiet no 40+ zīmju valodām un runājiet.",
         "img": "Tiešraides tulkojuma piemērs starp amerikāņu zīmju valodu un angļu valodu"
@@ -91,7 +90,8 @@
           "subtitle": "Parakstīt Tulkotājs strādā visur, pat bezsaistē lidmašīnā.",
           "description": "Neatkarīgi no tā, vai ceļojat, atrodaties nomaļā vietā vai bez interneta, mūsu lietotne nodrošina, ka jūs vienmēr varat tulkot runāto vai rakstīto valodu zīmju valodā, saglabājot būtiskus saziņas rīkus pa rokai."
         }
-      }
+      },
+      "title": "Par mums"
     },
     "contribute": {
       "title": "Piedalīties"

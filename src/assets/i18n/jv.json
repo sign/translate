@@ -56,7 +56,6 @@
   "landing": {
     "try": "Terjemahake saiki",
     "about": {
-      "title": "Babagan",
       "hero": {
         "title": "Terjemahake antarane 40+ basa sing ditandatangani lan diucapake kanthi wektu nyata.",
         "img": "Conto terjemahan langsung antarane American Sign Language lan Inggris"
@@ -91,7 +90,8 @@
           "subtitle": "Tandha Translate bisa digunakake ing endi wae, sanajan offline ing pesawat.",
           "description": "Apa sampeyan lagi lelungan, ing wilayah sing adoh, utawa tanpa internet, aplikasi kita njamin sampeyan bisa nerjemahake basa lisan utawa tulisan menyang basa isyarat, tetep alat komunikasi penting ing pucuk driji."
         }
-      }
+      },
+      "title": "Babagan Kita"
     },
     "contribute": {
       "title": "Kontribusi"

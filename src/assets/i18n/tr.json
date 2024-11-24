@@ -56,7 +56,6 @@
   "landing": {
     "try": "Şimdi çevir",
     "about": {
-      "title": "Hakkında",
       "hero": {
         "title": "40'tan fazla işaretli ve konuşulan dil arasında gerçek zamanlı çeviri yapın.",
         "img": "Amerikan İşaret Dili ile İngilizce arasındaki canlı çeviri örneği"
@@ -91,7 +90,8 @@
           "subtitle": "İmza Çevirisi her yerde, hatta uçakta çevrimdışıyken bile çalışır.",
           "description": "İster seyahat ediyor olun, ister uzak bir bölgede olun, ister internet yok olsun, uygulamamız, temel iletişim araçlarını parmaklarınızın ucunda tutarak, konuşulan veya yazılan dili her zaman işaret diline çevirebilmenizi sağlar."
         }
-      }
+      },
+      "title": "Hakkımızda"
     },
     "contribute": {
       "title": "Katkıda Bulunun"

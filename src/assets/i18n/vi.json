@@ -56,7 +56,6 @@
   "landing": {
     "try": "Dịch ngay",
     "about": {
-      "title": "Giới thiệu",
       "hero": {
         "title": "Dịch giữa hơn 40 ngôn ngữ được ký và nói trong thời gian thực.",
         "img": "Ví dụ về bản dịch trực tiếp giữa Ngôn ngữ ký hiệu Mỹ và tiếng Anh"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate hoạt động ở mọi nơi, thậm chí ngoại tuyến trên máy bay.",
           "description": "Cho dù bạn đang đi du lịch, ở vùng sâu vùng xa hay không có Internet, ứng dụng của chúng tôi đảm bảo bạn luôn có thể dịch ngôn ngữ nói hoặc viết sang ngôn ngữ ký hiệu, giữ các công cụ giao tiếp thiết yếu trong tầm tay."
         }
-      }
+      },
+      "title": "Về chúng tôi"
     },
     "contribute": {
       "title": "Đóng góp"

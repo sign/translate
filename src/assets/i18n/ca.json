@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tradueix ara",
     "about": {
-      "title": "Funcionament",
       "hero": {
         "title": "Tradueix entre més de 40 idiomes parlats i de signes en temps real.",
         "img": "Exemple de traducció en directe entre la llengua de signes americana i l'anglès"
@@ -91,7 +90,8 @@
           "subtitle": "Signa Traduir treballs a tot arreu, fins i tot fora de línia en un avió.",
           "description": "Tant si viatgeu, en una zona remota o sense Internet, la nostra aplicació us garanteix que sempre podeu traduir el llenguatge parlat o escrit al llenguatge de signes, mantenint les eines de comunicació essencials al vostre abast."
         }
-      }
+      },
+      "title": "Sobre Nosaltres"
     },
     "contribute": {
       "title": "Contribució"

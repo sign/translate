@@ -56,7 +56,6 @@
   "landing": {
     "try": "Turjun hadda",
     "about": {
-      "title": "Ku saabsan",
       "hero": {
         "title": "Turjun inta u dhaxaysa 40+ luqadaha saxeexan iyo kuwa lagu hadlo wakhtiga dhabta ah.",
         "img": "Tusaalaha turjumaada tooska ah ee u dhexeeya Luqadda Calaamadaha Ameerika iyo Ingiriisiga"
@@ -91,7 +90,8 @@
           "subtitle": "Saxiix shaqada Turjumaada meel kasta, xitaa khadka tooska ah ee diyaaradda.",
           "description": "Haddi aad ku safrayso, meel fog, ama internet la'aanteed, abkayagu waxa uu hubinayaa in aad mar walba u turjumi karto luqadda lagu hadlo ama qoran luqadda dhegoolaha, adiga oo farahaaga ku haynaya qalabka isgaarsiinta muhiimka ah."
         }
-      }
+      },
+      "title": "Annaga"
     },
     "contribute": {
       "title": "Kudeeq"

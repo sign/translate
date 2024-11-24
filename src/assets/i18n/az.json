@@ -56,7 +56,6 @@
   "landing": {
     "try": "İndi tərcümə edin",
     "about": {
-      "title": "Haqqında",
       "hero": {
         "title": "Real vaxt rejimində 40+ imzalanmış və danışıq dili arasında tərcümə edin.",
         "img": "Amerika işarə dili və ingilis dili arasında canlı tərcümə nümunəsi"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate hər yerdə, hətta təyyarədə də oflayn işləyin.",
           "description": "Səyahətinizdə, uzaq bir ərazidə və ya internetsiz olmağınızdan asılı olmayaraq, proqramımız vacib ünsiyyət vasitələrini barmaqlarınızın ucunda saxlayaraq şifahi və ya yazılı dili hər zaman işarət dilinə tərcümə edə bilmənizi təmin edir."
         }
-      }
+      },
+      "title": "Haqqımızda"
     },
     "contribute": {
       "title": "Töhfə verin"

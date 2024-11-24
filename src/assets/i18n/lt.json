@@ -56,7 +56,6 @@
   "landing": {
     "try": "Versti dabar",
     "about": {
-      "title": "Apie",
       "hero": {
         "title": "Realiuoju laiku verskite iš daugiau nei 40 kalbų su gestais ir kalbomis.",
         "img": "Tiesioginio vertimo iš Amerikos gestų kalbos į anglų kalbą pavyzdys"
@@ -91,7 +90,8 @@
           "subtitle": "Sign Translate dirbkite visur, net neprisijungę prie lėktuvo.",
           "description": "Nesvarbu, ar keliaujate, ar atokioje vietovėje, ar neturite interneto, mūsų programa užtikrina, kad visada galėsite išversti šnekamąją ar rašytinę kalbą į gestų kalbą, o svarbiausias bendravimo priemones galėsite po ranka."
         }
-      }
+      },
+      "title": "Apie mus"
     },
     "contribute": {
       "title": "Bendradarbiauti"

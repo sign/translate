@@ -56,7 +56,6 @@
   "landing": {
     "try": "Isalin ngayon",
     "about": {
-      "title": "Tungkol sa",
       "hero": {
         "title": "Magsalin sa pagitan ng 40+ na nilagdaan at sinasalitang mga wika sa real-time.",
         "img": "Halimbawa ng live na pagsasalin sa pagitan ng American Sign Language at English"
@@ -91,7 +90,8 @@
           "subtitle": "Mag-sign Trabaho ang Translate kahit saan, kahit offline sa isang eroplano.",
           "description": "Naglalakbay ka man, sa isang malayong lugar, o walang internet, tinitiyak ng aming app na maaari mong palaging isalin ang sinasalita o nakasulat na wika sa sign language, na pinapanatili ang mahahalagang kasangkapan sa komunikasyon sa iyong mga kamay."
         }
-      }
+      },
+      "title": "Tungkol sa Amin"
     },
     "contribute": {
       "title": "Mag-contribute"

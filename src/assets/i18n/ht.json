@@ -56,7 +56,6 @@
   "landing": {
     "try": "Tradwi kounye a",
     "about": {
-      "title": "Konsènan",
       "hero": {
         "title": "Tradwi ant plis pase 40 lang ki pale ak siyen an tan reyèl.",
         "img": "Egzanp tradiksyon an dirèk ant Lang siy Ameriken ak Angle"
@@ -91,7 +90,8 @@
           "subtitle": "Siyen Tradiksyon travay tout kote, menm offline sou yon avyon.",
           "description": "Kit w ap vwayaje, nan yon zòn ki lwen, oswa san entènèt, aplikasyon nou an asire ou ka toujou tradui langaj pale oswa ekri nan lang siy, kenbe zouti kominikasyon esansyèl nan men ou."
         }
-      }
+      },
+      "title": "Sou nou"
     },
     "contribute": {
       "title": "Kontribye"
