@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tafsiri kutoka lugha zinazozungumzwa hadi lugha za ishara",
         "signed-to-spoken": "Au kutoka kwa lugha zilizotiwa sahihi hadi zinazozungumzwa"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tafsiri ya Wakati Halisi",
+          "subtitle": "Tafsiri kati ya lugha 40+ zilizotiwa sahihi na zinazozungumzwa katika muda halisi",
+          "description": "Programu yetu hukuruhusu kuwasiliana kawaida na kwa urahisi na mtu yeyote, mahali popote, wakati wowote, katika lugha yako ya ishara."
+        },
+        "multilingual": {
+          "title": "Usaidizi wa Lugha nyingi",
+          "subtitle": "Tafsiri kati ya lugha tofauti za ishara na lugha zinazozungumzwa",
+          "description": "Programu yetu inasaidia lugha nyingi za ishara na lugha zinazozungumzwa, ili uweze kuwasiliana na watu kutoka nchi na tamaduni tofauti."
+        },
+        "appearance": {
+          "title": "Muonekano Unaoweza Kubinafsishwa",
+          "subtitle": "Avatar zetu za lugha ya ishara zinazoonyesha picha halisi hutoa chaguzi mbalimbali za kubinafsisha ili kukidhi mahitaji yako mahususi.",
+          "description": "Iwe unataka kuunda avatar inayofanana nawe au kuunda mhusika wa kipekee, chaguo zetu za kubinafsisha hukuruhusu kujieleza kwa njia inayohisi kuwa ya kweli na ya kweli kwako."
+        },
+        "open-source": {
+          "title": "Mradi wa Open Source",
+          "subtitle": "Saini Tafsiri ni mradi wa programu huria, unaoruhusu jumuiya kuchangia na kuboresha vipengele vyake.",
+          "description": "Kwa kushiriki msimbo wetu wa chanzo, tunalenga kukuza ushirikiano na uwazi. "
+        },
+        "offline": {
+          "title": "Utendaji Nje ya Mtandao",
+          "subtitle": "Saini kazi ya Tafsiri kila mahali, hata nje ya mtandao kwenye ndege.",
+          "description": "Iwe unasafiri, ukiwa katika eneo la mbali, au bila intaneti, programu yetu inahakikisha kuwa unaweza kutafsiri lugha inayozungumzwa au iliyoandikwa kila wakati katika lugha ya ishara, huku ikiweka zana muhimu za mawasiliano kiganjani mwako."
+        }
       }
     },
     "contribute": {

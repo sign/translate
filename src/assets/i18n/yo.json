@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tumọ lati sisọ si awọn ede ibuwọlu",
         "signed-to-spoken": "Tabi lati ibuwọlu si awọn ede sisọ"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Itumọ Akoko-gidi",
+          "subtitle": "Tumọ laarin 40+ ibuwọlu ati awọn ede ti a sọ ni akoko gidi",
+          "description": "Ìfilọlẹ wa gba ọ laaye lati baraẹnisọrọ nipa ti ara ati ni irọrun pẹlu ẹnikẹni, nibikibi, nigbakugba, ni ede ibuwọlu tirẹ."
+        },
+        "multilingual": {
+          "title": "Multilingual Support",
+          "subtitle": "Tumọ laarin awọn oriṣiriṣi awọn ede ami ati awọn ede sisọ",
+          "description": "Ìfilọlẹ wa ṣe atilẹyin ọpọ awọn ede ami ati awọn ede ti a sọ, nitorinaa o le ṣe ibasọrọ pẹlu awọn eniyan lati oriṣiriṣi awọn orilẹ-ede ati aṣa."
+        },
+        "appearance": {
+          "title": "Irisi ti o le ṣatunṣe",
+          "subtitle": "Awọn avatar ede ami ami ojulowo fọto wa nfunni ni ọpọlọpọ awọn aṣayan isọdi lati ba awọn iwulo rẹ pato mu.",
+          "description": "Boya o fẹ ṣẹda avatar ti o dabi iwọ tabi ṣẹda ẹda alailẹgbẹ, awọn aṣayan isọdi wa gba ọ laaye lati ṣafihan ararẹ ni ọna ti o ni rilara otitọ ati otitọ si ọ."
+        },
+        "open-source": {
+          "title": "Ṣii Orisun Project",
+          "subtitle": "Wọlé Tumọ jẹ iṣẹ akanṣe orisun ṣiṣi, gbigba agbegbe laaye lati ṣe alabapin ati mu awọn ẹya rẹ pọ si.",
+          "description": "Nipa pinpin koodu orisun wa, a ṣe ifọkansi lati ṣe atilẹyin ifowosowopo ati akoyawo. "
+        },
+        "offline": {
+          "title": "Iṣẹ ṣiṣe aisinipo",
+          "subtitle": "Wọlé Tumọ ṣiṣẹ nibi gbogbo, paapaa offline lori ọkọ ofurufu.",
+          "description": "Boya o n rin irin-ajo, ni agbegbe jijin, tabi laisi intanẹẹti, app wa ni idaniloju pe o le tumọ ede sisọ tabi kikọ nigbagbogbo si ede aditi, titọju awọn irinṣẹ ibaraẹnisọrọ to ṣe pataki ni ika ọwọ rẹ."
+        }
       }
     },
     "contribute": {

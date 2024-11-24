@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Ka soo tarjun luqadaha lagu hadlo oo saxeex",
         "signed-to-spoken": "Ama laga bilaabo saxeexa ilaa luqadaha lagu hadlo"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Turjumaada-waqtiga dhabta ah",
+          "subtitle": "Turjun inta u dhaxaysa 40+ luqadaha saxeexan iyo kuwa lagu hadlo wakhtiga dhabta ah",
+          "description": "Abkayagu waxa uu kuu ogolaanayaa inaad si dabiici ah oo fudud ula xidhiidho qof kasta, meel kasta, wakhti kasta, luuqadaada dhegoolaha."
+        },
+        "multilingual": {
+          "title": "Taageerada luuqadaha badan",
+          "subtitle": "Utarjum inta u dhaxaysa luqadaha dhegoolaha ee kala duwan iyo luqadaha lagu hadlo",
+          "description": "App-kayagu waxa uu taageeraa luuqado badan oo dhegooleyaal ah iyo luqado lagu hadlo, si aad ula xidhiidho dadka ka yimid dalal iyo dhaqamo kala duwan."
+        },
+        "appearance": {
+          "title": "Muuqaal la beddeli karo",
+          "subtitle": "Sawirkayaga dhabta ah ee luqada dhegoolaha avatars-ka ayaa bixiya xulashooyin badan oo kala duwan oo lagu habeynayo si ay ugu habboonaato baahiyahaaga gaarka ah.",
+          "description": "Haddii aad rabto inaad abuurto avatar adiga kuu eg ama aad abuurto dabeecad gaar ah, xulashooyinkayada habaynta waxay kuu oggolaanayaan inaad naftaada u muujiso hab adiga kugu habboon oo run ah."
+        },
+        "open-source": {
+          "title": "Mashruuca Isha Furan",
+          "subtitle": "Saxiix Translate waa mashruuc il furan, oo u oggolaanaya bulshada inay wax ku biiriyaan oo ay kor u qaadaan sifooyinkooda.",
+          "description": "Markaan wadaagno koodka isha, waxaan hiigsaneynaa inaan kobcino wadashaqeyn iyo daahfurnaan. "
+        },
+        "offline": {
+          "title": "Waxqabadka khadka tooska ah",
+          "subtitle": "Saxiix shaqada Turjumaada meel kasta, xitaa khadka tooska ah ee diyaaradda.",
+          "description": "Haddi aad ku safrayso, meel fog, ama internet la'aanteed, abkayagu waxa uu hubinayaa in aad mar walba u turjumi karto luqadda lagu hadlo ama qoran luqadda dhegoolaha, adiga oo farahaaga ku haynaya qalabka isgaarsiinta muhiimka ah."
+        }
       }
     },
     "contribute": {

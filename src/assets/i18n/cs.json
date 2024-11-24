@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Překlad z mluveného do znakového jazyka",
         "signed-to-spoken": "Nebo ze znakového jazyka do mluveného jazyka"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Překlad v reálném čase",
+          "subtitle": "Překládejte mezi 40+ podepsanými a mluvenými jazyky v reálném čase",
+          "description": "Naše aplikace vám umožňuje přirozeně a snadno komunikovat s kýmkoli, kdekoli a kdykoli, ve vašem vlastním znakovém jazyce."
+        },
+        "multilingual": {
+          "title": "Vícejazyčná podpora",
+          "subtitle": "Překládejte mezi různými znakovými jazyky a mluvenými jazyky",
+          "description": "Naše aplikace podporuje více znakových jazyků a mluvených jazyků, takže můžete komunikovat s lidmi z různých zemí a kultur."
+        },
+        "appearance": {
+          "title": "Přizpůsobitelný vzhled",
+          "subtitle": "Naše fotorealistické avatary znakového jazyka nabízejí širokou škálu možností přizpůsobení, aby vyhovovaly vašim specifickým potřebám.",
+          "description": "Ať už si chcete vytvořit avatara, který vypadá jako vy, nebo vytvořit jedinečnou postavu, naše možnosti přizpůsobení vám umožní vyjádřit se způsobem, který vám připadá autentický a pravdivý."
+        },
+        "open-source": {
+          "title": "Projekt s otevřeným zdrojovým kódem",
+          "subtitle": "Sign Translate je projekt s otevřeným zdrojovým kódem, který umožňuje komunitě přispívat a vylepšovat jeho funkce.",
+          "description": "Sdílením našeho zdrojového kódu se snažíme podporovat spolupráci a transparentnost. "
+        },
+        "offline": {
+          "title": "Funkce offline",
+          "subtitle": "Překladač sign funguje všude, dokonce i offline v letadle.",
+          "description": "Ať už jste na cestách, v odlehlé oblasti nebo bez internetu, naše aplikace zajišťuje, že vždy můžete přeložit mluvený nebo psaný jazyk do znakové řeči a budete tak mít základní komunikační nástroje na dosah ruky."
+        }
       }
     },
     "contribute": {

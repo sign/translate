@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Adikao avy amin'ny fiteny ampiasaina amin'ny teny sonia",
         "signed-to-spoken": "Na avy amin'ny sonia mankany amin'ny fiteny ampiasaina"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Fandikan-teny amin'ny fotoana tena izy",
+          "subtitle": "Mandika teny eo anelanelan'ny fiteny 40+ voasonia sy tenenina amin'ny fotoana tena izy",
+          "description": "Ny fampiharanay dia ahafahanao mifandray mora sy voajanahary amin'ny olona rehetra, na aiza na aiza, amin'ny fotoana rehetra, amin'ny tenin'ny tananao manokana."
+        },
+        "multilingual": {
+          "title": "Fanohanana amin'ny fiteny maro",
+          "subtitle": "Mandika teny amin'ny tenin'ny tanana samihafa sy ny fiteny ampiasaina",
+          "description": "Ny fampiharana anay dia manohana tenin'ny tanana sy fiteny ampiasaina, mba hahafahanao mifandray amin'ny olona avy amin'ny firenena sy kolontsaina samihafa."
+        },
+        "appearance": {
+          "title": "Fisehoana azo zahana",
+          "subtitle": "Ny avatar amin'ny tenin'ny tanana amin'ny sary tena misy anay dia manolotra safidy fanamboarana isan-karazany mifanaraka amin'ny filanao manokana.",
+          "description": "Na te-hamorona avatar mitovy aminao ianao na mamorona toetra tsy manam-paharoa, dia mamela anao haneho ny tenanao amin'ny fomba mahatsapa ho tena marina sy marina aminao ny safidy fanamboarana ataonay."
+        },
+        "open-source": {
+          "title": "Tetikasa Open Source",
+          "subtitle": "Tetik'asa mivelatra ny Sign Translate, ahafahan'ny vondrom-piarahamonina mandray anjara sy manatsara ny endriny.",
+          "description": "Amin'ny fizarana ny kaody loharanonay, mikendry ny hampiroborobo ny fiaraha-miasa sy ny mangarahara izahay. "
+        },
+        "offline": {
+          "title": "Fampiasa an-tserasera",
+          "subtitle": "Miasa amin'ny toerana rehetra ny Sign Translate, eny fa na dia ivelan'ny fiaramanidina aza.",
+          "description": "Na mandehandeha ianao, na any amin'ny faritra lavitra, na tsy misy Internet, ny fampiharana anay dia manome antoka fa afaka mandika teny am-bava na an-tsoratra ho amin'ny tenin'ny tanana ianao, mitazona ireo fitaovana ilaina amin'ny fifandraisana eo am-pelatananao."
+        }
       }
     },
     "contribute": {

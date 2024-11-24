@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Whakamaori mai i nga reo korero ki nga reo hainatia",
         "signed-to-spoken": "Mai i haina ranei ki nga reo korero"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Whakamaoritanga Wa-Tuturu",
+          "subtitle": "Whakamaori i waenga i te 40+ reo hainatia me te reo korero i te waa-pono",
+          "description": "Ma ta maatau taupānga ka taea e koe te korero ngawari me te ngawari ki tetahi, ki hea, ki nga wa katoa, i roto i to reo tohu."
+        },
+        "multilingual": {
+          "title": "Tautoko reo maha",
+          "subtitle": "Whakamaori i waenga i nga reo tohu rereke me nga reo korero",
+          "description": "Ka tautokohia e to maatau taupānga nga reo tohu maha me nga reo korero, kia taea ai e koe te korero ki nga tangata o nga whenua rereke me nga ahurea."
+        },
+        "appearance": {
+          "title": "Whakaritea te ahua",
+          "subtitle": "Ko a maatau avatar reo tohu tino whakaahua e tuku ana i te whānuitanga o nga whiringa whakaritenga kia rite ki o hiahia.",
+          "description": "Ahakoa e hiahia ana koe ki te hanga avatar e rite ana ki a koe, ki te hanga i tetahi ahuatanga ahurei ranei, ma o maatau whakaritenga whakaritenga ka taea e koe te whakaatu i a koe i runga i te ahua pono me te pono ki a koe."
+        },
+        "open-source": {
+          "title": "Kaupapa Open Source",
+          "subtitle": "Ko te Whakamaori Waitohu he kaupapa tuwhera-puna, e taea ai e te hapori te koha me te whakaniko i ona ahuatanga.",
+          "description": "Ma te tohatoha i ta maatau waehere puna, ka whai taatau ki te whakatairanga i te mahi tahi me te maarama. "
+        },
+        "offline": {
+          "title": "Taumahinga Tuimotu",
+          "subtitle": "Waitohu Whakamaori mahi ki nga waahi katoa, ahakoa tuimotu i runga i te waka rererangi.",
+          "description": "Ahakoa kei te haere koe, kei tawhiti, me te kore ipurangi ranei, ka whakarite ta maatau taupānga ka taea e koe te whakamaori i te reo korero, i te reo tuhi ranei ki te reo tohu, ma te pupuri i nga taputapu korero nui i o maihao."
+        }
       }
     },
     "contribute": {

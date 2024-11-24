@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Danışıq dillərindən işarəli dillərə tərcümə edin",
         "signed-to-spoken": "Və ya imzalanmış dillərdən danışıq dillərinə"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Real-Time Tərcümə",
+          "subtitle": "Real vaxt rejimində 40+ imzalanmış və danışıq dili arasında tərcümə edin",
+          "description": "Tətbiqimiz sizə istənilən yerdə, istədiyiniz zaman, öz işarə dilinizdə hər kəslə təbii və asanlıqla ünsiyyət qurmağa imkan verir."
+        },
+        "multilingual": {
+          "title": "Çoxdilli Dəstək",
+          "subtitle": "Müxtəlif işarə dilləri və danışıq dilləri arasında tərcümə edin",
+          "description": "Tətbiqimiz çoxsaylı işarə dilini və danışıq dilini dəstəkləyir, beləliklə siz müxtəlif ölkələrdən və mədəniyyətlərdən olan insanlarla ünsiyyət qura bilərsiniz."
+        },
+        "appearance": {
+          "title": "Özelleştirilebilir Görünüş",
+          "subtitle": "Fotoreal işarə dili avatarlarımız sizin xüsusi ehtiyaclarınıza uyğun olaraq geniş çeşiddə fərdiləşdirmə seçimləri təklif edir.",
+          "description": "İstər özünüzə bənzəyən bir avatar yaratmaq, istərsə də unikal xarakter yaratmaq istəsəniz, bizim fərdiləşdirmə seçimlərimiz sizə özünüzü orijinal və sizə sadiq hiss edəcək şəkildə ifadə etməyə imkan verir."
+        },
+        "open-source": {
+          "title": "Açıq Mənbə Layihəsi",
+          "subtitle": "Sign Translate açıq mənbəli layihədir və icmaya öz xüsusiyyətlərini artırmaq imkanı verir.",
+          "description": "Mənbə kodumuzu paylaşmaqla biz əməkdaşlığı və şəffaflığı inkişaf etdirməyi hədəfləyirik. "
+        },
+        "offline": {
+          "title": "Offline Funksionallıq",
+          "subtitle": "Sign Translate hər yerdə, hətta təyyarədə də oflayn işləyin.",
+          "description": "Səyahətinizdə, uzaq bir ərazidə və ya internetsiz olmağınızdan asılı olmayaraq, proqramımız vacib ünsiyyət vasitələrini barmaqlarınızın ucunda saxlayaraq şifahi və ya yazılı dili hər zaman işarət dilinə tərcümə edə bilmənizi təmin edir."
+        }
       }
     },
     "contribute": {

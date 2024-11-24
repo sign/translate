@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Itzuli ahozko hizkuntzetatik zeinu hizkuntzetara",
         "signed-to-spoken": "Edo zeinudunetatik ahozko hizkuntzetara"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Denbora errealeko itzulpena",
+          "subtitle": "Itzuli sinatutako eta ahozko 40 hizkuntza baino gehiago denbora errealean",
+          "description": "Gure aplikazioak edonorekin modu naturalean eta errazean komunikatzeko aukera ematen dizu, edonon, edonoiz, zure zeinu hizkuntzan."
+        },
+        "multilingual": {
+          "title": "Laguntza eleaniztuna",
+          "subtitle": "Zeinu eta ahozko hizkuntza ezberdinen artean itzultzea",
+          "description": "Gure aplikazioak hainbat zeinu hizkuntza eta ahozko hizkuntza onartzen ditu, herrialde eta kultura ezberdinetako jendearekin komunikatzeko."
+        },
+        "appearance": {
+          "title": "Itxura pertsonalizagarria",
+          "subtitle": "Gure argazki errealistak zeinu hizkuntzaren avatarek pertsonalizazio aukera zabala eskaintzen dute zure behar zehatzetara egokitzeko.",
+          "description": "Zure antza duen avatar bat sortu edo pertsonaia paregabea sortu nahi baduzu, gure pertsonalizazio aukerek zuretzako benetakoa eta egiazkoa den moduan adierazteko aukera ematen dizute."
+        },
+        "open-source": {
+          "title": "Kode irekiko proiektua",
+          "subtitle": "Sign Translate kode irekiko proiektu bat da, komunitateari bere ezaugarriak lagundu eta hobetzeko aukera ematen diona.",
+          "description": "Gure iturburu-kodea partekatuz, elkarlana eta gardentasuna sustatzea dugu helburu. "
+        },
+        "offline": {
+          "title": "Lineaz kanpoko funtzionaltasuna",
+          "subtitle": "Sinatu Translate lana nonahi, baita lineaz kanpo hegazkin batean ere.",
+          "description": "Bidaiatzen ari zaren, urruneko eremu batean edo Internetik gabe, gure aplikazioak ahozko edo idatzizko hizkuntza zeinu hizkuntzara beti itzul dezakezula bermatzen du, ezinbesteko komunikazio tresnak eskura edukiz."
+        }
       }
     },
     "contribute": {

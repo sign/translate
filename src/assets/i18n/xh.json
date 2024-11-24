@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Guqulela ukusuka kwiilwimi ezithethwa ngezandla",
         "signed-to-spoken": "Okanye ukusuka kwiilwimi zezandla ukuya kwiilwimi ezithethwayo"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Inguqulelo yexesha langempela",
+          "subtitle": "Guqulela phakathi kwe-40+ yeelwimi ezisayiniweyo nezithethwayo ngexesha lokwenyani",
+          "description": "Usetyenziso lwethu lukuvumela ukuba unxibelelane ngokwemvelo kwaye ngokulula nabani na, naphi na, nanini na, ngolwimi lwakho lwezandla."
+        },
+        "multilingual": {
+          "title": "Inkxaso yeeLwimi ezininzi",
+          "subtitle": "Guqulela phakathi kweelwimi ezahlukeneyo zezandla kunye neelwimi ezithethwayo",
+          "description": "Usetyenziso lwethu luxhasa iilwimi ezininzi zezandla kunye neelwimi ezithethwayo, ukuze ukwazi ukunxibelelana nabantu abavela kumazwe kunye neenkcubeko ezahlukeneyo."
+        },
+        "appearance": {
+          "title": "Customizable inkangeleko",
+          "subtitle": "Iifoto zethu ze-avatar zolwimi lwezandla zokwenyani zibonelela ngoluhlu olubanzi lweenketho zokuzenzela ukuze zihambelane neemfuno zakho ezithile.",
+          "description": "Nokuba ufuna ukwenza i-avatar ejongeka njengawe okanye wenze umlinganiswa owahlukileyo, iinketho zethu zokwenza ngokwezifiso zikuvumela ukuba uziveze ngendlela evakala iyinyani kwaye iyinyani kuwe."
+        },
+        "open-source": {
+          "title": "Iprojekthi yomthombo ovulekileyo",
+          "subtitle": "Ukusayina iToliki yiprojekthi evulelekileyo, evumela uluntu ukuba lube negalelo kwaye luphucule iimpawu zalo.",
+          "description": "Ngokwabelana ngekhowudi yethu yomthombo, sijonge ukukhuthaza intsebenziswano kunye nokungafihli. "
+        },
+        "offline": {
+          "title": "Ukusebenza okungaxhunyiwe kwi-intanethi",
+          "subtitle": "Sayina umsebenzi weToliki kuyo yonke indawo, nokuba akukho intanethi kwinqwelomoya.",
+          "description": "Nokuba uyahamba, ukwindawo ekude, okanye ngaphandle kwe-intanethi, iapp yethu iqinisekisa ukuba ungasoloko uguqulela ulwimi oluthethwayo okanye olubhaliweyo kulwimi lwezandla, ukugcina izixhobo zonxibelelwano ezibalulekileyo ezandleni zakho."
+        }
       }
     },
     "contribute": {

@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Aistrigh ó theangacha labhartha go teangacha sínithe",
         "signed-to-spoken": "Nó ó theangacha sínithe go teanga labhartha"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Aistriúchán Fíor-Ama",
+          "subtitle": "Aistrigh idir 40+ teanga sínithe agus labhartha i bhfíor-am",
+          "description": "Ligeann ár bhfeidhmchlár duit cumarsáid a dhéanamh go nádúrtha agus go héasca le duine ar bith, áit ar bith, am ar bith, i do theanga chomharthaíochta féin."
+        },
+        "multilingual": {
+          "title": "Tacaíocht Ilteangach",
+          "subtitle": "Aistrigh idir teangacha comharthaíochta éagsúla agus teangacha labhartha",
+          "description": "Tacaíonn ár bhfeidhmchlár le iliomad teangacha comharthaíochta agus teangacha labhartha, ionas gur féidir leat cumarsáid a dhéanamh le daoine ó thíortha agus cultúir éagsúla."
+        },
+        "appearance": {
+          "title": "Cuma Customizable",
+          "subtitle": "Cuireann ár gcuid avatars teanga comharthaíochta réalaíocha le haghaidh grianghraf raon leathan roghanna saincheaptha ar fáil a oireann do do riachtanais ar leith.",
+          "description": "Cibé an bhfuil tú ag iarraidh avatar a bhfuil cuma ort nó carachtar uathúil a chruthú, ligeann ár roghanna saincheaptha duit tú féin a chur in iúl ar bhealach a bhraitheann barántúla agus fíor duit."
+        },
+        "open-source": {
+          "title": "Tionscadal Foinse Oscailte",
+          "subtitle": "Is tionscadal foinse oscailte é Sign Translate a ligeann don phobal cur lena ghnéithe agus iad a fheabhsú.",
+          "description": "Trínár gcód foinse a roinnt, tá sé mar aidhm againn comhoibriú agus trédhearcacht a chothú. "
+        },
+        "offline": {
+          "title": "Feidhmiúlacht As Líne",
+          "subtitle": "Oibríonn Sign Translate i ngach áit, fiú as líne ar eitleán.",
+          "description": "Cibé an bhfuil tú ag taisteal, i gceantar iargúlta, nó gan idirlíon, cinntíonn ár n-aip gur féidir leat teanga labhartha nó scríofa a aistriú go teanga chomharthaíochta i gcónaí, ag coinneáil uirlisí cumarsáide riachtanacha ar do mhéar."
+        }
       }
     },
     "contribute": {

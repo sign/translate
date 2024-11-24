@@ -33,7 +33,7 @@ async function translateMissingEntries(source, target, targetLanguage) {
   for (const [key, value] of Object.entries(source)) {
     if (!(key in target)) {
       if (typeof value === 'string') {
-        // target[key] = await translate(value, DEFAULT_LANGUAGE, targetLanguage);
+        target[key] = await translate(value, DEFAULT_LANGUAGE, targetLanguage);
       } else {
         target[key] = {};
         await translateMissingEntries(value, target[key], targetLanguage);

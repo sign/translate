@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Paghubad gikan sa sinultihan ngadto sa signed nga mga pinulongan",
         "signed-to-spoken": "O gikan sa gipirmahan ngadto sa gisulti nga mga pinulongan"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tinuod nga Panahon nga Paghubad",
+          "subtitle": "Paghubad tali sa 40+ nga gipirmahan ug gisulti nga mga sinultian sa tinuud nga oras",
+          "description": "Gitugotan ka sa among app nga natural ug dali nga makigkomunikar kang bisan kinsa, bisan asa, bisan unsang orasa, sa imong kaugalingon nga sign language."
+        },
+        "multilingual": {
+          "title": "Multilingual nga Suporta",
+          "subtitle": "Paghubad tali sa lain-laing mga sign language ug sinultihan nga mga pinulongan",
+          "description": "Gisuportahan sa among app ang daghang mga sign language ug sinultihan nga mga sinultian, aron makapakigsulti ka sa mga tawo gikan sa lainlaing mga nasud ug kultura."
+        },
+        "appearance": {
+          "title": "Napasibo nga Panagway",
+          "subtitle": "Ang among litrato nga realistiko nga sign language avatar nagtanyag usa ka halapad nga kapilian sa pag-customize nga mohaum sa imong piho nga mga panginahanglan.",
+          "description": "Kung gusto nimo nga maghimo usa ka avatar nga sama kanimo o maghimo usa ka talagsaon nga kinaiya, ang among mga kapilian sa pag-customize nagtugot kanimo sa pagpahayag sa imong kaugalingon sa paagi nga gibati nga tinuod ug tinuod kanimo."
+        },
+        "open-source": {
+          "title": "Open Source nga Proyekto",
+          "subtitle": "Ang Sign Translate usa ka open-source nga proyekto, nga nagtugot sa komunidad sa pagtampo ug pagpalambo sa mga feature niini.",
+          "description": "Pinaagi sa pagpaambit sa among source code, gitumong namo nga mapalambo ang kolaborasyon ug transparency. "
+        },
+        "offline": {
+          "title": "Offline nga Pag-andar",
+          "subtitle": "Ang Sign Translate nagtrabaho bisan asa, bisan offline sa eroplano.",
+          "description": "Kung nagbiyahe ka, sa usa ka hilit nga lugar, o wala’y internet, gisiguro sa among app nga kanunay nimo mahubad ang sinultian o sinulat nga sinultian sa sign language, nga gitipigan ang hinungdanon nga mga himan sa komunikasyon sa imong mga tudlo."
+        }
       }
     },
     "contribute": {

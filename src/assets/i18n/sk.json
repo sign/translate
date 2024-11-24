@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Preklad z hovoreného do posunkového jazyka",
         "signed-to-spoken": "Alebo od podpísaných po hovorené jazyky"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Preklad v reálnom čase",
+          "subtitle": "Prekladajte medzi 40+ podpísanými a hovorenými jazykmi v reálnom čase",
+          "description": "Naša aplikácia vám umožňuje prirodzene a jednoducho komunikovať s kýmkoľvek, kdekoľvek a kedykoľvek vo vašom vlastnom posunkovom jazyku."
+        },
+        "multilingual": {
+          "title": "Viacjazyčná podpora",
+          "subtitle": "Preklad medzi rôznymi posunkovými jazykmi a hovorenými jazykmi",
+          "description": "Naša aplikácia podporuje viaceré posunkové jazyky a hovorené jazyky, takže môžete komunikovať s ľuďmi z rôznych krajín a kultúr."
+        },
+        "appearance": {
+          "title": "Prispôsobiteľný vzhľad",
+          "subtitle": "Naše fotorealistické avatary posunkovej reči ponúkajú širokú škálu možností prispôsobenia, aby vyhovovali vašim špecifickým potrebám.",
+          "description": "Či už chcete vytvoriť avatara, ktorý vyzerá ako vy, alebo vytvoriť jedinečnú postavu, naše možnosti prispôsobenia vám umožnia vyjadriť sa spôsobom, ktorý vám pripadá autentický a pravdivý."
+        },
+        "open-source": {
+          "title": "Projekt s otvoreným zdrojom",
+          "subtitle": "Sign Translate je projekt s otvoreným zdrojovým kódom, ktorý umožňuje komunite prispievať a vylepšovať jeho funkcie.",
+          "description": "Zdieľaním nášho zdrojového kódu sa snažíme podporovať spoluprácu a transparentnosť. "
+        },
+        "offline": {
+          "title": "Funkcionalita offline",
+          "subtitle": "Prekladač znakov funguje všade, dokonca aj offline v lietadle.",
+          "description": "Či už ste na cestách, v odľahlej oblasti alebo bez internetu, naša aplikácia zaisťuje, že vždy môžete preložiť hovorený alebo písaný jazyk do posunkovej reči, pričom budete mať základné komunikačné nástroje na dosah ruky."
+        }
       }
     },
     "contribute": {

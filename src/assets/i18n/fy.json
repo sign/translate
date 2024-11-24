@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Oersette fan sprutsen nei ûndertekene talen",
         "signed-to-spoken": "Of fan tekentalen nei sprektalen"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Real-Time oersetting",
+          "subtitle": "Oersette tusken 40+ ûndertekene en sprutsen talen yn real-time",
+          "description": "Us app lit jo natuerlik en maklik kommunisearje mei elkenien, oeral en altyd, yn jo eigen gebeartetaal."
+        },
+        "multilingual": {
+          "title": "Meartalige stipe",
+          "subtitle": "Oersette tusken ferskillende gebeartetalen en sprutsen talen",
+          "description": "Us app stipet meardere gebeartetalen en sprutsen talen, sadat jo kinne kommunisearje mei minsken út ferskate lannen en kultueren."
+        },
+        "appearance": {
+          "title": "Oanpasbere uterlik",
+          "subtitle": "Us fotorealistyske gebeartetaalavatars biede in breed oanbod fan oanpassingsopsjes om oan jo spesifike behoeften te passen.",
+          "description": "Oft jo in avatar wolle meitsje dy't op jo liket of in unyk karakter wolle meitsje, mei ús oanpassingsopsjes kinne jo josels útdrukke op in manier dy't jo autentyk en wier fielt."
+        },
+        "open-source": {
+          "title": "Open Source Project",
+          "subtitle": "Sign Translate is in iepen-boarne-projekt, wêrtroch de mienskip by te dragen en har funksjes te ferbetterjen.",
+          "description": "Troch ús boarnekoade te dielen, wolle wy gearwurking en transparânsje stimulearje. "
+        },
+        "offline": {
+          "title": "Offline funksjonaliteit",
+          "subtitle": "Sign Translate wurk oeral, sels offline op in fleantúch.",
+          "description": "Oft jo reizgje, yn in ôfstân gebiet, of sûnder ynternet, ús app soarget derfoar dat jo altyd sprutsen of skreaune taal kinne oersette yn gebeartetaal, mei essensjele kommunikaasjemiddels binnen handbereik."
+        }
       }
     },
     "contribute": {

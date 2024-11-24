@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Terjemah daripada bahasa pertuturan kepada bahasa isyarat",
         "signed-to-spoken": "Atau daripada bahasa yang ditandatangani kepada bahasa yang dituturkan"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Terjemahan Masa Nyata",
+          "subtitle": "Terjemah antara 40+ bahasa yang ditandatangani dan dituturkan dalam masa nyata",
+          "description": "Aplikasi kami membolehkan anda berkomunikasi secara semula jadi dan mudah dengan sesiapa sahaja, di mana-mana, pada bila-bila masa, dalam bahasa isyarat anda sendiri."
+        },
+        "multilingual": {
+          "title": "Sokongan berbilang bahasa",
+          "subtitle": "Terjemah antara bahasa isyarat dan bahasa pertuturan yang berbeza",
+          "description": "Apl kami menyokong berbilang bahasa isyarat dan bahasa pertuturan, jadi anda boleh berkomunikasi dengan orang dari negara dan budaya yang berbeza."
+        },
+        "appearance": {
+          "title": "Penampilan Boleh Disesuaikan",
+          "subtitle": "Avatar bahasa isyarat foto realistik kami menawarkan pelbagai pilihan penyesuaian untuk memenuhi keperluan khusus anda.",
+          "description": "Sama ada anda ingin mencipta avatar yang kelihatan seperti anda atau mencipta watak yang unik, pilihan penyesuaian kami membolehkan anda mengekspresikan diri anda dalam cara yang dirasakan tulen dan benar kepada anda."
+        },
+        "open-source": {
+          "title": "Projek Sumber Terbuka",
+          "subtitle": "Sign Terjemah ialah projek sumber terbuka, membenarkan komuniti menyumbang dan meningkatkan cirinya.",
+          "description": "Dengan berkongsi kod sumber kami, kami berhasrat untuk memupuk kerjasama dan ketelusan. "
+        },
+        "offline": {
+          "title": "Fungsi Luar Talian",
+          "subtitle": "Tandatangan Terjemah berfungsi di mana-mana, walaupun di luar talian dalam kapal terbang.",
+          "description": "Sama ada anda melancong, di kawasan terpencil atau tanpa internet, apl kami memastikan anda sentiasa boleh menterjemah bahasa pertuturan atau bertulis ke dalam bahasa isyarat, memastikan alat komunikasi yang penting di hujung jari anda."
+        }
       }
     },
     "contribute": {

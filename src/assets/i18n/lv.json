@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tulkot no sarunvalodas uz zīmju valodu",
         "signed-to-spoken": "Vai no zīmju valodas līdz runātajām valodām"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tulkošana reāllaikā",
+          "subtitle": "Reāllaikā tulkojiet no 40+ zīmju valodām un runājiet",
+          "description": "Mūsu lietotne ļauj dabiski un viegli sazināties ar ikvienu, jebkurā vietā un laikā, savā zīmju valodā."
+        },
+        "multilingual": {
+          "title": "Daudzvalodu atbalsts",
+          "subtitle": "Tulko starp dažādām zīmju valodām un runātajām valodām",
+          "description": "Mūsu lietotne atbalsta vairākas zīmju valodas un runātās valodas, lai jūs varētu sazināties ar cilvēkiem no dažādām valstīm un kultūrām."
+        },
+        "appearance": {
+          "title": "Pielāgojams izskats",
+          "subtitle": "Mūsu fotoreālistiskie zīmju valodas iemiesojumi piedāvā plašu pielāgošanas iespēju klāstu atbilstoši jūsu īpašajām vajadzībām.",
+          "description": "Neatkarīgi no tā, vai vēlaties izveidot iemiesojumu, kas izskatās kā jūs, vai izveidot unikālu personāžu, mūsu pielāgošanas opcijas ļauj jums izpausties tā, lai tas jums šķiet autentisks un patiess."
+        },
+        "open-source": {
+          "title": "Atvērtā pirmkoda projekts",
+          "subtitle": "Sign Translate ir atvērtā pirmkoda projekts, kas ļauj kopienai sniegt ieguldījumu un uzlabot tā funkcijas.",
+          "description": "Kopīgojot mūsu pirmkodu, mūsu mērķis ir veicināt sadarbību un pārredzamību. "
+        },
+        "offline": {
+          "title": "Bezsaistes funkcionalitāte",
+          "subtitle": "Parakstīt Tulkotājs strādā visur, pat bezsaistē lidmašīnā.",
+          "description": "Neatkarīgi no tā, vai ceļojat, atrodaties nomaļā vietā vai bez interneta, mūsu lietotne nodrošina, ka jūs vienmēr varat tulkot runāto vai rakstīto valodu zīmju valodā, saglabājot būtiskus saziņas rīkus pa rokai."
+        }
       }
     },
     "contribute": {

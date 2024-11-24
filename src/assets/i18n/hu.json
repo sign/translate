@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Fordítás beszélt nyelvről jelnyelvre",
         "signed-to-spoken": "Vagy a jelzett nyelvektől a beszélt nyelvekig"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Valós idejű fordítás",
+          "subtitle": "Fordítson valós időben több mint 40 aláírt és beszélt nyelv között",
+          "description": "Alkalmazásunk lehetővé teszi, hogy természetesen és egyszerűen kommunikáljon bárkivel, bárhol, bármikor, a saját jelnyelvén."
+        },
+        "multilingual": {
+          "title": "Többnyelvű támogatás",
+          "subtitle": "Fordítson a különböző jelnyelvek és beszélt nyelvek között",
+          "description": "Alkalmazásunk több jelnyelvet és beszélt nyelvet is támogat, így különböző országokból és kultúrákból származó emberekkel kommunikálhat."
+        },
+        "appearance": {
+          "title": "Testreszabható megjelenés",
+          "subtitle": "Valósághű, fényképes jelnyelvi avatarjaink testreszabási lehetőségek széles skáláját kínálják az Ön egyedi igényeinek megfelelően.",
+          "description": "Akár Önhöz hasonló avatárt, akár egyedi karaktert szeretne létrehozni, testreszabási lehetőségeink lehetővé teszik, hogy olyan módon fejezze ki magát, amely hitelesnek és igaznak érzi magát."
+        },
+        "open-source": {
+          "title": "Nyílt forráskódú projekt",
+          "subtitle": "A Sign Translate egy nyílt forráskódú projekt, amely lehetővé teszi a közösség számára, hogy hozzájáruljon a szolgáltatás funkcióihoz.",
+          "description": "Forráskódunk megosztásával az együttműködést és az átláthatóságot kívánjuk elősegíteni. "
+        },
+        "offline": {
+          "title": "Offline funkciók",
+          "subtitle": "A Sign Fordító mindenhol működik, még offline is repülőgépen.",
+          "description": "Akár utazik, akár egy távoli területen, akár internet nélkül, alkalmazásunk biztosítja, hogy a beszélt vagy írott nyelvet mindig jelnyelvre tudja fordítani, így az alapvető kommunikációs eszközök kéznél maradnak."
+        }
       }
     },
     "contribute": {

@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tarjamahkeun tina basa lisan ka basa anu ditandatanganan",
         "signed-to-spoken": "Atawa tina ditandatanganan kana basa lisan"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tarjamahan Real-Time",
+          "subtitle": "Tarjamahkeun antara 40+ basa anu ditandatanganan sareng diucapkeun sacara real-time",
+          "description": "Aplikasi kami ngamungkinkeun anjeun komunikasi sacara alami sareng gampang sareng saha waé, dimana waé, iraha waé, dina basa isyarat anjeun nyalira."
+        },
+        "multilingual": {
+          "title": "Rojongan Multilingual",
+          "subtitle": "Tarjamahkeun antara basa tanda béda jeung basa lisan",
+          "description": "Aplikasi kami ngadukung sababaraha basa isyarat sareng basa lisan, ku kituna anjeun tiasa komunikasi sareng jalma ti nagara sareng budaya anu béda."
+        },
+        "appearance": {
+          "title": "Panémbong customizable",
+          "subtitle": "Avatar basa isyarat poto kami nawiskeun rupa-rupa pilihan kustomisasi pikeun nyocogkeun ka kabutuhan khusus anjeun.",
+          "description": "Naha anjeun badé nyiptakeun avatar anu siga anjeun atanapi nyiptakeun karakter anu unik, pilihan kustomisasi kami ngamungkinkeun anjeun pikeun nganyatakeun diri anjeun dina cara anu karasa otentik sareng leres pikeun anjeun."
+        },
+        "open-source": {
+          "title": "Proyék Open Source",
+          "subtitle": "Sign Translate mangrupikeun proyek open-source, ngamungkinkeun komunitas nyumbangkeun sareng ningkatkeun fitur-fiturna.",
+          "description": "Ku ngabagikeun kode sumber urang, kami tujuan pikeun ngamajukeun kolaborasi sareng transparansi. "
+        },
+        "offline": {
+          "title": "Fungsi Offline",
+          "subtitle": "Sign Translate tiasa dianggo dimana-mana, bahkan offline dina kapal terbang.",
+          "description": "Naha anjeun iinditan, di daérah terpencil, atanapi tanpa internét, aplikasi kami ngajamin anjeun tiasa narjamahkeun basa lisan atanapi tulisan kana basa isyarat, ngajaga alat komunikasi anu penting dina ramo anjeun."
+        }
       }
     },
     "contribute": {

@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Prevodite s govornog na znakovne jezike",
         "signed-to-spoken": "Ili sa znakovnih na govorne jezike"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Prevod u realnom vremenu",
+          "subtitle": "Prevodite između 40+ znakovnih i govornih jezika u realnom vremenu",
+          "description": "Naša aplikacija vam omogućava da prirodno i lako komunicirate sa bilo kim, bilo gdje, bilo kada, na vašem vlastitom znakovnom jeziku."
+        },
+        "multilingual": {
+          "title": "Višejezična podrška",
+          "subtitle": "Prevodite između različitih znakovnih jezika i govornih jezika",
+          "description": "Naša aplikacija podržava više znakovnih i govornih jezika, tako da možete komunicirati s ljudima iz različitih zemalja i kultura."
+        },
+        "appearance": {
+          "title": "Prilagodljiv izgled",
+          "subtitle": "Naši fotografski realistični avatari na znakovnom jeziku nude širok spektar mogućnosti prilagođavanja kako bi odgovarale vašim specifičnim potrebama.",
+          "description": "Bilo da želite da kreirate avatar koji liči na vas ili da kreirate jedinstven lik, naše opcije prilagođavanja vam omogućavaju da se izrazite na način koji vam se čini autentičnim i vernim."
+        },
+        "open-source": {
+          "title": "Projekat otvorenog koda",
+          "subtitle": "Sign Translate je projekat otvorenog koda, koji omogućava zajednici da doprinese i poboljša svoje karakteristike.",
+          "description": "Dijeljenjem našeg izvornog koda, cilj nam je potaknuti suradnju i transparentnost. "
+        },
+        "offline": {
+          "title": "Offline funkcionalnost",
+          "subtitle": "Sign Translate radite svuda, čak i van mreže u avionu.",
+          "description": "Bilo da putujete, u udaljenom području ili bez interneta, naša aplikacija osigurava da uvijek možete prevesti govorni ili pisani jezik na znakovni jezik, držeći osnovne alate za komunikaciju na dohvat ruke."
+        }
       }
     },
     "contribute": {

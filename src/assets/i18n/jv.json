@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Terjemahake saka basa lisan menyang basa teken",
         "signed-to-spoken": "Utawa saka mlebu menyang basa lisan"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Terjemahan Real-Time",
+          "subtitle": "Terjemahake antarane 40+ basa sing ditandatangani lan diucapake kanthi wektu nyata",
+          "description": "Aplikasi kita ngidini sampeyan komunikasi kanthi alami lan gampang karo sapa wae, ing endi wae, kapan wae, nganggo basa isyarat sampeyan dhewe."
+        },
+        "multilingual": {
+          "title": "Dhukungan Multilingual",
+          "subtitle": "Nerjemahake antarane basa isyarat lan basa lisan",
+          "description": "Aplikasi kita ndhukung macem-macem basa isyarat lan basa lisan, supaya sampeyan bisa komunikasi karo wong saka macem-macem negara lan budaya."
+        },
+        "appearance": {
+          "title": "Katon Customizable",
+          "subtitle": "Avatar basa isyarat foto realistis kita nawakake macem-macem pilihan pangaturan dhewe sing cocog karo kabutuhan tartamtu.",
+          "description": "Apa sampeyan pengin nggawe avatar sing katon kaya sampeyan utawa nggawe karakter sing unik, pilihan pangaturan dhewe ngidini sampeyan ngekspresiake dhewe kanthi cara sing asli lan bener kanggo sampeyan."
+        },
+        "open-source": {
+          "title": "Proyek Open Source",
+          "subtitle": "Tandha Translate minangka proyek open-source, ngidini komunitas nyumbang lan nambah fitur-fiture.",
+          "description": "Kanthi nuduhake kode sumber, kita ngarahake kolaborasi lan transparansi. "
+        },
+        "offline": {
+          "title": "Fungsi Offline",
+          "subtitle": "Tandha Translate bisa digunakake ing endi wae, sanajan offline ing pesawat.",
+          "description": "Apa sampeyan lagi lelungan, ing wilayah sing adoh, utawa tanpa internet, aplikasi kita njamin sampeyan bisa nerjemahake basa lisan utawa tulisan menyang basa isyarat, tetep alat komunikasi penting ing pucuk driji."
+        }
       }
     },
     "contribute": {

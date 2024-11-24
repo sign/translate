@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Prevajajte iz govorjenih v znakovne jezike",
         "signed-to-spoken": "Ali iz znakovnih v govorjene jezike"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Prevajanje v realnem času",
+          "subtitle": "Prevajajte med več kot 40 znakovnimi in govorjenimi jeziki v realnem času",
+          "description": "Naša aplikacija vam omogoča naravno in preprosto komuniciranje s komer koli, kjerkoli in kadarkoli, v svojem znakovnem jeziku."
+        },
+        "multilingual": {
+          "title": "Večjezična podpora",
+          "subtitle": "Prevajajte med različnimi znakovnimi in govorjenimi jeziki",
+          "description": "Naša aplikacija podpira več znakovnih in govorjenih jezikov, tako da lahko komunicirate z ljudmi iz različnih držav in kultur."
+        },
+        "appearance": {
+          "title": "Prilagodljiv videz",
+          "subtitle": "Naši foto realistični avatarji v znakovnem jeziku ponujajo široko paleto možnosti prilagajanja, ki ustrezajo vašim posebnim potrebam.",
+          "description": "Ne glede na to, ali želite ustvariti avatar, ki je podoben vam, ali ustvariti edinstven lik, vam naše možnosti prilagajanja omogočajo, da se izrazite na način, ki se vam zdi pristen in resničen."
+        },
+        "open-source": {
+          "title": "Odprtokodni projekt",
+          "subtitle": "Sign Translate je odprtokodni projekt, ki skupnosti omogoča, da prispeva in izboljša njegove funkcije.",
+          "description": "Z deljenjem naše izvorne kode želimo spodbujati sodelovanje in preglednost. "
+        },
+        "offline": {
+          "title": "Funkcionalnost brez povezave",
+          "subtitle": "Sign Translate deluje povsod, tudi brez povezave na letalu.",
+          "description": "Ne glede na to, ali potujete, ste na oddaljenem območju ali nimate interneta, naša aplikacija zagotavlja, da lahko vedno prevedete govorjeni ali pisni jezik v znakovni jezik, pri čemer so vam osnovna komunikacijska orodja na dosegu roke."
+        }
       }
     },
     "contribute": {

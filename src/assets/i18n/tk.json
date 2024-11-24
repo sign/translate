@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Gepleşiklerden gol çekilen dillere terjime ediň",
         "signed-to-spoken": "Ora-da gol çekilen dillerden başlap"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Hakyky terjime",
+          "subtitle": "40+ gol çekilen we gürleşilýän dilleriň arasynda hakyky wagtda terjime ediň",
+          "description": "Programmamyz, islendik ýerde, islendik ýerde, islän wagtyňyz öz alamatlaryňyz bilen tebigy we aňsat aragatnaşyk gurmaga mümkinçilik berýär."
+        },
+        "multilingual": {
+          "title": "Köp dilli goldaw",
+          "subtitle": "Dürli alamatlar we gürleýiş dilleriniň arasynda terjime ediň",
+          "description": "Biziň programmamyz birnäçe alamat dillerini we gürleýiş dillerini goldaýar, şonuň üçin dürli ýurtlardan we medeniýetlerden adamlar bilen aragatnaşyk gurup bilersiňiz."
+        },
+        "appearance": {
+          "title": "Özbaşdak görünýän görnüş",
+          "subtitle": "Fotosuratlarymyzyň hakyky alamat dilindäki awatarlary, aýratyn zerurlyklaryňyza laýyklaşdyrmagyň köp görnüşini hödürleýär.",
+          "description": "Özüňize meňzeýän awatar döretmek ýa-da özboluşly bir keşp döretmek isleseňiz, özleşdirme opsiýalarymyz size özüňizi hakyky we dogry duýýan görnüşde beýan etmäge mümkinçilik berýär."
+        },
+        "open-source": {
+          "title": "Açyk çeşme taslamasy",
+          "subtitle": "Sign Translate, jemgyýete goşant goşmaga we aýratynlyklaryny ösdürmäge mümkinçilik berýän açyk çeşme taslamasydyr.",
+          "description": "Çeşme kodumyzy paýlaşmak bilen hyzmatdaşlygy we aç-açanlygy ösdürmegi maksat edinýäris. "
+        },
+        "offline": {
+          "title": "Oflayn işleme",
+          "subtitle": "Bellik Uçarda hemme ýerde, hatda awtonom görnüşde terjime ediň.",
+          "description": "Syýahat edýärsiňizmi, uzak bir sebitde ýa-da internet bolmasa-da, programmamyz möhüm aragatnaşyk gurallaryny eliňizde saklap, elmydama gürlenýän ýa-da ýazuw dilini alamat diline terjime edip biljekdigiňizi üpjün edýär."
+        }
       }
     },
     "contribute": {

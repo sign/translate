@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Oversett fra talespråk til tegnspråk",
         "signed-to-spoken": "Eller fra tegnspråk til talespråk"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Sanntidsoversettelse",
+          "subtitle": "Oversett mellom 40+ tegnspråk og talespråk i sanntid",
+          "description": "Appen vår lar deg kommunisere naturlig og enkelt med hvem som helst, hvor som helst, når som helst, på ditt eget tegnspråk."
+        },
+        "multilingual": {
+          "title": "Flerspråklig støtte",
+          "subtitle": "Oversette mellom ulike tegnspråk og talespråk",
+          "description": "Appen vår støtter flere tegnspråk og talespråk, slik at du kan kommunisere med mennesker fra forskjellige land og kulturer."
+        },
+        "appearance": {
+          "title": "Tilpassbart utseende",
+          "subtitle": "Våre fotorealistiske tegnspråkavatarer tilbyr et bredt spekter av tilpasningsalternativer for å passe dine spesifikke behov.",
+          "description": "Enten du vil lage en avatar som ser ut som deg eller lage en unik karakter, lar våre tilpasningsmuligheter deg uttrykke deg på en måte som føles autentisk og sann for deg."
+        },
+        "open-source": {
+          "title": "Åpen kildekode-prosjekt",
+          "subtitle": "Sign Translate er et åpen kildekode-prosjekt, som lar fellesskapet bidra og forbedre funksjonene.",
+          "description": "Ved å dele kildekoden vår har vi som mål å fremme samarbeid og åpenhet. "
+        },
+        "offline": {
+          "title": "Offline funksjonalitet",
+          "subtitle": "Sign Translate fungerer overalt, selv offline på et fly.",
+          "description": "Enten du reiser, i et avsidesliggende område eller uten internett, sørger appen vår for at du alltid kan oversette muntlig eller skriftlig språk til tegnspråk, og ha viktige kommunikasjonsverktøy for hånden."
+        }
       }
     },
     "contribute": {

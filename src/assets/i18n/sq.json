@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Përktheni nga gjuhët e folura në gjuhët e shenjave",
         "signed-to-spoken": "Ose nga gjuhët e nënshkruara në të folur"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Përkthim në kohë reale",
+          "subtitle": "Përkthe midis 40+ gjuhëve të nënshkruara dhe të folura në kohë reale",
+          "description": "Aplikacioni ynë ju lejon të komunikoni natyrshëm dhe lehtë me këdo, kudo, në çdo kohë, në gjuhën tuaj të shenjave."
+        },
+        "multilingual": {
+          "title": "Mbështetje shumëgjuhëshe",
+          "subtitle": "Përktheni midis gjuhëve të ndryshme të shenjave dhe gjuhëve të folura",
+          "description": "Aplikacioni ynë mbështet shumë gjuhë shenjash dhe gjuhë të folur, kështu që ju mund të komunikoni me njerëz nga vende dhe kultura të ndryshme."
+        },
+        "appearance": {
+          "title": "Pamje e personalizueshme",
+          "subtitle": "Avatarët tanë realistë të fotografisë në gjuhën e shenjave ofrojnë një gamë të gjerë opsionesh personalizimi për t'iu përshtatur nevojave tuaja specifike.",
+          "description": "Pavarësisht nëse dëshironi të krijoni një avatar që të duket si ju ose të krijoni një karakter unik, opsionet tona të personalizimit ju lejojnë të shpreheni në një mënyrë që të duket autentike dhe e vërtetë për ju."
+        },
+        "open-source": {
+          "title": "Projekti me burim të hapur",
+          "subtitle": "Sign Translate është një projekt me burim të hapur, i cili lejon komunitetin të kontribuojë dhe të përmirësojë veçoritë e tij.",
+          "description": "Duke ndarë kodin tonë burimor, ne synojmë të nxisim bashkëpunimin dhe transparencën. "
+        },
+        "offline": {
+          "title": "Funksionaliteti jashtë linje",
+          "subtitle": "Sign Translate punon kudo, edhe jashtë linje në aeroplan.",
+          "description": "Pavarësisht nëse jeni duke udhëtuar, në një zonë të largët ose pa internet, aplikacioni ynë siguron që gjithmonë mund të përktheni gjuhën e folur ose të shkruar në gjuhën e shenjave, duke mbajtur në majë të gishtave mjetet thelbësore të komunikimit."
+        }
       }
     },
     "contribute": {

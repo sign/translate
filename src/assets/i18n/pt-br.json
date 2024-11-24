@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Traduzir de línguas faladas para línguas sinalizadas",
         "signed-to-spoken": "Ou de línguas sinalizadas para línguas faladas"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tradução em tempo real",
+          "subtitle": "Traduza entre mais de 40 idiomas falados e sinalizados em tempo real",
+          "description": "Nosso aplicativo permite que você se comunique de forma natural e fácil com qualquer pessoa, em qualquer lugar, a qualquer hora, em sua própria linguagem de sinais."
+        },
+        "multilingual": {
+          "title": "Suporte multilíngue",
+          "subtitle": "Traduzir entre diferentes línguas de sinais e línguas faladas",
+          "description": "Nosso aplicativo suporta múltiplas línguas de sinais e línguas faladas, para que você possa se comunicar com pessoas de diferentes países e culturas."
+        },
+        "appearance": {
+          "title": "Aparência personalizável",
+          "subtitle": "Nossos avatares fotográficos realistas em linguagem de sinais oferecem uma ampla gama de opções de personalização para atender às suas necessidades específicas.",
+          "description": "Se você deseja criar um avatar que se pareça com você ou um personagem único, nossas opções de personalização permitem que você se expresse de uma forma que pareça autêntica e verdadeira para você."
+        },
+        "open-source": {
+          "title": "Projeto de código aberto",
+          "subtitle": "Sign Translate é um projeto de código aberto, permitindo que a comunidade contribua e aprimore seus recursos.",
+          "description": "Ao compartilhar nosso código-fonte, pretendemos promover a colaboração e a transparência. "
+        },
+        "offline": {
+          "title": "Funcionalidade off-line",
+          "subtitle": "O Sign Translate funciona em qualquer lugar, mesmo off-line em um avião.",
+          "description": "Esteja você viajando, em uma área remota ou sem internet, nosso aplicativo garante que você sempre possa traduzir a linguagem falada ou escrita para a linguagem de sinais, mantendo as ferramentas de comunicação essenciais ao seu alcance."
+        }
       }
     },
     "contribute": {

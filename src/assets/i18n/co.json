@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Traduce da lingua parlata à lingua signata",
         "signed-to-spoken": "O da i segni à e lingue parlate"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traduzzione in tempu reale",
+          "subtitle": "Traduce trà più di 40 lingue firmate è parlate in tempu reale",
+          "description": "A nostra app permette di cumunicà in modu naturali è faciule cù qualcunu, in ogni locu, in ogni mumentu, in a vostra propria lingua di segni."
+        },
+        "multilingual": {
+          "title": "Support multilingue",
+          "subtitle": "Traduce trà e diverse lingue di i segni è lingue parlate",
+          "description": "A nostra app supporta parechje lingue di segni è lingue parlate, cusì pudete cumunicà cù persone di diversi paesi è culture."
+        },
+        "appearance": {
+          "title": "Apparizione persunalizabile",
+          "subtitle": "I nostri avatars realistici di lingua di i segni offrenu una larga gamma di opzioni di persunalizazione per adattà à i vostri bisogni specifichi.",
+          "description": "Sia chì vulete creà un avatar chì ti s'assumiglia o creà un caratteru unicu, e nostre opzioni di persunalizazione vi permettenu di spressione in una manera chì si senti autentica è vera per voi."
+        },
+        "open-source": {
+          "title": "Prughjettu Open Source",
+          "subtitle": "Sign Translate hè un prughjettu open-source, chì permette à a cumunità di cuntribuisce è di rinfurzà e so funziunalità.",
+          "description": "Spartendu u nostru codice fonte, vulemu favurizà a cullaburazione è a trasparenza. "
+        },
+        "offline": {
+          "title": "Funzionalità offline",
+          "subtitle": "Firma Traduce u travagliu in ogni locu, ancu offline in un aviò.",
+          "description": "Sia chì viaghjate, in una zona remota, o senza Internet, a nostra app assicura chì pudete sempre traduce a lingua parlata o scritta in lingua di i segni, mantenendu strumenti di cumunicazione essenziali à a vostra manu."
+        }
       }
     },
     "contribute": {

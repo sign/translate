@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Traduceți din limbile vorbite în limbile semnate",
         "signed-to-spoken": "Sau de la limbile semnate la cele vorbite"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traducere în timp real",
+          "subtitle": "Traduceți între peste 40 de limbi semnate și vorbite în timp real",
+          "description": "Aplicația noastră vă permite să comunicați în mod natural și ușor cu oricine, oriunde, oricând, în limba dvs. semnelor."
+        },
+        "multilingual": {
+          "title": "Suport multilingv",
+          "subtitle": "Traduceți între diferite limbi semnelor și limbi vorbite",
+          "description": "Aplicația noastră acceptă mai multe limbi semne și limbi vorbite, astfel încât să puteți comunica cu oameni din diferite țări și culturi."
+        },
+        "appearance": {
+          "title": "Aspect personalizabil",
+          "subtitle": "Avatarele noastre foto realiste în limbajul semnelor oferă o gamă largă de opțiuni de personalizare pentru a se potrivi nevoilor dumneavoastră specifice.",
+          "description": "Indiferent dacă doriți să creați un avatar care să semene cu dvs. sau să creați un personaj unic, opțiunile noastre de personalizare vă permit să vă exprimați într-un mod care să vă simțiți autentic și adevărat."
+        },
+        "open-source": {
+          "title": "Proiect cu sursă deschisă",
+          "subtitle": "Sign Translate este un proiect open-source, care permite comunității să contribuie și să-și îmbunătățească funcțiile.",
+          "description": "Prin partajarea codului nostru sursă, ne propunem să promovăm colaborarea și transparența. "
+        },
+        "offline": {
+          "title": "Funcționalitate offline",
+          "subtitle": "Semnați Traduceți munca peste tot, chiar și offline într-un avion.",
+          "description": "Indiferent dacă călătoriți, într-o zonă îndepărtată sau fără internet, aplicația noastră vă asigură că puteți traduce întotdeauna limba vorbită sau scrisă în limbajul semnelor, păstrând instrumentele de comunicare esențiale la îndemână."
+        }
       }
     },
     "contribute": {

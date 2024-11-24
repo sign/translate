@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Og'zaki tillardan imlo tillariga tarjima qiling",
         "signed-to-spoken": "Yoki imo-ishorali tillardan og'zaki tillarga"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Haqiqiy vaqtda tarjima",
+          "subtitle": "Real vaqt rejimida 40 dan ortiq imzo qoʻyilgan va ogʻzaki tillar oʻrtasida tarjima qiling",
+          "description": "Bizning ilovamiz sizga o'zingizning imo-ishora tilingizda istalgan joyda, istalgan vaqtda istalgan odam bilan tabiiy va oson muloqot qilish imkonini beradi."
+        },
+        "multilingual": {
+          "title": "Ko'p tilli qo'llab-quvvatlash",
+          "subtitle": "Turli imo-ishora tillari va og'zaki tillar o'rtasida tarjima qiling",
+          "description": "Bizning ilovamiz bir nechta imo-ishora tillari va og'zaki tillarni qo'llab-quvvatlaydi, shuning uchun siz turli mamlakatlar va madaniyatlarga mansub odamlar bilan muloqot qilishingiz mumkin."
+        },
+        "appearance": {
+          "title": "Moslashtirilgan tashqi ko'rinish",
+          "subtitle": "Bizning fotorealistik imo-ishora tili avatarlarimiz sizning maxsus ehtiyojlaringizni qondirish uchun keng ko'lamli sozlash imkoniyatlarini taklif etadi.",
+          "description": "O‘zingizga o‘xshagan avatar yaratmoqchimisiz yoki noyob belgi yaratmoqchimisiz, bizning sozlash variantlarimiz o‘zingizni haqiqiy va o‘zingizga to‘g‘ri keladigan tarzda ifoda etish imkonini beradi."
+        },
+        "open-source": {
+          "title": "Ochiq kodli loyiha",
+          "subtitle": "Sign Translate ochiq manbali loyiha boʻlib, jamiyatga oʻz hissasini qoʻshish va uning xususiyatlarini yaxshilash imkonini beradi.",
+          "description": "Manba kodimizni baham ko'rish orqali biz hamkorlik va shaffoflikni rivojlantirishga intilamiz. "
+        },
+        "offline": {
+          "title": "Oflayn funksionallik",
+          "subtitle": "Sign Translate hamma joyda, hatto samolyotda ham oflayn rejimda ishlaydi.",
+          "description": "Sayohatda bo'lasizmi, chekka hududda yoki internetsiz, bizning ilovamiz har doim og'zaki yoki yozma tilni imo-ishora tiliga tarjima qilishingizni ta'minlaydi va muhim aloqa vositalarini qo'lingizda ushlab turadi."
+        }
       }
     },
     "contribute": {

@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Humusha usuka ezilimini ezikhulunywayo uye ezilimini zezandla",
         "signed-to-spoken": "Noma kusuka ezilimini ezisayiniwe kuye kwezikhulunywayo"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Ukuhumusha Kwesikhathi Sangempela",
+          "subtitle": "Humusha phakathi kwezilimi ezingu-40+ ezisayiniwe nezikhulunywayo ngesikhathi sangempela",
+          "description": "Uhlelo lwethu lokusebenza likuvumela ukuthi uxhumane ngokwemvelo futhi kalula nanoma ubani, noma kuphi, nganoma yisiphi isikhathi, ngolimi lwakho lwezandla."
+        },
+        "multilingual": {
+          "title": "Ukusekela Ngezilimi Eziningi",
+          "subtitle": "Humusha phakathi kwezilimi zezandla ezahlukene nezilimi ezikhulunywayo",
+          "description": "Uhlelo lwethu lokusebenza lusekela izilimi zezandla eziningi nezilimi ezikhulunywayo, ukuze ukwazi ukuxhumana nabantu abavela emazweni namasiko ahlukene."
+        },
+        "appearance": {
+          "title": "Ukubukeka Ngokwezifiso",
+          "subtitle": "Izithombe zethu zolimi lwezandla ezingokoqobo zinikeza izinhlobonhlobo zezinketho zokwenza ngokwezifiso ukuze zivumelane nezidingo zakho ezithile.",
+          "description": "Kungakhathaliseki ukuthi ufuna ukwakha isithombe esifana nawe noma udale umlingiswa ohlukile, izinketho zethu zokwenza ngokwezifiso zikuvumela ukuba uziveze ngendlela ezwakala iyiqiniso futhi iyiqiniso kuwe."
+        },
+        "open-source": {
+          "title": "Iphrojekthi yomthombo ovulekile",
+          "subtitle": "Sayina i-Translate iphrojekthi yomthombo ovulekile, evumela umphakathi ukuthi unikele futhi uthuthukise izici zayo.",
+          "description": "Ngokwabelana ngekhodi yethu yomthombo, sihlose ukukhuthaza ukusebenzisana nokuba sobala. "
+        },
+        "offline": {
+          "title": "Ukusebenza okungaxhunyiwe ku-inthanethi",
+          "subtitle": "Sayina umsebenzi we-Translate yonke indawo, ngisho noma ungaxhunyiwe ku-inthanethi endizeni.",
+          "description": "Kungakhathaliseki ukuthi uhamba, usendaweni ekude, noma ngaphandle kwe-inthanethi, uhlelo lwethu lokusebenza luqinisekisa ukuthi ungakwazi njalo ukuhumusha ulimi olukhulunywayo noma olubhaliwe uluyise olimini lwezandla, ugcina amathuluzi okuxhumana abalulekile ezandleni zakho."
+        }
       }
     },
     "contribute": {

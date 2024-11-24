@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Eadar-theangaich bho chànanan labhairteach gu cànanan soidhnichte",
         "signed-to-spoken": "No bho shoidhnichean gu cànanan labhairteach"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Eadar-theangachadh fìor-ùine",
+          "subtitle": "Eadar-theangaich eadar 40+ cànan soidhnichte agus labhairteach ann an àm fìor",
+          "description": "Leigidh an app againn leat conaltradh gu nàdarrach agus gu furasta le duine sam bith, àite sam bith, uair sam bith, sa chànan soidhnidh agad fhèin."
+        },
+        "multilingual": {
+          "title": "Taic ioma-chànanach",
+          "subtitle": "Eadar-theangaich eadar diofar chànanan soidhne agus cànanan labhairteach",
+          "description": "Bidh an app againn a’ toirt taic do ghrunn chànanan soidhne agus cànanan labhairteach, gus an urrainn dhut conaltradh le daoine à diofar dhùthchannan agus chultaran."
+        },
+        "appearance": {
+          "title": "Coltas Customizable",
+          "subtitle": "Tha na avatars cànan soidhnidh fìor dhealbhan againn a’ tabhann raon farsaing de roghainnean gnàthachaidh a fhreagras air na feumalachdan sònraichte agad.",
+          "description": "Co-dhiù a tha thu airson avatar a chruthachadh a tha coltach riut fhèin no caractar sònraichte a chruthachadh, leigidh na roghainnean gnàthachaidh againn leat thu fhèin a chuir an cèill ann an dòigh a tha a’ faireachdainn fìor agus fìor dhut."
+        },
+        "open-source": {
+          "title": "Pròiseact le còd fosgailte",
+          "subtitle": "Is e pròiseact fosgailte a th’ ann an Sign Translate, a leigeas leis a’ choimhearsnachd cur ris agus cur ris na feartan aige.",
+          "description": "Le bhith a’ roinneadh ar còd stòr, tha sinn ag amas air co-obrachadh agus follaiseachd a bhrosnachadh. "
+        },
+        "offline": {
+          "title": "Gnìomhachd far-loidhne",
+          "subtitle": "Bidh Sign Translate ag obair anns a h-uile àite, eadhon far-loidhne air itealan.",
+          "description": "Co-dhiù a tha thu a’ siubhal, ann an àite iomallach, no às aonais eadar-lìn, bidh an app againn a’ dèanamh cinnteach gun urrainn dhut an-còmhnaidh cànan labhairteach no sgrìobhte eadar-theangachadh gu cànan soidhnidh, a’ cumail innealan conaltraidh riatanach aig do chorragan."
+        }
       }
     },
     "contribute": {

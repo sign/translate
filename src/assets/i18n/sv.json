@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Översätt från talat till teckenspråk",
         "signed-to-spoken": "Eller från teckenspråk till talade språk"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Översättning i realtid",
+          "subtitle": "Översätt mellan 40+ teckenspråk och talade språk i realtid",
+          "description": "Vår app låter dig kommunicera naturligt och enkelt med vem som helst, var som helst, när som helst, på ditt eget teckenspråk."
+        },
+        "multilingual": {
+          "title": "Flerspråkig support",
+          "subtitle": "Översätt mellan olika teckenspråk och talade språk",
+          "description": "Vår app stöder flera teckenspråk och talade språk, så att du kan kommunicera med människor från olika länder och kulturer."
+        },
+        "appearance": {
+          "title": "Anpassningsbart utseende",
+          "subtitle": "Våra fotorealistiska teckenspråksavatarer erbjuder ett brett utbud av anpassningsalternativ för att passa dina specifika behov.",
+          "description": "Oavsett om du vill skapa en avatar som ser ut som dig eller skapa en unik karaktär, låter våra anpassningsalternativ dig uttrycka dig på ett sätt som känns äkta och sant för dig."
+        },
+        "open-source": {
+          "title": "Open Source-projekt",
+          "subtitle": "Sign Translate är ett projekt med öppen källkod, som låter samhället bidra och förbättra dess funktioner.",
+          "description": "Genom att dela vår källkod strävar vi efter att främja samarbete och transparens. "
+        },
+        "offline": {
+          "title": "Offline funktionalitet",
+          "subtitle": "Sign Translate fungerar överallt, även offline på ett flygplan.",
+          "description": "Oavsett om du reser, i ett avlägset område eller utan internet, säkerställer vår app att du alltid kan översätta talat eller skrivet språk till teckenspråk, och ha viktiga kommunikationsverktyg till hands."
+        }
       }
     },
     "contribute": {

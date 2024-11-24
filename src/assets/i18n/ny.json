@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Masulirani kuchokera ku zilankhulo zoyankhulidwa ndi manja",
         "signed-to-spoken": "Kapena kuchokera ku zilankhulo zoyankhulidwa ndi manja mpaka zolankhulidwa"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Kumasulira Nthawi Yeniyeni",
+          "subtitle": "Masulirani pakati pa 40+ zilankhulo zosayinidwa ndi zoyankhulidwa munthawi yeniyeni",
+          "description": "Pulogalamu yathu imakupatsani mwayi wolankhulana mwachibadwa komanso mosavuta ndi aliyense, kulikonse, nthawi iliyonse, m'chinenero chanu chamanja."
+        },
+        "multilingual": {
+          "title": "Thandizo la Zinenero Zambiri",
+          "subtitle": "Masulirani pakati pa zilankhulo zamanja zosiyanasiyana ndi zilankhulo zolankhulidwa",
+          "description": "Pulogalamu yathu imathandizira zilankhulo zamanja ndi zilankhulo zingapo, kotero mutha kulumikizana ndi anthu ochokera kumayiko ndi zikhalidwe zosiyanasiyana."
+        },
+        "appearance": {
+          "title": "Mawonekedwe Osinthika",
+          "subtitle": "Zithunzi zathu zowoneka bwino za chilankhulo chamanja zimapereka zosankha zingapo kuti zigwirizane ndi zosowa zanu.",
+          "description": "Kaya mukufuna kupanga avatar yomwe ikuwoneka ngati inu kapena kupanga mawonekedwe apadera, zosankha zathu zosinthira zimakulolani kuti muzitha kudziwonetsera m'njira yomwe ikuwoneka ngati yowona komanso yowona kwa inu."
+        },
+        "open-source": {
+          "title": "Open Source Project",
+          "subtitle": "Sign Translate ndi pulojekiti yotseguka, yomwe imalola anthu ammudzi kuti athandizire komanso kuwongolera mawonekedwe ake.",
+          "description": "Pogawana khodi yathu yochokera, tikufuna kulimbikitsa mgwirizano ndi kuwonekera. "
+        },
+        "offline": {
+          "title": "Offline magwiridwe antchito",
+          "subtitle": "Sainani Zomasulira ntchito kulikonse, ngakhale osalumikizidwa pa ndege.",
+          "description": "Kaya mukuyenda, kumadera akutali, kapena opanda intaneti, pulogalamu yathu imaonetsetsa kuti mumamasulira chinenero cholankhulidwa kapena cholembedwa m'chinenero cha manja, ndikusunga zida zofunika zolankhulirana mosavuta."
+        }
       }
     },
     "contribute": {

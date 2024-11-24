@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Traduci dalle lingue parlate a quelle dei segni",
         "signed-to-spoken": "O dalle lingue dei segni a quelle parlate"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traduzione in tempo reale",
+          "subtitle": "Traduci tra oltre 40 lingue parlate e firmate in tempo reale",
+          "description": "La nostra app ti consente di comunicare in modo semplice e naturale con chiunque, ovunque e in qualsiasi momento, nella tua lingua dei segni."
+        },
+        "multilingual": {
+          "title": "Supporto multilingue",
+          "subtitle": "Traduci tra diverse lingue dei segni e lingue parlate",
+          "description": "La nostra app supporta più lingue dei segni e lingue parlate, così puoi comunicare con persone provenienti da paesi e culture diverse."
+        },
+        "appearance": {
+          "title": "Aspetto personalizzabile",
+          "subtitle": "I nostri avatar fotorealistici nel linguaggio dei segni offrono un'ampia gamma di opzioni di personalizzazione per soddisfare le tue esigenze specifiche.",
+          "description": "Sia che tu voglia creare un avatar che ti assomigli o creare un personaggio unico, le nostre opzioni di personalizzazione ti consentono di esprimerti in un modo che ti sembri autentico e fedele."
+        },
+        "open-source": {
+          "title": "Progetto Open Source",
+          "subtitle": "Sign Translate è un progetto open source che consente alla comunità di contribuire e migliorare le sue funzionalità.",
+          "description": "Condividendo il nostro codice sorgente, miriamo a favorire la collaborazione e la trasparenza. "
+        },
+        "offline": {
+          "title": "Funzionalità offline",
+          "subtitle": "Sign Translate funziona ovunque, anche offline in aereo.",
+          "description": "Che tu sia in viaggio, in una zona remota o senza Internet, la nostra app ti consente di tradurre sempre il linguaggio parlato o scritto nella lingua dei segni, mantenendo gli strumenti di comunicazione essenziali a portata di mano."
+        }
       }
     },
     "contribute": {

@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tụgharịa asụsụ site na asụ ka ọ bụrụ asụsụ ndị mbinye aka",
         "signed-to-spoken": "Ma ọ bụ site na mbinye aka gaa na asụsụ ndị a na-asụ"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Ntụgharị asụsụ ozugbo",
+          "subtitle": "Tụgharịa asụsụ n'etiti 40+ mbinye aka na asụsụ a na-asụ ozugbo",
+          "description": "Ngwa anyị na-enye gị ohere ka gị na onye ọ bụla kparịta ụka n'ụzọ nkịtị na n'ụzọ dị mfe, ebe ọ bụla, oge ọ bụla, n'asụsụ ogbi nke gị."
+        },
+        "multilingual": {
+          "title": "Nkwado ọtụtụ asụsụ",
+          "subtitle": "Tụgharịa asụsụ n'etiti asụsụ ogbi dị iche iche na asụsụ a na-asụ",
+          "description": "Ngwa anyị na-akwado ọtụtụ asụsụ ogbi na asụsụ ndị a na-asụ, ka ị na ndị si obodo na omenala dị iche iche nwee ike ịkparịta ụka."
+        },
+        "appearance": {
+          "title": "Ọdịdị enwere ike ịhazi ya",
+          "subtitle": "Avatars asụsụ ogbi nke ọma foto anyị na-enye ọtụtụ nhọrọ nhazi nke dabara maka mkpa gị.",
+          "description": "Ma ịchọrọ ịmepụta avatar dị ka gị ma ọ bụ mepụta agwa pụrụ iche, nhọrọ nhazi anyị na-enye gị ohere igosipụta onwe gị n'ụzọ ga-adị gị ka ọ bụ eziokwu na eziokwu."
+        },
+        "open-source": {
+          "title": "Mepee Isi mmalite Project",
+          "subtitle": "Sign Translate bụ ọrụ mepere emepe, na-enye ndị obodo ohere itinye aka na ịkwalite atụmatụ ya.",
+          "description": "Site na ịkekọrịta koodu isi mmalite anyị, anyị bu n'obi ịkwalite mmekorita na nghọta. "
+        },
+        "offline": {
+          "title": "Ọrụ adịghị n'ịntanetị",
+          "subtitle": "Banye aka na ntụgharị asụsụ na-arụ ọrụ ebe niile, ọbụlagodi na-anọghị n'ịntanetị n'ụgbọelu.",
+          "description": "Ma ị na-eme njem, na mpaghara dịpụrụ adịpụ, ma ọ bụ na-enweghị ịntanetị, ngwa anyị na-ahụ na ị nwere ike ịtụgharị asụsụ a na-asụ ma ọ bụ ederede ka ọ bụrụ asụsụ ogbi, na-edobe ngwa nzikọrịta ozi dị mkpa n'aka gị."
+        }
       }
     },
     "contribute": {

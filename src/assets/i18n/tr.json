@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Konuşulan dillerden işaretli dillere çeviri yapın",
         "signed-to-spoken": "Veya işaretli dillerden konuşulan dillere"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Gerçek Zamanlı Çeviri",
+          "subtitle": "40'tan fazla işaret ve konuşma dili arasında gerçek zamanlı çeviri yapın",
+          "description": "Uygulamamız herkesle, her yerde, her zaman, kendi işaret dilinizde doğal ve kolay bir şekilde iletişim kurmanıza olanak tanır."
+        },
+        "multilingual": {
+          "title": "Çok Dilli Destek",
+          "subtitle": "Farklı işaret dilleri ve konuşulan diller arasında çeviri yapın",
+          "description": "Uygulamamız birden fazla işaret dilini ve konuşma dilini destekler, böylece farklı ülke ve kültürlerden insanlarla iletişim kurabilirsiniz."
+        },
+        "appearance": {
+          "title": "Özelleştirilebilir Görünüm",
+          "subtitle": "Foto gerçekçi işaret dili avatarlarımız, özel ihtiyaçlarınıza uyacak şekilde çok çeşitli özelleştirme seçenekleri sunar.",
+          "description": "Kendinize benzeyen bir avatar veya benzersiz bir karakter oluşturmak istiyorsanız, özelleştirme seçeneklerimiz kendinizi özgün ve size uygun bir şekilde ifade etmenize olanak tanır."
+        },
+        "open-source": {
+          "title": "Açık Kaynak Projesi",
+          "subtitle": "Sign Translate, topluluğun katkıda bulunmasına ve özelliklerini geliştirmesine olanak tanıyan açık kaynaklı bir projedir.",
+          "description": "Kaynak kodumuzu paylaşarak işbirliğini ve şeffaflığı geliştirmeyi amaçlıyoruz. "
+        },
+        "offline": {
+          "title": "Çevrimdışı İşlevsellik",
+          "subtitle": "İmza Çevirisi her yerde, hatta uçakta çevrimdışıyken bile çalışır.",
+          "description": "İster seyahat ediyor olun, ister uzak bir bölgede olun, ister internet yok olsun, uygulamamız, temel iletişim araçlarını parmaklarınızın ucunda tutarak, konuşulan veya yazılan dili her zaman işaret diline çevirebilmenizi sağlar."
+        }
       }
     },
     "contribute": {

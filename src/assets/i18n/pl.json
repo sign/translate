@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tłumacz z języka mówionego na język migowy",
         "signed-to-spoken": "Lub z języka migowego na język mówiony"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tłumaczenie w czasie rzeczywistym",
+          "subtitle": "Tłumacz w czasie rzeczywistym między ponad 40 językami migowymi i mówionymi",
+          "description": "Nasza aplikacja umożliwia naturalną i łatwą komunikację z kimkolwiek, gdziekolwiek i kiedykolwiek, w Twoim własnym języku migowym."
+        },
+        "multilingual": {
+          "title": "Wsparcie wielojęzyczne",
+          "subtitle": "Tłumacz między różnymi językami migowymi i językami mówionymi",
+          "description": "Nasza aplikacja obsługuje wiele języków migowych i języków mówionych, dzięki czemu możesz komunikować się z ludźmi z różnych krajów i kultur."
+        },
+        "appearance": {
+          "title": "Możliwość dostosowania wyglądu",
+          "subtitle": "Nasze fotorealistyczne awatary w języku migowym oferują szeroką gamę opcji dostosowywania do Twoich konkretnych potrzeb.",
+          "description": "Niezależnie od tego, czy chcesz stworzyć awatar podobny do Ciebie, czy też stworzyć unikalną postać, nasze opcje dostosowywania pozwolą Ci wyrazić siebie w sposób, który będzie dla Ciebie autentyczny i prawdziwy."
+        },
+        "open-source": {
+          "title": "Projekt open source",
+          "subtitle": "Sign Translate to projekt typu open source, umożliwiający społeczności wnoszenie wkładu i ulepszanie jego funkcji.",
+          "description": "Udostępniając nasz kod źródłowy, dążymy do wspierania współpracy i przejrzystości. "
+        },
+        "offline": {
+          "title": "Funkcjonalność offline",
+          "subtitle": "Sign Translate działa wszędzie, nawet offline, w samolocie.",
+          "description": "Niezależnie od tego, czy podróżujesz, jesteś na odludziu, czy nie masz internetu, nasza aplikacja gwarantuje, że zawsze będziesz w stanie przetłumaczyć język mówiony lub pisany na język migowy, dzięki czemu niezbędne narzędzia komunikacji będą w zasięgu ręki."
+        }
       }
     },
     "contribute": {

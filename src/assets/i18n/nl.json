@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Vertalen van gesproken naar gebarentalen",
         "signed-to-spoken": "Of van gebarentaal naar gesproken talen"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Realtime vertaling",
+          "subtitle": "Vertaal in realtime tussen meer dan 40 gebarentalen en gesproken talen",
+          "description": "Met onze app kunt u op een natuurlijke en eenvoudige manier met iedereen, overal en altijd, communiceren in uw eigen gebarentaal."
+        },
+        "multilingual": {
+          "title": "Meertalige ondersteuning",
+          "subtitle": "Vertalen tussen verschillende gebarentalen en gesproken talen",
+          "description": "Onze app ondersteunt meerdere gebarentalen en gesproken talen, zodat u kunt communiceren met mensen uit verschillende landen en culturen."
+        },
+        "appearance": {
+          "title": "Aanpasbaar uiterlijk",
+          "subtitle": "Onze fotorealistische gebarentaalavatars bieden een breed scala aan aanpassingsmogelijkheden om aan uw specifieke behoeften te voldoen.",
+          "description": "Of je nu een avatar wilt maken die op jou lijkt of een uniek personage wilt creëren, met onze aanpassingsopties kun je jezelf uitdrukken op een manier die authentiek en trouw aan jou voelt."
+        },
+        "open-source": {
+          "title": "Open Source-project",
+          "subtitle": "Sign Translate is een open-sourceproject waarmee de community een bijdrage kan leveren en de functies ervan kan verbeteren.",
+          "description": "Door onze broncode te delen, willen we samenwerking en transparantie bevorderen. "
+        },
+        "offline": {
+          "title": "Offline-functionaliteit",
+          "subtitle": "Sign Translate werkt overal, zelfs offline in een vliegtuig.",
+          "description": "Of u nu op reis bent, in een afgelegen gebied of zonder internet, onze app zorgt ervoor dat u gesproken of geschreven taal altijd in gebarentaal kunt vertalen, zodat u essentiële communicatiemiddelen binnen handbereik heeft."
+        }
       }
     },
     "contribute": {

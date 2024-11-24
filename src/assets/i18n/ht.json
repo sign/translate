@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Tradui soti nan lang pale ak siyen",
         "signed-to-spoken": "Oswa soti nan lang siyen yo pale"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Tradiksyon an tan reyèl",
+          "subtitle": "Tradwi ant plis pase 40 lang ki pale ak siyen an tan reyèl",
+          "description": "Aplikasyon nou an pèmèt ou kominike natirèlman ak fasil ak nenpòt moun, nenpòt kote, nenpòt lè, nan pwòp lang siy ou."
+        },
+        "multilingual": {
+          "title": "Sipò pou plizyè lang",
+          "subtitle": "Tradui ant diferan lang siy ak lang pale",
+          "description": "Aplikasyon nou an sipòte plizyè lang siy ak lang pale, pou ou ka kominike ak moun ki soti nan diferan peyi ak kilti."
+        },
+        "appearance": {
+          "title": "Customizable Aparans",
+          "subtitle": "Foto reyalistik avatar lang siy nou yo ofri yon pakèt opsyon personnalisation pou satisfè bezwen espesifik ou yo.",
+          "description": "Kit ou vle kreye yon avatar ki sanble ak ou oswa kreye yon karaktè inik, opsyon personnalisation nou yo pèmèt ou eksprime tèt ou nan yon fason ki santi natif natal ak vre pou ou."
+        },
+        "open-source": {
+          "title": "Pwojè sous louvri",
+          "subtitle": "Sign Translate se yon pwojè sous louvri, ki pèmèt kominote a kontribye ak amelyore karakteristik li yo.",
+          "description": "Lè nou pataje kòd sous nou an, nou vize ankouraje kolaborasyon ak transparans. "
+        },
+        "offline": {
+          "title": "Fonksyonalite offline",
+          "subtitle": "Siyen Tradiksyon travay tout kote, menm offline sou yon avyon.",
+          "description": "Kit w ap vwayaje, nan yon zòn ki lwen, oswa san entènèt, aplikasyon nou an asire ou ka toujou tradui langaj pale oswa ekri nan lang siy, kenbe zouti kominikasyon esansyèl nan men ou."
+        }
       }
     },
     "contribute": {

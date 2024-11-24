@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Þýða úr töluðu yfir á táknmál",
         "signed-to-spoken": "Eða frá táknmáli yfir í talað tungumál"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Rauntímaþýðing",
+          "subtitle": "Þýddu á milli 40+ táknmál og talað tungumál í rauntíma",
+          "description": "Appið okkar gerir þér kleift að eiga náttúruleg og auðveld samskipti við hvern sem er, hvar sem er, hvenær sem er, á þínu eigin táknmáli."
+        },
+        "multilingual": {
+          "title": "Stuðningur á mörgum tungumálum",
+          "subtitle": "Þýða á milli ólíkra táknmála og talaðra tungumála",
+          "description": "Appið okkar styður mörg táknmál og töluð tungumál, svo þú getur átt samskipti við fólk frá mismunandi löndum og menningu."
+        },
+        "appearance": {
+          "title": "Sérhannaðar útlit",
+          "subtitle": "Myndraunsæir táknmálsmyndir okkar bjóða upp á breitt úrval af sérsniðnum valkostum til að henta þínum þörfum.",
+          "description": "Hvort sem þú vilt búa til avatar sem lítur út eins og þú eða búa til einstaka persónu, þá gera sérsniðnar valkostir okkar þér kleift að tjá þig á þann hátt sem þér finnst ósvikinn og sannur."
+        },
+        "open-source": {
+          "title": "Open Source verkefni",
+          "subtitle": "Sign Translate er opinn hugbúnaður sem gerir samfélaginu kleift að leggja sitt af mörkum og bæta eiginleika þess.",
+          "description": "Með því að deila frumkóðanum okkar stefnum við að því að stuðla að samvinnu og gagnsæi. "
+        },
+        "offline": {
+          "title": "Ótengdur virkni",
+          "subtitle": "Sign Translate vinnur alls staðar, jafnvel án nettengingar í flugvél.",
+          "description": "Hvort sem þú ert að ferðast, á afskekktu svæði eða án internets, þá tryggir appið okkar að þú getir alltaf þýtt talað eða ritað mál yfir á táknmál, með nauðsynleg samskiptatæki innan seilingar."
+        }
       }
     },
     "contribute": {

@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Traduire de la langue parlée à la langue des signes",
         "signed-to-spoken": "Ou des langues signées aux langues parlées"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traduction en temps réel",
+          "subtitle": "Traduisez entre plus de 40 langues signées et parlées en temps réel",
+          "description": "Notre application vous permet de communiquer naturellement et facilement avec n'importe qui, n'importe où, n'importe quand, dans votre propre langue des signes."
+        },
+        "multilingual": {
+          "title": "Prise en charge multilingue",
+          "subtitle": "Traduire entre différentes langues des signes et langues parlées",
+          "description": "Notre application prend en charge plusieurs langues des signes et langues parlées, afin que vous puissiez communiquer avec des personnes de différents pays et cultures."
+        },
+        "appearance": {
+          "title": "Apparence personnalisable",
+          "subtitle": "Nos avatars photo-réalistes en langue des signes offrent une large gamme d'options de personnalisation pour répondre à vos besoins spécifiques.",
+          "description": "Que vous souhaitiez créer un avatar qui vous ressemble ou créer un personnage unique, nos options de personnalisation vous permettent de vous exprimer d'une manière qui vous semble authentique et fidèle."
+        },
+        "open-source": {
+          "title": "Projet Open Source",
+          "subtitle": "Sign Translate est un projet open source, permettant à la communauté de contribuer et d'améliorer ses fonctionnalités.",
+          "description": "En partageant notre code source, nous visons à favoriser la collaboration et la transparence. "
+        },
+        "offline": {
+          "title": "Fonctionnalité hors ligne",
+          "subtitle": "Sign Translate fonctionne partout, même hors ligne dans un avion.",
+          "description": "Que vous soyez en voyage, dans une région éloignée ou sans Internet, notre application vous permet de toujours traduire la langue parlée ou écrite en langue des signes, en gardant les outils de communication essentiels à portée de main."
+        }
       }
     },
     "contribute": {

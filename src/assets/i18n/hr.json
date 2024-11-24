@@ -64,6 +64,33 @@
       "direction": {
         "spoken-to-signed": "Prevodite s govornog na znakovni jezik",
         "signed-to-spoken": "Ili sa znakovnog na govorni jezik"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Prijevod u stvarnom vremenu",
+          "subtitle": "Prevodite između 40+ znakovnih i govornih jezika u stvarnom vremenu",
+          "description": "Naša vam aplikacija omogućuje prirodnu i jednostavnu komunikaciju s bilo kim, bilo gdje, bilo kada, na vlastitom znakovnom jeziku."
+        },
+        "multilingual": {
+          "title": "Višejezična podrška",
+          "subtitle": "Prevodite između različitih znakovnih i govornih jezika",
+          "description": "Naša aplikacija podržava više znakovnih jezika i govornih jezika, tako da možete komunicirati s ljudima iz različitih zemalja i kultura."
+        },
+        "appearance": {
+          "title": "Prilagodljiv izgled",
+          "subtitle": "Naši foto realistični avatari na znakovnom jeziku nude širok raspon mogućnosti prilagodbe kako bi odgovarale vašim specifičnim potrebama.",
+          "description": "Bilo da želite izraditi avatar koji izgleda poput vas ili stvoriti jedinstveni lik, naše opcije prilagodbe omogućuju vam da se izrazite na način koji vam se čini autentičnim i istinitim."
+        },
+        "open-source": {
+          "title": "Projekt otvorenog koda",
+          "subtitle": "Sign Translate je projekt otvorenog koda koji zajednici omogućuje doprinos i poboljšanje njegovih značajki.",
+          "description": "Dijeljenjem našeg izvornog koda, cilj nam je poticati suradnju i transparentnost. "
+        },
+        "offline": {
+          "title": "Izvanmrežna funkcionalnost",
+          "subtitle": "Sign Translate radi posvuda, čak i izvan mreže u zrakoplovu.",
+          "description": "Bilo da putujete, nalazite se na udaljenom području ili nemate internet, naša aplikacija osigurava da uvijek možete prevesti govorni ili pisani jezik u znakovni jezik, držeći osnovne komunikacijske alate na dohvat ruke."
+        }
       }
     },
     "contribute": {
