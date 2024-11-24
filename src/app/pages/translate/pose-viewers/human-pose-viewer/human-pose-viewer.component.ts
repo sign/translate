@@ -3,16 +3,15 @@ import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   ElementRef,
+  inject,
   Input,
   OnDestroy,
-  ViewChild,
-  inject,
+  viewChild,
 } from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
 import {fromEvent, interval} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
-import {Store} from '@ngxs/store';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
 import {IonProgressBar, IonSpinner} from '@ionic/angular/standalone';
 import {AsyncPipe} from '@angular/common';
@@ -23,7 +22,6 @@ import {TranslocoDirective} from '@ngneat/transloco';
   selector: 'app-human-pose-viewer',
   templateUrl: './human-pose-viewer.component.html',
   styleUrls: ['./human-pose-viewer.component.scss'],
-  standalone: true,
   imports: [IonProgressBar, IonSpinner, AsyncPipe, MatTooltip, TranslocoDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
@@ -32,7 +30,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
   appearance$ = this.store.select<string>(state => state.settings.appearance);
 
-  @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
+  readonly canvasEl = viewChild<ElementRef<HTMLCanvasElement>>('canvas');
 
   @Input() src: string;
   @Input() width: string;
@@ -44,9 +42,9 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   totalFrames = 1;
 
   ngAfterViewInit(): void {
-    const pose = this.poseEl.nativeElement;
+    const pose = this.poseEl().nativeElement;
 
-    const canvas = this.canvasEl.nativeElement;
+    const canvas = this.canvasEl().nativeElement;
     const ctx = canvas.getContext('2d');
 
     let destroyed = false;
@@ -135,7 +133,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
       return;
     }
 
-    const canvas = this.canvasEl.nativeElement;
+    const canvas = this.canvasEl().nativeElement;
     await this.startRecording(canvas as any);
 
     const ctx = canvas.getContext('2d');
@@ -160,10 +158,11 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   }
 
   get progress(): number {
-    if (!this.poseEl) {
+    const poseEl = this.poseEl();
+    if (!poseEl) {
       return 0;
     }
-    const pose = this.poseEl.nativeElement;
+    const pose = poseEl.nativeElement;
     if (!pose.duration) {
       return 0;
     }

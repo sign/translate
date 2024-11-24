@@ -1,11 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {NotFoundComponent} from './not-found.component';
-import {
-  AppTranslocoTestingModule,
-  provideTranslocoTesting,
-} from '../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
+import {provideTranslocoTesting} from '../../core/modules/transloco/transloco-testing.module';
 
 describe('NotFoundComponent', () => {
   let component: NotFoundComponent;

@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import type {Tensor} from '@tensorflow/tfjs-core';
 import type {Vector3} from 'three';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';

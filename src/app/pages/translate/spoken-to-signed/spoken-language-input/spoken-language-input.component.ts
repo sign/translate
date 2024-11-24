@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, inject} from '@angular/core';
+import {Component, inject, Input, OnInit} from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {debounce, distinctUntilChanged, skipWhile, takeUntil, tap} from 'rxjs/operators';
 import {interval, Observable} from 'rxjs';
@@ -23,7 +23,6 @@ import {DesktopTextareaComponent} from './desktop-textarea/desktop-textarea.comp
   selector: 'app-spoken-language-input',
   templateUrl: './spoken-language-input.component.html',
   styleUrls: ['./spoken-language-input.component.scss'],
-  standalone: true,
   imports: [
     IonToolbar,
     IonButtons,

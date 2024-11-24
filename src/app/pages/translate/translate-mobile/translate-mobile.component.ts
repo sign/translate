@@ -1,5 +1,4 @@
-import {Component, inject} from '@angular/core';
-import {Store} from '@ngxs/store';
+import {Component} from '@angular/core';
 import {TranslateDesktopComponent} from '../translate-desktop/translate-desktop.component';
 import {IonContent, IonFooter, IonHeader, IonToolbar} from '@ionic/angular/standalone';
 import {SpokenLanguageInputComponent} from '../spoken-to-signed/spoken-language-input/spoken-language-input.component';
@@ -12,7 +11,6 @@ import {LanguageSelectorsComponent} from '../language-selectors/language-selecto
   selector: 'app-translate-mobile',
   templateUrl: './translate-mobile.component.html',
   styleUrls: ['./translate-mobile.component.scss'],
-  standalone: true,
   imports: [
     IonContent,
     IonHeader,

@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, ElementRef, HostBinding, Input, ViewChild, inject} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostBinding, inject, Input, viewChild} from '@angular/core';
 import {Store} from '@ngxs/store';
-import {combineLatest, firstValueFrom, Observable} from 'rxjs';
+import {combineLatest, firstValueFrom} from 'rxjs';
 import {VideoSettings, VideoStateModel} from '../../core/modules/ngxs/store/video/video.state';
 import Stats from 'stats.js';
 import {distinctUntilChanged, filter, map, takeUntil, tap} from 'rxjs/operators';
@@ -24,26 +24,26 @@ import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
-  standalone: true,
   imports: [AnimationComponent, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   private store = inject(Store);
+
+  settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
+  animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
+
+  videoState$ = this.store.select<VideoStateModel>(state => state.video);
+  poseState$ = this.store.select<PoseStateModel>(state => state.pose);
+  signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
+  signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
+
   private poseService = inject(PoseService);
   private signWritingService = inject(SignWritingService);
   private elementRef = inject(ElementRef);
 
-  settingsState$!: Observable<SettingsStateModel>;
-  animatePose$!: Observable<boolean>;
-
-  videoState$!: Observable<VideoStateModel>;
-  poseState$!: Observable<PoseStateModel>;
-  signWritingState$!: Observable<SignWritingStateModel>;
-  signingProbability$!: Observable<number>;
-
-  @ViewChild('video') videoEl: ElementRef<HTMLVideoElement>;
-  @ViewChild('canvas') canvasEl: ElementRef<HTMLCanvasElement>;
-  @ViewChild('stats') statsEl: ElementRef;
+  readonly videoEl = viewChild<ElementRef<HTMLVideoElement>>('video');
+  readonly canvasEl = viewChild<ElementRef<HTMLCanvasElement>>('canvas');
+  readonly statsEl = viewChild<ElementRef>('stats');
   appRootEl = document.querySelector('ion-app') ?? document.body;
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
@@ -61,29 +61,22 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   constructor() {
     super();
 
-    this.settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);
-    this.animatePose$ = this.store.select<boolean>(state => state.settings.animatePose);
-    this.videoState$ = this.store.select<VideoStateModel>(state => state.video);
-    this.poseState$ = this.store.select<PoseStateModel>(state => state.pose);
-    this.signWritingState$ = this.store.select<SignWritingStateModel>(state => state.signWriting);
-    this.signingProbability$ = this.store.select<number>(state => state.detector.signingProbability);
-
     addIcons({playCircleOutline});
   }
 
   ngAfterViewInit(): void {
-    console.log(this.videoEl);
+    const videoEl = this.videoEl();
     this.setCamera();
     this.setStats();
     this.trackPose();
 
-    this.canvasCtx = this.canvasEl.nativeElement.getContext('2d');
+    this.canvasCtx = this.canvasEl().nativeElement.getContext('2d');
     this.preloadSignWritingFont();
     this.drawChanges();
 
     this.preloadPoseEstimationModel();
-    this.videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
-    this.videoEl.nativeElement.addEventListener('ended', () => (this.videoEnded = true));
+    videoEl.nativeElement.addEventListener('loadeddata', this.appLoop.bind(this));
+    videoEl.nativeElement.addEventListener('ended', () => (this.videoEnded = true));
 
     const resizeObserver = new ResizeObserver(this.scaleCanvas.bind(this));
     resizeObserver.observe(this.elementRef.nativeElement);
@@ -92,8 +85,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   async appLoop(): Promise<void> {
     // const fps = this.store.snapshot().video.videoSettings.frameRate;
-    const video = this.videoEl.nativeElement;
-    const poseAction = new PoseVideoFrame(this.videoEl.nativeElement);
+    const video = this.videoEl().nativeElement;
+    const poseAction = new PoseVideoFrame(video);
 
     let lastTime = null;
     while (true) {
@@ -117,7 +110,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   }
 
   setCamera(): void {
-    const video = this.videoEl.nativeElement;
+    const video = this.videoEl().nativeElement;
     video.muted = true;
     video.addEventListener('loadedmetadata', () => video.play());
 
@@ -138,8 +131,9 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
         map(state => state.videoSettings),
         filter(Boolean),
         tap(({width, height}) => {
-          this.canvasEl.nativeElement.width = width;
-          this.canvasEl.nativeElement.height = height;
+          const canvasEl = this.canvasEl();
+          canvasEl.nativeElement.width = width;
+          canvasEl.nativeElement.height = height;
 
           // It is required to wait for next frame, as grid element might still be resizing
           requestAnimationFrame(this.scaleCanvas.bind(this));
@@ -157,13 +151,14 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
       const documentBbox = this.appRootEl.getBoundingClientRect();
 
       const width = Math.min(bbox.width, documentBbox.width);
-      const scale = width / this.canvasEl.nativeElement.width;
-      this.canvasEl.nativeElement.style.transform = `scale(-${scale}, ${scale}) translateX(-100%)`;
+      const canvasEl = this.canvasEl().nativeElement;
+      const scale = width / canvasEl.width;
+      canvasEl.style.transform = `scale(-${scale}, ${scale}) translateX(-100%)`;
 
       // Set parent element height
-      this.elementRef.nativeElement.style.height = this.canvasEl.nativeElement.height * scale + 'px';
+      this.elementRef.nativeElement.style.height = canvasEl.height * scale + 'px';
       // Set canvas parent element width
-      this.canvasEl.nativeElement.parentElement.style.width = width + 'px';
+      canvasEl.parentElement.style.width = width + 'px';
     });
   }
 
@@ -227,7 +222,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   setStats(): void {
     this.fpsStats.showPanel(0);
     this.fpsStats.dom.style.position = 'absolute';
-    this.statsEl.nativeElement.appendChild(this.fpsStats.dom);
+    this.statsEl().nativeElement.appendChild(this.fpsStats.dom);
 
     // TODO this on change of input property
     if (!this.displayFps) {
@@ -241,7 +236,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
     this.signingStats.showPanel(0);
     this.signingStats.dom.style.position = 'absolute';
     this.signingStats.dom.style.left = '80px';
-    this.statsEl.nativeElement.appendChild(this.signingStats.dom);
+    this.statsEl().nativeElement.appendChild(this.signingStats.dom);
 
     this.setDetectorListener(signingPanel);
   }
@@ -271,7 +266,8 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   replayVideo() {
     this.videoEnded = false;
-    this.videoEl.nativeElement.currentTime = 0;
-    return this.videoEl.nativeElement.play();
+    const videoEl = this.videoEl().nativeElement;
+    videoEl.currentTime = 0;
+    return videoEl.play();
   }
 }

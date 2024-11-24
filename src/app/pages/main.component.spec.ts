@@ -1,7 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MainComponent} from './main.component';
-import {IonicModule} from '@ionic/angular';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {RouterTestingModule} from '@angular/router/testing';
 import {IonIcon, IonLabel, IonTabBar, IonTabButton, IonTabs} from '@ionic/angular/standalone';

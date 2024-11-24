@@ -1,17 +1,16 @@
-import {Component, OnInit, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
 import {
-  MatTreeNestedDataSource,
-  MatTree,
-  MatTreeNodeDef,
-  MatTreeNode,
   MatNestedTreeNode,
-  MatTreeNodeToggle,
+  MatTree,
+  MatTreeNestedDataSource,
+  MatTreeNode,
   MatTreeNodeOutlet,
+  MatTreeNodeToggle,
 } from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
-import {TranslocoService, TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IonicModule} from '@ionic/angular';
@@ -45,7 +44,6 @@ if (!isIOS) {
     IonicModule,
     MatProgressSpinner,
     MatTree,
-    MatTreeNodeDef,
     MatTreeNode,
     NgTemplateOutlet,
     MatNestedTreeNode,

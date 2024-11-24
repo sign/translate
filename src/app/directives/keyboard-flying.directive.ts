@@ -1,5 +1,5 @@
 import {DOCUMENT} from '@angular/common';
-import {Directive, ElementRef, OnDestroy, OnInit, inject} from '@angular/core';
+import {Directive, ElementRef, inject, OnDestroy, OnInit} from '@angular/core';
 import {Capacitor, PluginListenerHandle} from '@capacitor/core';
 import {Keyboard, KeyboardResize} from '@capacitor/keyboard';
 import {Animation, AnimationController} from '@ionic/angular';

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, inject} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {InputMode} from '../../../../modules/translate/translate.state';
 import {Store} from '@ngxs/store';
 import {SetInputMode} from '../../../../modules/translate/translate.actions';
@@ -11,7 +11,6 @@ import {AsyncPipe} from '@angular/common';
   selector: 'app-translate-input-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
-  standalone: true,
   imports: [IonButton, IonIcon, TranslocoPipe, AsyncPipe],
 })
 export class TranslateInputButtonComponent {

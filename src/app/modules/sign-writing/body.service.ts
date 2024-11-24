@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
 import {ThreeService} from '../../core/services/three.service';

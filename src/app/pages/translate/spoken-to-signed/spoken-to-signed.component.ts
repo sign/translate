@@ -7,7 +7,6 @@ import {SignedLanguageOutputComponent} from './signed-language-output/signed-lan
   selector: 'app-spoken-to-signed',
   templateUrl: './spoken-to-signed.component.html',
   styleUrls: ['./spoken-to-signed.component.scss'],
-  standalone: true,
   imports: [SpokenLanguageInputComponent, SignWritingComponent, SignedLanguageOutputComponent],
 })
 export class SpokenToSignedComponent {}

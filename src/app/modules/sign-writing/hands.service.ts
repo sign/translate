@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import type {LayersModel} from '@tensorflow/tfjs-layers';

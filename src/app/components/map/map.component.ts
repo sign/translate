@@ -1,5 +1,5 @@
-import {Component, NgModule, OnInit, inject} from '@angular/core';
-import {geoJSON, latLng, Map, tileLayer} from 'leaflet';
+import {Component, inject, NgModule, OnInit} from '@angular/core';
+import {geoJSON, latLng, Map} from 'leaflet';
 import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {firstValueFrom} from 'rxjs';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';

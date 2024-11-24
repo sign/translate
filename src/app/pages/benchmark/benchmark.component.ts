@@ -4,11 +4,46 @@ import {Pix2PixService} from '../../modules/pix2pix/pix2pix.service';
 import {PoseService} from '../../modules/pose/pose.service';
 import {transferableImage} from '../../core/helpers/image/transferable';
 import {LanguageDetectionService} from '../../modules/translate/language-detection/language-detection.service';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
+import {BenchmarkItemComponent} from './benchmark-item/benchmark-item.component';
+import {MatTooltip} from '@angular/material/tooltip';
+import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {KeyValuePipe} from '@angular/common';
+import {addIcons} from 'ionicons';
+import {analytics} from 'ionicons/icons';
 
 @Component({
   selector: 'app-benchmark',
   templateUrl: './benchmark.component.html',
   styleUrls: ['./benchmark.component.scss'],
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonButton,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    BenchmarkItemComponent,
+    MatTooltip,
+    TranslocoPipe,
+    TranslocoDirective,
+    KeyValuePipe,
+    IonIcon,
+  ],
 })
 export class BenchmarkComponent {
   private ga = inject(GoogleAnalyticsService);
@@ -23,6 +58,10 @@ export class BenchmarkComponent {
   };
 
   stats: {[key: string]: {[key: string]: number[]}} = {};
+
+  constructor() {
+    addIcons({analytics});
+  }
 
   async bench() {
     for (const bench of Object.values(this.benchmarks)) {

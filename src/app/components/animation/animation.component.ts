@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, ViewChild, inject} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, Input, viewChild} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
@@ -12,7 +12,6 @@ import {Observable} from 'rxjs';
   selector: 'app-animation',
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.scss'],
-  standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AnimationComponent extends BaseComponent implements AfterViewInit {
@@ -22,7 +21,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
 
   animationState$: Observable<AnimationStateModel>;
 
-  @ViewChild('modelViewer') modelViewerEl: ElementRef<HTMLMediaElement>;
+  readonly modelViewerEl = viewChild<ElementRef<HTMLMediaElement>>('modelViewer');
 
   @Input() fps = 1;
 
@@ -54,7 +53,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     (ModelViewerElement as any).minimumRenderScale = 1; // TODO investigate why type is not set
 
     let i = 0;
-    const el = this.modelViewerEl.nativeElement;
+    const el = this.modelViewerEl().nativeElement;
 
     this.applyStyle(el);
 
@@ -89,7 +88,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
   }
 
   getScene() {
-    const el = this.modelViewerEl.nativeElement;
+    const el = this.modelViewerEl().nativeElement;
     const symbol = Object.getOwnPropertySymbols(el).find(symbol => String(symbol) === 'Symbol(scene)');
     return el[symbol];
   }
@@ -117,7 +116,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     // Download the files serially
     for (const [attribute, assetName] of Object.entries(attributes)) {
       const uri = await this.assets.getFileUri(assetName);
-      this.modelViewerEl.nativeElement.setAttribute(attribute, uri);
+      this.modelViewerEl().nativeElement.setAttribute(attribute, uri);
     }
   }
 }

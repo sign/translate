@@ -1,6 +1,6 @@
 import type {Tensor} from '@tensorflow/tfjs';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {EstimatedPose} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {PoseService} from '../pose/pose.service';

@@ -1,4 +1,4 @@
-import {Component, Input, inject} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
@@ -10,7 +10,6 @@ import {TranslocoDirective} from '@ngneat/transloco';
   selector: 'app-upload',
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.scss'],
-  standalone: true,
   imports: [IonButton, IonIcon, TranslocoDirective],
 })
 export class UploadComponent {

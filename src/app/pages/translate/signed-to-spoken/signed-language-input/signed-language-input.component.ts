@@ -8,7 +8,6 @@ import {UploadComponent} from '../upload/upload.component';
   selector: 'app-signed-language-input',
   templateUrl: './signed-language-input.component.html',
   styleUrl: './signed-language-input.component.scss',
-  standalone: true,
   imports: [IonToolbar, IonButtons, IonButton, IonFabButton, IonTitle, IonIcon, UploadComponent],
 })
 export class SignedLanguageInputComponent {

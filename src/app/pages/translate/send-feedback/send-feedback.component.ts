@@ -5,7 +5,6 @@ import {TranslocoPipe} from '@ngneat/transloco';
   selector: 'app-send-feedback',
   templateUrl: './send-feedback.component.html',
   styleUrls: ['./send-feedback.component.scss'],
-  standalone: true,
   imports: [TranslocoPipe],
 })
 export class SendFeedbackComponent {}

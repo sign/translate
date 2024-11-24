@@ -1,7 +1,5 @@
-import {isDevMode, NgModule} from '@angular/core';
-import {provideTransloco, TranslocoModule} from '@ngneat/transloco';
+import {provideTransloco} from '@ngneat/transloco';
 import {HttpLoader, translocoScopes} from './transloco.loader';
-import {provideHttpClient, withFetch} from '@angular/common/http';
 import {SITE_LANGUAGES} from './languages';
 
 export const AppTranslocoProviders = [

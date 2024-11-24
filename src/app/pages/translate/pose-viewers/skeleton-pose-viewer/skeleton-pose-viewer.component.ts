@@ -8,14 +8,13 @@ import {PlayableVideoEncoder} from '../playable-video-encoder';
   selector: 'app-skeleton-pose-viewer',
   templateUrl: './skeleton-pose-viewer.component.html',
   styleUrls: ['./skeleton-pose-viewer.component.scss'],
-  standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
 
   ngAfterViewInit(): void {
-    const pose = this.poseEl.nativeElement;
+    const pose = this.poseEl().nativeElement;
 
     fromEvent(pose, 'firstRender$')
       .pipe(
@@ -63,7 +62,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
   }
 
   pauseInvisible() {
-    const pose = this.poseEl.nativeElement;
+    const pose = this.poseEl().nativeElement;
 
     // TODO: this should be on the current element, not document
     fromEvent(document, 'visibilitychange')

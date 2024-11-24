@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import * as drawing from '@mediapipe/drawing_utils/drawing_utils.js';
 import {EMPTY_LANDMARK, EstimatedPose, PoseLandmark} from './pose.state';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';

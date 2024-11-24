@@ -1,9 +1,21 @@
 import {Component} from '@angular/core';
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonIcon,
+} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {alertCircleOutline, code, language} from 'ionicons/icons';
 
 @Component({
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
   styleUrls: ['./contribute.component.scss'],
+  imports: [IonCard, IonCardHeader, IonCardTitle, IonIcon, IonCardSubtitle, IonCardContent, IonButton],
 })
 export class ContributeComponent {
   cards = [
@@ -44,4 +56,8 @@ export class ContributeComponent {
       },
     },
   ];
+
+  constructor() {
+    addIcons({code, language, alertCircleOutline});
+  }
 }

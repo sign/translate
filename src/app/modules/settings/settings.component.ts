@@ -11,7 +11,7 @@ export abstract class BaseSettingsComponent extends BaseComponent {
 
   settingsState$: Observable<SettingsStateModel>;
 
-  protected constructor() {
+  constructor() {
     super();
 
     this.settingsState$ = this.store.select<SettingsStateModel>(state => state.settings);

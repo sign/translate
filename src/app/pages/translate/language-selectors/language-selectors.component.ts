@@ -1,4 +1,4 @@
-import {Component, HostBinding, OnInit, inject} from '@angular/core';
+import {Component, HostBinding, inject, OnInit} from '@angular/core';
 import {
   FlipTranslationDirection,
   SetSignedLanguage,
@@ -21,7 +21,6 @@ import {TranslocoPipe} from '@ngneat/transloco';
   selector: 'app-language-selectors',
   templateUrl: './language-selectors.component.html',
   styleUrls: ['./language-selectors.component.scss'],
-  standalone: true,
   imports: [IonButton, IonIcon, LanguageSelectorComponent, AsyncPipe, MatTooltip, TranslocoPipe],
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {

@@ -1,4 +1,4 @@
-import {Component, ElementRef, inject, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, inject, OnDestroy, OnInit, viewChild} from '@angular/core';
 import {BaseComponent} from '../../../components/base/base.component';
 import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -6,7 +6,6 @@ import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
 import {PlayableVideoEncoder} from './playable-video-encoder';
 import {isChrome} from '../../../core/constants';
-import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-pose-viewer',
@@ -16,7 +15,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnInit, OnDestroy {
   protected store = inject(Store);
 
-  @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
+  readonly poseEl = viewChild<ElementRef<HTMLPoseViewerElement>>('poseViewer');
 
   background: string = '';
 
@@ -74,7 +73,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   async fps() {
-    const pose = await this.poseEl.nativeElement.getPose();
+    const pose = await this.poseEl().nativeElement.getPose();
     return pose.body.fps;
   }
 
@@ -130,7 +129,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     );
     this.mediaSubscriptions.push(stopEvent.subscribe());
 
-    const duration = this.poseEl.nativeElement.duration * 1000;
+    const duration = this.poseEl().nativeElement.duration * 1000;
     this.mediaRecorder.start(duration);
   }
 

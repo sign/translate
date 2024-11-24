@@ -1,12 +1,17 @@
 import {Component} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {tap} from 'rxjs/operators';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonIcon} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {arrowForward} from 'ionicons/icons';
+import {DecimalPipe} from '@angular/common';
 
 @Component({
   selector: 'app-about-pricing',
   templateUrl: './about-pricing.component.html',
   styleUrls: ['./about-pricing.component.scss'],
+  imports: [IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButton, ReactiveFormsModule, IonIcon, DecimalPipe],
 })
 export class AboutPricingComponent {
   form = new FormGroup({
@@ -58,6 +63,8 @@ export class AboutPricingComponent {
         takeUntilDestroyed()
       )
       .subscribe();
+
+    addIcons({arrowForward});
   }
 
   applyPreset(preset: any) {

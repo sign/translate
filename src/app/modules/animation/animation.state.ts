@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {AnimationService} from './animation.service';
 import {filter, first, tap} from 'rxjs/operators';

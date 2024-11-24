@@ -1,7 +1,7 @@
 import type {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, EstimatedPose, PoseLandmark} from '../pose/pose.state';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 

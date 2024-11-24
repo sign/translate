@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import * as comlink from 'comlink';
 import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 import {AssetsService} from '../../core/services/assets/assets.service';

@@ -7,7 +7,6 @@ import {DropzoneDirective} from '../../../directives/dropzone.directive';
   selector: 'app-drop-pose-file',
   templateUrl: './drop-pose-file.component.html',
   styleUrls: ['./drop-pose-file.component.scss'],
-  standalone: true,
   imports: [DropzoneDirective],
 })
 export class DropPoseFileComponent {

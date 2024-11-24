@@ -1,5 +1,4 @@
-import {Component, OnInit, inject} from '@angular/core';
-import {Observable} from 'rxjs';
+import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
@@ -20,7 +19,6 @@ import {cloudUpload, language, videocam} from 'ionicons/icons';
   selector: 'app-translate-desktop',
   templateUrl: './translate-desktop.component.html',
   styleUrls: ['./translate-desktop.component.scss'],
-  standalone: true,
   imports: [
     IonHeader,
     IonToolbar,

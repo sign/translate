@@ -9,7 +9,6 @@ import {TranslocoDirective} from '@ngneat/transloco';
   selector: 'app-text-to-speech',
   templateUrl: './text-to-speech.component.html',
   styleUrls: ['./text-to-speech.component.scss'],
-  standalone: true,
   imports: [MatTooltip, IonButton, IonIcon, TranslocoDirective],
 })
 export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {

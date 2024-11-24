@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, viewChild} from '@angular/core';
 import mermaid, {MermaidConfig} from 'mermaid';
 
 const config: MermaidConfig = {
@@ -19,7 +19,7 @@ mermaid.initialize(config);
   styleUrl: './mermaid-chart.component.scss',
 })
 export class MermaidChartComponent implements AfterViewInit {
-  @ViewChild('mermaid') mermaidEl: ElementRef;
+  readonly mermaidEl = viewChild<ElementRef>('mermaid');
 
   async ngAfterViewInit() {
     const graphDefinition = `
@@ -50,7 +50,8 @@ linkStyle 8,9,14,19,20 stroke:orange;
 
 `;
     const {svg, bindFunctions} = await mermaid.render('graphDiv', graphDefinition);
-    this.mermaidEl.nativeElement.innerHTML = svg;
-    bindFunctions(this.mermaidEl.nativeElement);
+    const mermaidEl = this.mermaidEl();
+    mermaidEl.nativeElement.innerHTML = svg;
+    bindFunctions(mermaidEl.nativeElement);
   }
 }

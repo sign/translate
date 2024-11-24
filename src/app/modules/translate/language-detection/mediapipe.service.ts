@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {GoogleAnalyticsService} from '../../../core/modules/google-analytics/google-analytics.service';
 import {TranslationService} from '../translate.service';
 import {LanguageDetectionService} from './language-detection.service';

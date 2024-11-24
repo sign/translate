@@ -1,20 +1,30 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, viewChild} from '@angular/core';
 import {Swiper} from 'swiper/types';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../../components/base/base.component';
+import {IonCard, IonCardContent, IonCardTitle, IonIcon} from '@ionic/angular/standalone';
+import {LazyMapComponent} from '../lazy-map/lazy-map.component';
+import {addIcons} from 'ionicons';
+import {bookOutline, cloudOfflineOutline, languageOutline, optionsOutline, swapHorizontalOutline} from 'ionicons/icons';
+import {register as registerSwiper} from 'swiper/element/bundle';
 
 @Component({
   selector: 'app-about-benefits',
   templateUrl: './about-benefits.component.html',
   styleUrls: ['./about-benefits.component.scss'],
+  imports: [IonCard, IonCardContent, TranslocoDirective, IonCardTitle, LazyMapComponent, IonIcon],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AboutBenefitsComponent extends BaseComponent implements AfterViewInit, OnInit {
   private transloco = inject(TranslocoService);
   private domSanitizer = inject(DomSanitizer);
 
-  @ViewChild('swiper', {static: false}) swiper: ElementRef<{swiper: Swiper}>;
+  readonly swiper = viewChild<ElementRef<{swiper: Swiper}>>('swiper');
+
+  iOSScreenshot: SafeUrl;
+
   activeSlide = 0;
 
   slides = [
@@ -25,7 +35,11 @@ export class AboutBenefitsComponent extends BaseComponent implements AfterViewIn
     {id: 'offline', icon: 'cloud-offline-outline'},
   ];
 
-  iOSScreenshot: SafeUrl;
+  constructor() {
+    super();
+    addIcons({swapHorizontalOutline, languageOutline, optionsOutline, bookOutline, cloudOfflineOutline});
+    registerSwiper();
+  }
 
   ngOnInit() {
     this.transloco.langChanges$
@@ -42,12 +56,12 @@ export class AboutBenefitsComponent extends BaseComponent implements AfterViewIn
 
   // Function to navigate to the specific slide
   slideTo(slideIndex: number) {
-    this.swiper.nativeElement.swiper.slideTo(slideIndex);
+    this.swiper().nativeElement.swiper.slideTo(slideIndex);
   }
 
   ngAfterViewInit() {
-    this.swiper.nativeElement.swiper.on('activeIndexChange', () => {
-      this.activeSlide = this.swiper.nativeElement.swiper.activeIndex;
+    this.swiper().nativeElement.swiper.on('activeIndexChange', () => {
+      this.activeSlide = this.swiper().nativeElement.swiper.activeIndex;
     });
   }
 }

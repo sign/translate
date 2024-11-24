@@ -5,8 +5,24 @@ import {TranslateState} from './modules/translate/translate.state';
 import {LanguageDetectionService} from './modules/translate/language-detection/language-detection.service';
 import {MediaPipeLanguageDetectionService} from './modules/translate/language-detection/mediapipe.service';
 import {MainComponent} from './pages/main.component';
+import {SignWritingState} from './modules/sign-writing/sign-writing.state';
+import {PoseState} from './modules/pose/pose.state';
+import {VideoState} from './core/modules/ngxs/store/video/video.state';
+import {DetectorState} from './modules/detector/detector.state';
 
 export const routes: Routes = [
+  {
+    path: 'playground',
+    loadComponent: () => import('./pages/playground/playground.component').then(m => m.PlaygroundComponent),
+    providers: [provideStates([VideoState, PoseState, SignWritingState, DetectorState])],
+  },
+  {
+    path: 'benchmark',
+    loadComponent: () => import('./pages/benchmark/benchmark.component').then(m => m.BenchmarkComponent),
+    providers: [{provide: LanguageDetectionService, useClass: MediaPipeLanguageDetectionService}],
+  },
+  {path: 'about', loadChildren: () => import('./pages/landing/landing.routes').then(m => m.routes)},
+  {path: 'legal', loadChildren: () => import('./pages/landing/landing.routes').then(m => m.routes)},
   {
     path: '',
     component: MainComponent,
@@ -15,9 +31,13 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./pages/translate/translate.component').then(m => m.TranslateComponent),
         providers: [
-          provideStates([TranslateState]),
+          provideStates([TranslateState, VideoState, PoseState, SignWritingState, DetectorState]),
           {provide: LanguageDetectionService, useClass: MediaPipeLanguageDetectionService},
         ],
+      },
+      {
+        path: 'translate',
+        redirectTo: '',
       },
       // {
       //   path: 'converse',
@@ -33,15 +53,5 @@ export const routes: Routes = [
       // },
     ],
   },
-  // {
-  //   path: 'playground',
-  //   loadChildren: () => import('./pages/playground/playground.module').then(m => m.PlaygroundPageModule),
-  // },
-  // {
-  //   path: 'benchmark',
-  //   loadChildren: () => import('./pages/benchmark/benchmark.module').then(m => m.BenchmarkPageModule),
-  // },
-  // {path: 'about', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
-  // {path: 'legal', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)},
   {path: '**', component: NotFoundComponent},
 ];

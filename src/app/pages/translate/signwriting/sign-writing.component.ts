@@ -14,7 +14,6 @@ import {MatTooltip} from '@angular/material/tooltip';
   selector: 'app-sign-writing',
   templateUrl: './sign-writing.component.html',
   styleUrls: ['./sign-writing.component.scss'],
-  standalone: true,
   imports: [IonProgressBar, MatTooltip],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

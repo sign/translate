@@ -1,4 +1,4 @@
-import {Component, OnInit, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {VideoStateModel} from '../../../core/modules/ngxs/store/video/video.state';
 import {InputMode} from '../../../modules/translate/translate.state';
@@ -89,7 +89,6 @@ const FAKE_WORDS = [
   selector: 'app-signed-to-spoken',
   templateUrl: './signed-to-spoken.component.html',
   styleUrls: ['./signed-to-spoken.component.scss'],
-  standalone: true,
   imports: [
     MatTooltip,
     SignWritingComponent,

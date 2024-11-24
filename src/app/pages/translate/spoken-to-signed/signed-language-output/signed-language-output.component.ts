@@ -1,4 +1,4 @@
-import {Component, OnInit, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
@@ -27,7 +27,6 @@ import {downloadOutline, shareOutline} from 'ionicons/icons';
   selector: 'app-signed-language-output',
   templateUrl: './signed-language-output.component.html',
   styleUrls: ['./signed-language-output.component.scss'],
-  standalone: true,
   imports: [
     IonSpinner,
     IonButton,

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, inject} from '@angular/core';
+import {Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
 import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
@@ -18,7 +18,6 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
-  standalone: true,
   imports: [IonButton, IonIcon, MatMenuTrigger, FlagIconComponent, MatMenuModule, TranslocoDirective, MatTabsModule],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {

@@ -1,6 +1,6 @@
 import {HttpClient} from '@angular/common/http';
 import {Translation, TRANSLOCO_SCOPE, TranslocoLoader} from '@ngneat/transloco';
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {catchError, Observable} from 'rxjs';
 
 @Injectable({providedIn: 'root'})

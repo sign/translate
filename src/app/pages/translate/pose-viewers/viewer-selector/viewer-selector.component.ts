@@ -1,6 +1,5 @@
-import {Component, OnInit, inject} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
-import {Store} from '@ngxs/store';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {takeUntil, tap} from 'rxjs/operators';
 import {IonFab, IonFabButton, IonFabList, IonIcon} from '@ionic/angular/standalone';
@@ -19,7 +18,6 @@ export interface MatFabMenu {
   selector: 'app-viewer-selector',
   templateUrl: './viewer-selector.component.html',
   styleUrls: ['./viewer-selector.component.scss'],
-  standalone: true,
   imports: [IonFab, IonFabList, IonFabButton, IonIcon, MatTooltip, TranslocoDirective],
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {

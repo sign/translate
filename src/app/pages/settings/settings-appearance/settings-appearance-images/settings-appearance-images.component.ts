@@ -1,6 +1,5 @@
-import {Component, Input, inject} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
-import {Store} from '@ngxs/store';
 import {TranslocoDirective} from '@ngneat/transloco';
 import {MatTooltip} from '@angular/material/tooltip';
 import {IonicModule} from '@ionic/angular';

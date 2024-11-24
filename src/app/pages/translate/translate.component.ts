@@ -1,4 +1,4 @@
-import {Component, OnInit, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
@@ -15,7 +15,6 @@ import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.c
   selector: 'app-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss'],
-  standalone: true,
   imports: [TranslateMobileComponent, TranslateDesktopComponent],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {

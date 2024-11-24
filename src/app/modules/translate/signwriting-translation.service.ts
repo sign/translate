@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';

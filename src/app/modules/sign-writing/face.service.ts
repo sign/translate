@@ -1,4 +1,4 @@
-import {Injectable, inject} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import type {Vector2, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
