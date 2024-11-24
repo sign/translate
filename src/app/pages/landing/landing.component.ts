@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {TranslocoService} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-landing',
@@ -12,5 +13,17 @@ export class LandingComponent {
 
   constructor(private mediaMatcher: MediaMatcher) {
     this.isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
+  }
+
+  // TODO: remove this when i18n is supported
+  private transloco = inject(TranslocoService);
+  lastActiveLang = this.transloco.getActiveLang();
+
+  ionViewWillEnter() {
+    this.transloco.setActiveLang('en');
+  }
+
+  ionViewWillLeave() {
+    this.transloco.setActiveLang(this.lastActiveLang);
   }
 }
