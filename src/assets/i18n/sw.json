@@ -66,9 +66,6 @@
         "signed-to-spoken": "Au kutoka kwa lugha zilizotiwa sahihi hadi zinazozungumzwa"
       }
     },
-    "languages": {
-      "title": "Lugha"
-    },
     "contribute": {
       "title": "Changia"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Imesainiwa-kwa-Kutamkwa"
         },
         "actions": {
-          "toggle": "Geuza {{lebo}}",
+          "toggle": "Geuza {{label}}",
           "download": "Pakua Muundo wa Nje ya Mtandao",
           "delete": "Futa Akiba ya Muundo wa Nje ya Mtandao",
           "reDownload": "Pakua Upya Muundo wa Nje ya Mtandao"

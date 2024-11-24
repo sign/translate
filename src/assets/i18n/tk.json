@@ -66,9 +66,6 @@
         "signed-to-spoken": "Ora-da gol çekilen dillerden başlap"
       }
     },
-    "languages": {
-      "title": "Diller"
-    },
     "contribute": {
       "title": "Goşant goş"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Gol çekildi"
         },
         "actions": {
-          "toggle": "{{Etiket}} çalyş",
+          "toggle": "{{label}} çalyş",
           "download": "Oflayn modelini göçürip alyň",
           "delete": "Oflayn model keşini arassalaň",
           "reDownload": "Oflayn modeli täzeden göçürip alyň"

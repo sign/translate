@@ -66,9 +66,6 @@
         "signed-to-spoken": "An jî ji zimanên îmzekirî ber bi zimanên axaftinê ve"
       }
     },
-    "languages": {
-      "title": "Ziman"
-    },
     "contribute": {
       "title": "Beşdar bibe"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Îmze kirin-ji-gotin"
         },
         "actions": {
-          "toggle": "{{ label}} biguherîne",
+          "toggle": "{{label}} biguherîne",
           "download": "Modela Offline dakêşin",
           "delete": "Cache Modela Offline Paqij bike",
           "reDownload": "Modela Offline ji nû ve dakêşin"

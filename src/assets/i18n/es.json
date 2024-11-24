@@ -66,9 +66,6 @@
         "signed-to-spoken": "O de lenguajes de señas a lenguajes hablados"
       }
     },
-    "languages": {
-      "title": "Idiomas"
-    },
     "contribute": {
       "title": "Contribuir"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Firmado-a-Hablado"
         },
         "actions": {
-          "toggle": "Alternar {{etiqueta}}",
+          "toggle": "Alternar {{label}}",
           "download": "Descargar modelo sin conexión",
           "delete": "Purgar caché de modelo fuera de línea",
           "reDownload": "Volver a descargar el modelo sin conexión"

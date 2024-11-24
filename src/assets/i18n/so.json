@@ -66,9 +66,6 @@
         "signed-to-spoken": "Ama laga bilaabo saxeexa ilaa luqadaha lagu hadlo"
       }
     },
-    "languages": {
-      "title": "Luqadaha"
-    },
     "contribute": {
       "title": "Kudeeq"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Saxiix-ku-hadal"
         },
         "actions": {
-          "toggle": "Beddel {{calaamad}}",
+          "toggle": "Beddel {{label}}",
           "download": "Soo deji Modelka khadka tooska ah",
           "delete": "Ka saar Cache Model-ka Khadka Tooska ah",
           "reDownload": "Dib u soo deji Modelka khadka tooska ah"

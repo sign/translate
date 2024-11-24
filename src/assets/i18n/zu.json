@@ -66,9 +66,6 @@
         "signed-to-spoken": "Noma kusuka ezilimini ezisayiniwe kuye kwezikhulunywayo"
       }
     },
-    "languages": {
-      "title": "Izilwimi"
-    },
     "contribute": {
       "title": "Nikela"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Kusayinwe-kuya-Kukhulunywa"
         },
         "actions": {
-          "toggle": "Guqula {{ilebula}}",
+          "toggle": "Guqula {{label}}",
           "download": "Landa imodeli engaxhunyiwe ku-inthanethi",
           "delete": "Hlanza Inqolobane Yemodeli Engaxhunyiwe Ku-inthanethi",
           "reDownload": "Dawuniloda Kabusha Imodeli Engaxhunyiwe Ku-inthanethi"

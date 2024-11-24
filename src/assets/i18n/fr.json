@@ -66,9 +66,6 @@
         "signed-to-spoken": "Ou des langues signées aux langues parlées"
       }
     },
-    "languages": {
-      "title": "Langues"
-    },
     "contribute": {
       "title": "Contribuer"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Signé à parlé"
         },
         "actions": {
-          "toggle": "Basculer {{étiquette}}",
+          "toggle": "Basculer {{label}}",
           "download": "Télécharger le modèle hors ligne",
           "delete": "Purger le cache du modèle hors ligne",
           "reDownload": "Re-télécharger le modèle hors ligne"

@@ -66,9 +66,6 @@
         "signed-to-spoken": "Tabi lati ibuwọlu si awọn ede sisọ"
       }
     },
-    "languages": {
-      "title": "Àwọn èdè"
-    },
     "contribute": {
       "title": "Kópa"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Wole-si-Sọrọ"
         },
         "actions": {
-          "toggle": "Yipada {{aami}}",
+          "toggle": "Yipada {{label}}",
           "download": "Ṣe igbasilẹ Awoṣe Aisinipo",
           "delete": "Pa Kaṣe Awoṣe Aisinipo kuro",
           "reDownload": "Tun-Download Offline Awoṣe"

@@ -66,9 +66,6 @@
         "signed-to-spoken": "Ko daga sa hannu zuwa harsunan magana"
       }
     },
-    "languages": {
-      "title": "Harsuna"
-    },
     "contribute": {
       "title": "Ba da gudummuwa"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Sa hannu-da-Magana"
         },
         "actions": {
-          "toggle": "Juyawa {{lamba}}",
+          "toggle": "Juyawa {{label}}",
           "download": "Zazzage Model Offline",
           "delete": "Cire cache Model Offline",
           "reDownload": "Sake Sauke Samfurin Wajen Layi"

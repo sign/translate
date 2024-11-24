@@ -66,9 +66,6 @@
         "signed-to-spoken": "O dalle lingue dei segni a quelle parlate"
       }
     },
-    "languages": {
-      "title": "Lingue"
-    },
     "contribute": {
       "title": "Contribuisci"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "Firmato a parlato"
         },
         "actions": {
-          "toggle": "Attiva/disattiva {{etichetta}}",
+          "toggle": "Attiva/disattiva {{label}}",
           "download": "Scarica il modello offline",
           "delete": "Elimina la cache del modello offline",
           "reDownload": "Scarica nuovamente il modello offline"

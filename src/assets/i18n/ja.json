@@ -66,9 +66,6 @@
         "signed-to-spoken": "または署名された言語から話された言語へ"
       }
     },
-    "languages": {
-      "title": "言語"
-    },
     "contribute": {
       "title": "改善に協力"
     },

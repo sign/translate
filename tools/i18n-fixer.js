@@ -33,13 +33,21 @@ async function translateMissingEntries(source, target, targetLanguage) {
   for (const [key, value] of Object.entries(source)) {
     if (!(key in target)) {
       if (typeof value === 'string') {
-        target[key] = await translate(value, DEFAULT_LANGUAGE, targetLanguage);
+        // target[key] = await translate(value, DEFAULT_LANGUAGE, targetLanguage);
       } else {
         target[key] = {};
         await translateMissingEntries(value, target[key], targetLanguage);
       }
     } else {
-      if (typeof value !== 'string') {
+      if (typeof value === 'string') {
+        // Verify that if a variable exists in the source, it also exists in the target
+        const sourceVariables = value.match(/{{(.*?)}}/g) || [];
+        for (const sourceVar of sourceVariables) {
+          if (!target[key].includes(sourceVar)) {
+            console.error(`Missing variable ${sourceVar} in ${key}=(${target[key]})`);
+          }
+        }
+      } else {
         await translateMissingEntries(value, target[key], targetLanguage);
       }
     }

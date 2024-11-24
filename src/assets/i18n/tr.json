@@ -66,9 +66,6 @@
         "signed-to-spoken": "Veya işaretli dillerden konuşulan dillere"
       }
     },
-    "languages": {
-      "title": "Diller"
-    },
     "contribute": {
       "title": "Katkıda Bulunun"
     },
@@ -196,7 +193,7 @@
           "translation.signedToSpoken": "İmzalı Konuşulan"
         },
         "actions": {
-          "toggle": "{{etiket}} arasında geçiş yap",
+          "toggle": "{{label}} arasında geçiş yap",
           "download": "Çevrimdışı Modeli İndir",
           "delete": "Çevrimdışı Model Önbelleğini Temizle",
           "reDownload": "Çevrimdışı Modeli Yeniden İndir"
