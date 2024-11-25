@@ -22,6 +22,7 @@ import {TranslocoPipe} from '@ngneat/transloco';
 import {arrowForward} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
+import {TranslocoService} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-landing',
@@ -57,5 +58,17 @@ export class LandingComponent {
 
   constructor() {
     addIcons({arrowForward});
+  }
+
+  // TODO: remove this when i18n is supported
+  private transloco = inject(TranslocoService);
+  lastActiveLang = this.transloco.getActiveLang();
+
+  ionViewWillEnter() {
+    this.transloco.setActiveLang('en');
+  }
+
+  ionViewWillLeave() {
+    this.transloco.setActiveLang(this.lastActiveLang);
   }
 }

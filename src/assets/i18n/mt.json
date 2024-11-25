@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Individwat",
       "detect": "Induna bil-lingwa",
-      "more": "Aktar Lingwi",
-      "detected": "{{lang}} - Individwat"
+      "more": "Aktar Lingwi"
     },
     "input": {
       "text": "Test",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "IPPROVA ITTRADUĊI",
+    "try": "Ittraduċi issa",
     "about": {
-      "title": "Dwar",
       "hero": {
         "title": "Ittraduċi bejn aktar minn 40 lingwa ffirmata u mitkellma f'ħin reali.",
         "img": "Eżempju ta' traduzzjoni diretta bejn il-Lingwa tas-Sinjali Amerikana u l-Ingliż"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Ittraduċi minn lingwi mitkellma għal lingwi tas-sinjali",
         "signed-to-spoken": "Jew minn lingwi ffirmati għal lingwi mitkellma"
-      }
-    },
-    "languages": {
-      "title": "Lingwi"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traduzzjoni f'ħin reali",
+          "subtitle": "Ittraduċi bejn aktar minn 40 lingwa ffirmata u mitkellma f'ħin reali",
+          "description": "L-app tagħna tippermettilek tikkomunika b'mod naturali u faċilment ma' kulħadd, kullimkien, f'kull ħin, bil-lingwa tas-sinjali tiegħek stess."
+        },
+        "multilingual": {
+          "title": "Appoġġ Multilingwi",
+          "subtitle": "Ittraduċi bejn lingwi tas-sinjali differenti u lingwi mitkellma",
+          "description": "L-app tagħna tappoġġja diversi lingwi tas-sinjali u lingwi mitkellma, sabiex tkun tista’ tikkomunika ma’ nies minn pajjiżi u kulturi differenti."
+        },
+        "appearance": {
+          "title": "Dehra customizable",
+          "subtitle": "L-avatars tal-lingwa tas-sinjali realistiċi tar-ritratti tagħna joffru firxa wiesgħa ta’ għażliet ta’ customization li jissodisfaw il-bżonnijiet speċifiċi tiegħek.",
+          "description": "Kemm jekk trid toħloq avatar li tidher bħalek jew toħloq karattru uniku, l-għażliet ta 'adattament tagħna jippermettulek tesprimi ruħek b'mod li tħossok awtentiku u leali għalik."
+        },
+        "open-source": {
+          "title": "Proġett ta' Sors Miftuħ",
+          "subtitle": "Sign Translate huwa proġett open-source, li jippermetti lill-komunità tikkontribwixxi u ttejjeb il-karatteristiċi tagħha.",
+          "description": "Billi naqsmu l-kodiċi tas-sors tagħna, aħna nimmiraw li nrawmu l-kollaborazzjoni u t-trasparenza. "
+        },
+        "offline": {
+          "title": "Funzjonalità Offline",
+          "subtitle": "Iffirma Translate xogħol kullimkien, anke offline fuq ajruplan.",
+          "description": "Kemm jekk qed tivvjaġġa, f'żona remota, jew mingħajr l-internet, l-app tagħna tiżgura li tista' dejjem tittraduċi l-lingwa mitkellma jew miktuba fil-lingwa tas-sinjali, u żżomm għodod ta' komunikazzjoni essenzjali fuq ponot subgħajk."
+        }
+      },
+      "title": "Dwarna"
     },
     "contribute": {
       "title": "Ikkontribwixxi"

@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Çeviri",
     "language-selector": {
+      "detected": "{{lang}} - Hat dîtin",
       "detect": "Dili algıla",
-      "more": "Zêdetir Ziman",
-      "detected": "{{lang}} - Hat dîtin"
+      "more": "Zêdetir Ziman"
     },
     "input": {
       "text": "Metin",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "WERGERÊ BICERIBÎNE",
+    "try": "Niha wergerîne",
     "about": {
-      "title": "ده‌رباره‌ی",
       "hero": {
         "title": "Di navbera 40+ zimanên îmzekirî û axaftinê de di dema rast de wergerînin.",
         "img": "Nimûneya wergera zindî ya di navbera Zimanê îşaretek Amerîkî û Englishngilîzî de"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Ji zimanên axaftinê wergerînin zimanên îşaretan",
         "signed-to-spoken": "An jî ji zimanên îmzekirî ber bi zimanên axaftinê ve"
-      }
-    },
-    "languages": {
-      "title": "Ziman"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Wergera Rast-Time",
+          "subtitle": "Di navbera 40+ zimanên îmzekirî û axaftinê de di dema rast de wergerînin",
+          "description": "Serlêdana me dihêle hûn bi zimanê îşaretên xwe bi her kesî re, li her deverê, her dem bi xwezayî û bi hêsanî têkilî daynin."
+        },
+        "multilingual": {
+          "title": "Piştgiriya Pirzimanî",
+          "subtitle": "Di navbera zimanên cuda yên nîşanan û zimanên axaftinê de wergerînin",
+          "description": "Serlêdana me gelek zimanên îşaretan û zimanên axaftinê piştgirî dike, ji ber vê yekê hûn dikarin bi mirovên ji welat û çandên cihê re têkilî daynin."
+        },
+        "appearance": {
+          "title": "Appearance Customizable",
+          "subtitle": "Avatarên me yên zimanê îşaretan ên rastîn ên wêneyan cûrbecûr vebijarkên xwerûkirinê pêşkêşî dikin ku li gorî hewcedariyên weyên taybetî bin.",
+          "description": "Ma hûn dixwazin avatarek ku dişibe we biafirînin an jî karakterek bêhempa biafirînin, vebijarkên meya xwerû dihêlin ku hûn xwe bi rengek ku ji we re rast û rast hîs dike îfade bikin."
+        },
+        "open-source": {
+          "title": "Projeya Çavkaniya Vekirî",
+          "subtitle": "Sign Translate projeyek-çavkaniya vekirî ye, ku dihêle civak tevkariyê bike û taybetmendiyên xwe zêde bike.",
+          "description": "Bi parvekirina koda çavkaniya xwe, mebesta me ew e ku hevkarî û zelaliyê pêşve bibin. "
+        },
+        "offline": {
+          "title": "Fonksiyona Offline",
+          "subtitle": "Sign Werger li her derê dixebite, tewra negirêdayî di balafirê de.",
+          "description": "Çi hûn rêwîtiyê dikin, li deverek dûr, an bê înternet, sepana me piştrast dike ku hûn her gav dikarin zimanê axaftinê an nivîskî wergerînin zimanê îşaretan, û amûrên ragihandinê yên bingehîn li ber destên we bigirin."
+        }
+      },
+      "title": "Çûna nava"
     },
     "contribute": {
       "title": "Beşdar bibe"
@@ -167,7 +191,7 @@
       "title": "Alîkarî",
       "feedback": {
         "title": "Feedback",
-        "send": "Bersiv bişînin"
+        "send": "Geri bildirim gönder"
       },
       "about": {
         "title": "Ji dor"
@@ -196,7 +220,7 @@
           "translation.signedToSpoken": "Îmze kirin-ji-gotin"
         },
         "actions": {
-          "toggle": "{{ label}} biguherîne",
+          "toggle": "{{label}} biguherîne",
           "download": "Modela Offline dakêşin",
           "delete": "Cache Modela Offline Paqij bike",
           "reDownload": "Modela Offline ji nû ve dakêşin"

@@ -155,6 +155,7 @@
     "karma-spec-reporter": "0.0.36",
     "lint-staged": "15.2.10",
     "marked": "15.0.2",
+    "node-html-parser": "6.1.13",
     "npm-license-crawler": "0.2.1",
     "open": "10.1.0",
     "pwa-asset-generator": "6.4.0",

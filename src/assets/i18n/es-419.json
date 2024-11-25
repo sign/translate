@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Traductor",
     "language-selector": {
+      "detected": "{{lang}} - Detectado",
       "detect": "Detectar idioma",
-      "more": "Más idiomas",
-      "detected": "{{lang}} - Detectado"
+      "more": "Más idiomas"
     },
     "input": {
       "text": "Texto",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "PRUEBA TRADUCTOR",
+    "try": "Traducir ahora",
     "about": {
-      "title": "Información",
       "hero": {
         "title": "Traduce entre más de 40 idiomas de señas y hablados en tiempo real.",
         "img": "Ejemplo de traducción en vivo entre el lenguaje de señas americano y el inglés"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Traducir de lenguajes hablados a lenguajes de señas",
         "signed-to-spoken": "O de lenguajes de señas a lenguajes hablados"
-      }
-    },
-    "languages": {
-      "title": "Idiomas"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traducción en tiempo real",
+          "subtitle": "Traduce entre más de 40 idiomas hablados y de señas en tiempo real",
+          "description": "Nuestra aplicación te permite comunicarte de forma natural y sencilla con cualquier persona, en cualquier lugar y en cualquier momento, en tu propia lengua de signos."
+        },
+        "multilingual": {
+          "title": "Soporte multilingüe",
+          "subtitle": "Traducir entre diferentes lenguas de signos y lenguas habladas",
+          "description": "Nuestra aplicación admite múltiples lenguajes de señas y lenguajes hablados, para que puedas comunicarte con personas de diferentes países y culturas."
+        },
+        "appearance": {
+          "title": "Apariencia personalizable",
+          "subtitle": "Nuestros avatares fotorrealistas en lenguaje de señas ofrecen una amplia gama de opciones de personalización para satisfacer sus necesidades específicas.",
+          "description": "Ya sea que quieras crear un avatar que se parezca a ti o crear un personaje único, nuestras opciones de personalización te permiten expresarte de una manera que te parezca auténtica y fiel."
+        },
+        "open-source": {
+          "title": "Proyecto de código abierto",
+          "subtitle": "Sign Translate es un proyecto de código abierto que permite a la comunidad contribuir y mejorar sus funciones.",
+          "description": "Al compartir nuestro código fuente, nuestro objetivo es fomentar la colaboración y la transparencia. "
+        },
+        "offline": {
+          "title": "Funcionalidad sin conexión",
+          "subtitle": "Sign Translate funciona en todas partes, incluso sin conexión en un avión.",
+          "description": "Ya sea que esté de viaje, en un área remota o sin Internet, nuestra aplicación garantiza que siempre pueda traducir el lenguaje hablado o escrito al lenguaje de señas, manteniendo las herramientas de comunicación esenciales a su alcance."
+        }
+      },
+      "title": "Sobre nosotros"
     },
     "contribute": {
       "title": "Contribuir"
@@ -196,7 +220,7 @@
           "translation.signedToSpoken": "Firmado-a-Hablado"
         },
         "actions": {
-          "toggle": "Alternar {{etiqueta}}",
+          "toggle": "Alternar {{label}}",
           "download": "Descargar modelo sin conexión",
           "delete": "Purgar caché de modelo fuera de línea",
           "reDownload": "Volver a descargar el modelo sin conexión"

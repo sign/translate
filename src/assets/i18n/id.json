@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Terjemahan",
     "language-selector": {
+      "detected": "{{lang}} - Terdeteksi",
       "detect": "Deteksi bahasa",
-      "more": "Lebih Banyak Bahasa",
-      "detected": "{{lang}} - Terdeteksi"
+      "more": "Lebih Banyak Bahasa"
     },
     "input": {
       "text": "Teks",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "COBA TERJEMAHAN",
+    "try": "Terjemahkan sekarang",
     "about": {
-      "title": "Tentang",
       "hero": {
         "title": "Terjemahkan antara 40+ bahasa isyarat dan bahasa lisan secara real-time.",
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggris"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Terjemahkan dari bahasa lisan ke bahasa isyarat",
         "signed-to-spoken": "Atau dari bahasa isyarat ke bahasa lisan"
-      }
-    },
-    "languages": {
-      "title": "Bahasa"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Terjemahan Waktu Nyata",
+          "subtitle": "Terjemahkan antara 40+ bahasa isyarat dan lisan secara real-time",
+          "description": "Aplikasi kami memungkinkan Anda berkomunikasi secara alami dan mudah dengan siapa pun, di mana pun, kapan pun, dalam bahasa isyarat Anda sendiri."
+        },
+        "multilingual": {
+          "title": "Dukungan Multibahasa",
+          "subtitle": "Terjemahkan antara bahasa isyarat dan bahasa lisan yang berbeda",
+          "description": "Aplikasi kami mendukung berbagai bahasa isyarat dan bahasa lisan, sehingga Anda dapat berkomunikasi dengan orang-orang dari berbagai negara dan budaya."
+        },
+        "appearance": {
+          "title": "Penampilan yang Dapat Disesuaikan",
+          "subtitle": "Avatar bahasa isyarat foto realistis kami menawarkan beragam pilihan penyesuaian untuk memenuhi kebutuhan spesifik Anda.",
+          "description": "Baik Anda ingin membuat avatar yang mirip dengan Anda atau membuat karakter unik, opsi penyesuaian kami memungkinkan Anda mengekspresikan diri dengan cara yang terasa autentik dan nyata bagi Anda."
+        },
+        "open-source": {
+          "title": "Proyek Sumber Terbuka",
+          "subtitle": "Sign Translate adalah proyek sumber terbuka yang memungkinkan komunitas berkontribusi dan menyempurnakan fitur-fiturnya.",
+          "description": "Dengan membagikan kode sumber kami, kami bertujuan untuk mendorong kolaborasi dan transparansi. "
+        },
+        "offline": {
+          "title": "Fungsi Luar Talian",
+          "subtitle": "Sign Translate berfungsi di mana saja, bahkan saat offline di pesawat.",
+          "description": "Baik Anda sedang bepergian, di daerah terpencil, atau tanpa internet, aplikasi kami memastikan Anda selalu dapat menerjemahkan bahasa lisan atau tulisan ke dalam bahasa isyarat, sehingga alat komunikasi penting tetap mudah dijangkau."
+        }
+      },
+      "title": "Tentang Kami"
     },
     "contribute": {
       "title": "Beri kontribusi"
@@ -167,7 +191,7 @@
       "title": "Mendukung",
       "feedback": {
         "title": "Masukan",
-        "send": "Kirim umpan balik"
+        "send": "Kirim masukan"
       },
       "about": {
         "title": "Tentang"

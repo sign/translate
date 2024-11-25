@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - An gano",
       "detect": "Tsinkayo harshe",
-      "more": "Ƙarin Harsuna",
-      "detected": "{{lang}} - An gano"
+      "more": "Ƙarin Harsuna"
     },
     "input": {
       "text": "Rubutu",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "GWADA FASSARA",
+    "try": "Fassara yanzu",
     "about": {
-      "title": "Game da",
       "hero": {
         "title": "Fassara tsakanin 40+ sa hannu da harsunan magana a ainihin-lokaci.",
         "img": "Misalin fassarar kai tsaye tsakanin Harshen Alamun Amurka da Ingilishi"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Fassara daga magana zuwa harsunan sa hannu",
         "signed-to-spoken": "Ko daga sa hannu zuwa harsunan magana"
-      }
-    },
-    "languages": {
-      "title": "Harsuna"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Fassara na Gaskiya",
+          "subtitle": "Fassara tsakanin 40+ sa hannu da harsunan magana a ainihin-lokaci",
+          "description": "Aikace-aikacen mu yana ba ku damar sadarwa ta dabi'a da sauƙi tare da kowa, a ko'ina, kowane lokaci, cikin yaren ku."
+        },
+        "multilingual": {
+          "title": "Tallafin harsuna da yawa",
+          "subtitle": "Fassara tsakanin harsunan alamar alama daban-daban da harsunan magana",
+          "description": "App ɗin mu yana tallafawa yarukan alamomi da yawa da yaren magana, don haka zaku iya sadarwa tare da mutane daga ƙasashe da al'adu daban-daban."
+        },
+        "appearance": {
+          "title": "Bayyanar da za a iya daidaitawa",
+          "subtitle": "Hoton mu na haƙiƙanin avatar yaren alamar yana ba da zaɓuɓɓukan gyare-gyare da yawa don dacewa da takamaiman bukatunku.",
+          "description": "Ko kuna son ƙirƙirar avatar mai kama da ku ko ƙirƙirar hali na musamman, zaɓin gyare-gyaren mu yana ba ku damar bayyana kanku ta hanyar da ta dace da ku."
+        },
+        "open-source": {
+          "title": "Buɗe Source Project",
+          "subtitle": "Sign Translate shiri ne na buɗe ido, yana bawa al'umma damar ba da gudummawa da haɓaka abubuwanta.",
+          "description": "Ta hanyar raba lambar tushe, muna nufin haɓaka haɗin gwiwa da bayyana gaskiya. "
+        },
+        "offline": {
+          "title": "Ayyukan Wajen Layi",
+          "subtitle": "Sa hannu Translate aiki a ko'ina, ko da offline a kan jirgin sama.",
+          "description": "Ko kuna tafiya, a cikin yanki mai nisa, ko kuma ba tare da intanet ba, app ɗinmu yana tabbatar da cewa koyaushe kuna iya fassara yaren magana ko rubuce-rubuce zuwa yaren kurame, kiyaye mahimman kayan aikin sadarwa a hannunku."
+        }
+      },
+      "title": "Game da Mu"
     },
     "contribute": {
       "title": "Ba da gudummuwa"
@@ -196,7 +220,7 @@
           "translation.signedToSpoken": "Sa hannu-da-Magana"
         },
         "actions": {
-          "toggle": "Juyawa {{lamba}}",
+          "toggle": "Juyawa {{label}}",
           "download": "Zazzage Model Offline",
           "delete": "Cire cache Model Offline",
           "reDownload": "Sake Sauke Samfurin Wajen Layi"

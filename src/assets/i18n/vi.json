@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Dịch",
     "language-selector": {
+      "detected": "{{lang}} - Đã phát hiện",
       "detect": "Phát hiện ngôn ngữ",
-      "more": "Nhiều ngôn ngữ hơn",
-      "detected": "{{lang}} - Đã phát hiện"
+      "more": "Nhiều ngôn ngữ hơn"
     },
     "input": {
       "text": "Văn bản",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "THỬ DỊCH",
+    "try": "Dịch ngay",
     "about": {
-      "title": "Giới thiệu",
       "hero": {
         "title": "Dịch giữa hơn 40 ngôn ngữ được ký và nói trong thời gian thực.",
         "img": "Ví dụ về bản dịch trực tiếp giữa Ngôn ngữ ký hiệu Mỹ và tiếng Anh"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Dịch từ ngôn ngữ nói sang ngôn ngữ đã ký",
         "signed-to-spoken": "Hoặc từ ngôn ngữ đã ký sang ngôn ngữ nói"
-      }
-    },
-    "languages": {
-      "title": "Ngôn ngữ"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Dịch thời gian thực",
+          "subtitle": "Dịch giữa hơn 40 ngôn ngữ ký hiệu và nói trong thời gian thực",
+          "description": "Ứng dụng của chúng tôi cho phép bạn giao tiếp một cách tự nhiên và dễ dàng với bất kỳ ai, ở bất kỳ đâu, vào bất kỳ lúc nào bằng ngôn ngữ ký hiệu của riêng bạn."
+        },
+        "multilingual": {
+          "title": "Hỗ trợ đa ngôn ngữ",
+          "subtitle": "Dịch giữa các ngôn ngữ ký hiệu và ngôn ngữ nói khác nhau",
+          "description": "Ứng dụng của chúng tôi hỗ trợ nhiều ngôn ngữ ký hiệu và ngôn ngữ nói, vì vậy bạn có thể giao tiếp với mọi người từ các quốc gia và nền văn hóa khác nhau."
+        },
+        "appearance": {
+          "title": "Tùy chỉnh giao diện",
+          "subtitle": "Hình đại diện bằng ngôn ngữ ký hiệu thực tế của chúng tôi cung cấp nhiều tùy chọn tùy chỉnh để phù hợp với nhu cầu cụ thể của bạn.",
+          "description": "Cho dù bạn muốn tạo hình đại diện giống mình hay tạo một nhân vật độc đáo, các tùy chọn tùy chỉnh của chúng tôi đều cho phép bạn thể hiện bản thân theo cách mà bạn cảm thấy chân thực và chân thực nhất."
+        },
+        "open-source": {
+          "title": "Dự án nguồn mở",
+          "subtitle": "Sign Translate là một dự án nguồn mở, cho phép cộng đồng đóng góp và nâng cao các tính năng của nó.",
+          "description": "Bằng cách chia sẻ mã nguồn của mình, chúng tôi mong muốn thúc đẩy sự cộng tác và tính minh bạch. "
+        },
+        "offline": {
+          "title": "Chức năng ngoại tuyến",
+          "subtitle": "Sign Translate hoạt động ở mọi nơi, thậm chí ngoại tuyến trên máy bay.",
+          "description": "Cho dù bạn đang đi du lịch, ở vùng sâu vùng xa hay không có Internet, ứng dụng của chúng tôi đảm bảo bạn luôn có thể dịch ngôn ngữ nói hoặc viết sang ngôn ngữ ký hiệu, giữ các công cụ giao tiếp thiết yếu trong tầm tay."
+        }
+      },
+      "title": "Về chúng tôi"
     },
     "contribute": {
       "title": "Đóng góp"
@@ -167,7 +191,7 @@
       "title": "Ủng hộ",
       "feedback": {
         "title": "Nhận xét",
-        "send": "Gửi phản hồi"
+        "send": "Gửi ý kiến phản hồi"
       },
       "about": {
         "title": "Về"

@@ -3,6 +3,11 @@
     <ion-buttons slot="primary">
       <ntkme-github-button user="sign" repo="translate" [count]="true" size="large" />
     </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button routerLink="/about" queryParamsHandling="preserve" color="light" shape="round" fill="solid">
+        {{ 'landing.about.title' | transloco }}
+      </ion-button>
+    </ion-buttons>
     <ion-title>{{ 'translate.title' | transloco }}<sup id="version" matTooltip="Alpha">α</sup></ion-title>
   </ion-toolbar>
 </ion-header>

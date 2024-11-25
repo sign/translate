@@ -12,9 +12,9 @@
   "translate": {
     "title": "Shandura mutauro uchishandisa Sign",
     "language-selector": {
+      "detected": "{{lang}} - Zvaonekwa",
       "detect": "Ziva zita remutauro",
-      "more": "More Mitauro",
-      "detected": "{{lang}} - Zvaonekwa"
+      "more": "More Mitauro"
     },
     "input": {
       "text": "Mashoko",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "Edza Kushandura Nesign",
+    "try": "Shandura izvezvi",
     "about": {
-      "title": "Maererano",
       "hero": {
         "title": "Shandura pakati pe40+ mitauro yemasaini uye inotaurwa munguva chaiyo.",
         "img": "Muenzaniso weshanduro iripo pakati peMutauro Wemasaini wekuAmerica neChirungu"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Shandura kubva mumitauro yekutaura kuenda kumasaini",
         "signed-to-spoken": "Kana kuti kubva kumitauro yemasaini kuenda kune inotaurika"
-      }
-    },
-    "languages": {
-      "title": "Mitauro"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Shanduro Yenguva Chaiyo",
+          "subtitle": "Shandura pakati pe40+ mitauro yemasaini uye inotaurwa munguva chaiyo",
+          "description": "Yedu app inokutendera kuti utaure zvakasununguka uye zviri nyore nemunhu chero kupi, chero nguva, mumutauro wako wemasaini."
+        },
+        "multilingual": {
+          "title": "Multilingual Support",
+          "subtitle": "Shandura pakati pemitauro yemasaini yakasiyana nemitauro inotaurwa",
+          "description": "Yedu app inotsigira akawanda mitauro yemasaini nemitauro inotaurwa, saka iwe unogona kutaurirana nevanhu vanobva kunyika dzakasiyana uye tsika."
+        },
+        "appearance": {
+          "title": "Customizable Chitarisiko",
+          "subtitle": "Yedu mapikicha echokwadi emutauro wemasaini maavatars anopa huwandu hwakasiyana hwesarudzo dzekugadzirisa kuti dzienderane nezvaunoda chaizvo.",
+          "description": "Kunyangwe iwe uchida kugadzira iyo avatar inoita sewe kana kugadzira yakasarudzika hunhu, yedu yakasarudzika sarudzo inobvumidza iwe kuti uzviratidze nenzira inonzwa yechokwadi uye yechokwadi kwauri."
+        },
+        "open-source": {
+          "title": "Open Source Project",
+          "subtitle": "Saina Translate ipurojekiti yakavhurika, inobvumira nharaunda kuti ibatsire nekusimudzira maficha ayo.",
+          "description": "Nekugovera yedu sosi kodhi, isu tinovavarira kukurudzira kubatana uye kubuda pachena. "
+        },
+        "offline": {
+          "title": "Offline Basa",
+          "subtitle": "Saina Translate kushanda kwese kwese, kunyangwe pasina Indaneti pandege.",
+          "description": "Ungave uri parwendo, uri kure, kana kuti usina internet, app yedu inoita kuti ugone kushandura mutauro unotaurwa kana wakanyorwa uchiisa mumutauro wemasaini, uchichengeta maturusi ekutaura akakosha ari pamunwe wako."
+        }
+      },
+      "title": "Nezvedu"
     },
     "contribute": {
       "title": "Isawo ruwoko rwako pabasa iri"
@@ -167,7 +191,7 @@
       "title": "Support",
       "feedback": {
         "title": "Feedback",
-        "send": "Tumira mhinduro"
+        "send": "Tumira maonero ako"
       },
       "about": {
         "title": "About"

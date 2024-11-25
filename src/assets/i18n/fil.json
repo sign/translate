@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - Nakita",
       "detect": "Kilalanin ang Wika",
-      "more": "Higit pang mga Wika",
-      "detected": "{{lang}} - Nakita"
+      "more": "Higit pang mga Wika"
     },
     "input": {
       "text": "Text",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "SUBUKAN ANG TRANSLATE",
+    "try": "Isalin ngayon",
     "about": {
-      "title": "Tungkol sa",
       "hero": {
         "title": "Magsalin sa pagitan ng 40+ na nilagdaan at sinasalitang mga wika sa real-time.",
         "img": "Halimbawa ng live na pagsasalin sa pagitan ng American Sign Language at English"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Isalin mula sa sinasalita patungo sa mga sign na wika",
         "signed-to-spoken": "O mula sa nilagdaan hanggang sa mga sinasalitang wika"
-      }
-    },
-    "languages": {
-      "title": "Mga Wika"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Real-Time na Pagsasalin",
+          "subtitle": "Magsalin sa pagitan ng 40+ na nilagdaan at sinasalitang mga wika sa real-time",
+          "description": "Binibigyang-daan ka ng aming app na makipag-usap nang natural at madali sa sinuman, kahit saan, anumang oras, sa sarili mong sign language."
+        },
+        "multilingual": {
+          "title": "Multilingual na Suporta",
+          "subtitle": "Magsalin sa pagitan ng iba't ibang sign language at sinasalitang wika",
+          "description": "Sinusuportahan ng aming app ang maramihang mga sign language at sinasalitang wika, upang maaari kang makipag-usap sa mga tao mula sa iba't ibang bansa at kultura."
+        },
+        "appearance": {
+          "title": "Nako-customize na Hitsura",
+          "subtitle": "Nag-aalok ang aming mga photo realistic na avatar ng sign language ng malawak na hanay ng mga opsyon sa pagpapasadya upang umangkop sa iyong mga partikular na pangangailangan.",
+          "description": "Gusto mo mang lumikha ng isang avatar na kamukha mo o lumikha ng isang natatanging karakter, binibigyang-daan ka ng aming mga pagpipilian sa pag-customize na ipahayag ang iyong sarili sa paraang sa tingin mo ay totoo at totoo para sa iyo."
+        },
+        "open-source": {
+          "title": "Open Source Project",
+          "subtitle": "Ang Sign Translate ay isang open-source na proyekto, na nagpapahintulot sa komunidad na mag-ambag at pahusayin ang mga tampok nito.",
+          "description": "Sa pamamagitan ng pagbabahagi ng aming source code, nilalayon naming itaguyod ang pakikipagtulungan at transparency. "
+        },
+        "offline": {
+          "title": "Offline na Pag-andar",
+          "subtitle": "Mag-sign Trabaho ang Translate kahit saan, kahit offline sa isang eroplano.",
+          "description": "Naglalakbay ka man, sa isang malayong lugar, o walang internet, tinitiyak ng aming app na maaari mong palaging isalin ang sinasalita o nakasulat na wika sa sign language, na pinapanatili ang mahahalagang kasangkapan sa komunikasyon sa iyong mga kamay."
+        }
+      },
+      "title": "Tungkol sa Amin"
     },
     "contribute": {
       "title": "Mag-contribute"
@@ -167,7 +191,7 @@
       "title": "Suporta",
       "feedback": {
         "title": "Feedback",
-        "send": "Magbigay ng feedback"
+        "send": "Ipadala ang feedback"
       },
       "about": {
         "title": "Tungkol sa"

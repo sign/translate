@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Kääntäjä",
     "language-selector": {
+      "detected": "{{lang}} - Havaittu",
       "detect": "Tunnista kieli",
-      "more": "Lisää kieliä",
-      "detected": "{{lang}} - Havaittu"
+      "more": "Lisää kieliä"
     },
     "input": {
       "text": "Teksti",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "KOKEILE KÄÄNTÄJÄÄ",
+    "try": "Käännä nyt",
     "about": {
-      "title": "Tietoja",
       "hero": {
         "title": "Käännä yli 40 viittomakielen ja puhutun kielen välillä reaaliajassa.",
         "img": "Esimerkki live-käännöksestä amerikkalaisen viittomakielen ja englannin välillä"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Käännä puhutuista viittomakielistä",
         "signed-to-spoken": "Tai viittomakielistä puhuttuihin kieliin"
-      }
-    },
-    "languages": {
-      "title": "Kielet"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Reaaliaikainen käännös",
+          "subtitle": "Käännä yli 40 viittomakielen ja puhutun kielen välillä reaaliajassa",
+          "description": "Sovelluksemme avulla voit kommunikoida luonnollisesti ja helposti kenen tahansa kanssa, missä ja milloin tahansa, omalla viittomakielelläsi."
+        },
+        "multilingual": {
+          "title": "Monikielinen tuki",
+          "subtitle": "Käännä eri viittomakielten ja puhuttujen kielten välillä",
+          "description": "Sovelluksemme tukee useita viittomakieliä ja puhuttuja kieliä, joten voit kommunikoida eri maista ja kulttuureista tulevien ihmisten kanssa."
+        },
+        "appearance": {
+          "title": "Mukautettava ulkoasu",
+          "subtitle": "Valokuvarealistiset viittomakielen avatarimme tarjoavat laajan valikoiman mukautusvaihtoehtoja sinun tarpeidesi mukaan.",
+          "description": "Halusitpa sitten luoda sinulta näyttävän avatarin tai luoda ainutlaatuisen hahmon, mukautusvaihtoehtomme antavat sinun ilmaista itseäsi tavalla, joka tuntuu aidolta ja aidolta."
+        },
+        "open-source": {
+          "title": "Avoimen lähdekoodin projekti",
+          "subtitle": "Sign Translate on avoimen lähdekoodin projekti, jonka avulla yhteisö voi osallistua ja parantaa sen ominaisuuksia.",
+          "description": "Jakamalla lähdekoodimme pyrimme edistämään yhteistyötä ja avoimuutta. "
+        },
+        "offline": {
+          "title": "Offline-toiminnot",
+          "subtitle": "Sign Translate toimii kaikkialla, myös offline-tilassa lentokoneessa.",
+          "description": "Olitpa matkoilla, syrjäisellä alueella tai ilman internetiä, sovelluksemme varmistaa, että voit aina kääntää puhutun tai kirjoitetun kielen viittomakieleksi pitäen tärkeät viestintävälineet käden ulottuvilla."
+        }
+      },
+      "title": "Tietoja meistä"
     },
     "contribute": {
       "title": "Avusta"

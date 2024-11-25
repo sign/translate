@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Übersetzer",
     "language-selector": {
+      "detected": "{{lang}} – Erkannt",
       "detect": "Sprache erkennen",
-      "more": "Mehr Sprachen",
-      "detected": "{{lang}} – Erkannt"
+      "more": "Mehr Sprachen"
     },
     "input": {
       "text": "Text",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "ÜBERSETZER TESTEN",
+    "try": "Jetzt übersetzen",
     "about": {
-      "title": "Info",
       "hero": {
         "title": "Übersetzen Sie in Echtzeit zwischen mehr als 40 Gebärden- und Lautsprachen.",
         "img": "Beispiel einer Live-Übersetzung zwischen Amerikanischer Gebärdensprache und Englisch"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Übersetzen Sie von gesprochenen in Gebärdensprachen",
         "signed-to-spoken": "Oder von Gebärden- zu Lautsprachen"
-      }
-    },
-    "languages": {
-      "title": "Sprachen"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Echtzeitübersetzung",
+          "subtitle": "Übersetzen Sie in Echtzeit zwischen über 40 Zeichen- und gesprochenen Sprachen",
+          "description": "Mit unserer App können Sie natürlich und einfach mit jedem überall und jederzeit in Ihrer eigenen Gebärdensprache kommunizieren."
+        },
+        "multilingual": {
+          "title": "Mehrsprachiger Support",
+          "subtitle": "Übersetzen Sie zwischen verschiedenen Gebärdensprachen und gesprochenen Sprachen",
+          "description": "Unsere App unterstützt mehrere Gebärdensprachen und gesprochene Sprachen, sodass Sie mit Menschen aus verschiedenen Ländern und Kulturen kommunizieren können."
+        },
+        "appearance": {
+          "title": "Anpassbares Erscheinungsbild",
+          "subtitle": "Unsere fotorealistischen Gebärdensprach-Avatare bieten zahlreiche Anpassungsmöglichkeiten, um sie an Ihre spezifischen Bedürfnisse anzupassen.",
+          "description": "Egal, ob Sie einen Avatar erstellen möchten, der wie Sie aussieht, oder einen einzigartigen Charakter erstellen möchten, unsere Anpassungsoptionen ermöglichen es Ihnen, sich auf eine Weise auszudrücken, die sich für Sie authentisch und wahr anfühlt."
+        },
+        "open-source": {
+          "title": "Open-Source-Projekt",
+          "subtitle": "Sign Translate ist ein Open-Source-Projekt, das es der Community ermöglicht, Beiträge zu leisten und seine Funktionen zu verbessern.",
+          "description": "Durch die Weitergabe unseres Quellcodes möchten wir die Zusammenarbeit und Transparenz fördern. "
+        },
+        "offline": {
+          "title": "Offline-Funktionalität",
+          "subtitle": "Sign Translate funktioniert überall, sogar offline im Flugzeug.",
+          "description": "Egal, ob Sie auf Reisen, in einer abgelegenen Gegend oder ohne Internet sind, unsere App stellt sicher, dass Sie gesprochene oder geschriebene Sprache jederzeit in Gebärdensprache übersetzen können und so wichtige Kommunikationsmittel immer zur Hand haben."
+        }
+      },
+      "title": "Über uns"
     },
     "contribute": {
       "title": "Etwas beitragen"
@@ -167,7 +191,7 @@
       "title": "Die Unterstützung",
       "feedback": {
         "title": "Feedback",
-        "send": "Feedback abschicken"
+        "send": "Feedback geben"
       },
       "about": {
         "title": "Über"

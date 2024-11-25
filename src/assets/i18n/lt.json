@@ -12,9 +12,9 @@
   "translate": {
     "title": "„Sign“ vertėjas",
     "language-selector": {
+      "detected": "{{lang}} – aptikta",
       "detect": "Nustatyti kalbą",
-      "more": "Daugiau kalbų",
-      "detected": "{{lang}} – aptikta"
+      "more": "Daugiau kalbų"
     },
     "input": {
       "text": "Tekstas",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "IŠBANDYKITE VERTĖJĄ",
+    "try": "Versti dabar",
     "about": {
-      "title": "Apie",
       "hero": {
         "title": "Realiuoju laiku verskite iš daugiau nei 40 kalbų su gestais ir kalbomis.",
         "img": "Tiesioginio vertimo iš Amerikos gestų kalbos į anglų kalbą pavyzdys"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Versti iš šnekamųjų į gestų kalbas",
         "signed-to-spoken": "Arba nuo gestų iki šnekamųjų kalbų"
-      }
-    },
-    "languages": {
-      "title": "Kalbos"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Vertimas realiuoju laiku",
+          "subtitle": "Realiuoju laiku verskite iš daugiau nei 40 kalbų su gestais ir kalbomis",
+          "description": "Mūsų programa leidžia natūraliai ir lengvai bendrauti su bet kuo, bet kur ir bet kada, savo gestų kalba."
+        },
+        "multilingual": {
+          "title": "Daugiakalbis palaikymas",
+          "subtitle": "Versti iš skirtingų gestų kalbų ir šnekamųjų kalbų",
+          "description": "Mūsų programa palaiko kelias gestų kalbas ir šnekamąsias kalbas, todėl galite bendrauti su žmonėmis iš skirtingų šalių ir kultūrų."
+        },
+        "appearance": {
+          "title": "Pritaikoma išvaizda",
+          "subtitle": "Mūsų nuotraukų tikroviški gestų kalbos avatarai siūlo daugybę tinkinimo parinkčių, kad atitiktų jūsų konkrečius poreikius.",
+          "description": "Nesvarbu, ar norite sukurti į save panašią avatarą, ar sukurti unikalų personažą, mūsų tinkinimo parinktys leidžia išreikšti save autentišku ir jums tikru būdu."
+        },
+        "open-source": {
+          "title": "Atvirojo kodo projektas",
+          "subtitle": "„Sign Translate“ yra atvirojo kodo projektas, leidžiantis bendruomenei prisidėti ir tobulinti savo funkcijas.",
+          "description": "Bendrindami šaltinio kodą siekiame skatinti bendradarbiavimą ir skaidrumą. "
+        },
+        "offline": {
+          "title": "Funkcionalumas neprisijungus",
+          "subtitle": "Sign Translate dirbkite visur, net neprisijungę prie lėktuvo.",
+          "description": "Nesvarbu, ar keliaujate, ar atokioje vietovėje, ar neturite interneto, mūsų programa užtikrina, kad visada galėsite išversti šnekamąją ar rašytinę kalbą į gestų kalbą, o svarbiausias bendravimo priemones galėsite po ranka."
+        }
+      },
+      "title": "Apie mus"
     },
     "contribute": {
       "title": "Bendradarbiauti"

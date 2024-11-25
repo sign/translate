@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "Try Translating!",
+    "try": "Translate now",
     "about": {
-      "title": "About",
       "hero": {
         "title": "Translate between 40+ signed and spoken languages in real-time.",
         "img": "Example of live translation between American Sign Language and English"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Translate from spoken to signed languages",
         "signed-to-spoken": "Or from signed to spoken languages"
-      }
-    },
-    "languages": {
-      "title": "Languages"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Real-Time Translation",
+          "subtitle": "Translate between 40+ signed and spoken languages in real-time",
+          "description": "Our app allows you to communicate naturally and easily with anyone, anywhere, anytime, in your own sign language."
+        },
+        "multilingual": {
+          "title": "Multilingual Support",
+          "subtitle": "Translate between different sign languages and spoken languages",
+          "description": "Our app supports multiple sign languages and spoken languages, so you can communicate with people from different countries and cultures."
+        },
+        "appearance": {
+          "title": "Customizable Appearance",
+          "subtitle": "Our photo realistic sign language avatars offer a wide range of customization options to suit your specific needs.",
+          "description": "Whether you want to create an avatar that looks like you or create a unique character, our customization options allow you to express yourself in a way that feels authentic and true to you."
+        },
+        "open-source": {
+          "title": "Open Source Project",
+          "subtitle": "Sign Translate is an open-source project, allowing the community to contribute and enhance its features.",
+          "description": "By sharing our source code, we aim to foster collaboration and transparency. Your feedback and contributions are welcome as we strive to improve and expand the app's capabilities"
+        },
+        "offline": {
+          "title": "Offline Functionality",
+          "subtitle": "Sign Translate work everywhere, even offline on an airplane.",
+          "description": "Whether you're traveling, in a remote area, or without internet, our app ensures you can always translate spoken or written language into sign language, keeping essential communication tools at your fingertips."
+        }
+      },
+      "title": "About Us"
     },
     "contribute": {
       "title": "Contribute"

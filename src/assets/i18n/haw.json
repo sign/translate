@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Translate",
     "language-selector": {
+      "detected": "{{lang}} - ʻIke ʻia",
       "detect": "Detect language",
-      "more": "ʻŌlelo hou aku",
-      "detected": "{{lang}} - ʻIke ʻia"
+      "more": "ʻŌlelo hou aku"
     },
     "input": {
       "text": "Text",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "E HOʻOPĀ",
+    "try": "Unuhi kēia manawa",
     "about": {
-      "title": "E pili ana",
       "hero": {
         "title": "Unuhi ma waena o 40+ mau ʻōlelo pūlima a ʻōlelo ʻia i ka manawa maoli.",
         "img": "Ka laʻana o ka unuhi ola ma waena o ka ʻōlelo hōʻailona ʻAmelika a me ka ʻōlelo Pelekania"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Unuhi mai ka ʻōlelo ʻōlelo i nā ʻōlelo pūlima",
         "signed-to-spoken": "A i ʻole mai i pūlima ʻia i nā ʻōlelo ʻōlelo"
-      }
-    },
-    "languages": {
-      "title": "Nā ʻōlelo"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Unuhi Manawa maoli",
+          "subtitle": "Unuhi ma waena o 40+ mau ʻōlelo pūlima a ʻōlelo ʻia i ka manawa maoli",
+          "description": "Hāʻawi kā mākou polokalamu iā ʻoe e kamaʻilio kūlohelohe a maʻalahi me kekahi, ma nā wahi āpau, i kēlā me kēia manawa, ma kāu ʻōlelo hōʻailona ponoʻī."
+        },
+        "multilingual": {
+          "title": "Kākoʻo ʻōlelo he nui",
+          "subtitle": "Unuhi ma waena o nā ʻōlelo hōʻailona like ʻole a me nā ʻōlelo ʻōlelo ʻia",
+          "description": "Kākoʻo kā mākou polokalamu i nā ʻōlelo hōʻailona he nui a me nā ʻōlelo ʻōlelo, no laila hiki iā ʻoe ke kamaʻilio me nā poʻe mai nā ʻāina a me nā moʻomeheu like ʻole."
+        },
+        "appearance": {
+          "title": "Hiki ke nānā aku",
+          "subtitle": "Hāʻawi kā mākou kiʻi kiʻi ʻōlelo hōʻailona avatar i kahi ākea o nā koho hoʻoponopono e kūpono i kāu mau pono kikoʻī.",
+          "description": "Inā makemake ʻoe e hana i kahi avatar e like me ʻoe a i ʻole e hana i kahi ʻano kūʻokoʻa, ʻo kā mākou koho hoʻoponopono e ʻae iā ʻoe e hōʻike iā ʻoe iho ma ke ʻano he ʻoiaʻiʻo a ʻoiaʻiʻo iā ʻoe."
+        },
+        "open-source": {
+          "title": "Pāhana Open Source",
+          "subtitle": "ʻO ka Sign Translate kahi papahana open-source, e ʻae ana i ke kaiāulu e hāʻawi a hoʻonui i kāna mau hiʻohiʻona.",
+          "description": "Ma ka kaʻana like ʻana i kā mākou kumu kumu, manaʻo mākou e hoʻoulu i ka laulima a me ka ʻike. "
+        },
+        "offline": {
+          "title": "Hana hoʻopahemo",
+          "subtitle": "E hōʻailona i ka Unuhi ma nā wahi a pau, ʻoiai hoʻopahemo ma ka mokulele.",
+          "description": "Inā ʻoe e huakaʻi ana, ma kahi mamao, a i ʻole ka punaewele, hōʻoia kā mākou app e hiki iā ʻoe ke unuhi mau i ka ʻōlelo a i ʻole ka ʻōlelo i kākau ʻia i loko o ka ʻōlelo hōʻailona, ​​e mālama ana i nā mea hana kamaʻilio koʻikoʻi ma kou manamana lima."
+        }
+      },
+      "title": "E pili ana iā mākou"
     },
     "contribute": {
       "title": "E komo pū"
@@ -167,7 +191,7 @@
       "title": "Kākoʻo",
       "feedback": {
         "title": "Manaʻo manaʻo",
-        "send": "Hoʻouna manaʻo"
+        "send": "Send feedback"
       },
       "about": {
         "title": "E pili ana"

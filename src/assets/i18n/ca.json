@@ -12,9 +12,9 @@
   "translate": {
     "title": "Traductor de Sign",
     "language-selector": {
+      "detected": "{{lang}} - Detectat",
       "detect": "Detecta l’idioma",
-      "more": "Més Idiomes",
-      "detected": "{{lang}} - Detectat"
+      "more": "Més Idiomes"
     },
     "input": {
       "text": "Text",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "PROVEU EL TRADUCTOR",
+    "try": "Tradueix ara",
     "about": {
-      "title": "Funcionament",
       "hero": {
         "title": "Tradueix entre més de 40 idiomes parlats i de signes en temps real.",
         "img": "Exemple de traducció en directe entre la llengua de signes americana i l'anglès"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Tradueix de llengües parlades a llengües de signes",
         "signed-to-spoken": "O de les llengües de signes a les parlades"
-      }
-    },
-    "languages": {
-      "title": "Idiomes"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Traducció en temps real",
+          "subtitle": "Tradueix entre més de 40 idiomes parlats i de signes en temps real",
+          "description": "La nostra aplicació us permet comunicar-vos de manera natural i senzilla amb qualsevol persona, en qualsevol lloc i en qualsevol moment, en la vostra pròpia llengua de signes."
+        },
+        "multilingual": {
+          "title": "Suport multilingüe",
+          "subtitle": "Traduir entre diferents llengües de signes i llengües parlades",
+          "description": "La nostra aplicació admet múltiples llengües de signes i llengües parlades, de manera que podeu comunicar-vos amb persones de diferents països i cultures."
+        },
+        "appearance": {
+          "title": "Aspecte personalitzable",
+          "subtitle": "Els nostres avatars fotorealistes de llenguatge de signes ofereixen una àmplia gamma d'opcions de personalització per adaptar-se a les vostres necessitats específiques.",
+          "description": "Tant si voleu crear un avatar que s'assembla a vosaltres com si voleu crear un personatge únic, les nostres opcions de personalització us permeten expressar-vos d'una manera que us sembli autèntica i fidel."
+        },
+        "open-source": {
+          "title": "Projecte de codi obert",
+          "subtitle": "Sign Translate és un projecte de codi obert que permet a la comunitat contribuir i millorar les seves característiques.",
+          "description": "En compartir el nostre codi font, pretenem fomentar la col·laboració i la transparència. "
+        },
+        "offline": {
+          "title": "Funcionalitat fora de línia",
+          "subtitle": "Signa Traduir treballs a tot arreu, fins i tot fora de línia en un avió.",
+          "description": "Tant si viatgeu, en una zona remota o sense Internet, la nostra aplicació us garanteix que sempre podeu traduir el llenguatge parlat o escrit al llenguatge de signes, mantenint les eines de comunicació essencials al vostre abast."
+        }
+      },
+      "title": "Sobre Nosaltres"
     },
     "contribute": {
       "title": "Contribució"
@@ -167,7 +191,7 @@
       "title": "Suport",
       "feedback": {
         "title": "Feedback",
-        "send": "Enviar comentaris"
+        "send": "Envia suggeriments"
       },
       "about": {
         "title": "Sobre"

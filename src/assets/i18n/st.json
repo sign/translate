@@ -12,9 +12,9 @@
   "translate": {
     "title": "Liphetolelo tsa Sign",
     "language-selector": {
+      "detected": "{{lang}} - E fumanwe",
       "detect": "Fumana puo",
-      "more": "Lipuo Tse Eketsehileng",
-      "detected": "{{lang}} - E fumanwe"
+      "more": "Lipuo Tse Eketsehileng"
     },
     "input": {
       "text": "Mongolo",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "lLEKA HO FETOLELA",
+    "try": "Fetolela hona jwale",
     "about": {
-      "title": "Mabapi le",
       "hero": {
         "title": "Fetolela lipakeng tsa 40+ lipuo tsa matsoho le tse buuoang ka nako ea sebele.",
         "img": "Mohlala oa phetolelo e phelang lipakeng tsa Puo ea Matsoho ea Amerika le Senyesemane"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Fetolela ho tloha lipuong tse buuoang ho ea ho lipuo tsa matsoho",
         "signed-to-spoken": "Kapa ho tloha lipuong tsa matsoho ho ea ho tse buuoang"
-      }
-    },
-    "languages": {
-      "title": "Lipuo"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Phetolelo ea Nako ea Sebele",
+          "subtitle": "Fetolela lipakeng tsa lipuo tse 40+ tsa matsoho le tse buuoang ka nako ea sebele",
+          "description": "Sesebelisoa sa rona se u lumella ho buisana ka mokhoa oa tlhaho le ha bonolo le mang kapa mang, kae kapa kae, neng kapa neng, ka puo ea hau ea matsoho."
+        },
+        "multilingual": {
+          "title": "Tšehetso ea Lipuo Tse Ngata",
+          "subtitle": "Fetolela lipakeng tsa lipuo tse fapaneng tsa matsoho le lipuo tse buuoang",
+          "description": "Sesebelisoa sa rona se tšehetsa lipuo tse ngata tsa matsoho le lipuo tse buuoang, kahoo o ka buisana le batho ba tsoang linaheng le litso tse fapaneng."
+        },
+        "appearance": {
+          "title": "Customizable Ponahalo",
+          "subtitle": "Li-avatar tsa rona tsa 'nete tsa puo ea matsoho li fana ka mefuta e mengata e fapaneng ea khetho ho lumellana le litlhoko tsa hau tse ikhethang.",
+          "description": "Hore na o batla ho etsa avatar e ts'oanang le uena kapa ho theha sebapali se ikhethileng, likhetho tsa rona tsa ho itlhophisa li u lumella ho itlhalosa ka tsela e ikutloang e le 'nete ho uena."
+        },
+        "open-source": {
+          "title": "Open Source Project",
+          "subtitle": "Sign Translate ke morero o bulehileng, o lumellang sechaba ho kenya letsoho le ho ntlafatsa likarolo tsa oona.",
+          "description": "Ka ho arolelana khoutu ea rona ea mohloli, re ikemiselitse ho khothaletsa tšebelisano 'moho le ponaletso. "
+        },
+        "offline": {
+          "title": "Ts'ebetso ea Offline",
+          "subtitle": "Saena Translate e sebetsa hohle, esita le ntle le inthanete sefofaneng.",
+          "description": "Ebang o leetong, o le sebakeng se hole, kapa o se na inthanete, sesebelisoa sa rona se netefatsa hore o khona ho fetolela puo e buuoang kapa e ngotsoeng puong ea matsoho, e boloka lisebelisoa tsa bohlokoa tsa puisano li le matsohong a hau."
+        }
+      },
+      "title": "Mabapi le rona"
     },
     "contribute": {
       "title": "Tlatsetsa"
@@ -167,7 +191,7 @@
       "title": "Tšehetso",
       "feedback": {
         "title": "Maikutlo",
-        "send": "Romella maikutlo"
+        "send": "Romela maikutlo a hau"
       },
       "about": {
         "title": "About"

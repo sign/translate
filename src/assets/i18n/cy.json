@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Cyfieithu",
     "language-selector": {
+      "detected": "{{lang}} - Wedi canfod",
       "detect": "Synhwyro iaith",
-      "more": "Mwy o Ieithoedd",
-      "detected": "{{ lang}} - Wedi canfod"
+      "more": "Mwy o Ieithoedd"
     },
     "input": {
       "text": "Testun",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "Rhowch Gynnig Ar Sign Cyfieithu",
+    "try": "Cyfieithu nawr",
     "about": {
-      "title": "Ynglŷn â",
       "hero": {
         "title": "Cyfieithwch rhwng 40+ o ieithoedd arwyddo a llafar mewn amser real.",
         "img": "Enghraifft o gyfieithiad byw rhwng Iaith Arwyddion America a Saesneg"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Cyfieithu o ieithoedd llafar i iaith arwyddion",
         "signed-to-spoken": "Neu o ieithoedd arwyddo i siarad"
-      }
-    },
-    "languages": {
-      "title": "Ieithoedd"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Cyfieithu Amser Real",
+          "subtitle": "Cyfieithwch rhwng 40+ o ieithoedd arwyddo a llafar mewn amser real",
+          "description": "Mae ein ap yn caniatáu ichi gyfathrebu'n naturiol ac yn hawdd ag unrhyw un, unrhyw le, unrhyw bryd, yn eich iaith arwyddion eich hun."
+        },
+        "multilingual": {
+          "title": "Cefnogaeth Amlieithog",
+          "subtitle": "Cyfieithu rhwng gwahanol ieithoedd arwyddion ac ieithoedd llafar",
+          "description": "Mae ein ap yn cefnogi sawl iaith arwyddion ac ieithoedd llafar, felly gallwch chi gyfathrebu â phobl o wahanol wledydd a diwylliannau."
+        },
+        "appearance": {
+          "title": "Ymddangosiad Customizable",
+          "subtitle": "Mae ein rhithffurfiau iaith arwyddion realistig lluniau yn cynnig ystod eang o opsiynau addasu i weddu i'ch anghenion penodol.",
+          "description": "P'un a ydych am greu avatar sy'n edrych fel chi neu greu cymeriad unigryw, mae ein hopsiynau addasu yn caniatáu ichi fynegi'ch hun mewn ffordd sy'n teimlo'n ddilys ac yn wir i chi."
+        },
+        "open-source": {
+          "title": "Prosiect Ffynhonnell Agored",
+          "subtitle": "Mae Sign Translate yn brosiect ffynhonnell agored, sy'n caniatáu i'r gymuned gyfrannu a gwella ei nodweddion.",
+          "description": "Trwy rannu ein cod ffynhonnell, ein nod yw meithrin cydweithio a thryloywder. "
+        },
+        "offline": {
+          "title": "Ymarferoldeb All-lein",
+          "subtitle": "Mae Sign Translate yn gweithio ym mhobman, hyd yn oed all-lein ar awyren.",
+          "description": "P'un a ydych chi'n teithio, mewn ardal anghysbell, neu heb y rhyngrwyd, mae ein ap yn sicrhau y gallwch chi bob amser gyfieithu iaith lafar neu ysgrifenedig i iaith arwyddion, gan gadw offer cyfathrebu hanfodol ar flaenau eich bysedd."
+        }
+      },
+      "title": "Amdanom Ni"
     },
     "contribute": {
       "title": "Cyfrannu"

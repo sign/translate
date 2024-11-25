@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign Oversæt",
     "language-selector": {
+      "detected": "{{lang}} - fundet",
       "detect": "Registrer sprog",
-      "more": "Flere sprog",
-      "detected": "{{lang}} - fundet"
+      "more": "Flere sprog"
     },
     "input": {
       "text": "Tekst",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "PRØV OVERSÆT",
+    "try": "Oversæt nu",
     "about": {
-      "title": "Om",
       "hero": {
         "title": "Oversæt mellem 40+ tegnsprog og talte sprog i realtid.",
         "img": "Eksempel på liveoversættelse mellem amerikansk tegnsprog og engelsk"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Oversæt fra talte til tegnsprog",
         "signed-to-spoken": "Eller fra tegnsprog til talesprog"
-      }
-    },
-    "languages": {
-      "title": "Sprog"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Oversættelse i realtid",
+          "subtitle": "Oversæt mellem 40+ tegnsprog og talte sprog i realtid",
+          "description": "Vores app giver dig mulighed for at kommunikere naturligt og nemt med hvem som helst, hvor som helst, når som helst, på dit eget tegnsprog."
+        },
+        "multilingual": {
+          "title": "Flersproget support",
+          "subtitle": "Oversæt mellem forskellige tegnsprog og talte sprog",
+          "description": "Vores app understøtter flere tegnsprog og talte sprog, så du kan kommunikere med mennesker fra forskellige lande og kulturer."
+        },
+        "appearance": {
+          "title": "Tilpasset udseende",
+          "subtitle": "Vores fotorealistiske tegnsprogsavatarer tilbyder en bred vifte af tilpasningsmuligheder, der passer til dine specifikke behov.",
+          "description": "Uanset om du vil skabe en avatar, der ligner dig, eller skabe en unik karakter, giver vores tilpasningsmuligheder dig mulighed for at udtrykke dig selv på en måde, der føles autentisk og tro mod dig."
+        },
+        "open-source": {
+          "title": "Open Source projekt",
+          "subtitle": "Sign Translate er et open source-projekt, der giver fællesskabet mulighed for at bidrage og forbedre dets funktioner.",
+          "description": "Ved at dele vores kildekode sigter vi mod at fremme samarbejde og gennemsigtighed. "
+        },
+        "offline": {
+          "title": "Offline funktionalitet",
+          "subtitle": "Sign Oversæt arbejde overalt, selv offline på et fly.",
+          "description": "Uanset om du rejser, i et fjerntliggende område eller uden internet, sikrer vores app, at du altid kan oversætte talt eller skrevet sprog til tegnsprog, og du har vigtige kommunikationsværktøjer lige ved hånden."
+        }
+      },
+      "title": "Om os"
     },
     "contribute": {
       "title": "Bidrag"

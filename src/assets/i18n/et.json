@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign'i tõlge",
     "language-selector": {
+      "detected": "{{lang}} – tuvastatud",
       "detect": "Tuvasta keel",
-      "more": "Rohkem keeli",
-      "detected": "{{lang}} – tuvastatud"
+      "more": "Rohkem keeli"
     },
     "input": {
       "text": "Tekst",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "PROOVI TÕLGET",
+    "try": "Tõlgi kohe",
     "about": {
-      "title": "Teave",
       "hero": {
         "title": "Tõlkige reaalajas enam kui 40 viipe- ja kõnekeele vahel.",
         "img": "Näide otsetõlkest Ameerika viipekeele ja inglise keele vahel"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "Tõlkige kõnekeeltest viipekeeltesse",
         "signed-to-spoken": "Või viipekeelest kõnekeeleni"
-      }
-    },
-    "languages": {
-      "title": "Keeled"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "Reaalajas tõlge",
+          "subtitle": "Tõlkige reaalajas enam kui 40 viipe- ja kõnekeele vahel",
+          "description": "Meie rakendus võimaldab teil suhelda loomulikult ja hõlpsalt kõigiga, igal pool ja igal ajal oma viipekeeles."
+        },
+        "multilingual": {
+          "title": "Mitmekeelne tugi",
+          "subtitle": "Tõlgi erinevate viipekeelte ja kõnekeelte vahel",
+          "description": "Meie rakendus toetab mitut viipekeelt ja kõnekeelt, nii et saate suhelda inimestega erinevatest riikidest ja kultuuridest."
+        },
+        "appearance": {
+          "title": "Kohandatav välimus",
+          "subtitle": "Meie fotorealistlikud viipekeele avatarid pakuvad laias valikus kohandamisvõimalusi, mis vastavad teie konkreetsetele vajadustele.",
+          "description": "Ükskõik, kas soovite luua teie moodi avatari või luua ainulaadse tegelase, meie kohandamisvalikud võimaldavad teil end väljendada viisil, mis tundub teile autentne ja tõene."
+        },
+        "open-source": {
+          "title": "Avatud lähtekoodiga projekt",
+          "subtitle": "Sign Translate on avatud lähtekoodiga projekt, mis võimaldab kogukonnal panustada ja selle funktsioone täiustada.",
+          "description": "Lähtekoodi jagamisega püüame edendada koostööd ja läbipaistvust. "
+        },
+        "offline": {
+          "title": "Võrguühenduseta funktsionaalsus",
+          "subtitle": "Sign Translate töötab kõikjal, isegi lennukis võrguühenduseta.",
+          "description": "Olenemata sellest, kas olete reisil, kauges piirkonnas või ilma Internetita, meie rakendus tagab, et saate kõne- või kirjakeele alati viipekeelde tõlkida, hoides olulised suhtlusvahendid teie käeulatuses."
+        }
+      },
+      "title": "Meie kohta"
     },
     "contribute": {
       "title": "Panustage"

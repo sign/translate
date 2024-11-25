@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 번역",
     "language-selector": {
+      "detected": "{{lang}} - 감지됨",
       "detect": "언어 감지",
-      "more": "더 많은 언어",
-      "detected": "{{lang}} - 감지됨"
+      "more": "더 많은 언어"
     },
     "input": {
       "text": "텍스트",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "번역 사용해 보기",
+    "try": "지금 번역해보세요",
     "about": {
-      "title": "정보",
       "hero": {
         "title": "40개 이상의 수화 및 구어를 실시간으로 번역합니다.",
         "img": "미국 수화와 영어의 실시간 번역 예"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "음성에서 수화로 번역",
         "signed-to-spoken": "또는 수화에서 음성 언어로"
-      }
-    },
-    "languages": {
-      "title": "언어"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "실시간 번역",
+          "subtitle": "40개 이상의 수화 및 음성 언어를 실시간으로 번역하세요",
+          "description": "우리 앱을 사용하면 언제 어디서나 누구와도 자신만의 수화로 자연스럽고 쉽게 소통할 수 있습니다."
+        },
+        "multilingual": {
+          "title": "다국어 지원",
+          "subtitle": "다양한 수화와 음성 언어 간 번역",
+          "description": "우리 앱은 다양한 수화와 음성 언어를 지원하므로 다양한 국가와 문화권의 사람들과 소통할 수 있습니다."
+        },
+        "appearance": {
+          "title": "맞춤형 외관",
+          "subtitle": "사진처럼 사실적인 수화 아바타는 귀하의 특정 요구 사항에 맞는 다양한 사용자 정의 옵션을 제공합니다.",
+          "description": "자신과 닮은 아바타를 만들거나 독특한 캐릭터를 만들려는 경우, 당사의 사용자 정의 옵션을 사용하면 자신에게 진정성 있고 진실하다고 느껴지는 방식으로 자신을 표현할 수 있습니다."
+        },
+        "open-source": {
+          "title": "오픈 소스 프로젝트",
+          "subtitle": "Sign Translate는 커뮤니티가 기능을 기여하고 향상시킬 수 있는 오픈 소스 프로젝트입니다.",
+          "description": "소스 코드를 공유함으로써 우리는 협업과 투명성을 촉진하는 것을 목표로 합니다. "
+        },
+        "offline": {
+          "title": "오프라인 기능",
+          "subtitle": "Sign Translate는 비행기 안에서 오프라인을 포함해 어디에서나 작동합니다.",
+          "description": "여행 중이든, 외딴 지역에 있든, 인터넷이 없든, 저희 앱을 사용하면 항상 음성 또는 서면 언어를 수화로 번역하여 필수적인 의사소통 도구를 손쉽게 사용할 수 있습니다."
+        }
+      },
+      "title": "회사 소개"
     },
     "contribute": {
       "title": "번역 제안하기"
@@ -167,7 +191,7 @@
       "title": "지원하다",
       "feedback": {
         "title": "피드백",
-        "send": "피드백 보내기"
+        "send": "의견 보내기"
       },
       "about": {
         "title": "에 대한"

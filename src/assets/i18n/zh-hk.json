@@ -12,9 +12,9 @@
   "translate": {
     "title": "Sign 翻譯",
     "language-selector": {
+      "detected": "{{lang}} - 偵測到",
       "detect": "偵測語言",
-      "more": "更多語言",
-      "detected": "{{lang}} - 偵測到"
+      "more": "更多語言"
     },
     "input": {
       "text": "文字",
@@ -54,9 +54,8 @@
     }
   },
   "landing": {
-    "try": "試用「翻譯」",
+    "try": "立即翻譯",
     "about": {
-      "title": "關於",
       "hero": {
         "title": "實時翻譯 40 多種手語和口語。",
         "img": "美國手語和英語之間的實時翻譯示例"
@@ -64,10 +63,35 @@
       "direction": {
         "spoken-to-signed": "從口語翻譯成手語",
         "signed-to-spoken": "或從手語到口語"
-      }
-    },
-    "languages": {
-      "title": "語言"
+      },
+      "benefits": {
+        "real-time": {
+          "title": "即時翻譯",
+          "subtitle": "在 40 多種手語和口語之間進行即時翻譯",
+          "description": "我們的應用程式可讓您隨時隨地用自己的手語與任何人自然、輕鬆地溝通。"
+        },
+        "multilingual": {
+          "title": "多語言支援",
+          "subtitle": "不同手語和口語之間的翻譯",
+          "description": "我們的應用程式支援多種手語和口語，因此您可以與來自不同國家和文化的人們進行交流。"
+        },
+        "appearance": {
+          "title": "可自訂的外觀",
+          "subtitle": "我們逼真的手語頭像提供廣泛的客製化選項，以滿足您的特定需求。",
+          "description": "無論您是想創建一個看起來像您的頭像還是創建一個獨特的角色，我們的自訂選項都可以讓您以一種讓您感覺真實的方式表達自己。"
+        },
+        "open-source": {
+          "title": "開源專案",
+          "subtitle": "手語翻譯是一個開源項目，允許社群貢獻並增強其功能。",
+          "description": "透過共享我們的原始碼，我們的目標是促進協作和透明度。"
+        },
+        "offline": {
+          "title": "離線功能",
+          "subtitle": "手語翻譯隨處可用，甚至在飛機上離線也能使用。",
+          "description": "無論您是在旅行、在偏遠地區還是沒有互聯網，我們的應用程式都確保您始終可以將口語或書面語言翻譯成手語，讓重要的溝通工具觸手可及。"
+        }
+      },
+      "title": "關於我們"
     },
     "contribute": {
       "title": "提供翻譯"
@@ -167,7 +191,7 @@
       "title": "支持",
       "feedback": {
         "title": "反饋",
-        "send": "發送反饋"
+        "send": "提供意見"
       },
       "about": {
         "title": "關於"

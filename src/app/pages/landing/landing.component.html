@@ -34,17 +34,30 @@
       <ion-menu-button auto-hide="true"></ion-menu-button>
     </ion-buttons>
     }
-    <ion-title>{{ 'translate.title' | transloco }}</ion-title>
+    <ion-title>
+      <picture>
+        <!-- TODO: inline the logo SVGs for better performance -->
+        <!-- Use a dark mode image for dark theme -->
+        <source srcset="assets/brand/logo-dark.svg" media="(prefers-color-scheme: dark)" />
+        <!-- Fallback to light mode image -->
+        <img src="assets/brand/logo-light.svg" alt="Logo" id="logo" />
+      </picture>
+    </ion-title>
     @if (!isMobile.matches) {
     <ion-buttons slot="primary">
-      <ion-button routerLink="/" color="primary" queryParamsHandling="preserve" shape="round" fill="solid">
+      <ion-button routerLink="/" queryParamsHandling="preserve" color="primary" shape="round" fill="solid">
         {{ 'landing.try' | transloco }}
         <ion-icon slot="end" name="arrow-forward"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="secondary">
       @for (page of pages; track page) {
-      <ion-button [routerLink]="['/about', page]" queryParamsHandling="preserve">
+      <ion-button
+        [routerLink]="['/about', page]"
+        queryParamsHandling="preserve"
+        fill="solid"
+        color="light"
+        shape="round">
         {{ 'landing.' + page + '.title' | transloco }}
       </ion-button>
       }
