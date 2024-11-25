@@ -7,7 +7,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "AI Buddy",
     "language-selector": {
       "detected": "{{lang}} - Detected",
       "more": "More Languages",
@@ -84,12 +84,12 @@
         },
         "open-source": {
           "title": "Open Source Project",
-          "subtitle": "Sign Translate is an open-source project, allowing the community to contribute and enhance its features.",
+          "subtitle": "AI Buddy is an open-source project, allowing the community to contribute and enhance its features.",
           "description": "By sharing our source code, we aim to foster collaboration and transparency. Your feedback and contributions are welcome as we strive to improve and expand the app's capabilities"
         },
         "offline": {
           "title": "Offline Functionality",
-          "subtitle": "Sign Translate work everywhere, even offline on an airplane.",
+          "subtitle": "AI Buddy work everywhere, even offline on an airplane.",
           "description": "Whether you're traveling, in a remote area, or without internet, our app ensures you can always translate spoken or written language into sign language, keeping essential communication tools at your fingertips."
         }
       }

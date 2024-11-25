@@ -1,4 +1,4 @@
-<h1 align="center">👋 Sign Translate</h1>
+<h1 align="center">👋 AI Buddy</h1>
 
 <p align="center">
   <i>
