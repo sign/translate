@@ -6,6 +6,7 @@ import {SignedLanguageOutputComponent} from '../spoken-to-signed/signed-language
 import {SignedLanguageInputComponent} from '../signed-to-spoken/signed-language-input/signed-language-input.component';
 import {VideoComponent} from '../../../components/video/video.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
+import {VideoModule} from '../../../components/video/video.module';
 
 @Component({
   selector: 'app-translate-mobile',
@@ -19,7 +20,7 @@ import {LanguageSelectorsComponent} from '../language-selectors/language-selecto
     SignedLanguageOutputComponent,
     SignedLanguageInputComponent,
     SpokenLanguageInputComponent,
-    VideoComponent,
+    VideoModule,
     LanguageSelectorsComponent,
   ],
 })

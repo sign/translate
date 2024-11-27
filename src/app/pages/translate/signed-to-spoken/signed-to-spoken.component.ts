@@ -18,6 +18,7 @@ import {addIcons} from 'ionicons';
 import {copyOutline} from 'ionicons/icons';
 import {TranslocoPipe} from '@ngneat/transloco';
 import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
+import {VideoModule} from '../../../components/video/video.module';
 
 const FAKE_WORDS = [
   {
@@ -94,7 +95,7 @@ const FAKE_WORDS = [
     SignWritingComponent,
     IonButton,
     TextToSpeechComponent,
-    VideoComponent,
+    VideoModule,
     UploadComponent,
     IonIcon,
     TranslocoPipe,

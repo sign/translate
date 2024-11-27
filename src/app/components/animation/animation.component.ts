@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, Input, viewChild} from '@angular/core';
-import {Store} from '@ngxs/store';
-import {AnimationStateModel} from '../../modules/animation/animation.state';
+import {provideStates, Store} from '@ngxs/store';
+import {AnimationState, AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
 import {map, takeUntil, tap} from 'rxjs/operators';
 import {ThreeService} from '../../core/services/three.service';

@@ -14,7 +14,6 @@ export const routes: Routes = [
   {
     path: 'playground',
     loadComponent: () => import('./pages/playground/playground.component').then(m => m.PlaygroundComponent),
-    providers: [provideStates([VideoState, PoseState, SignWritingState, DetectorState])],
   },
   {
     path: 'benchmark',
@@ -31,7 +30,7 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./pages/translate/translate.component').then(m => m.TranslateComponent),
         providers: [
-          provideStates([TranslateState, VideoState, PoseState, SignWritingState, DetectorState]),
+          provideStates([TranslateState]),
           {provide: LanguageDetectionService, useClass: MediaPipeLanguageDetectionService},
         ],
       },

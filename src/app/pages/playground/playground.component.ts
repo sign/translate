@@ -10,6 +10,7 @@ import {VideoComponent} from '../../components/video/video.component';
 import {SettingsComponent} from '../../modules/settings/settings/settings.component';
 import {earOutline} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
+import {VideoModule} from '../../components/video/video.module';
 
 @Component({
   selector: 'app-playground',
@@ -22,7 +23,7 @@ import {addIcons} from 'ionicons';
     IonHeader,
     IonToolbar,
     IonTitle,
-    VideoComponent,
+    VideoModule,
     SettingsComponent,
     IonIcon,
     TranslocoPipe,

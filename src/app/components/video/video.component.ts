@@ -19,12 +19,13 @@ import {addIcons} from 'ionicons';
 import {playCircleOutline} from 'ionicons/icons';
 import {AsyncPipe} from '@angular/common';
 import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {AnimationModule} from '../animation/animation.module';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
-  imports: [AnimationComponent, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
+  imports: [AnimationModule, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   private store = inject(Store);
@@ -44,7 +45,7 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
   readonly videoEl = viewChild<ElementRef<HTMLVideoElement>>('video');
   readonly canvasEl = viewChild<ElementRef<HTMLCanvasElement>>('canvas');
   readonly statsEl = viewChild<ElementRef>('stats');
-  appRootEl = document.querySelector('ion-app') ?? document.body;
+  appRootEl!: HTMLElement;
 
   @HostBinding('class') aspectRatio = 'aspect-16-9';
 
@@ -60,6 +61,10 @@ export class VideoComponent extends BaseComponent implements AfterViewInit {
 
   constructor() {
     super();
+
+    if ('document' in globalThis) {
+      this.appRootEl = document.querySelector('ion-app') ?? document.body;
+    }
 
     addIcons({playCircleOutline});
   }
