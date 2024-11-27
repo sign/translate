@@ -2,8 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {BenchmarkItemComponent} from './benchmark-item.component';
-
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 
 describe('BenchmarkItemComponent', () => {
   let component: BenchmarkItemComponent;
@@ -11,7 +10,8 @@ describe('BenchmarkItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatTooltipModule, provideIonicAngular(), BenchmarkItemComponent],
+      imports: [BenchmarkItemComponent],
+      providers: [provideIonicAngular()],
     }).compileComponents();
   });
 

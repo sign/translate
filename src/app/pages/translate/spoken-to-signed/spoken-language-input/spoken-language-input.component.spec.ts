@@ -6,13 +6,11 @@ import {provideStore, Store} from '@ngxs/store';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../app.config';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {provideHttpClient} from '@angular/common/http';
-import {provideTranslocoTesting} from '../../../../core/modules/transloco/transloco-testing.module';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {DesktopTextareaComponent} from './desktop-textarea/desktop-textarea.component';
-import {TranslateModule} from '../../../../modules/translate/translate.module';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {TranslateState} from '../../../../modules/translate/translate.state';
 
 describe('SpokenLanguageInputComponent', () => {
   let component: SpokenLanguageInputComponent;
@@ -22,16 +20,12 @@ describe('SpokenLanguageInputComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [
-        provideStore([SettingsState], ngxsConfig),
-        TranslateModule,
-        FormsModule,
-        ReactiveFormsModule,
-        provideTranslocoTesting(),
-        SpokenLanguageInputComponent,
-        DesktopTextareaComponent,
+      imports: [AppTranslocoTestingModule, SpokenLanguageInputComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
       ],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(SpokenLanguageInputComponent);
     component = fixture.componentInstance;

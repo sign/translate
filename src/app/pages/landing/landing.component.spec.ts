@@ -2,13 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LandingComponent} from './landing.component';
-import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {RouterModule} from '@angular/router';
+import {provideRouter} from '@angular/router';
 import {AboutComponent} from './about/about.component';
-
-import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
-import {LandingFooterComponent} from './landing-footer/landing-footer.component';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 
 describe('LandingComponent', () => {
   let component: LandingComponent;
@@ -16,15 +13,8 @@ describe('LandingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        provideIonicAngular(),
-        NoopAnimationsModule,
-        RouterModule.forRoot([{path: '', component: AboutComponent}]),
-        LandingComponent,
-        LandingFooterComponent,
-        I18NLanguageSelectorComponent,
-      ],
+      imports: [AppTranslocoTestingModule, LandingComponent],
+      providers: [provideRouter([{path: '', component: AboutComponent}]), provideIonicAngular()],
     }).compileComponents();
   });
 

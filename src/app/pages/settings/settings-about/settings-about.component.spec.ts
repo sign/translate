@@ -1,10 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {SettingsAboutComponent} from './settings-about.component';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {provideRouter} from '@angular/router';
 
 describe('SettingsAboutComponent', () => {
   let component: SettingsAboutComponent;
@@ -12,8 +11,8 @@ describe('SettingsAboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), provideIonicAngular(), SettingsAboutComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [AppTranslocoTestingModule, SettingsAboutComponent],
+      providers: [provideRouter([]), provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsAboutComponent);

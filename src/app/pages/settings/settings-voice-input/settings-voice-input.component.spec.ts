@@ -1,13 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsVoiceInputComponent} from './settings-voice-input.component';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {NgxsModule} from '@ngxs/store';
+
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 
 describe('SettingsVoiceInputComponent', () => {
   let component: SettingsVoiceInputComponent;
@@ -15,13 +15,8 @@ describe('SettingsVoiceInputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        MatTooltipModule,
-        provideTranslocoTesting(),
-        provideIonicAngular(),
-       provideStore([SettingsState], ngxsConfig),
-        SettingsVoiceInputComponent,
-      ],
+      imports: [AppTranslocoTestingModule, SettingsVoiceInputComponent],
+      providers: [provideIonicAngular(), provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsVoiceInputComponent);

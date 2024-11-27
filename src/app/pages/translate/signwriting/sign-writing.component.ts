@@ -8,13 +8,13 @@ import {Store} from '@ngxs/store';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {DescribeSignWritingSign} from '../../../modules/translate/translate.actions';
 import {IonProgressBar} from '@ionic/angular/standalone';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-sign-writing',
   templateUrl: './sign-writing.component.html',
   styleUrls: ['./sign-writing.component.scss'],
-  imports: [IonProgressBar, MatTooltip],
+  imports: [IonProgressBar, MatTooltipModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SignWritingComponent {

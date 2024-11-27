@@ -5,7 +5,7 @@ import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {provideTranslocoTesting} from '../../../core/modules/transloco/transloco-testing.module';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 
 describe('SettingsVoiceOutputComponent', () => {
   let component: SettingsVoiceOutputComponent;
@@ -13,11 +13,8 @@ describe('SettingsVoiceOutputComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        provideStore([SettingsState], ngxsConfig),
-        SettingsVoiceOutputComponent,
-      ],
+      imports: [AppTranslocoTestingModule, SettingsVoiceOutputComponent],
+      providers: [provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsVoiceOutputComponent);

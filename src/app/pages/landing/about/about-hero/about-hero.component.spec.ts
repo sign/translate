@@ -2,9 +2,11 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AboutHeroComponent} from './about-hero.component';
-import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
+import {provideRouter} from '@angular/router';
 
 describe('AboutHeroComponent', () => {
   let component: AboutHeroComponent;
@@ -12,7 +14,8 @@ describe('AboutHeroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), provideIonicAngular(), NoopAnimationsModule, AboutHeroComponent],
+      imports: [AppTranslocoTestingModule, NoopAnimationsModule, AboutHeroComponent],
+      providers: [provideRouter([]), provideIonicAngular()],
     }).compileComponents();
   });
 

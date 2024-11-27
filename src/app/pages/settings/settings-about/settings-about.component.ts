@@ -5,7 +5,9 @@ import {
   IonBackButton,
   IonButtons,
   IonContent,
-  IonHeader, IonItem, IonLabel,
+  IonHeader,
+  IonItem,
+  IonLabel,
   IonList,
   IonTitle,
   IonToolbar,
@@ -15,7 +17,20 @@ import {
   selector: 'app-settings-about',
   templateUrl: './settings-about.component.html',
   styleUrls: ['./settings-about.component.scss'],
-  imports: [TranslocoDirective, RouterLink, TranslocoPipe, IonTitle, IonBackButton, IonToolbar, IonHeader, IonButtons, IonContent, IonList, IonItem, IonLabel],
+  imports: [
+    TranslocoDirective,
+    RouterLink,
+    TranslocoPipe,
+    IonTitle,
+    IonBackButton,
+    IonToolbar,
+    IonHeader,
+    IonButtons,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel,
+  ],
 })
 export class SettingsAboutComponent {
   legalPages: string[] = ['terms', 'privacy', 'licenses'];

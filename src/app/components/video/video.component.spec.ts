@@ -2,18 +2,14 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {VideoComponent} from './video.component';
-import {VideoControlsComponent} from './video-controls/video-controls.component';
-import {AnimationComponent} from '../animation/animation.component';
-import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../modules/settings/settings.state';
-import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
 import {PoseState} from '../../modules/pose/pose.state';
 import {DetectorState} from '../../modules/detector/detector.state';
+import {provideStore} from '@ngxs/store';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {IonFab, IonIcon} from '@ionic/angular/standalone';
+import {ngxsConfig} from '../../app.config';
 
 describe('VideoComponent', () => {
   let component: VideoComponent;
@@ -21,16 +17,8 @@ describe('VideoComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        MatTooltipModule,
-        IonIcon,
-        IonFab,
-       provideStore([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig),
-        VideoComponent,
-        VideoControlsComponent,
-        AnimationComponent,
-      ],
+      imports: [AppTranslocoTestingModule, VideoComponent],
+      providers: [provideStore([SettingsState, VideoState, SignWritingState, PoseState, DetectorState], ngxsConfig)],
     }).compileComponents();
   }));
 

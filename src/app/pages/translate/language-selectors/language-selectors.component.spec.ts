@@ -1,15 +1,15 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LanguageSelectorsComponent} from './language-selectors.component';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {NgxsModule} from '@ngxs/store';
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {ngxsConfig} from '../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {provideHttpClient} from '@angular/common/http';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {provideHttpClient} from '@angular/common/http';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('LanguageSelectorsComponent', () => {
   let component: LanguageSelectorsComponent;
@@ -17,13 +17,12 @@ describe('LanguageSelectorsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [
-       provideStore([SettingsState, TranslateState], ngxsConfig),
-        provideTranslocoTesting(),
-        LanguageSelectorsComponent,
+      imports: [AppTranslocoTestingModule, NoopAnimationsModule, LanguageSelectorsComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
       ],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     fixture = TestBed.createComponent(LanguageSelectorsComponent);
     component = fixture.componentInstance;

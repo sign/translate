@@ -1,12 +1,10 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LandingFooterComponent} from './landing-footer.component';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {I18NLanguageSelectorComponent} from '../../../components/i18n-language-selector/i18n-language-selector.component';
-import {RouterModule} from '@angular/router';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideRouter} from '@angular/router';
 
 describe('LandingFooterComponent', () => {
   let component: LandingFooterComponent;
@@ -14,14 +12,8 @@ describe('LandingFooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        provideIonicAngular(),
-        NoopAnimationsModule,
-        RouterModule.forRoot([{path: '', component: LandingFooterComponent}]),
-        LandingFooterComponent,
-        I18NLanguageSelectorComponent,
-      ],
+      imports: [AppTranslocoTestingModule, LandingFooterComponent],
+      providers: [provideRouter([]), provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LandingFooterComponent);

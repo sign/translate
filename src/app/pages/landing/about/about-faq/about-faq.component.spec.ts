@@ -2,9 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {AboutFaqComponent} from './about-faq.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 
 describe('AboutFaqComponent', () => {
   let component: AboutFaqComponent;
@@ -12,7 +13,8 @@ describe('AboutFaqComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), provideIonicAngular(), NoopAnimationsModule, AboutFaqComponent],
+      imports: [AppTranslocoTestingModule, NoopAnimationsModule, AboutFaqComponent],
+      providers: [provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutFaqComponent);

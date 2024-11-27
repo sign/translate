@@ -7,7 +7,7 @@ import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
 import {MatTabsModule} from '@angular/material/tabs';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
-import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
+import {MatMenuModule} from '@angular/material/menu';
 import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
 import {addIcons} from 'ionicons';
 import {chevronDown} from 'ionicons/icons';
@@ -18,7 +18,7 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
-  imports: [IonButton, IonIcon, MatMenuTrigger, FlagIconComponent, MatMenuModule, TranslocoDirective, MatTabsModule],
+  imports: [IonButton, IonIcon, FlagIconComponent, MatMenuModule, TranslocoDirective, MatTabsModule],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
   private store = inject(Store);

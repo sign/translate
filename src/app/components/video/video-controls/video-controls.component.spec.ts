@@ -2,12 +2,11 @@ import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {VideoControlsComponent} from './video-controls.component';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {NgxsModule} from '@ngxs/store';
+
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../app.config';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {IonFab, IonFabButton} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 
 describe('VideoControlsComponent', () => {
   let component: VideoControlsComponent;
@@ -15,14 +14,8 @@ describe('VideoControlsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        MatTooltipModule,
-        IonFab,
-        IonFabButton,
-       provideStore([SettingsState], ngxsConfig),
-        VideoControlsComponent,
-      ],
+      imports: [AppTranslocoTestingModule, VideoControlsComponent],
+      providers: [provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
   }));
 

@@ -2,9 +2,9 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TextToSpeechComponent} from './text-to-speech.component';
-import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+
 import {SimpleChange} from '@angular/core';
-import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import Spy = jasmine.Spy;
 
 describe('TextToSpeechComponent', () => {
@@ -25,7 +25,7 @@ describe('TextToSpeechComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), IonIcon, IonButton, TextToSpeechComponent],
+      imports: [AppTranslocoTestingModule, TextToSpeechComponent],
     }).compileComponents();
   });
 

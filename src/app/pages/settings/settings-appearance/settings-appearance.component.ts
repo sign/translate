@@ -7,6 +7,16 @@ import {IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} 
   templateUrl: './settings-appearance.component.html',
   selector: 'app-settings-appearance',
   styleUrls: ['./settings-appearance.component.scss'],
-  imports: [TranslocoDirective, SettingsAppearanceImagesComponent, TranslocoPipe, IonTitle, IonToolbar, IonHeader, IonContent, IonBackButton, IonButtons],
+  imports: [
+    TranslocoDirective,
+    SettingsAppearanceImagesComponent,
+    TranslocoPipe,
+    IonTitle,
+    IonToolbar,
+    IonHeader,
+    IonContent,
+    IonBackButton,
+    IonButtons,
+  ],
 })
 export class SettingsAppearanceComponent {}

@@ -6,7 +6,7 @@ import {MediapipeHolisticService} from '../../core/services/holistic.service';
 import {PoseModule} from '../pose/pose.module';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../settings/settings.state';
-import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../app.config';
 
 describe('AnimationService', () => {
   let service: AnimationService;

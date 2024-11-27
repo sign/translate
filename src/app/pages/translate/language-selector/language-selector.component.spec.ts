@@ -2,18 +2,16 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {LanguageSelectorComponent} from './language-selector.component';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {NgxsModule} from '@ngxs/store';
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../app.config';
 import {TranslateState} from '../../../modules/translate/translate.state';
-import {provideHttpClientTesting} from '@angular/common/http/testing';
-
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatMenuModule} from '@angular/material/menu';
 import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 
 describe('LanguageSelectorComponent', () => {
   let component: LanguageSelectorComponent;
@@ -21,17 +19,13 @@ describe('LanguageSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        MatTooltipModule,
-        MatTabsModule,
-        MatMenuModule,
-        NoopAnimationsModule,
+      imports: [AppTranslocoTestingModule, NoopAnimationsModule, LanguageSelectorComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
         provideIonicAngular(),
-       provideStore([SettingsState, TranslateState], ngxsConfig),
-        LanguageSelectorComponent,
+        provideStore([SettingsState, TranslateState], ngxsConfig),
       ],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

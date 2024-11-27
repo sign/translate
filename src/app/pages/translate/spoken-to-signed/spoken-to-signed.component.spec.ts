@@ -2,16 +2,13 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SpokenToSignedComponent} from './spoken-to-signed.component';
-import {SignWritingComponent} from '../signwriting/sign-writing.component';
-import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../app.config';
 import {TranslateState} from '../../../modules/translate/translate.state';
 import {provideHttpClient} from '@angular/common/http';
-import {provideTranslocoTesting} from '../../../core/modules/transloco/transloco-testing.module';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('SpokenToSignedComponent', () => {
@@ -21,16 +18,12 @@ describe('SpokenToSignedComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [
+      imports: [AppTranslocoTestingModule, SpokenToSignedComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
         provideStore([SettingsState, TranslateState], ngxsConfig),
-        FormsModule,
-        ReactiveFormsModule,
-        provideTranslocoTesting(),
-        SpokenToSignedComponent,
-        SignWritingComponent,
-        TextToSpeechComponent,
       ],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

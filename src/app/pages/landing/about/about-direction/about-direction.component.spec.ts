@@ -2,8 +2,8 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AboutDirectionComponent} from './about-direction.component';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-
 
 describe('AboutDirectionComponent', () => {
   let component: AboutDirectionComponent;
@@ -11,7 +11,8 @@ describe('AboutDirectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), provideIonicAngular(), AboutDirectionComponent],
+      imports: [AppTranslocoTestingModule, AboutDirectionComponent],
+      providers: [provideIonicAngular()],
     }).compileComponents();
   });
 

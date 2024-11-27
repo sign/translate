@@ -2,7 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
 import {MatTreeModule, MatTreeNestedDataSource} from '@angular/material/tree';
-import {NestedTreeControl} from '@angular/cdk/tree';
+import {CdkTreeModule, NestedTreeControl} from '@angular/cdk/tree';
 import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
@@ -47,6 +47,7 @@ if (!isIOS) {
     TranslocoDirective,
     MatProgressSpinner,
     MatTreeModule,
+    CdkTreeModule,
     NgTemplateOutlet,
     TranslocoPipe,
     NgxFilesizeModule,

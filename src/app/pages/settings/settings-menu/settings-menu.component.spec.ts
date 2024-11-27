@@ -2,8 +2,8 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsMenuComponent} from './settings-menu.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-
 
 describe('SettingsMenuComponent', () => {
   let component: SettingsMenuComponent;
@@ -11,7 +11,8 @@ describe('SettingsMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), provideIonicAngular(), SettingsMenuComponent],
+      imports: [AppTranslocoTestingModule, SettingsMenuComponent],
+      providers: [provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsMenuComponent);

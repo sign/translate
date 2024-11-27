@@ -1,14 +1,17 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {PlaygroundComponent} from './playground.component';
-import {Store} from '@ngxs/store';
-import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
+import {provideStore, Store} from '@ngxs/store';
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {TranslocoService} from '@ngneat/transloco';
-
-import {SettingsModule} from '../../modules/settings/settings.module';
-import {VideoModule} from '../../components/video/video.module';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {SettingsState} from '../../modules/settings/settings.state';
+import {ngxsConfig} from '../../app.config';
+import {DetectorState} from '../../modules/detector/detector.state';
+import {SignWritingState} from '../../modules/sign-writing/sign-writing.state';
+import {PoseState} from '../../modules/pose/pose.state';
+import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
@@ -17,13 +20,10 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        provideTranslocoTesting(),
-        AppNgxsModule,
+      imports: [AppTranslocoTestingModule, PlaygroundComponent],
+      providers: [
+        provideStore([SettingsState, VideoState, DetectorState, SignWritingState, PoseState], ngxsConfig),
         provideIonicAngular(),
-        SettingsModule,
-        VideoModule,
-        PlaygroundComponent,
       ],
     }).compileComponents();
   });

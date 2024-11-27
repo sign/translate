@@ -1,11 +1,11 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {AppComponent} from './app.component';
-import {AppModule} from './app.module';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {Store} from '@ngxs/store';
 import {SetSpokenLanguageText} from './modules/translate/translate.actions';
 import {TranslocoService} from '@ngneat/transloco';
 import {Router} from '@angular/router';
+import {appConfig} from './app.config';
 
 describe('AppComponent', () => {
   let store: Store;
@@ -14,7 +14,8 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule],
+      imports: [AppComponent],
+      providers: appConfig.providers,
     }).compileComponents();
   }));
 

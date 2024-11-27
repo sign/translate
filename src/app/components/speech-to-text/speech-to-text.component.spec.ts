@@ -3,8 +3,6 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SpeechToTextComponent} from './speech-to-text.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {IonButton, IonIcon} from '@ionic/angular/standalone';
 
 describe('SpeechToTextComponent', () => {
   let component: SpeechToTextComponent;
@@ -12,7 +10,7 @@ describe('SpeechToTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), MatTooltipModule, IonIcon, IonButton, SpeechToTextComponent],
+      imports: [AppTranslocoTestingModule, SpeechToTextComponent],
     }).compileComponents();
   });
 

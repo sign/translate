@@ -1,4 +1,4 @@
-import {Component, ElementRef, inject, Input, viewChild} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {Store} from '@ngxs/store';
@@ -16,7 +16,6 @@ export class DesktopTextareaComponent {
   @Input() maxLength: number;
   @Input() lang: string;
   @Input() textControl: FormControl;
-  readonly textarea = viewChild<ElementRef<HTMLTextAreaElement>>('textarea');
 
   hoveredSentenceIndex = null;
   sentences$!: Observable<string[]>;

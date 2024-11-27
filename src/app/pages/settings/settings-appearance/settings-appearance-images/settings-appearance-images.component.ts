@@ -30,6 +30,6 @@ export class SettingsAppearanceImagesComponent extends BaseSettingsComponent {
   constructor() {
     super();
 
-    addIcons({diceOutline, images})
+    addIcons({diceOutline, images});
   }
 }

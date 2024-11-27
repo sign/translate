@@ -2,12 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {AboutBenefitsComponent} from './about-benefits.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {LazyMapComponent} from '../lazy-map/lazy-map.component';
 import {provideHttpClient} from '@angular/common/http';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 
 describe('AboutBenefitsComponent', () => {
   let component: AboutBenefitsComponent;
@@ -15,9 +13,8 @@ describe('AboutBenefitsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [provideTranslocoTesting(), provideIonicAngular(), AboutBenefitsComponent, LazyMapComponent],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [AppTranslocoTestingModule, AboutBenefitsComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideIonicAngular()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutBenefitsComponent);
