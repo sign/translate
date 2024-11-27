@@ -1,11 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="130.47 235.86 293.2 146.01">
   <style type="text/css">
 .st0 {
-  fill: #4b0082;
+  fill: #663399;
 }
 
 .st1 {
   fill: #ba5ebc;
+}
+
+@media (prefers-color-scheme: dark) {
+  .st0 {
+    fill: white;
+  }
 }
   </style>
   <g>
