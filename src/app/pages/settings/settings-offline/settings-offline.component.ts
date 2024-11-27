@@ -1,14 +1,7 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
-import {
-  MatNestedTreeNode,
-  MatTree,
-  MatTreeNestedDataSource,
-  MatTreeNode,
-  MatTreeNodeOutlet,
-  MatTreeNodeToggle,
-} from '@angular/material/tree';
+import {MatTreeModule, MatTreeNestedDataSource} from '@angular/material/tree';
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -27,6 +20,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 import {chevronDownOutline, chevronForwardOutline, cloudDownloadOutline, refresh, trash} from 'ionicons/icons';
+import {addIcons} from 'ionicons';
 
 const OFFLINE_PATHS = {
   avatarGlb: '3d/character.glb',
@@ -52,12 +46,8 @@ if (!isIOS) {
   imports: [
     TranslocoDirective,
     MatProgressSpinner,
-    MatTree,
-    MatTreeNode,
+    MatTreeModule,
     NgTemplateOutlet,
-    MatNestedTreeNode,
-    MatTreeNodeToggle,
-    MatTreeNodeOutlet,
     TranslocoPipe,
     NgxFilesizeModule,
     IonContent,
@@ -94,7 +84,7 @@ export class SettingsOfflineComponent extends BaseComponent implements OnInit {
     this.transloco.events$
       .pipe(
         tap(() => this.updateLabels()),
-        takeUntil(this.ngUnsubscribe),
+        takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
   }

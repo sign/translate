@@ -2,7 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
-import {IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/angular/standalone';
 import {TranslateInputButtonComponent} from '../input/button/button.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
 import {SendFeedbackComponent} from '../send-feedback/send-feedback.component';
@@ -14,6 +14,7 @@ import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component'
 import {MatTooltip} from '@angular/material/tooltip';
 import {addIcons} from 'ionicons';
 import {cloudUpload, language, videocam} from 'ionicons/icons';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-translate-desktop',
@@ -34,6 +35,8 @@ import {cloudUpload, language, videocam} from 'ionicons/icons';
     SignedToSpokenComponent,
     DropPoseFileComponent,
     MatTooltip,
+    IonButton,
+    RouterLink,
   ],
 })
 export class TranslateDesktopComponent extends BaseComponent implements OnInit {
