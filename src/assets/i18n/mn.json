@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Орчуулагч",
+    "title": "Тэмдэг Орчуулагч",
     "language-selector": {
       "detected": "{{lang}} - Илэрсэн",
       "detect": "Хэл таних",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Орчуулга хуулах"
       }
-    }
+    },
+    "logo": "Орчуулагч"
   },
   "landing": {
     "try": "Одоо орчуулах",

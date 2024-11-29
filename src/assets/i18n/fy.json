@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Teken Oersetter",
     "language-selector": {
       "detected": "{{lang}} - ûntdutsen",
       "detect": "Taal werkenne",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopiearje oersetting"
       }
-    }
+    },
+    "logo": "Oersetter"
   },
   "landing": {
     "try": "No oersette",

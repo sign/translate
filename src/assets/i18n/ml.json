@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "ചിഹ്നം വിവർത്തകൻ",
     "language-selector": {
       "detected": "{{lang}} - കണ്ടെത്തി",
       "detect": "ഭാഷ കണ്ടെത്തുക",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "വിവർത്തനം പകർത്തുക"
       }
-    }
+    },
+    "logo": "വിവർത്തകൻ"
   },
   "landing": {
     "try": "ഇപ്പോൾ വിവർത്തനം ചെയ്യുക",

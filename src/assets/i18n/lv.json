@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign tulkotājs",
+    "title": "Zīmju tulkotājs",
     "language-selector": {
       "detected": "{{lang}} — konstatēts",
       "detect": "Noteikt valodu",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopēt tulkojumu"
       }
-    }
+    },
+    "logo": "Tulkotājs"
   },
   "landing": {
     "try": "Tulkot tūlīt",

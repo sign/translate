@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign แปลภาษา",
+    "title": "นักแปลภาษามือ",
     "language-selector": {
       "detected": "{{lang}} - ตรวจพบแล้ว",
       "detect": "ตรวจหาภาษา",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "คัดลอกคำแปล"
       }
-    }
+    },
+    "logo": "นักแปล"
   },
   "landing": {
     "try": "แปลเลย",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Oversetter",
+    "title": "Tegnspråktolk",
     "language-selector": {
       "detected": "{{lang}} – oppdaget",
       "detect": "Gjenkjenn språk",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopier oversettelse"
       }
-    }
+    },
+    "logo": "Tolk"
   },
   "landing": {
     "try": "Oversett nå",

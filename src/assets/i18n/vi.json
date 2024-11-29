@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Dịch",
+    "title": "Dịch Ngôn Ngữ Ký Hiệu",
     "language-selector": {
       "detected": "{{lang}} - Đã phát hiện",
       "detect": "Phát hiện ngôn ngữ",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Sao chép bản dịch"
       }
-    }
+    },
+    "logo": "Dịch"
   },
   "landing": {
     "try": "Dịch ngay",

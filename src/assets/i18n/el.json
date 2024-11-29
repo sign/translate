@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Μετάφραση Sign",
+    "title": "Μεταφραστής Νοημάτων",
     "language-selector": {
       "detected": "{{lang}} - Εντοπίστηκε",
       "detect": "Αναγνώριση γλώσσας",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Αντιγραφή μετάφρασης"
       }
-    }
+    },
+    "logo": "Μεταφραστής"
   },
   "landing": {
     "try": "Μετάφραση τώρα",

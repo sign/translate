@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign ແປພາສາ",
+    "title": "ຜູ້ແປພາສາເຄື່ອງຫມາຍ",
     "language-selector": {
       "detected": "{{lang}} - ກວດພົບ",
       "detect": "ກວດສອບພາສາ",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ສຳເນົາການແປ"
       }
-    }
+    },
+    "logo": "ແປພາສາ"
   },
   "landing": {
     "try": "ແປພາສາຕອນນີ້",

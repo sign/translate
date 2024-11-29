@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Zomasulira za Sign",
+    "title": "Kumasulira Kwa Zizindikiro",
     "language-selector": {
       "detected": "{{lang}} - Zapezeka",
       "detect": "Fufuzani chilankhulo",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Koperani Kumasulira"
       }
-    }
+    },
+    "logo": "Kumasulira"
   },
   "landing": {
     "try": "Masulirani panopa",

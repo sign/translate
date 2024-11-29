@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Перекладач",
+    "title": "Перекладач жестів",
     "language-selector": {
       "detected": "{{lang}} – виявлено",
       "detect": "Визначити мову",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Копіювати переклад"
       }
-    }
+    },
+    "logo": "Перекладач"
   },
   "landing": {
     "try": "Перекласти зараз",

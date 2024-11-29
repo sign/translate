@@ -10,7 +10,7 @@
     "shift": "MAIUSC"
   },
   "translate": {
-    "title": "Sign Traduttore",
+    "title": "Traduttore di Segni",
     "language-selector": {
       "detected": "{{lang}} - Rilevato",
       "detect": "Rileva lingua",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copia traduzione"
       }
-    }
+    },
+    "logo": "Traduttore"
   },
   "landing": {
     "try": "Traduci ora",

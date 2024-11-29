@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "የSign ተርጓሚ",
+    "title": "እንባር ተርጓሚ",
     "language-selector": {
       "detected": "{{lang}} - ተገኝቷል",
       "detect": "ቋንቋ  አግኝ",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ትርጉም ቅዳ"
       }
-    }
+    },
+    "logo": "ተርጓሚ"
   },
   "landing": {
     "try": "አሁን ተርጉም",

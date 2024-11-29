@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Tərcümə",
+    "title": "İşarə Tərcümə",
     "language-selector": {
       "detected": "{{lang}} - Aşkarlandı",
       "detect": "Dili seç",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Tərcüməni Kopyalayın"
       }
-    }
+    },
+    "logo": "Tərcümə"
   },
   "landing": {
     "try": "İndi tərcümə edin",

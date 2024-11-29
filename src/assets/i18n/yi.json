@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "צייכן איבערזעצער",
     "language-selector": {
       "detected": "{{lang}} - דיטעקטאַד",
       "detect": "ארפינד שפראך",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "קאָפּי איבערזעצונג"
       }
-    }
+    },
+    "logo": "איבערזעצער"
   },
   "landing": {
     "try": "איבערזעץ יעצט",

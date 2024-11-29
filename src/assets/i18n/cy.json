@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Cyfieithu",
+    "title": "Cyfieithydd Arwyddion",
     "language-selector": {
       "detected": "{{lang}} - Wedi canfod",
       "detect": "Synhwyro iaith",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copi Cyfieithiad"
       }
-    }
+    },
+    "logo": "Cyfieithydd"
   },
   "landing": {
     "try": "Cyfieithu nawr",

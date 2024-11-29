@@ -10,7 +10,7 @@
     "shift": "Umschalttaste"
   },
   "translate": {
-    "title": "Sign Übersetzer",
+    "title": "Gebärde Übersetzer",
     "language-selector": {
       "detected": "{{lang}} – Erkannt",
       "detect": "Sprache erkennen",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Übersetzung kopieren"
       }
-    }
+    },
+    "logo": "Übersetzer"
   },
   "landing": {
     "try": "Jetzt übersetzen",

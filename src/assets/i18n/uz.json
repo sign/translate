@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Tarjima",
+    "title": "Belgilar Tarjimoni",
     "language-selector": {
       "detected": "{{lang}} - Aniqlandi",
       "detect": "Avtomatik aniqlash",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Tarjimani nusxalash"
       }
-    }
+    },
+    "logo": "Tarjimoni"
   },
   "landing": {
     "try": "Tarjima qilish",

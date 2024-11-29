@@ -10,7 +10,7 @@
     "shift": "Üst Karakter"
   },
   "translate": {
-    "title": "Sign Çeviri",
+    "title": "İşaret Çevirici",
     "language-selector": {
       "detected": "{{lang}} - Algılandı",
       "detect": "Dili algıla",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Çeviriyi Kopyala"
       }
-    }
+    },
+    "logo": "Çevirici"
   },
   "landing": {
     "try": "Şimdi çevir",

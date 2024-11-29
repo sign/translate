@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign ژباړونکی",
+    "title": "د نښو ژباړونکی",
     "language-selector": {
       "detected": "{{lang}} - کشف شوی",
       "detect": "د ژبې موندل",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "کاپي ژباړه"
       }
-    }
+    },
+    "logo": "ژباړونکی"
   },
   "landing": {
     "try": "اوس وژباړئ",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Tarjumaha Calaamadaha",
     "language-selector": {
       "detected": "{{lang}} - La ogaaday",
       "detect": "Garo luuqada",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Koobi Turjumaada"
       }
-    }
+    },
+    "logo": "Tarjumaha"
   },
   "landing": {
     "try": "Turjun hadda",

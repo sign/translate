@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Tłumacz Sign",
+    "title": "Tłumacz znaków",
     "language-selector": {
       "detected": "{{lang}} - Wykryto",
       "detect": "Wykryj język",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopiuj tłumaczenie"
       }
-    }
+    },
+    "logo": "Tłumacz"
   },
   "landing": {
     "try": "Przetłumacz teraz",

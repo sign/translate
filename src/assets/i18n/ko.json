@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign 번역",
+    "title": "수화 번역기",
     "language-selector": {
       "detected": "{{lang}} - 감지됨",
       "detect": "언어 감지",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "번역 복사"
       }
-    }
+    },
+    "logo": "번역기"
   },
   "landing": {
     "try": "지금 번역해보세요",

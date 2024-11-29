@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign បកប្រែ",
+    "title": "អ្នកបកប្រែសញ្ញា",
     "language-selector": {
       "detected": "{{lang}} - បានរកឃើញ",
       "detect": "កំណត់\\u200bភាសា\\u200bដោយ\\u200bស្វ័យ\\u200bប្រវត្តិ",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ចម្លងការបកប្រែ"
       }
-    }
+    },
+    "logo": "បកប្រែ"
   },
   "landing": {
     "try": "បកប្រែ​ឥឡូវនេះ",

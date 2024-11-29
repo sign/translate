@@ -61,7 +61,7 @@ function checkDiff(a, b, path = '') {
 }
 
 async function applyGoogleLanguage(language, filePath) {
-  console.log({language});
+  // console.log({language});
 
   const main = await getMainPage(language);
   const mainEl = parse(main);

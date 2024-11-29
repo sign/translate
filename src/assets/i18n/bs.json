@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Prevodilac",
+    "title": "Prevodilac znakovnog jezika",
     "language-selector": {
       "detected": "{{lang}} - Otkriveno",
       "detect": "Otkrij jezik",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopiraj prevod"
       }
-    }
+    },
+    "logo": "Prevodilac"
   },
   "landing": {
     "try": "Prevedi odmah",

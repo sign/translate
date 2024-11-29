@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "ਚਿੰਨ੍ਹ ਅਨੁਵਾਦਕ",
     "language-selector": {
       "detected": "{{lang}} - ਖੋਜਿਆ ਗਿਆ",
       "detect": "ਭਾਸ਼ਾ ਖੋਜੋ",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ਅਨੁਵਾਦ ਕਾਪੀ ਕਰੋ"
       }
-    }
+    },
+    "logo": "ਅਨੁਵਾਦਕ"
   },
   "landing": {
     "try": "ਹੁਣੇ ਅਨੁਵਾਦ ਕਰੋ",

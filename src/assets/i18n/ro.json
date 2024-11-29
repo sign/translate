@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Traducere",
+    "title": "Traducător de Semne",
     "language-selector": {
       "detected": "{{lang}} - Detectat",
       "detect": "Selectați limba",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copiați traducerea"
       }
-    }
+    },
+    "logo": "Traducător"
   },
   "landing": {
     "try": "Traduceți acum",

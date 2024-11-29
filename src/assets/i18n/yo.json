@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Onitumọ Awọn Ami",
     "language-selector": {
       "detected": "{{lang}} - Ti ṣe awari",
       "detect": "Ṣawari ede",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Daakọ Itumọ"
       }
-    }
+    },
+    "logo": "Onitumọ"
   },
   "landing": {
     "try": "Ṣètúmọ̀ báyìí",

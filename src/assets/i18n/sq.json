@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Përkthe me Sign",
+    "title": "Përkthyes i Shenjave",
     "language-selector": {
       "detected": "{{lang}} - U zbulua",
       "detect": "Zbulo gjuhën",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopjo Përkthim"
       }
-    }
+    },
+    "logo": "Përkthyes"
   },
   "landing": {
     "try": "Përkthe tani",

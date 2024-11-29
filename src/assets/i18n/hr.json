@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Prevoditelj",
+    "title": "Prevoditelj znakova",
     "language-selector": {
       "detected": "{{lang}} - Otkriveno",
       "detect": "Otkrij jezik",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopiraj prijevod"
       }
-    }
+    },
+    "logo": "Prevoditelj"
   },
   "landing": {
     "try": "Prevedi sad",

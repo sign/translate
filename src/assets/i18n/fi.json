@@ -10,7 +10,7 @@
     "shift": "vaihto"
   },
   "translate": {
-    "title": "Sign Kääntäjä",
+    "title": "Viittomakääntäjä",
     "language-selector": {
       "detected": "{{lang}} - Havaittu",
       "detect": "Tunnista kieli",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopioi käännös"
       }
-    }
+    },
+    "logo": "Kääntäjä"
   },
   "landing": {
     "try": "Käännä nyt",

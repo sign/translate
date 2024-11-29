@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "IToliki kaSign",
+    "title": "Umguquleli Weempawu",
     "language-selector": {
       "detected": "{{lang}} - Ichongiwe",
       "detect": "Fumana ulwimi",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Khuphela Inguqulelo"
       }
-    }
+    },
+    "logo": "Umguquleli"
   },
   "landing": {
     "try": "Guqulela ngoku",

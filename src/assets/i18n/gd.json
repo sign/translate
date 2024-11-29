@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Eadar-theangadair Sign",
+    "title": "Eadar-theangaiche Shoidhnichean",
     "language-selector": {
       "detected": "{{lang}} - Air a bhrath",
       "detect": "Mothaich dhan chànan",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Dèan lethbhreac den eadar-theangachadh"
       }
-    }
+    },
+    "logo": "Eadar-theangaiche"
   },
   "landing": {
     "try": "Eadar-theangaich an-dràsta",

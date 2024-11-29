@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Котормочу",
+    "title": "Белги котормочу",
     "language-selector": {
       "detected": "{{lang}} - Табылды",
       "detect": "Тил тандоо",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Котормосун көчүрүү"
       }
-    }
+    },
+    "logo": "Котормочу"
   },
   "landing": {
     "try": "Азыр которуу",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "ნიშნის მთარგმნელი",
     "language-selector": {
       "detected": "{{lang}} - აღმოჩენილია",
       "detect": "ენის ამოცნობა",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "დააკოპირეთ თარგმანი"
       }
-    }
+    },
+    "logo": "მთარგმნელი"
   },
   "landing": {
     "try": "ახლავე თარგმნა",

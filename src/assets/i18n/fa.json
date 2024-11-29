@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "‏‫ترجمه Sign‬",
+    "title": "مترجم اشاره‌ها",
     "language-selector": {
       "detected": "{{lang}} - شناسایی شد",
       "detect": "شناسایی زبان",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ترجمه کپی"
       }
-    }
+    },
+    "logo": "مترجم"
   },
   "landing": {
     "try": "ترجمه شود",

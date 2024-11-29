@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign'i tõlge",
+    "title": "Viipetõlk",
     "language-selector": {
       "detected": "{{lang}} – tuvastatud",
       "detect": "Tuvasta keel",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopeeri tõlge"
       }
-    }
+    },
+    "logo": "Tõlk"
   },
   "landing": {
     "try": "Tõlgi kohe",

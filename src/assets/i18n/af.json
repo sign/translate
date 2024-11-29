@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Vertaal",
+    "title": "Gebare Vertaal",
     "language-selector": {
       "detected": "{{lang}} - Bespeur",
       "detect": "Bespeur taal",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopieer vertaling"
       }
-    }
+    },
+    "logo": "Vertaal"
   },
   "landing": {
     "try": "Vertaal nou",

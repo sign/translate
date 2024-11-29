@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Fordító",
+    "title": "Jel Fordító",
     "language-selector": {
       "detected": "{{lang}} – Észlelve",
       "detect": "Nyelvfelismerés",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Fordítás másolása"
       }
-    }
+    },
+    "logo": "Fordító"
   },
   "landing": {
     "try": "Fordítás most",

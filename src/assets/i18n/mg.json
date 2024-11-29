@@ -10,7 +10,7 @@
     "shift": "Maj"
   },
   "translate": {
-    "title": "Sign Dikanteny",
+    "title": "Mpanakanto Soratra",
     "language-selector": {
       "detected": "{{lang}} - Hita",
       "detect": "Haminany fiteny",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Adikao Dikanteny"
       }
-    }
+    },
+    "logo": "Mpanakanto"
   },
   "landing": {
     "try": "Handika teny izao",
