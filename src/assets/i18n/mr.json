@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "संकेत अनुवादक",
     "language-selector": {
       "detected": "{{lang}} - आढळले",
       "detect": "भाषा शोधा",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "भाषांतर कॉपी करा"
       }
-    }
+    },
+    "logo": "अनुवादक"
   },
   "landing": {
     "try": "आता भाषांतर करा",

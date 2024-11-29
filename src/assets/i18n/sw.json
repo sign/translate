@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Tafsiri",
+    "title": "Mfasiri wa Alama",
     "language-selector": {
       "detected": "{{lang}} - Imegunduliwa",
       "detect": "Tambua lugha",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Nakili Tafsiri"
       }
-    }
+    },
+    "logo": "Mfasiri"
   },
   "landing": {
     "try": "Tafsiri sasa",

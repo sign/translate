@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Gebarentolk",
     "language-selector": {
       "detected": "{{lang}} - Gedetecteerd",
       "detect": "Taal herkennen",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopieer vertaling"
       }
-    }
+    },
+    "logo": "Tolk"
   },
   "landing": {
     "try": "Nu vertalen",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign 翻譯",
+    "title": "手語翻譯",
     "language-selector": {
       "detected": "{{lang}} - 偵測到",
       "detect": "偵測語言",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "複製翻譯"
       }
-    }
+    },
+    "logo": "翻譯"
   },
   "landing": {
     "try": "立即翻譯",

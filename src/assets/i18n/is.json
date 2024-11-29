@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Tákn Túlkur",
     "language-selector": {
       "detected": "{{lang}} - Greinist",
       "detect": "Greina tungumál",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Afrita þýðing"
       }
-    }
+    },
+    "logo": "Túlkur"
   },
   "landing": {
     "try": "Þýða núna",

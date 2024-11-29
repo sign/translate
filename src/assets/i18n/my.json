@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "သင်္ကေတဘာသာပြန်သူ",
     "language-selector": {
       "detected": "{{lang}} - တွေ့ရှိသည်။",
       "detect": "ဘာသာစကားကိုဖော်ထုတ်ရန်",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ကူးယူဘာသာပြန်ခြင်း။"
       }
-    }
+    },
+    "logo": "ဘာသာပြန်"
   },
   "landing": {
     "try": "ယခု ဘာသာပြန်ရန်",

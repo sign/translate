@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "I-Sign Translate",
+    "title": "Umhumushi Wezimpawu",
     "language-selector": {
       "detected": "{{lang}} - Kutholiwe",
       "detect": "Hlonza ulimi",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopisha Ukuhumusha"
       }
-    }
+    },
+    "logo": "Umhumushi"
   },
   "landing": {
     "try": "Humusha manje",

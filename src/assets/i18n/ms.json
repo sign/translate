@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Terjemah",
+    "title": "Penterjemah Isyarat",
     "language-selector": {
       "detected": "{{lang}} - Dikesan",
       "detect": "Kesan bahasa",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Salin Terjemahan"
       }
-    }
+    },
+    "logo": "Penterjemah"
   },
   "landing": {
     "try": "Terjemah sekarang",

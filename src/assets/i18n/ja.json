@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign 翻訳",
+    "title": "手話翻訳",
     "language-selector": {
       "detected": "{{lang}} - 検出されました",
       "detect": "言語を検出する",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "翻訳をコピーする"
       }
-    }
+    },
+    "logo": "翻訳"
   },
   "landing": {
     "try": "いますぐ翻訳しましょう",

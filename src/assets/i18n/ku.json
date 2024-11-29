@@ -10,7 +10,7 @@
     "shift": "Üst Karakter"
   },
   "translate": {
-    "title": "Sign Çeviri",
+    "title": "Wergêrtina Nîşan",
     "language-selector": {
       "detected": "{{lang}} - Hat dîtin",
       "detect": "Dili algıla",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Wergerê kopî bikin"
       }
-    }
+    },
+    "logo": "Wergêrtin"
   },
   "landing": {
     "try": "Niha wergerîne",

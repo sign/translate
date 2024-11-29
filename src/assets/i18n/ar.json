@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "ترجمة Sign",
+    "title": "مترجم الإشارات",
     "language-selector": {
       "detected": "{{lang}} - تم الكشف عنه",
       "detect": "التعرّف التلقائي على اللغة",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "نسخ الترجمة"
       }
-    }
+    },
+    "logo": "مترجم"
   },
   "landing": {
     "try": "الترجمة الآن",

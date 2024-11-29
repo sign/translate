@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Aistritheoir Comharthaí",
     "language-selector": {
       "detected": "{{lang}} - Braitheadh",
       "detect": "Aimsigh teanga",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Cóipeáil Aistriúchán"
       }
-    }
+    },
+    "logo": "Aistritheoir"
   },
   "landing": {
     "try": "Aistrigh anois",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Shandura mutauro uchishandisa Sign",
+    "title": "Mushanduri Wemasaini",
     "language-selector": {
       "detected": "{{lang}} - Zvaonekwa",
       "detect": "Ziva zita remutauro",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copy Translation"
       }
-    }
+    },
+    "logo": "Mushanduri"
   },
   "landing": {
     "try": "Shandura izvezvi",

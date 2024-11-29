@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Белгі Аудармашы",
     "language-selector": {
       "detected": "{{lang}} - анықталды",
       "detect": "Тілді анықтау",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Аударманы көшіру"
       }
-    }
+    },
+    "logo": "Аудармашы"
   },
   "landing": {
     "try": "Қазір аудару",

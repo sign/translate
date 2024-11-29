@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "চিহ্ন অনুবাদ",
     "language-selector": {
       "detected": "{{lang}} - সনাক্ত করা হয়েছে৷",
       "detect": "ভাষা শনাক্ত করুন",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "অনুলিপি অনুবাদ"
       }
-    }
+    },
+    "logo": "অনুবাদ"
   },
   "landing": {
     "try": "এখনই অনুবাদ করুন",

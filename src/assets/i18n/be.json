@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Перакладчык Sign",
+    "title": "Перакладчык жэстаў",
     "language-selector": {
       "detected": "{{lang}} - Выяўлена",
       "detect": "Выявіць мову",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Капіяваць пераклад"
       }
-    }
+    },
+    "logo": "Перакладчык"
   },
   "landing": {
     "try": "Перакласці зараз",

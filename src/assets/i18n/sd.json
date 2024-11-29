@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign ترجمو",
+    "title": "نشاني ترجمو",
     "language-selector": {
       "detected": "{{lang}} - معلوم ٿيو",
       "detect": "ٻولي کوجيو",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "نقل ڪريو ترجمو"
       }
-    }
+    },
+    "logo": "ترجمو"
   },
   "landing": {
     "try": "ھينئر ترجمو ڪريو",

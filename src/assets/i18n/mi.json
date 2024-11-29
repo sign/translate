@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Whakamāori Sign",
+    "title": "Kaiwhakamaori Tohu",
     "language-selector": {
       "detected": "{{lang}} - Kua kitea",
       "detect": "tautuhi reo",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Tārua Whakamāoritanga"
       }
-    }
+    },
+    "logo": "Kaiwhakamaori"
   },
   "landing": {
     "try": "Whakamāori ināianei",

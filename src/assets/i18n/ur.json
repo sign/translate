@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign ترجمہ",
+    "title": "اشارے مترجم",
     "language-selector": {
       "detected": "{{lang}} - پتہ چلا",
       "detect": "زبان کی شناخت کریں",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "ترجمہ کاپی کریں۔"
       }
-    }
+    },
+    "logo": "مترجم"
   },
   "landing": {
     "try": "ابھی ترجمہ کریں",

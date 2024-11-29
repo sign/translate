@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Переводчик",
+    "title": "Belgileri Tercüme ediji",
     "language-selector": {
       "detected": "{{lang}} - Tapyldy",
       "detect": "Определить язык",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Terjimäni göçüriň"
       }
-    }
+    },
+    "logo": "Tercüme ediji"
   },
   "landing": {
     "try": "Häzir terjime et",

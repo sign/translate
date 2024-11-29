@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Terjemahan",
+    "title": "Penerjemah Isyarat",
     "language-selector": {
       "detected": "{{lang}} - Terdeteksi",
       "detect": "Deteksi bahasa",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Salin Terjemahan"
       }
-    }
+    },
+    "logo": "Penerjemah"
   },
   "landing": {
     "try": "Terjemahkan sekarang",

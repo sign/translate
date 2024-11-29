@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Traduttur tas-Sinjali",
     "language-selector": {
       "detected": "{{lang}} - Individwat",
       "detect": "Induna bil-lingwa",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopja tat-Traduzzjoni"
       }
-    }
+    },
+    "logo": "Traduttur"
   },
   "landing": {
     "try": "Ittraduċi issa",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Onye Mgbasa Ọkpụkpọ",
     "language-selector": {
       "detected": "{{lang}} - Achọpụtara",
       "detect": "Chọpụta asụsụ",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Detuo ntụgharị asụsụ"
       }
-    }
+    },
+    "logo": "Mgbasa"
   },
   "landing": {
     "try": "Tụgharịa asụsụ ugbu a",

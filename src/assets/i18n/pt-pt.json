@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Tradutor",
+    "title": "Tradutor de Sinais",
     "language-selector": {
       "detected": "{{lang}} - Detectado",
       "detect": "Detetar idioma",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copiar Tradução"
       }
-    }
+    },
+    "logo": "Tradutor"
   },
   "landing": {
     "try": "Traduzir agora",

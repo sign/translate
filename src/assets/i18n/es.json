@@ -10,7 +10,7 @@
     "shift": "Mayús"
   },
   "translate": {
-    "title": "Traductor de Sign",
+    "title": "Traductor de Signos",
     "language-selector": {
       "detected": "{{lang}} - Detectado",
       "detect": "Detectar idioma",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copiar traducción"
       }
-    }
+    },
+    "logo": "Traductor"
   },
   "landing": {
     "try": "Traducir ahora",

@@ -10,7 +10,7 @@
     "shift": "Maius"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Zeinuen Itzultzailea",
     "language-selector": {
       "detected": "{{lang}} - Detektatua",
       "detect": "Hauteman hizkuntza",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopiatu Itzulpena"
       }
-    }
+    },
+    "logo": "Itzultzailea"
   },
   "landing": {
     "try": "Itzuli",

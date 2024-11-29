@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign 翻译",
+    "title": "手语翻译",
     "language-selector": {
       "detected": "{{lang}} - 检测到",
       "detect": "检测语言",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "复制翻译"
       }
-    }
+    },
+    "logo": "翻译"
   },
   "landing": {
     "try": "立即翻译",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Oversæt",
+    "title": "Tegn Oversætter",
     "language-selector": {
       "detected": "{{lang}} - fundet",
       "detect": "Registrer sprog",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopi oversættelse"
       }
-    }
+    },
+    "logo": "Oversætter"
   },
   "landing": {
     "try": "Oversæt nu",

@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Copy Translation"
       }
-    }
+    },
+    "logo": "Translate"
   },
   "landing": {
     "try": "Translate now",

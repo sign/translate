@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign පරිවර්තනය",
+    "title": "සංඥා පරිවර්තකය",
     "language-selector": {
       "detected": "{{lang}} - අනාවරණය විය",
       "detect": "භාෂාව අනාවරණය කර ගන්න",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "පරිවර්තනය පිටපත් කරන්න"
       }
-    }
+    },
+    "logo": "පරිවර්තකය"
   },
   "landing": {
     "try": "දැන් පරිවර්තනය කරන්න",

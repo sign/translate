@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "Fassarar Alamar",
     "language-selector": {
       "detected": "{{lang}} - An gano",
       "detect": "Tsinkayo harshe",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kwafi Fassara"
       }
-    }
+    },
+    "logo": "Fassarar"
   },
   "landing": {
     "try": "Fassara yanzu",

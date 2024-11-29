@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "చిహ్న అనువాదకుడు",
     "language-selector": {
       "detected": "{{lang}} - గుర్తించబడింది",
       "detect": "భాషను కనుగొనండి",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "అనువాదం కాపీ"
       }
-    }
+    },
+    "logo": "అనువాదకుడు"
   },
   "landing": {
     "try": "ఇప్పుడే అనువదించండి",

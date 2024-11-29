@@ -31,6 +31,7 @@ import {LandingFooterComponent} from './landing-footer/landing-footer.component'
 import {ReactiveFormsModule} from '@angular/forms';
 import {register} from 'swiper/element/bundle';
 import {SignedToSpokenModule} from '../translate/signed-to-spoken/signed-to-spoken.module';
+import {LogoComponent} from '../../components/logo/logo.component';
 
 register();
 
@@ -56,6 +57,7 @@ register();
     AboutApiComponent,
     TermsComponent,
     PrivacyComponent,
+    LogoComponent,
   ],
   imports: [
     CommonModule,

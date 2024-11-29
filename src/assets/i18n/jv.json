@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Terjemahan",
+    "title": "Penerjemah Tanda",
     "language-selector": {
       "detected": "{{lang}} - Dideteksi",
       "detect": "Deteksi basa",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Salin Terjemahan"
       }
-    }
+    },
+    "logo": "Penerjemah"
   },
   "landing": {
     "try": "Terjemahake saiki",

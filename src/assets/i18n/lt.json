@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "„Sign“ vertėjas",
+    "title": "Ženklų vertėjas",
     "language-selector": {
       "detected": "{{lang}} – aptikta",
       "detect": "Nustatyti kalbą",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopijuoti vertimą"
       }
-    }
+    },
+    "logo": "Vertėjas"
   },
   "landing": {
     "try": "Versti dabar",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Translate",
+    "title": "சின்ன மொழிபெயர்ப்பு",
     "language-selector": {
       "detected": "{{lang}} - கண்டறியப்பட்டது",
       "detect": "மொழியைக் கண்டறி",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "மொழிபெயர்ப்பு நகல்"
       }
-    }
+    },
+    "logo": "மொழிபெயர்ப்பு"
   },
   "landing": {
     "try": "இப்போதே மொழிபெயருங்கள்",

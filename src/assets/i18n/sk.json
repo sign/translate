@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Prekladač Sign",
+    "title": "Prekladač znakových jazykov",
     "language-selector": {
       "detected": "{{lang}} – Zistené",
       "detect": "rozpoznať jazyk",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopírovať preklad"
       }
-    }
+    },
+    "logo": "Prekladač"
   },
   "landing": {
     "try": "Preložiť teraz",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Liphetolelo tsa Sign",
+    "title": "Mohokahanyi oa Lipontšo",
     "language-selector": {
       "detected": "{{lang}} - E fumanwe",
       "detect": "Fumana puo",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Kopitsa Phetolelo"
       }
-    }
+    },
+    "logo": "Mohokahanyi"
   },
   "landing": {
     "try": "Fetolela hona jwale",

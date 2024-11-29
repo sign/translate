@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Преводач",
+    "title": "Жестов преводач",
     "language-selector": {
       "detected": "{{lang}} – Открит",
       "detect": "Разпознаване на езика",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Копиране на превода"
       }
-    }
+    },
+    "logo": "Преводач"
   },
   "landing": {
     "try": "Превод сега",

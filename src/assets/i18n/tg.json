@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Тарҷумон",
+    "title": "Тарҷумони аломатҳо",
     "language-selector": {
       "detected": "{{lang}} - Муайян карда шуд",
       "detect": "Муайян кардани забон",
@@ -51,7 +51,8 @@
       "actions": {
         "copy": "Тарҷумаи нусхабардорӣ"
       }
-    }
+    },
+    "logo": "Тарҷумон"
   },
   "landing": {
     "try": "Ҳоло тарҷума кардан",
