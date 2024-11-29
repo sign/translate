@@ -22,6 +22,7 @@ import {TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {arrowForward} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
+import {LogoComponent} from '../../components/logo/logo.component';
 
 @Component({
   selector: 'app-landing',
@@ -47,6 +48,7 @@ import {LandingFooterComponent} from './landing-footer/landing-footer.component'
     IonIcon,
     RouterOutlet,
     LandingFooterComponent,
+    LogoComponent,
   ],
 })
 export class LandingComponent {

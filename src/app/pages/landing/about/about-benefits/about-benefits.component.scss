@@ -18,13 +18,14 @@ p.subtitle {
 }
 
 ion-card {
-  @media #{breakpoints.$breakpoint-gt-sm} {
-    display: flex;
-  }
   align-items: center;
   height: 550px;
   border-radius: 14px;
   margin: 8px;
+
+  @media #{breakpoints.$breakpoint-gt-sm} {
+    display: flex;
+  }
 }
 
 .horizontal-scroll {
@@ -49,12 +50,12 @@ ion-card {
     width: 100%;
     height: 120px;
 
+    background-color: var(--ion-color-light);
+    color: var(--ion-color-light-contrast);
+
     > * {
       max-width: 120px;
     }
-
-    background-color: var(--ion-color-light);
-    color: var(--ion-color-light-contrast);
 
     &.selected {
       background-color: white;

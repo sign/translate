@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, viewChild} from '@angular/core';
-import {Swiper} from 'swiper/types';
+import type {Swiper} from 'swiper/types';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -8,7 +8,6 @@ import {IonCard, IonCardContent, IonCardTitle, IonIcon} from '@ionic/angular/sta
 import {LazyMapComponent} from '../lazy-map/lazy-map.component';
 import {addIcons} from 'ionicons';
 import {bookOutline, cloudOfflineOutline, languageOutline, optionsOutline, swapHorizontalOutline} from 'ionicons/icons';
-import {register as registerSwiper} from 'swiper/element/bundle';
 
 @Component({
   selector: 'app-about-benefits',
@@ -18,6 +17,8 @@ import {register as registerSwiper} from 'swiper/element/bundle';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AboutBenefitsComponent extends BaseComponent implements AfterViewInit, OnInit {
+  static isSwiperDefined = false;
+
   private transloco = inject(TranslocoService);
   private domSanitizer = inject(DomSanitizer);
 
@@ -38,16 +39,20 @@ export class AboutBenefitsComponent extends BaseComponent implements AfterViewIn
   constructor() {
     super();
     addIcons({swapHorizontalOutline, languageOutline, optionsOutline, bookOutline, cloudOfflineOutline});
-    registerSwiper();
+
+    // Define the swiper custom element
+    if (!AboutBenefitsComponent.isSwiperDefined) {
+      import(/* webpackChunkName: "swiper" */ 'swiper/element/bundle').then(({register}) => register());
+      AboutBenefitsComponent.isSwiperDefined = true;
+    }
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.transloco.langChanges$
       .pipe(
         tap(lang => {
-          this.iOSScreenshot = this.domSanitizer.bypassSecurityTrustResourceUrl(
-            `assets/promotional/about/iphone/${lang}_framed.webp`
-          );
+          const framePath = `assets/promotional/about/iphone/${lang}_framed.webp`;
+          this.iOSScreenshot = this.domSanitizer.bypassSecurityTrustResourceUrl(framePath);
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -61,8 +66,14 @@ export class AboutBenefitsComponent extends BaseComponent implements AfterViewIn
 
   ngAfterViewInit() {
     const swiperEl = this.swiper().nativeElement;
-    swiperEl.swiper.on('activeIndexChange', () => {
-      this.activeSlide = swiperEl.swiper.activeIndex;
-    });
+    if ('document' in globalThis) {
+      if (swiperEl.swiper) {
+        swiperEl.swiper.on('activeIndexChange', () => {
+          this.activeSlide = swiperEl.swiper.activeIndex;
+        });
+      } else {
+        setTimeout(() => this.ngAfterViewInit(), 10);
+      }
+    }
   }
 }

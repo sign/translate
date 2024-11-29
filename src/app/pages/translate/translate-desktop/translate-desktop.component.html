@@ -8,7 +8,9 @@
         {{ 'landing.about.title' | transloco }}
       </ion-button>
     </ion-buttons>
-    <ion-title>{{ 'translate.title' | transloco }}<sup id="version" matTooltip="Alpha">α</sup></ion-title>
+    <ion-title>
+      <app-logo [text]="'translate.logo' | transloco" />
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
