@@ -11,10 +11,10 @@ export class AboutTeamComponent {
       name: 'Timothy Rabozzi',
       avatar: 'assets/promotional/about/team/timothy-rabozzi.jpg',
       title: 'CEO',
-      bio: 'Background in LegalTech, campaigning, and business analysis. Holds a Master of Law with a focus on public law and innovation from the University of Bern.',
+      bio: 'Experienced in leading innovation in LegalTech, politics and regulated industries with a Master of Law from the University of Bern.',
     },
     {
-      name: 'Amit Moryossef',
+      name: 'Dr. Amit Moryossef',
       avatar: 'assets/promotional/about/team/amit-moryossef.jpg',
       title: 'CTO',
       bio: 'Experienced CTO. Award-winning expert in sign language technology. Ex-Google in the sign language team, Ph.D. in Computer Science.',
