@@ -1,4 +1,4 @@
-import {Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, inject, Input, OnChanges, OnInit, SimpleChanges, output} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
 import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
@@ -33,7 +33,7 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit, 
 
   @Input() language: string | null;
 
-  @Output() languageChange = new EventEmitter<string>();
+  readonly languageChange = output<string>();
 
   topLanguages: string[];
   selectedIndex = 0;

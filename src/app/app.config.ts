@@ -30,7 +30,6 @@ export const ngxsConfig: NgxsModuleOptions = {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({eventCoalescing: true}),
     provideClientHydration(withEventReplay()),
 
     // Router

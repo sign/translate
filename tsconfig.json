@@ -29,6 +29,7 @@
     "esModuleInterop": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "fullTemplateTypeCheck": true
+    "fullTemplateTypeCheck": true,
+    "strictStandalone": true
   }
 }

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges, output} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
 import {MatTooltip, TooltipPosition} from '@angular/material/tooltip';
@@ -15,7 +15,7 @@ import {micOutline, stopCircleOutline} from 'ionicons/icons';
 })
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
   @Input() lang = 'en';
-  @Output() changeText: EventEmitter<string> = new EventEmitter<string>();
+  readonly changeText = output<string>();
   @Input() matTooltipPosition: TooltipPosition = 'above';
 
   SpeechRecognition = globalThis.SpeechRecognition || globalThis.webkitSpeechRecognition;
