@@ -3,7 +3,7 @@ import {AnimationService} from './animation.service';
 import {EstimatedPose, PoseState} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
-import {provideStates, provideStore} from '@ngxs/store';
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../settings/settings.state';
 
 describe('AnimationService', () => {

@@ -8,11 +8,10 @@ import {
   SetSpokenLanguageText,
 } from '../../../modules/translate/translate.actions';
 import {Observable} from 'rxjs';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {SignWritingComponent} from '../signwriting/sign-writing.component';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-speech.component';
-import {VideoComponent} from '../../../components/video/video.component';
 import {UploadComponent} from './upload/upload.component';
 import {addIcons} from 'ionicons';
 import {copyOutline} from 'ionicons/icons';
@@ -91,7 +90,7 @@ const FAKE_WORDS = [
   templateUrl: './signed-to-spoken.component.html',
   styleUrls: ['./signed-to-spoken.component.scss'],
   imports: [
-    MatTooltip,
+    MatTooltipModule,
     SignWritingComponent,
     IonButton,
     TextToSpeechComponent,

@@ -15,14 +15,14 @@ import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
 import {IonProgressBar, IonSpinner} from '@ionic/angular/standalone';
 import {AsyncPipe} from '@angular/common';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {TranslocoDirective} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-human-pose-viewer',
   templateUrl: './human-pose-viewer.component.html',
   styleUrls: ['./human-pose-viewer.component.scss'],
-  imports: [IonProgressBar, IonSpinner, AsyncPipe, MatTooltip, TranslocoDirective],
+  imports: [IonProgressBar, IonSpinner, AsyncPipe, MatTooltipModule, TranslocoDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HumanPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit, OnDestroy {

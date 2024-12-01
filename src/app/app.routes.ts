@@ -5,10 +5,6 @@ import {TranslateState} from './modules/translate/translate.state';
 import {LanguageDetectionService} from './modules/translate/language-detection/language-detection.service';
 import {MediaPipeLanguageDetectionService} from './modules/translate/language-detection/mediapipe.service';
 import {MainComponent} from './pages/main.component';
-import {SignWritingState} from './modules/sign-writing/sign-writing.state';
-import {PoseState} from './modules/pose/pose.state';
-import {VideoState} from './core/modules/ngxs/store/video/video.state';
-import {DetectorState} from './modules/detector/detector.state';
 
 export const routes: Routes = [
   {

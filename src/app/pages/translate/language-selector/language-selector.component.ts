@@ -1,4 +1,4 @@
-import {Component, inject, Input, OnChanges, OnInit, SimpleChanges, output} from '@angular/core';
+import {Component, inject, Input, OnChanges, OnInit, output, SimpleChanges} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
 import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';

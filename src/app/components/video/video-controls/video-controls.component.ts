@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {BaseSettingsComponent} from '../../../modules/settings/settings.component';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {AsyncPipe} from '@angular/common';
 import {IonFab, IonFabButton, IonIcon} from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
@@ -11,7 +11,7 @@ import {TranslocoDirective} from '@ngneat/transloco';
   selector: 'app-video-controls',
   templateUrl: './video-controls.component.html',
   styleUrls: ['./video-controls.component.scss'],
-  imports: [MatTooltip, AsyncPipe, IonFab, IonFabButton, IonIcon, TranslocoDirective],
+  imports: [MatTooltipModule, AsyncPipe, IonFab, IonFabButton, IonIcon, TranslocoDirective],
 })
 export class VideoControlsComponent extends BaseSettingsComponent {
   constructor() {

@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
 import {TranslocoDirective} from '@ngneat/transloco';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {AsyncPipe} from '@angular/common';
 import {MatFabButton} from '@angular/material/button';
 import {IonIcon} from '@ionic/angular/standalone';
@@ -12,7 +12,7 @@ import {diceOutline, images} from 'ionicons/icons';
   selector: 'app-settings-appearance-images',
   templateUrl: './settings-appearance-images.component.html',
   styleUrls: ['./settings-appearance-images.component.scss'],
-  imports: [TranslocoDirective, MatTooltip, AsyncPipe, MatFabButton, IonIcon],
+  imports: [TranslocoDirective, MatTooltipModule, AsyncPipe, MatFabButton, IonIcon],
 })
 export class SettingsAppearanceImagesComponent extends BaseSettingsComponent {
   @Input() scale = 1;

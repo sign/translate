@@ -19,7 +19,7 @@ import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-view
 import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
 import {TranslocoPipe} from '@ngneat/transloco';
 import {AsyncPipe} from '@angular/common';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {addIcons} from 'ionicons';
 import {downloadOutline, shareOutline} from 'ionicons/icons';
 
@@ -36,7 +36,7 @@ import {downloadOutline, shareOutline} from 'ionicons/icons';
     HumanPoseViewerComponent,
     TranslocoPipe,
     AsyncPipe,
-    MatTooltip,
+    MatTooltipModule,
     IonIcon,
   ],
 })

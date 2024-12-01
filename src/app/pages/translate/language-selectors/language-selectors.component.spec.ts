@@ -10,6 +10,7 @@ import {provideHttpClient} from '@angular/common/http';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 
 describe('LanguageSelectorsComponent', () => {
   let component: LanguageSelectorsComponent;
@@ -21,6 +22,7 @@ describe('LanguageSelectorsComponent', () => {
       providers: [
         provideHttpClient(),
         provideHttpClientTesting(),
+        provideIonicAngular(),
         provideStore([SettingsState, TranslateState], ngxsConfig),
       ],
     });

@@ -1,4 +1,4 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {VideoControlsComponent} from './video-controls.component';
@@ -12,12 +12,12 @@ describe('VideoControlsComponent', () => {
   let component: VideoControlsComponent;
   let fixture: ComponentFixture<VideoControlsComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       imports: [AppTranslocoTestingModule, VideoControlsComponent],
       providers: [provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(VideoControlsComponent);

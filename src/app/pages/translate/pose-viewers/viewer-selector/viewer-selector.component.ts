@@ -5,7 +5,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 import {IonFab, IonFabButton, IonFabList, IonIcon} from '@ionic/angular/standalone';
 import {accessibility, gitCommit, logoAppleAr} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {TranslocoDirective} from '@ngneat/transloco';
 
 export interface MatFabMenu {
@@ -18,7 +18,7 @@ export interface MatFabMenu {
   selector: 'app-viewer-selector',
   templateUrl: './viewer-selector.component.html',
   styleUrls: ['./viewer-selector.component.scss'],
-  imports: [IonFab, IonFabList, IonFabButton, IonIcon, MatTooltip, TranslocoDirective],
+  imports: [IonFab, IonFabList, IonFabButton, IonIcon, MatTooltipModule, TranslocoDirective],
 })
 export class ViewerSelectorComponent extends BaseSettingsComponent implements OnInit {
   poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);

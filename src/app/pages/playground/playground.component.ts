@@ -6,7 +6,6 @@ import {SetVideo, StartCamera} from '../../core/modules/ngxs/store/video/video.a
 import {TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {Observable} from 'rxjs';
 import {IonContent, IonHeader, IonIcon, IonMenu, IonSplitPane, IonTitle, IonToolbar} from '@ionic/angular/standalone';
-import {VideoComponent} from '../../components/video/video.component';
 import {SettingsComponent} from '../../modules/settings/settings/settings.component';
 import {earOutline} from 'ionicons/icons';
 import {addIcons} from 'ionicons';

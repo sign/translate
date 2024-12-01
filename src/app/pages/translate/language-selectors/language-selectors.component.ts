@@ -14,14 +14,14 @@ import {swapHorizontal} from 'ionicons/icons';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
 import {AsyncPipe} from '@angular/common';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {TranslocoPipe} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-language-selectors',
   templateUrl: './language-selectors.component.html',
   styleUrls: ['./language-selectors.component.scss'],
-  imports: [IonButton, IonIcon, LanguageSelectorComponent, AsyncPipe, MatTooltip, TranslocoPipe],
+  imports: [IonButton, IonIcon, LanguageSelectorComponent, AsyncPipe, MatTooltipModule, TranslocoPipe],
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {
   private store = inject(Store);

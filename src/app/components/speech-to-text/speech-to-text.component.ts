@@ -1,7 +1,7 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges, output} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, output, SimpleChanges} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
-import {MatTooltip, TooltipPosition} from '@angular/material/tooltip';
+import {MatTooltipModule, TooltipPosition} from '@angular/material/tooltip';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {TranslocoDirective} from '@ngneat/transloco';
 import {addIcons} from 'ionicons';
@@ -11,7 +11,7 @@ import {micOutline, stopCircleOutline} from 'ionicons/icons';
   selector: 'app-speech-to-text',
   templateUrl: './speech-to-text.component.html',
   styleUrls: ['./speech-to-text.component.css'],
-  imports: [IonButton, IonIcon, MatTooltip, TranslocoDirective],
+  imports: [IonButton, IonIcon, MatTooltipModule, TranslocoDirective],
 })
 export class SpeechToTextComponent extends BaseComponent implements OnInit, OnChanges {
   @Input() lang = 'en';

@@ -17,7 +17,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 import {BenchmarkItemComponent} from './benchmark-item/benchmark-item.component';
-import {MatTooltip} from '@angular/material/tooltip';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
 import {KeyValuePipe} from '@angular/common';
 import {addIcons} from 'ionicons';
@@ -38,7 +38,7 @@ import {analytics} from 'ionicons/icons';
     IonCardTitle,
     IonCardContent,
     BenchmarkItemComponent,
-    MatTooltip,
+    MatTooltipModule,
     TranslocoPipe,
     TranslocoDirective,
     KeyValuePipe,

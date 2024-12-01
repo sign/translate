@@ -14,7 +14,6 @@ import {SettingsStateModel} from '../../modules/settings/settings.state';
 import {SignWritingService} from '../../modules/sign-writing/sign-writing.service';
 import {IonIcon} from '@ionic/angular/standalone';
 import {VideoControlsComponent} from './video-controls/video-controls.component';
-import {AnimationComponent} from '../animation/animation.component';
 import {addIcons} from 'ionicons';
 import {playCircleOutline} from 'ionicons/icons';
 import {AsyncPipe} from '@angular/common';

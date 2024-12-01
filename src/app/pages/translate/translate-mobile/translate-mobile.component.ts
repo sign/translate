@@ -4,7 +4,6 @@ import {IonContent, IonFooter, IonHeader, IonToolbar} from '@ionic/angular/stand
 import {SpokenLanguageInputComponent} from '../spoken-to-signed/spoken-language-input/spoken-language-input.component';
 import {SignedLanguageOutputComponent} from '../spoken-to-signed/signed-language-output/signed-language-output.component';
 import {SignedLanguageInputComponent} from '../signed-to-spoken/signed-language-input/signed-language-input.component';
-import {VideoComponent} from '../../../components/video/video.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
 import {VideoModule} from '../../../components/video/video.module';
 
