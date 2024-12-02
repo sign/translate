@@ -13,10 +13,13 @@ export default withMermaid(
         provider: 'local',
       },
       editLink: {
-        pattern: 'https://github.com/sign/translate/tree/main/docs/:path',
+        pattern: 'https://github.com/sign/translate/tree/master/docs/:path',
       },
-      logo: '../assets/brand/logo.svg',
-
+      logo: {
+        light: '/public/logo-light.svg',
+        dark: '/public/logo-dark.svg',
+        alt: 'sign.mt Logo',
+      },
       sidebar: [
         {
           text: 'Fact Sheets',
