@@ -9,6 +9,7 @@ import {AboutComponent} from './about/about.component';
 import {IonicModule} from '@ionic/angular';
 import {I18NLanguageSelectorComponent} from '../../components/i18n-language-selector/i18n-language-selector.component';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
+import {LogoComponent} from '../../components/logo/logo.component';
 
 describe('LandingComponent', () => {
   let component: LandingComponent;
@@ -16,7 +17,7 @@ describe('LandingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LandingComponent, LandingFooterComponent, I18NLanguageSelectorComponent],
+      declarations: [LandingComponent, LandingFooterComponent, I18NLanguageSelectorComponent, LogoComponent],
       imports: [
         AppTranslocoTestingModule,
         IonicModule.forRoot(),
