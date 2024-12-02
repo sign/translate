@@ -4,6 +4,7 @@ import {AboutApiComponent} from './about-api.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {AppNgxsModule} from '../../../../core/modules/ngxs/ngxs.module';
+import {IonicModule} from '@ionic/angular';
 
 describe('AboutApiComponent', () => {
   let component: AboutApiComponent;
@@ -12,7 +13,7 @@ describe('AboutApiComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AboutApiComponent],
-      imports: [AppTranslocoTestingModule, AppNgxsModule],
+      imports: [AppTranslocoTestingModule, IonicModule, AppNgxsModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AboutApiComponent);
