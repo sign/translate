@@ -58,6 +58,10 @@ jobs:
       - name: Generate Licenses File
         run: bun run generate:licenses
 
+      - name: Install Docs Dependencies
+        working-directory: docs
+        run: bun install
+
       - name: Generate Docs
         run: bun run generate:docs
 
