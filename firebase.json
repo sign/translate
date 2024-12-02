@@ -140,7 +140,7 @@
         "destination": ".well-known/gpg.asc"
       },
       {
-        "source": "!{/assets/**,/api/**,/.well-known/**}",
+        "source": "!{/assets/**,/api/**,/.well-known/**,/docs/**}",
         "destination": "/index.html"
       }
     ]

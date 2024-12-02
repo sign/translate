@@ -27,7 +27,8 @@
     "generate:terms": "marked -i LICENSE.md -o src/app/pages/landing/terms/terms.component.html",
     "generate:sitemap": "node tools/sitemap-generator.js",
     "generate:licenses": "npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions",
-    "build:full": "npm run generate:terms && npm run prerender && npm run generate:sitemap && npm run generate:licenses"
+    "generate:docs": "cd docs && npm run docs:build && mv .vitepress/dist ../dist/sign-translate/browser/docs",
+    "build:full": "npm run generate:terms && npm run prerender && npm run generate:sitemap && npm run generate:licenses && npm run generate:docs"
   },
   "engines": {
     "node": ">=18",
