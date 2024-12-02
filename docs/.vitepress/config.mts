@@ -16,8 +16,8 @@ export default withMermaid(
         pattern: 'https://github.com/sign/translate/tree/master/docs/:path',
       },
       logo: {
-        light: '/public/logo-light.svg',
-        dark: '/public/logo-dark.svg',
+        light: '/logo-light.svg',
+        dark: '/logo-dark.svg',
         alt: 'sign.mt Logo',
       },
       sidebar: [
