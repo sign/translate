@@ -33,7 +33,7 @@
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.73.1",
+    "openai": "4.75.0",
     "request-ip": "3.3.0"
   },
   "devDependencies": {
@@ -43,8 +43,8 @@
     "@types/jest": "29.5.14",
     "@types/node-fetch": "2.6.12",
     "@types/request-ip": "0.0.41",
-    "@typescript-eslint/eslint-plugin": "8.16.0",
-    "@typescript-eslint/parser": "8.16.0",
+    "@typescript-eslint/eslint-plugin": "8.17.0",
+    "@typescript-eslint/parser": "8.17.0",
     "eslint": "8.57.0",
     "firebase-functions-test": "3.3.0",
     "firebase-tools": "13.27.0",
