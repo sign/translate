@@ -10,7 +10,10 @@ This section explores the global funnel from hearing loss to deafness and its si
 1. **1.5 billion people** experience hearing loss globally.
 2. **430 million people** require rehabilitation for disabling hearing loss.
 3. **70 million people** are considered deaf.
-4. **Unclear** how many people use sign languages.
+4. **8[^ecml]-24[^derivation] million people** natively use sign languages.
+
+[^ecml]: European Centre for Modern Languages. 2024. [Facts about sign language](https://edl.ecml.at/Facts/FAQsonsignlanguage/tabid/2741/language/en-GB/Default.aspx).
+[^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
 
 ```mermaid
 sankey-beta
@@ -52,3 +55,8 @@ This community spans over **200 sign languages**, underlining the linguistic div
 From our research, it is unclear how many people use sign languages.
 
 [^wfd]: World Federation of the Deaf. 2024. [Our Work](https://wfdeaf.org/our-work/).
+
+It is unclear how many people use sign languages.
+The European Centre for Modern Languages[^ecml] estimates that on average,
+deaf sign language users make up about 0.1% of the whole population in any given country, amounting to 8 million people worldwide.
+According to Ethnologue (via Derivation[^derivation]), there are 24 million native sign language users worldwide.
