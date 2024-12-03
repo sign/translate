@@ -8,6 +8,10 @@ export default withMermaid(
     title: 'Documentation',
     description: 'sign.mt Documentation and Blog',
     base: '/docs/',
+    lastUpdated: true,
+    sitemap: {
+      hostname: 'https://sign.mt/docs/',
+    },
     themeConfig: {
       search: {
         provider: 'local',
@@ -20,29 +24,60 @@ export default withMermaid(
         dark: '/logo-dark.svg',
         alt: 'sign.mt Logo',
       },
-      sidebar: [
-        {
-          text: 'Fact Sheets',
-          items: [
-            {
-              text: 'Numbers',
-              link: '/facts/numbers',
-              items: [
-                {text: 'Hearing Loss', link: '/facts/numbers#hearing-loss'},
-                {text: 'Deafness', link: '/facts/numbers#deafness'},
-              ],
-            },
-            {
-              text: 'Literacy',
-              link: '/facts/literacy',
-              items: [
-                {text: 'Challenges', link: '/facts/literacy#challenges-and-causes'},
-                {text: 'Statistics', link: '/facts/literacy#statistics'},
-              ],
-            },
-          ],
-        },
+      nav: [
+        {text: 'Docs', link: '/docs/introduction/getting-started'},
+        {text: 'Blog', link: '/blog/introduction/our-blog'},
       ],
+      sidebar: {
+        '/blog/': [
+          {
+            text: 'Introduction',
+            items: [
+              {
+                text: 'Our Blog',
+                link: '/blog/introduction/our-blog',
+              },
+            ],
+          },
+        ],
+        '/docs/': [
+          {
+            text: 'Introduction',
+            items: [
+              {
+                text: 'Getting Started',
+                link: '/docs/introduction/getting-started',
+              },
+            ],
+          },
+          {
+            text: 'Fact Sheets',
+            collapsed: false,
+            items: [
+              {
+                text: 'Numbers',
+                link: '/docs/facts/numbers',
+                items: [
+                  {text: 'Hearing Loss', link: '/docs/facts/numbers#hearing-loss'},
+                  {text: 'Deafness', link: '/docs/facts/numbers#deafness'},
+                ],
+              },
+              {
+                text: 'Literacy',
+                link: '/docs/facts/literacy',
+                items: [
+                  {text: 'Challenges', link: '/docs/facts/literacy#challenges-and-causes'},
+                  {text: 'Statistics', link: '/docs/facts/literacy#statistics'},
+                ],
+              },
+              {
+                text: 'Market',
+                link: '/docs/facts/market',
+              },
+            ],
+          },
+        ],
+      },
 
       socialLinks: [
         {icon: 'github', link: 'https://github.com/sign/translate'},

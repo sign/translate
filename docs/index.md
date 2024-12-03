@@ -8,11 +8,11 @@ hero:
   tagline: 'A collection of resources on sign languages, deaf culture, and our technology.'
   actions:
     - theme: brand
-      text: Numbers
-      link: /facts/numbers
+      text: Docs
+      link: /docs/introduction/getting-started
     - theme: alt
-      text: literacy
-      link: /facts/literacy
+      text: Blog
+      link: /blog/introduction/our-blog
 #features:
 #  - title: Feature A
 #    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
