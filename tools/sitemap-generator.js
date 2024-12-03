@@ -39,12 +39,33 @@ for (const url of additionalUrls) {
   sourceData.push({url, lastmod});
 }
 
-// writes sitemaps and index out to the destination you provide.
-simpleSitemapAndIndex({
-  hostname: 'https://sign.mt',
-  destinationDir: `${baseDir}dist/sign-translate/browser/`,
-  sourceData,
-  gzip: false,
-})
+async function main() {
+  const buildDir = `${baseDir}dist/sign-translate/browser/`;
+
+  // writes sitemaps and index out to the destination you provide.
+  await simpleSitemapAndIndex({
+    hostname: 'https://sign.mt',
+    destinationDir: buildDir,
+    sourceData,
+    gzip: false,
+  });
+
+  // Now we add the docs sitemap to the sitemap index
+  const sitemapIndex = `${buildDir}sitemap-index.xml`;
+  // Read the sitemap index, parse the xml, under sitemapindex add a new sitemap to https://sign.mt/docs/sitemap.xml
+  const sitemapIndexContent = String(fs.readFileSync(sitemapIndex, 'utf8'));
+  const tagIndex = sitemapIndexContent.indexOf('</sitemapindex>');
+  const preText = sitemapIndexContent.slice(0, tagIndex);
+  const postText = sitemapIndexContent.slice(tagIndex);
+
+  // Combine and write new sitemap index
+  const newSitemap = `${preText}<sitemap><loc>https://sign.mt/docs/sitemap.xml</loc></sitemap>${postText}`;
+  fs.writeFileSync(sitemapIndex, newSitemap, 'utf8');
+}
+
+main()
   .then(() => process.exit(0))
-  .catch(() => process.exit(1));
+  .catch(error => {
+    console.error(error);
+    process.exit(1);
+  });
