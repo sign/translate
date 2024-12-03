@@ -58,6 +58,13 @@ jobs:
       - name: Generate Licenses File
         run: bun run generate:licenses
 
+      - name: Install Docs Dependencies
+        working-directory: docs
+        run: bun install
+
+      - name: Generate Docs
+        run: bun run generate:docs
+
       - name: Move .well-known to root
         working-directory: dist/sign-translate/browser/
         run: mv assets/.well-known .well-known

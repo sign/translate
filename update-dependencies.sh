@@ -7,6 +7,10 @@ npm install
 # eslint: angular eslint requires eslint < 9.0.0
 # mermaid: mermaid 11.0.2 crashes tests
 
+# Update docs dependencies
+bun x npm-check-updates --cacheClear --cwd docs
+cd docs && bun install && cd ..
+
 # Update server dependencies
 bun x npm-check-updates --cacheClear --cwd functions -u --reject node-fetch,eslint
 cd functions && bun install && cd ..

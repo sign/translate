@@ -1,0 +1,20 @@
+{
+  "name": "@sign-mt/docs",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mermaid": "11.4.1"
+  },
+  "devDependencies": {
+    "markdown-it-footnote": "4.0.0",
+    "vitepress": "1.5.0",
+    "vitepress-plugin-mermaid": "2.0.17"
+  }
+}
