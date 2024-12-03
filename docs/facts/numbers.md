@@ -26,12 +26,24 @@ The **World Health Organization (WHO)** estimates that globally, **1.5 billion p
 Of these, **430 million people** experience disabling hearing loss, requiring rehabilitation to improve quality of life.
 By 2050, this number is projected to grow to **700 million**.
 
-::: info Quote: Relevance
-Unaddressed hearing loss poses an annual global cost of US$ 980 billion.
+::: info Quote: Relevance ([learn more](/facts/market#economic-impact))
+Unaddressed hearing loss poses an annual global cost of US $980 billion.
 This includes health sector costs (excluding the cost of hearing devices), costs of educational support, loss of productivity and societal costs.
 :::
 
 [^who]: World Health Organization. 2021. [Fact Sheet: Deafness and Hearing Loss](https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss).
+
+These impairments are defined per ear, as follows[^who-report]:
+
+| **Grade**                                     | **Hearing Loss (dB)** | **Description**                                                                                                      |
+| --------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **0: No impairment**                          | 0–25 dB               | Normal hearing or no significant hearing difficulty.                                                                 |
+| **1: Slight impairment**                      | 26–40 dB              | Able to hear and repeat words spoken in normal voice at 1 meter; may have difficulty in noisy settings.              |
+| **2: Moderate impairment**                    | 41–60 dB              | Able to hear and repeat words spoken in raised voice at 1 meter; struggles with conversation.                        |
+| **3: Severe impairment**                      | 61–80 dB              | Able to hear some words when shouted directly into the ear; significant communication challenges.                    |
+| **4: Profound impairment including deafness** | >80 dB                | Unable to hear and understand even when shouted directly into the ear; often relies on visual communication methods. |
+
+[^who-report]: World Health Organization. 1991. [Report of the informal working group on prevention of deafness and hearing impairment programme planning](http://www.who.int/iris/handle/10665/58839).
 
 ### Deafness[^wfd]
 
