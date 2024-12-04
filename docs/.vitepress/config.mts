@@ -55,11 +55,11 @@ export default withMermaid(
             collapsed: false,
             items: [
               {
-                text: 'Numbers',
-                link: '/docs/facts/numbers',
+                text: 'Population',
+                link: '/docs/facts/population',
                 items: [
-                  {text: 'Hearing Loss', link: '/docs/facts/numbers#hearing-loss'},
-                  {text: 'Deafness', link: '/docs/facts/numbers#deafness'},
+                  {text: 'Hearing Loss', link: '/docs/facts/population#hearing-loss'},
+                  {text: 'Deafness', link: '/docs/facts/population#deafness'},
                 ],
               },
               {

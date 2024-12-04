@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Numbers
+# Population
 
 Understanding the scale and impact of hearing loss is essential for assistive technologies.
 This section explores the global funnel from hearing loss to deafness and its significance.
@@ -10,7 +10,7 @@ This section explores the global funnel from hearing loss to deafness and its si
 1. **1.5 billion people** experience hearing loss globally.
 2. **430 million people** require rehabilitation for disabling hearing loss.
 3. **70 million people** are considered deaf.
-4. **8[^ecml]-24[^derivation] million people** natively use sign languages.
+4. **12[^ecml]-24[^derivation] million people** natively use sign languages.
 
 [^ecml]: European Centre for Modern Languages. 2024. [Facts about sign language](https://edl.ecml.at/Facts/FAQsonsignlanguage/tabid/2741/language/en-GB/Default.aspx).
 [^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
@@ -58,5 +58,32 @@ From our research, it is unclear how many people use sign languages.
 
 It is unclear how many people use sign languages.
 The European Centre for Modern Languages[^ecml] estimates that on average,
-deaf sign language users make up about 0.1% of the whole population in any given country, amounting to 8 million people worldwide.
+deaf sign language users make up about 0.16% of the whole population in any given country, amounting to 12 million people worldwide.
 According to Ethnologue (via Derivation[^derivation]), there are 24 million native sign language users worldwide.
+
+### Sign Language Interpreters
+
+Sign language interpreters are a rare commodity, and are globally in shortage.
+In Israel, a survey conducted among the organization's members found that 67% of interpreters refuse to attend a single-hour interpretation order.[^isl-shortage]
+
+We list the number of interpreters in various countries below:
+
+| Country       | Population            | HoH Population                                              | Deaf Population        | Interpreters                              |
+| ------------- | --------------------- | ----------------------------------------------------------- | ---------------------- | ----------------------------------------- |
+| United States | 331 million (2023)    | 11[^disabilitystatistics]-12[^researchondisability] million | 1 million[^mitchell]   | 10,385[^rid]                              |
+| India         | 1.4 billion (2023)    |                                                             | 2 million[^wfdeaf-sig] | 300[^wfdeaf-sig]                          |
+| Germany       | 83 million[^aiic-ch]  |                                                             |                        | 300[^aiic-ch]                             |
+| Switzerland   | 8.7 million[^aiic-ch] | 800,000[^swissinfo]                                         | 10,000[^swissinfo]     | 270[^aiic-ch]                             |
+| Israel        | 9.7 million (2023)    | 55,700[^cbs-isl]                                            | 10,000[^isl-deaf]      | 147[^isl-interpreters]-200[^isl-shortage] |
+
+[^isl-shortage]: Omer Sharvit. 2022. [מחסור חמור במתורגמנים לשפת הסימנים](https://www.zman.co.il/285475/popup)
+[^cbs-isl]: Central Bureau of Statistics, 2024. [Data on People with Hearing Impairments in Israel on the Occasion of World Hearing Day 2024](https://www.cbs.gov.il/he/mediarelease/DocLib/2024/065/11_24_065b.pdf).
+[^isl-deaf]: Meir et al. 2010. [Emerging sign languages](https://signlab.haifa.ac.il/wp-content/uploads/2013/01/Emerging-Sign-Languages.pdf).
+[^isl-interpreters]: Malach Israel. 2024. [רשימת מתורגמנים](https://malachisrael.org/organization-members/interpreters-list/)
+[^swissinfo]: Swissinfo. 2021. [Positive signs: Swiss Deaf Federation marks 75 years of adversity](https://www.swissinfo.ch/eng/society/positive-signs-swiss-deaf-federation-marks-75-years-of-adversity/46779982).
+[^aiic-ch]: International Association of Conference Interpreters. 2024. [The Swiss Interpreting Market](https://aiic.ch/the-swiss-interpreting-market/).
+[^disabilitystatistics]: Disability Statistics. 2022. [Disability Statistics](https://www.disabilitystatistics.org/).
+[^researchondisability]: Center for Research on Disability. 2023. [Build Your Own Statistics](https://www.researchondisability.org/ADSC/build-your-own-statistics).
+[^mitchell]: Mitchell, Ross E. 2005. [How many deaf people are there in the United States? Estimates from the Survey of Income and Program Participation](https://pubmed.ncbi.nlm.nih.gov/16177267/).
+[^rid]: Registry of Interpreters for the Deaf. 2024. [Publications](https://rid.org/programs/membership/publications/).
+[^wfdeaf-sig]: World Federation of the Deaf. 2024. [News: Special Interest Groups](https://wfdeaf.org/news/special-interest-groups/).
