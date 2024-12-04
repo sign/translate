@@ -66,20 +66,31 @@ According to Ethnologue (via Derivation[^derivation]), there are 24 million nati
 Sign language interpreters are a rare commodity, and are globally in shortage.
 In Israel, a survey conducted among the organization's members found that 67% of interpreters refuse to attend a single-hour interpretation order.[^isl-shortage]
 
-We list the number of interpreters in various countries below:
+We list the number of interpreters in various countries below. For all countries in Europe, visit https://www.eud.eu/member-countries/.
 
-| Country       | Population            | HoH Population                                              | Deaf Population        | Interpreters                              |
-| ------------- | --------------------- | ----------------------------------------------------------- | ---------------------- | ----------------------------------------- |
-| United States | 331 million (2023)    | 11[^disabilitystatistics]-12[^researchondisability] million | 1 million[^mitchell]   | 10,385[^rid]                              |
-| India         | 1.4 billion (2023)    |                                                             | 2 million[^wfdeaf-sig] | 300[^wfdeaf-sig]                          |
-| Germany       | 83 million[^aiic-ch]  |                                                             |                        | 300[^aiic-ch]                             |
-| Switzerland   | 8.7 million[^aiic-ch] | 800,000[^swissinfo]                                         | 10,000[^swissinfo]     | 270[^aiic-ch]                             |
-| Israel        | 9.7 million (2023)    | 55,700[^cbs-isl]                                            | 10,000[^isl-deaf]      | 147[^isl-interpreters]-200[^isl-shortage] |
+| Country            | Population            | HoH Population                                              | Deaf Population                            | Interpreters                                                                        | Deaf Interpreters                           |
+| ------------------ | --------------------- | ----------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------- |
+| United States      | 331 million (2023)    | 11[^disabilitystatistics]-12[^researchondisability] million | 1 million[^mitchell]                       | 10,385[^rid]                                                                        |                                             |
+| India              | 1.4 billion (2023)    |                                                             | 2 million[^wfdeaf-sig]                     | 300[^wfdeaf-sig]                                                                    |                                             |
+| Germany            | 83 million[^aiic-ch]  |                                                             | 200,000[^ddl]                              | 300[^aiic-ch]                                                                       | 26-30[^ddl]                                 |
+| Switzerland        | 8.7 million[^aiic-ch] | 800,000[^swissinfo]                                         | 10,000[^swissinfo][^ddl][^eud-switzerland] | 270[^aiic-ch] (63 Swiss-German, 32 Swiss-French, 8 Swiss-Italian)[^eud-switzerland] | (1-5 Swiss-German, 1-5 Swiss-Italian)[^ddl] |
+| Israel             | 9.7 million (2023)    | 55,700[^cbs-isl]                                            | 10,000[^isl-deaf]                          | 147[^isl-interpreters]-200[^isl-shortage]                                           |                                             |
+| The United Kingdom |                       |                                                             | 77,000[^ddl]                               |                                                                                     | 16-20[^ddl]                                 |
+| Slovenia           |                       |                                                             | 1016[^eud-slovenia]                        | 61[^eud-slovenia]                                                                   | 2-5[^ddl]                                   |
+| Spain              |                       |                                                             | 100,000[^eud-spain]                        | 667[^eud-spain]                                                                     | <15[^ddl]                                   |
+| Austria            |                       |                                                             | 8,000 – 10,000[^ddl][^eud-austria]         | 150[^eud-austria]                                                                   | 5[^ddl]                                     |
+| Belgium            |                       |                                                             | 6,500[^eud-belgium] - 9,000[^ddl]          | 165[^eud-belgium]                                                                   | 16-26[^ddl] (5-10 Flanders, 16-26 Wallonia) |
 
-[^isl-shortage]: Omer Sharvit. 2022. [מחסור חמור במתורגמנים לשפת הסימנים](https://www.zman.co.il/285475/popup)
+[^eud-slovenia]: European Union of the Deaf. 2024. [Member Countries: Slovenia](https://www.eud.eu/member-countries/slovenia/).
+[^eud-spain]: European Union of the Deaf. 2024. [Member Countries: Spain](https://www.eud.eu/member-countries/spain/).
+[^eud-switzerland]: European Union of the Deaf. 2024. [Member Countries: Switzerland](https://www.eud.eu/member-countries/switzerland/).
+[^eud-austria]: European Union of the Deaf. 2024. [Member Countries: Austria](https://www.eud.eu/member-countries/austria/).
+[^eud-belgium]: European Union of the Deaf. 2024. [Member Countries: Belgium](https://www.eud.eu/member-countries/belgium/).
+[^ddl]: Danish Deaf Association. 2016. [Deaf Interpreters in Europe](https://ddl.dk/wp-content/uploads/Deaf-interpreters-in-Europe-2016.pdf).
+[^isl-shortage]: Omer Sharvit. 2022. [מחסור חמור במתורגמנים לשפת הסימנים](https://www.zman.co.il/285475/popup).
 [^cbs-isl]: Central Bureau of Statistics, 2024. [Data on People with Hearing Impairments in Israel on the Occasion of World Hearing Day 2024](https://www.cbs.gov.il/he/mediarelease/DocLib/2024/065/11_24_065b.pdf).
 [^isl-deaf]: Meir et al. 2010. [Emerging sign languages](https://signlab.haifa.ac.il/wp-content/uploads/2013/01/Emerging-Sign-Languages.pdf).
-[^isl-interpreters]: Malach Israel. 2024. [רשימת מתורגמנים](https://malachisrael.org/organization-members/interpreters-list/)
+[^isl-interpreters]: Malach Israel. 2024. [רשימת מתורגמנים](https://malachisrael.org/organization-members/interpreters-list/).
 [^swissinfo]: Swissinfo. 2021. [Positive signs: Swiss Deaf Federation marks 75 years of adversity](https://www.swissinfo.ch/eng/society/positive-signs-swiss-deaf-federation-marks-75-years-of-adversity/46779982).
 [^aiic-ch]: International Association of Conference Interpreters. 2024. [The Swiss Interpreting Market](https://aiic.ch/the-swiss-interpreting-market/).
 [^disabilitystatistics]: Disability Statistics. 2022. [Disability Statistics](https://www.disabilitystatistics.org/).

@@ -60,6 +60,7 @@ export default withMermaid(
                 items: [
                   {text: 'Hearing Loss', link: '/docs/facts/population#hearing-loss'},
                   {text: 'Deafness', link: '/docs/facts/population#deafness'},
+                  {text: 'Interpreters', link: '/docs/facts/population#sign-language-interpreters'},
                 ],
               },
               {
