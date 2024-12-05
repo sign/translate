@@ -10,10 +10,7 @@ This section explores the global funnel from hearing loss to deafness and its si
 1. **1.5 billion people** experience hearing loss globally.
 2. **430 million people** require rehabilitation for disabling hearing loss.
 3. **70 million people** are considered deaf.
-4. **12[^ecml]-24[^derivation] million people** natively use sign languages.
-
-[^ecml]: European Centre for Modern Languages. 2024. [Facts about sign language](https://edl.ecml.at/Facts/FAQsonsignlanguage/tabid/2741/language/en-GB/Default.aspx).
-[^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
+4. **12[^ecml]-24[^derivation]-25[^sheets] million people** natively use sign languages.
 
 ```mermaid
 sankey-beta
@@ -51,15 +48,21 @@ These impairments are defined per ear, as follows[^who-report]:
 ### Deafness[^wfd]
 
 Among those with disabling hearing loss, the **World Federation of the Deaf (WFD)** estimates there are approximately **70 million deaf people worldwide**.
-This community spans over **200 sign languages**, underlining the linguistic diversity of deaf populations.
+This community spans over **200 sign languages** (or over _300_[^un-national-day]), underlining the linguistic diversity of deaf populations.
 From our research, it is unclear how many people use sign languages.
 
 [^wfd]: World Federation of the Deaf. 2024. [Our Work](https://wfdeaf.org/our-work/).
+[^un-national-day]: United Nations. 2024. [International Day of Sign Languages](https://www.un.org/en/observances/sign-languages-day).
 
 It is unclear how many people use sign languages.
 The European Centre for Modern Languages[^ecml] estimates that on average,
 deaf sign language users make up about 0.16% of the whole population in any given country, amounting to 12 million people worldwide.
-According to Ethnologue (via Derivation[^derivation]), there are 24 million native sign language users worldwide.
+According to Ethnologue (via Derivation[^derivation]), there are 24 million native sign language users worldwide,
+and according to a conglomeration of sources[^sheets], the number signers for the top 100 used sign languages is 25 million.
+
+[^ecml]: European Centre for Modern Languages. 2024. [Facts about sign language](https://edl.ecml.at/Facts/FAQsonsignlanguage/tabid/2741/language/en-GB/Default.aspx).
+[^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
+[^sheets]: Shester Gueuwou. 2023. [Sign Language Info](https://docs.google.com/spreadsheets/d/1O6frH52v4R9RbhWOA-FqRj2W3U-0yC2xC3qroxcq4kQ/edit?gid=1380277111#gid=1380277111)
 
 ### Sign Language Interpreters
 

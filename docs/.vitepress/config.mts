@@ -74,6 +74,12 @@ export default withMermaid(
               {
                 text: 'Market',
                 link: '/docs/facts/market',
+                items: [
+                  {text: 'Economic Impact', link: '/docs/facts/market#economic-impact'},
+                  {text: 'Perception', link: '/docs/facts/market#perception'},
+                  {text: 'U.S. Segments', link: '/docs/facts/market#market-segments-in-the-united-states'},
+                  {text: 'Consumer Products', link: '/docs/facts/market#consumer-products-and-services'},
+                ],
               },
             ],
           },
