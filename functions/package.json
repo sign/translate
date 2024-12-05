@@ -33,7 +33,7 @@
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.75.0",
+    "openai": "4.76.0",
     "request-ip": "3.3.0"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "@typescript-eslint/parser": "8.17.0",
     "eslint": "8.57.0",
     "firebase-functions-test": "3.3.0",
-    "firebase-tools": "13.27.0",
+    "firebase-tools": "13.28.0",
     "jest": "29.7.0",
     "minimatch": "10.0.1",
     "mock-express-request": "0.2.2",
