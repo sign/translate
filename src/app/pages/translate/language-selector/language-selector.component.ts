@@ -1,10 +1,16 @@
-import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, inject, Input, OnChanges, OnInit, output, SimpleChanges} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
+import {MatTabsModule} from '@angular/material/tabs';
+import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {MatMenuModule} from '@angular/material/menu';
+import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
+import {addIcons} from 'ionicons';
+import {chevronDown} from 'ionicons/icons';
 
 const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'language', countries: 'region'};
 
@@ -12,8 +18,12 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
+  imports: [IonButton, IonIcon, FlagIconComponent, MatMenuModule, TranslocoDirective, MatTabsModule],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
+  private store = inject(Store);
+  private transloco = inject(TranslocoService);
+
   detectedLanguage: string;
 
   @Input() flags = false;
@@ -23,7 +33,7 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit, 
 
   @Input() language: string | null;
 
-  @Output() languageChange = new EventEmitter<string>();
+  readonly languageChange = output<string>();
 
   topLanguages: string[];
   selectedIndex = 0;
@@ -32,8 +42,10 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit, 
   langNames: {[lang: string]: string} = {};
   langCountries: {[lang: string]: string} = {};
 
-  constructor(private store: Store, private transloco: TranslocoService) {
+  constructor() {
     super();
+
+    addIcons({chevronDown});
   }
 
   ngOnInit(): void {

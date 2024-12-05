@@ -10,8 +10,7 @@ describe('SendFeedbackComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SendFeedbackComponent],
-      imports: [AppTranslocoTestingModule],
+      imports: [AppTranslocoTestingModule, SendFeedbackComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SendFeedbackComponent);

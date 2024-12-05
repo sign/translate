@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 .container {
   display: flex;
@@ -7,7 +7,7 @@
     flex: 1;
   }
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{breakpoints.$breakpoint-lt-sm} {
     display: initial;
     text-align: center;
   }
@@ -51,7 +51,7 @@ ion-item {
     backdrop-filter: blur(10.2px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 
-    @media #{$breakpoint-lt-sm} {
+    @media #{breakpoints.$breakpoint-lt-sm} {
       max-width: none;
       margin-top: revert-layer;
     }

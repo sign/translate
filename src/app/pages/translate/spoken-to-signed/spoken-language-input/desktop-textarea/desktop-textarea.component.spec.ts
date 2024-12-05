@@ -1,13 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {DesktopTextareaComponent} from './desktop-textarea.component';
-import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../../../core/modules/ngxs/ngxs.module';
-import {FormControl, ReactiveFormsModule} from '@angular/forms';
-import {TranslateModule} from '../../../../../modules/translate/translate.module';
-import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {FormControl} from '@angular/forms';
 import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideStore} from '@ngxs/store';
+import {TranslateState} from '../../../../../modules/translate/translate.state';
+import {ngxsConfig} from '../../../../../app.config';
 
 describe('DesktopTextareaComponent', () => {
   let component: DesktopTextareaComponent;
@@ -15,9 +15,12 @@ describe('DesktopTextareaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DesktopTextareaComponent],
-      imports: [ReactiveFormsModule, NgxsModule.forRoot([SettingsState], ngxsConfig), TranslateModule],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
+      imports: [DesktopTextareaComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DesktopTextareaComponent);

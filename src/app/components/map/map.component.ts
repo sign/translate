@@ -1,5 +1,5 @@
-import {Component, NgModule, OnInit} from '@angular/core';
-import {geoJSON, latLng, Map, tileLayer} from 'leaflet';
+import {Component, inject, NgModule, OnInit} from '@angular/core';
+import {geoJSON, latLng, Map} from 'leaflet';
 import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {firstValueFrom} from 'rxjs';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
@@ -13,8 +13,11 @@ function logMax(arr: number[]) {
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
+  imports: [LeafletModule],
 })
 export class MapComponent extends BaseComponent implements OnInit {
+  private http = inject(HttpClient);
+
   static mapGeoJson = null;
 
   options = {
@@ -27,10 +30,6 @@ export class MapComponent extends BaseComponent implements OnInit {
     zoomDelta: 0.1,
     zoomSnap: 0.1,
   };
-
-  constructor(private http: HttpClient) {
-    super();
-  }
 
   ngOnInit() {
     if (!('document' in globalThis)) {
@@ -104,8 +103,7 @@ export class MapComponent extends BaseComponent implements OnInit {
 }
 
 @NgModule({
-  declarations: [MapComponent],
-  imports: [LeafletModule],
+  imports: [LeafletModule, MapComponent],
   providers: [provideHttpClient()],
 })
 export class MapModule {}

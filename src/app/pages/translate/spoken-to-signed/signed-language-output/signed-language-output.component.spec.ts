@@ -2,14 +2,13 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SignedLanguageOutputComponent} from './signed-language-output.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {NgxsModule} from '@ngxs/store';
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {TranslateState} from '../../../../modules/translate/translate.state';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../../app.config';
+import {provideHttpClient} from '@angular/common/http';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {provideHttpClient} from '@angular/common/http';
 
 describe('SignedLanguageOutputComponent', () => {
   let component: SignedLanguageOutputComponent;
@@ -17,10 +16,12 @@ describe('SignedLanguageOutputComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SignedLanguageOutputComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), AppTranslocoTestingModule],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
+      imports: [AppTranslocoTestingModule, SignedLanguageOutputComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
+      ],
     });
     fixture = TestBed.createComponent(SignedLanguageOutputComponent);
     component = fixture.componentInstance;

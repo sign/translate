@@ -1,4 +1,4 @@
-@import '../../../../theme/variables';
+@use '../../../../theme/breakpoints' as breakpoints;
 
 a {
   float: right;
@@ -9,7 +9,7 @@ a {
   margin: 8px 0;
   text-decoration: none;
 
-  @media #{$breakpoint-lt-lg} {
+  @media #{breakpoints.$breakpoint-lt-lg} {
     padding: 0 12px;
   }
 }

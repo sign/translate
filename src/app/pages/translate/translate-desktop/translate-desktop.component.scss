@@ -1,6 +1,6 @@
-@import '../../../../theme/variables';
+@use '../../../../theme/breakpoints' as breakpoints;
 
-@media #{$breakpoint-gt-xs} {
+@media #{breakpoints.$breakpoint-gt-xs} {
   .container::before {
     background-color: var(--app-tinted-background-color);
     border-bottom: 1px solid var(--app-divider-color);
@@ -17,7 +17,7 @@
 .container {
   transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media #{$breakpoint-gt-md} {
+  @media #{breakpoints.$breakpoint-gt-md} {
     padding: 48px;
     padding-top: 0;
   }
@@ -29,11 +29,11 @@
     display: flex;
     gap: 0.5em;
 
-    @media #{$breakpoint-lt-lg} {
+    @media #{breakpoints.$breakpoint-lt-lg} {
       padding: 0 12px;
     }
 
-    @media #{$breakpoint-lt-sm} {
+    @media #{breakpoints.$breakpoint-lt-sm} {
       display: none;
     }
   }
@@ -49,11 +49,11 @@
       background-color: #101010;
     }
 
-    @media #{$breakpoint-gt-xs} {
+    @media #{breakpoints.$breakpoint-gt-xs} {
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
     }
 
-    @media #{$breakpoint-gt-md} {
+    @media #{breakpoints.$breakpoint-gt-md} {
       border-radius: 8px;
       overflow: hidden;
     }

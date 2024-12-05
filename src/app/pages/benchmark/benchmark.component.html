@@ -11,7 +11,6 @@
   <ng-container *transloco="let t; read: 'benchmark'">
     <div class="container">
       <ion-button (click)="bench()">Start Benchmarking!</ion-button>
-
       @for (stat of stats | keyvalue; track stat.key) {
       <ion-card>
         <ion-card-header>

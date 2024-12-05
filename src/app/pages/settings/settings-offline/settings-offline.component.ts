@@ -1,11 +1,26 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
-import {MatTreeNestedDataSource} from '@angular/material/tree';
-import {NestedTreeControl} from '@angular/cdk/tree';
-import {TranslocoService} from '@ngneat/transloco';
+import {MatTreeModule, MatTreeNestedDataSource} from '@angular/material/tree';
+import {CdkTreeModule, NestedTreeControl} from '@angular/cdk/tree';
+import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@ngneat/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import {NgTemplateOutlet} from '@angular/common';
+import {NgxFilesizeModule} from 'ngx-filesize';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
+import {chevronDownOutline, chevronForwardOutline, cloudDownloadOutline, refresh, trash} from 'ionicons/icons';
+import {addIcons} from 'ionicons';
 
 const OFFLINE_PATHS = {
   avatarGlb: '3d/character.glb',
@@ -28,14 +43,36 @@ if (!isIOS) {
   selector: 'app-settings-offline',
   templateUrl: './settings-offline.component.html',
   styleUrls: ['./settings-offline.component.scss'],
+  imports: [
+    TranslocoDirective,
+    MatProgressSpinner,
+    MatTreeModule,
+    CdkTreeModule,
+    NgTemplateOutlet,
+    TranslocoPipe,
+    NgxFilesizeModule,
+    IonContent,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonBackButton,
+    IonButtons,
+    IonButton,
+    IonIcon,
+  ],
 })
 export class SettingsOfflineComponent extends BaseComponent implements OnInit {
+  private assets = inject(AssetsService);
+  private transloco = inject(TranslocoService);
+
   localFiles: {[key: string]: AssetState} = {};
   treeControl = new NestedTreeControl<AssetState>(node => node.children);
   filesTree = new MatTreeNestedDataSource<AssetState>();
 
-  constructor(private assets: AssetsService, private transloco: TranslocoService) {
+  constructor() {
     super();
+
+    addIcons({refresh, trash, cloudDownloadOutline, chevronDownOutline, chevronForwardOutline});
   }
 
   async ngOnInit() {

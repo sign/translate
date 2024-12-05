@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild, ViewContainerRef} from '@angular/core';
+import {AfterViewInit, Component, viewChild, ViewContainerRef} from '@angular/core';
 import {ComponentType} from '@angular/cdk/overlay';
 
 @Component({
@@ -7,7 +7,7 @@ import {ComponentType} from '@angular/cdk/overlay';
   styleUrls: ['./lazy-map.component.scss'],
 })
 export class LazyMapComponent implements AfterViewInit {
-  @ViewChild('mapHost', {read: ViewContainerRef}) mapHost: ViewContainerRef;
+  readonly mapHost = viewChild('mapHost', {read: ViewContainerRef});
 
   constructor() {}
 
@@ -19,6 +19,6 @@ export class LazyMapComponent implements AfterViewInit {
     const chunk = await import('../../../../components/map/map.component');
     const component = Object.values(chunk)[0] as ComponentType<unknown>;
 
-    this.mapHost.createComponent(component);
+    this.mapHost().createComponent(component);
   }
 }

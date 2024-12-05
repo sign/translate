@@ -8,7 +8,7 @@ describe('LazyMapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LazyMapComponent],
+      imports: [LazyMapComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LazyMapComponent);

@@ -1,9 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MainComponent} from './main.component';
-import {IonicModule} from '@ionic/angular';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {RouterTestingModule} from '@angular/router/testing';
+import {IonIcon, IonLabel, IonTabBar, IonTabButton, IonTabs} from '@ionic/angular/standalone';
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -11,8 +11,7 @@ describe('MainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MainComponent],
-      imports: [IonicModule.forRoot(), RouterTestingModule],
+      imports: [IonLabel, IonIcon, IonTabButton, IonTabBar, IonTabs, RouterTestingModule, MainComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MainComponent);

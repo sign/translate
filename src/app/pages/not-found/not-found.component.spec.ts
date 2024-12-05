@@ -2,7 +2,8 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {NotFoundComponent} from './not-found.component';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
+import {provideRouter} from '@angular/router';
+import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 describe('NotFoundComponent', () => {
   let component: NotFoundComponent;
@@ -10,8 +11,8 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot()],
-      declarations: [NotFoundComponent],
+      imports: [AppTranslocoTestingModule, NotFoundComponent],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NotFoundComponent);
@@ -21,5 +22,11 @@ describe('NotFoundComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass accessibility test', async () => {
+    jasmine.addMatchers(toHaveNoViolations);
+    const a11y = await axe(fixture.nativeElement);
+    expect(a11y).toHaveNoViolations();
   });
 });
