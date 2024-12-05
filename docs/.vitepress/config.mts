@@ -55,11 +55,12 @@ export default withMermaid(
             collapsed: false,
             items: [
               {
-                text: 'Numbers',
-                link: '/docs/facts/numbers',
+                text: 'Population',
+                link: '/docs/facts/population',
                 items: [
-                  {text: 'Hearing Loss', link: '/docs/facts/numbers#hearing-loss'},
-                  {text: 'Deafness', link: '/docs/facts/numbers#deafness'},
+                  {text: 'Hearing Loss', link: '/docs/facts/population#hearing-loss'},
+                  {text: 'Deafness', link: '/docs/facts/population#deafness'},
+                  {text: 'Interpreters', link: '/docs/facts/population#sign-language-interpreters'},
                 ],
               },
               {
@@ -73,6 +74,12 @@ export default withMermaid(
               {
                 text: 'Market',
                 link: '/docs/facts/market',
+                items: [
+                  {text: 'Economic Impact', link: '/docs/facts/market#economic-impact'},
+                  {text: 'Perception', link: '/docs/facts/market#perception'},
+                  {text: 'U.S. Segments', link: '/docs/facts/market#market-segments-in-the-united-states'},
+                  {text: 'Consumer Products', link: '/docs/facts/market#consumer-products-and-services'},
+                ],
               },
             ],
           },

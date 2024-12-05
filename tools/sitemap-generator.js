@@ -14,12 +14,12 @@ for (const file of fs.readdirSync(langsDir)) {
 const lastmod = new Date();
 const baseUrls = [
   '/',
-  '/about/',
   // '/legal/terms/', '/legal/privacy/',
 ];
 
 const additionalUrls = [
-  '/about/contribute/', // TODO move to baseUrls once translated
+  '/about/', // TODO move to baseUrls once translated
+  '/about/contribute/',
   '/legal/licenses/',
   '/legal/terms/',
   '/legal/privacy/',

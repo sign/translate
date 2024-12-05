@@ -56,3 +56,11 @@ Low literacy rates among the deaf also result in poorer health literacy. Key fin
 Communication barriers exacerbate these issues, particularly when health professionals rely on family members or interpreters, which can compromise privacy and autonomy.
 
 [^pmc]: Paasche-Orlow, Michael et al. 2005. [Health Literacy Among Deaf Adults](https://pmc.ncbi.nlm.nih.gov/articles/PMC10755641/).
+
+#### Academic Studies and Employment[^ndc]
+
+In the United States, among people aged 25-64,
+an estimated 22% of deaf people have completed a bachelor's degree or higher, compared to 37.7% of hearing people.
+Furthermore, an estimated 55.8% of deaf people are employed, compared to 72.9% of hearing people.
+
+[^ndc]: National Deaf Center. 2022. [Deaf Postsecondary Data from the American Community Survey](https://nationaldeafcenter.org/resources/research-data/dashboard/)
