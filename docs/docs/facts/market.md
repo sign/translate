@@ -6,6 +6,7 @@ To understand the market size, we flow from the global language services market 
   - ⤷ The translation service market is valued at **US$ 26.6 billion** in 2022[^slator] and **US$ 41.3 billion** in 2024 (CAGR of 2.30%)[^marketresearchfuture].
     - ⤷ The size of the interpreting market in 2019 was estimated at **US$ 7.6 billion**[^nimdzi].
       - ⤷ The global sign language interpretation services market size (including both in-person and remote) was valued at approximately **US$ 0.7 billion** in 2023 and is projected to touch **US$ 1.5 billion** by 2032 (CAGR of 8.5%)[^businessresearchinsights].
+        This is in conflict with the estimated United States market of **US$ 1.2 billion**[^einpresswire].
 
 [^factmr-lsm]: Fact.MR. 2022. [Language Services Market](https://www.factmr.com/report/language-services-market).
 [^nimdzi]: Nimdzi Research. 2019. [Current Size of the Interpreting Market](https://www.nimdzi.com/current-size-of-interpreting-market-nimdzi-finger-food/).
@@ -74,9 +75,24 @@ The entire sign language economy in 2022 in the U.S. alone is estimated to range
 Early intervention = **US$ 14.6 million** in federal funding alone<Badge type="danger" text="Citation Needed" />,
 plus 1-2 million per state (50-100 million) = **US$ 114.6 million** maximum<Badge type="danger" text="Citation Needed" />
 
-Schools for the Deaf have a **US$ 14 million** average budget<Badge type="danger" text="Citation Needed" />.
-Given 85<Badge type="danger" text="Citation Needed" /> schools, Deaf education is estimated at **US$ 1.2 billion**.
-Adjusted to **US$ 80,000** average cost per student<Badge type="danger" text="Citation Needed" />, given 7,189 students<Badge type="danger" text="Citation Needed" />, it is estimated at **US$ 575 million**.
+Gallaudet University lists 175 Schools & Programs for the Deaf/HH[^gallaudet-schools].
+Schools for the deaf have a **US$ 14 million** average budget<Badge type="danger" text="Citation Needed" />.
+Given 74[^schools-deaf] schools (49 residential, 25 day), deaf education is estimated at **US$ 1 billion**.
+Adjusted to **US$ 80,000** average cost per student<Badge type="danger" text="Citation Needed" />,
+given 7,189 students<Badge type="danger" text="Citation Needed" />,
+it is estimated at **US$ 575 million**.
+
+[^gallaudet-schools]: Gallaudet University. 2024. [Schools & Programs for the Deaf/HH](https://guides.apple.com/?pg=14518499966685085491&lsp=9902&name=schools-programs-for-the-deafhh).
+[^schools-deaf]: Wikipedia. 2024. [List of schools for the deaf](https://en.wikipedia.org/wiki/List_of_schools_for_the_deaf).
+
+There are also three higher education instutions for the deaf[^schools-deaf] in the United States that receive funding from the United States Department of Education.
+The National Technical Institute for the Deaf receive **US$ 92.5 million**[^ntid-budget],
+and Gallaudet University receives **US$ 165.4 million**[^gallaudet-budget].
+An estimated 237,000 deaf students are enrolled in college[^npsas].
+
+[^ntid-budget]: National Technical Institute for the Deaf. 2024. [Fiscal Year 2025 Budget Request](https://www.ed.gov/media/document/m-ntidpdf-1).
+[^gallaudet-budget]: Gallaudet University. 2024. [Fiscal Year 2025 Budget Request](https://www.ed.gov/sites/ed/files/about/overview/budget/budget25/justifications/n-gallaudet.pdf).
+[^npsas]: National Deaf Center on Postsecondary Outcomes. 2023. [Undergraduate Enrollment of Deaf Students in the United States (2019-2020)](https://nationaldeafcenter.org/resources/research-data/deaf-college-student-data/npsas/).
 
 Interpreting Services are estimated given a **US$ 83,313** average yearly salary[^interpreters-salary]
 times 10,385 certified interpreters[^rid] gives **US$ 865 million**.
@@ -90,11 +106,12 @@ Transition services to address failures in sign language access in education and
 
 - **Postsecondary Education Support**: The Postsecondary Education Center for Individuals who are deaf or Hard of Hearing receives **US$ 1.3 million** to support collaborations with postsecondary institutions, SEAs, LEAs, State VR agencies, VR service providers, and other organizations to meet the educational and vocational needs of individuals who are deaf or hard of hearing[^usdoe-postsecondary].
 - **Vocational Rehabilitation Services**: 94,000 clients in the Vocational Rehabilitation System are deaf, which means 7.9% of the total appropriations for vocational rehabilitation services at **US$ 3.76 billion** is allocated to services in sign language, at **US$ 297 million**[^national-deaf-center-vr].
-- **Helen Keller National Center**: The Helen Keller Center for Deaf-Blindness receives **US$ 16 million** in funding from the U.S. government[^helen-keller].
+- **Helen Keller National Center**: The Helen Keller Center for Deaf-Blindness received **US$ 16 million** in funding from the U.S. government in 2021[^helen-keller], and **US$ 19 million** in 2023-2025[^helen-keller-2024].
 
 [^usdoe-postsecondary]: U.S. Department of Education. 2019. [Postsecondary Education Support for Individuals who are Deaf or Hard of Hearing](https://www2.ed.gov/about/overview/budget/budget19/justifications/h-specialed.pdf).
 [^national-deaf-center-vr]: National Deaf Center. 2020. [Vocational Rehabilitation Services and Deaf Americans](https://www.nationaldeafcenter.org/news/room-improvement-new-report-analyzes-vocational-rehabilitation-services-and-deaf-americans#:~:text=Better%20Understanding%20of%20Who%20is%20Being%20Served&text=Of%20those%20people%20who%20applied,of%20all%20VR%20case%20files).
 [^helen-keller]: U.S. Department of Education. 2021. [Rehabilitation Services Justification](https://www2.ed.gov/about/overview/budget/budget21/justifications/j-rehab.pdf).
+[^helen-keller-2024]: U.S. Department of Education. 2024. [FY2025 Department of Education Budget Summary Final](https://www.ed.gov/sites/ed/files/about/overview/budget/budget25/summary/25summary.pdf).
 
 ### Sign Language Teaching (to hearing people)
 
@@ -173,3 +190,11 @@ Citations needed.
 | **Telecommunications and Customer Support**         | Enables deaf individuals to communicate with customer service via sign language interpreters over video calls.                       | $1.50 to $3.00 per minute for VRI.                                                                                    |
 
 :::
+
+## Existing Sign Language Technology Enterprise Deals
+
+- Miami-Dade Innovation Authority's pilot program invested **US$ 100,000** in Signapse with the goal of improving airport services.[^miami-signapse]
+- El Al Israel Airlines through Cockpit innovation has partnered with VSL Labs for an undisclosed amount.[^cockpit-vsl]
+
+[^miami-signapse]: Miami-Dade Airport. 2024. [Mayor Levine Cava unveils winners of Public Innovation Challenge tasked with elevating the passenger experience at MIA](https://news.miami-airport.com/mayor-levine-cava-unveils-winners-of-public-innovation-challenge-tasked-with-elevating-the-passenger-experience-at-mia/).
+[^cockpit-vsl]: Tal Meged (CEO of VSL Labs). 2024. [LinkedIn Post](https://www.linkedin.com/posts/talmeged_thrilled-to-be-collaborate-with-el-al-israel-activity-7267873306375041024-zIBP/).
