@@ -83,6 +83,20 @@ export default withMermaid(
               },
             ],
           },
+          {
+            text: 'Companies',
+            collapsed: false,
+            items: [
+              {
+                text: 'State of the Art',
+                link: '/docs/companies/state-of-the-art',
+                items: [
+                  {text: 'Spoken to Signed', link: '/docs/companies/state-of-the-art#spoken-to-signed-translation'},
+                  {text: 'Signed to Spoken', link: '/docs/companies/state-of-the-art#signed-to-spoken-translation'},
+                ],
+              },
+            ],
+          },
         ],
       },
 
