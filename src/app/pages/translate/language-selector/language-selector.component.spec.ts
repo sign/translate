@@ -21,9 +21,9 @@ describe('LanguageSelectorComponent', () => {
     await TestBed.configureTestingModule({
       imports: [AppTranslocoTestingModule, NoopAnimationsModule, LanguageSelectorComponent],
       providers: [
+        provideIonicAngular(),
         provideHttpClient(),
         provideHttpClientTesting(),
-        provideIonicAngular(),
         provideStore([SettingsState, TranslateState], ngxsConfig),
       ],
     }).compileComponents();

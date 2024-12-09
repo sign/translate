@@ -11,6 +11,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
 import {addIcons} from 'ionicons';
 import {chevronDown} from 'ionicons/icons';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'language', countries: 'region'};
 
@@ -18,7 +19,7 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
-  imports: [IonButton, IonIcon, FlagIconComponent, MatMenuModule, TranslocoDirective, MatTabsModule],
+  imports: [FlagIconComponent, MatMenuModule, MatTooltipModule, TranslocoDirective, MatTabsModule, IonButton, IonIcon],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
   private store = inject(Store);

@@ -13,7 +13,7 @@
           <ion-card-content>
             <div class="info">
               <ion-card-title>
-                <ion-icon [name]="slide.icon" color="primary"></ion-icon>
+                <ion-icon [name]="slide.icon" color="primary" />
                 {{ t(slide.id + '.title') }}
               </ion-card-title>
               <p>{{ t(slide.id + '.subtitle') }}</p>
@@ -39,7 +39,7 @@
       <div class="navigation-buttons" *transloco="let t; read: 'landing.about.benefits'">
         @for (slide of slides; track slide.id; let idx = $index) {
         <button (click)="slideTo(idx)" [class.selected]="idx === activeSlide">
-          <ion-icon [name]="slide.icon" [color]="idx === activeSlide ? 'primary' : ''"></ion-icon>
+          <ion-icon [name]="slide.icon" [color]="idx === activeSlide ? 'primary' : ''" />
           <span>{{ t(slide.id + '.title') }}</span>
         </button>
         }

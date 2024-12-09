@@ -11,17 +11,30 @@ import {BaseComponent} from '../../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {addIcons} from 'ionicons';
 import {swapHorizontal} from 'ionicons/icons';
-import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
-import {AsyncPipe} from '@angular/common';
+import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import {MatTreeModule} from '@angular/material/tree';
+import {CdkTreeModule} from '@angular/cdk/tree';
+import {NgxFilesizeModule} from 'ngx-filesize';
 
 @Component({
   selector: 'app-language-selectors',
   templateUrl: './language-selectors.component.html',
   styleUrls: ['./language-selectors.component.scss'],
-  imports: [IonButton, IonIcon, LanguageSelectorComponent, AsyncPipe, MatTooltipModule, TranslocoPipe],
+  imports: [LanguageSelectorComponent, AsyncPipe, MatTooltipModule, TranslocoPipe, IonButton, IonIcon],
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {
   private store = inject(Store);
