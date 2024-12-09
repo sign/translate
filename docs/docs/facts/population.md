@@ -54,7 +54,7 @@ From our research, it is unclear how many people use sign languages.
 [^wfd]: World Federation of the Deaf. 2024. [Our Work](https://wfdeaf.org/our-work/).
 [^un-national-day]: United Nations. 2024. [International Day of Sign Languages](https://www.un.org/en/observances/sign-languages-day).
 
-It is unclear how many people use sign languages.
+It is unclear how many people use sign languages. (Comment: This sentence is a repetition of the sentence before, the one before is better)
 The European Centre for Modern Languages[^ecml] estimates that on average,
 deaf sign language users make up about 0.16% of the whole population in any given country, amounting to 12 million people worldwide.
 According to Ethnologue (via Derivation[^derivation]), there are 24 million native sign language users worldwide,
