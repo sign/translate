@@ -17,7 +17,7 @@ sankey-beta
   World Population, Hearing, 6500000000
   World Population, Hearing Loss, 1500000000
   Hearing Loss, Disabling Hearing Loss, 430000000
-  Disabling Hearing Loss, Deaf, 72000000
+  Disabling Hearing Loss, Deaf, 70000000
 ```
 
 ### Hearing Loss[^who]
@@ -27,7 +27,7 @@ Of these, **430 million people** experience disabling hearing loss, requiring re
 By 2050, this number is projected to grow to **700 million**.
 
 ::: info Quote: Relevance ([learn more](/facts/market#economic-impact))
-Unaddressed hearing loss poses an annual global cost of US $980 billion.
+Unaddressed hearing loss poses an annual global cost of US\$ 980 billion.
 This includes health sector costs (excluding the cost of hearing devices), costs of educational support, loss of productivity and societal costs.
 :::
 
@@ -71,24 +71,25 @@ In Israel, a survey conducted among the organization's members found that 67% of
 
 We list the number of interpreters in various countries below. For all countries in Europe, visit https://www.eud.eu/member-countries/.
 
-| Country            | Population            | HoH Population                                              | Deaf Population                            | Interpreters                                                                        | Deaf Interpreters                           |
-| ------------------ | --------------------- | ----------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------- |
-| United States      | 331 million (2023)    | 11[^disabilitystatistics]-12[^researchondisability] million | 1 million[^mitchell]                       | 10,385[^rid]                                                                        |                                             |
-| India              | 1.4 billion (2023)    |                                                             | 2 million[^wfdeaf-sig]                     | 300[^wfdeaf-sig]                                                                    |                                             |
-| Germany            | 83 million[^aiic-ch]  |                                                             | 200,000[^ddl]                              | 300[^aiic-ch]                                                                       | 26-30[^ddl]                                 |
-| Switzerland        | 8.7 million[^aiic-ch] | 800,000[^swissinfo]                                         | 10,000[^swissinfo][^ddl][^eud-switzerland] | 270[^aiic-ch] (63 Swiss-German, 32 Swiss-French, 8 Swiss-Italian)[^eud-switzerland] | (1-5 Swiss-German, 1-5 Swiss-Italian)[^ddl] |
-| Israel             | 9.7 million (2023)    | 55,700[^cbs-isl]                                            | 10,000[^isl-deaf]                          | 147[^isl-interpreters]-200[^isl-shortage]                                           |                                             |
-| The United Kingdom |                       |                                                             | 77,000[^ddl]                               |                                                                                     | 16-20[^ddl]                                 |
-| Slovenia           |                       |                                                             | 1016[^eud-slovenia]                        | 61[^eud-slovenia]                                                                   | 2-5[^ddl]                                   |
-| Spain              |                       |                                                             | 100,000[^eud-spain]                        | 667[^eud-spain]                                                                     | <15[^ddl]                                   |
-| Austria            |                       |                                                             | 8,000 – 10,000[^ddl][^eud-austria]         | 150[^eud-austria]                                                                   | 5[^ddl]                                     |
-| Belgium            |                       |                                                             | 6,500[^eud-belgium] - 9,000[^ddl]          | 165[^eud-belgium]                                                                   | 16-26[^ddl] (5-10 Flanders, 16-26 Wallonia) |
+| Country            | Population            | HoH Population                                              | Deaf Population                            | Interpreters                                                        | Deaf Interpreters                           |
+| ------------------ | --------------------- | ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------- |
+| United States      | 331 million (2023)    | 11[^disabilitystatistics]-12[^researchondisability] million | 1 million[^mitchell]                       | 10,385[^rid]                                                        |                                             |
+| India              | 1.4 billion (2023)    |                                                             | 2 million[^wfdeaf-sig]                     | 300[^wfdeaf-sig]                                                    |                                             |
+| Germany            | 83 million[^aiic-ch]  |                                                             | 200,000[^eud-germany][^ddl]                | 750[^eud-germany]                                                   | 26-30[^ddl]                                 |
+| Switzerland        | 8.7 million[^aiic-ch] | 800,000[^swissinfo]                                         | 10,000[^swissinfo][^ddl][^eud-switzerland] | 63 Swiss-German, 32 Swiss-French, 8 Swiss-Italian[^eud-switzerland] | (1-5 Swiss-German, 1-5 Swiss-Italian)[^ddl] |
+| Israel             | 9.7 million (2023)    | 55,700[^cbs-isl]                                            | 10,000[^isl-deaf]                          | 147[^isl-interpreters]-200[^isl-shortage]                           |                                             |
+| The United Kingdom |                       |                                                             | 77,000[^ddl]                               |                                                                     | 16-20[^ddl]                                 |
+| Slovenia           |                       |                                                             | 1016[^eud-slovenia]                        | 61[^eud-slovenia]                                                   | 2-5[^ddl]                                   |
+| Spain              |                       |                                                             | 100,000[^eud-spain]                        | 667[^eud-spain]                                                     | <15[^ddl]                                   |
+| Austria            |                       |                                                             | 8,000 – 10,000[^ddl][^eud-austria]         | 150[^eud-austria]                                                   | 5[^ddl]                                     |
+| Belgium            |                       |                                                             | 6,500[^eud-belgium] - 9,000[^ddl]          | 165[^eud-belgium]                                                   | (5-10 Flanders, 16-26 Wallonia)[^ddl]       |
 
 [^eud-slovenia]: European Union of the Deaf. 2024. [Member Countries: Slovenia](https://www.eud.eu/member-countries/slovenia/).
 [^eud-spain]: European Union of the Deaf. 2024. [Member Countries: Spain](https://www.eud.eu/member-countries/spain/).
 [^eud-switzerland]: European Union of the Deaf. 2024. [Member Countries: Switzerland](https://www.eud.eu/member-countries/switzerland/).
 [^eud-austria]: European Union of the Deaf. 2024. [Member Countries: Austria](https://www.eud.eu/member-countries/austria/).
 [^eud-belgium]: European Union of the Deaf. 2024. [Member Countries: Belgium](https://www.eud.eu/member-countries/belgium/).
+[^eud-germany]: European Union of the Deaf. 2024. [Member Countries: Germany](https://www.eud.eu/member-countries/germany/).
 [^ddl]: Danish Deaf Association. 2016. [Deaf Interpreters in Europe](https://ddl.dk/wp-content/uploads/Deaf-interpreters-in-Europe-2016.pdf).
 [^isl-shortage]: Omer Sharvit. 2022. [מחסור חמור במתורגמנים לשפת הסימנים](https://www.zman.co.il/285475/popup).
 [^cbs-isl]: Central Bureau of Statistics, 2024. [Data on People with Hearing Impairments in Israel on the Occasion of World Hearing Day 2024](https://www.cbs.gov.il/he/mediarelease/DocLib/2024/065/11_24_065b.pdf).

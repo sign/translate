@@ -8,7 +8,7 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
-  "license": "MIT",
+  "license": "CC BY 4.0",
   "dependencies": {
     "mermaid": "11.4.1"
   },
