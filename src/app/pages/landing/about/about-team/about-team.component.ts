@@ -1,9 +1,11 @@
 import {Component} from '@angular/core';
+import {IonAvatar, IonBadge, IonCard, IonCardContent, IonCardHeader, IonCardTitle} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-about-team',
   templateUrl: './about-team.component.html',
   styleUrls: ['./about-team.component.scss'],
+  imports: [IonCard, IonBadge, IonCardHeader, IonAvatar, IonCardTitle, IonCardContent],
 })
 export class AboutTeamComponent {
   teamMembers = [

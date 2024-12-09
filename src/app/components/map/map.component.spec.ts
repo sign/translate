@@ -11,8 +11,7 @@ describe('MapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MapComponent],
-      imports: [LeafletModule],
+      imports: [LeafletModule, MapComponent],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 

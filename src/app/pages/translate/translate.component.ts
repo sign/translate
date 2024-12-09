@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
@@ -8,26 +8,29 @@ import {TranslocoService} from '@ngneat/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
+import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
 
 @Component({
   selector: 'app-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss'],
+  imports: [TranslateMobileComponent, TranslateDesktopComponent],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
+  private store = inject(Store);
+  private transloco = inject(TranslocoService);
+  translation = inject(TranslationService);
+  private mediaMatcher = inject(MediaMatcher);
+  private meta = inject(Meta);
+  private title = inject(Title);
+
   spokenToSigned$: Observable<boolean>;
   spokenToSigned: boolean;
 
   isMobile: MediaQueryList;
 
-  constructor(
-    private store: Store,
-    private transloco: TranslocoService,
-    public translation: TranslationService,
-    private mediaMatcher: MediaMatcher,
-    private meta: Meta,
-    private title: Title
-  ) {
+  constructor() {
     super();
 
     this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);

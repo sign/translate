@@ -2,15 +2,16 @@ import {ComponentFixture, fakeAsync, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TranslateInputButtonComponent} from './button.component';
-import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
-import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
+import {provideStore, Store} from '@ngxs/store';
+import {ngxsConfig} from '../../../../app.config';
+
 import {SettingsState} from '../../../../modules/settings/settings.state';
 import {SetInputMode} from '../../../../modules/translate/translate.actions';
-import {IonicModule} from '@ionic/angular';
-import {TranslateModule} from '../../../../modules/translate/translate.module';
-import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
+import {TranslateState} from '../../../../modules/translate/translate.state';
 
 describe('TranslateInputButtonComponent', () => {
   let store: Store;
@@ -19,14 +20,13 @@ describe('TranslateInputButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TranslateInputButtonComponent],
-      imports: [
-        IonicModule.forRoot(),
-        AppTranslocoTestingModule,
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-        TranslateModule,
+      imports: [AppTranslocoTestingModule, TranslateInputButtonComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideIonicAngular(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
       ],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

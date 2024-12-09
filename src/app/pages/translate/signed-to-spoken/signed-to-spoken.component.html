@@ -2,15 +2,15 @@
 videoState) { @if (!videoState.src) {
 <app-upload />
 } @else {
-<ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+<ng-container *ngTemplateOutlet="translationTemplate" />
 } } } @case ('webcam') {
-<ng-container *ngTemplateOutlet="translationTemplate"></ng-container>
+<ng-container *ngTemplateOutlet="translationTemplate" />
 } } }
 
 <ng-template #translationTemplate>
   <div class="interface">
     <div class="sign-language">
-      <app-video [displayControls]="false" [displayFps]="false"></app-video>
+      <app-video [displayControls]="false" [displayFps]="false" />
     </div>
 
     <app-sign-writing />
@@ -32,7 +32,7 @@ videoState) { @if (!videoState.src) {
           [attr.aria-label]="'translate.signed-to-spoken.actions.copy' | transloco"
           [matTooltip]="'translate.signed-to-spoken.actions.copy' | transloco"
           [matTooltipPosition]="'above'">
-          <ion-icon name="copy-outline" slot="icon-only"></ion-icon>
+          <ion-icon name="copy-outline" slot="icon-only" />
         </ion-button>
       </div>
       }

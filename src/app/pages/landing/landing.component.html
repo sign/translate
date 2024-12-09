@@ -41,7 +41,7 @@
     <ion-buttons slot="primary">
       <ion-button routerLink="/" queryParamsHandling="preserve" color="primary" shape="round" fill="solid">
         {{ 'landing.try' | transloco }}
-        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+        <ion-icon slot="end" name="arrow-forward" />
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="secondary">
@@ -61,6 +61,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" id="main-content">
-  <router-outlet></router-outlet>
+  <router-outlet />
   <app-landing-footer />
 </ion-content>

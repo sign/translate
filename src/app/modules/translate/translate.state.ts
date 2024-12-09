@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {
   ChangeTranslation,
@@ -81,16 +81,16 @@ const initialState: TranslateStateModel = {
   defaults: initialState,
 })
 export class TranslateState implements NgxsOnInit {
+  private store = inject(Store);
+  private service = inject(TranslationService);
+  private swService = inject(SignWritingTranslationService);
+  private poseService = inject(PoseService);
+  private languageDetectionService = inject(LanguageDetectionService);
+
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<EstimatedPose>;
 
-  constructor(
-    private store: Store,
-    private service: TranslationService,
-    private swService: SignWritingTranslationService,
-    private poseService: PoseService,
-    private languageDetectionService: LanguageDetectionService
-  ) {
+  constructor() {
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
     this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
   }

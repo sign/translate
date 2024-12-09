@@ -4,11 +4,11 @@
   <app-desktop-textarea dir="auto" [textControl]="text" [maxLength]="maxTextLength" [lang]="spokenLanguage" />
   <div id="suggestions" *transloco="let t; read: 'translate.suggestions'">
     @if (detectedLanguage && detectedLanguage !== spokenLanguage) {
-    <ion-icon name="sparkles" color="primary"></ion-icon>
+    <ion-icon name="sparkles" color="primary" />
     {{ t('translate-from') }}:
     <a (click)="setDetectedLanguage()">{{ 'languages.' + detectedLanguage | transloco }}</a>
     } @if (normalizedText$ | async; as normalizedText) {
-    <ion-icon name="sparkles" color="primary"></ion-icon>
+    <ion-icon name="sparkles" color="primary" />
     {{ t('did-you-mean') }}:
     <a (click)="setText(normalizedText)">{{ normalizedText }}</a>
     }
@@ -23,7 +23,7 @@
 <ion-toolbar appKeyboardFlying>
   <ion-buttons slot="start">
     <ion-button disabled>
-      <ion-icon slot="icon-only" name="add-outline" color="primary"></ion-icon>
+      <ion-icon slot="icon-only" name="add-outline" color="primary" />
     </ion-button>
   </ion-buttons>
   <ion-textarea
@@ -39,13 +39,10 @@
     dir="auto"
     aria-labelledby="spoken-language-label"
     autofocus
-    [attr.data-gramm_editor]="false"></ion-textarea>
+    [attr.data-gramm_editor]="false" />
 
   <ion-buttons slot="end">
-    <app-speech-to-text
-      [lang]="spokenLanguage"
-      (changeText)="text.setValue($event)"
-      matTooltipPosition="before"></app-speech-to-text>
+    <app-speech-to-text [lang]="spokenLanguage" (changeText)="text.setValue($event)" matTooltipPosition="before" />
   </ion-buttons>
 </ion-toolbar>
 }

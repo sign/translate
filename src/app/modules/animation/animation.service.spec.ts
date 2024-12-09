@@ -1,12 +1,10 @@
 import {TestBed} from '@angular/core/testing';
 import {AnimationService} from './animation.service';
-import {EstimatedPose} from '../pose/pose.state';
+import {EstimatedPose, PoseState} from '../pose/pose.state';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
-import {PoseModule} from '../pose/pose.module';
-import {NgxsModule} from '@ngxs/store';
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../settings/settings.state';
-import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
 
 describe('AnimationService', () => {
   let service: AnimationService;
@@ -15,8 +13,7 @@ describe('AnimationService', () => {
 
   beforeEach(async () => {
     TestBed.configureTestingModule({
-      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig), PoseModule],
-      providers: [TensorflowService],
+      providers: [provideStore([SettingsState, PoseState])],
     });
     service = TestBed.inject(AnimationService);
     tf = TestBed.inject(TensorflowService);

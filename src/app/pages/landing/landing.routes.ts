@@ -1,5 +1,4 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {Routes} from '@angular/router';
 import {AboutComponent} from './about/about.component';
 import {ContributeComponent} from './contribute/contribute.component';
 import {LandingComponent} from './landing.component';
@@ -7,7 +6,7 @@ import {LicensesComponent} from './licenses/licenses.component';
 import {TermsComponent} from './terms/terms.component';
 import {PrivacyComponent} from './privacy/privacy.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: LandingComponent,
@@ -21,9 +20,3 @@ const routes: Routes = [
     ],
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-})
-export class LandingRoutingModule {}

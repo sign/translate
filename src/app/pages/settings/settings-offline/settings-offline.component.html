@@ -32,7 +32,7 @@
         size="small"
         [attr.aria-label]="'settings.other.offline.actions.reDownload' | transloco"
         (click)="reDownload(node)">
-        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+        <ion-icon slot="icon-only" name="refresh" />
       </ion-button>
 
       <ion-button
@@ -43,7 +43,7 @@
         size="small"
         [attr.aria-label]="'settings.other.offline.actions.delete' | transloco"
         (click)="deleteCache(node)">
-        <ion-icon slot="icon-only" name="trash"></ion-icon>
+        <ion-icon slot="icon-only" name="trash" />
       </ion-button>
       } @if (!node.exists && !node.progress) {
       <ion-button
@@ -54,7 +54,7 @@
         size="small"
         [attr.aria-label]="'settings.other.offline.actions.download' | transloco"
         (click)="download(node)">
-        <ion-icon slot="icon-only" name="cloud-download-outline"></ion-icon>
+        <ion-icon slot="icon-only" name="cloud-download-outline" />
       </ion-button>
       } }
     </ng-template>
@@ -75,8 +75,7 @@
             matTreeNodeToggle
             [disabled]="node.children.length === 0"
             [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco : {label: node.label}">
-            <ion-icon
-              [name]="treeControl.isExpanded(node) ? 'chevron-down-outline' : 'chevron-forward-outline'"></ion-icon>
+            <ion-icon [name]="treeControl.isExpanded(node) ? 'chevron-down-outline' : 'chevron-forward-outline'" />
           </button>
           <ng-container *ngTemplateOutlet="nodeTemplate; context: {$implicit: node}"></ng-container>
         </div>

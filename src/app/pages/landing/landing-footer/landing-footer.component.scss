@@ -1,4 +1,4 @@
-@import '../../../../theme/variables';
+@use '../../../../theme/breakpoints' as breakpoints;
 
 footer {
   background-color: #141518;
@@ -13,7 +13,7 @@ footer {
   gap: 32px;
   grid-template-areas: 'brand legal social';
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{breakpoints.$breakpoint-lt-sm} {
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:

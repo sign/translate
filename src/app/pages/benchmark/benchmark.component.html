@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <ion-icon name="analytics"></ion-icon>
+      <ion-icon name="analytics" />
       {{ 'benchmark.title' | transloco }}
     </ion-title>
   </ion-toolbar>
@@ -11,7 +11,6 @@
   <ng-container *transloco="let t; read: 'benchmark'">
     <div class="container">
       <ion-button (click)="bench()">Start Benchmarking!</ion-button>
-
       @for (stat of stats | keyvalue; track stat.key) {
       <ion-card>
         <ion-card-header>

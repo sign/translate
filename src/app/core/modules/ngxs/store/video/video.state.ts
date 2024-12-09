@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {filter, tap} from 'rxjs/operators';
 import {SetVideo, StartCamera, StopVideo} from './video.actions';
@@ -35,9 +35,12 @@ const initialState: VideoStateModel = {
   defaults: initialState,
 })
 export class VideoState implements NgxsOnInit {
+  private store = inject(Store);
+  private navigator = inject(NavigatorService);
+
   receiveVideo$: Observable<boolean>;
 
-  constructor(private store: Store, private navigator: NavigatorService) {
+  constructor() {
     this.receiveVideo$ = this.store.select<boolean>(state => state.settings.receiveVideo);
   }
 

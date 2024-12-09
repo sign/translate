@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {SignWritingService} from './sign-writing.service';
 import {PoseLandmark} from '../pose/pose.state';
 import {ThreeService} from '../../core/services/three.service';
@@ -20,7 +20,8 @@ export interface BodyStateModel {
   providedIn: 'root',
 })
 export class BodyService {
-  constructor(private three: ThreeService, private holistic: MediapipeHolisticService) {}
+  private three = inject(ThreeService);
+  private holistic = inject(MediapipeHolisticService);
 
   shoulders(landmarks: PoseLandmark[]): BodyShoulders {
     const p1 = landmarks[this.holistic.POSE_LANDMARKS.LEFT_SHOULDER];

@@ -1,5 +1,8 @@
-@import './material.scss';
-@import 'fonts/roboto.css';
+@forward './material.scss';
+@forward 'fonts/roboto.css';
+
+@forward './ionic-variables';
+@forward './ionic';
 
 .container {
   width: auto;
@@ -51,6 +54,3 @@ body {
 ion-header ion-button {
   text-transform: none;
 }
-
-@import './ionic-variables';
-@import './ionic';

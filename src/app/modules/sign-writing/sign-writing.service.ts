@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {HandsService} from './hands.service';
 import {SignWritingStateModel} from './sign-writing.state';
 import {BodyService} from './body.service';
@@ -10,10 +10,12 @@ import type {font} from '@sutton-signwriting/font-ttf';
   providedIn: 'root',
 })
 export class SignWritingService {
+  private bodyService = inject(BodyService);
+  private faceService = inject(FaceService);
+  private handsService = inject(HandsService);
+
   static font: Promise<typeof font>;
   static fontsLoaded = false;
-
-  constructor(private bodyService: BodyService, private faceService: FaceService, private handsService: HandsService) {}
 
   static get fontsModule() {
     if (!SignWritingService.font) {

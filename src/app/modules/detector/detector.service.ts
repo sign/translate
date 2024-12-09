@@ -1,7 +1,7 @@
 import type {Tensor} from '@tensorflow/tfjs';
 import {EMPTY_LANDMARK, EstimatedPose, PoseLandmark} from '../pose/pose.state';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {TensorflowService} from '../../core/services/tfjs/tfjs.service';
 import {MediapipeHolisticService} from '../../core/services/holistic.service';
 
@@ -11,6 +11,9 @@ const WINDOW_SIZE = 20;
   providedIn: 'root',
 })
 export class DetectorService {
+  private tf = inject(TensorflowService);
+  private holistic = inject(MediapipeHolisticService);
+
   lastPose: PoseLandmark[];
   lastTimestamp: number;
 
@@ -18,8 +21,6 @@ export class DetectorService {
   shoulderWidthIndex = 0;
 
   sequentialModel: LayersModel;
-
-  constructor(private tf: TensorflowService, private holistic: MediapipeHolisticService) {}
 
   async loadModel() {
     return Promise.all([

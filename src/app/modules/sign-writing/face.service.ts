@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import type {Vector2, Vector3} from 'three';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
@@ -36,13 +36,11 @@ const FACE_MAP = {
   providedIn: 'root',
 })
 export class FaceService {
-  faceSequentialModel: LayersModel;
+  private poseNormalization = inject(PoseNormalizationService);
+  private tf = inject(TensorflowService);
+  private three = inject(ThreeService);
 
-  constructor(
-    private poseNormalization: PoseNormalizationService,
-    private tf: TensorflowService,
-    private three: ThreeService
-  ) {}
+  faceSequentialModel: LayersModel;
 
   async loadModel(): Promise<LayersModel> {
     await Promise.all([this.tf.load(), this.three.load()]);

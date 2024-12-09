@@ -1,12 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsFeedbackComponent} from './settings-feedback.component';
-import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {NgxsModule} from '@ngxs/store';
+
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {IonicModule} from '@ionic/angular';
+import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
+import {provideIonicAngular} from '@ionic/angular/standalone';
 
 describe('SettingsFeedbackComponent', () => {
   let component: SettingsFeedbackComponent;
@@ -14,8 +15,8 @@ describe('SettingsFeedbackComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsFeedbackComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [AppTranslocoTestingModule, SettingsFeedbackComponent],
+      providers: [provideIonicAngular(), provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsFeedbackComponent);

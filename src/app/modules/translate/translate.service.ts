@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
@@ -7,6 +7,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root',
 })
 export class TranslationService {
+  private http = inject(HttpClient);
+
   signedLanguages = [
     'ase',
     'gsg',
@@ -163,8 +165,6 @@ export class TranslationService {
     'yo',
     'zu',
   ];
-
-  constructor(private http: HttpClient) {}
 
   private lastSpokenLanguageSegmenter: {language: string; segmenter: Intl.Segmenter};
 

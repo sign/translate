@@ -15,7 +15,7 @@
   [disabled]="(spokenLanguage$ | async) === null && (detectedLanguage$ | async) === null"
   [matTooltip]="'translate.swapLanguages' | transloco"
   [attr.aria-label]="'translate.swapLanguages' | transloco">
-  <ion-icon name="swap-horizontal"></ion-icon>
+  <ion-icon name="swap-horizontal" />
 </ion-button>
 
 <app-language-selector

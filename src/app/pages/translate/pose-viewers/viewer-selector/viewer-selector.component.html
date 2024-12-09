@@ -6,7 +6,7 @@
       [attr.aria-label]="t(fab.id)"
       [matTooltip]="t(fab.id)"
       matTooltipPosition="before">
-      <ion-icon [name]="fab.icon"></ion-icon>
+      <ion-icon [name]="fab.icon" />
     </ion-fab-button>
     <ion-fab-list side="bottom">
       @for (button of fabButtons; track button) {
@@ -16,7 +16,7 @@
         [matTooltip]="t(button.id)"
         matTooltipPosition="before"
         (click)="applySetting('poseViewer', button.id)">
-        <ion-icon [name]="button.icon"></ion-icon>
+        <ion-icon [name]="button.icon" />
       </ion-fab-button>
       }
     </ion-fab-list>

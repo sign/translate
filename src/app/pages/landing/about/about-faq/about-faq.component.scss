@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 .container {
   display: grid;
@@ -9,7 +9,7 @@
     'header content'
     'footer content';
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     display: initial;
   }
 }
