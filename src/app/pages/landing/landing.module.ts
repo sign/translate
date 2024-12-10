@@ -32,6 +32,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {register} from 'swiper/element/bundle';
 import {SignedToSpokenModule} from '../translate/signed-to-spoken/signed-to-spoken.module';
 import {LogoComponent} from '../../components/logo/logo.component';
+import {AboutNumbersComponent} from './about/about-numbers/about-numbers.component';
 
 register();
 
@@ -71,6 +72,7 @@ register();
     MermaidChartComponent,
     ReactiveFormsModule,
     SignedToSpokenModule,
+    AboutNumbersComponent,
   ],
   bootstrap: [LandingComponent],
   exports: [I18NLanguageSelectorComponent],
