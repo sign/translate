@@ -14,8 +14,23 @@ To understand the market size, we flow from the global language services market 
 [^marketresearchfuture]: Market Research Future. 2024. [Translation Service Market](https://www.marketresearchfuture.com/reports/translation-service-market-1400).
 [^slator]: Slator. 2022. [2022 Language Industry Market Report](https://slator.com/slator-2022-language-industry-market-report/).
 
-From a more holistic perspective, the entire sign language economy in the U.S. alone is estimated to range between **US\$ 3 billion** and **US\$ 10 billion** annually.
-This includes diverse services and sectors that support the deaf and signing community.[^gallaudet]
+#A Broader Perspective
+From a more holistic viewpoint, the entire sign language economy in the U.S. alone is estimated to range between US$ 3 billion and US$ 10 billion annually, encompassing a wide variety of services and sectors supporting the deaf and signing community [7].
+
+The global sign language interpretation market is estimated at US$ 33.7 billion. This figure is extrapolated from the U.S. market size of US$ 11 billion, as detailed in Gallaudet University’s study, “How Sign Language is Driving a Multi-Billion Dollar Inclusive Economy” [7]. This estimation assumes that similarly developed nations in the Top 30 HDI (Human Development Index) rankings have mirrored U.S. trends, including the introduction of regulations mandating accessibility, heightened societal expectations for inclusivity, and technological advancements facilitating broader adoption of sign language services.
+
+The methodology for this extrapolation rests on several factors:
+
+Developed nations like Germany, the UK, Canada, and Japan, which rank highly in HDI, share comparable economic and social structures with the U.S., suggesting similar demand for accessibility services [8].
+Over the past decade, many of these countries have enacted regulations to support inclusivity, such as the European Accessibility Act (2019) [9], the Accessible Canada Act (2019) [10], and Australia’s Disability Discrimination Act (1992) [11]. These policies have driven significant growth in the demand for sign language interpretation services across public and private sectors.
+Broader awareness of the deaf community's needs, alongside the rapid adoption of video-based technologies across industries like healthcare, education, and corporate communications, has further expanded the market globally [7].
+
+References
+[7] Gallaudet University. How Sign Language is Driving a Multi-Billion Dollar Inclusive Economy.
+[8] United Nations Development Programme (UNDP). Human Development Report 2024. Available at: https://hdr.undp.org/content/2024-global-multidimensional-poverty-index-mpi#/indicies/MPI
+[9] European Commission. European Accessibility Act: An Overview. Available at: https://employment-social-affairs.ec.europa.eu/policies-and-activities/social-protection-social-inclusion/persons-disabilities/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en
+[10] Government of Canada. Accessible Canada Act: Regulations and Standards. Available at: https://www.canada.ca/en/employment-social-development/programs/accessible-canada/regulations-summary-act.html
+[11] Australian Government. Disability Discrimination Act, 1992. Available at: https://www.legislation.gov.au/C2004A04426/2018-04-12/text
 
 [^gallaudet]: Gallaudet University. 2022. [How Sign Language is Driving a Multi-Billion Dollar Inclusive Economy](https://gallaudet.edu/president/how-sign-language-is-driving-a-multi-billion-dollar-inclusive-economy/).
 
