@@ -4,11 +4,19 @@ import {AboutBenefitsComponent} from './about-benefits/about-benefits.component'
 import {AboutCustomersComponent} from './about-customers/about-customers.component';
 import {AboutTeamComponent} from './about-team/about-team.component';
 import {AboutFaqComponent} from './about-faq/about-faq.component';
+import {AboutNumbersComponent} from './about-numbers/about-numbers.component';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  imports: [AboutHeroComponent, AboutBenefitsComponent, AboutCustomersComponent, AboutTeamComponent, AboutFaqComponent],
+  imports: [
+    AboutHeroComponent,
+    AboutNumbersComponent,
+    AboutBenefitsComponent,
+    AboutCustomersComponent,
+    AboutTeamComponent,
+    AboutFaqComponent,
+  ],
 })
 export class AboutComponent {}

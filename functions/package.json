@@ -29,11 +29,11 @@
     "express": "4.21.2",
     "express-async-errors": "3.1.1",
     "firebase-admin": "13.0.1",
-    "firebase-functions": "6.1.1",
+    "firebase-functions": "6.1.2",
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.76.0",
+    "openai": "4.76.1",
     "request-ip": "3.3.0"
   },
   "devDependencies": {

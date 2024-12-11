@@ -109,17 +109,17 @@
   "devDependencies": {
     "@angular-devkit/architect": "0.1900.4",
     "@angular-devkit/build-angular": "19.0.4",
-    "@angular-eslint/builder": "19.0.1",
-    "@angular-eslint/eslint-plugin": "19.0.1",
-    "@angular-eslint/eslint-plugin-template": "19.0.1",
-    "@angular-eslint/schematics": "19.0.1",
-    "@angular-eslint/template-parser": "19.0.1",
+    "@angular-eslint/builder": "19.0.2",
+    "@angular-eslint/eslint-plugin": "19.0.2",
+    "@angular-eslint/eslint-plugin-template": "19.0.2",
+    "@angular-eslint/schematics": "19.0.2",
+    "@angular-eslint/template-parser": "19.0.2",
     "@angular/cli": "19.0.4",
     "@angular/compiler-cli": "19.0.3",
     "@capacitor/assets": "3.0.5",
     "@capacitor/cli": "6.2.0",
     "@ionic/angular-server": "8.4.1",
-    "@playwright/test": "1.49.0",
+    "@playwright/test": "1.49.1",
     "@sign-mt/configuration": "git://github.com/sign/.github.git",
     "@trapezedev/project": "7.1.3",
     "@types/dom-mediacapture-transform": "0.1.10",
@@ -154,7 +154,7 @@
     "karma-jasmine-html-reporter": "2.1.0",
     "karma-safari-launcher": "1.0.0",
     "karma-spec-reporter": "0.0.36",
-    "lint-staged": "15.2.10",
+    "lint-staged": "15.2.11",
     "marked": "15.0.3",
     "node-html-parser": "6.1.13",
     "npm-license-crawler": "0.2.1",
@@ -166,6 +166,6 @@
     "tsx": "4.19.2",
     "typescript": "5.6.3",
     "webpack-bundle-analyzer": "4.10.2",
-    "zod": "3.23.8"
+    "zod": "3.24.1"
   }
 }
