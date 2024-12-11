@@ -51,6 +51,20 @@ export default withMermaid(
             ],
           },
           {
+            text: 'Technology',
+            collapsed: false,
+            items: [
+              {
+                text: 'Our Approach',
+                link: '/docs/technology/introduction',
+              },
+              {
+                text: 'Reviews & Awards',
+                link: '/docs/technology/awards',
+              },
+            ],
+          },
+          {
             text: 'Fact Sheets',
             collapsed: false,
             items: [
