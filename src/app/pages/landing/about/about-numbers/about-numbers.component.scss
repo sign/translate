@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 h2 {
   text-align: center;
@@ -8,11 +8,11 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{breakpoints.$breakpoint-lt-sm} {
     grid-template-columns: 1fr;
   }
 }
