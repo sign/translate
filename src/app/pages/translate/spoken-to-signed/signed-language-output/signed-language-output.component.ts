@@ -21,7 +21,7 @@ import {TranslocoPipe} from '@ngneat/transloco';
 import {AsyncPipe} from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {addIcons} from 'ionicons';
-import {downloadOutline, shareOutline} from 'ionicons/icons';
+import {downloadOutline, shareOutline, shareSocialOutline} from 'ionicons/icons';
 
 @Component({
   selector: 'app-signed-language-output',
@@ -61,7 +61,7 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
 
     this.isSharingSupported = Capacitor.isNativePlatform() || ('navigator' in globalThis && 'share' in navigator);
 
-    addIcons({downloadOutline, shareOutline});
+    addIcons({downloadOutline, shareOutline, shareSocialOutline});
   }
 
   ngOnInit(): void {
