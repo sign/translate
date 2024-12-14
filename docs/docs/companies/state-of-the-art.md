@@ -6,10 +6,49 @@ Therefore, this document aims to provide a high-level overview of the current st
 
 ## Spoken to Signed Translation
 
+### Video Generation Models
+
+#### OpenAI: [Sora](https://sora.com) (2024/12/14)
+
+:::info Prompt
+Sign language interpreter, green screen background, signing the American Sign Language sign for "House".
+:::
+:::tip Settings
+
+- Aspect ratio: 1:1
+- Resolution: 480p
+- Duration: 5 seconds
+- Quantity: 2
+  :::
+
+| Video 1                                                            | Video 2                                                            |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| ![Sora Video 1 Generated using Prompt](examples/sora/house-1.webp) | ![Sora Video 2 Generated using Prompt](examples/sora/house-2.webp) |
+
+These examples show that the model is not able to generate a valid representation of the sign for "House".
+
+However, if we ask the model to generate a specific movement (using [signwriting-description](https://github.com/sign-language-processing/signwriting-description)),
+rather than a translation, the resulting motion seems to follow the description better.
+Here is the prompt for "Hello" in American Sign Language:
+
+:::info Prompt
+Sign language interpreter, green screen background, performing an American Sign Language sign.
+With your dominant hand open, touch your forehead and move your hand away, palm facing out.
+:::
+
+| Video 1                                                            | Video 2                                                            |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| ![Sora Video 1 Generated using Prompt](examples/sora/hello-1.webp) | ![Sora Video 2 Generated using Prompt](examples/sora/hello-2.webp) |
+
+These results are more promising, as the model seems to follow the instructions. However, it seems like the instructions are under-specified,
+and that the resulting videos are not a valid representation of the sign for "Hello".
+
+### Image Generation Models
+
 While video generation models are still in the horizon, image generation models are already mature.
 Thus, we start by testing image generation models to generate an image of a sign.
 
-### OpenAI: [DALL-E 3](https://openai.com/index/dall-e-3/) via ChatGPT 4o
+#### OpenAI: [DALL-E 3](https://openai.com/index/dall-e-3/) via ChatGPT 4o (2024/12/08)
 
 :::tip ChatGPT 4o Prompt
 Sign language interpreter, green screen background, signing the American Sign Language sign for "House".
@@ -25,7 +64,7 @@ A professional sign language interpreter signing the American Sign Language (ASL
 The generated image is not a valid representation of the sign for "House".
 The hands are with the wrong hand shapes, and they are not in the correct positions.
 
-### StabilityAI: [Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large)
+#### StabilityAI: [Stable Diffusion 3.5 Large](https://huggingface.co/stabilityai/stable-diffusion-3.5-large) (2024/12/08)
 
 :::info Prompt
 Sign language interpreter, green screen background, signing the American Sign Language sign for "House".
@@ -47,7 +86,7 @@ OpenAI does not currently support video inputs.
 Meta is conducting research on signed language translation, but their models are not publicly available.[^privacy-aware]
 [^privacy-aware]: Rust et al. 2024. [Towards Privacy-Aware Sign Language Translation at Scale](https://arxiv.org/abs/2402.09611).
 
-### Google
+### Google (2024/12/08)
 
 Google is conducting research on signed language translation, but their models are not publicly available.[^scaling-slt]
 [^scaling-slt]: Zhang et al. 2024. [Scaling Sign Language Translation](https://arxiv.org/abs/2407.11855).
