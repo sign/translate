@@ -1,20 +1,29 @@
-import {Component, OnInit} from '@angular/core';
-import {TranslocoService} from '@ngneat/transloco';
+import {Component, inject, OnInit} from '@angular/core';
+import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {IonIcon} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {chevronBack, chevronForward} from 'ionicons/icons';
 
 @Component({
   selector: 'app-about-direction',
   templateUrl: './about-direction.component.html',
   styleUrls: ['./about-direction.component.scss'],
+  imports: [IonIcon, TranslocoDirective],
 })
 export class AboutDirectionComponent extends BaseComponent implements OnInit {
+  private transloco = inject(TranslocoService);
+  private domSanitizer = inject(DomSanitizer);
+
   iOSScreenshot: SafeUrl;
   androidScreenshot: SafeUrl;
 
-  constructor(private transloco: TranslocoService, private domSanitizer: DomSanitizer) {
+  constructor() {
     super();
+
+    addIcons({chevronBack, chevronForward});
   }
 
   ngOnInit() {

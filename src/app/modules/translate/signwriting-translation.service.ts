@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {catchError, from, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {AssetsService} from '../../core/services/assets/assets.service';
@@ -11,11 +11,12 @@ type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
   providedIn: 'root',
 })
 export class SignWritingTranslationService {
+  private http = inject(HttpClient);
+  private assets = inject(AssetsService);
+
   worker: ComlinkWorkerInterface;
 
   loadedModel: string;
-
-  constructor(private http: HttpClient, private assets: AssetsService) {}
 
   async initWorker() {
     if (this.worker) {

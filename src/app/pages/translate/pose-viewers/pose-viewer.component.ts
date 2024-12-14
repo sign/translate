@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, inject, OnDestroy, OnInit, viewChild} from '@angular/core';
 import {BaseComponent} from '../../../components/base/base.component';
 import {fromEvent, Subscription} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
@@ -13,7 +13,9 @@ import {isChrome} from '../../../core/constants';
   styles: [],
 })
 export abstract class BasePoseViewerComponent extends BaseComponent implements OnInit, OnDestroy {
-  @ViewChild('poseViewer') poseEl: ElementRef<HTMLPoseViewerElement>;
+  protected store = inject(Store);
+
+  readonly poseEl = viewChild<ElementRef<HTMLPoseViewerElement>>('poseViewer');
 
   background: string = '';
 
@@ -31,10 +33,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   frameIndex = 0;
 
   static isCustomElementDefined = false;
-
-  protected constructor(protected store: Store) {
-    super();
-  }
 
   async ngOnInit() {
     // Some browsers videos can't have a transparent background
@@ -75,7 +73,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   async fps() {
-    const pose = await this.poseEl.nativeElement.getPose();
+    const pose = await this.poseEl().nativeElement.getPose();
     return pose.body.fps;
   }
 
@@ -131,7 +129,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     );
     this.mediaSubscriptions.push(stopEvent.subscribe());
 
-    const duration = this.poseEl.nativeElement.duration * 1000;
+    const duration = this.poseEl().nativeElement.duration * 1000;
     this.mediaRecorder.start(duration);
   }
 

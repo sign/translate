@@ -1,17 +1,17 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {AppNgxsModule} from '../../../../core/modules/ngxs/ngxs.module';
 import {AvatarPoseViewerComponent} from './avatar-pose-viewer.component';
+import {SettingsState} from '../../../../modules/settings/settings.state';
+import {ngxsConfig} from '../../../../app.config';
+import {provideStore} from '@ngxs/store';
 
 describe('AvatarPoseViewerComponent', () => {
   let component: AvatarPoseViewerComponent;
   let fixture: ComponentFixture<AvatarPoseViewerComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AvatarPoseViewerComponent],
-      imports: [AppNgxsModule],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [AvatarPoseViewerComponent],
+      providers: [provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
   });
 

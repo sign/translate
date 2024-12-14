@@ -2,27 +2,14 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {AboutComponent} from './about.component';
-import {AboutHeroComponent} from './about-hero/about-hero.component';
-import {AboutDirectionComponent} from './about-direction/about-direction.component';
-import {StoresComponent} from '../../../components/stores/stores.component';
+import {provideStore} from '@ngxs/store';
+import {SettingsState} from '../../../modules/settings/settings.state';
+import {ngxsConfig} from '../../../app.config';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {AboutAppearanceComponent} from './about-appearance/about-appearance.component';
-import {AboutBenefitsComponent} from './about-benefits/about-benefits.component';
-import {AboutApiComponent} from './about-api/about-api.component';
-import {AppNgxsModule} from '../../../core/modules/ngxs/ngxs.module';
-import {SettingsPageModule} from '../../settings/settings.module';
-import {IonicModule} from '@ionic/angular';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatTabsModule} from '@angular/material/tabs';
-import {AboutObjectivesComponent} from './about-objectives/about-objectives.component';
-import {AboutFaqComponent} from './about-faq/about-faq.component';
-import {AboutCustomersComponent} from './about-customers/about-customers.component';
-import {AboutTeamComponent} from './about-team/about-team.component';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {AboutPricingComponent} from './about-pricing/about-pricing.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import {LazyMapComponent} from './lazy-map/lazy-map.component';
-import {AboutNumbersComponent} from './about-numbers/about-numbers.component';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {provideRouter} from '@angular/router';
+import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -30,31 +17,13 @@ describe('AboutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [
-        AboutComponent,
-        AboutHeroComponent,
-        AboutAppearanceComponent,
-        AboutObjectivesComponent,
-        AboutFaqComponent,
-        AboutCustomersComponent,
-        AboutTeamComponent,
-        AboutBenefitsComponent,
-        AboutDirectionComponent,
-        AboutPricingComponent,
-        AboutApiComponent,
-        StoresComponent,
-        LazyMapComponent,
-      ],
-      imports: [
-        AboutNumbersComponent,
-        AppTranslocoTestingModule,
-        MatTooltipModule,
-        MatTabsModule,
-        IonicModule.forRoot(),
-        NoopAnimationsModule,
-        AppNgxsModule,
-        SettingsPageModule,
-        ReactiveFormsModule,
+      imports: [AppTranslocoTestingModule, AboutComponent],
+      providers: [
+        provideRouter([]),
+        provideIonicAngular(),
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState], ngxsConfig),
       ],
     }).compileComponents();
   });

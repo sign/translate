@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 #direction-grid {
   display: grid;
@@ -12,7 +12,7 @@
 
   max-width: 1920px;
 
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     grid-template-areas:
       'title title'
       'img1 img2';

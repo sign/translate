@@ -2,21 +2,17 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {TranslateComponent} from './translate.component';
-import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../core/modules/ngxs/ngxs.module';
-import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {LanguageSelectorComponent} from './language-selector/language-selector.component';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {provideStore, Store} from '@ngxs/store';
 import {TranslateState} from '../../modules/translate/translate.state';
 import {SettingsState} from '../../modules/settings/settings.state';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {TranslocoService} from '@ngneat/transloco';
-import {RouterTestingModule} from '@angular/router/testing';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
-import {provideHttpClientTesting} from '@angular/common/http/testing';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
+import {ngxsConfig} from '../../app.config';
+import {provideRouter} from '@angular/router';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('TranslateComponent', () => {
   let store: Store;
@@ -25,17 +21,13 @@ describe('TranslateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TranslateComponent, LanguageSelectorComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [
-        AppTranslocoTestingModule,
-        MatTabsModule,
-        MatTooltipModule,
-        NoopAnimationsModule,
-        NgxsModule.forRoot([SettingsState, TranslateState, VideoState], ngxsConfig),
-        RouterTestingModule,
+      imports: [AppTranslocoTestingModule, NoopAnimationsModule, TranslateComponent],
+      providers: [
+        provideRouter([]),
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState, TranslateState, VideoState], ngxsConfig),
       ],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
   });
 

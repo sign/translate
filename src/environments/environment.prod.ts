@@ -1,5 +1,3 @@
-import type {InitialNavigation} from '@angular/router';
-
 export const environment = {
   production: true,
   firebase: {
@@ -12,5 +10,4 @@ export const environment = {
     measurementId: 'G-1LXY5W5Z9H',
   },
   reCAPTCHAKey: '6Ldsxb8oAAAAAGyUZbyd0QruivPSudqAWFygR-4t',
-  initialNavigation: 'enabledBlocking' as InitialNavigation,
 };

@@ -2,11 +2,15 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {UploadComponent} from './upload.component';
-import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {provideStore, Store} from '@ngxs/store';
+import {ngxsConfig} from '../../../../app.config';
 import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions';
-import {IonicModule} from '@ionic/angular';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {TranslateState} from '../../../../modules/translate/translate.state';
+import {provideHttpClientTesting} from '@angular/common/http/testing';
+import {provideHttpClient} from '@angular/common/http';
+import {SettingsState} from '../../../../modules/settings/settings.state';
 import createSpy = jasmine.createSpy;
 
 function createFileFromMockFile(name: string, body: string, mimeType: string): File {
@@ -23,8 +27,13 @@ describe('UploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UploadComponent],
-      imports: [AppTranslocoTestingModule, IonicModule.forRoot(), NgxsModule.forRoot([], ngxsConfig)],
+      imports: [AppTranslocoTestingModule, UploadComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideIonicAngular(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
+      ],
     }).compileComponents();
   });
 

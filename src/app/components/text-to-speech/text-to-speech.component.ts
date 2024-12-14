@@ -1,9 +1,15 @@
 import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {addIcons} from 'ionicons';
+import {stopCircleOutline, volumeMediumOutline, volumeMuteOutline} from 'ionicons/icons';
+import {TranslocoDirective} from '@ngneat/transloco';
 
 @Component({
   selector: 'app-text-to-speech',
   templateUrl: './text-to-speech.component.html',
   styleUrls: ['./text-to-speech.component.scss'],
+  imports: [MatTooltipModule, IonButton, IonIcon, TranslocoDirective],
 })
 export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   @Input() lang = 'en';
@@ -17,6 +23,10 @@ export class TextToSpeechComponent implements OnInit, OnDestroy, OnChanges {
   speech: SpeechSynthesisUtterance = 'SpeechSynthesisUtterance' in globalThis ? new SpeechSynthesisUtterance() : null;
 
   private listeners: {[key: string]: EventListener} = {};
+
+  constructor() {
+    addIcons({stopCircleOutline, volumeMediumOutline, volumeMuteOutline});
+  }
 
   ngOnInit(): void {
     if (!this.speech) {

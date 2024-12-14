@@ -13,8 +13,7 @@ describe('LicensesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LicensesComponent],
-      imports: [MatTreeModule, CdkTreeModule],
+      imports: [MatTreeModule, CdkTreeModule, LicensesComponent],
       providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 

@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 .cards-container {
   border-radius: 14px;
@@ -15,7 +15,7 @@
       background: var(--ion-color-light);
       display: flex;
       align-items: center;
-      @media #{$breakpoint-lt-sm} {
+      @media #{breakpoints.$breakpoint-lt-sm} {
         max-width: 512px;
       }
     }

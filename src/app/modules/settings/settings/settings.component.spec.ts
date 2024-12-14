@@ -2,12 +2,10 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 
 import {SettingsComponent} from './settings.component';
-import {NgxsModule, Store} from '@ngxs/store';
+import {provideStore, Store} from '@ngxs/store';
 import {SettingsState} from '../settings.state';
-import {FormsModule} from '@angular/forms';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../app.config';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
 
 describe('SettingsComponent', () => {
   let store: Store;
@@ -16,13 +14,8 @@ describe('SettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsComponent],
-      imports: [
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-        FormsModule,
-        AppTranslocoTestingModule,
-        IonicModule.forRoot(),
-      ],
+      imports: [AppTranslocoTestingModule, SettingsComponent],
+      providers: [provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
   });
 

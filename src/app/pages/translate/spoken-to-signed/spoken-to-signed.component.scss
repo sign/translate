@@ -1,4 +1,4 @@
-@import '../../../../theme/variables';
+@use '../../../../theme/breakpoints' as breakpoints;
 
 :host {
   display: grid;
@@ -6,7 +6,7 @@
   grid-template-areas: 'spoken signwriting signed';
   grid-template-columns: auto 100px 50%;
 
-  @media #{$breakpoint-lt-sm} {
+  @media #{breakpoints.$breakpoint-lt-sm} {
     grid-template-areas: 'signed signed' 'spoken signwriting';
     grid-template-columns: auto 100px;
 
@@ -21,7 +21,7 @@
 }
 
 app-sign-writing {
-  @media #{$breakpoint-lt-sm} {
+  @media #{breakpoints.$breakpoint-lt-sm} {
     border: none !important;
     height: 195px;
   }

@@ -1,9 +1,21 @@
 import {Component} from '@angular/core';
+import {
+  IonBadge,
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-about-customers',
   templateUrl: './about-customers.component.html',
   styleUrls: ['./about-customers.component.scss'],
+  imports: [IonList, IonBadge, IonItem, IonLabel, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonIcon],
 })
 export class AboutCustomersComponent {
   activeCustomer = 0;

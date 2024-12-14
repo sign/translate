@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 :host {
   background-color: white;
@@ -6,7 +6,7 @@
   position: relative;
   aspect-ratio: 1;
 
-  @media #{$breakpoint-gt-xs} {
+  @media #{breakpoints.$breakpoint-gt-xs} {
     background-color: #f5f5f5;
   }
 

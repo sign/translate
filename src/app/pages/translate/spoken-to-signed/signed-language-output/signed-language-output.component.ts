@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
@@ -12,13 +12,38 @@ import {
 import {BaseComponent} from '../../../../components/base/base.component';
 import {Capacitor} from '@capacitor/core';
 import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
+import {ViewerSelectorComponent} from '../../pose-viewers/viewer-selector/viewer-selector.component';
+import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
+import {AvatarPoseViewerComponent} from '../../pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
+import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
+import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
+import {TranslocoPipe} from '@ngneat/transloco';
+import {AsyncPipe} from '@angular/common';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {addIcons} from 'ionicons';
+import {downloadOutline, shareOutline, shareSocialOutline} from 'ionicons/icons';
 
 @Component({
   selector: 'app-signed-language-output',
   templateUrl: './signed-language-output.component.html',
   styleUrls: ['./signed-language-output.component.scss'],
+  imports: [
+    IonSpinner,
+    IonButton,
+    ViewerSelectorComponent,
+    AvatarPoseViewerComponent,
+    SkeletonPoseViewerComponent,
+    HumanPoseViewerComponent,
+    TranslocoPipe,
+    AsyncPipe,
+    MatTooltipModule,
+    IonIcon,
+  ],
 })
 export class SignedLanguageOutputComponent extends BaseComponent implements OnInit {
+  private store = inject(Store);
+  private domSanitizer = inject(DomSanitizer);
+
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<string>;
   video$!: Observable<string>;
@@ -27,7 +52,7 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   safeVideoUrl: SafeUrl;
   isSharingSupported: boolean;
 
-  constructor(private store: Store, private domSanitizer: DomSanitizer) {
+  constructor() {
     super();
 
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
@@ -35,6 +60,8 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
 
     this.isSharingSupported = Capacitor.isNativePlatform() || ('navigator' in globalThis && 'share' in navigator);
+
+    addIcons({downloadOutline, shareOutline, shareSocialOutline});
   }
 
   ngOnInit(): void {

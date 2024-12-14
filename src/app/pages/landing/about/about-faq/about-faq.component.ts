@@ -1,9 +1,11 @@
 import {Component} from '@angular/core';
+import {IonAccordion, IonAccordionGroup, IonItem, IonLabel} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-about-faq',
   templateUrl: './about-faq.component.html',
   styleUrls: ['./about-faq.component.scss'],
+  imports: [IonAccordionGroup, IonAccordion, IonItem, IonLabel],
 })
 export class AboutFaqComponent {
   questions = [

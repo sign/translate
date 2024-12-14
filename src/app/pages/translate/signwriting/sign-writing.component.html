@@ -1,6 +1,6 @@
 @if (signs) {
 <div id="signs">
-  @for (sign of signs; track sign) {
+  @for (sign of signs; track sign.fsw) {
   <fsw-sign [attr.sign]="sign.fsw" [matTooltip]="sign.description" (dblclick)="describeSign(sign)"></fsw-sign>
   }
 </div>

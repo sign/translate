@@ -1,10 +1,10 @@
 import {TestBed} from '@angular/core/testing';
-import {NgxsModule, Store} from '@ngxs/store';
+import {provideStore, Store} from '@ngxs/store';
 import {VideoState, VideoStateModel} from './video.state';
 import {StartCamera, StopVideo} from './video.actions';
 import {NavigatorService} from '../../../../services/navigator/navigator.service';
 import {firstValueFrom} from 'rxjs';
-import {ngxsConfig} from '../../ngxs.module';
+import {ngxsConfig} from '../../../../../app.config';
 
 describe('VideoState', () => {
   let store: Store;
@@ -31,8 +31,8 @@ describe('VideoState', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [NgxsModule.forRoot([VideoState], ngxsConfig)],
-      providers: [NavigatorService],
+      imports: [],
+      providers: [provideStore([VideoState], ngxsConfig), NavigatorService],
     });
 
     mockCamera = new MediaStream();

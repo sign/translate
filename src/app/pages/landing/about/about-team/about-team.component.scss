@@ -1,4 +1,4 @@
-@import '../../../../../theme/variables';
+@use '../../../../../theme/breakpoints' as breakpoints;
 
 .container {
   text-align: center;
@@ -13,7 +13,7 @@ ion-card {
   max-width: 280px;
   text-align: center;
   border-radius: 16px;
-  @media #{$breakpoint-lt-md} {
+  @media #{breakpoints.$breakpoint-lt-md} {
     margin-left: auto;
     margin-right: auto;
   }

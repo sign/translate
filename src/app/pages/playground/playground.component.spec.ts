@@ -1,14 +1,12 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {PlaygroundComponent} from './playground.component';
-import {Store} from '@ngxs/store';
-import {AppNgxsModule} from '../../core/modules/ngxs/ngxs.module';
+import {provideStore, Store} from '@ngxs/store';
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
 import {TranslocoService} from '@ngneat/transloco';
-import {IonicModule} from '@ionic/angular';
-import {SettingsModule} from '../../modules/settings/settings.module';
-import {VideoModule} from '../../components/video/video.module';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {ngxsConfig} from '../../app.config';
 
 describe('PlaygroundComponent', () => {
   let component: PlaygroundComponent;
@@ -17,8 +15,8 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PlaygroundComponent],
-      imports: [AppTranslocoTestingModule, AppNgxsModule, IonicModule.forRoot(), SettingsModule, VideoModule],
+      imports: [AppTranslocoTestingModule, PlaygroundComponent],
+      providers: [provideStore([], ngxsConfig), provideIonicAngular()],
     }).compileComponents();
   });
 

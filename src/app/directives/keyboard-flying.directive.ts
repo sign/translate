@@ -1,5 +1,5 @@
 import {DOCUMENT} from '@angular/common';
-import {Directive, ElementRef, Inject, OnDestroy, OnInit} from '@angular/core';
+import {Directive, ElementRef, inject, OnDestroy, OnInit} from '@angular/core';
 import {Capacitor, PluginListenerHandle} from '@capacitor/core';
 import {Keyboard, KeyboardResize} from '@capacitor/keyboard';
 import {Animation, AnimationController} from '@ionic/angular';
@@ -8,6 +8,10 @@ import {Animation, AnimationController} from '@ionic/angular';
   selector: '[appKeyboardFlying]',
 })
 export class KeyboardFlyingDirective implements OnInit, OnDestroy {
+  private document = inject<Document>(DOCUMENT);
+  private elementReference = inject<ElementRef<HTMLElement>>(ElementRef);
+  private animationController = inject(AnimationController);
+
   // This class intends to fix the input shows only after the keyboard is shown fully
   // Instead, we animate the input to fly up with the keyboard roughly
   // Issues:
@@ -22,11 +26,9 @@ export class KeyboardFlyingDirective implements OnInit, OnDestroy {
 
   private resizeModeBackup?: KeyboardResize;
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private elementReference: ElementRef<HTMLElement>,
-    private animationController: AnimationController
-  ) {
+  constructor() {
+    const elementReference = this.elementReference;
+
     // https://gist.github.com/jondot/1317ee27bab54c482e87
     this.animation = this.animationController
       .create()

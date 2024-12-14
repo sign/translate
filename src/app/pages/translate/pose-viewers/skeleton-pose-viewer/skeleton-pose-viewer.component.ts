@@ -1,29 +1,20 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, Input} from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
-import {Store} from '@ngxs/store';
-import {MediaMatcher} from '@angular/cdk/layout';
 import {PlayableVideoEncoder} from '../playable-video-encoder';
 
 @Component({
   selector: 'app-skeleton-pose-viewer',
   templateUrl: './skeleton-pose-viewer.component.html',
   styleUrls: ['./skeleton-pose-viewer.component.scss'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
 
-  colorSchemeMedia!: MediaQueryList;
-
-  constructor(store: Store, private mediaMatcher: MediaMatcher) {
-    super(store);
-
-    this.colorSchemeMedia = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
-  }
-
   ngAfterViewInit(): void {
-    const pose = this.poseEl.nativeElement;
+    const pose = this.poseEl().nativeElement;
 
     fromEvent(pose, 'firstRender$')
       .pipe(
@@ -71,7 +62,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
   }
 
   pauseInvisible() {
-    const pose = this.poseEl.nativeElement;
+    const pose = this.poseEl().nativeElement;
 
     // TODO: this should be on the current element, not document
     fromEvent(document, 'visibilitychange')

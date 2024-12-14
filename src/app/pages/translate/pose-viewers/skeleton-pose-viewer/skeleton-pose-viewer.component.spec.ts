@@ -5,7 +5,7 @@ import {SkeletonPoseViewerComponent} from './skeleton-pose-viewer.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {NgxsModule} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../../app.config';
 
 describe('SkeletonPoseViewerComponent', () => {
   let component: SkeletonPoseViewerComponent;
@@ -13,8 +13,7 @@ describe('SkeletonPoseViewerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SkeletonPoseViewerComponent],
-      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig)],
+      imports: [NgxsModule.forRoot([SettingsState], ngxsConfig), SkeletonPoseViewerComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });

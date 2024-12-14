@@ -9,7 +9,7 @@
     <ion-list>
       @for (customer of customers; track customer.key; let idx = $index) {
       <ion-item (click)="activeCustomer = idx" [class.selected]="activeCustomer === idx" button="true">
-        <ion-icon [src]="logoPath(customer.key)" slot="end"></ion-icon>
+        <ion-icon [src]="logoPath(customer.key)" slot="end" />
 
         <ion-label>{{ customer.sector }}</ion-label>
       </ion-item>
@@ -20,7 +20,7 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title>
-          <ion-icon [src]="logoPath(customers[activeCustomer].key)"></ion-icon>
+          <ion-icon [src]="logoPath(customers[activeCustomer].key)" />
           <h2>{{ customers[activeCustomer].company }}</h2>
         </ion-card-title>
         <ion-card-subtitle>{{ customers[activeCustomer].description }}</ion-card-subtitle>

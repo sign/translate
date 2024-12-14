@@ -4,13 +4,12 @@ import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {SignWritingComponent} from './sign-writing.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {defineCustomElements as defineCustomElementsSW} from '@sutton-signwriting/sgnw-components/loader';
-import {NgxsModule, Store} from '@ngxs/store';
-import {ngxsConfig} from '../../../core/modules/ngxs/ngxs.module';
+import {provideStore, Store} from '@ngxs/store';
+import {ngxsConfig} from '../../../app.config';
 import {TranslateState, TranslateStateModel} from '../../../modules/translate/translate.state';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {provideHttpClient} from '@angular/common/http';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {SettingsState} from '../../../modules/settings/settings.state';
-import {provideHttpClient} from '@angular/common/http';
 
 describe('SignWritingComponent', () => {
   let component: SignWritingComponent;
@@ -26,10 +25,13 @@ describe('SignWritingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignWritingComponent],
+      imports: [SignWritingComponent],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideStore([SettingsState, TranslateState], ngxsConfig),
+      ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [NgxsModule.forRoot([SettingsState, TranslateState], ngxsConfig), MatTooltipModule],
-      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     store = TestBed.inject(Store);

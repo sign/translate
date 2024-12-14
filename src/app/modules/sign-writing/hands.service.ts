@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {SignWritingStateModel} from './sign-writing.state';
 import {SignWritingService} from './sign-writing.service';
 import type {LayersModel} from '@tensorflow/tfjs-layers';
@@ -25,15 +25,13 @@ export interface HandStateModel {
   providedIn: 'root',
 })
 export class HandsService {
+  private poseNormalization = inject(PoseNormalizationService);
+  private tf = inject(TensorflowService);
+  private three = inject(ThreeService);
+
   // Need two models because they are stateful
   leftHandSequentialModel: LayersModel;
   rightHandSequentialModel: LayersModel;
-
-  constructor(
-    private poseNormalization: PoseNormalizationService,
-    private tf: TensorflowService,
-    private three: ThreeService
-  ) {}
 
   async loadModel(): Promise<void> {
     await Promise.all([this.tf.load(), this.three.load()]);

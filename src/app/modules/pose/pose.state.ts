@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {PoseService} from './pose.service';
 import {LoadPoseEstimationModel, PoseVideoFrame, StoreFramePose} from './pose.actions';
@@ -36,7 +36,8 @@ const initialState: PoseStateModel = {
   defaults: initialState,
 })
 export class PoseState implements NgxsOnInit {
-  constructor(private poseService: PoseService, private store: Store) {}
+  private poseService = inject(PoseService);
+  private store = inject(Store);
 
   ngxsOnInit(): void {
     this.poseService.onResults(results => {

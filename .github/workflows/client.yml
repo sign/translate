@@ -50,7 +50,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
-        run: bun run prerender
+        run: bun run build
 
       - name: Generate Sitemap
         run: bun run generate:sitemap

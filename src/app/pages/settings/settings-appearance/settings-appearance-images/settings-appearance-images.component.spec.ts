@@ -1,13 +1,13 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SettingsAppearanceImagesComponent} from './settings-appearance-images.component';
-import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
-import {IonicModule} from '@ionic/angular';
-import {NgxsModule} from '@ngxs/store';
+
+import {provideStore} from '@ngxs/store';
 import {SettingsState} from '../../../../modules/settings/settings.state';
-import {ngxsConfig} from '../../../../core/modules/ngxs/ngxs.module';
+import {ngxsConfig} from '../../../../app.config';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import {provideIonicAngular} from '@ionic/angular/standalone';
+import {AppTranslocoTestingModule} from '../../../../core/modules/transloco/transloco-testing.module';
 
 describe('SettingsAppearanceImagesComponent', () => {
   let component: SettingsAppearanceImagesComponent;
@@ -15,13 +15,8 @@ describe('SettingsAppearanceImagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SettingsAppearanceImagesComponent],
-      imports: [
-        AppTranslocoTestingModule,
-        MatTooltipModule,
-        IonicModule.forRoot(),
-        NgxsModule.forRoot([SettingsState], ngxsConfig),
-      ],
+      imports: [AppTranslocoTestingModule, SettingsAppearanceImagesComponent],
+      providers: [provideIonicAngular(), provideStore([SettingsState], ngxsConfig)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsAppearanceImagesComponent);

@@ -1,4 +1,4 @@
-@import '../../../../theme/variables';
+@use '../../../../theme/breakpoints' as breakpoints;
 
 :host {
   padding: 34px 0;

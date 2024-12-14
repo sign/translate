@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Action, NgxsOnInit, State, StateContext, Store} from '@ngxs/store';
 import {DetectorService} from './detector.service';
 import {DetectSigning} from './detector.actions';
@@ -22,11 +22,14 @@ const initialState: DetectorStateModel = {
   defaults: initialState,
 })
 export class DetectorState implements NgxsOnInit {
+  private store = inject(Store);
+  private detector = inject(DetectorService);
+
   detectSign = false;
   pose$: Observable<EstimatedPose>;
   detectSign$: Observable<boolean>;
 
-  constructor(private store: Store, private detector: DetectorService) {
+  constructor() {
     this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
     this.detectSign$ = this.store.select<boolean>(state => state.settings.detectSign);
   }

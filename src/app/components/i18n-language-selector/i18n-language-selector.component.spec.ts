@@ -12,8 +12,7 @@ describe('LanguageSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [I18NLanguageSelectorComponent],
-      imports: [AppTranslocoTestingModule, RouterModule.forRoot([])],
+      imports: [AppTranslocoTestingModule, RouterModule.forRoot([]), I18NLanguageSelectorComponent],
     }).compileComponents();
   });
 
