@@ -75,6 +75,10 @@ Sign language interpreter, green screen background, signing the American Sign La
 The generated image is not a valid representation of the sign for "House".
 The hands are with the wrong hand shapes, and they are not in the correct positions.
 
+#### Google DeepMind: [Imagen 3](https://deepmind.google/technologies/imagen-3/) (2024/12/05)
+
+The model refuses to generate images of sign language signs.
+
 ## Signed to Spoken Translation
 
 ### OpenAI
@@ -106,3 +110,11 @@ Responses:
 3. The woman in the video signs the following: "Hello, my name is `[name]`. Nice to meet you."
 4. The signer is saying: "Excuse me. Do you mind if I sit here?"
 5. The signer is saying: "Excuse me. Do you have a second? Do you mind if I ask you a question?"
+
+Using Gemini 2.0 Flash (2024/12/15), the model is not able to generate better translations:
+
+1. 0:00-0:03: "Don't understand." ...
+2. ... "Stop... I am thinking about this... I'm not sure." ...
+3. ... the English translation is: Stop, I think I'm done?
+4. ... English Translation: "I don't know."
+5. ... In English, she is conveying the idea of "I don't understand."

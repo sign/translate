@@ -2,7 +2,6 @@ import {AfterViewInit, Component, inject} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
-import {SetSpokenLanguageText} from './modules/translate/translate.actions';
 import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
@@ -10,6 +9,7 @@ import {Capacitor} from '@capacitor/core';
 import {languageCodeNormalizer} from './core/modules/transloco/languages';
 import {Meta} from '@angular/platform-browser';
 import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
+import {getUrlParams} from './core/helpers/url';
 
 @Component({
   selector: 'app-root',
@@ -24,13 +24,12 @@ export class AppComponent implements AfterViewInit {
   private router = inject(Router);
   private store = inject(Store);
 
-  urlParams = this.getUrlParams();
+  urlParams = getUrlParams();
 
   constructor() {
     this.listenLanguageChange();
     this.logRouterNavigation();
     this.checkURLEmbedding();
-    this.checkURLText();
     this.setPageKeyboardClass();
   }
 
@@ -63,13 +62,6 @@ export class AppComponent implements AfterViewInit {
         })
       )
       .subscribe();
-  }
-
-  getUrlParams() {
-    if (!('window' in globalThis)) {
-      return new URLSearchParams();
-    }
-    return new URLSearchParams(window.location.search);
   }
 
   listenLanguageChange() {
@@ -108,37 +100,6 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  checkURLText(): void {
-    const urlParam = this.urlParams.get('text');
-    if (urlParam !== null) {
-      this.store.dispatch(new SetSpokenLanguageText(urlParam));
-    }
-  }
-
-  // setPageSizeClass() {
-  //   // const html = document.documentElement;
-  //   // const breakpoints = [
-  //   //   {size: 'page-xs', query: 'screen and (max-width: 599px)'},
-  //   //   {size: 'page-sm', query: 'screen and (min-width: 600px) and (max-width: 959px)'},
-  //   //   {size: 'page-md', query: 'screen and (min-width: 960px) and (max-width: 1279px)'},
-  //   //   {size: 'page-lg', query: 'screen and (min-width: 1280px) and (max-width: 1919px)'},
-  //   //   {size: 'page-xl', query: 'screen and (min-width: 1920px)'},
-  //   // ];
-  //   //
-  //   // for (const breakpoint of breakpoints) {
-  //   //   const match = window.matchMedia(breakpoint.query);
-  //   //   const listener = ({matches}) => {
-  //   //     if (matches) {
-  //   //       html.classList.add(breakpoint.size);
-  //   //     } else {
-  //   //       html.classList.remove(breakpoint.size);
-  //   //     }
-  //   //   };
-  //   //   match.addEventListener('change', listener);
-  //   //   listener(match);
-  //   // }
-  // }
-  //
   async setPageKeyboardClass() {
     if (!Capacitor.isNativePlatform()) {
       return;

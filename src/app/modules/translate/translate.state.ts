@@ -30,6 +30,7 @@ import type {Pose} from 'pose-format';
 import {EstimatedPose} from '../pose/pose.state';
 import {StoreFramePose} from '../pose/pose.actions';
 import {PoseService} from '../pose/pose.service';
+import {getUrlParams} from '../../core/helpers/url';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -95,9 +96,17 @@ export class TranslateState implements NgxsOnInit {
     this.pose$ = this.store.select<EstimatedPose>(state => state.pose.pose);
   }
 
-  ngxsOnInit({dispatch, patchState}: StateContext<TranslateStateModel>): any {
-    const searchParams = 'window' in globalThis ? window.location.search : '';
-    const urlParams = new URLSearchParams(searchParams);
+  ngxsOnInit(context: StateContext<TranslateStateModel>): any {
+    this.initFromUrl(context);
+
+    context.dispatch(ChangeTranslation);
+
+    // Reset video whenever viewer setting changes
+    this.poseViewerSetting$.pipe(tap(() => context.dispatch(new SetSignedLanguageVideo(null)))).subscribe();
+  }
+
+  initFromUrl({dispatch, patchState}: StateContext<TranslateStateModel>) {
+    const urlParams = getUrlParams();
     const urlSignedLanguage = urlParams.get('sil');
     if (urlSignedLanguage) {
       patchState({signedLanguage: urlSignedLanguage});
@@ -106,11 +115,10 @@ export class TranslateState implements NgxsOnInit {
     if (urlSpokenLanguage) {
       patchState({spokenLanguage: urlSpokenLanguage});
     }
-
-    dispatch(ChangeTranslation);
-
-    // Reset video whenever viewer setting changes
-    this.poseViewerSetting$.pipe(tap(() => dispatch(new SetSignedLanguageVideo(null)))).subscribe();
+    const urlTextParam = urlParams.get('text');
+    if (urlTextParam) {
+      dispatch(new SetSpokenLanguageText(urlTextParam));
+    }
   }
 
   @Action(FlipTranslationDirection)
