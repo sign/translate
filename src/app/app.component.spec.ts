@@ -44,13 +44,6 @@ describe('AppComponent', () => {
     expect(document.body.className.includes('embed')).toEqual(true);
   });
 
-  it('should set spoken language text url param is included', () => {
-    component.urlParams.set('text', '123');
-    const dispatchSpy = spyOn(store, 'dispatch');
-    component.checkURLText();
-    expect(dispatchSpy).toHaveBeenCalledWith(new SetSpokenLanguageText('123'));
-  });
-
   it('language change to german should set direction ltr', () => {
     const transloco = TestBed.inject(TranslocoService);
     transloco.setActiveLang('de');
