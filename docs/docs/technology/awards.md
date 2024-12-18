@@ -16,6 +16,10 @@ In this page, we list the awards and recognition that the technology behind sign
 
 [^kazakh-russian-review]: Imashev et al. 2024. [Comparative Analysis of Sign Language Interpreting Agents Perception: A Study of the Deaf](hhttps://aclanthology.org/2024.lrec-main.319/).
 
+- Using our technology (code, models, and app), a team from India won[^sih] the [Smart India Hackathon](https://www.sih.gov.in/).
+
+[^sih]: Prasad et al. 2024. [LinkedIn Post](https://www.linkedin.com/posts/suraj-prasad-b2290b24b_smartindiahackathon2024-indiansignlanguage-activity-7275070354627194880-fWVF/).
+
 ## 2023
 
 - Dr. Amit Moryossef (among others) received the `ACL Outstanding Paper Award` for "Considerations for Meaningful Sign Language Machine Translation"[^acl2023-award].
