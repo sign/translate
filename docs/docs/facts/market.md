@@ -19,6 +19,18 @@ This includes diverse services and sectors that support the deaf and signing com
 
 [^gallaudet]: Gallaudet University. 2022. [How Sign Language is Driving a Multi-Billion Dollar Inclusive Economy](https://gallaudet.edu/president/how-sign-language-is-driving-a-multi-billion-dollar-inclusive-economy/).
 
+To estimate the global sign language market, we assume that similarly developed nations in the Top 30 Human Development Index[^hdi] are mirroring U.S. trends, especially regarding accessiblity regulation and inclusivity.
+Among others, they have enacted the European Accessibility Act[^eu-accessiblity-act], the Accessible Canada Act (2019)[^canada-act], and Australia’s Disability Discrimination Act (1992)[^australia-act].
+The total population of these developed nations is 1.09 billion[^worldometer].
+Extrapolating from the U.S. market of **US\$ 10 billion**[^gallaudet] from a population of 345.4 million[^worldometer], the global sign language market is estimated at **US\$ 31.6 billion**. 
+
+[^hdi]: United Nations Development Programme. 2024. [Human Development Index (HDI)](https://hdr.undp.org/data-center/human-development-index).
+[^worldometer]: Worldometer. 2024. [Population by Country](https://www.worldometers.info/world-population/population-by-country/).
+[^eu-accessiblity-act]: European Commission. 2019. [European Accessibility Act: An Overview](https://employment-social-affairs.ec.europa.eu/policies-and-activities/social-protection-social-inclusion/persons-disabilities/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en).
+[^canada-act]: Government of Canada. YEAR. [Accessible Canada Act: Regulations and Standards](https://www.canada.ca/en/employment-social-development/programs/accessible-canada/regulations-summary-act.html).
+[^australia-act]: Australian Government. 1992. [Disability Discrimination Act](https://www.legislation.gov.au/C2004A04426/2018-04-12/text).
+
+
 ## Economic Impact[^who-report]
 
 :::tip
