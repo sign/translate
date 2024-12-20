@@ -16,23 +16,23 @@ Each node represents a different module or function in the pipeline, with a link
 ```mermaid
 flowchart TD
     A0[Spoken Language Audio] --> A1(Spoken Language Text)
-    A1[Spoken Language Text] --> B[<a href='https://github.com/sign/translate/issues/10'>Language Identification</a>]
-    A1 --> C(<a href='https://github.com/sign/translate/tree/master/functions/src/text-normalization'>Normalized Text</a>)
+    A1[Spoken Language Text] --> B[<a target='_blank' href='https://github.com/sign/translate/issues/10'>Language Identification</a>]
+    A1 --> C(<a target='_blank' href='https://github.com/sign/translate/tree/master/functions/src/text-normalization'>Normalized Text</a>)
     B --> C
-    C & B --> Q(<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter'>Sentence Splitter</a>)
-    Q & B --> D(<a href='https://github.com/sign-language-processing/signbank-plus'>SignWriting</a>)
-    C -.-> M(<a href='https://github.com/ZurichNLP/spoken-to-signed-translation' title='We would like to move away from glosses'>Glosses</a>)
+    C & B --> Q(<a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter'>Sentence Splitter</a>)
+    Q & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>SignWriting</a>)
+    C -.-> M(<a target='_blank' href='https://github.com/ZurichNLP/spoken-to-signed-translation' title='We would like to move away from glosses'>Glosses</a>)
     M -.-> E
-    D --> E(<a href='https://github.com/sign-language-processing/signwriting-animation'>Pose Sequence</a>)
-    D -.-> I(<a href='https://github.com/sign-language-processing/signwriting-illustration'>Illustration</a>)
-    N --> H(<a href='https://github.com/sign/translate/issues/68'>3D Avatar</a>)
-    N --> G(<a href='https://github.com/sign-language-processing/pose'>Skeleton Viewer</a>)
-    N --> F(<a href='https://github.com/sign-language-processing/pose-to-video' title='Help wanted!'>Human GAN</a>)
+    D --> E(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-animation'>Pose Sequence</a>)
+    D -.-> I(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-illustration'>Illustration</a>)
+    N --> H(<a target='_blank' href='https://github.com/sign/translate/issues/68'>3D Avatar</a>)
+    N --> G(<a target='_blank' href='https://github.com/sign-language-processing/pose'>Skeleton Viewer</a>)
+    N --> F(<a target='_blank' href='https://github.com/sign-language-processing/pose-to-video' title='Help wanted!'>Human GAN</a>)
     H & G & F --> J(Video)
     J --> K(Share Translation)
-    D -.-> L(<a href='https://github.com/sign-language-processing/signwriting-description' title='Poor performance. Help wanted!'>Description</a>)
-    O --> N(<a href='https://github.com/sign-language-processing/fluent-pose-synthesis' title='Currently skipped. Help Wanted!'>Fluent Pose Sequence</a>)
-    E --> O(<a href='https://github.com/sign-language-processing/pose-anonymization'>Pose Appearance Transfer</a>)
+    D -.-> L(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-description' title='Poor performance. Help wanted!'>Description</a>)
+    O --> N(<a target='_blank' href='https://github.com/sign-language-processing/fluent-pose-synthesis' title='Currently skipped. Help Wanted!'>Fluent Pose Sequence</a>)
+    E --> O(<a target='_blank' href='https://github.com/sign-language-processing/pose-anonymization'>Pose Appearance Transfer</a>)
 
 linkStyle default stroke:green;
 linkStyle 3,5,7 stroke:lightgreen;
@@ -110,12 +110,12 @@ flowchart TD
     A0[Upload Sign Language Video] --> A3[Video]
     A1[Camera Sign Language Video] --> A3
     A3 --> B(Pose Estimation)
-    B --> C(<a href='https://github.com/sign-language-processing/segmentation'>Segmentation</a>)
-    C & B --> D(<a href='https://github.com/sign-language-processing/transcription'>SignWriting Transcription</a>)
-    A2[Language Selector] --> E(<a href='https://github.com/sign-language-processing/signbank-plus'>Spoken Language Text</a>)
+    B --> C(<a target='_blank' href='https://github.com/sign-language-processing/segmentation'>Segmentation</a>)
+    C & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/transcription'>SignWriting Transcription</a>)
+    A2[Language Selector] --> E(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>Spoken Language Text</a>)
     D --> E
     E --> F(Spoken Language Audio)
-    E --> G(<a href='https://github.com/sign/translate/issues/19'>Share Translation</a>)
+    E --> G(<a target='_blank' href='https://github.com/sign/translate/issues/19'>Share Translation</a>)
     C -.-> H(Sign Image)
 
 
