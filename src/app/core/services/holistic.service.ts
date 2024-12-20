@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import * as holistic from '@mediapipe/holistic';
+import type * as holistic from '@mediapipe/holistic';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class MediapipeHolisticService {
   async load(): Promise<typeof holistic> {
     if (!this.importPromise) {
       this.importPromise = import(/* webpackChunkName: "@mediapipe/holistic" */ '@mediapipe/holistic').then(
-        module => (this.holistic = module)
+        module => (this.holistic = module.default)
       );
     }
 
