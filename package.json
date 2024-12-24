@@ -102,7 +102,7 @@
     "three": "0.171.0",
     "tslib": "2.8.1",
     "web-vitals": "4.2.4",
-    "webm-muxer": "5.0.2",
+    "webm-muxer": "5.0.3",
     "zone.js": "0.15.0"
   },
   "devDependencies": {
@@ -132,8 +132,8 @@
     "@types/web-app-manifest": "1.0.8",
     "@types/webgl2": "0.0.11",
     "@types/wicg-file-system-access": "2023.10.5",
-    "@typescript-eslint/eslint-plugin": "8.18.1",
-    "@typescript-eslint/parser": "8.18.1",
+    "@typescript-eslint/eslint-plugin": "8.18.2",
+    "@typescript-eslint/parser": "8.18.2",
     "browser-sync": "3.0.3",
     "deepmerge": "4.3.1",
     "dotenv": "16.4.7",

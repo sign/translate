@@ -18,6 +18,7 @@ export class TranslationService {
     'sgg',
     'ssr',
     'slf',
+    'isr',
     'ssp',
     'jos',
     'rsl-by',
