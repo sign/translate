@@ -8,5 +8,4 @@ import {IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} 
   styleUrls: ['./settings-voice-output.component.scss'],
   imports: [TranslocoDirective, TranslocoPipe, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent],
 })
-export class SettingsVoiceOutputComponent {
-}
+export class SettingsVoiceOutputComponent {}

@@ -16,7 +16,18 @@ import {
   selector: 'app-settings-feedback',
   templateUrl: './settings-feedback.component.html',
   styleUrls: ['./settings-feedback.component.scss'],
-  imports: [TranslocoDirective, TranslocoPipe, IonHeader, IonToolbar, IonTitle, IonList, IonItem, IonLabel, IonBackButton, IonButtons, IonContent],
+  imports: [
+    TranslocoDirective,
+    TranslocoPipe,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonBackButton,
+    IonButtons,
+    IonContent,
+  ],
 })
-export class SettingsFeedbackComponent {
-}
+export class SettingsFeedbackComponent {}

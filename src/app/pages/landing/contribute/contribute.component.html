@@ -9,22 +9,22 @@
 
   <div class="cards-container">
     @for (card of cards; track card) {
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>
-          <ion-icon [name]="card.icon" />
-          {{ card.title }}
-        </ion-card-title>
-        <ion-card-subtitle>{{ card.subtitle }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ card.content }}</p>
-      </ion-card-content>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <ion-icon [name]="card.icon" />
+            {{ card.title }}
+          </ion-card-title>
+          <ion-card-subtitle>{{ card.subtitle }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ card.content }}</p>
+        </ion-card-content>
 
-      <a href="{{ card.action.url }}" target="_blank">
-        <ion-button fill="clear">{{ card.action.text }}</ion-button>
-      </a>
-    </ion-card>
+        <a href="{{ card.action.url }}" target="_blank">
+          <ion-button fill="clear">{{ card.action.text }}</ion-button>
+        </a>
+      </ion-card>
     }
   </div>
 </div>

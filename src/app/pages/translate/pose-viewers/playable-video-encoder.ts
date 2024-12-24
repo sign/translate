@@ -30,7 +30,10 @@ export class PlayableVideoEncoder {
   width: number;
   height: number;
 
-  constructor(private image: ImageBitmap, private fps: number) {}
+  constructor(
+    private image: ImageBitmap,
+    private fps: number
+  ) {}
 
   static isSupported() {
     return 'VideoEncoder' in globalThis;

@@ -7,41 +7,52 @@
 
   <div class="slides">
     <swiper-container #swiper>
-      @for (slide of slides; track slide.id; let idx = $index) { @for (slide of slides; track slide) {
-      <swiper-slide>
-        <ion-card *transloco="let t; read: 'landing.about.benefits'">
-          <ion-card-content>
-            <div class="info">
-              <ion-card-title>
-                <ion-icon [name]="slide.icon" color="primary" />
-                {{ t(slide.id + '.title') }}
-              </ion-card-title>
-              <p>{{ t(slide.id + '.subtitle') }}</p>
-              <p>{{ t(slide.id + '.description') }}</p>
-            </div>
-            <div class="graphic">
-              @switch (slide.id) { @case ('real-time') {
-              <img [src]="iOSScreenshot" alt="iOS Application Screenshot" class="phone-screenshot" />
-              } @case ('multilingual') {
-              <app-lazy-map></app-lazy-map>
-              } @case ('appearance') {} @case ('open-source') {
-              <img src="assets/promotional/about/github-hero.webp" alt="GitHub Screenshot" class="github-screenshot" />
-              } @case ('offline') {} }
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </swiper-slide>
-      } }
+      @for (slide of slides; track slide.id; let idx = $index) {
+        @for (slide of slides; track slide) {
+          <swiper-slide>
+            <ion-card *transloco="let t; read: 'landing.about.benefits'">
+              <ion-card-content>
+                <div class="info">
+                  <ion-card-title>
+                    <ion-icon [name]="slide.icon" color="primary" />
+                    {{ t(slide.id + '.title') }}
+                  </ion-card-title>
+                  <p>{{ t(slide.id + '.subtitle') }}</p>
+                  <p>{{ t(slide.id + '.description') }}</p>
+                </div>
+                <div class="graphic">
+                  @switch (slide.id) {
+                    @case ('real-time') {
+                      <img [src]="iOSScreenshot" alt="iOS Application Screenshot" class="phone-screenshot" />
+                    }
+                    @case ('multilingual') {
+                      <app-lazy-map></app-lazy-map>
+                    }
+                    @case ('appearance') {}
+                    @case ('open-source') {
+                      <img
+                        src="assets/promotional/about/github-hero.webp"
+                        alt="GitHub Screenshot"
+                        class="github-screenshot" />
+                    }
+                    @case ('offline') {}
+                  }
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </swiper-slide>
+        }
+      }
     </swiper-container>
 
     <!-- Navigation Buttons -->
     <div class="horizontal-scroll">
       <div class="navigation-buttons" *transloco="let t; read: 'landing.about.benefits'">
         @for (slide of slides; track slide.id; let idx = $index) {
-        <button (click)="slideTo(idx)" [class.selected]="idx === activeSlide">
-          <ion-icon [name]="slide.icon" [color]="idx === activeSlide ? 'primary' : ''" />
-          <span>{{ t(slide.id + '.title') }}</span>
-        </button>
+          <button (click)="slideTo(idx)" [class.selected]="idx === activeSlide">
+            <ion-icon [name]="slide.icon" [color]="idx === activeSlide ? 'primary' : ''" />
+            <span>{{ t(slide.id + '.title') }}</span>
+          </button>
         }
       </div>
     </div>

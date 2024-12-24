@@ -3,54 +3,58 @@
     (selectedIndexChange)="selectLanguageIndex($event)"
     [(selectedIndex)]="selectedIndex"
     [disablePagination]="true">
-    @if (hasLanguageDetection) { @if (detectedLanguage && !language) {
-    <mat-tab>
-      <ng-template mat-tab-label>
-        {{ t('detected', {lang: langNames[detectedLanguage]}) }}
-      </ng-template>
-    </mat-tab>
-    } @else {
-    <mat-tab [label]="t('detect')"></mat-tab>
-    } } @for (lang of topLanguages; track lang) {
-    <mat-tab (select)="selectLanguage(lang)">
-      <ng-template mat-tab-label>
-        @if (flags) {
-        <app-flag-icon [country]="langCountries[lang]" [squared]="true" />
-        }
-        {{ langNames[lang] }}
-      </ng-template>
-    </mat-tab>
+    @if (hasLanguageDetection) {
+      @if (detectedLanguage && !language) {
+        <mat-tab>
+          <ng-template mat-tab-label>
+            {{ t('detected', {lang: langNames[detectedLanguage]}) }}
+          </ng-template>
+        </mat-tab>
+      } @else {
+        <mat-tab [label]="t('detect')"></mat-tab>
+      }
+    }
+    @for (lang of topLanguages; track lang) {
+      <mat-tab (select)="selectLanguage(lang)">
+        <ng-template mat-tab-label>
+          @if (flags) {
+            <app-flag-icon [country]="langCountries[lang]" [squared]="true" />
+          }
+          {{ langNames[lang] }}
+        </ng-template>
+      </mat-tab>
     }
   </mat-tab-group>
 
   <!-- Language button for small screens -->
   @if (hasLanguageDetection && detectedLanguage && !language) {
-  <ion-button
-    [matMenuTriggerFor]="signedLanguagesMenu"
-    class="menu-language-button"
-    color="primary"
-    expand="full"
-    fill="clear">
-    @if (flags) {
-    <app-flag-icon [country]="langCountries[detectedLanguage]" [squared]="true" />
-    }
-    <span class="wrap-text">{{ t('detected', {lang: langNames[detectedLanguage]}) }}</span>
-  </ion-button>
+    <ion-button
+      [matMenuTriggerFor]="signedLanguagesMenu"
+      class="menu-language-button"
+      color="primary"
+      expand="full"
+      fill="clear">
+      @if (flags) {
+        <app-flag-icon [country]="langCountries[detectedLanguage]" [squared]="true" />
+      }
+      <span class="wrap-text">{{ t('detected', {lang: langNames[detectedLanguage]}) }}</span>
+    </ion-button>
   } @else {
-  <ion-button
-    [matMenuTriggerFor]="signedLanguagesMenu"
-    class="menu-language-button"
-    color="primary"
-    expand="full"
-    fill="clear">
-    @if (language) { @if (flags) {
-    <app-flag-icon [country]="langCountries[language]" [squared]="true"></app-flag-icon>
-    }
-    <span class="wrap-text">{{ langNames[language] }}</span>
-    } @else {
-    {{ t('detect') }}
-    }
-  </ion-button>
+    <ion-button
+      [matMenuTriggerFor]="signedLanguagesMenu"
+      class="menu-language-button"
+      color="primary"
+      expand="full"
+      fill="clear">
+      @if (language) {
+        @if (flags) {
+          <app-flag-icon [country]="langCountries[language]" [squared]="true"></app-flag-icon>
+        }
+        <span class="wrap-text">{{ langNames[language] }}</span>
+      } @else {
+        {{ t('detect') }}
+      }
+    </ion-button>
   }
 
   <!-- Expand icon for large screens -->
@@ -65,16 +69,17 @@
   <mat-menu #signedLanguagesMenu class="language-selector-menu">
     <ng-template matMenuContent>
       @if (hasLanguageDetection) {
-      <button (click)="selectLanguage(null)" mat-menu-item>
-        {{ t('detect') }}
-      </button>
-      } @for (language of languages; track language) {
-      <button (click)="selectLanguage(language)" mat-menu-item>
-        @if (flags) {
-        <app-flag-icon [country]="langCountries[language]" [squared]="true"></app-flag-icon>
-        }
-        {{ langNames[language] }}
-      </button>
+        <button (click)="selectLanguage(null)" mat-menu-item>
+          {{ t('detect') }}
+        </button>
+      }
+      @for (language of languages; track language) {
+        <button (click)="selectLanguage(language)" mat-menu-item>
+          @if (flags) {
+            <app-flag-icon [country]="langCountries[language]" [squared]="true"></app-flag-icon>
+          }
+          {{ langNames[language] }}
+        </button>
       }
     </ng-template>
   </mat-menu>

@@ -13,7 +13,10 @@ export class EstimateHandShape {
 export class EstimateFaceShape {
   static readonly type = '[SignWriting - Face] Estimate Face Shape';
 
-  constructor(public landmarks: PoseLandmark[], public poseImage: HTMLCanvasElement) {}
+  constructor(
+    public landmarks: PoseLandmark[],
+    public poseImage: HTMLCanvasElement
+  ) {}
 }
 
 export class CalculateBodyFactors {

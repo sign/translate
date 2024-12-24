@@ -36,7 +36,19 @@ interface PagesGroup {
   selector: 'app-settings-menu',
   templateUrl: './settings-menu.component.html',
   styleUrls: ['./settings-menu.component.scss'],
-  imports: [TranslocoDirective, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonListHeader, IonLabel, IonNavLink, IonItem, IonIcon],
+  imports: [
+    TranslocoDirective,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonListHeader,
+    IonLabel,
+    IonNavLink,
+    IonItem,
+    IonIcon,
+  ],
 })
 export class SettingsMenuComponent {
   groups: PagesGroup[] = [

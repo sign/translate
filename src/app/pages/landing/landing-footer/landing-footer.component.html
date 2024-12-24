@@ -11,11 +11,11 @@
       <h6>{{ t('title') }}</h6>
       <ul>
         @for (page of legalPages; track page) {
-        <li>
-          <a [routerLink]="['/legal', page]" queryParamsHandling="preserve">
-            {{ t(page + '.title') }}
-          </a>
-        </li>
+          <li>
+            <a [routerLink]="['/legal', page]" queryParamsHandling="preserve">
+              {{ t(page + '.title') }}
+            </a>
+          </li>
         }
       </ul>
     </div>

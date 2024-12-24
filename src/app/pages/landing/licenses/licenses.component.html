@@ -1,12 +1,13 @@
 <ng-template #nodeTemplate let-node>
   @if (node.repository) {
-  <a [href]="node.repository" target="_blank">{{ node.name }}</a>
+    <a [href]="node.repository" target="_blank">{{ node.name }}</a>
   } @else {
-  <span>{{ node.name }}</span>
-  } @if (node.licenseUrl) {
-  <a [href]="node.licenseUrl" target="_blank">{{ node.licenses }}</a>
+    <span>{{ node.name }}</span>
+  }
+  @if (node.licenseUrl) {
+    <a [href]="node.licenseUrl" target="_blank">{{ node.licenses }}</a>
   } @else {
-  <span>{{ node.licenses }}</span>
+    <span>{{ node.licenses }}</span>
   }
 </ng-template>
 
@@ -25,7 +26,7 @@
         mat-icon-button
         matTreeNodeToggle
         [disabled]="node.children.length === 0"
-        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco : {label: node.name}">
+        [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco: {label: node.name}">
         <ion-icon [name]="treeControl.isExpanded(node) ? 'chevron-down-outline' : 'chevron-forward-outline'" />
       </button>
       <ng-container *ngTemplateOutlet="nodeTemplate; context: {$implicit: node}"></ng-container>

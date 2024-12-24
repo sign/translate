@@ -1,11 +1,11 @@
 <select [attr.aria-label]="'language-selector.label' | transloco" (change)="change($event)">
   @for (group of languages; track group) {
-  <optgroup [label]="group.label">
-    @for (lang of group.languages; track lang.key) {
-    <option [value]="lang.key" [selected]="lang.key === current">
-      {{ lang.value }}
-    </option>
-    }
-  </optgroup>
+    <optgroup [label]="group.label">
+      @for (lang of group.languages; track lang.key) {
+        <option [value]="lang.key" [selected]="lang.key === current">
+          {{ lang.value }}
+        </option>
+      }
+    </optgroup>
   }
 </select>

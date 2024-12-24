@@ -2,21 +2,21 @@
   <h2>Our Vision: To Improve the Lives of 70 Million Deaf People Worldwide</h2>
   <div class="cards-container">
     @for (fact of facts; track fact) {
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>
-          {{ fact.title }}
-          @if (fact.source) {
-          <a [href]="fact.source" target="_blank">
-            <ion-badge [color]="fact.color">source</ion-badge>
-          </a>
-          }
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ fact.description }}</p>
-      </ion-card-content>
-    </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            {{ fact.title }}
+            @if (fact.source) {
+              <a [href]="fact.source" target="_blank">
+                <ion-badge [color]="fact.color">source</ion-badge>
+              </a>
+            }
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ fact.description }}</p>
+        </ion-card-content>
+      </ion-card>
     }
   </div>
 </div>

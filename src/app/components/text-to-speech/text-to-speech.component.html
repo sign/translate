@@ -1,28 +1,33 @@
 <ng-container *transloco="let t; read: 'text-to-speech'">
-  @if (text.trim()) { @if (isSupported) {
-  <!-- As a single button it is uglier code, but nice ripple animation -->
-  <ion-button
-    class="circle-icon"
-    fill="clear"
-    shape="round"
-    color="dark"
-    (click)="isSpeaking ? cancel() : play()"
-    [attr.aria-label]="t(isSpeaking ? 'cancel' : 'play')"
-    [matTooltip]="t(isSpeaking ? 'cancel' : 'play')"
-    matTooltipPosition="above">
-    <ion-icon [name]="isSpeaking ? 'stop-circle-outline' : 'volume-medium-outline'" slot="icon-only" color="primary" />
-  </ion-button>
-  } @else {
-  <!-- If language is not supported -->
-  <ion-button
-    class="circle-icon"
-    fill="clear"
-    shape="round"
-    color="medium"
-    [attr.aria-label]="t('unavailable')"
-    [matTooltip]="t('unavailable')"
-    matTooltipPosition="above">
-    <ion-icon name="volume-mute-outline" slot="icon-only" />
-  </ion-button>
-  } }
+  @if (text.trim()) {
+    @if (isSupported) {
+      <!-- As a single button it is uglier code, but nice ripple animation -->
+      <ion-button
+        class="circle-icon"
+        fill="clear"
+        shape="round"
+        color="dark"
+        (click)="isSpeaking ? cancel() : play()"
+        [attr.aria-label]="t(isSpeaking ? 'cancel' : 'play')"
+        [matTooltip]="t(isSpeaking ? 'cancel' : 'play')"
+        matTooltipPosition="above">
+        <ion-icon
+          [name]="isSpeaking ? 'stop-circle-outline' : 'volume-medium-outline'"
+          slot="icon-only"
+          color="primary" />
+      </ion-button>
+    } @else {
+      <!-- If language is not supported -->
+      <ion-button
+        class="circle-icon"
+        fill="clear"
+        shape="round"
+        color="medium"
+        [attr.aria-label]="t('unavailable')"
+        [matTooltip]="t('unavailable')"
+        matTooltipPosition="above">
+        <ion-icon name="volume-mute-outline" slot="icon-only" />
+      </ion-button>
+    }
+  }
 </ng-container>

@@ -4,9 +4,9 @@
   </ion-card-header>
   <ion-card-content>
     @if (timings.length === 1) {
-    <span>{{ timings[0].toFixed(1) }}ms</span>
+      <span>{{ timings[0].toFixed(1) }}ms</span>
     } @else if (timings.length > 1) {
-    <span>~{{ fps() }}fps</span>
+      <span>~{{ fps() }}fps</span>
     }
   </ion-card-content>
 </ion-card>

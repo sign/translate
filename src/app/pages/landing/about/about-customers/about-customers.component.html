@@ -8,11 +8,11 @@
     </p>
     <ion-list>
       @for (customer of customers; track customer.key; let idx = $index) {
-      <ion-item (click)="activeCustomer = idx" [class.selected]="activeCustomer === idx" button="true">
-        <ion-icon [src]="logoPath(customer.key)" slot="end" />
+        <ion-item (click)="activeCustomer = idx" [class.selected]="activeCustomer === idx" button="true">
+          <ion-icon [src]="logoPath(customer.key)" slot="end" />
 
-        <ion-label>{{ customer.sector }}</ion-label>
-      </ion-item>
+          <ion-label>{{ customer.sector }}</ion-label>
+        </ion-item>
       }
     </ion-list>
   </div>

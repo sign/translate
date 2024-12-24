@@ -56,9 +56,9 @@
 
         <div class="presets">
           @for (preset of presets; track preset.type) {
-          <ion-button (click)="applyPreset(preset)" size="small" [color]="preset.color">
-            {{ preset.type }}
-          </ion-button>
+            <ion-button (click)="applyPreset(preset)" size="small" [color]="preset.color">
+              {{ preset.type }}
+            </ion-button>
           }
         </div>
 

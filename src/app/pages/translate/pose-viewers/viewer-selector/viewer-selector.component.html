@@ -10,14 +10,14 @@
     </ion-fab-button>
     <ion-fab-list side="bottom">
       @for (button of fabButtons; track button) {
-      <ion-fab-button
-        [color]="button.color"
-        [attr.aria-label]="t(button.id)"
-        [matTooltip]="t(button.id)"
-        matTooltipPosition="before"
-        (click)="applySetting('poseViewer', button.id)">
-        <ion-icon [name]="button.icon" />
-      </ion-fab-button>
+        <ion-fab-button
+          [color]="button.color"
+          [attr.aria-label]="t(button.id)"
+          [matTooltip]="t(button.id)"
+          matTooltipPosition="before"
+          (click)="applySetting('poseViewer', button.id)">
+          <ion-icon [name]="button.icon" />
+        </ion-fab-button>
       }
     </ion-fab-list>
   </ion-fab>

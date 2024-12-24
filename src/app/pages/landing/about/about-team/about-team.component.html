@@ -5,18 +5,18 @@
   </p>
   <div class="cards-container">
     @for (member of teamMembers; track member) {
-    <ion-card>
-      <ion-badge>{{ member.title }}</ion-badge>
-      <ion-card-header>
-        <ion-avatar>
-          <img [src]="member.avatar" [alt]="member.name" />
-        </ion-avatar>
-        <ion-card-title>{{ member.name }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>{{ member.bio }}</p>
-      </ion-card-content>
-    </ion-card>
+      <ion-card>
+        <ion-badge>{{ member.title }}</ion-badge>
+        <ion-card-header>
+          <ion-avatar>
+            <img [src]="member.avatar" [alt]="member.name" />
+          </ion-avatar>
+          <ion-card-title>{{ member.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ member.bio }}</p>
+        </ion-card-content>
+      </ion-card>
     }
   </div>
 </div>

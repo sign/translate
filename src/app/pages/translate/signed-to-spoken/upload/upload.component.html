@@ -1,13 +1,13 @@
 @if (!isMobile) {
-<ng-container *transloco="let t; read: 'translate.upload'">
-  <h3>{{ t('title') }}</h3>
-  <p>{{ t('types') }}</p>
-  <ion-button (click)="upload()">
-    {{ t('browse') }}
-  </ion-button>
-</ng-container>
+  <ng-container *transloco="let t; read: 'translate.upload'">
+    <h3>{{ t('title') }}</h3>
+    <p>{{ t('types') }}</p>
+    <ion-button (click)="upload()">
+      {{ t('browse') }}
+    </ion-button>
+  </ng-container>
 } @else {
-<ion-button (click)="upload()">
-  <ion-icon name="images-outline" slot="icon-only" />
-</ion-button>
+  <ion-button (click)="upload()">
+    <ion-icon name="images-outline" slot="icon-only" />
+  </ion-button>
 }

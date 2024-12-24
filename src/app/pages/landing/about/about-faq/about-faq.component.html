@@ -9,21 +9,21 @@
 
   <ion-accordion-group>
     @for (question of questions; track question) {
-    <ion-accordion>
-      <ion-item slot="header" class="faq-item">
-        <ion-label>{{ question.question }}</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        <p>{{ question.answer }}</p>
-        @if (question.steps) {
-        <ol>
-          @for (step of question.steps; track step) {
-          <li>{{ step }}</li>
+      <ion-accordion>
+        <ion-item slot="header" class="faq-item">
+          <ion-label>{{ question.question }}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>{{ question.answer }}</p>
+          @if (question.steps) {
+            <ol>
+              @for (step of question.steps; track step) {
+                <li>{{ step }}</li>
+              }
+            </ol>
           }
-        </ol>
-        }
-      </div>
-    </ion-accordion>
+        </div>
+      </ion-accordion>
     }
   </ion-accordion-group>
 

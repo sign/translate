@@ -1,24 +1,28 @@
-@if (videoState$ | async; as videoState) { @if (poseState$ | async; as poseState) {
-<ng-container *transloco="let t; read: 'video'">
-  @if (videoState.error) {
-  <p>{{ t('errors.' + videoState.error) }}</p>
-  } @else if (!poseState.isLoaded) {
-  <p>{{ 'pose.loading' | transloco }}</p>
+@if (videoState$ | async; as videoState) {
+  @if (poseState$ | async; as poseState) {
+    <ng-container *transloco="let t; read: 'video'">
+      @if (videoState.error) {
+        <p>{{ t('errors.' + videoState.error) }}</p>
+      } @else if (!poseState.isLoaded) {
+        <p>{{ 'pose.loading' | transloco }}</p>
+      }
+    </ng-container>
+    <div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
+      <video #video muted playsinline crossorigin="anonymous"></video>
+      <canvas #canvas height="100%" width="100%"></canvas>
+      <div #stats></div>
+      @if (videoEnded) {
+        <div class="video-overlay" (click)="replayVideo()">
+          <ion-icon name="play-circle-outline" />
+        </div>
+      }
+    </div>
+    <!-- [hidden]="videoState.error || !poseState.isLoaded" -->
+    @if (animatePose$ | async) {
+      <app-animation />
+    }
+    @if (displayControls) {
+      <app-video-controls />
+    }
   }
-</ng-container>
-<div [hidden]="videoState.error || !poseState.isLoaded" id="video-container">
-  <video #video muted playsinline crossorigin="anonymous"></video>
-  <canvas #canvas height="100%" width="100%"></canvas>
-  <div #stats></div>
-  @if (videoEnded) {
-  <div class="video-overlay" (click)="replayVideo()">
-    <ion-icon name="play-circle-outline" />
-  </div>
-  }
-</div>
-<!-- [hidden]="videoState.error || !poseState.isLoaded" -->
-@if (animatePose$ | async) {
-<app-animation />
-} @if (displayControls) {
-<app-video-controls />
-} } }
+}
