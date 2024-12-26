@@ -15,24 +15,24 @@ Each node represents a different module or function in the pipeline, with a link
 
 ```mermaid
 flowchart TD
-    A0[Spoken Language Audio] --> A1(Spoken Language Text)
-    A1[Spoken Language Text] --> B[<a target='_blank' href='https://github.com/sign/translate/issues/10'>Language Identification</a>]
-    A1 --> C(<a target='_blank' href='https://github.com/sign/translate/tree/master/functions/src/text-normalization'>Normalized Text</a>)
-    B --> C
-    C & B --> Q(<a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter'>Sentence Splitter</a>)
-    Q & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>SignWriting</a>)
-    C -.-> M(<a target='_blank' href='https://github.com/ZurichNLP/spoken-to-signed-translation' title='We would like to move away from glosses'>Glosses</a>)
-    M -.-> E
-    D --> E(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-animation'>Pose Sequence</a>)
-    D -.-> I(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-illustration'>Illustration</a>)
-    N --> H(<a target='_blank' href='https://github.com/sign/translate/issues/68'>3D Avatar</a>)
-    N --> G(<a target='_blank' href='https://github.com/sign-language-processing/pose'>Skeleton Viewer</a>)
-    N --> F(<a target='_blank' href='https://github.com/sign-language-processing/pose-to-video' title='Help wanted!'>Human GAN</a>)
-    H & G & F --> J(Video)
-    J --> K(Share Translation)
-    D -.-> L(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-description' title='Poor performance. Help wanted!'>Description</a>)
-    O --> N(<a target='_blank' href='https://github.com/sign-language-processing/fluent-pose-synthesis' title='Currently skipped. Help Wanted!'>Fluent Pose Sequence</a>)
-    E --> O(<a target='_blank' href='https://github.com/sign-language-processing/pose-anonymization'>Pose Appearance Transfer</a>)
+  A0[Spoken Language Audio] --> A1(Spoken Language Text)
+  A1[Spoken Language Text] --> B[<a target='_blank' href='https://github.com/sign/translate/issues/10'>Language Identification</a>]
+  A1 --> C(<a target='_blank' href='https://github.com/sign/translate/tree/master/functions/src/text-normalization'>Normalized Text</a>)
+  B --> C
+  C & B --> Q(<a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter'>Sentence Splitter</a>)
+  Q & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>SignWriting</a>)
+  C -.-> M(<a target='_blank' href='https://github.com/ZurichNLP/spoken-to-signed-translation' title='We would like to move away from glosses'>Glosses</a>)
+  M -.-> E
+  D --> E(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-animation'>Pose Sequence</a>)
+  D -.-> I(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-illustration'>Illustration</a>)
+  N --> H(<a target='_blank' href='https://github.com/sign/translate/issues/68'>3D Avatar</a>)
+  N --> G(<a target='_blank' href='https://github.com/sign-language-processing/pose'>Skeleton Viewer</a>)
+  N --> F(<a target='_blank' href='https://github.com/sign-language-processing/pose-to-video' title='Help wanted!'>Human GAN</a>)
+  H & G & F --> J(Video)
+  J --> K(Share Translation)
+  D -.-> L(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-description' title='Poor performance. Help wanted!'>Description</a>)
+  O --> N(<a target='_blank' href='https://github.com/sign-language-processing/fluent-pose-synthesis' title='Currently skipped. Help Wanted!'>Fluent Pose Sequence</a>)
+  E --> O(<a target='_blank' href='https://github.com/sign-language-processing/pose-anonymization'>Pose Appearance Transfer</a>)
 
 linkStyle default stroke:green;
 linkStyle 3,5,7 stroke:lightgreen;
@@ -53,7 +53,7 @@ The dictionary-based translation approach aims to simplify the translation but s
 
 ```mermaid
 flowchart LR
-    a[Spoken Language Text] --> b[Glosses] --> c[Pose Sequence] --> d[Video]
+  a[Spoken Language Text] --> b[Glosses] --> c[Pose Sequence] --> d[Video]
 ```
 
 ![Visualization of one example through the dictionary-based translation pipeline](./assets//dictionary-pipeline.png)
@@ -80,7 +80,7 @@ The machine translation approach aims to achieve similar translation quality to 
 
 ```mermaid
 flowchart LR
-    a[Spoken Language Text] --> b[SignWriting] --> c[Pose Sequence] --> d[Video]
+  a[Spoken Language Text] --> b[SignWriting] --> c[Pose Sequence] --> d[Video]
 ```
 
 ![Visualization of one example through the SignWriting-based translation pipeline](./assets/sign-tube-example.png)
@@ -97,9 +97,33 @@ flowchart LR
 
 By combining a relatively small dataset of transcribed single signs (~100k) with a relatively small dataset of segmented continuous signs, and leveraging large video/text sign language datasets, we can automatically transcribe the latter. This process will generate large synthesized datasets for both **text-to-SignWriting** and **SignWriting-to-pose** conversions.
 
-#### **Potential Quality:**
+#### **Potential Quality**
 
-The system aims to accurately represent sign language grammar and structure, allowing for a good translation of both lexical and non-lexical signs, expressions, and classifiers. Potentially, the system can be as good as a deaf human translator, given quality data.
+The system aims to accurately represent sign language grammar and structure, allowing for a good translation of both lexical and non-lexical signs, expressions, and classifiers.
+Potentially, the system can be as good as a deaf human translator, given quality data.
+
+#### **Motivating Examples**
+
+##### Robustness to minor inconsequential changes
+
+Here is an example where a minor, inconsequential, and possibly even **wrong** modification to the spoken language yields the same correct translation in SignWriting (the sign for the city of zurich) but the dictionary yields different ones.
+
+| Text                                                         | Machine Translation                                                                | Dictionary Translation                          |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [Zürich](https://sign.mt/?spl=de&sil=sgg&text=Z%C3%BCrich)   | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Zürich.png)  | The sign for Zurich (correct)                   |
+| [Zurich](https://sign.mt/?spl=de&sil=sgg&text=Zurich)        | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Zurich.png)  | Spelling the city name without umlaut (strange) |
+| [Züerich](https://sign.mt/?spl=de&sil=sgg&text=Z%C3%BCerich) | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Züerich.png) | Spelling the city name (strange)                |
+
+##### Adaptivity to minor important changes
+
+Here is an example where a minor, important modification to the spoken language (exclamation) yields different, correct translations in SignWriting (reflecting the emotion) but the dictionary yields the same one.
+Changing to question mark, the face correctly become questioning (even though the SignWriting is not perfect).
+
+| Text                                                                  | Machine Translation                                                                               | Dictionary Translation                            |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [Hello world.](https://sign.mt/?spl=en&sil=ase&text=Hello%20world.)   | ![SignWriting for "Hello World." in American Sign Language](assets/hello_world/period.png)        | The sign for Hello followed by the sign for World |
+| [Hello world!](https://sign.mt/?spl=en&sil=ase&text=Hello%20world!)   | ![SignWriting for "Hello World!" in American Sign Language](assets/hello_world/exclamation.png)   | The sign for Hello followed by the sign for World |
+| [Hello world?](https://sign.mt/?spl=en&sil=ase&text=Hello%20world%3F) | ![SignWriting for "Hello World?" in American Sign Language](assets/hello_world/question_mark.png) | The sign for Hello followed by the sign for World |
 
 ## Signed to Spoken Language Translation
 
@@ -107,16 +131,16 @@ Following, is a flowchart of the current translation pipeline from signed to spo
 
 ```mermaid
 flowchart TD
-    A0[Upload Sign Language Video] --> A3[Video]
-    A1[Camera Sign Language Video] --> A3
-    A3 --> B(Pose Estimation)
-    B --> C(<a target='_blank' href='https://github.com/sign-language-processing/segmentation'>Segmentation</a>)
-    C & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/transcription'>SignWriting Transcription</a>)
-    A2[Language Selector] --> E(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>Spoken Language Text</a>)
-    D --> E
-    E --> F(Spoken Language Audio)
-    E --> G(<a target='_blank' href='https://github.com/sign/translate/issues/19'>Share Translation</a>)
-    C -.-> H(Sign Image)
+  A0[Upload Sign Language Video] --> A3[Video]
+  A1[Camera Sign Language Video] --> A3
+  A3 --> B(Pose Estimation)
+  B --> C(<a target='_blank' href='https://github.com/sign-language-processing/segmentation'>Segmentation</a>)
+  C & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/transcription'>SignWriting Transcription</a>)
+  A2[Language Selector] --> E(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>Spoken Language Text</a>)
+  D --> E
+  E --> F(Spoken Language Audio)
+  E --> G(<a target='_blank' href='https://github.com/sign/translate/issues/19'>Share Translation</a>)
+  C -.-> H(Sign Image)
 
 
 linkStyle 1,2 stroke:orange;
