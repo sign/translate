@@ -4,7 +4,7 @@ import {PlaygroundComponent} from './playground.component';
 import {provideStore, Store} from '@ngxs/store';
 import {StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {AppTranslocoTestingModule} from '../../core/modules/transloco/transloco-testing.module';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoService} from '@jsverse/transloco';
 import {provideIonicAngular} from '@ionic/angular/standalone';
 import {ngxsConfig} from '../../app.config';
 

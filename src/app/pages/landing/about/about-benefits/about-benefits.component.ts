@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, OnInit, viewChild} from '@angular/core';
 import type {Swiper} from 'swiper/types';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
-import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {IonCard, IonCardContent, IonCardTitle, IonIcon} from '@ionic/angular/standalone';

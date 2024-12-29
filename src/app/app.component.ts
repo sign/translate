@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, inject} from '@angular/core';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoService} from '@jsverse/transloco';
 import {filter, tap} from 'rxjs/operators';
 import {Store} from '@ngxs/store';
 import {firstValueFrom} from 'rxjs';

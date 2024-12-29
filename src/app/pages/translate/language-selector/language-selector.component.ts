@@ -1,7 +1,7 @@
 import {Component, inject, Input, OnChanges, OnInit, output, SimpleChanges} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {switchMap} from 'rxjs';
-import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';

@@ -18,7 +18,7 @@ import {
 } from '@ionic/angular/standalone';
 import {BenchmarkItemComponent} from './benchmark-item/benchmark-item.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
 import {KeyValuePipe} from '@angular/common';
 import {addIcons} from 'ionicons';
 import {analytics} from 'ionicons/icons';

@@ -5,7 +5,7 @@ import {AsyncPipe} from '@angular/common';
 import {IonFab, IonFabButton, IonIcon} from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {videocamOffOutline, videocamOutline} from 'ionicons/icons';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-video-controls',

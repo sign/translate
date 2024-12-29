@@ -15,7 +15,7 @@ import {TextToSpeechComponent} from '../../../components/text-to-speech/text-to-
 import {UploadComponent} from './upload/upload.component';
 import {addIcons} from 'ionicons';
 import {copyOutline} from 'ionicons/icons';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
 import {VideoModule} from '../../../components/video/video.module';
 

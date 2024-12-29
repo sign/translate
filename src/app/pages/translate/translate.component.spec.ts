@@ -5,7 +5,7 @@ import {TranslateComponent} from './translate.component';
 import {provideStore, Store} from '@ngxs/store';
 import {TranslateState} from '../../modules/translate/translate.state';
 import {SettingsState} from '../../modules/settings/settings.state';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoService} from '@jsverse/transloco';
 import {VideoState} from '../../core/modules/ngxs/store/video/video.state';
 import {provideHttpClient} from '@angular/common/http';
 import {provideHttpClientTesting} from '@angular/common/http/testing';

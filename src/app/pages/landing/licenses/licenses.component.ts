@@ -8,7 +8,7 @@ import {IonIcon} from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {chevronDownOutline, chevronForwardOutline} from 'ionicons/icons';
 import {NgTemplateOutlet} from '@angular/common';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 
 interface PackagesParent {
   name: string;

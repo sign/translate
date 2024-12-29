@@ -1,4 +1,4 @@
-import {TranslocoTestingModule} from '@ngneat/transloco';
+import {TranslocoTestingModule} from '@jsverse/transloco';
 import {SITE_LANGUAGES} from './languages';
 
 const availableLangs = SITE_LANGUAGES.map(l => l.key.toLocaleLowerCase());

@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {BaseSettingsComponent} from '../../../../modules/settings/settings.component';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AsyncPipe} from '@angular/common';
 import {MatFabButton} from '@angular/material/button';

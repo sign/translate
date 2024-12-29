@@ -1,4 +1,4 @@
-import {provideTransloco} from '@ngneat/transloco';
+import {provideTransloco} from '@jsverse/transloco';
 import {HttpLoader, translocoScopes} from './transloco.loader';
 import {SITE_LANGUAGES} from './languages';
 

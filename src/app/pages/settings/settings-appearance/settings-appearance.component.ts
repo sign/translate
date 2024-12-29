@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
 import {SettingsAppearanceImagesComponent} from './settings-appearance-images/settings-appearance-images.component';
 import {IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/angular/standalone';
 

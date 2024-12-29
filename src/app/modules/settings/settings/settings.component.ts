@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {BaseSettingsComponent} from '../settings.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {SettingsStateModel} from '../settings.state';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {IonCheckbox, IonItem, IonList} from '@ionic/angular/standalone';
 
 @Component({

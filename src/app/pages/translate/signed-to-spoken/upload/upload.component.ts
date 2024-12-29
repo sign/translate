@@ -4,7 +4,7 @@ import {SetVideo} from '../../../../core/modules/ngxs/store/video/video.actions'
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {imagesOutline} from 'ionicons/icons';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-upload',

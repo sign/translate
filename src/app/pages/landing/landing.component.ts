@@ -18,7 +18,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 import {RouterLink, RouterOutlet} from '@angular/router';
-import {TranslocoPipe, TranslocoService} from '@ngneat/transloco';
+import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {arrowForward} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';

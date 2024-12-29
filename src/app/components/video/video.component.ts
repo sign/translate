@@ -17,7 +17,7 @@ import {VideoControlsComponent} from './video-controls/video-controls.component'
 import {addIcons} from 'ionicons';
 import {playCircleOutline} from 'ionicons/icons';
 import {AsyncPipe} from '@angular/common';
-import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
 import {AnimationModule} from '../animation/animation.module';
 
 @Component({

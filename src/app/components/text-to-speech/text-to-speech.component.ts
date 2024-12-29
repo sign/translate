@@ -3,7 +3,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {stopCircleOutline, volumeMediumOutline, volumeMuteOutline} from 'ionicons/icons';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-text-to-speech',

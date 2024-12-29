@@ -3,7 +3,7 @@ import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../base/base.component';
 import {MatTooltipModule, TooltipPosition} from '@angular/material/tooltip';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {addIcons} from 'ionicons';
 import {micOutline, stopCircleOutline} from 'ionicons/icons';
 

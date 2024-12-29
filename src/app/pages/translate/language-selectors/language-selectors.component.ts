@@ -24,7 +24,7 @@ import {
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
 import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonButton, IonContent} from '@ionic/angular/standalone';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 import {RouterLink} from '@angular/router';
 
 @Component({

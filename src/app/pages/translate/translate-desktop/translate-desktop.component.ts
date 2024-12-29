@@ -6,7 +6,7 @@ import {IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from
 import {TranslateInputButtonComponent} from '../input/button/button.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
 import {SendFeedbackComponent} from '../send-feedback/send-feedback.component';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 import {SpokenToSignedComponent} from '../spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from '../signed-to-spoken/signed-to-spoken.component';

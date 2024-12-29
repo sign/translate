@@ -3,7 +3,7 @@ import {isIOS} from '../../../core/constants';
 import {AssetsService, AssetState} from '../../../core/services/assets/assets.service';
 import {MatTreeModule, MatTreeNestedDataSource} from '@angular/material/tree';
 import {CdkTreeModule, NestedTreeControl} from '@angular/cdk/tree';
-import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';

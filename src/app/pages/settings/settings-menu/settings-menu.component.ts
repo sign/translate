@@ -5,7 +5,7 @@ import {SettingsVoiceInputComponent} from '../settings-voice-input/settings-voic
 import {SettingsVoiceOutputComponent} from '../settings-voice-output/settings-voice-output.component';
 import {SettingsFeedbackComponent} from '../settings-feedback/settings-feedback.component';
 import {SettingsAppearanceComponent} from '../settings-appearance/settings-appearance.component';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {
   IonContent,
   IonHeader,

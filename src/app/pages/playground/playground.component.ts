@@ -3,7 +3,7 @@ import {Store} from '@ngxs/store';
 import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {SetVideo, StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
-import {TranslocoPipe, TranslocoService} from '@ngneat/transloco';
+import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {Observable} from 'rxjs';
 import {IonContent, IonHeader, IonIcon, IonMenu, IonSplitPane, IonTitle, IonToolbar} from '@ionic/angular/standalone';
 import {SettingsComponent} from '../../modules/settings/settings/settings.component';

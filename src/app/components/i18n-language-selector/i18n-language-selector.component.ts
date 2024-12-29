@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {TranslocoPipe, TranslocoService} from '@ngneat/transloco';
+import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {ActivatedRoute, Router} from '@angular/router';
 import {SITE_LANGUAGES} from '../../core/modules/transloco/languages';
 

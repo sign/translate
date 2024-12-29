@@ -4,7 +4,7 @@ import {Store} from '@ngxs/store';
 import {SetInputMode} from '../../../../modules/translate/translate.actions';
 import {Observable} from 'rxjs';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 import {AsyncPipe} from '@angular/common';
 
 @Component({

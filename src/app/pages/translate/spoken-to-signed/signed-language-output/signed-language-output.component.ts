@@ -17,7 +17,7 @@ import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
 import {AvatarPoseViewerComponent} from '../../pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
 import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 import {AsyncPipe} from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {addIcons} from 'ionicons';

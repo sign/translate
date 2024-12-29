@@ -12,7 +12,7 @@ import {TranslateStateModel} from '../../../../modules/translate/translate.state
 import {BaseComponent} from '../../../../components/base/base.component';
 import {IonButton, IonButtons, IonIcon, IonTextarea, IonToolbar} from '@ionic/angular/standalone';
 import {SpeechToTextComponent} from '../../../../components/speech-to-text/speech-to-text.component';
-import {TranslocoDirective, TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
 import {addIcons} from 'ionicons';
 import {addOutline, sparkles} from 'ionicons/icons';
 import {AsyncPipe, DecimalPipe} from '@angular/common';

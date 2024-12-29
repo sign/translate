@@ -4,7 +4,7 @@ import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent, Observable} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoService} from '@jsverse/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';

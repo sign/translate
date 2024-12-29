@@ -2,8 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {axe, toHaveNoViolations} from 'jasmine-axe';
 import {Store} from '@ngxs/store';
-import {SetSpokenLanguageText} from './modules/translate/translate.actions';
-import {TranslocoService} from '@ngneat/transloco';
+import {TranslocoService} from '@jsverse/transloco';
 import {Router} from '@angular/router';
 import {appConfig} from './app.config';
 

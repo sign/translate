@@ -1,5 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {TranslocoDirective, TranslocoService} from '@ngneat/transloco';
+import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';

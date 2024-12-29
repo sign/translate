@@ -16,7 +16,7 @@ import {transferableImage} from '../../../../core/helpers/image/transferable';
 import {IonProgressBar, IonSpinner} from '@ionic/angular/standalone';
 import {AsyncPipe} from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {TranslocoDirective} from '@ngneat/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-human-pose-viewer',

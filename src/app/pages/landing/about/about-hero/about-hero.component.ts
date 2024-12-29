@@ -3,7 +3,7 @@ import {IonBadge, IonButton, IonIcon} from '@ionic/angular/standalone';
 import {RouterLink} from '@angular/router';
 import {arrowForward} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
-import {TranslocoPipe} from '@ngneat/transloco';
+import {TranslocoPipe} from '@jsverse/transloco';
 
 @Component({
   selector: 'app-about-hero',
