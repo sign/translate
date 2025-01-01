@@ -126,7 +126,7 @@ export const IANASignedLanguages = [
   {signed: 'szs', spoken: 'en', country: 'sb', abbreviation: ''}, // Solomon Islands Sign Language
   {signed: 'sfb', spoken: 'fr', country: 'be', abbreviation: ''}, // French Belgian Sign Language
   {signed: 'sfs', spoken: 'af', country: 'za', abbreviation: ''}, // South African Sign Language
-  {signed: 'ssp', spoken: 'es', country: 'es', abbreviation: ''}, // Spanish Sign Language
+  {signed: 'ssp', spoken: 'es', country: 'es', abbreviation: 'LSE'}, // Spanish Sign Language
   {signed: 'sqs', spoken: 'si', country: 'lk', abbreviation: ''}, // Sri Lankan Sign Language
   {signed: 'swl', spoken: 'sv', country: 'se', abbreviation: 'STS'}, // Swedish Sign Language
   {signed: 'ssr', spoken: 'fr', country: 'ch', abbreviation: 'LSF-CH'}, // Swiss-French Sign Language

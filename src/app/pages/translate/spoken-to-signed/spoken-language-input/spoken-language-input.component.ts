@@ -48,8 +48,8 @@ export class SpokenLanguageInputComponent extends BaseComponent implements OnIni
 
   text = new FormControl();
   maxTextLength = 500;
-  detectedLanguage: string;
-  spokenLanguage: string;
+  detectedLanguage!: string;
+  spokenLanguage!: string;
 
   @Input() isMobile = false;
 

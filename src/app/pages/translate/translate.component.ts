@@ -26,7 +26,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   private title = inject(Title);
 
   spokenToSigned$: Observable<boolean>;
-  spokenToSigned: boolean;
 
   isMobile: MediaQueryList;
 
