@@ -102,6 +102,10 @@ export default withMermaid(
             collapsed: false,
             items: [
               {
+                text: 'Sign Language Companies',
+                link: '/docs/companies/sign-language-companies',
+              },
+              {
                 text: 'State of the Art',
                 link: '/docs/companies/state-of-the-art',
                 items: [

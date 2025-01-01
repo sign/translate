@@ -1,0 +1,765 @@
+[
+  {
+    "name": "Signapse",
+    "sector": "Translation",
+    "country": "England",
+    "incorporation": "https://find-and-update.company-information.service.gov.uk/company/13898753",
+    "website": "https://www.signapse.ai/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signapse/"
+    },
+    "funding": {
+      "total": "£2,300,000",
+      "url": "https://www.crunchbase.com/organization/signapse-ec44/company_financials",
+      "lastRound": {
+        "total": "£2 million, seed",
+        "url": "https://www.signapse.ai/new/signapse-closes-seed-funding-round"
+      }
+    },
+    "employees": "[21](https://www.signapse.ai/about)",
+    "languages": ["British", "American"],
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Photorealistic signing avatars",
+    "customers": "Transport companies, websites and video markets",
+    "fullDescription": "Signapse specializes in dictionary based sign language translation, offering photorealistic signers capable of translating content from spoken languages into British Sign Language (BSL) and American Sign Language (ASL). The company serves various sectors, including transportation companies, websites, and video markets, and is dedicated to improving accessibility through advanced AI technology."
+  },
+  {
+    "name": "VSLLabs",
+    "sector": "Translation",
+    "country": "Israel",
+    "website": "https://www.vsllabs.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/vsllabs/"
+    },
+    "funding": {
+      "total": "$1.7 million, seed",
+      "url": "https://finder.startupnationcentral.org/company_page/vsl-labs"
+    },
+    "employees": "[15](https://www.vsllabs.com/about)",
+    "languages": ["American"],
+    "customers": "Websites, apps, and video markets",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Quick delivery using a 3D avatar, and end-to-end support",
+    "fullDescription": "VSLLabs provides real-time 3D sign language translation using AI, focusing on translating spoken content into American Sign Language (ASL). The company caters to websites, apps, and video content creators, emphasizing digital inclusivity and rapid delivery of translations through their 3D avatar technology."
+  },
+  {
+    "name": "Sign-Speak",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://www.sign-speak.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/sign-speak/"
+    },
+    "funding": {
+      "total": "$1.21 million",
+      "url": "https://www.cbinsights.com/company/sign-speak",
+      "lastRound": {
+        "total": "$180,000, CLA",
+        "url": "https://www.cbinsights.com/company/sign-speak"
+      }
+    },
+    "employees": null,
+    "languages": ["American"],
+    "customers": "Businesses, Deaf and Hard of Hearing individuals",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-powered real-time translation, advanced sign language recognition, 24/7 availability, budget-friendly solutions",
+    "fullDescription": "Sign-Speak is a U.S.-based company specializing in AI-driven real-time translation services between American Sign Language (ASL) and spoken English. Their platform employs advanced machine learning techniques to recognize and translate sign language, enabling seamless communication for businesses and individuals. With a focus on accessibility, Sign-Speak offers scalable, budget-friendly solutions available 24/7, ensuring high-quality interactions across various platforms and industries."
+  },
+  {
+    "name": "SLAIT",
+    "incorporation": "https://icis.corp.delaware.gov/ecorp/entitysearch/NameSearch.aspx?number=5993626",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://slait.ai/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/slait/"
+    },
+    "funding": {
+      "total": "$120,000, pre-seed",
+      "url": "https://www.crunchbase.com/organization/slait/signals_and_news"
+    },
+    "employees": "[2](https://www.linkedin.com/search/results/people/?currentCompany=%5B%2270874241%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=_eA)",
+    "languages": ["American"],
+    "customers": "Video communication, VRI/VRS",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Video Communication",
+    "additionalInformation": "Also behind the education platform: [https://slait.school](https://slait.school/)",
+    "fullDescription": "SLAIT offers real-time ASL transcription and translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility."
+  },
+  {
+    "name": "EQ4All",
+    "incorporation": "https://englishdart.fss.or.kr/dsbh001/main.do?rcpNo=20241129001615",
+    "sector": "Translation",
+    "country": "South Korea",
+    "website": "https://www.eq4all.co.kr/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/eq4all/"
+    },
+    "funding": {
+      "total": "$3.8 million, pre-seed",
+      "url": "https://www.crunchbase.com/organization/eq4all"
+    },
+    "employees": "[15](https://www.linkedin.com/search/results/people/?currentCompany=%5B%2235541020%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=0VI)",
+    "languages": [],
+    "customers": "Public institutions, museums, kiosks",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "3D Avatar",
+    "additionalInformation": "Avatar integrates with Unity, Unreal, and WebGL",
+    "fullDescription": "EQ4All specializes in avatar-based sign language translation, utilizing a neural and rule-based hybrid translation engine to provide accessible communication tools across various platforms, including public institutions, museums, and kiosks. The company's 3D avatars integrate with popular engines like Unity, Unreal, and WebGL, aiming to eliminate barriers for the deaf and hard of hearing."
+  },
+  {
+    "name": "Sign Time GmbH",
+    "incorporation": "https://justizonline.gv.at/jop/web/firmenbuchabfrage/304045a_1",
+    "sector": "Translation",
+    "country": "Austria",
+    "website": "https://signtime.media/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/sign-time-gmbh/"
+    },
+    "funding": {
+      "total": "€1.1 million, grant",
+      "url": "https://www.crunchbase.com/organization/simax"
+    },
+    "employees": "[\\>5](https://simax.media/ueber-uns/)",
+    "languages": ["Austrian"],
+    "customers": "Websites and media markets",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Sign language post editing, customizeable appearances",
+    "additionalInformation": "Uses an automated animation system with professional review",
+    "fullDescription": "Sign Time GmbH focuses on providing quick and cost-effective sign language translation through animated avatars. They are a leading partner in the SiMAX project and offer semi-automated sign-language translation as a cloud service, helping to break digital barriers for deaf individuals in public institutions and businesses."
+  },
+  {
+    "name": "We Hear You, Inc",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://wehearyouasl.com/asl-translator/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/we-hear-you-llc/"
+    },
+    "funding": {
+      "total": "$130,000, pre-seed",
+      "url": "https://www.crunchbase.com/organization/we-hear-you/company_overview/overview_timeline"
+    },
+    "employees": "[16](https://wehearyouasl.com/about/#team)",
+    "languages": ["American"],
+    "customers": "Deaf community",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Have Pierre Paul as their CEO",
+    "additionalInformation": "Work with Signapse",
+    "fullDescription": "We Hear You LLC is dedicated to bridging communication gaps for the Deaf community through various tools and services, including ASL-to-text and speech translation. The company partners with Signapse and focuses on providing real-time translation solutions across digital and physical platforms, offering additional accessibility products like the Push door opener."
+  },
+  {
+    "name": "SignAll Technologies",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://signall.us/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signall-technologies/"
+    },
+    "funding": {
+      "total": "$3,000,000",
+      "url": "https://www.crunchbase.com/search/funding_rounds/field/organizations/last_funding_type/signall",
+      "lastRound": {
+        "total": "$628,000, seed",
+        "url": "https://www.crunchbase.com/search/funding_rounds/field/organizations/last_funding_type/signall"
+      }
+    },
+    "employees": "[6?](https://www.linkedin.com/company/signall-technologies/people/)",
+    "languages": ["American"],
+    "customers": "Businesses",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Unclear",
+    "additionalInformation": "Either went bankrupt, or in deep stealth since 2021",
+    "fullDescription": "SignAll Technologies provides real-time ASL translation services using AI and computer vision. They offer bi-directional translation between ASL and English, focusing on educational and workplace environments. Although currently operating in deep stealth mode or possibly ceased operations, they previously served businesses, educational institutions, and individuals."
+  },
+  {
+    "name": "HandTalk",
+    "sector": "Translation",
+    "country": "Brazil",
+    "website": "https://www.handtalk.me/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/handtalksa/"
+    },
+    "funding": {
+      "total": "$770,000",
+      "url": "https://www.crunchbase.com/search/funding_rounds/field/organizations/last_funding_type/hand-talk",
+      "lastRound": {
+        "total": "$660,000, seed",
+        "url": "https://www.crunchbase.com/search/funding_rounds/field/organizations/last_funding_type/hand-talk"
+      }
+    },
+    "employees": "[3?](https://www.linkedin.com/search/results/people/?currentCompany=%5B%22100883850%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=9DE)",
+    "languages": ["American", "Brazilian"],
+    "customers": "Deaf community",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "Future",
+    "keyFeatures": "Available",
+    "additionalInformation": "Over 2 billion words translated.",
+    "fullDescription": "HandTalk is known for its AI-powered translation of text and audio into Brazilian Sign Language (Libras), with additional support for ASL. The company provides a mobile app and web plugin, enhancing communication accessibility for the Deaf community in Brazil and the United States, with over 2 billion words translated through its platforms."
+  },
+  {
+    "name": "Deafinitely",
+    "sector": "Translation",
+    "country": "Israel",
+    "website": "https://www.deafinitely.co.il/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/deafinitely"
+    },
+    "funding": null,
+    "employees": "[8](https://www.linkedin.com/company/deafinitely/people/)",
+    "languages": ["Israeli", "British", "American"],
+    "customers": "Websites and video markets, public spaces, deaf community",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Chat interface, QR code for public spaces",
+    "fullDescription": "Deafinitely provides real-time sign language translation and communication tools, including a chat interface and QR codes for public spaces. Supporting Israeli Sign Language (ISL), BSL, and ASL, the company serves websites, video markets, and public institutions, known for its innovative solutions like the patented SignChat app for real-time message translation. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/1COjZNbEHVo\">\n</iframe>"
+  },
+  {
+    "name": "EASIER Project",
+    "sector": "Translation",
+    "country": "Europe",
+    "website": "https://www.project-easier.eu/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/easierproject/"
+    },
+    "funding": {
+      "total": "€4 million",
+      "url": "https://www.project-easier.eu/about-easier/"
+    },
+    "employees": "14 institutions",
+    "languages": ["British", "French", "Italian", "German", "Swiss-German", "Dutch", "Greek"],
+    "customers": "EU Project",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Large collaboration",
+    "additionalInformation": "3 years, limited EU project",
+    "fullDescription": "The EASIER Project is a European initiative focused on creating an intelligent automatic sign language translation system. The project includes 14 institutions across Europe and supports multiple sign languages, aiming to develop a barrier-free communication framework, involving continuous feedback from Deaf communities and incorporating advanced technologies for sign language recognition and animation."
+  },
+  {
+    "name": "SignON Project",
+    "sector": "Translation",
+    "country": "Europe",
+    "website": "https://signon-project.eu/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signon-eu-project/"
+    },
+    "funding": {
+      "total": "€5.6 million",
+      "url": "https://signon-project.eu/signon-gets-support-from-horizon-2020/"
+    },
+    "employees": "17 institutions",
+    "languages": ["Irish", "British", "Dutch", "Flemish", "Spanish"],
+    "customers": "EU Project",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Model that translates from any modality to any modality",
+    "additionalInformation": "3 years, limited EU project",
+    "fullDescription": "The SignON Project aims to develop a mobile application for real-time translation between sign and spoken languages, including Irish, British, Dutch, Flemish, and Spanish Sign Languages. The project incorporates community-driven feedback and focuses on creating an open communications framework that supports fair and inclusive communication across Europe."
+  },
+  {
+    "name": "BrightSign Glove",
+    "sector": "Translation",
+    "country": "England",
+    "website": "https://brightsignglove.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/brightsignglove"
+    },
+    "funding": {
+      "total": "£50,000 grant",
+      "url": "https://www.crunchbase.com/organization/brightsign-a4b3"
+    },
+    "employees": "[5](https://www.linkedin.com/search/results/people/?currentCompany=%5B%2271513607%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=!tC)",
+    "languages": ["'All'"],
+    "customers": "Deaf individuals",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Using gloves, user teaches the language",
+    "additionalInformation": "Supports \"all\" languages meaning that the user can teach the glove. However, only manual signs",
+    "fullDescription": "BrightSign Glove develops gloves capable of translating sign language into spoken words and text in real-time. The company emphasizes accessibility and usability, allowing users to teach the glove their specific sign language. Although the product supports all sign languages, its focus is primarily on manual signs, making it a versatile tool for Deaf individuals globally."
+  },
+  {
+    "name": "Abili-Tech Systems",
+    "sector": "Translation",
+    "country": "Canada",
+    "website": "https://abili-tech.com",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/abili-tech-systems-canada/?originalSubdomain=ca"
+    },
+    "funding": null,
+    "employees": "[4](https://www.linkedin.com/search/results/people/?currentCompany=%5B%22100086585%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=tSK)",
+    "languages": ["American"],
+    "customers": "Deaf community",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Translation between different sign languages",
+    "additionalInformation": "Contacted [sign.mt](http://sign.mt/) for help",
+    "fullDescription": "Abili-Tech Systems provides real-time sign language translation through a user-friendly interface, offering text-to-sign, sign-to-text, and sign-to-speech translation services. The company focuses on bridging communication gaps between sign language and spoken language users, particularly in educational and business environments, with seamless integration across devices."
+  },
+  {
+    "name": "Spokhand",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://www.spokhand.io",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/spokhand/about/"
+    },
+    "funding": null,
+    "employees": "Unknown",
+    "languages": ["American", "French", "International"],
+    "customers": "General public, businesses",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Customizable photorealistic signers",
+    "additionalInformation": "Focuses on bridging the gap between spoken and sign languages using advanced AI technology and virtual avatars for improved communication [source](https://www.spokhand.io).",
+    "fullDescription": ""
+  },
+  {
+    "name": "Ives / MotionSign",
+    "sector": "Translation",
+    "country": "France",
+    "website": "https://ives.fr/index.php/motionsign-2/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/iv-s---interactivity-video-and-systems/"
+    },
+    "funding": {
+      "total": "€1.1 million",
+      "url": "https://www.crunchbase.com/organization/iv%C3%A8s"
+    },
+    "employees": "",
+    "languages": ["French"],
+    "customers": "General public, businesses, education",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Motion capture dictionary",
+    "additionalInformation": "",
+    "fullDescription": ""
+  },
+  {
+    "name": "Keia",
+    "sector": "Translation",
+    "country": "France",
+    "website": "https://keia.io",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/keia-io/"
+    },
+    "funding": null,
+    "employees": null,
+    "languages": ["French"],
+    "customers": "",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-powered translation, contextualized sign language",
+    "additionalInformation": "Combines AI with expert human teams to provide contextualized sign language translations, ensuring accurate and accessible communication. Recognized for innovation and inclusivity efforts in France.",
+    "fullDescription": "Has deal with the French government for the next 4 years. <a href=\"https://handicap.gouv.fr/ouvrir-mes-droits-rendez-vous-avec-votre-mdph\" target=\"_blank\">Example</a> bottom right. Human corrected and edited."
+  },
+  {
+    "name": "GoSign.AI",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://www.gosign.ai/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/gosign-ai/"
+    },
+    "funding": null,
+    "employees": null,
+    "languages": ["Over 19 sign languages"],
+    "customers": "Deaf and Hard of Hearing community, researchers, businesses",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Extremely diverse sign language datasets",
+    "fullDescription": "GoSign.AI is a global AI research hub driven by the Deaf community, offering innovative solutions such as sign language datasets, AI chatbots, generative AI art, and sign language recognition technologies. Their gamified platforms collect high-quality, consented sign language data to fuel advancements in accessibility and communication for Deaf and Hard of Hearing individuals. They are active members of CoSET, advocating for robust AI regulations and equity in technology."
+  },
+  {
+    "name": "Migam.ai",
+    "sector": "Translation",
+    "country": "Poland",
+    "website": "https://migam.ai/",
+    "linkedIn": null,
+    "funding": null,
+    "employees": null,
+    "languages": ["British"],
+    "customers": "Deaf and hard-of-hearing individuals, businesses, public institutions",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-driven video-to-text and text-to-video sign language translation, real-time translation",
+    "fullDescription": "Migam.ai is an advanced AI-driven project based in Poland, specializing in real-time video-to-text and text-to-video sign language translation. Utilizing a custom-built Transformer architecture, the platform ensures high accuracy and fluidity in translations, facilitating seamless communication between deaf and hearing individuals. Migam.ai collaborates with various partners, including Microsoft, Orange, and the City of Warsaw, to implement its technology across multiple sectors, enhancing accessibility and inclusivity for the deaf and hard-of-hearing community."
+  },
+  {
+    "name": "SignLab",
+    "incorporation": "https://virksomhet.brreg.no/en/oppslag/enheter/919024887",
+    "sector": "Education",
+    "country": "Norway",
+    "website": "https://www.signlab.co/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signlab-co/"
+    },
+    "funding": {
+      "total": "Undisclosed",
+      "url": "https://pitchbook.com/profiles/company/490856-95"
+    },
+    "employees": "[12](https://pitchbook.com/profiles/company/490856-95)",
+    "languages": [
+      "American",
+      "British",
+      "Brazilian",
+      "French",
+      "German",
+      "Indian",
+      "Australian",
+      "Norwegian",
+      "Chinese",
+      "Italian"
+    ],
+    "customers": "Deaf individuals, families, educators, language enthusiasts",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Digital learning platform, AI integration, offline access",
+    "fullDescription": "SignLab is a Norwegian company specializing in making sign language learning accessible, effective, and affordable through a digital platform. Operating in over 10 countries, they collaborate with local partners to develop content tailored to various sign languages. Their platform features integrated videos and AI support, ensuring users can learn and retain sign language skills both online and offline. SignLab's mission is to bridge communication gaps for deaf individuals, their families, and communities worldwide. They operate: <ul><li>ASL Bloom - American Sign Language</li><li>yoDGS - German Sign Language</li><li>ISL Journey - Indian Sign Language</li><li>LibrasLab - Brazilian Sign Language</li><li>Pause LSF - French Sign Language</li><li>Auslan Wiz - Australian Sign Language</li><li>Toleio - Norwegian Sign Language</li><li>手言心 - Chinese Sign Language</li><li>Bright BSL - British Sign Language</li><li>MeLISegno - Italian Sign Language</li></ul>"
+  },
+  {
+    "name": "Kara Technologies",
+    "sector": "Human Translation",
+    "country": "New Zealand",
+    "website": "https://kara.tech/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/kara-technologies-ltd/"
+    },
+    "funding": {
+      "total": "NZ$1.3M + $500K",
+      "url": "https://www.crunchbase.com/organization/kara-technologies",
+      "lastRound": {
+        "total": "$500K Grant",
+        "url": "https://www.crunchbase.com/organization/kara-technologies"
+      }
+    },
+    "employees": "[8](https://www.kara.tech/)",
+    "languages": ["New-Zealand"],
+    "customers": "Media, emergency messaging, public services",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Hyper-realistic digital sign language avatars, motion capture",
+    "additionalInformation": "Uses state-of-the-art motion capture technology to create avatars that translate media content into sign language. Provides emergency information access through API calls.",
+    "fullDescription": "Kara Technologies creates hyper-realistic digital sign language avatars using motion capture technology to translate various media, audio, and text content into sign language. The company focuses on improving accessibility for Deaf individuals and offers solutions for emergency messaging, media companies, and public services​([Kara Technologies](https://www.kara.tech/)<br>)."
+  },
+  {
+    "name": "SignUp Media",
+    "sector": "Human Translation",
+    "country": "Unknown",
+    "website": "http://signupmedia.com",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/in/mariella-satow/"
+    },
+    "funding": null,
+    "employees": "",
+    "languages": ["American", "British", "Indian", "Australian"],
+    "customers": "Media companies, events, businesses",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Human translation services, real-time interpretation",
+    "additionalInformation": "Provides human-based sign language interpretation for media content, focusing on live events, businesses, and other communication needs.",
+    "fullDescription": "SignUp Media offers human interpretation services in various sign languages for businesses, media companies, and live events. They aim to provide accessible communication through real-time human translation, catering to the needs of the Deaf and hard-of-hearing communities. The specific languages they support are not disclosed, emphasizing flexibility and professionalism."
+  },
+  {
+    "name": "Bond",
+    "sector": "Human Translation",
+    "country": "United States",
+    "website": "https://www.bondasl.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/bondasl/"
+    },
+    "funding": {
+      "total": "Undisclosed (small)",
+      "url": "https://www.crunchbase.com/organization/bond-6eb2/company_financials"
+    },
+    "employees": "[2-10](https://www.linkedin.com/company/bondasl/people/)",
+    "languages": ["American"],
+    "customers": "Deaf individuals",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Real-time translation, small-scale services",
+    "additionalInformation": "",
+    "fullDescription": "Bond is developing a video communication platform specifically designed to empower Deaf and Hard of Hearing users."
+  },
+  {
+    "name": "SignNow",
+    "sector": "Interpretation",
+    "country": "Israel",
+    "website": "https://www.sign-now.io/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/sign-now1"
+    },
+    "funding": null,
+    "employees": "[8](https://www.sign-now.io/)",
+    "languages": ["Israeli", "American"],
+    "customers": "Businesses, governments",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Interpreters on demand",
+    "additionalInformation": "B2B2C / B2G2C model: business/government pays, free for the deaf customer. Successful.",
+    "fullDescription": "SignNow connects the Deaf community with sign language interpreters via on-demand, call-back, and pre-scheduled video calls. The company supports ISL and ASL and operates on a B2B2C and B2G2C model, where businesses and governments pay for the service, making it free for Deaf customers. SignNow provides interpreters on demand for both businesses and government agencies."
+  },
+  {
+    "name": "SignForDeaf",
+    "sector": "Education",
+    "country": "Türkiye",
+    "website": "https://www.signfordeaf.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signfordeaf/"
+    },
+    "funding": null,
+    "employees": "[4](https://www.linkedin.com/company/signfordeaf/people/)",
+    "languages": ["Turkish"],
+    "customers": "Video communication, websites and video markets",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Plugins for videos, websites, PDFs, etc",
+    "additionalInformation": "",
+    "fullDescription": "SignForDeaf enhances accessibility through educational tools and plugins for videos, websites, and PDFs. The company supports Turkish Sign Language (TSL) and provides real-time translation services for video communication and web content, making digital content more accessible to Deaf individuals through customizable solutions for businesses and educators."
+  },
+  {
+    "name": "ASLized",
+    "sector": "Education",
+    "country": "United States",
+    "website": "http://aslized.org/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/aslized/"
+    },
+    "funding": {
+      "total": "Non-profit organization",
+      "url": "https://www.crunchbase.com/organization/aslized"
+    },
+    "employees": "Volunteers",
+    "languages": ["American"],
+    "customers": "ASL learners and educators",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Teaching and learning materials",
+    "additionalInformation": "Focuses on preserving ASL culture and history, and promoting ASL linguistics",
+    "fullDescription": "ASLized is a non-profit organization that produces educational resources in American Sign Language (ASL). The organization focuses on promoting ASL literacy and linguistics through various materials, including the Signily app and the Journal of American Sign Languages and Literatures (JASLL). ASLized is committed to preserving ASL culture and history while providing accessible educational content."
+  },
+  {
+    "name": "The ASL App",
+    "sector": "Education",
+    "country": "United States",
+    "website": "https://theaslapp.com/",
+    "linkedIn": null,
+    "funding": null,
+    "employees": "Unknown",
+    "languages": ["American"],
+    "customers": "ASL learners",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "sign matching",
+    "keyFeatures": "Engaging mobile app",
+    "additionalInformation": "Designed by Deaf people",
+    "fullDescription": "The ASL App is an educational platform designed to teach American Sign Language (ASL) through video tutorials. The app offers over 2,500 signs and phrases, along with features like slow-motion playback, video flashcards, and a favorites list. Created by Deaf individuals, The ASL App provides both free and premium content, making ASL learning accessible and engaging for a wide audience."
+  },
+  {
+    "name": "Marlee Signs",
+    "sector": "Education",
+    "country": "United States",
+    "website": "https://www.marleematlin.net/app/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/in/marleematlin/"
+    },
+    "funding": null,
+    "employees": "Unknown",
+    "languages": ["American"],
+    "customers": "ASL learners",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "❌",
+    "keyFeatures": "High-quality video demonstrations by Marlee Matlin",
+    "additionalInformation": "Celebrity App",
+    "fullDescription": "Marlee Signs is an educational app created by Academy Award-winning actress Marlee Matlin. The app offers high-quality video demonstrations of ASL, covering the alphabet, numbers, common phrases, and more. It includes seven free lessons and additional lesson packs available for purchase, recognized for its effective teaching methods and dedication to making ASL accessible to learners of all levels."
+  },
+  {
+    "name": "SignSchool",
+    "sector": "Education",
+    "country": "United States",
+    "website": "https://www.signschool.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signschool/"
+    },
+    "funding": null,
+    "employees": "[2](https://www.linkedin.com/search/results/people/?currentCompany=%5B%225271909%22%5D&origin=COMPANY_PAGE_CANNED_SEARCH&sid=io4)",
+    "languages": ["American"],
+    "customers": "ASL learners",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Interactive exercises",
+    "additionalInformation": "",
+    "fullDescription": "SignSchool is a free online platform that offers a comprehensive curriculum for learning American Sign Language (ASL). The platform features video lessons, interactive exercises, a dictionary, and a Word of the Day feature. SignSchool aims to bridge communication gaps between Deaf and hearing communities by providing a user-friendly, diverse learning experience that includes various signing models and dialects."
+  },
+  {
+    "name": "DeafAI",
+    "sector": "Translation",
+    "country": "Canada",
+    "website": "https://www.deaf-ai.com/",
+    "linkedIn": null,
+    "funding": null,
+    "employees": "Not disclosed",
+    "languages": ["American", "other sign languages"],
+    "customers": "Service providers, organizations, businesses",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-based virtual sign-language interpreter, real-time translation",
+    "additionalInformation": "Provides affordable, on-demand sign language interpretation services, aims to replace human interpreters in various sectors including education, healthcare, and entertainment source source",
+    "fullDescription": ""
+  },
+  {
+    "name": "Signer.AI",
+    "sector": "Translation",
+    "country": "India",
+    "website": "https://signer.ai/",
+    "linkedIn": null,
+    "funding": null,
+    "employees": "Not disclosed",
+    "languages": ["Indian"],
+    "customers": "Deaf individuals, businesses, educational institutions",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-powered real-time translation, digital sign language companion, 3D avatars",
+    "additionalInformation": "[Recognized by the Government of India and the United Nations; focuses on making communication accessible, engaging, and inclusive for the deaf community](https://signer.ai/) [source](https://signer.ai/)",
+    "fullDescription": ""
+  },
+  {
+    "name": "CODA",
+    "sector": "Translation",
+    "country": "Israel",
+    "website": "https://codasign.ai/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/codasign-ai/"
+    },
+    "funding": {
+      "total": "Supported by Israel Innovation Authority"
+    },
+    "employees": "Not disclosed",
+    "languages": ["Multiple global sign languages"],
+    "customers": "Deaf community, video content creators",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-generated avatars providing real-time sign language translation",
+    "additionalInformation": "Founded by Shani Bibi, a Child of Deaf Adults (CODA); recognized in innovation competitions for enhancing accessibility through technology.",
+    "fullDescription": ""
+  },
+  {
+    "name": "InSignLanguage",
+    "sector": "Interpretation",
+    "country": "United Kingdom",
+    "incorporation": "https://find-and-update.company-information.service.gov.uk/company/10943637",
+    "website": "https://www.insignlanguage.co.uk/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/insignlanguage-ltd/"
+    },
+    "funding": null,
+    "employees": null,
+    "languages": ["British"],
+    "customers": "Businesses, public sector, Deaf community",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Video Relay Service (VRS), face-to-face interpreting, AI-powered solutions",
+    "fullDescription": "InSignLanguage Ltd. provides professional British Sign Language (BSL) interpreting services, including face-to-face and Video Relay Services (VRS). Their NRCPD-registered interpreters offer accurate, reliable communication support for Deaf clients across business, legal, medical, and public sector appointments. The company also integrates AI technology to enhance accessibility solutions."
+  },
+  {
+    "name": "ASL Now",
+    "sector": "Interpretation",
+    "country": "United States",
+    "website": "https://aslnow.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/asl-now/"
+    },
+    "funding": null,
+    "employees": null,
+    "languages": ["American"],
+    "customers": "Businesses, government agencies, Deaf and Hard of Hearing individuals",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Direct Video Calling (DVC), live support, live chat, video remote interpreting",
+    "fullDescription": "ASL Now provides accessible communication services, including Direct Video Calling (DVC), live support, live chat, and video remote interpreting, to facilitate direct communication between businesses or government agencies and Deaf or Hard of Hearing customers. Their services aim to enhance customer satisfaction and loyalty by ensuring equitable communication experiences. ASL Now is powered by Communication Service for the Deaf (CSD), an organization with a long history of pioneering accessible communication technology."
+  },
+  {
+    "name": "Sign AI",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://sign-ai.co/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/sign-ai-co/"
+    },
+    "funding": null,
+    "employees": null,
+    "languages": ["American"],
+    "customers": "Deaf and hearing individuals seeking real-time communication",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-powered virtual sign language interpretation, real-time bi-directional communication",
+    "fullDescription": "Sign AI is a U.S.-based company specializing in AI-powered virtual sign language interpretation. Their mission is to facilitate real-time, bi-directional communication between Deaf and hearing individuals, promoting communication equity for all. By leveraging advanced AI technology, Sign AI aims to ensure clear and complete understanding in every conversation, thereby bridging communication gaps and enhancing accessibility."
+  },
+  {
+    "name": "SignAvatar",
+    "sector": "Translation",
+    "country": "Serbia",
+    "website": "https://www.signavatar.org/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signavatar/",
+      "instagram": "https://www.instagram.com/signavatar.ai/",
+      "tiktok": "https://www.tiktok.com/@signavatar.ai",
+      "facebook": "https://www.facebook.com/signavatarai/"
+    },
+    "funding": {
+      "total": "Undisclosed",
+      "url": "https://pitchbook.com/profiles/company/686925-46"
+    },
+    "employees": null,
+    "languages": ["American", "International", "Serbian", "Macedonian"],
+    "customers": "Public transportation hubs, airports, train stations",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "AI-powered real-time sign language translation, customizable avatars",
+    "fullDescription": "SignAvatar is a Serbian startup specializing in AI-driven sign language translation. Their flagship product, TransportSign™, provides real-time sign language interpretations of public announcements in transportation hubs, enhancing accessibility for the Deaf and hard-of-hearing community. The company offers customizable avatars to reflect diverse identities and cultures, aiming to bridge communication gaps in public spaces."
+  },
+  {
+    "name": "DeepSign",
+    "sector": "Translation",
+    "country": "Hungary",
+    "website": "https://deepsign-ai-discovery-3pi3mxf.gamma.site/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/deepsignai/"
+    },
+    "funding": {
+      "total": "270,829,150 HUF (approx 700k$)",
+      "url": "https://nkfih.gov.hu/palyazoknak/nkfi-alap/gyorsitosav-2023-1-1-2/tamogatott-projektek#~text=2023-1.1.2-GYORS%C3%8DT%C3%93S%C3%81V-2024-00019:~:text=2023%2D1.1.2%2DGYORS%C3%8DT%C3%93S%C3%81V%2D2024%2D00019"
+    },
+    "employees": null,
+    "languages": [],
+    "customers": "Deaf and Hard of Hearing individuals, businesses, public institutions",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-driven solutions, real-time translation, community engagement",
+    "fullDescription": "DeepSign is a Hungary-based company dedicated to developing AI solutions that enhance communication and accessibility for the Deaf and Hard of Hearing community. Led by a Deaf co-founder and CEO, the team comprises both Deaf and hearing professionals proficient in sign language. DeepSign focuses on creating innovative AI-driven tools for real-time translation between spoken and signed languages. Currently operating in stealth mode, the company is engaging with local Deaf communities through initiatives like the DeepSign AI Discovery Tour to understand their needs and explore how AI can effectively address daily challenges."
+  },
+  {
+    "name": "OmniBridge",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://omnibridge.ai/",
+    "social": {"linkedIn": "https://www.linkedin.com/company/omnibridgeai/"},
+    "funding": {
+      "total": "Undisclosed",
+      "url": "https://www.crunchbase.com/organization/omnibridge"
+    },
+    "employees": null,
+    "languages": ["American"],
+    "customers": "Deaf and hearing individuals seeking real-time communication",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-driven machine translation, real-time bi-directional communication",
+    "fullDescription": "OmniBridge develops AI technology for real-time American Sign Language (ASL) translation, facilitating bi-directional communication between Deaf and hearing individuals. Their mission is to bridge the communication gap by enabling seamless conversations through AI-driven machine translation technology. Founded by Adam Munder, a Deaf software engineer, the company is dedicated to enhancing accessibility and inclusivity."
+  }
+]

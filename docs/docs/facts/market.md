@@ -9,9 +9,13 @@ To understand the market size, we flow from the global language services market 
         This is in conflict with the estimated United States market of **US\$ 1.2 billion**[^einpresswire].
 
 [^factmr-lsm]: Fact.MR. 2022. [Language Services Market](https://www.factmr.com/report/language-services-market).
+
 [^nimdzi]: Nimdzi Research. 2019. [Current Size of the Interpreting Market](https://www.nimdzi.com/current-size-of-interpreting-market-nimdzi-finger-food/).
+
 [^businessresearchinsights]: Business Research Insights. 2024. [Sign Language Interpretation Services Market Size](https://www.businessresearchinsights.com/market-reports/sign-language-interpretation-services-market-112737).
+
 [^marketresearchfuture]: Market Research Future. 2024. [Translation Service Market](https://www.marketresearchfuture.com/reports/translation-service-market-1400).
+
 [^slator]: Slator. 2022. [2022 Language Industry Market Report](https://slator.com/slator-2022-language-industry-market-report/).
 
 From a more holistic perspective, the entire sign language economy in the U.S. alone is estimated to range between **US\$ 3 billion** and **US\$ 10 billion** annually.
@@ -44,6 +48,7 @@ Over a 10-year period, this promises a return of nearly US\$ 16 for every 1 doll
 :::
 
 [^who-report]: World Health Organization. 2021. [World Report on Hearing](https://www.who.int/publications/i/item/world-report-on-hearing).
+
 [^who-report-annex]: World Health Organization. 2021. [World Report on Hearing, Web Annex B: The Return on Investment From Actions To Prevent and/or Mitigate the Impact of Hearing Loss](https://iris.who.int/bitstream/handle/10665/339906/9789240021501-eng.pdf).
 
 ## Perception and Impact
@@ -83,6 +88,7 @@ given 7,189 students<Badge type="danger" text="Citation Needed" />,
 it is estimated at **US\$ 575 million**.
 
 [^gallaudet-schools]: Gallaudet University. 2024. [Schools & Programs for the Deaf/HH](https://guides.apple.com/?pg=14518499966685085491&lsp=9902&name=schools-programs-for-the-deafhh).
+
 [^schools-deaf]: Wikipedia. 2024. [List of schools for the deaf](https://en.wikipedia.org/wiki/List_of_schools_for_the_deaf).
 
 There are also three higher education instutions for the deaf[^schools-deaf] in the United States that receive funding from the United States Department of Education.
@@ -91,7 +97,9 @@ and Gallaudet University receives **US\$ 165.4 million**[^gallaudet-budget].
 An estimated 237,000 deaf students are enrolled in college[^npsas].
 
 [^ntid-budget]: National Technical Institute for the Deaf. 2024. [Fiscal Year 2025 Budget Request](https://www.ed.gov/media/document/m-ntidpdf-1).
+
 [^gallaudet-budget]: Gallaudet University. 2024. [Fiscal Year 2025 Budget Request](https://www.ed.gov/sites/ed/files/about/overview/budget/budget25/justifications/n-gallaudet.pdf).
+
 [^npsas]: National Deaf Center on Postsecondary Outcomes. 2023. [Undergraduate Enrollment of Deaf Students in the United States (2019-2020)](https://nationaldeafcenter.org/resources/research-data/deaf-college-student-data/npsas/).
 
 Interpreting Services are estimated given a **US\$ 83,313** average yearly salary[^interpreters-salary]
@@ -99,7 +107,9 @@ times 10,385 certified interpreters[^rid] gives **US\$ 865 million**.
 In 2021, they were estimated to be **US\$ 1.2 billion**[^einpresswire].
 
 [^interpreters-salary]: Indeed. 2024. [Sign language interpreter salary in United States](https://www.indeed.com/career/sign-language-interpreter/salaries).
+
 [^rid]: Registry of Interpreters for the Deaf. 2024. [Publications](https://rid.org/programs/membership/publications/).
+
 [^einpresswire]: Einpresswire. 2021. [1.2 billion ASL interpretation market presents opportunity for consolidation](https://www.einpresswire.com/article/539608436/1-2-billion-asl-interpretation-market-presents-opportunity-for-consolidation).
 
 Transition services to address failures in sign language access in education and other factors are estimated to cost **US\$ 313.5 million**.
@@ -109,8 +119,11 @@ Transition services to address failures in sign language access in education and
 - **Helen Keller National Center**: The Helen Keller Center for Deaf-Blindness received **US\$ 16 million** in funding from the U.S. government in 2021[^helen-keller], and **US\$ 19 million** in 2023-2025[^helen-keller-2024].
 
 [^usdoe-postsecondary]: U.S. Department of Education. 2019. [Postsecondary Education Support for Individuals who are Deaf or Hard of Hearing](https://www2.ed.gov/about/overview/budget/budget19/justifications/h-specialed.pdf).
+
 [^national-deaf-center-vr]: National Deaf Center. 2020. [Vocational Rehabilitation Services and Deaf Americans](https://www.nationaldeafcenter.org/news/room-improvement-new-report-analyzes-vocational-rehabilitation-services-and-deaf-americans#:~:text=Better%20Understanding%20of%20Who%20is%20Being%20Served&text=Of%20those%20people%20who%20applied,of%20all%20VR%20case%20files).
+
 [^helen-keller]: U.S. Department of Education. 2021. [Rehabilitation Services Justification](https://www2.ed.gov/about/overview/budget/budget21/justifications/j-rehab.pdf).
+
 [^helen-keller-2024]: U.S. Department of Education. 2024. [FY2025 Department of Education Budget Summary Final](https://www.ed.gov/sites/ed/files/about/overview/budget/budget25/summary/25summary.pdf).
 
 ### Sign Language Teaching (to hearing people)
@@ -148,6 +161,7 @@ Their public reports do not provide detailed breakdowns by service type.
 However, the total TRS Fund budget for the 2024-2025 Fund Year is approximately **US\$ 1.49 billion**[^fcc-vrs].
 
 [^fcc-dvc]: Federal Communications Commission. 2024. [Direct Video Calling Data](https://www.fcc.gov/sites/default/files/CSD-DVC-Data.pdf).
+
 [^fcc-vrs]: Federal Communications Commission. 2024. [Structure and Practices of the Video Relay Service Program](https://docs.fcc.gov/public/attachments/DA-24-620A1.pdf).
 
 | Service                                                                                    | Description                                                                                                                  | Audience                                  | Cost (Per Minute)[^fcc-vrs]                                 |
@@ -167,6 +181,7 @@ Looking at the combined revenue of VRS providers, the VRS market alone is estima
 **US\$ 626 million** for 2023[^vrs-breakdown].
 
 [^gallaudet-numbers]: Gallaudet University. 2022. [The Sign Language Economy = Numbers and Impact](https://docs.google.com/document/d/1Bq4S2XS0tytivVDsNNkAa0IOcEDSVs__O57yMc_94VY/edit?tab=t.0).
+
 [^vrs-breakdown]: Multilingual. 2023. [Breaking Down Changes to Video Relay Service Industry](https://multilingual.com/breaking-down-changes-to-video-relay-service-industry/).
 
 For VRI, in the United States, similar estimates of **US\$ 250 million**[^gallaudet-numbers]
@@ -195,6 +210,12 @@ Citations needed.
 
 - Miami-Dade Innovation Authority's pilot program invested **US\$ 100,000** in Signapse with the goal of improving airport services.[^miami-signapse]
 - El Al Israel Airlines through Cockpit innovation has partnered with VSL Labs for an undisclosed amount.[^cockpit-vsl]
+- Belgrade Central Station[^belgrade-station] and Belgrade Airport[^belgrade-airport] has partnered with SignAvatar to provide sign language information services.
 
 [^miami-signapse]: Miami-Dade Airport. 2024. [Mayor Levine Cava unveils winners of Public Innovation Challenge tasked with elevating the passenger experience at MIA](https://news.miami-airport.com/mayor-levine-cava-unveils-winners-of-public-innovation-challenge-tasked-with-elevating-the-passenger-experience-at-mia/).
+
 [^cockpit-vsl]: Tal Meged (CEO of VSL Labs). 2024. [LinkedIn Post](https://www.linkedin.com/posts/talmeged_thrilled-to-be-collaborate-with-el-al-israel-activity-7267873306375041024-zIBP/).
+
+[^belgrade-station]: Марија Стевановић. 2023. [Prokop Dobio Sistem Koji Ne Postoji Nigde U Svetu](https://www.novosti.rs/beograd/vesti/1294415/prokop-dobio-sistem-koji-postoji-nigde-svetu-srpska-pamet-pomoc-drzave-humani-cilj-avatar-daje-informacije-znakovnom-jeziku).
+
+[^belgrade-airport]: EX-YU Aviation News. 2024. [Belgrade Airport trials sign language announcements](https://www.exyuaviation.com/2024/07/belgrade-airport-trials-sign-language.html).
