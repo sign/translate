@@ -88,7 +88,7 @@
     "signedToSpoken": "✅",
     "keyFeatures": "Video Communication",
     "additionalInformation": "Also behind the education platform: [https://slait.school](https://slait.school/)",
-    "fullDescription": "SLAIT offers real-time ASL transcription and translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility."
+    "fullDescription": "SLAIT offers real-time ASL transcription and translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/PcZbajccCdU\"></iframe>"
   },
   {
     "name": "EQ4All",
@@ -220,7 +220,7 @@
     "spokenToSigned": "✅",
     "signedToSpoken": "❌",
     "keyFeatures": "Chat interface, QR code for public spaces",
-    "fullDescription": "Deafinitely provides real-time sign language translation and communication tools, including a chat interface and QR codes for public spaces. Supporting Israeli Sign Language (ISL), BSL, and ASL, the company serves websites, video markets, and public institutions, known for its innovative solutions like the patented SignChat app for real-time message translation. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/1COjZNbEHVo\">\n</iframe>"
+    "fullDescription": "Deafinitely provides real-time sign language translation and communication tools, including a chat interface and QR codes for public spaces. Supporting Israeli Sign Language (ISL), BSL, and ASL, the company serves websites, video markets, and public institutions, known for its innovative solutions like the patented SignChat app for real-time message translation. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/1COjZNbEHVo\"></iframe>"
   },
   {
     "name": "EASIER Project",
