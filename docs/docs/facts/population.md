@@ -50,7 +50,6 @@ These impairments are defined per ear, as follows[^who-report]:
 Among those with disabling hearing loss, the **World Federation of the Deaf (WFD)** estimates there are approximately **70 million deaf people worldwide**.
 This community spans over **200 sign languages** (or over _300_[^un-national-day]), underlining the linguistic diversity of deaf populations.
 
-
 [^wfd]: World Federation of the Deaf. 2024. [Our Work](https://wfdeaf.org/our-work/).
 [^un-national-day]: United Nations. 2024. [International Day of Sign Languages](https://www.un.org/en/observances/sign-languages-day).
 
