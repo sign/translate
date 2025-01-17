@@ -1,8 +1,18 @@
 # Getting Started
 
-In our documentation, we aim to provide concise and clear information, with a focus on source attribution and accuracy.
-We welcome feedback and contributions to improve the quality and relevance of our content.
 
-:::info Quote: Attributed to many people
-If I had more time, I would have written a shorter letter.
-:::
+
+This is the knowhow repository of the AI sign language startup **sign**. Our mission is to share high-quality knowledge and insights on topics of deafness, population, market trends, technology, competition, and more.
+
+We strive to provide clear, accurate, and well-sourced information to ensure transparency and reliability.
+
+We welcome your contributions and feedback to help us maintain quality, relevance, and a deeper understanding of the topics we cover.
+
+
+Hi Amit, 
+
+I could not find a way of leaving a general comment on a site, so i'll just write it here. 
+
+a) This section needs more context. Most readers won’t be familiar with a startup using a (GitHub)Blog for providing sources. It should clearly explain that this is the go-to place for our sources..
+b) The quote feels out of place and distracting. It needs better context or should be removed.
+
