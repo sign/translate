@@ -23,8 +23,8 @@
     "@firebase/database-types": "1.0.7",
     "@google-cloud/storage": "7.15.0",
     "@sign-mt/browsermt": "0.2.3",
-    "@unkey/api": "0.29.0",
-    "@unkey/ratelimit": "0.5.0",
+    "@unkey/api": "0.30.0",
+    "@unkey/ratelimit": "0.5.1",
     "cors": "2.8.5",
     "express": "4.21.2",
     "express-async-errors": "3.1.1",
@@ -33,7 +33,7 @@
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.77.4",
+    "openai": "4.78.0",
     "request-ip": "3.3.0"
   },
   "devDependencies": {
