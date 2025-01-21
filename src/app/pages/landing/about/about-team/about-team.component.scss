@@ -34,10 +34,6 @@ ion-avatar {
 }
 
 ion-badge {
-  color: var(--ion-color-primary);
-  background: rgb(from var(--ion-color-primary) r g b / 0.05);
-  border: 1px solid var(--ion-color-primary);
-
   padding: 2px 6px;
   position: absolute;
   left: 8px;

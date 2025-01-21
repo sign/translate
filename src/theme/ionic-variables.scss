@@ -1,17 +1,19 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
+// https://ionicframework.com/docs/theming/color-generator
 
 /** Ionic CSS Variables **/
 :root {
   --ion-font-family: 'Trebuchet MS', var(--ion-default-font);
 
   /** primary **/
-  --ion-color-primary: #1976d2;
-  --ion-color-primary-rgb: 25, 118, 210;
+  --ion-color-primary: #8500e9;
+  --ion-color-primary-rgb: 133, 0, 233;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #1668b9;
-  --ion-color-primary-tint: #3084d7;
+  --ion-color-primary-shade: #7500cd;
+  --ion-color-primary-tint: #911aeb;
+  --ion-color-primary-accessible-text: #7f01de;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -85,12 +87,13 @@
    */
 
   body {
-    --ion-color-primary: #428cff;
-    --ion-color-primary-rgb: 66, 140, 255;
+    --ion-color-primary: #8500e9;
+    --ion-color-primary-rgb: 133, 0, 233;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-shade: #3a7be0;
-    --ion-color-primary-tint: #5598ff;
+    --ion-color-primary-shade: #7500cd;
+    --ion-color-primary-tint: #911aeb;
+    --ion-color-primary-accessible-text: #c384f2;
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80, 200, 255;
@@ -234,4 +237,19 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+a {
+  background-color: transparent;
+  color: var(--ion-color-primary-accessible-text, --ion-color-primary);
+}
+
+ion-icon.ion-color-primary {
+  --ion-color-base: var(--ion-color-primary-accessible-text) !important;
+}
+
+.mat-mdc-tab-group,
+.mat-mdc-tab-nav-bar {
+  --mat-tab-header-active-label-text-color: var(--ion-color-primary-accessible-text);
+  --mdc-tab-indicator-active-indicator-color: var(--ion-color-primary-accessible-text);
 }
