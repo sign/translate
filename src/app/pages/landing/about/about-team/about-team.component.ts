@@ -13,7 +13,7 @@ export class AboutTeamComponent {
       name: 'Timothy Rabozzi',
       avatar: 'assets/promotional/about/team/timothy-rabozzi.jpg',
       title: 'CEO',
-      bio: 'Experienced in leading innovation in LegalTech, politics and regulated industries with a Master of Law from the University of Bern.',
+      bio: 'Mission-driven entrepreneur using technology to improve society. Led digital solutions in public sector, finance, and LegalTech. Holds a Master of Law from the University of Bern.',
     },
     {
       name: 'Dr. Amit Moryossef',
@@ -22,10 +22,10 @@ export class AboutTeamComponent {
       bio: 'Experienced CTO. Award-winning expert in sign language technology. Ex-Google in the sign language team, Ph.D. in Computer Science.',
     },
     {
-      name: 'Eliyahu Moryossef',
-      avatar: 'assets/promotional/about/team/eliyahu-moryossef.jpg',
-      title: 'CMO',
-      bio: 'Experienced sales and marketing manager with a B.A. in Public Administration, studying for a Master of Business Administration (MBA).',
+      name: 'Daniel Lazarescu',
+      avatar: 'assets/promotional/about/team/daniel-lazarescu.jpg',
+      title: 'COO',
+      bio: 'Revenue operations leader with a track record scaling SaaS, including a $200M subscription program and $150M ARR teams. Expert in driving product growth and go-to-market strategies.',
     },
   ];
 }
