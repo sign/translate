@@ -30,7 +30,6 @@ import {LogoComponent} from '../../../components/logo/logo.component';
     LanguageSelectorsComponent,
     SendFeedbackComponent,
     TranslocoPipe,
-    NtkmeButtonModule,
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     DropPoseFileComponent,

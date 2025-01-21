@@ -8,12 +8,13 @@ import {IonCard, IonCardContent, IonCardTitle, IonIcon} from '@ionic/angular/sta
 import {LazyMapComponent} from '../lazy-map/lazy-map.component';
 import {addIcons} from 'ionicons';
 import {bookOutline, cloudOfflineOutline, languageOutline, optionsOutline, swapHorizontalOutline} from 'ionicons/icons';
+import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 
 @Component({
   selector: 'app-about-benefits',
   templateUrl: './about-benefits.component.html',
   styleUrls: ['./about-benefits.component.scss'],
-  imports: [IonCard, IonCardContent, TranslocoDirective, IonCardTitle, LazyMapComponent, IonIcon],
+  imports: [IonCard, IonCardContent, TranslocoDirective, IonCardTitle, LazyMapComponent, IonIcon, NtkmeButtonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AboutBenefitsComponent extends BaseComponent implements AfterViewInit, OnInit {

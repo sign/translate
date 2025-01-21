@@ -19,6 +19,10 @@
                   </ion-card-title>
                   <p>{{ t(slide.id + '.subtitle') }}</p>
                   <p>{{ t(slide.id + '.description') }}</p>
+                  @if (slide.id === 'open-source') {
+                    <br />
+                    <ntkme-github-button user="sign" repo="translate" [count]="true" size="large" />
+                  }
                 </div>
                 <div class="graphic">
                   @switch (slide.id) {

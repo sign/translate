@@ -10,12 +10,22 @@ import {
 } from '@ionic/angular/standalone';
 import {addIcons} from 'ionicons';
 import {alertCircleOutline, code, language} from 'ionicons/icons';
+import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 
 @Component({
   selector: 'app-contribute',
   templateUrl: './contribute.component.html',
   styleUrls: ['./contribute.component.scss'],
-  imports: [IonCard, IonCardHeader, IonCardTitle, IonIcon, IonCardSubtitle, IonCardContent, IonButton],
+  imports: [
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonIcon,
+    IonCardSubtitle,
+    IonCardContent,
+    IonButton,
+    NtkmeButtonModule,
+  ],
 })
 export class ContributeComponent {
   cards = [
