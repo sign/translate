@@ -1,8 +1,8 @@
 @forward './material.scss';
 @forward 'fonts/roboto.css';
 
-@forward './ionic-variables';
 @forward './ionic';
+@forward './ionic-variables';
 
 .container {
   width: auto;

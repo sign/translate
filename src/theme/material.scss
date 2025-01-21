@@ -12,7 +12,7 @@ $app-typography: mat.m2-define-typography-config(
 
 // Create the theme object (a Sass map containing all of the palettes).
 $app-color: (
-  primary: mat.m2-define-palette(mat.$m2-blue-palette, $default: 700),
+  primary: mat.m2-define-palette(mat.$m2-deep-purple-palette, $default: 700),
   accent: $app-accent,
   warn: $app-warn,
 );
@@ -24,7 +24,7 @@ $app-theme: mat.m2-define-light-theme(
 $app-dark-theme: mat.m2-define-dark-theme(
   (
     color: (
-      primary: mat.m2-define-palette(mat.$m2-blue-palette, $default: 400),
+      primary: mat.m2-define-palette(mat.$m2-deep-purple-palette, $default: 400),
       accent: $app-accent,
       warn: $app-warn,
     ),
