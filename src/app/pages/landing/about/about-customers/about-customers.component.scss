@@ -1,5 +1,9 @@
 @use '../../../../../theme/breakpoints' as breakpoints;
 
+:host {
+  margin-top: 18px; // The element does not start with an h2, so we need to add some margin
+}
+
 .container {
   display: flex;
 
