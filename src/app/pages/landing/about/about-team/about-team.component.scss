@@ -5,18 +5,22 @@
 }
 
 .cards-container {
-  justify-content: center;
   margin-top: 32px;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media #{breakpoints.$breakpoint-lt-md} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{breakpoints.$breakpoint-lt-sm} {
+    grid-template-columns: 1fr;
+  }
 }
 
 ion-card {
   max-width: 280px;
-  text-align: center;
   border-radius: 16px;
-  @media #{breakpoints.$breakpoint-lt-md} {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 ion-avatar {
