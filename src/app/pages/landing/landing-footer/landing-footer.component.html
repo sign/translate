@@ -1,14 +1,14 @@
 <footer>
   <div class="container">
     <div class="brand">
-      <h6>sign.mt</h6>
+      <h3>sign.mt</h3>
       <a href="mailto:hello@sign.mt">hello&#64;sign.mt</a>
       <br />
       <app-i18n-language-selector />
     </div>
 
     <div class="legal" *transloco="let t; read: 'legal'">
-      <h6>{{ t('title') }}</h6>
+      <h3>{{ t('title') }}</h3>
       <ul>
         @for (page of legalPages; track page) {
           <li>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="social">
-      <h6>Find Us</h6>
+      <h3>Find Us</h3>
       <ul>
         <li><a href="https://twitter.com/signmt_" target="_blank">Twitter (X)</a></li>
         <li><a href="https://www.linkedin.com/company/sign-mt" target="_blank">LinkedIn</a></li>
