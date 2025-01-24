@@ -1,0 +1,63 @@
+{
+  "consentModal": {
+    "label": "Cookie consent",
+    "title": "We value your privacy",
+    "description": "We use cookies and other technologies to enhance your experience, provide essential functionality, and analyze our website's performance. By clicking “Accept All”, you agree to the use of all cookies and technologies.",
+    "acceptAllBtn": "Accept all",
+    "acceptNecessaryBtn": "Reject all",
+    "showPreferencesBtn": "Manage preferences",
+    "footer": "<a href='https://sign.mt/legal/privacy' target='_blank'>Privacy Policy</a><a href='https://sign.mt/legal/terms' target='_blank'>Terms and Conditions</a>"
+  },
+  "preferencesModal": {
+    "title": "Consent Preferences Center",
+    "acceptAllBtn": "Accept all",
+    "acceptNecessaryBtn": "Reject all",
+    "savePreferencesBtn": "Save preferences",
+    "closeIconLabel": "Close modal",
+    "serviceCounterLabel": "Service|Services",
+    "sections": [
+      {
+        "title": "Cookie Usage",
+        "description": "Cookies help us provide core functionality, personalize your experience, and analyze our app's performance. Some cookies are essential for our app to function, while others can be disabled."
+      },
+      {
+        "title": "Strictly Necessary Cookies <span class='pm__badge'>Always Enabled</span>",
+        "description": "These cookies are necessary for the website to operate and cannot be turned off. They are typically set in response to actions made by you, such as setting your privacy preferences.",
+        "linkedCategory": "necessary"
+      },
+      {
+        "title": "Functionality Cookies",
+        "description": "These cookies enable the website to provide enhanced functionality and personalization, such as remembering your preferred translation language.",
+        "linkedCategory": "functionality"
+      },
+      {
+        "title": "Analytics Cookies",
+        "description": "We use analytics cookies to understand how visitors interact with our website. This information helps us improve our services and your experience on our site.",
+        "linkedCategory": "analytics",
+        "cookieTable": {
+          "headers": {
+            "name": "Name",
+            "description": "Description",
+            "Service": "Service"
+          },
+          "body": [
+            {
+              "name": "_ga, _gid",
+              "description": "Used to distinguish users and analyze site traffic.",
+              "Service": "Google Analytics"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Advertisement Cookies",
+        "description": "These cookies are used to deliver advertisements that are relevant to you. They may also limit how often you see an ad and measure the effectiveness of an ad campaign.",
+        "linkedCategory": "marketing"
+      },
+      {
+        "title": "More information",
+        "description": "For any queries about how we use cookies, please visit our <a class='cc__link' href='https://sign.mt/legal/privacy' target='_blank'>Privacy Policy</a>."
+      }
+    ]
+  }
+}

@@ -10,6 +10,8 @@ import {languageCodeNormalizer} from './core/modules/transloco/languages';
 import {Meta} from '@angular/platform-browser';
 import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
 import {getUrlParams} from './core/helpers/url';
+import * as CookieConsent from 'vanilla-cookieconsent';
+import {ConsentStatus, ConsentType, FirebaseAnalytics} from '@capacitor-firebase/analytics';
 
 @Component({
   selector: 'app-root',
@@ -46,6 +48,94 @@ export class AppComponent implements AfterViewInit {
       );
       await SplashScreen.hide();
     }
+
+    this.initCookieConsent();
+  }
+
+  initCookieConsent() {
+    CookieConsent.reset();
+
+    CookieConsent.run({
+      root: 'body',
+      autoShow: true,
+      hideFromBots: true,
+
+      cookie: {
+        name: 'cc_cookie',
+        domain: location.hostname,
+        path: '/',
+        sameSite: 'Lax',
+        expiresAfterDays: 182,
+      },
+
+      // https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
+      guiOptions: {
+        consentModal: {
+          layout: 'cloud inline',
+          position: 'bottom center',
+          equalWeightButtons: true,
+          flipButtons: false,
+        },
+        preferencesModal: {
+          layout: 'box',
+          equalWeightButtons: true,
+          flipButtons: false,
+        },
+      },
+      onConsent: ({cookie}) => {
+        console.log('Consent given:', cookie);
+        const categories: {[key: string]: ConsentType[]} = {
+          functionality: [ConsentType.FunctionalityStorage, ConsentType.PersonalizationStorage],
+          analytics: [ConsentType.AnalyticsStorage],
+          marketing: [ConsentType.AdStorage, ConsentType.AdPersonalization, ConsentType.AdUserData],
+        };
+        for (const [category, types] of Object.entries(categories)) {
+          const consent: ConsentStatus = cookie.categories.includes(category)
+            ? ConsentStatus.Granted
+            : ConsentStatus.Denied;
+          for (const type of types) {
+            FirebaseAnalytics.setConsent({type, status: consent});
+          }
+        }
+      },
+      categories: {
+        necessary: {
+          enabled: true, // this category is enabled by default
+          readOnly: true, // this category cannot be disabled
+        },
+        functionality: {
+          enabled: true,
+        },
+        analytics: {
+          autoClear: {
+            cookies: [
+              {
+                name: /^_ga/, // regex: match all cookies starting with '_ga'
+              },
+              {
+                name: '_gid', // string: exact cookie name
+              },
+            ],
+          },
+          // https://cookieconsent.orestbida.com/reference/configuration-reference.html#category-services
+          services: {
+            ga: {
+              label: 'Google Analytics',
+            },
+          },
+        },
+        marketing: {},
+      },
+
+      language: {
+        default: 'en',
+        translations: {
+          en: 'assets/i18n/cookies/en.json',
+        },
+      },
+    });
+
+    CookieConsent.show();
   }
 
   logRouterNavigation() {

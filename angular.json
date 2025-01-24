@@ -73,6 +73,10 @@
                 "bundleName": "app"
               },
               {
+                "input": "./node_modules/vanilla-cookieconsent/dist/cookieconsent.css",
+                "bundleName": "cookieconsent"
+              },
+              {
                 "input": "./node_modules/leaflet/dist/leaflet.css",
                 "bundleName": "map",
                 "inject": false
