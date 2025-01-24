@@ -53,8 +53,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   initCookieConsent() {
-    CookieConsent.reset();
-
     CookieConsent.run({
       root: 'body',
       autoShow: true,
@@ -134,8 +132,6 @@ export class AppComponent implements AfterViewInit {
         },
       },
     });
-
-    CookieConsent.show();
   }
 
   logRouterNavigation() {

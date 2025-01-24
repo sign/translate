@@ -90,6 +90,6 @@ table {
   cursor: pointer;
   font-size: 14px;
   user-select: none;
-  margin-right: 5px;
+  margin-inline-end: 5px;
 }
 </style>
