@@ -8,7 +8,7 @@ npm install
 # mermaid: mermaid 11.0.2 crashes tests
 
 # Update docs dependencies
-bun x npm-check-updates --cacheClear --cwd docs
+bun x npm-check-updates --cacheClear --cwd docs -u
 cd docs && bun install && cd ..
 
 # Update server dependencies
