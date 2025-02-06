@@ -60,17 +60,24 @@ export class AppComponent implements AfterViewInit {
 
     const matcher = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
 
-    function onColorSchemeChange() {
-      // Resolve variable --ion-toolbar-background on the body element
-      const toolbarColor = window.getComputedStyle(document.body).getPropertyValue('--ion-toolbar-background');
-      // Update the theme-color meta tag with the toolbar color
-      if (toolbarColor) {
-        const mode = matcher.matches ? 'dark' : 'light';
-        const themeColor = document.head.querySelector(
-          `meta[name="theme-color"][media="(prefers-color-scheme: ${mode})"]`
-        );
-        themeColor.setAttribute('content', toolbarColor);
+    function onColorSchemeChange(): any {
+      const toolbar = document.querySelector('ion-toolbar');
+      if (!toolbar) {
+        // Try again if the toolbar is not yet available
+        return requestAnimationFrame(onColorSchemeChange);
       }
+
+      const toolbarColor = window.getComputedStyle(toolbar).getPropertyValue('--background');
+      if (!toolbarColor) {
+        // Try again if the color is not yet available
+        return requestAnimationFrame(onColorSchemeChange);
+      }
+
+      // Update the theme-color meta tag with the toolbar color
+      const mode = matcher.matches ? 'dark' : 'light';
+      const selector = `meta[name="theme-color"][media="(prefers-color-scheme: ${mode})"]`;
+      const themeColor = document.head.querySelector(selector);
+      themeColor.setAttribute('content', toolbarColor);
     }
 
     matcher.addEventListener('change', onColorSchemeChange);
