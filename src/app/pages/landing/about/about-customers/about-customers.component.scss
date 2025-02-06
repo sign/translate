@@ -27,7 +27,7 @@ ion-item {
   }
 
   &.selected {
-    border-left-color: var(--ion-color-primary);
+    border-left-color: var(--ion-color-primary-accessible-text);
     filter: none;
 
     ion-icon {

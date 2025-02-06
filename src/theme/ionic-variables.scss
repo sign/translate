@@ -248,6 +248,11 @@ ion-icon.ion-color-primary {
   --ion-color-base: var(--ion-color-primary-accessible-text) !important;
 }
 
+// Clear buttons with primary color
+ion-button.ion-color-primary.button-clear {
+  --ion-color-base: var(--ion-color-primary-accessible-text) !important;
+}
+
 .mat-mdc-tab-group,
 .mat-mdc-tab-nav-bar {
   --mat-tab-header-active-label-text-color: var(--ion-color-primary-accessible-text);

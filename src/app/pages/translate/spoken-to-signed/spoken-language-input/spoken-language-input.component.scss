@@ -52,6 +52,7 @@ ion-textarea#mobile {
   margin-bottom: 6px;
   border-radius: 20px;
   --padding-start: 10px;
+  --padding-bottom: var(--padding-top);
   --highlight-color: var(--ion-color-primary);
 
   &.sc-ion-textarea-ios-h {

@@ -25,8 +25,8 @@ export class ViewerSelectorComponent extends BaseSettingsComponent implements On
 
   buttons: MatFabMenu[] = [
     {id: 'pose', icon: 'git-commit', color: 'light'},
-    {id: 'avatar', icon: 'logo-apple-ar', color: 'primary'},
-    {id: 'person', icon: 'accessibility', color: 'success'},
+    {id: 'avatar', icon: 'logo-apple-ar', color: 'success'},
+    {id: 'person', icon: 'accessibility', color: 'primary'},
   ];
 
   fab: MatFabMenu;
