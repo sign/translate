@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, inject} from '@angular/core';
 import {TranslocoService} from '@jsverse/transloco';
 import {filter, tap} from 'rxjs/operators';
-import {Store} from '@ngxs/store';
 import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
@@ -12,6 +11,7 @@ import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
 import {getUrlParams} from './core/helpers/url';
 import * as CookieConsent from 'vanilla-cookieconsent';
 import {ConsentStatus, ConsentType, FirebaseAnalytics} from '@capacitor-firebase/analytics';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +24,7 @@ export class AppComponent implements AfterViewInit {
   private ga = inject(GoogleAnalyticsService);
   private transloco = inject(TranslocoService);
   private router = inject(Router);
-  private store = inject(Store);
+  private mediaMatcher = inject(MediaMatcher);
 
   urlParams = getUrlParams();
 
@@ -32,6 +32,7 @@ export class AppComponent implements AfterViewInit {
     this.listenLanguageChange();
     this.logRouterNavigation();
     this.checkURLEmbedding();
+    this.updateToolbarColor();
     this.setPageKeyboardClass();
   }
 
@@ -50,6 +51,30 @@ export class AppComponent implements AfterViewInit {
     }
 
     this.initCookieConsent();
+  }
+
+  updateToolbarColor() {
+    if (!('window' in globalThis)) {
+      return;
+    }
+
+    const matcher = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)');
+
+    function onColorSchemeChange() {
+      // Resolve variable --ion-toolbar-background on the body element
+      const toolbarColor = window.getComputedStyle(document.body).getPropertyValue('--ion-toolbar-background');
+      // Update the theme-color meta tag with the toolbar color
+      if (toolbarColor) {
+        const mode = matcher.matches ? 'dark' : 'light';
+        const themeColor = document.head.querySelector(
+          `meta[name="theme-color"][media="(prefers-color-scheme: ${mode})"]`
+        );
+        themeColor.setAttribute('content', toolbarColor);
+      }
+    }
+
+    matcher.addEventListener('change', onColorSchemeChange);
+    onColorSchemeChange();
   }
 
   initCookieConsent() {
