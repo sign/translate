@@ -3,6 +3,7 @@ import fs from 'node:fs';
 
 export interface Company {
   name: string;
+  deepDive?: string;
   website: string;
   sector: string;
   country: string;
