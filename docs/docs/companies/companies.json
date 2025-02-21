@@ -1,5 +1,27 @@
 [
   {
+    "name": "sign.mt",
+    "deepDive": "../technology/introduction.html",
+    "sector": "Translation",
+    "country": "Israel / Switzerland",
+    "website": "https://sign.mt/about",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/sign-mt/",
+      "github": "https://github.com/sign",
+      "twitter": "https://x.com/signmt_"
+    },
+    "funding": {
+      "total": "None"
+    },
+    "employees": "Not disclosed",
+    "languages": ["40+ sign languages"],
+    "customers": "Businesses, researchers, accessibility providers",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Neural machine translation for sign languages",
+    "fullDescription": "sign.mt is dedicated to advancing sign language translation using state-of-the-art neural machine translation models through SignWriting. The company focuses on building high-quality datasets and developing AI-driven solutions that enable real-time translation between spoken and signed languages. With a strong emphasis on research and accessibility, sign.mt collaborates with academic institutions and contributes to open-source initiatives, helping to bridge communication gaps for the deaf community and businesses seeking inclusive solutions."
+  },
+  {
     "name": "Signapse",
     "sector": "Translation",
     "country": "England",
@@ -120,7 +142,11 @@
     "country": "Austria",
     "website": "https://signtime.media/",
     "social": {
-      "linkedIn": "https://www.linkedin.com/company/sign-time-gmbh/"
+      "linkedIn": "https://www.linkedin.com/company/sign-time-gmbh/",
+      "facebook": "https://www.facebook.com/signlanguage.simax/",
+      "instagram": "https://www.instagram.com/simax_avatar/",
+      "twitter": "https://x.com/simax_avatar",
+      "youtube": "https://www.youtube.com/channel/UC4Cu-C3bmMva52idkQU2HtA"
     },
     "funding": {
       "total": "€1.1 million, grant",
@@ -225,7 +251,7 @@
   },
   {
     "name": "EASIER Project",
-    "sector": "Translation",
+    "sector": "Research",
     "country": "Europe",
     "website": "https://www.project-easier.eu/",
     "social": {
@@ -246,7 +272,7 @@
   },
   {
     "name": "SignON Project",
-    "sector": "Translation",
+    "sector": "Research",
     "country": "Europe",
     "website": "https://signon-project.eu/",
     "social": {
@@ -383,7 +409,9 @@
     "sector": "Translation",
     "country": "Poland",
     "website": "https://migam.ai/",
-    "linkedIn": null,
+    "social": {
+      "linkedIn": null
+    },
     "funding": null,
     "employees": null,
     "languages": ["British"],
@@ -551,7 +579,9 @@
     "sector": "Education",
     "country": "United States",
     "website": "https://theaslapp.com/",
-    "linkedIn": null,
+    "social": {
+      "linkedIn": null
+    },
     "funding": null,
     "employees": "Unknown",
     "languages": ["American"],
@@ -603,7 +633,10 @@
     "sector": "Translation",
     "country": "Canada",
     "website": "https://www.deaf-ai.com/",
-    "linkedIn": null,
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/deaf-ai/",
+      "twitter": "https://x.com/Deaf_AI_CO"
+    },
     "funding": null,
     "employees": "Not disclosed",
     "languages": ["American", "other sign languages"],
@@ -619,7 +652,9 @@
     "sector": "Translation",
     "country": "India",
     "website": "https://signer.ai/",
-    "linkedIn": null,
+    "social": {
+      "linkedIn": null
+    },
     "funding": null,
     "employees": "Not disclosed",
     "languages": ["Indian"],
@@ -726,9 +761,10 @@
     "fullDescription": "SignAvatar is a Serbian startup specializing in AI-driven sign language translation. Their flagship product, TransportSign™, provides real-time sign language interpretations of public announcements in transportation hubs, enhancing accessibility for the Deaf and hard-of-hearing community. The company offers customizable avatars to reflect diverse identities and cultures, aiming to bridge communication gaps in public spaces."
   },
   {
-    "name": "DeepSign",
+    "name": "DeepSignAI",
+    "incorporation": "https://icis.corp.delaware.gov/ecorp/entitysearch/NameSearch.aspx?number=3702229",
     "sector": "Translation",
-    "country": "Hungary",
+    "country": "United States / Hungary",
     "website": "https://deepsign-ai-discovery-3pi3mxf.gamma.site/",
     "social": {
       "linkedIn": "https://www.linkedin.com/company/deepsignai/"
@@ -738,7 +774,7 @@
       "url": "https://nkfih.gov.hu/palyazoknak/nkfi-alap/gyorsitosav-2023-1-1-2/tamogatott-projektek#~text=2023-1.1.2-GYORS%C3%8DT%C3%93S%C3%81V-2024-00019:~:text=2023%2D1.1.2%2DGYORS%C3%8DT%C3%93S%C3%81V%2D2024%2D00019"
     },
     "employees": null,
-    "languages": [],
+    "languages": ["American"],
     "customers": "Deaf and Hard of Hearing individuals, businesses, public institutions",
     "spokenToSigned": "✅",
     "signedToSpoken": "✅",
@@ -750,7 +786,9 @@
     "sector": "Translation",
     "country": "United States",
     "website": "https://omnibridge.ai/",
-    "social": {"linkedIn": "https://www.linkedin.com/company/omnibridgeai/"},
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/omnibridgeai/"
+    },
     "funding": {
       "total": "Undisclosed",
       "url": "https://www.crunchbase.com/organization/omnibridge"
@@ -762,5 +800,170 @@
     "signedToSpoken": "✅",
     "keyFeatures": "AI-driven machine translation, real-time bi-directional communication",
     "fullDescription": "OmniBridge develops AI technology for real-time American Sign Language (ASL) translation, facilitating bi-directional communication between Deaf and hearing individuals. Their mission is to bridge the communication gap by enabling seamless conversations through AI-driven machine translation technology. Founded by Adam Munder, a Deaf software engineer, the company is dedicated to enhancing accessibility and inclusivity."
+  },
+  {
+    "name": "Yomma GmbH",
+    "sector": "Human Translation",
+    "country": "Germany",
+    "website": "https://yomma.de/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/yomma",
+      "facebook": "https://www.facebook.com/yomma.gmbh",
+      "youtube": "https://www.youtube.com/@yommaberlin",
+      "instagram": "https://www.instagram.com/yomma.de"
+    },
+    "funding": null,
+    "employees": "30~",
+    "languages": ["German"],
+    "customers": "Public institutions, businesses, cultural organizations, livestream events",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Sign language video production, certified interpretation services, livestream sign language translation, web-based accessibility solutions",
+    "additionalInformation": "Operates in Berlin, Hamburg, and Munich; SQAT web-based translation tool for accessibility",
+    "fullDescription": "Yomma GmbH is a German company dedicated to sign language accessibility. They provide high-quality sign language video production, certified interpretation services, and livestream translation in German Sign Language (DGS). Their web-based tool SQAT enables barrier-free communication, aligning with the Barrierefreiheitsstärkungsgesetz (Accessibility Strengthening Act). Yomma works with public institutions, cultural organizations, and businesses to enhance inclusivity through sign language services."
+  },
+  {
+    "name": "Charamel GmbH",
+    "sector": "Translation",
+    "country": "Germany",
+    "website": "https://charamel.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/charamelgmbh/",
+      "facebook": "https://www.facebook.com/CharamelGmbH",
+      "twitter": "https://x.com/Charamel"
+    },
+    "funding": null,
+    "employees": "11-50",
+    "languages": ["German"],
+    "customers": "Businesses, public institutions, educational sectors",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Interactive 3D avatars, real-time animation technologies",
+    "additionalInformation": "Based in Cologne, Germany; involved in research projects like EMMI for empathic human-machine interaction",
+    "fullDescription": "Charamel is a IT company based in Cologne/Germany. The company vision is to bring more human touch into interactive applications by using virtual humans called avatars. Charamel is developing software for interactive and multifunctional digital assistants for a better communication between human and machine. Avatars are the next generation of a multimodal and user-friendly HMI interface face to face!\n"
+  },
+  {
+    "name": "Batoners",
+    "sector": "Translation",
+    "country": "South Korea",
+    "website": "https://batoners.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/batoners/"
+    },
+    "funding": null,
+    "employees": "",
+    "languages": ["Korean", "American (planned)", "Japanese (planned)"],
+    "customers": "Deaf and hard-of-hearing individuals, visually impaired individuals, general public",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "Sign language translation, AI-powered assistive tools for visually impaired and disabled individuals",
+    "fullDescription": "Batoners is a South Korean company developing humane technology solutions for accessibility and social inclusion. Their key projects include a Sign Language Translator (BSLT) using AI to convert sign language into spoken or written text, an AI-driven e-book enhancement tool for the visually impaired, and a crosswalk navigation app for blind individuals. Additionally, they have developed the CCUCC Button, a child vehicle safety device. With a strong emphasis on assistive technology, Batoners is committed to creating inclusive solutions that empower people with disabilities."
+  },
+  {
+    "name": "InclusiveTech",
+    "sector": "Translation",
+    "country": "Portugal",
+    "website": "https://inclusivetech.pt/",
+    "social": {},
+    "funding": null,
+    "employees": "",
+    "languages": ["Portuguese"],
+    "customers": "Individuals facing communication barriers",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "VirtualSign translation assistant",
+    "fullDescription": "InclusiveTech is a Portuguese company dedicated to enhancing inclusion through new technologies for sign language. Their flagship product, VirtualSign, assists individuals experiencing communication barriers by providing a translation assistant aimed at improving social and educational inclusion."
+  },
+  {
+    "name": "Silence Speaks",
+    "sector": "Translation",
+    "country": "United Kingdom",
+    "website": "https://silencespeaks.io/",
+    "social": {
+      "facebook": "https://www.facebook.com/profile.php?id=100078055029956",
+      "instagram": "https://www.instagram.com/silencespeaks_2021",
+      "twitter": "https://x.com/silencespeaks21",
+      "linkedIn": "https://www.linkedin.com/company/silencespeaksuk/"
+    },
+    "funding": null,
+    "employees": "",
+    "languages": ["British"],
+    "customers": "Deaf and hard of hearing individuals, businesses, public and private enterprises",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "AI-powered real-time sign language translation, automated translation for websites, customer interaction assistance",
+    "fullDescription": "Silence Speaks is a UK-based AI-driven platform dedicated to bridging communication gaps for the deaf and hard of hearing community. It offers real-time sign language translation services for industries such as banking, retail, and telecommunications. Their vision is to serve 250,000 British Sign Language users by 2025 and expand globally to support 70 million sign language users worldwide. The company is a member of the British Deaf Association, National Deaf Children’s Society, and the Royal National Institute for Deaf People."
+  },
+  {
+    "name": "Motion Light Lab",
+    "sector": "Education",
+    "country": "United States",
+    "website": "https://www.motionlightlab.com/",
+    "social": {
+      "youtube": "https://www.youtube.com/c/motionlightlab",
+      "instagram": "https://www.instagram.com/motionlightlab",
+      "facebook": "https://www.facebook.com/motionlightlab",
+      "twitter": "https://x.com/motionlightlab"
+    },
+    "funding": null,
+    "employees": "",
+    "languages": ["American"],
+    "customers": "Deaf children, educators, researchers, digital storytellers",
+    "spokenToSigned": "❌",
+    "signedToSpoken": "❌",
+    "keyFeatures": "ASL-English bilingual storybook apps, motion-capture signing avatars, immersive AR/VR learning experiences",
+    "fullDescription": "Motion Light Lab is an award-winning creative research lab at Gallaudet University specializing in sign language learning and literacy development through emerging technologies. They develop ASL-English bilingual storybook apps, motion-capture signing avatars, and immersive AR/VR learning experiences. Their work supports the literacy development of Deaf children while also advancing research on sign-centric learning experiences. They are also the creators of the CREST Network, a National Science Foundation-funded initiative fostering discussions and collaborations in sign language technology."
+  },
+  {
+    "name": "BuHamad",
+    "sector": "Translation",
+    "country": "Qatar",
+    "website": "https://at.mada.org.qa/technology/buhamad-qatar-sign-language-interpreter/",
+    "social": {},
+    "funding": null,
+    "employees": "",
+    "languages": ["Qatari"],
+    "customers": "Deaf and hard-of-hearing individuals, government agencies, businesses",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "AI-powered virtual 3D interpreter for Qatari Sign Language, real-time translation, government and business integration",
+    "fullDescription": "BuHamad is the first Qatari virtual 3D interpreter for Qatari Sign Language, developed by Mada Center to enhance digital accessibility for the deaf and hard-of-hearing community. It provides real-time translation of Arabic text and visual content into Qatari Sign Language and can be integrated into websites and digital platforms. The Ministry of Social Development and Family has adopted BuHamad, making it the first government agency in Qatar to utilize this technology for accessibility."
+  },
+  {
+    "name": "Mind Rockets Inc.",
+    "sector": "Translation",
+    "country": "Jordan",
+    "website": "https://main.mindrocketsinc.com/en/products",
+    "social": {
+      "facebook": "https://www.facebook.com/mindrocketsinc/",
+      "twitter": "https://x.com/mindrocketsinc"
+    },
+    "funding": null,
+    "employees": "",
+    "languages": ["American", "British", "Jordanian", "Saudi", "Kuwaiti", "Emirati", "Qatari", "Omani", "Egyptian"],
+    "customers": "Deaf and hard-of-hearing individuals, businesses, public institutions, digital platforms",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "AI-powered sign language avatars, web accessibility tools, chatbot and social media integrations, QR-based sign translation",
+    "fullDescription": "Mind Rockets Inc. is a Jordan-based assistive technology company that develops AI-driven sign language avatars for real-time text and speech translation. Their products include sign language integration for websites, social media, chatbots, and printed materials through QR codes. They offer applications such as Ramz (Jordanian Sign Language), Mimix (American Sign Language), and Al Turjuman (Saudi Sign Language) to enhance accessibility. Mind Rockets supports multiple Arabic sign languages alongside ASL and BSL, working with businesses and governments to improve digital inclusion for the Deaf community."
+  },
+  {
+    "name": "alangu GmbH",
+    "sector": "Translation",
+    "country": "Germany",
+    "website": "https://alangu.de/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/alangugmbh/",
+      "facebook": "https://www.facebook.com/alanguGmbH/",
+      "twitter": "https://twitter.com/alanguGmbH"
+    },
+    "funding": null,
+    "employees": "Not disclosed",
+    "languages": ["German"],
+    "customers": "Municipalities, businesses",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "❌",
+    "keyFeatures": "AI-based sign language avatar 'Livian', Kommunaler Gebärdensprach-Avatar-Baukasten (KGAB)",
+    "fullDescription": "alangu GmbH is a German software company specializing in AI-based translation software that converts text into German Sign Language (DGS). Their flagship product, the Kommunaler Gebärdensprach-Avatar-Baukasten (KGAB), enables municipalities to translate their digital services into DGS, enhancing accessibility for the Deaf community. The company collaborates with both hearing and Deaf experts to develop intuitive tools like the sign language avatar 'Livian', aiming to break down digital barriers and promote inclusivity. In 2024, alangu was awarded the DigitalMediaAward Germany in the category of Digital Innovation for their KGAB solution."
   }
 ]

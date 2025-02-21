@@ -13,6 +13,7 @@ export interface Company {
     facebook?: string;
     instagram?: string;
     tiktok?: string;
+    github?: string;
   };
   incorporation?: string;
 }

@@ -11,7 +11,7 @@ const toggleExpand = index => {
   expandedRow.value = expandedRow.value === index ? null : index;
 };
 
-const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok'];
+const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok', 'github'];
 </script>
 
 <template>
