@@ -111,7 +111,7 @@
     "signedToSpoken": "✅",
     "keyFeatures": "Video Communication",
     "additionalInformation": "Also behind the education platform: [https://slait.school](https://slait.school/)",
-    "fullDescription": "SLAIT offers real-time ASL transcription and translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/PcZbajccCdU\"></iframe>"
+    "fullDescription": "SLAIT offers real-time ASL translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/PcZbajccCdU\"></iframe>"
   },
   {
     "name": "EQ4All",
@@ -965,5 +965,20 @@
     "signedToSpoken": "❌",
     "keyFeatures": "AI-based sign language avatar 'Livian', Kommunaler Gebärdensprach-Avatar-Baukasten (KGAB)",
     "fullDescription": "alangu GmbH is a German software company specializing in AI-based translation software that converts text into German Sign Language (DGS). Their flagship product, the Kommunaler Gebärdensprach-Avatar-Baukasten (KGAB), enables municipalities to translate their digital services into DGS, enhancing accessibility for the Deaf community. The company collaborates with both hearing and Deaf experts to develop intuitive tools like the sign language avatar 'Livian', aiming to break down digital barriers and promote inclusivity. In 2024, alangu was awarded the DigitalMediaAward Germany in the category of Digital Innovation for their KGAB solution."
+  },
+  {
+    "name": "SIGN",
+    "sector": "Translation",
+    "country": "United States",
+    "website": "https://sign.ml",
+    "social": {},
+    "funding": null,
+    "employees": 3,
+    "languages": ["American"],
+    "customers": "Healthcare, business, shopping",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Real-time ASL translation using standard webcams",
+    "fullDescription": "SIGN is a real-time American Sign Language (ASL) translation service that converts ASL into text using standard webcams and machine learning. Developed as a senior design project at the University of Pennsylvania, it offers a desktop application for Windows and macOS, enabling users to generate live captions from their signing. The tool aims to improve accessibility for various scenarios, including healthcare consultations, business interactions, and daily communication. SIGN is free for personal use, while developers and enterprises can access SDKs and premium support through subscription plans."
   }
 ]
