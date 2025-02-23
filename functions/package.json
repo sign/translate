@@ -33,7 +33,7 @@
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.85.3",
+    "openai": "4.85.4",
     "request-ip": "3.3.0"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "minimatch": "10.0.1",
     "mock-express-request": "0.2.2",
     "mock-express-response": "0.3.0",
-    "ts-jest": "29.2.5",
+    "ts-jest": "29.2.6",
     "typescript": "5.7.3"
   }
 }
