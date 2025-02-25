@@ -21,11 +21,5 @@ export class AboutTeamComponent {
       title: 'CTO',
       bio: 'Experienced CTO. Award-winning expert in sign language technology. Ex-Google in the sign language team, Ph.D. in Computer Science.',
     },
-    {
-      name: 'Daniel Lazarescu',
-      avatar: 'assets/promotional/about/team/daniel-lazarescu.jpg',
-      title: 'COO',
-      bio: 'Revenue operations leader with a track record scaling SaaS, including a $200M subscription program and $150M ARR teams. Expert in driving product growth and go-to-market strategies.',
-    },
   ];
 }
