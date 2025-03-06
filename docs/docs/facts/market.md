@@ -19,8 +19,7 @@ This includes diverse services and sectors that support the deaf and signing com
 
 [^gallaudet]: Gallaudet University. 2022. [How Sign Language is Driving a Multi-Billion Dollar Inclusive Economy](https://gallaudet.edu/president/how-sign-language-is-driving-a-multi-billion-dollar-inclusive-economy/).
 
-To estimate the global sign language market, we extrapolate based on trends in developed nations ranked within the top 30 of the Human Development Index[^hdi], which mirror the U.S., especially in terms of accessibility regulations and inclusivity.
-This include the recently enacted the European Accessibility Act[^eu-accessiblity-act], the Accessible Canada Act (2019)[^canada-act], and Australia’s Disability Discrimination Act (1992)[^australia-act].
+To estimate the global sign language market, we extrapolate based on trends in developed nations ranked within the top 30 of the Human Development Index[^hdi], which mirror the U.S., especially in terms of accessibility regulations and inclusivity. This includes the recently enacted European Accessibility Act[^eu-accessiblity-act], the Accessible Canada Act (2019)[^canada-act], Australia’s Disability Discrimination Act (1992)[^australia-act], among others.
 The total population of these developed nations is 1.09 billion[^worldometer].
 Extrapolating from the U.S. market of **US\$ 10 billion**[^gallaudet] from a population of 345.4 million[^worldometer], the global sign language market is estimated at **US\$ 31.6 billion**. 
 
