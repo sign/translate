@@ -68,10 +68,16 @@ Member states must **implement legislation** that integrates accessibility stand
 
 ### Implementation Timeline
 
+#### Summary: 
 - **2019**: EAA adopted.
 - **2022**: EU states transposed into national law.
 - **2025**: Compliance required for all **new** services/products.
 - **2030**: Compliance required for **existing** services/products[^eaa-implementation].
+
+#### Overview: 
+(TEST) 
+
+
 
 [^eaa-implementation]: European Commission. (2024). [EAA Timeline](https://ec.europa.eu/social/main.jsp?catId=1201).
 
