@@ -1,9 +1,6 @@
 # Sign Language Regulations
 
 ## United States: Americans with Disabilities Act (ADA)
-
-### Government Obligations
-
 The **Americans with Disabilities Act (ADA)** mandates that federal, state, and local **governments must ensure effective communication** for individuals with disabilities. This includes **providing sign language interpreters** when necessary[^ada-title-ii].  
 Federal agencies follow similar obligations under the **Rehabilitation Act**, ensuring equal access in all public programs[^rehabilitation-act].
 
@@ -15,12 +12,18 @@ The ADA, enacted in **1990**, establishes a legal framework ensuring **public se
 
 [^humphries-2013]: Humphries, T., et al. (2013). "The Right to Language." _The Journal of Law, Medicine & Ethics_, 41(4), 872-884. [https://doi.org/10.1111/jlme.12097](https://doi.org/10.1111/jlme.12097).
 
+### Government Obligations
+
 ### Public Institutions: Education, Healthcare, Services, Transport
 
 - **Education**: Public schools and universities **must provide interpreters** or captioning when required for effective communication[^ada-title-ii-education].
 - **Healthcare**: Hospitals, clinics, and doctors **must provide interpreters** for deaf patients when necessary for medical discussions[^ada-healthcare].
 - **Government Services**: Courts, public offices, and emergency responders must ensure **communication access** via interpreters or relay services[^ada-gov-services].
 - **Public Transport**: Transit systems must provide **visual announcements** and alternative communication methods for deaf passengers[^ada-transport].
+
+### Privat ...
+
+(TBD)
 
 
 
