@@ -22,7 +22,6 @@ The ADA, enacted in **1990**, establishes a legal framework ensuring **public se
 - **Government Services**: Courts, public offices, and emergency responders must ensure **communication access** via interpreters or relay services[^ada-gov-services].
 - **Public Transport**: Transit systems must provide **visual announcements** and alternative communication methods for deaf passengers[^ada-transport].
 
-[^ada-title-ii-education]: U.S. Department of Justice. (2024). [ADA and Education](https://www.ada.gov/topics/education/).
 
 [^ada-healthcare]: U.S. Department of Justice. (2024). [ADA and Healthcare](https://www.ada.gov/topics/health-care/).
 
