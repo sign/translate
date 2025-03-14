@@ -122,6 +122,10 @@ export default withMermaid(
                   {text: 'Signed to Spoken', link: '/docs/companies/state-of-the-art#signed-to-spoken-translation'},
                 ],
               },
+              {
+                text: 'Other Projects',
+                link: '/docs/companies/other-projects',
+              },
             ],
           },
         ],
