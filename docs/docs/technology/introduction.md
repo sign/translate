@@ -1,6 +1,7 @@
 # Our Approach
 
 Following the research of Dr. Amit Moryosef's published in his PhD thesis[^amit-thesis], we aim to develop a sign language translation system that separates the computer vision tasks from the language translation tasks.
+This division ensures a more modular and robust approach to achieving high-quality translations.
 
 [^amit-thesis]: Amit Moryosef. 2024. [Real-Time Multilingual Sign Language Processing](https://arxiv.org/abs/2412.01991).
 
@@ -119,11 +120,11 @@ Here is an example where a minor, inconsequential, and possibly even **wrong** m
 Here is an example where a minor, important modification to the spoken language (exclamation) yields different, correct translations in SignWriting (reflecting the emotion) but the dictionary yields the same one.
 Changing to question mark, the face correctly become questioning (even though the SignWriting is not perfect).
 
-| Text                                                                  | Machine Translation                                                                               | Dictionary Translation                            |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [Hello world.](https://sign.mt/?spl=en&sil=ase&text=Hello%20world.)   | ![SignWriting for "Hello World." in American Sign Language](assets/hello_world/period.png)        | The sign for Hello followed by the sign for World |
-| [Hello world!](https://sign.mt/?spl=en&sil=ase&text=Hello%20world!)   | ![SignWriting for "Hello World!" in American Sign Language](assets/hello_world/exclamation.png)   | The sign for Hello followed by the sign for World |
-| [Hello world?](https://sign.mt/?spl=en&sil=ase&text=Hello%20world%3F) | ![SignWriting for "Hello World?" in American Sign Language](assets/hello_world/question_mark.png) | The sign for Hello followed by the sign for World |
+| Text                                                                  | Machine Translation                                                                               | Dictionary Translation                                |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| [Hello world.](https://sign.mt/?spl=en&sil=ase&text=Hello%20world.)   | ![SignWriting for "Hello World." in American Sign Language](assets/hello_world/period.png)        | The sign for "Hello" followed by the sign for "World" |
+| [Hello world!](https://sign.mt/?spl=en&sil=ase&text=Hello%20world!)   | ![SignWriting for "Hello World!" in American Sign Language](assets/hello_world/exclamation.png)   | The sign for "Hello" followed by the sign for "World" |
+| [Hello world?](https://sign.mt/?spl=en&sil=ase&text=Hello%20world%3F) | ![SignWriting for "Hello World?" in American Sign Language](assets/hello_world/question_mark.png) | The sign for "Hello" followed by the sign for "World" |
 
 ## Signed to Spoken Language Translation
 
