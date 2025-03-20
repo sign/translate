@@ -136,7 +136,7 @@ flowchart TD
   A1[Camera Sign Language Video] --> A3
   A3 --> B(Pose Estimation)
   B --> C(<a target='_blank' href='https://github.com/sign-language-processing/segmentation'>Segmentation</a>)
-  C & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/transcription'>SignWriting Transcription</a>)
+  C & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/signwriting-transcription'>SignWriting Transcription</a>)
   A2[Language Selector] --> E(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>Spoken Language Text</a>)
   D --> E
   E --> F(Spoken Language Audio)
