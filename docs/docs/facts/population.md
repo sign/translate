@@ -51,16 +51,19 @@ Among those with disabling hearing loss, the **World Federation of the Deaf (WFD
 This community spans over **200 sign languages** (or over _300_[^un-national-day]), underlining the linguistic diversity of deaf populations.
 
 [^wfd]: World Federation of the Deaf. 2024. [Our Work](https://wfdeaf.org/our-work/).
+
 [^un-national-day]: United Nations. 2024. [International Day of Sign Languages](https://www.un.org/en/observances/sign-languages-day).
 
-From our research, it is unclear how many people use sign languages. 
+From our research, it is unclear how many people use sign languages.
 The European Centre for Modern Languages[^ecml] estimates that on average,
 deaf sign language users make up about 0.16% of the whole population in any given country, amounting to 12 million people worldwide.
 According to Ethnologue (via Derivation[^derivation]), there are 24 million native sign language users worldwide,
 and according to a conglomeration of sources[^sheets], the number signers for the top 100 used sign languages is 25 million.
 
 [^ecml]: European Centre for Modern Languages. 2024. [Facts about sign language](https://edl.ecml.at/Facts/FAQsonsignlanguage/tabid/2741/language/en-GB/Default.aspx).
+
 [^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
+
 [^sheets]: Shester Gueuwou. 2023. [Sign Language Info](https://docs.google.com/spreadsheets/d/1O6frH52v4R9RbhWOA-FqRj2W3U-0yC2xC3qroxcq4kQ/edit?gid=1380277111#gid=1380277111)
 
 ### Sign Language Interpreters
@@ -84,20 +87,37 @@ We list the number of interpreters in various countries below. For all countries
 | Belgium            |                       |                                                             | 6,500[^eud-belgium] - 9,000[^ddl]          | 165[^eud-belgium]                                                   | (5-10 Flanders, 16-26 Wallonia)[^ddl]       |
 
 [^eud-slovenia]: European Union of the Deaf. 2024. [Member Countries: Slovenia](https://www.eud.eu/member-countries/slovenia/).
+
 [^eud-spain]: European Union of the Deaf. 2024. [Member Countries: Spain](https://www.eud.eu/member-countries/spain/).
+
 [^eud-switzerland]: European Union of the Deaf. 2024. [Member Countries: Switzerland](https://www.eud.eu/member-countries/switzerland/).
+
 [^eud-austria]: European Union of the Deaf. 2024. [Member Countries: Austria](https://www.eud.eu/member-countries/austria/).
+
 [^eud-belgium]: European Union of the Deaf. 2024. [Member Countries: Belgium](https://www.eud.eu/member-countries/belgium/).
+
 [^eud-germany]: European Union of the Deaf. 2024. [Member Countries: Germany](https://www.eud.eu/member-countries/germany/).
+
 [^ddl]: Danish Deaf Association. 2016. [Deaf Interpreters in Europe](https://ddl.dk/wp-content/uploads/Deaf-interpreters-in-Europe-2016.pdf).
+
 [^isl-shortage]: Omer Sharvit. 2022. [מחסור חמור במתורגמנים לשפת הסימנים](https://www.zman.co.il/285475/popup).
+
 [^cbs-isl]: Central Bureau of Statistics, 2024. [Data on People with Hearing Impairments in Israel on the Occasion of World Hearing Day 2024](https://www.cbs.gov.il/he/mediarelease/DocLib/2024/065/11_24_065b.pdf).
+
 [^isl-deaf]: Meir et al. 2010. [Emerging sign languages](https://signlab.haifa.ac.il/wp-content/uploads/2013/01/Emerging-Sign-Languages.pdf).
+
 [^isl-interpreters]: Malach Israel. 2024. [רשימת מתורגמנים](https://malachisrael.org/organization-members/interpreters-list/).
+
 [^swissinfo]: Swissinfo. 2021. [Positive signs: Swiss Deaf Federation marks 75 years of adversity](https://www.swissinfo.ch/eng/society/positive-signs-swiss-deaf-federation-marks-75-years-of-adversity/46779982).
+
 [^aiic-ch]: International Association of Conference Interpreters. 2024. [The Swiss Interpreting Market](https://aiic.ch/the-swiss-interpreting-market/).
+
 [^disabilitystatistics]: Disability Statistics. 2022. [Disability Statistics](https://www.disabilitystatistics.org/).
+
 [^researchondisability]: Center for Research on Disability. 2023. [Build Your Own Statistics](https://www.researchondisability.org/ADSC/build-your-own-statistics).
+
 [^mitchell]: Mitchell, Ross E. 2005. [How many deaf people are there in the United States? Estimates from the Survey of Income and Program Participation](https://pubmed.ncbi.nlm.nih.gov/16177267/).
+
 [^rid]: Registry of Interpreters for the Deaf. 2024. [Publications](https://rid.org/programs/membership/publications/).
+
 [^wfdeaf-sig]: World Federation of the Deaf. 2024. [News: Special Interest Groups](https://wfdeaf.org/news/special-interest-groups/).
