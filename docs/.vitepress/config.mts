@@ -95,6 +95,15 @@ export default withMermaid(
                   {text: 'Consumer Products', link: '/docs/facts/market#consumer-products-and-services'},
                 ],
               },
+              // {
+              //   text: 'Regulation',
+              //   link: '/docs/facts/regulation',
+              //   items: [
+              //     {text: 'United States', link: '/docs/facts/regulation#united-states-americans-with-disabilities-act-ada'},
+              //     {text: 'Europe', link: '/docs/facts/regulation#european-union-european-accessibility-act-eaa'},
+              //     {text: 'Switzerland', link: '/docs/facts/regulation#switzerland-behindertengleichstellungsgesetz-behig'},
+              //   ],
+              // },
             ],
           },
           {
@@ -112,6 +121,10 @@ export default withMermaid(
                   {text: 'Spoken to Signed', link: '/docs/companies/state-of-the-art#spoken-to-signed-translation'},
                   {text: 'Signed to Spoken', link: '/docs/companies/state-of-the-art#signed-to-spoken-translation'},
                 ],
+              },
+              {
+                text: 'Other Projects',
+                link: '/docs/companies/other-projects',
               },
             ],
           },

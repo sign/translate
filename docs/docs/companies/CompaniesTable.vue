@@ -11,7 +11,7 @@ const toggleExpand = index => {
   expandedRow.value = expandedRow.value === index ? null : index;
 };
 
-const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok'];
+const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok', 'github'];
 </script>
 
 <template>
@@ -74,6 +74,7 @@ const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok'];
             <br />
             <strong>Full description:</strong>
             <div v-html="company.fullDescription"></div>
+            <a v-if="company.deepDive" :href="company.deepDive"> [More info] </a>
           </td>
         </tr>
       </template>
