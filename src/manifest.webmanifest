@@ -19,16 +19,28 @@
   },
   "icons": [
     {
-      "src": "assets/icons/generated/manifest-icon-192.png",
+      "src": "assets/icons/generated/manifest-icon-192.maskable.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
     },
     {
-      "src": "assets/icons/generated/manifest-icon-512.png",
+      "src": "assets/icons/generated/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/generated/manifest-icon-512.maskable.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/generated/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "protocol_handlers": [
