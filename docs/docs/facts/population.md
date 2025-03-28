@@ -71,7 +71,7 @@ and according to a conglomeration of sources[^sheets], the number signers for th
 Sign language interpreters are a rare commodity, and are globally in shortage.
 In Israel, a survey conducted among the organization's members found that 67% of interpreters refuse to attend a single-hour interpretation order.[^isl-shortage]
 
-We list the number of interpreters in various countries below. For all countries in Europe, visit https://www.eud.eu/member-countries/.
+Overview of several countires: 
 
 | Country            | Population            | HoH Population                                              | Deaf Population                            | Interpreters                                                        | Deaf Interpreters                           |
 | ------------------ | --------------------- | ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------- |
