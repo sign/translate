@@ -4,6 +4,9 @@ outline: deep
 
 # Population
 
+::: Executive Summary: Over 1.5 billion people live with hearing loss globally, including 70 million deaf individuals. By 2050, these numbers are expected to rise significantly. Estimates of sign language users range from 12 to 25 million, depending on definitions and data sources. A key barrier to accessibility is the global shortage of interpreters, with many countries lacking adequate coverage. This section outlines the scale of hearing loss, deafness, and interpreter availability to highlight the need for inclusive communication solutions.:::
+
+
 Understanding the scale and impact of hearing loss is essential for assistive technologies.
 This section explores the global funnel from hearing loss to deafness and its significance.
 
