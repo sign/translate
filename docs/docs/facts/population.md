@@ -68,8 +68,7 @@ and according to a conglomeration of sources[^sheets], the number signers for th
 
 ### Sign Language Interpreters
 
-Sign language interpreters are a rare commodity, and are globally in shortage.
-In Israel, a survey conducted among the organization's members found that 67% of interpreters refuse to attend a single-hour interpretation order.[^isl-shortage]
+Sign language interpreters are in short supply globally, limiting access to essential services for deaf communities. In Israel, a survey found that 67% of interpreters decline one-hour assignments[^isl-shortage], often due to low compensation and inefficient scheduling. This reflects how availability alone doesn’t guarantee accessibility.
 
 We list the number of interpreters in various countries below. For all countries in Europe, visit https://www.eud.eu/member-countries/.
 
