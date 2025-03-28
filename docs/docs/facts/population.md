@@ -22,7 +22,7 @@ sankey-beta
 
 ### Hearing Loss[^who]
 
-The **World Health Organization (WHO)** estimates that globally, **1.5 billion people** live with some degree of hearing loss, a number expected to rise to **2.5 billion by 2050**.
+The **World Health Organization (WHO)** estimates that globally, **1.5 billion people** live with some degree of hearing loss, a number expected to rise to **2.5 billion by 2050**. This increase is driven by factors such as population aging, unsafe listening habits, limited access to care, preventable causes going untreated, and insufficient early screening.
 Of these, **430 million people** experience disabling hearing loss, requiring rehabilitation to improve quality of life.
 By 2050, this number is projected to grow to **700 million**.
 
