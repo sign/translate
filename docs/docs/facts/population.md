@@ -28,7 +28,7 @@ By 2050, this number is projected to grow to **700 million**.
 
 ::: info Quote: Relevance ([learn more](/facts/market#economic-impact)) ([learn more]https://sign.mt/docs/docs/facts/market.html))
 The WHO estimates that unaddressed hearing loss poses an annual global cost of US$ 980 billion.
-This figure includes health sector costs (excluding hearing devices), educational support, productivity losses, and broader societal costs.
+This figure includes health sector costs (excluding hearing devices), educational support, loss of productivity, and broader societal costs.
 :::
 
 [^who]: World Health Organization. 2021. [Fact Sheet: Deafness and Hearing Loss](https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss).
