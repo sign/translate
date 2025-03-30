@@ -1,9 +1,9 @@
 # The Market
 
 
+##A Global Opportunity
 
-From a broader perspective, the entire sign language economy in the U.S. alone is estimated to range between **US\$ 3 billion** and **US\$ 10 billion** annually.
-This includes diverse services and sectors that support the deaf and signing community.[^gallaudet]
+Sign language interpretation services are a rapidly growing segment of the global language services market. According to independent research from Gallaudet University, the broader sign language economy—which includes education, early intervention, public services, accessibility infrastructure, and consumer solutions—is valued at US$ 3 to 10 billion annually in the United States alone.[^gallaudet]
 
 [^gallaudet]: Gallaudet University. 2022. [How Sign Language is Driving a Multi-Billion Dollar Inclusive Economy](https://gallaudet.edu/president/how-sign-language-is-driving-a-multi-billion-dollar-inclusive-economy/).
 
@@ -20,6 +20,10 @@ Extrapolating from the U.S. market of **US\$ 10 billion**[^gallaudet] from a pop
 [^canada-act]: Government of Canada. 2019. [Accessible Canada Act: Regulations and Standards](https://www.canada.ca/en/employment-social-development/programs/accessible-canada/regulations-summary-act.html).
 
 [^australia-act]: Australian Government. 1992. [Disability Discrimination Act](https://www.legislation.gov.au/C2004A04426/2018-04-12/text).
+
+For context, the overall global language services market was valued at US$ 60.68 billion in 2022, and is expected to grow to US$ 96.21 billion by 2032 (CAGR 5.94%)[^factmr-lsm]. 
+
+[^factmr-lsm]: Fact.MR. 2022. [Language Services Market](https://www.factmr.com/report/language-services-market).
 
 ## Economic Impact[^who-report]
 
