@@ -39,13 +39,10 @@ Extrapolating from the U.S. market of **US\$ 10 billion**[^gallaudet] from a pop
 
 ## Economic Impact[^who-report]
 
-:::tip
-All monetary values in this section are originally reported in 2015 international dollars. For 2024 equivalents, a conversion factor of **1.33** is applied.
-:::
-
 Hearing loss has a profound economic impact on individuals and society, resulting in substantial costs across multiple domains.
-The **World Health Organization (WHO)** estimates that the global annual cost of unaddressed hearing loss was approximately **\$980 billion** in 2015 international dollars, which translates to **\$1.303 trillion** in 2024 values.
+The **World Health Organization (WHO)** estimates that unaddressed hearing loss results in a global annual cost of US$ 1.303 trillion (2024) across the following categories:
 These costs are distributed as follows:
+
 
 | **Category**           | **Description**                                                                                      | **Cost (2015)** |  **Cost (2024)** |
 | ---------------------- | ---------------------------------------------------------------------------------------------------- | --------------: | ---------------: |
