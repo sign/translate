@@ -1,22 +1,6 @@
 # The Market
 
-To understand the market size, we flow from the global language services market to the specific sign language services market:
 
-- The global language services market is valued at **US\$ 60.68 billion** in 2022 and is predicted to reach **US\$ 96.21 billion** by the end of 2032 (CAGR of 5.94%)[^factmr-lsm].
-  - ⤷ The translation service market is valued at **US\$ 26.6 billion** in 2022[^slator] and **US\$ 41.3 billion** in 2024 (CAGR of 2.30%)[^marketresearchfuture].
-    - ⤷ The size of the interpreting market in 2019 was estimated at **US\$ 7.6 billion**[^nimdzi].
-      - ⤷ The global sign language interpretation services market size (including both in-person and remote) was valued at approximately **US\$ 0.7 billion** in 2023 and is projected to touch **US\$ 1.5 billion** by 2032 (CAGR of 8.5%)[^businessresearchinsights].
-        This is in conflict with the estimated United States market of **US\$ 1.2 billion**[^einpresswire].
-
-[^factmr-lsm]: Fact.MR. 2022. [Language Services Market](https://www.factmr.com/report/language-services-market).
-
-[^nimdzi]: Nimdzi Research. 2019. [Current Size of the Interpreting Market](https://www.nimdzi.com/current-size-of-interpreting-market-nimdzi-finger-food/).
-
-[^businessresearchinsights]: Business Research Insights. 2024. [Sign Language Interpretation Services Market Size](https://www.businessresearchinsights.com/market-reports/sign-language-interpretation-services-market-112737).
-
-[^marketresearchfuture]: Market Research Future. 2024. [Translation Service Market](https://www.marketresearchfuture.com/reports/translation-service-market-1400).
-
-[^slator]: Slator. 2022. [2022 Language Industry Market Report](https://slator.com/slator-2022-language-industry-market-report/).
 
 From a broader perspective, the entire sign language economy in the U.S. alone is estimated to range between **US\$ 3 billion** and **US\$ 10 billion** annually.
 This includes diverse services and sectors that support the deaf and signing community.[^gallaudet]
