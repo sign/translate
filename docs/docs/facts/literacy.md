@@ -40,11 +40,11 @@ While this figure is debated, it underscores the urgency for inclusive solutions
 
 [^iated]: Fernández-Viader, Ma. Pilar et al. 2015. [Deaf Literacy Rates: An International Perspective](https://library.iated.org/view/FERNANDEZVIADER2015DEA).
 
-#### General Literacy[^ehelvetica]
+### General Literacy[^ehelvetica]
 
 ## Health Literacy
 
-General literacy among deaf individuals remains a global concern. The **World Federation of the Deaf** has identified low enrollment and poor literacy outcomes as major challenges in many countries, calling illiteracy among deaf people a “serious problem”[^equalrights].
+General literacy among deaf individuals remains a global concern. The World Federation of the Deaf has identified low enrollment and poor literacy outcomes as major challenges in many countries, calling illiteracy among deaf people a “serious problem”[^equalrights].
 
 In the area of **health literacy**—the ability to access, understand, and use health information—deaf communities face additional barriers. A U.S. study found that **48% of deaf participants** had inadequate health literacy, and deaf adults were nearly **7 times more likely** than hearing peers to have very low health literacy[^paasche-orlow][^pollard].
 
@@ -61,7 +61,6 @@ Studies show that deaf individuals often have **limited knowledge of key health 
 [^pollard]: Pollard, R.Q. Jr., Barnett, S. *Health-related vocabulary knowledge among deaf adults*. Rehabil Psychol. [APA PsycNet](https://psycnet.apa.org/record/2009-07289-008)  
 [^archpublichealth]: BMC Public Health. 2017. [Health knowledge disparities in deaf populations](https://archpublichealth.biomedcentral.com)
 
----
 
 ## Impact of Literacy Gaps
 
