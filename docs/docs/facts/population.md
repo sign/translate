@@ -26,7 +26,7 @@ The **World Health Organization (WHO)** estimates that globally, **1.5 billion p
 Of these, **430 million people** experience disabling hearing loss, requiring rehabilitation to improve quality of life.
 By 2050, this number is projected to grow to **700 million**.
 
-::: info Quote: Relevance ([learn more](/facts/market#economic-impact)) ([learn more]https://sign.mt/docs/docs/facts/market.html))
+::: info Quote: Relevance ([learn more](../market#economic-impact))
 The WHO estimates that unaddressed hearing loss poses an annual global cost of US$ 980 billion.
 This figure includes health sector costs (excluding hearing devices), educational support, loss of productivity, and broader societal costs.
 :::
