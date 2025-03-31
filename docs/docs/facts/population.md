@@ -10,7 +10,7 @@ This section outlines the global scope and significance of hearing loss and deaf
 1. **1.5 billion people** experience hearing loss globally.
 2. **430 million people** require rehabilitation for disabling hearing loss.
 3. **70 million people** are considered deaf.
-4. **12[^ecml]-24[^derivation]-25[^sheets] million people** use sign languages.
+4. **12[^ecml]-24[^derivation]-25[^sheets] million people** primarily use sign languages.
 
 ```mermaid
 sankey-beta
