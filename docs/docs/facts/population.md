@@ -4,13 +4,13 @@ outline: deep
 
 # Population
 
-Understanding the scale and impact of hearing loss is essential for assistive technologies.
-This section explores the global funnel from hearing loss to deafness and its significance.
+Understanding the scale and impact of hearing loss is essential for developing effective assistive technologies.
+This section outlines the global scope and significance of hearing loss and deafness.
 
 1. **1.5 billion people** experience hearing loss globally.
 2. **430 million people** require rehabilitation for disabling hearing loss.
 3. **70 million people** are considered deaf.
-4. **12[^ecml]-24[^derivation]-25[^sheets] million people** natively use sign languages.
+4. **12[^ecml]-24[^derivation]-25[^sheets] million people** primarily use sign languages.
 
 ```mermaid
 sankey-beta
