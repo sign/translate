@@ -74,6 +74,13 @@ const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok', 'gith
             <br />
             <strong>Full description:</strong>
             <div v-html="company.fullDescription"></div>
+            <iframe
+              v-if="company.video"
+              anonymous
+              :src="company.video"
+              width="100%"
+              height="315"
+              frameborder="0"></iframe>
             <a v-if="company.deepDive" :href="company.deepDive"> [More info] </a>
           </td>
         </tr>

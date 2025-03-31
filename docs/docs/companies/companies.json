@@ -19,7 +19,8 @@
     "spokenToSigned": "✅",
     "signedToSpoken": "✅",
     "keyFeatures": "Neural machine translation for sign languages",
-    "fullDescription": "sign.mt is dedicated to advancing sign language translation using state-of-the-art neural machine translation models through SignWriting. The company focuses on building high-quality datasets and developing AI-driven solutions that enable real-time translation between spoken and signed languages. With a strong emphasis on research and accessibility, sign.mt collaborates with academic institutions and contributes to open-source initiatives, helping to bridge communication gaps for the deaf community and businesses seeking inclusive solutions."
+    "fullDescription": "sign.mt is dedicated to advancing sign language translation using state-of-the-art neural machine translation models through SignWriting. The company focuses on building high-quality datasets and developing AI-driven solutions that enable real-time translation between spoken and signed languages. With a strong emphasis on research and accessibility, sign.mt collaborates with academic institutions and contributes to open-source initiatives, helping to bridge communication gaps for the deaf community and businesses seeking inclusive solutions.",
+    "video": "https://www.youtube.com/embed/0-cvX0OwLGM"
   },
   {
     "name": "Signapse",
@@ -31,11 +32,11 @@
       "linkedIn": "https://www.linkedin.com/company/signapse/"
     },
     "funding": {
-      "total": "£2,300,000",
+      "total": "~$4 million",
       "url": "https://www.crunchbase.com/organization/signapse-ec44/company_financials",
       "lastRound": {
-        "total": "£2 million, seed",
-        "url": "https://www.signapse.ai/new/signapse-closes-seed-funding-round"
+        "total": "$1.5 million, grant",
+        "url": "https://www.linkedin.com/posts/signapse_deafcommunity-bsl-accessibility-ugcPost-7310619702278455297-DLC7"
       }
     },
     "employees": "[21](https://www.signapse.ai/about)",
@@ -111,7 +112,8 @@
     "signedToSpoken": "✅",
     "keyFeatures": "Video Communication",
     "additionalInformation": "Also behind the education platform: [https://slait.school](https://slait.school/)",
-    "fullDescription": "SLAIT offers real-time ASL translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/PcZbajccCdU\"></iframe>"
+    "fullDescription": "SLAIT offers real-time ASL translation services, focusing on video communication, including VRI/VRS services. They provide a platform for video interactions that support both spoken-to-signed and signed-to-spoken language translation. SLAIT also runs an educational platform aimed at enhancing ASL learning and accessibility.",
+    "video": "https://www.youtube.com/embed/PcZbajccCdU"
   },
   {
     "name": "EQ4All",
@@ -248,7 +250,8 @@
     "spokenToSigned": "✅",
     "signedToSpoken": "❌",
     "keyFeatures": "Chat interface, QR code for public spaces",
-    "fullDescription": "Deafinitely provides real-time sign language translation and communication tools, including a chat interface and QR codes for public spaces. Supporting Israeli Sign Language (ISL), BSL, and ASL, the company serves websites, video markets, and public institutions, known for its innovative solutions like the patented SignChat app for real-time message translation. <iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/1COjZNbEHVo\"></iframe>"
+    "fullDescription": "Deafinitely provides real-time sign language translation and communication tools, including a chat interface and QR codes for public spaces. Supporting Israeli Sign Language (ISL), BSL, and ASL, the company serves websites, video markets, and public institutions, known for its innovative solutions like the patented SignChat app for real-time message translation.",
+    "video": "https://www.youtube.com/embed/1COjZNbEHVo"
   },
   {
     "name": "EASIER Project",
@@ -800,7 +803,8 @@
     "spokenToSigned": "✅",
     "signedToSpoken": "✅",
     "keyFeatures": "AI-driven machine translation, real-time bi-directional communication",
-    "fullDescription": "OmniBridge develops AI technology for real-time American Sign Language (ASL) translation, facilitating bi-directional communication between Deaf and hearing individuals. Their mission is to bridge the communication gap by enabling seamless conversations through AI-driven machine translation technology. Founded by Adam Munder, a Deaf software engineer, the company is dedicated to enhancing accessibility and inclusivity."
+    "fullDescription": "OmniBridge develops AI technology for real-time American Sign Language (ASL) translation, facilitating bi-directional communication between Deaf and hearing individuals. Their mission is to bridge the communication gap by enabling seamless conversations through AI-driven machine translation technology. Founded by Adam Munder, a Deaf software engineer, the company is dedicated to enhancing accessibility and inclusivity.",
+    "video": "https://www.youtube.com/embed/9UrQPpeGpA4"
   },
   {
     "name": "Yomma GmbH",
@@ -981,5 +985,23 @@
     "signedToSpoken": "✅",
     "keyFeatures": "Real-time ASL translation using standard webcams",
     "fullDescription": "SIGN is a real-time American Sign Language (ASL) translation service that converts ASL into text using standard webcams and machine learning. Developed as a senior design project at the University of Pennsylvania, it offers a desktop application for Windows and macOS, enabling users to generate live captions from their signing. The tool aims to improve accessibility for various scenarios, including healthcare consultations, business interactions, and daily communication. SIGN is free for personal use, while developers and enterprises can access SDKs and premium support through subscription plans."
+  },
+  {
+    "name": "Signbridge AI",
+    "sector": "Translation",
+    "country": "Canada",
+    "website": "https://www.signbridgeai.com/",
+    "social": {
+      "linkedIn": "https://www.linkedin.com/company/signbridgeai"
+    },
+    "funding": null,
+    "employees": "7",
+    "languages": ["American"],
+    "customers": "Government and enterprise",
+    "spokenToSigned": "✅",
+    "signedToSpoken": "✅",
+    "keyFeatures": "Conversational AI agent for real-time bi-directional sign language translation",
+    "fullDescription": "Signbridge AI is a Canada-based company developing conversational AI agents for real-time, bi-directional translation between spoken English and American Sign Language (ASL). The platform leverages computer vision and natural language understanding to enable fluid interaction between Deaf and hearing individuals. Signbridge AI focuses on applications in education, healthcare, and business, aiming to create accessible, scalable communication tools for inclusive environments.",
+    "video": "https://www.youtube.com/embed/I5G7nbKdqdI"
   }
 ]

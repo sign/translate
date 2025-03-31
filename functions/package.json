@@ -20,7 +20,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "@firebase/database-types": "1.0.9",
+    "@firebase/database-types": "1.0.10",
     "@google-cloud/storage": "7.15.2",
     "@sign-mt/browsermt": "0.2.3",
     "@unkey/api": "0.34.0",
@@ -33,7 +33,7 @@
     "http-errors": "2.0.0",
     "http-proxy-middleware": "^3.0.3",
     "node-fetch": "2.6.7",
-    "openai": "4.88.0",
+    "openai": "4.89.0",
     "request-ip": "3.3.0"
   },
   "devDependencies": {
@@ -43,16 +43,16 @@
     "@types/jest": "29.5.14",
     "@types/node-fetch": "2.6.12",
     "@types/request-ip": "0.0.41",
-    "@typescript-eslint/eslint-plugin": "8.27.0",
-    "@typescript-eslint/parser": "8.27.0",
+    "@typescript-eslint/eslint-plugin": "8.28.0",
+    "@typescript-eslint/parser": "8.28.0",
     "eslint": "8.57.0",
     "firebase-functions-test": "3.4.1",
-    "firebase-tools": "13.34.0",
+    "firebase-tools": "13.35.1",
     "jest": "29.7.0",
     "minimatch": "10.0.1",
     "mock-express-request": "0.2.2",
     "mock-express-response": "0.3.0",
-    "ts-jest": "29.2.6",
+    "ts-jest": "29.3.0",
     "typescript": "5.8.2"
   }
 }

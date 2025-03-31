@@ -14,7 +14,7 @@ Deaf people do not find these solutions practical for everyday use, and urge aga
 
 [^dont-help]: The Atlantic. 2017. [Why Sign-Language Gloves Don't Help Deaf People](https://www.theatlantic.com/technology/archive/2017/11/why-sign-language-gloves-dont-help-deaf-people/545441/)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/NVCE7JR0FCQ"></iframe>
+<iframe anonymous width="640" height="360" src="https://www.youtube.com/embed/NVCE7JR0FCQ"></iframe>
 
 ## Vision Pro Sign Language Translator[^vision-pro-translator]
 
@@ -30,6 +30,6 @@ making it more of a high-PR proof-of-concept than a viable everyday tool.
 SpellRing is a recent wearable from Cornell University that translates ASL fingerspelling into text using micro-sonar and deep learning.
 Trained on over 20,000 words with an accuracy of 82–92%, it remains limited to spelling, bypassing the full spectrum of ASL’s signs, expressive grammar and non-manual cues[^popsci].
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/LUtRk-oUeIc"></iframe>
+<iframe anonymous width="640" height="360" src="https://www.youtube.com/embed/LUtRk-oUeIc"></iframe>
 
 [^popsci]: Popular Science. 2025. [Wearable ring translates sign language into text](https://www.popsci.com/technology/sign-language-translator-ring/)
