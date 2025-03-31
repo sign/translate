@@ -76,7 +76,7 @@ const socials = ['linkedIn', 'twitter', 'instagram', 'facebook', 'tiktok', 'gith
             <div v-html="company.fullDescription"></div>
             <iframe
               v-if="company.video"
-              anonymous
+              credentialless
               :src="company.video"
               width="100%"
               height="315"
