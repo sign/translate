@@ -3,14 +3,14 @@ PODS:
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - PromisesObjC (~> 2.4)
-  - Capacitor (7.1.0):
+  - Capacitor (7.2.0):
     - CapacitorCordova
   - CapacitorBlobWriter (0.0.1):
     - Capacitor
     - GCDWebServer (~> 3.0)
   - CapacitorClipboard (7.0.0):
     - Capacitor
-  - CapacitorCordova (7.1.0)
+  - CapacitorCordova (7.2.0)
   - CapacitorFilesystem (7.0.0):
     - Capacitor
   - CapacitorFirebaseAnalytics (7.1.0):
@@ -268,10 +268,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AppCheckCore: cc8fd0a3a230ddd401f326489c99990b013f0c4f
-  Capacitor: bceb785fb78f5e81e4a9e37843bc1c24bd9c7194
+  Capacitor: 03bc7cbdde6a629a8b910a9d7d78c3cc7ed09ea7
   CapacitorBlobWriter: d709e5d22ab9989afd730eb4773873d1ded5fd08
   CapacitorClipboard: 007d79cd6c104002b274546d13873526ca20beb7
-  CapacitorCordova: 866217f32c1d25b326c568a10ea3ed0c36b13e29
+  CapacitorCordova: 5967b9ba03915ef1d585469d6e31f31dc49be96f
   CapacitorFilesystem: 59a2b7b56a897c6a3de4d04c5718e1d80de9d2f5
   CapacitorFirebaseAnalytics: 7ecc6a54ae647af6219faf9c86ce39996305d093
   CapacitorFirebaseApp: 08489aaad81ae0e1d1dbef633632a19ae829ec49
