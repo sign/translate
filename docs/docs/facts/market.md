@@ -65,24 +65,7 @@ Over a 10-year period, this promises a return of nearly US\$ 16 for every 1 doll
 
 [^who-report-annex]: World Health Organization. 2021. [World Report on Hearing, Web Annex B: The Return on Investment From Actions To Prevent and/or Mitigate the Impact of Hearing Loss](https://iris.who.int/bitstream/handle/10665/339906/9789240021501-eng.pdf).
 
-## Perception and Impact
 
-Disabled people face significantly more challenges than non-disabled people in accessing products (41.6% vs. 15.8%) and services (51.5% vs. 25.2%)[^ons].
-[^ons]: Office for National Statistics. 2021. [Disabled people’s access to products and services, Great Britain: February to March 2022](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/disability/articles/disabledpeoplesaccesstoproductsandservicesgreatbritain/februarytomarch2022).
-
-National Captioning Institute research[^nci] found that 66% of viewers of captioned TV are more likely to buy a product that has a captioned commercial;
-53% will actively seek out products advertised with captions; and, 35% will switch to brands that use captioned ads.
-
-[^nci]: National Captioning Institute. 2004. [Commercial and Infomercial Captioning](https://web.archive.org/web/20070815181532/https://www.ncicap.org/commcap.asp).
-
-Examples of companies investing in sign language in recent years:
-
-- **Chase Bank** and **Starbucks** opened a "signing branch" near Gallaudet University and hired Deaf employees
-- **Comcast** [established](https://www.forbes.com/sites/sarahkim/2019/12/03/comcast-asl-now/#65a36e3b6dc1) customer service in ASL (https://aslnow.com/)
-- **Proctor Gamble** established an internship program with Gallaudet University
-- Recent partnerships with Gallaudet University: **Microsoft**, **Qualcomm**, **Google**, **NSA**, **IDB** (Inter-American Development Bank)
-- **Zoom**, **Flipgrid**, **GoReact** are only a few examples of video-based companies which have quickly realized heeding the input of Deaf consumers is key to their business.
-- **Apple** partnered with Gallaudet University to spotlight schools for the deaf, and deaf-owned businesses (https://gallaudet.edu/signing-ecosystem/)
 
 ## Market Segments in the United States
 
