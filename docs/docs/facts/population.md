@@ -62,7 +62,6 @@ and according to a conglomeration of sources[^sheets], the number signers for th
 
 [^ecml]: European Centre for Modern Languages. 2024. [Facts about sign language](https://edl.ecml.at/Facts/FAQsonsignlanguage/tabid/2741/language/en-GB/Default.aspx).
 
-[^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
 
 [^sheets]: Shester Gueuwou. 2023. [Sign Language Info](https://docs.google.com/spreadsheets/d/1O6frH52v4R9RbhWOA-FqRj2W3U-0yC2xC3qroxcq4kQ/edit?gid=1380277111#gid=1380277111)
 
@@ -85,6 +84,31 @@ We list the number of interpreters in various countries below. For all countries
 | Spain              |                       |                                                             | 100,000[^eud-spain]                        | 667[^eud-spain]                                                     | <15[^ddl]                                   |
 | Austria            |                       |                                                             | 8,000 – 10,000[^ddl][^eud-austria]         | 150[^eud-austria]                                                   | 5[^ddl]                                     |
 | Belgium            |                       |                                                             | 6,500[^eud-belgium] - 9,000[^ddl]          | 165[^eud-belgium]                                                   | (5-10 Flanders, 16-26 Wallonia)[^ddl]       |
+
+
+## Hearing Sign Language Users
+
+Not all sign language users are deaf. A significant number of hearing individuals use sign languages fluently or regularly, contributing to higher user estimates in some sources.
+
+These include:
+
+- **Children of Deaf Adults (CODAs)** hearing children who grow up using sign language as a primary means of communication. [^coda]
+- **Sign language interpreters** and trainees who acquire advanced signing skills through professional training.
+- **Educators, social workers, and healthcare providers** who use sign language to communicate with deaf clients or students.
+- **Hearing individuals** learning sign language for academic, cultural, or personal reasons.
+
+Sources such as Ethnologue[^derivation] report up to **24 million** native sign language users, a figure that may reflect both deaf and hearing signers, depending on the definition used. This broader inclusion helps explain why estimates vary between **12** and **25 million** sign language users worldwide. Understanding who is included in these figures is important when interpreting population data, especially for developing inclusive technologies and services.
+
+
+[^derivation]: Derivation. 2022. [International Day of Sign Languages 2022](https://derivation.co/international-day-of-sign-languages-2022/).
+[^coda]: Medical Life Sciences. 2025 [Children of Deaf Adults (CODA)](https://www.asha.org/public/hearing/Children-of-Deaf-Adults-CODA--Communication-Challenges/#:~:text=Children%20of%20deaf%20adults%20(CODA)%20refer%20to%20hearing%20children%20who,children
+
+
+
+
+
+
+
 
 [^eud-slovenia]: European Union of the Deaf. 2024. [Member Countries: Slovenia](https://www.eud.eu/member-countries/slovenia/).
 
