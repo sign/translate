@@ -8,6 +8,17 @@ Therefore, this document aims to provide a high-level overview of the current st
 
 ### Video Generation Models
 
+#### Google: Veo 2 (2025/05/10)
+
+:::info Prompt
+Sign language interpreter, green screen background, signing the American Sign Language sign for "House".
+:::
+
+| Video 1                                                            | Video 2                                                            |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| ![Veo2 Video 1 Generated using Prompt](examples/veo2/house-1.webp) | ![Veo2 Video 2 Generated using Prompt](examples/veo2/house-2.webp) |
+| ![Veo2 Video 1 Generated using Prompt](examples/veo2/house-3.webp) | ![Veo2 Video 2 Generated using Prompt](examples/veo2/house-4.webp) |
+
 #### OpenAI: [Sora](https://sora.com) (2024/12/14)
 
 :::info Prompt
