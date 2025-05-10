@@ -8,39 +8,40 @@ PODS:
   - CapacitorBlobWriter (0.0.1):
     - Capacitor
     - GCDWebServer (~> 3.0)
-  - CapacitorClipboard (7.0.0):
+  - CapacitorClipboard (7.0.1):
     - Capacitor
   - CapacitorCordova (7.2.0)
-  - CapacitorFilesystem (7.0.0):
+  - CapacitorFilesystem (7.0.1):
     - Capacitor
-  - CapacitorFirebaseAnalytics (7.1.0):
+  - CapacitorFirebaseAnalytics (7.2.0):
     - Capacitor
-    - CapacitorFirebaseAnalytics/Lite (= 7.1.0)
-  - CapacitorFirebaseAnalytics/Analytics (7.1.0):
+    - CapacitorFirebaseAnalytics/Lite (= 7.2.0)
+  - CapacitorFirebaseAnalytics/Analytics (7.2.0):
     - Capacitor
     - FirebaseAnalytics (~> 11.7.0)
-  - CapacitorFirebaseAnalytics/Lite (7.1.0):
+    - GoogleAppMeasurementOnDeviceConversion (~> 11.7.0)
+  - CapacitorFirebaseAnalytics/Lite (7.2.0):
     - Capacitor
-  - CapacitorFirebaseApp (7.1.0):
+  - CapacitorFirebaseApp (7.2.0):
     - Capacitor
     - FirebaseCore (~> 11.7.0)
-  - CapacitorFirebaseAppCheck (7.1.0):
+  - CapacitorFirebaseAppCheck (7.2.0):
     - Capacitor
     - FirebaseAppCheck (~> 11.7.0)
-  - CapacitorFirebaseCrashlytics (7.1.0):
+  - CapacitorFirebaseCrashlytics (7.2.0):
     - Capacitor
     - FirebaseCrashlytics (~> 11.7.0)
-  - CapacitorFirebasePerformance (7.1.0):
+  - CapacitorFirebasePerformance (7.2.0):
     - Capacitor
     - FirebasePerformance (~> 11.7.0)
-  - CapacitorFirebaseStorage (7.1.0):
+  - CapacitorFirebaseStorage (7.2.0):
     - Capacitor
     - FirebaseStorage (~> 11.7.0)
-  - CapacitorKeyboard (7.0.0):
+  - CapacitorKeyboard (7.0.1):
     - Capacitor
-  - CapacitorShare (7.0.0):
+  - CapacitorShare (7.0.1):
     - Capacitor
-  - CapacitorSplashScreen (7.0.0):
+  - CapacitorSplashScreen (7.0.1):
     - Capacitor
   - FirebaseABTesting (11.7.0):
     - FirebaseCore (~> 11.7.0)
@@ -151,6 +152,7 @@ PODS:
     - GoogleUtilities/Network (~> 8.0)
     - "GoogleUtilities/NSData+zlib (~> 8.0)"
     - nanopb (~> 3.30910.0)
+  - GoogleAppMeasurementOnDeviceConversion (11.7.0)
   - GoogleDataTransport (10.1.0):
     - nanopb (~> 3.30910.0)
     - PromisesObjC (~> 2.4)
@@ -229,6 +231,7 @@ SPEC REPOS:
     - FirebaseStorage
     - GCDWebServer
     - GoogleAppMeasurement
+    - GoogleAppMeasurementOnDeviceConversion
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
@@ -270,18 +273,18 @@ SPEC CHECKSUMS:
   AppCheckCore: cc8fd0a3a230ddd401f326489c99990b013f0c4f
   Capacitor: 03bc7cbdde6a629a8b910a9d7d78c3cc7ed09ea7
   CapacitorBlobWriter: d709e5d22ab9989afd730eb4773873d1ded5fd08
-  CapacitorClipboard: 007d79cd6c104002b274546d13873526ca20beb7
+  CapacitorClipboard: 70bfdb42b877b320a6e511ab94fa7a6a55d57ecb
   CapacitorCordova: 5967b9ba03915ef1d585469d6e31f31dc49be96f
-  CapacitorFilesystem: 59a2b7b56a897c6a3de4d04c5718e1d80de9d2f5
-  CapacitorFirebaseAnalytics: 7ecc6a54ae647af6219faf9c86ce39996305d093
-  CapacitorFirebaseApp: 08489aaad81ae0e1d1dbef633632a19ae829ec49
-  CapacitorFirebaseAppCheck: 94e8f3e4c2b68f11c3b68cb993e4cdf5ee7460b2
-  CapacitorFirebaseCrashlytics: 0daff8b4c2416ce2fd686a380fce3fd2f41ec218
-  CapacitorFirebasePerformance: e4156d837e22c77adf58954effcfae4088706ab8
-  CapacitorFirebaseStorage: ad9d7e14670d8a63db166702cb60888e70981c39
-  CapacitorKeyboard: 4db71e694e7afb5d7c0be09b05495c19f7d6c914
-  CapacitorShare: d94c53d7656f1ce8f6712ae8d19ab0c18a69259f
-  CapacitorSplashScreen: 7e7a0a1113833032f196b3af6fa437baccacf5bc
+  CapacitorFilesystem: e6261c410436f54908c11f94336c5b58286b1db0
+  CapacitorFirebaseAnalytics: e629f012fd863415c4afa49fff22722e36a8ed1e
+  CapacitorFirebaseApp: fa49d2bc43ef3b0b2fb50be5811ab3d25f0574d2
+  CapacitorFirebaseAppCheck: 657379c55631390cd2a524650533fc10d8b8f063
+  CapacitorFirebaseCrashlytics: 77d86d19ec6438934c5527ddd0c36f51585318e6
+  CapacitorFirebasePerformance: b298f875866d612ec1ebe3edc248a6cc63c2b6b9
+  CapacitorFirebaseStorage: 2d66e08f191932f2e64191700db07ffe4f35bac1
+  CapacitorKeyboard: 09fd91dcde4f8a37313e7f11bde553ad1ed52036
+  CapacitorShare: e573823f511f260f598d0423c33b1e3d7bbe5fd1
+  CapacitorSplashScreen: 1d67815a422a9b61539c94f283c08ed56667c0fc
   FirebaseABTesting: 08b3e19b28504632a9cd03e7a796b355c5d39b27
   FirebaseAnalytics: bc9e565af9044ba8d6c6e4157e4edca8e5fdf7ec
   FirebaseAppCheck: 2bd832b48faa38f7d86f902c57f78af93eae4cdc
@@ -300,6 +303,7 @@ SPEC CHECKSUMS:
   FirebaseStorage: d35da127dd49edcbd07b8c07cf651a70161558b2
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   GoogleAppMeasurement: 0471a5b5bff51f3a91b1e76df22c952d04c63967
+  GoogleAppMeasurementOnDeviceConversion: 35ca1deeb019c506d04da8d4887f0d107d1ffca4
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   GTMSessionFetcher: 4cb0aa086996858328a1fca61f9bfe81cfdfdfa9
