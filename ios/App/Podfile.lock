@@ -3,16 +3,17 @@ PODS:
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - PromisesObjC (~> 2.4)
-  - Capacitor (7.2.0):
+  - Capacitor (7.3.0):
     - CapacitorCordova
   - CapacitorBlobWriter (0.0.1):
     - Capacitor
     - GCDWebServer (~> 3.0)
   - CapacitorClipboard (7.0.1):
     - Capacitor
-  - CapacitorCordova (7.2.0)
-  - CapacitorFilesystem (7.0.1):
+  - CapacitorCordova (7.3.0)
+  - CapacitorFilesystem (7.1.1):
     - Capacitor
+    - IONFilesystemLib (~> 1.0)
   - CapacitorFirebaseAnalytics (7.2.0):
     - Capacitor
     - CapacitorFirebaseAnalytics/Lite (= 7.2.0)
@@ -184,6 +185,7 @@ PODS:
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
   - GTMSessionFetcher/Core (4.2.0)
+  - IONFilesystemLib (1.0.0)
   - nanopb (3.30910.0):
     - nanopb/decode (= 3.30910.0)
     - nanopb/encode (= 3.30910.0)
@@ -235,6 +237,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - IONFilesystemLib
     - nanopb
     - PromisesObjC
     - PromisesSwift
@@ -271,11 +274,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AppCheckCore: cc8fd0a3a230ddd401f326489c99990b013f0c4f
-  Capacitor: 03bc7cbdde6a629a8b910a9d7d78c3cc7ed09ea7
+  Capacitor: 8585c18a230122906e114ba5f6325ec65ee1371f
   CapacitorBlobWriter: d709e5d22ab9989afd730eb4773873d1ded5fd08
   CapacitorClipboard: 70bfdb42b877b320a6e511ab94fa7a6a55d57ecb
-  CapacitorCordova: 5967b9ba03915ef1d585469d6e31f31dc49be96f
-  CapacitorFilesystem: e6261c410436f54908c11f94336c5b58286b1db0
+  CapacitorCordova: 2685f5c43675793b5f06dfd66b3b26268f003b97
+  CapacitorFilesystem: 39173fe5a0e77851119998d0d8c61c70551a412a
   CapacitorFirebaseAnalytics: e629f012fd863415c4afa49fff22722e36a8ed1e
   CapacitorFirebaseApp: fa49d2bc43ef3b0b2fb50be5811ab3d25f0574d2
   CapacitorFirebaseAppCheck: 657379c55631390cd2a524650533fc10d8b8f063
@@ -307,6 +310,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
   GTMSessionFetcher: 4cb0aa086996858328a1fca61f9bfe81cfdfdfa9
+  IONFilesystemLib: ceacae793975039530458eabab0c495c70515a0d
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
