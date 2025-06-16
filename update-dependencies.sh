@@ -12,5 +12,7 @@ bun x npm-check-updates --cacheClear --cwd docs -u
 cd docs && bun install && cd ..
 
 # Update server dependencies
-bun x npm-check-updates --cacheClear --cwd functions -u --reject node-fetch,eslint
+# express: because express-async-errors requires express < 5
+
+bun x npm-check-updates --cacheClear --cwd functions -u --reject node-fetch,eslint,express
 cd functions && bun install && cd ..
