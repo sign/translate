@@ -1,5 +1,14 @@
 # The Market
 
+:::info Summary
+The global sign language services market is a fast-growing and largely under-digitized segment within the broader US$ 96.2 billion language services industry.
+In the U.S. alone, the broader sign language economy — spanning education, accessibility, telecommunications, and early intervention — is valued between US$ 3 and 10 billion annually. \
+When extrapolated globally, this suggests a total market opportunity of approximately US$ 31.6 billion.
+
+The unmet demand for accessible services is underscored by a staggering US$ 1.3 trillion annual global cost of unaddressed hearing loss.
+As public programs and enterprise adoption expand — from government-funded education to customer service investments by major brands — there is a growing need for scalable, affordable, and tech-enabled solutions.
+:::
+
 To understand the market size, we flow from the global language services market to the specific sign language services market:
 
 - The global language services market is valued at **US\$ 60.68 billion** in 2022 and is predicted to reach **US\$ 96.21 billion** by the end of 2032 (CAGR of 5.94%)[^factmr-lsm].
