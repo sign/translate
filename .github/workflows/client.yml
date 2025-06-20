@@ -38,6 +38,9 @@ jobs:
       - name: Create terms and conditions
         run: bun run generate:terms
 
+      - name: Create privacy page
+        run: bun run generate:privacy
+
       - name: Lint code
         run: bun run lint
 

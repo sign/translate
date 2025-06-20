@@ -1,41 +1,77 @@
 <h1>
   Privacy Policy for <a href="https://github.com/sign/translate"><code>sign/translate</code></a>
 </h1>
+<p><strong>Effective date: 20 June 2025</strong></p>
 <p>
-  This policy is work in progress, and will be updated periodically to reflect changes in our practices or regulatory
-  requirements. Users are encouraged to review it regularly.
+  This Privacy Policy describes how <strong>sign.mt ltd</strong> (“we”, “us”, “our”) collects, uses, and safeguards your
+  personal data when you interact with the
+  <a href="https://github.com/sign/translate"><code>sign/translate</code></a> service available at
+  <a href="https://sign.mt">sign.mt</a> and its related applications.<br />We process information in accordance with the
+  <strong>General Data Protection Regulation (GDPR)</strong> and the
+  <strong>Swiss Federal Act on Data Protection (FADP)</strong>, and we review this notice periodically to ensure it
+  remains accurate and up-to-date.
 </p>
-
-<h2>Our Commitment to Privacy</h2>
+<h2>1. Who We Are</h2>
 <p>
-  At <code>sign.mt</code>, privacy is a top priority. We are dedicated to processing data locally whenever possible,
-  minimizing the need to send information over the internet. However, in some instances, online processing is necessary
-  to provide the best experience.
+  <strong>sign.mt ltd</strong> is the data controller responsible for any personal data processed in connection with
+  <code>sign/translate</code>.<br />You can reach our privacy team at
+  <a href="mailto:privacy@sign.mt">privacy&#64;sign.mt</a> for any inquiries or to exercise your data-protection rights.
 </p>
-
-<h2>Data Collection and Usage</h2>
-<h3>HTTP Requests and Logging</h3>
-<ul>
-  <li>
-    Every HTTP request made to our backend is recorded, along with diagnostic details, the request URL, and the body of
-    the request.
-  </li>
-  <li>This data is stored in Google BigQuery and Google Cloud Logs.</li>
-  <li>
-    Currently, we primarily log requests from the spoken-to-signed translation feature, including user inputs for
-    translation and selected languages.
-  </li>
-</ul>
-<h3>Text Normalization and Vocalization</h3>
-<ul>
-  <li>For text normalization and vocalization services, we utilize ChatGPT by OpenAI.</li>
-  <li>
-    Textual inputs are sent to OpenAI for processing. For more details on how OpenAI handles data, please refer to their
-    <a href="https://openai.com/policies/privacy-policy">Privacy Policy</a>.
-  </li>
-</ul>
-<h3>General User Metadata</h3>
-<ul>
-  <li>We collect general user metadata like language preference, device type, and IP address.</li>
-  <li>This information is logged by Google Analytics and is used for aggregated analytics purposes.</li>
-</ul>
+<p>
+  Our guiding principle is data-minimisation.<br />Whenever feasible, processing happens locally on your device,
+  limiting the amount of information transmitted across the internet.<br />Remote processing is performed only when
+  necessary to deliver high-quality translation and accessibility features.
+</p>
+<h2>2. What Data We Collect and Why</h2>
+<p>
+  When you submit text for translation, our backend records the request, a salted-and-hashed version of your IP address,
+  the target and source language, and diagnostic details that help us keep the service reliable and secure.<br />For the
+  spoken-to-signed translation feature, the full input is logged because we need it to evaluate and improve
+  sign-language rendering quality.<br />These logs reside in Google Cloud Logs and Google BigQuery on encrypted storage
+  and are automatically deleted once they are no longer operationally required.
+</p>
+<p>
+  If you opt in through our cookie banner, we gather aggregated analytics such as page paths, browser type, device
+  category, and language settings.<br />This data, processed through Google Analytics, helps us understand overall usage
+  patterns and prioritise product improvements.<br />Declining or later withdrawing consent stops analytics collection
+  immediately.
+</p>
+<p>
+  Certain advanced features—specifically text normalisation and vocalisation—send your input to OpenAI’s ChatGPT API for
+  processing.<br />These requests are covered by the
+  <a href="https://openai.com/policies/privacy-policy">OpenAI Privacy Policy</a>.
+</p>
+<h2>3. Legal Bases for Processing</h2>
+<p>
+  We rely on performance of a contract under Article 6(1)(b) GDPR to deliver translations you explicitly request.<br />Diagnostic
+  logging is processed under our legitimate interests in maintaining service integrity under Article 6(1)(f).<br />Analytics
+  and optional features that send data to third parties are processed on the basis of your explicit consent under
+  Article 6(1)(a).<br />You may revoke consent at any time without affecting the lawfulness of processing carried out
+  before withdrawal.
+</p>
+<h2>4. Data Security</h2>
+<p>
+  All information is stored on encrypted infrastructure hosted on Google Cloud.<br />Access is restricted to authorized
+  personnel, and all third-party providers operate under GDPR-aligned data-processing agreements.
+</p>
+<h2>5. International Transfers</h2>
+<p>
+  Where data leaves Switzerland or the EEA—including transfers to the United States—we rely on the
+  <strong>EU Standard Contractual Clauses (SCCs)</strong> and comparable Swiss mechanisms to ensure an essentially
+  equivalent level of protection as required by GDPR and FADP.
+</p>
+<h2>6. Your Rights</h2>
+<p>
+  You have the right to request access, rectification, erasure, restriction of processing, and portability of your
+  personal data, as well as the right to object to certain processing activities. Please note that because we anonymize
+  request logs and remove direct identifiers, we may be unable to locate any data that can be linked back to you
+  personally. To exercise any of these rights, contact us at
+  <a href="mailto:privacy@sign.mt">privacy&#64;sign.mt</a>.<br />You also have the right to lodge a complaint with your
+  local supervisory authority.
+</p>
+<h2>7. Updates to This Policy</h2>
+<p>
+  We update this Privacy Policy when our technology, legal obligations, or data-handling practices change.<br />The most
+  recent version is always available at sign.mt, and the “Effective date” above reflects the date of the latest
+  substantive revision.
+</p>
