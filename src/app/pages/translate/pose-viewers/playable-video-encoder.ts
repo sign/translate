@@ -1,5 +1,5 @@
-import type {ArrayBufferTarget as WebmArrayBufferTarget, Muxer as WebmMuxer} from 'webm-muxer';
-import type {ArrayBufferTarget as Mp4ArrayBufferTarget, Muxer as Mp4Muxer} from 'mp4-muxer';
+import type {Output, EncodedVideoPacketSource} from 'mediabunny';
+import {EncodedPacket} from 'mediabunny';
 
 export function getMediaSourceClass(): typeof MediaSource {
   if ('ManagedMediaSource' in window) {
@@ -18,7 +18,8 @@ export function getMediaSourceClass(): typeof MediaSource {
 }
 
 export class PlayableVideoEncoder {
-  muxer: WebmMuxer<WebmArrayBufferTarget> | Mp4Muxer<Mp4ArrayBufferTarget>;
+  output: Output;
+  packetSource: EncodedVideoPacketSource;
   videoEncoder: VideoEncoder;
   frameBuffer: VideoFrame[] = []; // Buffer frames until the encoder is ready
 
@@ -47,7 +48,7 @@ export class PlayableVideoEncoder {
       await this.createMP4Muxer();
     }
 
-    this.createVideoEncoder();
+    await this.createVideoEncoder();
   }
 
   async isPlayable() {
@@ -79,7 +80,7 @@ export class PlayableVideoEncoder {
   }
 
   async createWebMMuxer() {
-    const {Muxer, ArrayBufferTarget} = await import('webm-muxer');
+    const {Output, WebMOutputFormat, BufferTarget, EncodedVideoPacketSource} = await import('mediabunny');
 
     // Set the metadata
     this.container = 'webm';
@@ -87,21 +88,22 @@ export class PlayableVideoEncoder {
     this.width = this.image.width;
     this.height = this.image.height;
 
-    // Create the muxer
-    this.muxer = new Muxer({
-      target: new ArrayBufferTarget(),
-      video: {
-        codec: 'V_VP9',
-        width: this.width,
-        height: this.height,
-        frameRate: this.fps,
-        alpha: this.alpha,
-      },
+    // Create the packet source
+    this.packetSource = new EncodedVideoPacketSource('vp9');
+
+    // Create the output
+    this.output = new Output({
+      format: new WebMOutputFormat(),
+      target: new BufferTarget(),
+    });
+
+    this.output.addVideoTrack(this.packetSource, {
+      frameRate: this.fps,
     });
   }
 
   async createMP4Muxer() {
-    const {Muxer, ArrayBufferTarget} = await import('mp4-muxer');
+    const {Output, Mp4OutputFormat, BufferTarget, EncodedVideoPacketSource} = await import('mediabunny');
 
     // Set the metadata
     this.container = 'mp4';
@@ -110,22 +112,27 @@ export class PlayableVideoEncoder {
     this.width = this.image.width + (this.image.width % 2);
     this.height = this.image.height + (this.image.height % 2);
 
-    // Create the muxer
-    this.muxer = new Muxer({
-      target: new ArrayBufferTarget(),
-      fastStart: 'in-memory',
-      video: {
-        codec: 'avc',
-        width: this.width,
-        height: this.height,
-      },
+    // Create the packet source
+    this.packetSource = new EncodedVideoPacketSource('avc');
+
+    // Create the output
+    this.output = new Output({
+      format: new Mp4OutputFormat({
+        fastStart: 'in-memory',
+      }),
+      target: new BufferTarget(),
     });
+
+    this.output.addVideoTrack(this.packetSource);
   }
 
-  createVideoEncoder() {
+  async createVideoEncoder() {
     this.videoEncoder = new VideoEncoder({
-      output: (chunk, meta) => this.muxer.addVideoChunk(chunk, meta),
-      error: e => console.error(e),
+      output: (chunk: EncodedVideoChunk, meta?: EncodedVideoChunkMetadata) => {
+        const packet = EncodedPacket.fromEncodedChunk(chunk);
+        this.packetSource.add(packet, meta);
+      },
+      error: (e: Error) => console.error(e),
     });
     const config = {
       codec: this.codec,
@@ -134,9 +141,12 @@ export class PlayableVideoEncoder {
       bitrate: this.bitrate,
       framerate: this.fps,
       // TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#290
-      // alpha: this.muxer.alpha ? 'keep' as AlphaOption : false
+      // alpha: this.alpha ? 'keep' as AlphaOption : 'discard'
     };
     this.videoEncoder.configure(config);
+
+    // Start the output
+    await this.output.start();
 
     // Flush the frame buffer
     for (const frame of this.frameBuffer) {
@@ -165,11 +175,12 @@ export class PlayableVideoEncoder {
 
   async finalize() {
     await this.videoEncoder.flush();
-    this.muxer.finalize();
+    this.packetSource.close();
+    await this.output.finalize();
     this.videoEncoder.close();
     delete this.videoEncoder;
 
-    let {buffer} = this.muxer.target; // Buffer contains final muxed file
+    const buffer = (this.output.target as any).buffer as ArrayBuffer;
     return new Blob([buffer], {type: `video/${this.container}`});
   }
 
@@ -178,8 +189,12 @@ export class PlayableVideoEncoder {
       this.videoEncoder.close();
       delete this.videoEncoder;
     }
-    if (this.muxer) {
-      delete this.muxer;
+    if (this.packetSource) {
+      this.packetSource.close();
+      delete this.packetSource;
+    }
+    if (this.output) {
+      delete this.output;
     }
   }
 }

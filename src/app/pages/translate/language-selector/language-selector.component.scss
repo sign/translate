@@ -51,7 +51,7 @@ ion-button.menu-language-button {
 }
 
 ::ng-deep .mat-mdc-tab-label-container {
-  border-width: 0;
+  border-width: 0 !important;
 }
 
 .wrap-text {
