@@ -85,6 +85,9 @@ export class AppComponent implements AfterViewInit {
   }
 
   initCookieConsent() {
+    if (!('document' in globalThis)) {
+      return Promise.resolve();
+    }
     return CookieConsent.run({
       root: 'body',
       autoShow: true,
