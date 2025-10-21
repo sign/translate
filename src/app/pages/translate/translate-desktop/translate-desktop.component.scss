@@ -72,3 +72,14 @@ ntkme-github-button {
   cursor: help;
   font-family: monospace;
 }
+
+.disclaimer {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: end;
+  width: 100%;
+
+  a {
+    color: unset;
+  }
+}

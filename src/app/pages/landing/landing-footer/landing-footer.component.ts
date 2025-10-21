@@ -7,7 +7,7 @@ import {TranslocoDirective} from '@jsverse/transloco';
   selector: 'app-landing-footer',
   templateUrl: './landing-footer.component.html',
   styleUrl: './landing-footer.component.scss',
-  imports: [I18NLanguageSelectorComponent, RouterLink, TranslocoDirective],
+  imports: [RouterLink, TranslocoDirective],
 })
 export class LandingFooterComponent {
   legalPages: string[] = ['terms', 'privacy', 'licenses'];

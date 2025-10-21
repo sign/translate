@@ -1,4 +1,5 @@
 <ion-header [translucent]="true">
+  <app-announcement-banner />
   <ion-toolbar>
     <ion-buttons slot="primary">
       <ion-button routerLink="/about" queryParamsHandling="preserve" color="primary" shape="round" fill="solid">
@@ -8,6 +9,13 @@
     <ion-title>
       <app-logo [text]="'translate.logo' | transloco" />
     </ion-title>
+    <ion-buttons slot="secondary">
+      @for (page of pages; track page.key) {
+        <ion-button [routerLink]="page.route" queryParamsHandling="preserve" fill="solid" color="light" shape="round">
+          {{ 'landing.' + page.key + '.title' | transloco }}
+        </ion-button>
+      }
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -20,6 +28,11 @@
         <app-translate-input-button mode="webcam" icon="videocam" />
         <app-translate-input-button mode="upload" icon="cloud-upload" />
       }
+      <div class="disclaimer">
+        By using the sign Translate tool, you agree to our
+        <a href="/legal/privacy" target="_blank">Privacy Policy</a> and
+        <a href="/legal/terms" target="_blank">Terms of Use</a>.
+      </div>
     </div>
 
     <app-drop-pose-file>
@@ -40,4 +53,5 @@
 
     <app-send-feedback />
   </div>
+  <app-landing-footer />
 </ion-content>

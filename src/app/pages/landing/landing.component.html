@@ -11,9 +11,9 @@
           <ion-label>Pages</ion-label>
         </ion-list-header>
         <ion-menu-toggle>
-          @for (page of pages; track page) {
-            <ion-item [routerLink]="['/about', page]" queryParamsHandling="preserve">
-              <ion-label>{{ 'landing.' + page + '.title' | transloco }}</ion-label>
+          @for (page of pages; track page.key) {
+            <ion-item [routerLink]="page.route" queryParamsHandling="preserve">
+              <ion-label>{{ 'landing.' + page.key + '.title' | transloco }}</ion-label>
             </ion-item>
           }
         </ion-menu-toggle>
@@ -28,6 +28,7 @@
 }
 
 <ion-header [translucent]="true">
+  <app-announcement-banner />
   <ion-toolbar>
     @if (isMobile.matches) {
       <ion-buttons slot="start">
@@ -45,14 +46,9 @@
         </ion-button>
       </ion-buttons>
       <ion-buttons slot="secondary">
-        @for (page of pages; track page) {
-          <ion-button
-            [routerLink]="['/about', page]"
-            queryParamsHandling="preserve"
-            fill="solid"
-            color="light"
-            shape="round">
-            {{ 'landing.' + page + '.title' | transloco }}
+        @for (page of pages; track page.key) {
+          <ion-button [routerLink]="page.route" queryParamsHandling="preserve" fill="solid" color="light" shape="round">
+            {{ 'landing.' + page.key + '.title' | transloco }}
           </ion-button>
         }
       </ion-buttons>

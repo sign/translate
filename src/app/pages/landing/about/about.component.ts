@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {AboutHeroComponent} from './about-hero/about-hero.component';
 import {AboutBenefitsComponent} from './about-benefits/about-benefits.component';
 import {AboutCustomersComponent} from './about-customers/about-customers.component';
-import {AboutTeamComponent} from './about-team/about-team.component';
 import {AboutFaqComponent} from './about-faq/about-faq.component';
 import {AboutNumbersComponent} from './about-numbers/about-numbers.component';
 
@@ -15,7 +14,6 @@ import {AboutNumbersComponent} from './about-numbers/about-numbers.component';
     AboutNumbersComponent,
     AboutBenefitsComponent,
     AboutCustomersComponent,
-    AboutTeamComponent,
     AboutFaqComponent,
   ],
 })

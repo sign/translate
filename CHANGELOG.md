@@ -4,6 +4,13 @@ This file is used to list important changes made over time to `sign/translate`.
 
 ## Unreleased
 
+### 0.0.4: Nagish Migration (2025/10/22)
+
+- removed the bottom `ion-tab-bar` since the settings page does not provide useful functionality
+- send feedback, and inquiry are unified as mail to sign@nagish.com
+- changed text copy on the about page (removed team, changed FAQ)
+- modified headers, to include more page links
+
 ### 0.0.3
 
 #### Documentation

@@ -1,7 +1,15 @@
-<picture>
-  <!-- TODO: inline the logo SVGs for better performance -->
-  <img src="../../../assets/brand/logo.svg" alt="Logo" />
-</picture>
-@if (text) {
-  {{ text }}
-}
+<a href="/">
+  <picture>
+    <!-- TODO: inline the logo SVGs for better performance -->
+    <img src="../../../assets/brand/logo.svg" alt="Logo" />
+  </picture>
+  @if (text) {
+    {{ text }}
+  }
+</a>
+by
+<a href="https://nagish.com">
+  <picture class="nagish-logo">
+    <img src="../../../assets/brand/nagish.svg" alt="Nagish" />
+  </picture>
+</a>

@@ -32,10 +32,6 @@ export class AboutNumbersComponent {
       color: 'success',
     },
     {
-      title: '3x 1million+',
-      description: 'Our technology is being reviewed by three enterprises, each with over 1 million retail customers.',
-    },
-    {
       title: '+200 Languages',
       description:
         'Our translation solution currently partially supports 43 of the 200+ major sign languages to some extent, with exciting plans to expand further.',

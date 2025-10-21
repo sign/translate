@@ -23,6 +23,7 @@ import {arrowForward} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
 import {LogoComponent} from '../../components/logo/logo.component';
+import {AnnouncementBannerComponent} from '../../components/announcement-banner/announcement-banner.component';
 
 @Component({
   selector: 'app-landing',
@@ -49,13 +50,18 @@ import {LogoComponent} from '../../components/logo/logo.component';
     RouterOutlet,
     LandingFooterComponent,
     LogoComponent,
+    AnnouncementBannerComponent,
   ],
 })
 export class LandingComponent {
   private mediaMatcher = inject(MediaMatcher);
   isMobile = this.mediaMatcher.matchMedia('(max-width: 768px)');
 
-  pages: string[] = ['about', 'contribute'];
+  pages = [
+    {key: 'home', route: '/'},
+    {key: 'about', route: '/about'},
+    {key: 'contribute', route: '/about/contribute'},
+  ];
 
   constructor() {
     addIcons({arrowForward});

@@ -10,9 +10,22 @@
 }
 
 .cards-container {
+  ion-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ion-card-content {
+    flex-grow: 1;
+  }
+
   ion-card-title {
     display: flex;
     align-items: center;
     gap: 0.5em;
+  }
+
+  ion-button {
+    color: var(--ion-color-primary-accessible-text);
   }
 }

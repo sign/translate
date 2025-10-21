@@ -6,5 +6,5 @@ import {Component, Input} from '@angular/core';
   styleUrl: './logo.component.scss',
 })
 export class LogoComponent {
-  @Input() text?: string;
+  @Input() text?: string = ' ';
 }
