@@ -2,7 +2,7 @@ import {Component, inject, NgModule, OnInit} from '@angular/core';
 import {geoJSON, latLng, Map} from 'leaflet';
 import {HttpClient, provideHttpClient, withFetch} from '@angular/common/http';
 import {firstValueFrom} from 'rxjs';
-import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {LeafletModule} from '@bluehalo/ngx-leaflet';
 import {BaseComponent} from '../base/base.component';
 
 function logMax(arr: number[]) {

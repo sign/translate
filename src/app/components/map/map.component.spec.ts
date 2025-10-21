@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {MapComponent} from './map.component';
 import {provideHttpClient} from '@angular/common/http';
-import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import {LeafletModule} from '@bluehalo/ngx-leaflet';
 import {provideHttpClientTesting} from '@angular/common/http/testing';
 
 describe('MapComponent', () => {
