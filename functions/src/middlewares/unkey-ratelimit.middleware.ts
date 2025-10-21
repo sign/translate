@@ -27,7 +27,6 @@ export function unkeyRatelimit(namespace: string, limit: number, duration: Durat
       namespace,
       limit,
       duration,
-      async: true,
     });
 
     const ratelimitResponse = await rateLimit.limit(identifier);

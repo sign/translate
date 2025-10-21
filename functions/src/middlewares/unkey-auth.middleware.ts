@@ -1,12 +1,13 @@
-import {verifyKey} from '@unkey/api';
+import {Unkey} from '@unkey/api';
 import * as httpErrors from 'http-errors';
 import {NextFunction, Request, Response} from 'express';
-import {rateLimitHeaders} from './unkey-ratelimit.middleware';
-import {RatelimitResponse} from '@unkey/ratelimit';
+import {V2KeysVerifyKeyResponseBody} from '@unkey/api/dist/commonjs/models/components';
+import {defineString} from 'firebase-functions/params';
+
+const unkeyRootKey = defineString('UNKEY_ROOT_KEY');
+const unkey = new Unkey({rootKey: unkeyRootKey.value()});
 
 export async function unkeyAuth(req: Request, res: Response, next: NextFunction) {
-  const apiId = 'api_4LtAUnGvWjPZGJV9hQDoJtum53GK'; // Public API ID
-
   const authHeader = req.headers['authorization'];
   let key = authHeader?.toString().replace('Bearer ', '');
 
@@ -18,21 +19,20 @@ export async function unkeyAuth(req: Request, res: Response, next: NextFunction)
     throw new httpErrors.BadRequest('Missing/invalid API key');
   }
 
-  const {result, error} = await verifyKey({key, apiId});
-  if (error) {
+  let result!: V2KeysVerifyKeyResponseBody;
+  try {
+    result = await unkey.keys.verifyKey({key});
+  } catch (err) {
     // This may happen on network errors
+    console.log(err);
     throw new httpErrors.InternalServerError('Could not verify API key, please try again later');
   }
 
-  if (result?.ratelimit) {
-    rateLimitHeaders(res, result.ratelimit as RatelimitResponse);
-  }
-
-  if (!result.valid) {
+  if (!result.data.valid) {
     throw new httpErrors.Unauthorized('Invalid API key');
   }
 
-  if (!result.ownerId) {
+  if (!result?.data.identity?.id) {
     throw new httpErrors.Forbidden('API key does not have an owner. Please contact support.');
   }
 
