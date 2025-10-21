@@ -50,6 +50,10 @@ ion-button.menu-language-button {
   max-height: calc(100vh - 64px - 68px - 48px) !important;
 }
 
+::ng-deep .mat-mdc-tab-label-container {
+  border-width: 0;
+}
+
 .wrap-text {
   overflow: hidden;
   text-overflow: ellipsis;

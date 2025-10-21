@@ -99,10 +99,10 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
   }
 
   async translateFrame(image: ImageBitmap | ImageData, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
-    const uint8Array = await this.pix2pix.translate(image);
+    const uint8Array: Uint8ClampedArray = await this.pix2pix.translate(image);
     this.modelReady = true; // Stop loading after first model inference
 
-    const imageData = new ImageData(uint8Array, canvas.width, canvas.height);
+    const imageData = new ImageData(new Uint8ClampedArray(uint8Array), canvas.width, canvas.height);
     ctx.putImageData(imageData, 0, 0);
 
     const imageBitmap = await createImageBitmap(imageData);

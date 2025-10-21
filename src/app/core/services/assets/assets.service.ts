@@ -319,7 +319,7 @@ export class AssetsService {
       arrayIndex += chunk.length;
     }
 
-    return new Blob([array]);
+    return new Blob([array.slice()]);
   }
 
   async *getRemoteFile(path: string, progressCallback?: ProgressCallback) {
