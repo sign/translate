@@ -25,18 +25,11 @@ export class AboutNumbersComponent {
       color: 'warning',
     },
     {
-      title: '$33.7B',
-      description:
-        'The U.S. sign language translation market is worth $11B, with a global estimate of $33.7B across 30 developed nations.',
-      source: 'https://sign.mt/docs/docs/facts/market.html',
-      color: 'success',
-    },
-    {
       title: '+200 Languages',
       description:
         'Our translation solution currently partially supports 43 of the 200+ major sign languages to some extent, with exciting plans to expand further.',
       source: 'https://sign.mt/docs/docs/facts/population.html#deafness',
-      color: 'tertiary',
+      color: 'success',
     },
     {
       title: 'Reviews and Awards',
