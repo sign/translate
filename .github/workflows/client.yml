@@ -41,16 +41,16 @@ jobs:
       - name: Create privacy page
         run: bun run generate:privacy
 
-      #      - name: Lint code
-      #        run: bun run lint
-      #
-      #      - name: Test code
-      #        run: bun run test:ci
-      #
-      #      - name: Coveralls
-      #        uses: coverallsapp/github-action@master
-      #        with:
-      #          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lint code
+        run: bun run lint
+
+      - name: Test code
+        run: bun run test:ci
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build project
         run: bun run build

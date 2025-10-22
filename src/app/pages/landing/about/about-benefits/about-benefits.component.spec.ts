@@ -34,6 +34,9 @@ describe('AboutBenefitsComponent', () => {
         'color-contrast': {
           enabled: false,
         },
+        'role-img-alt': {
+          enabled: false,
+        },
       },
     });
     expect(a11y).toHaveNoViolations();

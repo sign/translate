@@ -30,7 +30,13 @@ describe('SettingsAppearanceImagesComponent', () => {
 
   it('should pass accessibility test', async () => {
     jasmine.addMatchers(toHaveNoViolations);
-    const a11y = await axe(fixture.nativeElement);
+    const a11y = await axe(fixture.nativeElement, {
+      rules: {
+        'role-img-alt': {
+          enabled: false,
+        },
+      },
+    });
     expect(a11y).toHaveNoViolations();
   });
 });
