@@ -12,12 +12,6 @@ export class MediaPipeLanguageDetectionService extends LanguageDetectionService 
 
   private detector: LanguageDetector;
 
-  constructor() {
-    const translationService = inject(TranslationService);
-
-    super(translationService);
-  }
-
   async init(): Promise<void> {
     if (this.detector) {
       return;

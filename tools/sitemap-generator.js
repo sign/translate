@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require('fs');
 
 // Get list of supported languages
-const baseDir = __dirname + `${path.sep}..${path.sep}`;
-const langsDir = `${baseDir}src${path.sep}assets${path.sep}i18n`;
+const baseDir = path.resolve(__dirname, '..');
+const langsDir = `${baseDir}${path.sep}src${path.sep}assets${path.sep}i18n`;
 const languages = [];
 for (const file of fs.readdirSync(langsDir)) {
   const [lang] = file.split('.');

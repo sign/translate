@@ -1,5 +1,6 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {TranslationService} from '../translate.service';
+import {Meta} from '@angular/platform-browser';
 
 const OBSOLETE_LANGUAGE_CODES = {
   iw: 'he',
@@ -10,7 +11,7 @@ const DEFAULT_SPOKEN_LANGUAGE = 'en';
   providedIn: 'root',
 })
 export abstract class LanguageDetectionService {
-  constructor(private translationService: TranslationService) {}
+  private translationService = inject(TranslationService);
 
   abstract init(): Promise<void>;
 
