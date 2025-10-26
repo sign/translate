@@ -80,6 +80,10 @@
   --ion-color-light-tint: #ededed;
 }
 
+.ios body {
+  --ion-toolbar-background: white;
+}
+
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
@@ -185,6 +189,7 @@
     --ion-color-step-950: #f2f2f2;
 
     --ion-item-background: #000000;
+    --ion-toolbar-background: black;
 
     --ion-card-background: #1c1c1d;
   }
