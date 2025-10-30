@@ -49,7 +49,7 @@
     "firebase-functions-test": "3.4.1",
     "firebase-tools": "14.22.0",
     "jest": "30.2.0",
-    "minimatch": "10.0.3",
+    "minimatch": "10.1.1",
     "mock-express-request": "0.2.2",
     "mock-express-response": "0.3.0",
     "ts-jest": "29.4.5",
