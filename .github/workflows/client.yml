@@ -52,6 +52,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Generate a cache busting version
+        run: node tools/generate-build-version.js
+
       - name: Build project
         run: bun run build
 
