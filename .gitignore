@@ -64,6 +64,7 @@ database-debug.log
 .env
 /venv
 .python-version
+__pycache__/
 
 src/assets/promotional/about/iphone/*.png
 src/assets/promotional/about/android/*.png
