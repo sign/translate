@@ -62,7 +62,8 @@ firestore-debug.log
 database-debug.log
 
 .env
-
+/venv
+.python-version
 
 src/assets/promotional/about/iphone/*.png
 src/assets/promotional/about/android/*.png
