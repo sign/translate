@@ -1,4 +1,12 @@
-import type {Output, VideoSampleSource, VideoSample, VideoCodec} from 'mediabunny';
+import {
+  Output,
+  Mp4OutputFormat,
+  BufferTarget,
+  VideoSampleSource,
+  VideoCodec,
+  VideoSample,
+  QUALITY_HIGH,
+} from 'mediabunny';
 
 export function getMediaSourceClass(): typeof MediaSource {
   if ('ManagedMediaSource' in window) {
@@ -22,7 +30,6 @@ export class PlayableVideoEncoder {
 
   container: 'webm' | 'mp4';
   codec: VideoCodec;
-  bitrate = 10_000_000; // 10Mbps max! (https://github.com/Vanilagy/mp4-muxer/issues/36)
 
   width: number;
   height: number;
@@ -65,7 +72,7 @@ export class PlayableVideoEncoder {
       contentType: `video/${this.container}; codecs="${this.codec}"`,
       width: this.width,
       height: this.height,
-      bitrate: this.bitrate,
+      bitrate: 10_000_000, // 10 Mbps
       framerate: this.fps,
     };
 
@@ -74,8 +81,6 @@ export class PlayableVideoEncoder {
   }
 
   async createMP4Output() {
-    const {Output, Mp4OutputFormat, BufferTarget, VideoSampleSource, QUALITY_HIGH} = await import('mediabunny');
-
     // Set the metadata
     this.container = 'mp4';
     this.codec = 'avc';
@@ -109,12 +114,26 @@ export class PlayableVideoEncoder {
     const timestamp = this.frameIndex / this.fps;
     const duration = 1 / this.fps;
 
-    const {VideoSample} = await import('mediabunny');
-    const sample = new VideoSample(image, {
+    // Resize image to even dimensions if needed (H264 requirement)
+    let resizedImage = image;
+    if (image.width !== this.width || image.height !== this.height) {
+      resizedImage = await createImageBitmap(image, {
+        resizeWidth: this.width,
+        resizeHeight: this.height,
+        resizeQuality: 'high',
+      });
+    }
+
+    const sample = new VideoSample(resizedImage, {
       timestamp,
       duration,
     });
     await this.bitmapSource.add(sample);
+
+    // Clean up resized image if we created a new one
+    if (resizedImage !== image) {
+      resizedImage.close();
+    }
 
     this.frameIndex++;
   }
