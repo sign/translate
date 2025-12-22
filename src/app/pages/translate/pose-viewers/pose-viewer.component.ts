@@ -77,9 +77,9 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     return pose.body.fps;
   }
 
-  async initVideoEncoder(canvas?: HTMLCanvasElement, image?: ImageBitmap) {
+  async initVideoEncoder(image: ImageBitmap) {
     const fps = await this.fps();
-    this.videoEncoder = new PlayableVideoEncoder(canvas || null, image || null, fps);
+    this.videoEncoder = new PlayableVideoEncoder(image, fps);
     await this.videoEncoder.init();
   }
 
@@ -154,10 +154,10 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     }
   }
 
-  async addCacheFrame(image: ImageBitmap, canvas?: HTMLCanvasElement): Promise<void> {
+  async addCacheFrame(image: ImageBitmap): Promise<void> {
     if (PlayableVideoEncoder.isSupported()) {
       if (!this.videoEncoder) {
-        await this.initVideoEncoder(canvas, image);
+        await this.initVideoEncoder(image);
       }
       await this.videoEncoder.addFrame(image);
     } else {
