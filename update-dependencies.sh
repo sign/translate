@@ -1,6 +1,6 @@
 # Update client dependencies
 bun x npm-check-updates --cacheClear -u --reject filesize,typescript,mermaid,@mediapipe/tasks-text
-npm install
+bun install
 
 # filesize: ngx-filesize 3 requires filesize >= 6.0.0 < 10.0.0 as a peer dependency
 # typescript: The Angular Compiler requires TypeScript >=5.2.0 and <5.3.0

@@ -6,14 +6,16 @@ import {errorMiddleware} from '../middlewares/error.middleware';
 import {FirebaseDatabase, Reference} from '@firebase/database-types';
 import {TextNormalizationModel} from './model';
 import {onRequest} from 'firebase-functions/v2/https';
-import {defineString} from 'firebase-functions/params';
+import {defineString, StringParam} from 'firebase-functions/params';
 import {appCheckVerification} from '../middlewares/appcheck.middleware';
-import type {StringParam} from 'firebase-functions/lib/params/types';
 import {optionsRequest} from '../middlewares/options.request';
 import {unkeyRatelimit} from '../middlewares/unkey-ratelimit.middleware';
 
 export class TextNormalizationEndpoint {
-  constructor(private database: FirebaseDatabase, private OpenAIApiKey: StringParam) {}
+  constructor(
+    private database: FirebaseDatabase,
+    private OpenAIApiKey: StringParam
+  ) {}
 
   private parseParameters(req: express.Request) {
     const lang = req.query.lang as string;

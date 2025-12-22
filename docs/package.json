@@ -10,7 +10,7 @@
   },
   "license": "CC BY 4.0",
   "dependencies": {
-    "mermaid": "11.12.1"
+    "mermaid": "11.12.2"
   },
   "devDependencies": {
     "markdown-it-footnote": "4.0.0",
