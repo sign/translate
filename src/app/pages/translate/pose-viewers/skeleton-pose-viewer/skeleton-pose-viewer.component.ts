@@ -41,9 +41,11 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
               // There are possibly redundant renders when video is paused or tab is out of focus
               return;
             }
-            const poseCanvas = pose.shadowRoot.querySelector('canvas');
+            const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
+            // For skeleton, we pass the canvas to use CanvasSource
+            // We still create imageBitmap for dimensions but won't use it for encoding
             const imageBitmap = await createImageBitmap(poseCanvas);
-            await this.addCacheFrame(imageBitmap);
+            await this.addCacheFrame(imageBitmap, poseCanvas);
             lastRendered = pose.currentTime;
           }),
           takeUntil(this.ngUnsubscribe)

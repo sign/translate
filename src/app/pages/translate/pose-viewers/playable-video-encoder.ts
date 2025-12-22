@@ -1,5 +1,4 @@
-import type {Output, EncodedVideoPacketSource} from 'mediabunny';
-import {EncodedPacket} from 'mediabunny';
+import type {Output, CanvasSource, VideoSampleSource, VideoSample, VideoCodec} from 'mediabunny';
 
 export function getMediaSourceClass(): typeof MediaSource {
   if ('ManagedMediaSource' in window) {
@@ -17,42 +16,40 @@ export function getMediaSourceClass(): typeof MediaSource {
   return null;
 }
 
+type EncoderMode = 'canvas' | 'bitmap';
+
 export class PlayableVideoEncoder {
   output: Output;
-  packetSource: EncodedVideoPacketSource;
-  videoEncoder: VideoEncoder;
-  frameBuffer: VideoFrame[] = []; // Buffer frames until the encoder is ready
+  canvasSource: CanvasSource;
+  bitmapSource: VideoSampleSource;
 
   container: 'webm' | 'mp4';
-  codec: string;
+  codec: VideoCodec;
   bitrate = 10_000_000; // 10Mbps max! (https://github.com/Vanilagy/mp4-muxer/issues/36)
-  alpha = true;
 
   width: number;
   height: number;
+  fps: number;
+  mode: EncoderMode;
+
+  frameIndex = 0;
 
   constructor(
-    private image: ImageBitmap,
-    private fps: number
-  ) {}
+    private canvas: HTMLCanvasElement | null,
+    private image: ImageBitmap | null,
+    fps: number
+  ) {
+    this.fps = fps;
+    this.mode = canvas ? 'canvas' : 'bitmap';
+  }
 
   static isSupported() {
     return 'VideoEncoder' in globalThis;
   }
 
   async init() {
-    // await this.createWebMMuxer();
-    // let playable = await this.isPlayable();
-    // if (!playable) {
-    //   // If WebM is not playable or undetermined, fall back to MP4
-    //   await this.createMP4Muxer();
-    // }
-    //
-    // await this.createVideoEncoder();
-
     // For maximum *sharing* compatibility, use MP4 by default
-    await this.createMP4Muxer();
-    await this.createVideoEncoder();
+    await this.createMP4Output();
   }
 
   async isPlayable() {
@@ -76,126 +73,110 @@ export class PlayableVideoEncoder {
       height: this.height,
       bitrate: this.bitrate,
       framerate: this.fps,
-      hasAlphaChannel: this.alpha,
     };
 
     const {supported} = await navigator.mediaCapabilities.decodingInfo({type: 'file', video: videoConfig});
     return supported;
   }
 
-  async createWebMMuxer() {
-    const {Output, WebMOutputFormat, BufferTarget, EncodedVideoPacketSource} = await import('mediabunny');
-
-    // Set the metadata
-    this.container = 'webm';
-    this.codec = 'vp09.00.10.08';
-    this.width = this.image.width;
-    this.height = this.image.height;
-
-    // Create the packet source
-    this.packetSource = new EncodedVideoPacketSource('vp9');
-
-    // Create the output
-    this.output = new Output({
-      format: new WebMOutputFormat(),
-      target: new BufferTarget(),
-    });
-
-    this.output.addVideoTrack(this.packetSource, {
-      frameRate: this.fps,
-    });
-  }
-
-  async createMP4Muxer() {
-    const {Output, Mp4OutputFormat, BufferTarget, EncodedVideoPacketSource} = await import('mediabunny');
+  async createMP4Output() {
+    const {Output, Mp4OutputFormat, BufferTarget, CanvasSource, VideoSampleSource, QUALITY_HIGH} =
+      await import('mediabunny');
 
     // Set the metadata
     this.container = 'mp4';
-    this.codec = 'avc1.42001f';
-    // H264 only supports even sized frames
-    this.width = this.image.width + (this.image.width % 2);
-    this.height = this.image.height + (this.image.height % 2);
+    this.codec = 'avc';
 
-    // Create the packet source
-    this.packetSource = new EncodedVideoPacketSource('avc');
+    if (this.mode === 'canvas') {
+      // H264 only supports even sized frames
+      const originalWidth = this.canvas.width;
+      const originalHeight = this.canvas.height;
+      this.width = originalWidth + (originalWidth % 2);
+      this.height = originalHeight + (originalHeight % 2);
+
+      // Note: We don't resize the canvas as it may be actively rendering
+      // CanvasSource will handle the size
+
+      // Create canvas source
+      this.canvasSource = new CanvasSource(this.canvas, {
+        codec: this.codec,
+        bitrate: QUALITY_HIGH,
+      });
+    } else {
+      // H264 only supports even sized frames
+      this.width = this.image.width + (this.image.width % 2);
+      this.height = this.image.height + (this.image.height % 2);
+
+      // Create bitmap source
+      this.bitmapSource = new VideoSampleSource({
+        codec: this.codec,
+        bitrate: QUALITY_HIGH,
+      });
+    }
 
     // Create the output
     this.output = new Output({
       format: new Mp4OutputFormat({
-        fastStart: 'in-memory', // This can be optimized using 'reserve'
+        fastStart: 'in-memory',
       }),
       target: new BufferTarget(),
     });
 
-    this.output.addVideoTrack(this.packetSource);
-  }
-
-  async createVideoEncoder() {
-    this.videoEncoder = new VideoEncoder({
-      output: (chunk: EncodedVideoChunk, meta?: EncodedVideoChunkMetadata) => {
-        const packet = EncodedPacket.fromEncodedChunk(chunk);
-        this.packetSource.add(packet, meta);
-      },
-      error: (e: Error) => console.error(e),
-    });
-    const config = {
-      codec: this.codec,
-      width: this.width,
-      height: this.height,
-      bitrate: this.bitrate,
-      framerate: this.fps,
-      // TODO: this is not yet supported in Chrome https://chromium.googlesource.com/chromium/src/+/master/third_party/blink/renderer/modules/webcodecs/video_encoder.cc#290
-      // alpha: this.alpha ? 'keep' as AlphaOption : 'discard'
-    };
-    this.videoEncoder.configure(config);
+    // Add video track
+    if (this.mode === 'canvas') {
+      this.output.addVideoTrack(this.canvasSource);
+    } else {
+      this.output.addVideoTrack(this.bitmapSource);
+    }
 
     // Start the output
     await this.output.start();
-
-    // Flush the frame buffer
-    for (const frame of this.frameBuffer) {
-      this.encodeFrame(frame);
-    }
-    this.frameBuffer = [];
   }
 
-  addFrame(index: number, image: ImageBitmap) {
-    const ms = 1_000_000; // 1µs
-    const frame = new VideoFrame(image, {
-      timestamp: (ms * index) / this.fps,
-      duration: ms / this.fps,
-    });
-    if (this.videoEncoder) {
-      this.encodeFrame(frame);
+  async addFrame(image?: ImageBitmap) {
+    const timestamp = this.frameIndex / this.fps;
+    const duration = 1 / this.fps;
+
+    if (this.mode === 'canvas') {
+      // For canvas mode, capture the current canvas state
+      await this.canvasSource.add(timestamp, duration);
     } else {
-      this.frameBuffer.push(frame);
+      // For bitmap mode, create a VideoSample from the ImageBitmap
+      if (!image) {
+        throw new Error('ImageBitmap required for bitmap mode');
+      }
+      const {VideoSample} = await import('mediabunny');
+      const sample = new VideoSample(image, {
+        timestamp,
+        duration,
+      });
+      await this.bitmapSource.add(sample);
     }
-  }
 
-  encodeFrame(frame: VideoFrame) {
-    this.videoEncoder.encode(frame);
-    frame.close();
+    this.frameIndex++;
   }
 
   async finalize() {
-    await this.videoEncoder.flush();
-    this.packetSource.close();
+    if (this.mode === 'canvas') {
+      this.canvasSource.close();
+    } else {
+      this.bitmapSource.close();
+    }
+
     await this.output.finalize();
-    this.videoEncoder.close();
-    delete this.videoEncoder;
 
     const buffer = (this.output.target as any).buffer as ArrayBuffer;
     return new Blob([buffer], {type: `video/${this.container}`});
   }
 
   close() {
-    if (this.videoEncoder) {
-      this.videoEncoder.close();
-      delete this.videoEncoder;
+    if (this.canvasSource) {
+      this.canvasSource.close();
+      delete this.canvasSource;
     }
-    if (this.packetSource) {
-      this.packetSource.close();
-      delete this.packetSource;
+    if (this.bitmapSource) {
+      this.bitmapSource.close();
+      delete this.bitmapSource;
     }
     if (this.output) {
       delete this.output;
