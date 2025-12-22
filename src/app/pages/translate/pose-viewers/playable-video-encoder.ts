@@ -41,13 +41,17 @@ export class PlayableVideoEncoder {
   }
 
   async init() {
-    await this.createWebMMuxer();
-    let playable = await this.isPlayable();
-    if (!playable) {
-      // If WebM is not playable or undetermined, fall back to MP4
-      await this.createMP4Muxer();
-    }
+    // await this.createWebMMuxer();
+    // let playable = await this.isPlayable();
+    // if (!playable) {
+    //   // If WebM is not playable or undetermined, fall back to MP4
+    //   await this.createMP4Muxer();
+    // }
+    //
+    // await this.createVideoEncoder();
 
+    // For maximum *sharing* compatibility, use MP4 by default
+    await this.createMP4Muxer();
     await this.createVideoEncoder();
   }
 
@@ -118,7 +122,7 @@ export class PlayableVideoEncoder {
     // Create the output
     this.output = new Output({
       format: new Mp4OutputFormat({
-        fastStart: 'in-memory',
+        fastStart: 'in-memory', // This can be optimized using 'reserve'
       }),
       target: new BufferTarget(),
     });
