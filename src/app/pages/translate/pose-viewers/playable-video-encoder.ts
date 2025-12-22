@@ -1,12 +1,4 @@
-import {
-  Output,
-  Mp4OutputFormat,
-  BufferTarget,
-  VideoSampleSource,
-  VideoCodec,
-  VideoSample,
-  QUALITY_HIGH,
-} from 'mediabunny';
+import {Output, Mp4OutputFormat, BufferTarget, VideoSampleSource, VideoSample, QUALITY_HIGH} from 'mediabunny';
 
 export function getMediaSourceClass(): typeof MediaSource {
   if ('ManagedMediaSource' in window) {
@@ -28,9 +20,6 @@ export class PlayableVideoEncoder {
   output: Output;
   bitmapSource: VideoSampleSource;
 
-  container: 'webm' | 'mp4';
-  codec: VideoCodec;
-
   width: number;
   height: number;
   fps: number;
@@ -49,49 +38,13 @@ export class PlayableVideoEncoder {
   }
 
   async init() {
-    // For maximum *sharing* compatibility, use MP4 by default
-    await this.createMP4Output();
-  }
-
-  async isPlayable() {
-    if (!('navigator' in globalThis)) {
-      return false;
-    }
-
-    if (!('mediaCapabilities' in navigator)) {
-      const mediaSourceClass = getMediaSourceClass();
-      if (!mediaSourceClass) {
-        return false;
-      }
-
-      const mimeType = `video/${this.container}; codecs="${this.codec}"`;
-      return mediaSourceClass.isTypeSupported(mimeType);
-    }
-
-    const videoConfig = {
-      contentType: `video/${this.container}; codecs="${this.codec}"`,
-      width: this.width,
-      height: this.height,
-      bitrate: 10_000_000, // 10 Mbps
-      framerate: this.fps,
-    };
-
-    const {supported} = await navigator.mediaCapabilities.decodingInfo({type: 'file', video: videoConfig});
-    return supported;
-  }
-
-  async createMP4Output() {
-    // Set the metadata
-    this.container = 'mp4';
-    this.codec = 'avc';
-
     // H264 only supports even sized frames
     this.width = this.image.width + (this.image.width % 2);
     this.height = this.image.height + (this.image.height % 2);
 
-    // Create bitmap source
+    // Create bitmap source (H264/AVC codec for maximum compatibility)
     this.bitmapSource = new VideoSampleSource({
-      codec: this.codec,
+      codec: 'avc',
       bitrate: QUALITY_HIGH,
     });
 
@@ -143,7 +96,7 @@ export class PlayableVideoEncoder {
     await this.output.finalize();
 
     const buffer = (this.output.target as any).buffer as ArrayBuffer;
-    return new Blob([buffer], {type: `video/${this.container}`});
+    return new Blob([buffer], {type: 'video/mp4'});
   }
 
   close() {
