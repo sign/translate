@@ -1,4 +1,5 @@
 @use '../../../../../theme/breakpoints' as breakpoints;
+@use '../../../../../theme/md3-tokens' as md3;
 
 :host {
   background-color: white;
@@ -23,4 +24,59 @@ app-skeleton-pose-viewer {
 
 video {
   display: block;
+}
+
+// Action buttons with gradient background and animated glow
+.actions-row {
+  .action-button {
+    --border-radius: 50%;
+    --box-shadow: #{md3.$md3-elevation-1};
+    --background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-primary-shade) 100%);
+    aspect-ratio: 1;
+    position: relative;
+    overflow: visible;
+    transition:
+      transform md3.$md3-duration-short3 md3.$md3-easing-emphasized,
+      filter md3.$md3-duration-short3 md3.$md3-easing-standard;
+
+    // Blurred gradient halo effect
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.6) 0%,
+        rgba(var(--ion-color-secondary-rgb, 156, 39, 176), 0.4) 100%
+      );
+      opacity: 0;
+      z-index: -1;
+      transition: opacity md3.$md3-duration-short3 md3.$md3-easing-standard;
+      filter: blur(8px);
+    }
+
+    &:hover:not([disabled]) {
+      --box-shadow: #{md3.$md3-elevation-3};
+      transform: scale(1.08);
+      filter: brightness(1.1);
+
+      &::before {
+        opacity: 1;
+        animation: glowPulse 2s ease-in-out infinite;
+      }
+    }
+
+    &:active:not([disabled]) {
+      transform: scale(0.95);
+    }
+
+    ion-icon {
+      font-size: 1.5em;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    }
+  }
 }

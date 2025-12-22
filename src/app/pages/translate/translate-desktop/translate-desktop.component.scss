@@ -1,9 +1,17 @@
 @use '../../../../theme/breakpoints' as breakpoints;
+@use '../../../../theme/md3-tokens' as md3;
+@use '../../../../theme/animations' as anim;
 
+// Header background with gradient fade
 @media #{breakpoints.$breakpoint-gt-xs} {
   .container::before {
-    background-color: var(--app-tinted-background-color);
-    border-bottom: 1px solid var(--app-divider-color);
+    background: linear-gradient(
+      135deg,
+      var(--app-tinted-background-color) 0%,
+      rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.08) 50%,
+      transparent 100%
+    );
+    border-bottom: 1px solid rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.2);
     content: '';
     display: block;
     height: 106px;
@@ -11,23 +19,26 @@
     position: absolute;
     z-index: -1;
     left: 0;
+    @include anim.animate-fade-in(md3.$md3-duration-long2);
   }
 }
 
+// Container
 .container {
-  transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+  @include anim.animate-fade-in(md3.$md3-duration-medium2);
 
   @media #{breakpoints.$breakpoint-gt-md} {
     padding: 48px;
     padding-top: 0;
   }
 
+  // Input mode button group
   #input-mode-group {
     height: 68px;
     font-family: 'Google Sans', Roboto, Arial, sans-serif;
     align-items: center;
     display: flex;
-    gap: 0.5em;
+    gap: 0.75em;
 
     @media #{breakpoints.$breakpoint-lt-lg} {
       padding: 0 12px;
@@ -38,28 +49,96 @@
     }
   }
 
+  // Translation card with Material Design 3 styling
   #translation-card {
-    background-color: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     width: 100%;
     height: 100%;
-    transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
+    box-shadow:
+      md3.$md3-elevation-1,
+      0 0 0 1px rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.1);
+    transition:
+      box-shadow md3.$md3-duration-medium2 md3.$md3-easing-standard,
+      transform md3.$md3-duration-medium2 md3.$md3-easing-standard;
+    @include anim.animate-scale-in(md3.$md3-duration-medium2, 0.1s);
+    position: relative;
+    overflow: hidden;
+
+    // Animated top gradient bar
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.9) 0%,
+        rgba(var(--ion-color-secondary-rgb, 156, 39, 176), 0.7) 25%,
+        rgba(var(--ion-color-tertiary-rgb, 255, 193, 7), 0.9) 50%,
+        rgba(var(--ion-color-secondary-rgb, 156, 39, 176), 0.7) 75%,
+        rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.9) 100%
+      );
+      background-size: 200% 100%;
+      animation: gradientShift 3s ease-in-out infinite;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.3);
+    }
+
+    // Radial gradient glow effect on hover
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(
+        circle,
+        rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.15) 0%,
+        rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.05) 30%,
+        transparent 70%
+      );
+      opacity: 0;
+      transition: opacity md3.$md3-duration-medium4 md3.$md3-easing-standard;
+      pointer-events: none;
+    }
 
     @media (prefers-color-scheme: dark) {
-      background-color: #101010;
+      background: linear-gradient(135deg, #1c1b1f 0%, #2d2c31 100%);
     }
 
     @media #{breakpoints.$breakpoint-gt-xs} {
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
+      box-shadow:
+        md3.$md3-elevation-2,
+        0 0 0 1px rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.15);
+
+      &:hover {
+        box-shadow:
+          md3.$md3-elevation-3,
+          0 0 24px rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.3);
+        transform: translateY(-4px);
+
+        &::after {
+          opacity: 1;
+        }
+      }
     }
 
     @media #{breakpoints.$breakpoint-gt-md} {
-      border-radius: 8px;
-      overflow: hidden;
+      border-radius: md3.$md3-radius-xl;
     }
 
     app-language-selectors {
       border-bottom: 1px solid var(--app-divider-color);
+      position: relative;
+      z-index: 1;
+    }
+
+    #content {
+      position: relative;
+      z-index: 1;
     }
   }
 }
@@ -73,13 +152,57 @@ ntkme-github-button {
   font-family: monospace;
 }
 
+// Privacy disclaimer with gradient background
 .disclaimer {
-  font-size: 14px;
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
   text-align: end;
-  width: 100%;
+  margin-left: auto;
+  max-width: max-content;
+  padding: 10px 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.08) 0%,
+    rgba(var(--ion-color-secondary-rgb, 156, 39, 176), 0.05) 100%
+  );
+  border-radius: md3.$md3-radius;
+  border: 1px solid rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.15);
+  transition: all md3.$md3-duration-short4 md3.$md3-easing-emphasized;
 
-  a {
-    color: unset;
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.12) 0%,
+      rgba(var(--ion-color-secondary-rgb, 156, 39, 176), 0.08) 100%
+    );
+    border-color: rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.25);
+  }
+
+  &-icon {
+    font-size: 18px;
+    color: rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.8);
+    flex-shrink: 0;
+  }
+
+  &-text {
+    color: rgba(0, 0, 0, 0.7);
+
+    @media (prefers-color-scheme: dark) {
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  &-link {
+    color: var(--ion-color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity md3.$md3-duration-short4 md3.$md3-easing-standard;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
   }
 }
