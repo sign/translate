@@ -159,7 +159,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
       if (!this.videoEncoder) {
         await this.initVideoEncoder(image);
       }
-      this.videoEncoder.addFrame(this.frameIndex, image);
+      await this.videoEncoder.addFrame(image);
     } else {
       this.cache.push(image);
     }

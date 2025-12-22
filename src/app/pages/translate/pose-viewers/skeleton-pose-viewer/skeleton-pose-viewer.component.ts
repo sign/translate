@@ -41,7 +41,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
               // There are possibly redundant renders when video is paused or tab is out of focus
               return;
             }
-            const poseCanvas = pose.shadowRoot.querySelector('canvas');
+            const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
             const imageBitmap = await createImageBitmap(poseCanvas);
             await this.addCacheFrame(imageBitmap);
             lastRendered = pose.currentTime;
