@@ -1,0 +1,62 @@
+// Material 3 Design Tokens
+// Based on Material Design 3 specifications
+// https://m3.material.io/
+
+// Elevation System
+// Material 3 uses layered shadows for depth perception
+$md3-elevation-0: none;
+$md3-elevation-1:
+  0 1px 2px 0 rgba(0, 0, 0, 0.3),
+  0 1px 3px 1px rgba(0, 0, 0, 0.15);
+$md3-elevation-2:
+  0 1px 2px 0 rgba(0, 0, 0, 0.3),
+  0 2px 6px 2px rgba(0, 0, 0, 0.15);
+$md3-elevation-3:
+  0 1px 3px 0 rgba(0, 0, 0, 0.3),
+  0 4px 8px 3px rgba(0, 0, 0, 0.15);
+$md3-elevation-4:
+  0 2px 3px 0 rgba(0, 0, 0, 0.3),
+  0 6px 10px 4px rgba(0, 0, 0, 0.15);
+$md3-elevation-5:
+  0 4px 4px 0 rgba(0, 0, 0, 0.3),
+  0 8px 12px 6px rgba(0, 0, 0, 0.15);
+
+// Border Radius
+// Material 3 uses larger, more pronounced corner radii
+$md3-radius-none: 0;
+$md3-radius-xs: 4px;
+$md3-radius-sm: 8px;
+$md3-radius-md: 12px;
+$md3-radius: 16px;
+$md3-radius-lg: 20px;
+$md3-radius-xl: 24px;
+$md3-radius-2xl: 28px;
+$md3-radius-full: 9999px;
+
+// Motion & Easing
+// Material 3 emphasizes natural, expressive motion
+$md3-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+$md3-easing-emphasized: cubic-bezier(0.05, 0.7, 0.1, 1);
+$md3-easing-decelerated: cubic-bezier(0, 0, 0, 1);
+$md3-easing-accelerated: cubic-bezier(0.3, 0, 1, 1);
+
+// Duration
+$md3-duration-short1: 50ms;
+$md3-duration-short2: 100ms;
+$md3-duration-short3: 150ms;
+$md3-duration-short4: 200ms;
+$md3-duration-medium1: 250ms;
+$md3-duration-medium2: 300ms;
+$md3-duration-medium3: 350ms;
+$md3-duration-medium4: 400ms;
+$md3-duration-long1: 450ms;
+$md3-duration-long2: 500ms;
+$md3-duration-long3: 550ms;
+$md3-duration-long4: 600ms;
+
+// Surface Tint Opacity
+// Used for state layers and surface tinting
+$md3-tint-hover: 0.08;
+$md3-tint-focus: 0.12;
+$md3-tint-pressed: 0.12;
+$md3-tint-dragged: 0.16;

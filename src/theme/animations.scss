@@ -1,0 +1,163 @@
+@use './md3-tokens' as md3;
+
+// Material 3 Animations
+// Reusable animation keyframes following Material Design 3 motion guidelines
+
+// Fade Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// Slide Animations
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Scale Animations
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+// Combined Animations
+@keyframes buttonEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Gradient shift animation for animated gradient bars
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Glow pulse animation for button hover effects
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(12px);
+  }
+}
+
+// Mixins for easy application
+@mixin animate-fade-in($duration: md3.$md3-duration-medium2, $delay: 0s) {
+  animation: fadeIn $duration md3.$md3-easing-standard $delay both;
+}
+
+@mixin animate-slide-down($duration: md3.$md3-duration-medium4, $delay: 0s) {
+  animation: slideDown $duration md3.$md3-easing-emphasized $delay both;
+}
+
+@mixin animate-slide-up($duration: md3.$md3-duration-medium4, $delay: 0s) {
+  animation: slideUp $duration md3.$md3-easing-emphasized $delay both;
+}
+
+@mixin animate-scale-in($duration: md3.$md3-duration-medium2, $delay: 0s) {
+  animation: scaleIn $duration md3.$md3-easing-emphasized $delay both;
+}
+
+@mixin animate-button-enter($duration: md3.$md3-duration-medium4, $delay: 0s) {
+  animation: buttonEnter $duration md3.$md3-easing-emphasized $delay both;
+}
+
+// Staggered children animation
+@mixin stagger-children($count: 5, $delay-increment: 0.05s, $start-delay: 0s) {
+  > * {
+    animation: fadeIn md3.$md3-duration-medium2 md3.$md3-easing-standard both;
+
+    @for $i from 1 through $count {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$start-delay + ($delay-increment * $i)};
+      }
+    }
+  }
+}

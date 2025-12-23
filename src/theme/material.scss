@@ -58,3 +58,7 @@ $app-dark-theme: mat.m2-define-dark-theme(
 mat-tab-group {
   --mat-tab-header-divider-height: 0;
 }
+
+.mat-mdc-tab {
+  --mat-tab-label-text-font: var(--ion-font-family);
+}

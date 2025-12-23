@@ -2,7 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
-import {IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonTitle, IonToolbar} from '@ionic/angular/standalone';
 import {TranslateInputButtonComponent} from '../input/button/button.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
 import {SendFeedbackComponent} from '../send-feedback/send-feedback.component';
@@ -12,7 +12,7 @@ import {SpokenToSignedComponent} from '../spoken-to-signed/spoken-to-signed.comp
 import {SignedToSpokenComponent} from '../signed-to-spoken/signed-to-spoken.component';
 import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component';
 import {addIcons} from 'ionicons';
-import {cloudUpload, language, videocam} from 'ionicons/icons';
+import {cloudUpload, informationCircleOutline, language, videocam} from 'ionicons/icons';
 import {RouterLink} from '@angular/router';
 import {LogoComponent} from '../../../components/logo/logo.component';
 import {AnnouncementBannerComponent} from '../../../components/announcement-banner/announcement-banner.component';
@@ -28,6 +28,7 @@ import {LandingFooterComponent} from '../../landing/landing-footer/landing-foote
     IonButtons,
     IonContent,
     IonTitle,
+    IonIcon,
     TranslateInputButtonComponent,
     LanguageSelectorsComponent,
     SendFeedbackComponent,
@@ -56,7 +57,7 @@ export class TranslateDesktopComponent extends BaseComponent implements OnInit {
   constructor() {
     super();
 
-    addIcons({language, videocam, cloudUpload});
+    addIcons({language, videocam, cloudUpload, informationCircleOutline});
   }
 
   ngOnInit(): void {

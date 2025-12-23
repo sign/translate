@@ -26,10 +26,10 @@
   <div class="actions-row">
     @if (videoUrl) {
       <ion-button
-        class="circle-icon"
-        fill="clear"
+        class="action-button"
+        fill="solid"
         shape="round"
-        color="dark"
+        color="primary"
         (click)="downloadTranslation()"
         [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
         [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
@@ -38,10 +38,10 @@
       </ion-button>
       @if (isSharingSupported) {
         <ion-button
-          class="circle-icon"
-          fill="clear"
+          class="action-button"
+          fill="solid"
           shape="round"
-          color="dark"
+          color="primary"
           (click)="shareTranslation()"
           [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
           [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
@@ -50,8 +50,8 @@
         </ion-button>
       }
     } @else {
-      <ion-button [disabled]="true" class="circle-icon" fill="clear" shape="round">
-        <ion-spinner name="crescent" color="dark"></ion-spinner>
+      <ion-button [disabled]="true" class="action-button" fill="solid" shape="round">
+        <ion-spinner name="crescent"></ion-spinner>
       </ion-button>
     }
   </div>
