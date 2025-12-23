@@ -5,10 +5,6 @@
   overflow: hidden;
 }
 
-mat-tab-group {
-  display: inline-block;
-}
-
 /* Make language expansion menu show the correct icon */
 ion-button.menu-icon-button {
   height: 100%;
@@ -33,7 +29,7 @@ ion-button.menu-language-button {
 
 @media #{breakpoints.$breakpoint-lt-md} {
   ion-button.menu-icon-button,
-  mat-tab-group {
+  ion-segment.language-segment {
     display: none;
   }
   ion-button.menu-language-button {
@@ -41,17 +37,31 @@ ion-button.menu-language-button {
   }
 }
 
-:host ::ng-deep div[role='tab'] {
-  font-weight: 400;
-  padding: 0 16px;
+/* Segment styling - auto width based on content */
+ion-segment.language-segment {
+  width: fit-content;
+  min-width: auto;
+  flex: 0;
+
+  ion-segment-button {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    min-width: auto;
+    width: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    font-weight: 400;
+    text-transform: none;
+
+    // Dark mode text color for active/checked button
+    @media (prefers-color-scheme: dark) {
+      --color-checked: var(--ion-color-primary-accessible-text);
+    }
+  }
 }
 
 ::ng-deep .language-selector-menu {
   max-height: calc(100vh - 64px - 68px - 48px) !important;
-}
-
-::ng-deep .mat-mdc-tab-label-container {
-  border-width: 0 !important;
 }
 
 .wrap-text {

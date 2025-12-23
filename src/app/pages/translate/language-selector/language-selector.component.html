@@ -1,30 +1,27 @@
 <ng-container *transloco="let t; read: 'translate.language-selector'">
-  <mat-tab-group
-    (selectedIndexChange)="selectLanguageIndex($event)"
-    [(selectedIndex)]="selectedIndex"
-    [disablePagination]="true">
+  <ion-segment (ionChange)="onSegmentChange($event)" [value]="selectedIndex.toString()" class="language-segment">
     @if (hasLanguageDetection) {
       @if (detectedLanguage && !language) {
-        <mat-tab>
-          <ng-template mat-tab-label>
-            {{ t('detected', {lang: langNames[detectedLanguage]}) }}
-          </ng-template>
-        </mat-tab>
+        <ion-segment-button [value]="'0'">
+          <ion-label>{{ t('detected', {lang: langNames[detectedLanguage]}) }}</ion-label>
+        </ion-segment-button>
       } @else {
-        <mat-tab [label]="t('detect')"></mat-tab>
+        <ion-segment-button [value]="'0'">
+          <ion-label>{{ t('detect') }}</ion-label>
+        </ion-segment-button>
       }
     }
-    @for (lang of topLanguages; track lang) {
-      <mat-tab (select)="selectLanguage(lang)">
-        <ng-template mat-tab-label>
+    @for (lang of topLanguages; track lang; let i = $index) {
+      <ion-segment-button [value]="(i + (hasLanguageDetection ? 1 : 0)).toString()">
+        <ion-label>
           @if (flags) {
             <app-flag-icon [country]="langCountries[lang]" [squared]="true" />
           }
           {{ langNames[lang] }}
-        </ng-template>
-      </mat-tab>
+        </ion-label>
+      </ion-segment-button>
     }
-  </mat-tab-group>
+  </ion-segment>
 
   <!-- Language button for small screens -->
   @if (hasLanguageDetection && detectedLanguage && !language) {

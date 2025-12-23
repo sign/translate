@@ -5,8 +5,7 @@ import {TranslocoDirective, TranslocoService} from '@jsverse/transloco';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IANASignedLanguages} from '../../../core/helpers/iana/languages';
-import {MatTabsModule} from '@angular/material/tabs';
-import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {IonButton, IonIcon, IonLabel, IonSegment, IonSegmentButton} from '@ionic/angular/standalone';
 import {MatMenuModule} from '@angular/material/menu';
 import {FlagIconComponent} from '../../../components/flag-icon/flag-icon.component';
 import {addIcons} from 'ionicons';
@@ -19,7 +18,17 @@ const IntlTypeMap: {[key: string]: Intl.DisplayNamesType} = {languages: 'languag
   selector: 'app-language-selector',
   templateUrl: './language-selector.component.html',
   styleUrls: ['./language-selector.component.scss'],
-  imports: [FlagIconComponent, MatMenuModule, MatTooltipModule, TranslocoDirective, MatTabsModule, IonButton, IonIcon],
+  imports: [
+    FlagIconComponent,
+    MatMenuModule,
+    MatTooltipModule,
+    TranslocoDirective,
+    IonButton,
+    IonIcon,
+    IonSegment,
+    IonSegmentButton,
+    IonLabel,
+  ],
 })
 export class LanguageSelectorComponent extends BaseComponent implements OnInit, OnChanges {
   private store = inject(Store);
@@ -147,5 +156,10 @@ export class LanguageSelectorComponent extends BaseComponent implements OnInit, 
     } else {
       this.selectLanguage(this.topLanguages[index - Number(this.hasLanguageDetection)]);
     }
+  }
+
+  onSegmentChange(event: CustomEvent): void {
+    const index = parseInt(event.detail.value, 10);
+    this.selectLanguageIndex(index);
   }
 }
