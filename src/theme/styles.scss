@@ -46,6 +46,13 @@ body {
   }
 }
 
+// Global ion-content layout for sticky footer
+ion-content::part(scroll) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .actions-row {
   position: absolute;
   margin: 14px;

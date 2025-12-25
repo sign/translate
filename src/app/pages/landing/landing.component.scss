@@ -1,6 +1,12 @@
 @use '../../../theme/breakpoints' as breakpoints;
 
 :host ::ng-deep {
+  router-outlet + * {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
   .cards-container {
     display: flex;
     @media #{breakpoints.$breakpoint-lt-md} {

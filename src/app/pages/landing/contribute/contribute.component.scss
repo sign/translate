@@ -2,7 +2,13 @@
 
 :host {
   padding: 34px 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.container {
+  flex: 1;
 }
 
 #contribute-header {

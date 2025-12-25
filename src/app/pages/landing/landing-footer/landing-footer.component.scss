@@ -3,14 +3,14 @@
 footer {
   background-color: #141518;
   color: #ffffff;
-  padding: 40px;
+  padding: 20px 40px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 1fr;
-  gap: 32px;
+  justify-content: space-between;
   grid-template-areas: 'brand legal social';
 
   @media #{breakpoints.$breakpoint-lt-sm} {
@@ -37,9 +37,11 @@ footer {
 ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 
   li {
-    margin: 12px 0;
     color: #ccc;
   }
 }

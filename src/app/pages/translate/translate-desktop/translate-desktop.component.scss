@@ -2,6 +2,10 @@
 @use '../../../../theme/md3-tokens' as md3;
 @use '../../../../theme/animations' as anim;
 
+.container {
+  flex: 1;
+}
+
 // Header background with gradient fade
 @media #{breakpoints.$breakpoint-gt-xs} {
   .container::before {
@@ -26,10 +30,17 @@
 // Container
 .container {
   @include anim.animate-fade-in(md3.$md3-duration-medium2);
+  display: flex;
+  flex-direction: column;
 
   @media #{breakpoints.$breakpoint-gt-md} {
     padding: 48px;
     padding-top: 0;
+    padding-bottom: 16px;
+  }
+
+  app-drop-pose-file {
+    flex: 0 0 auto;
   }
 
   // Input mode button group
