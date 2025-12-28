@@ -5,18 +5,14 @@ import {BaseComponent} from '../../../components/base/base.component';
 import {IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/angular/standalone';
 import {TranslateInputButtonComponent} from '../input/button/button.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
-import {SendFeedbackComponent} from '../send-feedback/send-feedback.component';
 import {TranslocoPipe} from '@jsverse/transloco';
 import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
-import {SpokenToSignedComponent} from '../spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from '../signed-to-spoken/signed-to-spoken.component';
 import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component';
 import {addIcons} from 'ionicons';
 import {cloudUpload, language, videocam} from 'ionicons/icons';
 import {RouterLink} from '@angular/router';
-import {LogoComponent} from '../../../components/logo/logo.component';
-import {AnnouncementBannerComponent} from '../../../components/announcement-banner/announcement-banner.component';
-import {LandingFooterComponent} from '../../landing/landing-footer/landing-footer.component';
+import {StartCamera} from '../../../core/modules/ngxs/store/video/video.actions';
 
 @Component({
   selector: 'app-translate-desktop',
@@ -30,16 +26,11 @@ import {LandingFooterComponent} from '../../landing/landing-footer/landing-foote
     IonTitle,
     TranslateInputButtonComponent,
     LanguageSelectorsComponent,
-    SendFeedbackComponent,
     TranslocoPipe,
-    SpokenToSignedComponent,
     SignedToSpokenComponent,
     DropPoseFileComponent,
     IonButton,
     RouterLink,
-    LogoComponent,
-    AnnouncementBannerComponent,
-    LandingFooterComponent,
   ],
 })
 export class TranslateDesktopComponent extends BaseComponent implements OnInit {
@@ -66,5 +57,8 @@ export class TranslateDesktopComponent extends BaseComponent implements OnInit {
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+
+    // Start the camera automatically
+    this.store.dispatch(StartCamera);
   }
 }

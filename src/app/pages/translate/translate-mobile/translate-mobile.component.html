@@ -5,18 +5,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  @if (spokenToSigned) {
-    <app-signed-language-output />
-  } @else {
-    <app-video [displayControls]="false" [displayFps]="false" />
-  }
+  <app-video [displayControls]="false" [displayFps]="false" />
 </ion-content>
 
 <!-- Footer with input and submit button -->
-<ion-footer [class.signed-to-spoken]="!spokenToSigned">
-  @if (spokenToSigned) {
-    <app-spoken-language-input [isMobile]="true" />
-  } @else {
-    <app-signed-language-input />
-  }
+<ion-footer class="signed-to-spoken">
+  <app-signed-language-input />
 </ion-footer>

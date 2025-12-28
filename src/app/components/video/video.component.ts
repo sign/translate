@@ -18,13 +18,12 @@ import {addIcons} from 'ionicons';
 import {playCircleOutline} from 'ionicons/icons';
 import {AsyncPipe} from '@angular/common';
 import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
-import {AnimationModule} from '../animation/animation.module';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.scss'],
-  imports: [AnimationModule, VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
+  imports: [VideoControlsComponent, IonIcon, AsyncPipe, TranslocoPipe, TranslocoDirective],
 })
 export class VideoComponent extends BaseComponent implements AfterViewInit {
   private store = inject(Store);

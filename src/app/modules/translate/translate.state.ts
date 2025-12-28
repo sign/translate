@@ -8,10 +8,8 @@ import {
   DownloadSignedLanguageVideo,
   FlipTranslationDirection,
   SetInputMode,
-  SetSignedLanguage,
   SetSignedLanguageVideo,
   SetSignWritingText,
-  SetSpokenLanguage,
   SetSpokenLanguageText,
   ShareSignedLanguageVideo,
   SuggestAlternativeText,
@@ -32,7 +30,7 @@ import {StoreFramePose} from '../pose/pose.actions';
 import {PoseService} from '../pose/pose.service';
 import {getUrlParams} from '../../core/helpers/url';
 
-export type InputMode = 'webcam' | 'upload' | 'text';
+export type InputMode = 'webcam' | 'upload';
 
 export interface SignWritingObj {
   fsw: string;
@@ -59,8 +57,8 @@ export interface TranslateStateModel {
 }
 
 const initialState: TranslateStateModel = {
-  spokenToSigned: true,
-  inputMode: 'text',
+  spokenToSigned: false,
+  inputMode: 'webcam',
 
   spokenLanguage: 'en',
   signedLanguage: 'ase',
@@ -121,29 +119,6 @@ export class TranslateState implements NgxsOnInit {
     }
   }
 
-  @Action(FlipTranslationDirection)
-  async flipTranslationMode({getState, patchState, dispatch}: StateContext<TranslateStateModel>): Promise<void> {
-    const {spokenToSigned, spokenLanguage, signedLanguage, detectedLanguage, signedLanguageVideo} = getState();
-    patchState({
-      spokenToSigned: !spokenToSigned,
-      // Collapse detected language if used
-      spokenLanguage: spokenLanguage ?? detectedLanguage,
-      signedLanguage: signedLanguage ?? detectedLanguage,
-      detectedLanguage: null,
-      signedLanguageVideo: null,
-    });
-
-    if (spokenToSigned) {
-      if (signedLanguageVideo) {
-        dispatch([new SetInputMode('upload'), new SetVideo(signedLanguageVideo)]);
-      } else {
-        dispatch(new SetInputMode('webcam'));
-      }
-    } else {
-      dispatch(new SetInputMode('text'));
-    }
-  }
-
   @Action(SetInputMode)
   async setInputMode(
     {patchState, getState, dispatch}: StateContext<TranslateStateModel>,
@@ -161,89 +136,6 @@ export class TranslateState implements NgxsOnInit {
     if (mode === 'webcam') {
       dispatch(StartCamera);
     }
-  }
-
-  async detectLanguage(spokenLanguageText: string, patchState: StateContext<TranslateStateModel>['patchState']) {
-    if (spokenLanguageText.length === 0) {
-      patchState({detectedLanguage: null});
-      return;
-    }
-
-    await this.languageDetectionService.init();
-    const detectedLanguage = await this.languageDetectionService.detectSpokenLanguage(spokenLanguageText);
-    patchState({detectedLanguage});
-  }
-
-  @Action(SetSpokenLanguage)
-  async setSpokenLanguage(
-    {patchState, getState, dispatch}: StateContext<TranslateStateModel>,
-    {language}: SetSpokenLanguage
-  ): Promise<void> {
-    patchState({spokenLanguage: language});
-
-    // Load and apply language detection if selected
-    if (!language) {
-      const {spokenLanguageText} = getState();
-      await this.detectLanguage(spokenLanguageText, patchState);
-    }
-
-    dispatch([ChangeTranslation, SuggestAlternativeText]);
-  }
-
-  @Action(SetSignedLanguage)
-  async setSignedLanguage(
-    {patchState, dispatch}: StateContext<TranslateStateModel>,
-    {language}: SetSignedLanguage
-  ): Promise<void> {
-    patchState({signedLanguage: language});
-    dispatch(ChangeTranslation);
-  }
-
-  @Action(SetSpokenLanguageText)
-  async setSpokenLanguageText(
-    {patchState, getState, dispatch}: StateContext<TranslateStateModel>,
-    {text}: SetSpokenLanguageText
-  ): Promise<void> {
-    const {spokenLanguage, spokenToSigned} = getState();
-    const trimmedText = text.trim();
-
-    patchState({spokenLanguageText: text, normalizedSpokenLanguageText: null});
-
-    if (!spokenToSigned) {
-      return;
-    }
-
-    const detectLanguage = this.detectLanguage(trimmedText, patchState);
-
-    // Wait for language detection if language is not selected
-    if (!spokenLanguage) {
-      await detectLanguage;
-    }
-
-    // Get spoken language
-    const {detectedLanguage} = getState();
-    const assumedSpokenLanguage = spokenLanguage || detectedLanguage;
-    patchState({spokenLanguageSentences: this.service.splitSpokenSentences(assumedSpokenLanguage, trimmedText)});
-
-    dispatch(ChangeTranslation);
-  }
-
-  @Action(SuggestAlternativeText, {cancelUncompleted: true})
-  suggestAlternativeText({patchState, getState}: StateContext<TranslateStateModel>) {
-    const {spokenToSigned, spokenLanguageText, spokenLanguage, detectedLanguage} = getState();
-    const trimmedText = spokenLanguageText.trim();
-    if (!spokenToSigned || !trimmedText || spokenLanguage !== detectedLanguage) {
-      return EMPTY;
-    }
-
-    if ('navigator' in globalThis && !navigator.onLine) {
-      return EMPTY;
-    }
-
-    return this.service.normalizeSpokenLanguageText(spokenLanguage, trimmedText).pipe(
-      filter(text => text !== trimmedText),
-      tap(text => patchState({normalizedSpokenLanguageText: text}))
-    );
   }
 
   @Action(DescribeSignWritingSign, {cancelUncompleted: true})
@@ -266,14 +158,6 @@ export class TranslateState implements NgxsOnInit {
         patchState({signWriting: newSignWriting});
       })
     );
-  }
-
-  @Action(SetSignedLanguageVideo)
-  async setSignedLanguageVideo(
-    {patchState}: StateContext<TranslateStateModel>,
-    {url}: SetSignedLanguageVideo
-  ): Promise<void> {
-    patchState({signedLanguageVideo: url});
   }
 
   @Action(SetSignWritingText)

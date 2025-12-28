@@ -3,6 +3,7 @@ import {HandsService} from './hands.service';
 import {SignWritingStateModel} from './sign-writing.state';
 import {BodyService} from './body.service';
 import {FaceService} from './face.service';
+import {generateFSWFromState} from './fsw';
 import type {Vector2, Vector3} from 'three';
 import type {font} from '@sutton-signwriting/font-ttf';
 
@@ -80,5 +81,14 @@ export class SignWritingService {
     this.bodyService.draw(swState.body, ctx);
     this.faceService.draw(swState, ctx);
     this.handsService.draw(swState, ctx);
+
+    const fsw = generateFSWFromState(swState, ctx.canvas);
+
+    if (fsw) {
+      ctx.font = '20px monospace';
+      ctx.fillStyle = 'black';
+      ctx.textAlign = 'left';
+      ctx.fillText(`FSW: ${fsw}`, 10, ctx.canvas.height - 20);
+    }
   }
 }

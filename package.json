@@ -95,6 +95,7 @@
     "ionicons": "8.0.13",
     "leaflet": "1.9.4",
     "mediabunny": "1.24.2",
+    "ng": "^0.0.0",
     "ngx-filesize": "3.0.6",
     "pose-viewer": "1.1.0",
     "rxjs": "7.8.2",

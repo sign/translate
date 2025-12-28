@@ -1,47 +1,46 @@
 @use '../../../../theme/breakpoints' as breakpoints;
 
-@media #{breakpoints.$breakpoint-gt-xs} {
-  .container::before {
-    background-color: var(--app-tinted-background-color);
-    border-bottom: 1px solid var(--app-divider-color);
-    content: '';
-    display: block;
-    height: 106px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-  }
+ion-content {
+  --background: #1d4380;
 }
 
 .container {
   transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d4380;
+  min-height: 100vh;
 
-  @media #{breakpoints.$breakpoint-gt-md} {
-    padding: 48px;
-    padding-top: 0;
+  .header {
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+
+    h1 {
+      margin: 0;
+      font-family: 'Google Sans', Roboto, Arial, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #ffffff;
+    }
   }
 
-  #input-mode-group {
-    height: 68px;
-    font-family: 'Google Sans', Roboto, Arial, sans-serif;
-    align-items: center;
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px;
     display: flex;
-    gap: 0.5em;
+    flex-direction: column;
 
-    @media #{breakpoints.$breakpoint-lt-lg} {
-      padding: 0 12px;
-    }
-
-    @media #{breakpoints.$breakpoint-lt-sm} {
-      display: none;
+    @media #{breakpoints.$breakpoint-gt-md} {
+      padding: 0 48px 48px;
     }
   }
 
   #translation-card {
     background-color: white;
     width: 100%;
-    height: 100%;
     transition: 0.6s width cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.37);
 
@@ -55,11 +54,14 @@
 
     @media #{breakpoints.$breakpoint-gt-md} {
       border-radius: 8px;
-      overflow: hidden;
+    }
+
+    #content {
+      width: 100%;
     }
 
     app-language-selectors {
-      border-bottom: 1px solid var(--app-divider-color);
+      border-top: 1px solid var(--app-divider-color);
     }
   }
 }

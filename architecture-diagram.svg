@@ -1,0 +1,331 @@
+<svg viewBox="0 0 1600 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #1a1a1a; }
+      .subtitle { font: bold 16px sans-serif; fill: #2c3e50; }
+      .section-title { font: bold 14px sans-serif; fill: #34495e; }
+      .text { font: 12px sans-serif; fill: #2c3e50; }
+      .small-text { font: 10px sans-serif; fill: #5a6c7d; }
+      .code { font: 10px monospace; fill: #e74c3c; }
+      .layer-label { font: bold 13px sans-serif; fill: #fff; }
+
+      .frontend-layer { fill: #3498db; opacity: 0.12; stroke: #2980b9; stroke-width: 2; }
+      .state-layer { fill: #9b59b6; opacity: 0.12; stroke: #8e44ad; stroke-width: 2; }
+      .service-layer { fill: #e74c3c; opacity: 0.12; stroke: #c0392b; stroke-width: 2; }
+      .ml-layer { fill: #f39c12; opacity: 0.12; stroke: #d68910; stroke-width: 2; }
+      .backend-layer { fill: #16a085; opacity: 0.12; stroke: #138d75; stroke-width: 2; }
+      .mobile-layer { fill: #34495e; opacity: 0.12; stroke: #2c3e50; stroke-width: 2; }
+
+      .component-box { fill: #fff; stroke: #3498db; stroke-width: 1.5; rx: 4; }
+      .state-box { fill: #fff; stroke: #9b59b6; stroke-width: 1.5; rx: 4; }
+      .service-box { fill: #fff; stroke: #e74c3c; stroke-width: 1.5; rx: 4; }
+      .ml-box { fill: #fff; stroke: #f39c12; stroke-width: 1.5; rx: 4; }
+      .external-box { fill: #d5f4e6; stroke: #16a085; stroke-width: 2; rx: 4; }
+
+      .arrow { fill: none; stroke: #34495e; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .data-flow { fill: none; stroke: #e67e22; stroke-width: 2; stroke-dasharray: 4,4; marker-end: url(#dataflow); }
+
+      .new-box { fill: #e8f8f0; stroke: #27ae60; stroke-width: 2; }
+      .new-label { font: bold 11px sans-serif; fill: #27ae60; }
+      .new-arrow { fill: none; stroke: #27ae60; stroke-width: 2; stroke-dasharray: 5,3; }
+    </style>
+
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34495e" />
+    </marker>
+    <marker id="dataflow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e67e22" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="800" y="30" text-anchor="middle" class="title">Sign Language Translation Platform - Software Architecture</text>
+  <text x="800" y="50" text-anchor="middle" class="subtitle">Angular 20 + Ionic 8 + Firebase + ML/AI Models (47 Sign Languages)</text>
+
+  <!-- ========== LAYER 1: FRONTEND - PAGES & COMPONENTS ========== -->
+  <rect x="50" y="70" width="1500" height="200" class="frontend-layer" rx="8"/>
+  <rect x="55" y="72" width="200" height="25" fill="#3498db" rx="4"/>
+  <text x="65" y="90" class="layer-label">LAYER 1: UI Components</text>
+
+  <rect x="70" y="110" width="280" height="145" class="component-box"/>
+  <text x="210" y="130" class="section-title" text-anchor="middle">Pages</text>
+  <rect x="90" y="140" width="110" height="35" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="145" y="163" class="text" text-anchor="middle">TranslateComponent</text>
+  <rect x="220" y="140" width="110" height="35" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="275" y="163" class="text" text-anchor="middle">SettingsComponent</text>
+  <rect x="90" y="185" width="110" height="35" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="145" y="208" class="text" text-anchor="middle">MainComponent</text>
+  <rect x="220" y="185" width="110" height="35" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="275" y="208" class="text" text-anchor="middle">NotFoundPage</text>
+  <text x="210" y="242" class="small-text" text-anchor="middle">app.routes.ts</text>
+
+  <rect x="370" y="110" width="360" height="145" class="component-box"/>
+  <text x="550" y="130" class="section-title" text-anchor="middle">Shared Components</text>
+  <rect x="390" y="140" width="90" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="435" y="160" class="small-text" text-anchor="middle">VideoComponent</text>
+  <rect x="490" y="140" width="100" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="540" y="160" class="small-text" text-anchor="middle">SignWritingComp</text>
+  <rect x="600" y="140" width="110" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="655" y="160" class="small-text" text-anchor="middle">LanguageSelectors</text>
+  <rect x="390" y="180" width="90" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="435" y="200" class="small-text" text-anchor="middle">SpeechToText</text>
+  <rect x="490" y="180" width="100" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="540" y="200" class="small-text" text-anchor="middle">TextToSpeech</text>
+  <rect x="600" y="180" width="110" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="655" y="200" class="small-text" text-anchor="middle">SignedToSpoken</text>
+  <rect x="390" y="220" width="150" height="25" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="465" y="237" class="small-text" text-anchor="middle">BaseComponent</text>
+  <rect x="550" y="220" width="160" height="25" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="630" y="237" class="small-text" text-anchor="middle">MapComponent</text>
+
+  <rect x="750" y="110" width="240" height="145" class="component-box"/>
+  <text x="870" y="130" class="section-title" text-anchor="middle">Core Modules</text>
+  <rect x="770" y="140" width="200" height="28" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="870" y="159" class="text" text-anchor="middle">Transloco (i18n)</text>
+  <rect x="770" y="175" width="200" height="28" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="870" y="194" class="text" text-anchor="middle">Google Analytics</text>
+  <rect x="770" y="210" width="200" height="35" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="870" y="225" class="text" text-anchor="middle">PWA Service Worker</text>
+  <text x="870" y="238" class="small-text" text-anchor="middle">Offline Support</text>
+
+  <rect x="1010" y="110" width="260" height="145" class="component-box"/>
+  <text x="1140" y="130" class="section-title" text-anchor="middle">Routing &amp; Config</text>
+  <rect x="1030" y="145" width="220" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1140" y="165" class="text" text-anchor="middle">IonApp + IonRouterOutlet</text>
+  <rect x="1030" y="185" width="105" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1082" y="205" class="small-text" text-anchor="middle">app.routes.ts</text>
+  <rect x="1145" y="185" width="105" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1197" y="205" class="small-text" text-anchor="middle">app.config.ts</text>
+  <text x="1140" y="235" class="small-text" text-anchor="middle">Lazy Loading Routes</text>
+
+  <rect x="1290" y="110" width="250" height="145" class="component-box"/>
+  <text x="1415" y="130" class="section-title" text-anchor="middle">Core Services</text>
+  <rect x="1310" y="145" width="110" height="25" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1365" y="162" class="small-text" text-anchor="middle">NavigatorService</text>
+  <rect x="1430" y="145" width="90" height="25" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1475" y="162" class="small-text" text-anchor="middle">AssetsService</text>
+  <rect x="1310" y="178" width="110" height="25" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1365" y="195" class="small-text" text-anchor="middle">ThreeService</text>
+  <rect x="1430" y="178" width="90" height="25" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1475" y="195" class="small-text" text-anchor="middle">TfjsService</text>
+  <rect x="1310" y="211" width="210" height="30" fill="#ecf0f1" stroke="#3498db" stroke-width="1" rx="3"/>
+  <text x="1415" y="231" class="small-text" text-anchor="middle">MediaDevice APIs</text>
+
+  <!-- ========== LAYER 2: STATE MANAGEMENT (NGXS) ========== -->
+  <rect x="50" y="290" width="1500" height="140" class="state-layer" rx="8"/>
+  <rect x="55" y="292" width="230" height="25" fill="#9b59b6" rx="4"/>
+  <text x="65" y="310" class="layer-label">LAYER 2: State Management (NGXS)</text>
+
+  <rect x="90" y="330" width="180" height="85" class="state-box"/>
+  <text x="180" y="350" class="section-title" text-anchor="middle">TranslateState</text>
+  <text x="180" y="368" class="small-text" text-anchor="middle">spokenToSigned: bool</text>
+  <text x="180" y="381" class="small-text" text-anchor="middle">spokenLanguage: string</text>
+  <text x="180" y="394" class="small-text" text-anchor="middle">signedLanguagePose</text>
+  <text x="180" y="407" class="small-text" text-anchor="middle">signWriting: FSW[]</text>
+
+  <rect x="290" y="330" width="160" height="85" class="state-box"/>
+  <text x="370" y="350" class="section-title" text-anchor="middle">PoseState</text>
+  <text x="370" y="368" class="small-text" text-anchor="middle">isLoaded: boolean</text>
+  <text x="370" y="381" class="small-text" text-anchor="middle">pose: EstimatedPose</text>
+  <text x="370" y="394" class="small-text" text-anchor="middle">543 landmarks</text>
+
+  <rect x="470" y="330" width="180" height="85" class="state-box"/>
+  <text x="560" y="350" class="section-title" text-anchor="middle">SettingsState</text>
+  <text x="560" y="368" class="small-text" text-anchor="middle">receiveVideo: bool</text>
+  <text x="560" y="381" class="small-text" text-anchor="middle">drawPose: bool</text>
+  <text x="560" y="394" class="small-text" text-anchor="middle">poseViewer: string</text>
+  <text x="560" y="407" class="small-text" text-anchor="middle">appearance: string</text>
+
+  <rect x="670" y="330" width="160" height="85" class="state-box"/>
+  <text x="750" y="350" class="section-title" text-anchor="middle">VideoState</text>
+  <text x="750" y="368" class="small-text" text-anchor="middle">camera: MediaStream</text>
+  <text x="750" y="381" class="small-text" text-anchor="middle">src: string</text>
+  <text x="750" y="394" class="small-text" text-anchor="middle">videoSettings</text>
+
+  <rect x="850" y="330" width="180" height="85" class="state-box"/>
+  <text x="940" y="350" class="section-title" text-anchor="middle">SignWritingState</text>
+  <text x="940" y="368" class="small-text" text-anchor="middle">FSW notation</text>
+  <text x="940" y="381" class="small-text" text-anchor="middle">body/face/hands</text>
+
+  <rect x="1050" y="330" width="480" height="85" class="state-box"/>
+  <text x="1290" y="350" class="section-title" text-anchor="middle">NGXS Actions</text>
+  <text x="1080" y="370" class="small-text">SetSpokenLanguageText</text>
+  <text x="1080" y="385" class="small-text">SetSignedLanguage</text>
+  <text x="1080" y="400" class="small-text">LoadPose</text>
+  <text x="1300" y="370" class="small-text">StartCamera</text>
+  <text x="1300" y="385" class="small-text">StopCamera</text>
+  <text x="1300" y="400" class="small-text">UpdateSettings</text>
+  <text x="1450" y="370" class="small-text">DetectLanguage</text>
+  <text x="1450" y="385" class="small-text">TranslateText</text>
+  <text x="1450" y="400" class="small-text">GeneratePose</text>
+
+  <!-- Services Layer -->
+  <rect x="60" y="420" width="620" height="200" class="service-box" rx="5"/>
+  <text x="70" y="440" class="section-title">Core Services</text>
+
+  <rect x="80" y="455" width="130" height="50" class="service-box" rx="3"/>
+  <text x="145" y="475" text-anchor="middle" class="text">NavigatorService</text>
+  <text x="145" y="492" text-anchor="middle" class="small-text">Camera, Media APIs</text>
+
+  <rect x="225" y="455" width="130" height="50" class="service-box" rx="3"/>
+  <text x="290" y="475" text-anchor="middle" class="text">AssetsService</text>
+  <text x="290" y="492" text-anchor="middle" class="small-text">Model loading</text>
+
+  <rect x="370" y="455" width="130" height="50" class="service-box" rx="3"/>
+  <text x="435" y="475" text-anchor="middle" class="text">ThreeService</text>
+  <text x="435" y="492" text-anchor="middle" class="small-text">3D rendering</text>
+
+  <rect x="515" y="455" width="150" height="50" class="service-box" rx="3"/>
+  <text x="590" y="475" text-anchor="middle" class="text">AnalyticsService</text>
+  <text x="590" y="492" text-anchor="middle" class="small-text">Performance tracking</text>
+
+  <rect x="80" y="520" width="130" height="50" class="service-box" rx="3"/>
+  <text x="145" y="540" text-anchor="middle" class="text">PoseService</text>
+  <text x="145" y="557" text-anchor="middle" class="small-text">Pose operations</text>
+
+  <rect x="225" y="520" width="130" height="50" class="service-box" rx="3"/>
+  <text x="290" y="540" text-anchor="middle" class="text">SignWritingService</text>
+  <text x="290" y="557" text-anchor="middle" class="small-text">FSW rendering</text>
+
+  <rect x="370" y="520" width="295" height="50" class="service-box" rx="3"/>
+  <text x="517" y="540" text-anchor="middle" class="text">Body/Face/Hands Services</text>
+  <text x="517" y="557" text-anchor="middle" class="small-text">SignWriting component services</text>
+
+  <!-- ML Models Layer -->
+  <rect x="700" y="420" width="640" height="200" class="ml-box" rx="5"/>
+  <text x="710" y="440" class="section-title">ML/AI Models (Client-Side Inference)</text>
+
+  <!-- TensorFlow.js -->
+  <rect x="720" y="455" width="180" height="75" class="service-box" rx="3"/>
+  <text x="810" y="473" text-anchor="middle" class="text">TensorFlow.js</text>
+  <text x="810" y="490" text-anchor="middle" class="code">tfjs.service.ts</text>
+  <text x="810" y="505" text-anchor="middle" class="small-text">• Hand shape models</text>
+  <text x="810" y="520" text-anchor="middle" class="small-text">• WebGL/WASM/WebGPU</text>
+
+  <!-- MediaPipe -->
+  <rect x="920" y="455" width="180" height="75" class="service-box" rx="3"/>
+  <text x="1010" y="473" text-anchor="middle" class="text">MediaPipe</text>
+  <text x="1010" y="490" text-anchor="middle" class="code">holistic.service.ts</text>
+  <text x="1010" y="505" text-anchor="middle" class="small-text">• Pose (33) + Face (468)</text>
+  <text x="1010" y="520" text-anchor="middle" class="small-text">• Hand landmarks (42)</text>
+
+  <!-- BrowserMT -->
+  <rect x="1120" y="455" width="200" height="75" class="service-box" rx="3"/>
+  <text x="1220" y="473" text-anchor="middle" class="text">BrowserMT</text>
+  <text x="1220" y="490" text-anchor="middle" class="code">@sign-mt/browsermt</text>
+  <text x="1220" y="505" text-anchor="middle" class="small-text">• Translation</text>
+  <text x="1220" y="520" text-anchor="middle" class="small-text">• In Web Worker</text>
+
+  <!-- NEW: HuggingFace Integration -->
+  <rect x="720" y="545" width="600" height="65" class="new-box" rx="3"/>
+  <text x="1020" y="563" text-anchor="middle" class="new-label">🆕 NEW: Transformers.js (HuggingFace Models)</text>
+  <text x="1020" y="580" text-anchor="middle" class="code">huggingface.service.ts + your-model.service.ts</text>
+  <text x="1020" y="597" text-anchor="middle" class="small-text">• Loads from HuggingFace Hub • ONNX runtime • Cached in IndexedDB • Can run in Web Worker</text>
+
+  <!-- Web Workers -->
+  <rect x="60" y="640" width="1280" height="70" class="service-box" rx="5"/>
+  <text x="70" y="660" class="section-title">Web Workers (Background Processing)</text>
+
+  <rect x="80" y="675" width="200" height="25" class="service-box" rx="3"/>
+  <text x="180" y="693" text-anchor="middle" class="small-text">TensorFlow.js Workers</text>
+
+  <rect x="300" y="675" width="200" height="25" class="service-box" rx="3"/>
+  <text x="400" y="693" text-anchor="middle" class="small-text">BrowserMT Worker (Comlink)</text>
+
+  <rect x="520" y="675" width="250" height="25" class="new-box" rx="3"/>
+  <text x="645" y="693" text-anchor="middle" class="new-label">🆕 HuggingFace Worker</text>
+
+  <rect x="790" y="675" width="200" height="25" class="service-box" rx="3"/>
+  <text x="890" y="693" text-anchor="middle" class="small-text">MediaPipe Processing</text>
+
+  <!-- Browser APIs and Storage -->
+  <rect x="60" y="730" width="1280" height="100" class="service-box" rx="5"/>
+  <text x="70" y="750" class="section-title">Browser APIs and Storage</text>
+
+  <rect x="80" y="765" width="150" height="50" class="service-box" rx="3"/>
+  <text x="155" y="785" text-anchor="middle" class="small-text">IndexedDB</text>
+  <text x="155" y="802" text-anchor="middle" class="small-text">Model cache</text>
+
+  <rect x="250" y="765" width="150" height="50" class="service-box" rx="3"/>
+  <text x="325" y="785" text-anchor="middle" class="small-text">Service Worker</text>
+  <text x="325" y="802" text-anchor="middle" class="small-text">Offline support</text>
+
+  <rect x="420" y="765" width="150" height="50" class="service-box" rx="3"/>
+  <text x="495" y="785" text-anchor="middle" class="small-text">MediaStream API</text>
+  <text x="495" y="802" text-anchor="middle" class="small-text">Webcam access</text>
+
+  <rect x="590" y="765" width="150" height="50" class="service-box" rx="3"/>
+  <text x="665" y="785" text-anchor="middle" class="small-text">Web Speech API</text>
+  <text x="665" y="802" text-anchor="middle" class="small-text">TTS/STT</text>
+
+  <rect x="760" y="765" width="150" height="50" class="service-box" rx="3"/>
+  <text x="835" y="785" text-anchor="middle" class="small-text">Canvas/WebGL</text>
+  <text x="835" y="802" text-anchor="middle" class="small-text">Rendering</text>
+
+  <rect x="930" y="765" width="190" height="50" class="new-box" rx="3"/>
+  <text x="1025" y="785" text-anchor="middle" class="new-label">transformers-cache/</text>
+  <text x="1025" y="802" text-anchor="middle" class="small-text">HF models in IndexedDB</text>
+
+  <rect x="1140" y="765" width="180" height="50" class="service-box" rx="3"/>
+  <text x="1230" y="785" text-anchor="middle" class="small-text">Local Storage</text>
+  <text x="1230" y="802" text-anchor="middle" class="small-text">Settings, cache</text>
+
+  <!-- Model Download Sources -->
+  <rect x="60" y="850" width="1280" height="100" class="ml-box" rx="5"/>
+  <text x="70" y="870" class="section-title">External Model Sources (Downloaded to Browser)</text>
+
+  <rect x="80" y="885" width="200" height="50" class="service-box" rx="3"/>
+  <text x="180" y="905" text-anchor="middle" class="small-text">📦 /assets/models/</text>
+  <text x="180" y="922" text-anchor="middle" class="small-text">Bundled TF.js models</text>
+
+  <rect x="300" y="885" width="220" height="50" class="service-box" rx="3"/>
+  <text x="410" y="905" text-anchor="middle" class="small-text">📦 MediaPipe CDN</text>
+  <text x="410" y="922" text-anchor="middle" class="small-text">Holistic, Tasks models</text>
+
+  <rect x="540" y="885" width="240" height="50" class="service-box" rx="3"/>
+  <text x="660" y="905" text-anchor="middle" class="small-text">📦 BrowserMT artifacts</text>
+  <text x="660" y="922" text-anchor="middle" class="small-text">Translation models</text>
+
+  <rect x="800" y="885" width="280" height="50" class="new-box" rx="3"/>
+  <text x="940" y="905" text-anchor="middle" class="new-label">🆕 huggingface.co/your-model/</text>
+  <text x="940" y="922" text-anchor="middle" class="small-text">Auto-downloaded and cached</text>
+
+  <rect x="1100" y="885" width="220" height="50" class="service-box" rx="3"/>
+  <text x="1210" y="905" text-anchor="middle" class="small-text">📦 CDN (optional)</text>
+  <text x="1210" y="922" text-anchor="middle" class="small-text">Assets, fonts, icons</text>
+
+  <!-- Arrows showing new integration -->
+  <path d="M 1200 250 L 1200 290" class="new-arrow"/>
+  <path d="M 1020 545 L 645 540 L 645 675" class="new-arrow"/>
+  <path d="M 1025 765 L 1025 610" class="new-arrow"/>
+  <path d="M 940 885 L 940 830" class="new-arrow"/>
+
+  <!-- ========== DEPLOYMENT SECTION ========== -->
+  <rect x="30" y="990" width="1340" height="120" class="external-box" rx="10"/>
+  <text x="700" y="1020" text-anchor="middle" class="subtitle">Deployment (Static Hosting)</text>
+
+  <rect x="80" y="1040" width="220" height="50" class="service-box" rx="3"/>
+  <text x="190" y="1060" text-anchor="middle" class="text">Firebase Hosting</text>
+  <text x="190" y="1077" text-anchor="middle" class="small-text">CDN, HTTPS, auto-deploy</text>
+
+  <rect x="330" y="1040" width="220" height="50" class="service-box" rx="3"/>
+  <text x="440" y="1060" text-anchor="middle" class="text">Vercel</text>
+  <text x="440" y="1077" text-anchor="middle" class="small-text">Edge network, previews</text>
+
+  <rect x="580" y="1040" width="220" height="50" class="service-box" rx="3"/>
+  <text x="690" y="1060" text-anchor="middle" class="text">Netlify</text>
+  <text x="690" y="1077" text-anchor="middle" class="small-text">Git-based deploys</text>
+
+  <rect x="830" y="1040" width="220" height="50" class="service-box" rx="3"/>
+  <text x="940" y="1060" text-anchor="middle" class="text">GitHub Pages</text>
+  <text x="940" y="1077" text-anchor="middle" class="small-text">Free static hosting</text>
+
+  <rect x="1080" y="1040" width="240" height="50" class="service-box" rx="3"/>
+  <text x="1200" y="1060" text-anchor="middle" class="text">Cloudflare Pages</text>
+  <text x="1200" y="1077" text-anchor="middle" class="small-text">Global CDN</text>
+
+  <!-- Legend -->
+  <rect x="30" y="1130" width="1340" height="50" class="service-box" rx="5"/>
+  <text x="70" y="1155" class="text">✓ <tspan font-weight="bold">100% Client-Side:</tspan> All processing in browser (privacy, speed, offline-capable)</text>
+  <text x="70" y="1172" class="text">🆕 <tspan font-weight="bold" fill="#27ae60">HuggingFace Integration:</tspan> Downloads from huggingface.co → caches in browser → runs locally (no backend needed)</text>
+</svg>

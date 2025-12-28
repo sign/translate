@@ -1,9 +1,0 @@
-ion-fab#viewer-selector {
-  top: 0;
-  right: 0;
-}
-
-::ng-deep html[dir='rtl'] ion-fab#viewer-selector {
-  right: auto;
-  left: 0;
-}

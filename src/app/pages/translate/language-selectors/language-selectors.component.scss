@@ -1,13 +1,9 @@
 :host {
   display: flex;
-
-  &.spoken-to-signed {
-    flex-direction: row-reverse;
-  }
 }
 
 app-language-selector {
-  width: calc(50% - 24px);
+  width: 100%;
 }
 
 #swap-languages {

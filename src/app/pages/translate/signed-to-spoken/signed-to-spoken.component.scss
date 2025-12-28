@@ -2,13 +2,15 @@
 
 :host {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .interface {
   display: grid;
   width: 100%;
-  grid-template-areas: 'signed spoken signwriting';
-  grid-template-columns: 50% 100px auto;
+  grid-template-areas: 'signed signwriting spoken';
+  grid-template-columns: 1fr 100px 1fr;
 
   @media #{breakpoints.$breakpoint-lt-sm} {
     grid-template-areas: 'signed signed' 'spoken signwriting';
@@ -16,6 +18,7 @@
   }
 
   app-sign-writing {
+    grid-area: signwriting;
     border-inline-end: 1px solid var(--app-divider-color);
 
     @media #{breakpoints.$breakpoint-lt-sm} {
@@ -26,6 +29,17 @@
 
 .sign-language {
   grid-area: signed;
+  display: flex;
+
+  app-video {
+    flex: 1;
+  }
+}
+
+.translation-output {
+  grid-area: spoken;
+  display: flex;
+  flex-direction: column;
 }
 
 .translation-text {

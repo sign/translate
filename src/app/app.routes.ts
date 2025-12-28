@@ -8,17 +8,6 @@ import {MainComponent} from './pages/main.component';
 
 export const routes: Routes = [
   {
-    path: 'playground',
-    loadComponent: () => import('./pages/playground/playground.component').then(m => m.PlaygroundComponent),
-  },
-  {
-    path: 'benchmark',
-    loadComponent: () => import('./pages/benchmark/benchmark.component').then(m => m.BenchmarkComponent),
-    providers: [{provide: LanguageDetectionService, useClass: MediaPipeLanguageDetectionService}],
-  },
-  {path: 'about', loadChildren: () => import('./pages/landing/landing.routes').then(m => m.routes)},
-  {path: 'legal', loadChildren: () => import('./pages/landing/landing.routes').then(m => m.routes)},
-  {
     path: '',
     component: MainComponent,
     children: [
