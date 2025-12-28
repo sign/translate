@@ -27,21 +27,6 @@
       "browse": "پنهنجو ڪمپيوٽر برائوز ڪريو",
       "title": "هڪ وڊيو چونڊيو"
     },
-    "spoken-to-signed": {
-      "text": "ڳالهائيندڙ ٻولي جو متن",
-      "actions": {
-        "download": "ڊائون لوڊ ترجمو",
-        "copy": "نقل ڪريو ترجمو",
-        "share": "ترجمو حصيداري ڪريو"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "انساني وڊيو ماڊل لوڊ ڪندي",
-          "generating": "وڊيو ٺاهي رهيو آهي"
-        }
-      },
-      "placeholder": "ٽيڪسٽ داخل ڪريو"
-    },
     "description": "ڪٽنگ-ايج حقيقي-وقت ماڊلز سان بي محنت نشاني ٻوليءَ جو ترجمو. ",
     "suggestions": {
       "translate-from": "مان ترجمو ڪريو",
@@ -62,7 +47,6 @@
         "img": "آمريڪي سائنسي ٻولي ۽ انگريزي وچ ۾ لائيو ترجمي جو مثال"
       },
       "direction": {
-        "spoken-to-signed": "ڳالھائيندڙ کان دستخط ٿيل ٻولين ۾ ترجمو ڪريو",
         "signed-to-spoken": "يا نشانين کان ڳالهائيندڙ ٻولين تائين"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D اوتار",
           "avatarUsdz": "iOS تي AR لاءِ 3D اوتار",
           "translation": "ترجمو",
-          "translation.spokenToSigned": "ڳالهه ٻولهه سان دستخط ٿيل",
           "translation.signedToSpoken": "دستخط سان ڳالهائڻ"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Przeglądaj komputer",
       "title": "Wybierz film"
     },
-    "spoken-to-signed": {
-      "text": "Tekst w języku mówionym",
-      "actions": {
-        "download": "Pobierz tłumaczenie",
-        "copy": "Kopiuj tłumaczenie",
-        "share": "Udostępnij tłumaczenie"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ładowanie ludzkiego modelu wideo",
-          "generating": "Generowanie wideo"
-        }
-      },
-      "placeholder": "Wprowadź tekst"
-    },
     "description": "Bezproblemowe tłumaczenie na język migowy z najnowocześniejszymi modelami czasu rzeczywistego. ",
     "suggestions": {
       "translate-from": "Przetłumacz z",
@@ -62,7 +47,6 @@
         "img": "Przykład tłumaczenia na żywo między amerykańskim językiem migowym a angielskim"
       },
       "direction": {
-        "spoken-to-signed": "Tłumacz z języka mówionego na język migowy",
         "signed-to-spoken": "Lub z języka migowego na język mówiony"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Awatar 3D",
           "avatarUsdz": "Avatar 3D dla AR na iOS",
           "translation": "Tłumaczenie",
-          "translation.spokenToSigned": "Mówiony do podpisu",
           "translation.signedToSpoken": "Podpisanie na głos"
         },
         "actions": {

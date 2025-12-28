@@ -27,21 +27,6 @@
       "browse": "Kompüterinizə nəzər salın",
       "title": "Video seçin"
     },
-    "spoken-to-signed": {
-      "text": "Danışıq Dili Mətni",
-      "actions": {
-        "download": "Tərcüməni yükləyin",
-        "copy": "Tərcüməni Kopyalayın",
-        "share": "Tərcüməni Paylaşın"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "İnsan video modeli yüklənir",
-          "generating": "Videonun yaradılması"
-        }
-      },
-      "placeholder": "Mətni daxil edin"
-    },
     "description": "Ən müasir real vaxt modelləri ilə zəhmətsiz işarə dili tərcüməsi. ",
     "suggestions": {
       "translate-from": "Tərcümə et",
@@ -62,7 +47,6 @@
         "img": "Amerika işarə dili və ingilis dili arasında canlı tərcümə nümunəsi"
       },
       "direction": {
-        "spoken-to-signed": "Danışıq dillərindən işarəli dillərə tərcümə edin",
         "signed-to-spoken": "Və ya imzalanmış dillərdən danışıq dillərinə"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "iOS-da AR üçün 3D Avatar",
           "translation": "Tərcümə",
-          "translation.spokenToSigned": "Danışıq-imza",
           "translation.signedToSpoken": "İmzalı-Danışıqlı"
         },
         "actions": {

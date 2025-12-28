@@ -27,21 +27,6 @@
       "browse": "Pori eich cyfrifiadur",
       "title": "Dewiswch fideo"
     },
-    "spoken-to-signed": {
-      "text": "Testun Iaith Lafar",
-      "actions": {
-        "download": "Download Cyfieithiad",
-        "copy": "Copi Cyfieithiad",
-        "share": "Rhannu Cyfieithiad"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Llwytho model fideo dynol",
-          "generating": "Cynhyrchu fideo"
-        }
-      },
-      "placeholder": "Rhowch Testun"
-    },
     "description": "Cyfieithu Iaith Arwyddion Ddiymdrech gyda Modelau Amser Real blaengar. ",
     "suggestions": {
       "translate-from": "Cyfieithwch o",
@@ -62,7 +47,6 @@
         "img": "Enghraifft o gyfieithiad byw rhwng Iaith Arwyddion America a Saesneg"
       },
       "direction": {
-        "spoken-to-signed": "Cyfieithu o ieithoedd llafar i iaith arwyddion",
         "signed-to-spoken": "Neu o ieithoedd arwyddo i siarad"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D ar gyfer AR ar iOS",
           "translation": "Cyfieithiad",
-          "translation.spokenToSigned": "Llafar-i-Arwyddedig",
           "translation.signedToSpoken": "Llofnod-i-Siarad"
         },
         "actions": {

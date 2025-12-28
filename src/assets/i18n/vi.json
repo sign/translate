@@ -27,21 +27,6 @@
       "browse": "Tìm tệp trên máy tính của bạn",
       "title": "Chọn một video"
     },
-    "spoken-to-signed": {
-      "text": "Văn bản Ngôn ngữ Nói",
-      "actions": {
-        "download": "Tải xuống bản dịch",
-        "copy": "Sao chép bản dịch",
-        "share": "Chia sẻ bản dịch"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Đang tải mô hình video của con người",
-          "generating": "Tạo video"
-        }
-      },
-      "placeholder": "Nhập văn bản"
-    },
     "description": "Dịch ngôn ngữ ký hiệu dễ dàng với các mô hình thời gian thực tiên tiến. ",
     "suggestions": {
       "translate-from": "Dịch từ",
@@ -62,7 +47,6 @@
         "img": "Ví dụ về bản dịch trực tiếp giữa Ngôn ngữ ký hiệu Mỹ và tiếng Anh"
       },
       "direction": {
-        "spoken-to-signed": "Dịch từ ngôn ngữ nói sang ngôn ngữ đã ký",
         "signed-to-spoken": "Hoặc từ ngôn ngữ đã ký sang ngôn ngữ nói"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Hình đại diện 3D",
           "avatarUsdz": "Hình đại diện 3D cho AR trên iOS",
           "translation": "Dịch",
-          "translation.spokenToSigned": "Nói để ký",
           "translation.signedToSpoken": "Đã ký để nói"
         },
         "actions": {

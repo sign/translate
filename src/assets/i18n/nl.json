@@ -27,21 +27,6 @@
       "browse": "Browsen op uw computer",
       "title": "Kies een video"
     },
-    "spoken-to-signed": {
-      "text": "Tekst in gesproken taal",
-      "actions": {
-        "download": "Vertaling downloaden",
-        "copy": "Vertaling kopiëren",
-        "share": "Vertaling delen"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Menselijk videomodel laden",
-          "generating": "Video genereren"
-        }
-      },
-      "placeholder": "Tekst invoeren"
-    },
     "description": "Moeiteloze gebarentaalvertaling met geavanceerde real-time modellen. ",
     "suggestions": {
       "translate-from": "Vertalen vanuit",
@@ -62,7 +47,6 @@
         "img": "Voorbeeld van live vertaling tussen Amerikaanse Gebarentaal en Engels"
       },
       "direction": {
-        "spoken-to-signed": "Vertalen van gesproken naar gebarentalen",
         "signed-to-spoken": "Of van gebarentaal naar gesproken talen"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D-avatar",
           "avatarUsdz": "3D-avatar voor AR op iOS",
           "translation": "Vertaling",
-          "translation.spokenToSigned": "Gesproken-naar-ondertekend",
           "translation.signedToSpoken": "Ondertekend-naar-gesproken"
         },
         "actions": {

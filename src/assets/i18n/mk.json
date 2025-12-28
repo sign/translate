@@ -27,21 +27,6 @@
       "browse": "Прелистувајте во компјутерот",
       "title": "Изберете видео"
     },
-    "spoken-to-signed": {
-      "text": "Текст за говорен јазик",
-      "actions": {
-        "download": "Преземи превод",
-        "copy": "Копирај превод",
-        "share": "Сподели превод"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Се вчитува човечко видео модел",
-          "generating": "Се генерира видео"
-        }
-      },
-      "placeholder": "Внесете текст"
-    },
     "description": "Лесен превод на знаковен јазик со најсовремени модели во реално време. ",
     "suggestions": {
       "translate-from": "Преведете од",
@@ -62,7 +47,6 @@
         "img": "Пример за превод во живо помеѓу американски знаковен јазик и англиски"
       },
       "direction": {
-        "spoken-to-signed": "Преведувајте од говорен на знаковен јазик",
         "signed-to-spoken": "Или од знаковен на говорен јазик"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D аватар",
           "avatarUsdz": "3D Avatar за AR на iOS",
           "translation": "Превод",
-          "translation.spokenToSigned": "Говорно-потпишан",
           "translation.signedToSpoken": "Потпишан-во-говорен"
         },
         "actions": {

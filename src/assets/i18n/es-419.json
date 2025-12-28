@@ -27,21 +27,6 @@
       "browse": "Explorar computadora",
       "title": "Elige un vídeo"
     },
-    "spoken-to-signed": {
-      "text": "Texto en idioma hablado",
-      "actions": {
-        "download": "Descargar traducción",
-        "copy": "Copiar traducción",
-        "share": "Compartir traducción"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Cargando modelo de video humano",
-          "generating": "Generando video"
-        }
-      },
-      "placeholder": "Ingrese texto"
-    },
     "description": "Traducción de lenguaje de señas sin esfuerzo con modelos en tiempo real de última generación. ",
     "suggestions": {
       "translate-from": "Traducir de",
@@ -62,7 +47,6 @@
         "img": "Ejemplo de traducción en vivo entre el lenguaje de señas americano y el inglés"
       },
       "direction": {
-        "spoken-to-signed": "Traducir de lenguajes hablados a lenguajes de señas",
         "signed-to-spoken": "O de lenguajes de señas a lenguajes hablados"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "avatar 3D",
           "avatarUsdz": "Avatar 3D para AR en iOS",
           "translation": "Traducción",
-          "translation.spokenToSigned": "Hablado a firmado",
           "translation.signedToSpoken": "Firmado-a-Hablado"
         },
         "actions": {

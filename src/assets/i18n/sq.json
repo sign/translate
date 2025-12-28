@@ -27,21 +27,6 @@
       "browse": "Shfleto kompjuterin tënd",
       "title": "Zgjidhni një video"
     },
-    "spoken-to-signed": {
-      "text": "Teksti i gjuhës së folur",
-      "actions": {
-        "download": "Shkarko Përkthimin",
-        "copy": "Kopjo Përkthim",
-        "share": "Share Translation"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Po ngarkohet modeli i videos njerëzore",
-          "generating": "Gjenerimi i videos"
-        }
-      },
-      "placeholder": "Futni Tekstin"
-    },
     "description": "Përkthim i lehtë i gjuhës së shenjave me modele të avancuara në kohë reale. ",
     "suggestions": {
       "translate-from": "Përkthe nga",
@@ -62,7 +47,6 @@
         "img": "Shembull i përkthimit të drejtpërdrejtë midis gjuhës amerikane të shenjave dhe anglishtes"
       },
       "direction": {
-        "spoken-to-signed": "Përktheni nga gjuhët e folura në gjuhët e shenjave",
         "signed-to-spoken": "Ose nga gjuhët e nënshkruara në të folur"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatari 3D",
           "avatarUsdz": "Avatar 3D për AR në iOS",
           "translation": "Përkthimi",
-          "translation.spokenToSigned": "E folur për të nënshkruar",
           "translation.signedToSpoken": "I nënshkruar në të folur"
         },
         "actions": {

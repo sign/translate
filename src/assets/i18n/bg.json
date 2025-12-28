@@ -27,21 +27,6 @@
       "browse": "Търсене в компютъра ви",
       "title": "Изберете видео"
     },
-    "spoken-to-signed": {
-      "text": "Текст на говоримия език",
-      "actions": {
-        "download": "Изтеглете превод",
-        "copy": "Копиране на превод",
-        "share": "Споделете превод"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Зареждане на човешки видео модел",
-          "generating": "Генериране на видео"
-        }
-      },
-      "placeholder": "Въведете текст"
-    },
     "description": "Превод на жестомимичен език без усилие с авангардни модели в реално време. ",
     "suggestions": {
       "translate-from": "Превеждай от",
@@ -62,7 +47,6 @@
         "img": "Пример за превод на живо между американски жестомимичен език и английски"
       },
       "direction": {
-        "spoken-to-signed": "Превеждайте от говорими на жестомими езици",
         "signed-to-spoken": "Или от жестомимичен към говорим език"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D аватар",
           "avatarUsdz": "3D аватар за AR на iOS",
           "translation": "Превод",
-          "translation.spokenToSigned": "Говорено към Подписано",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

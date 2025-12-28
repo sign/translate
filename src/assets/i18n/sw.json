@@ -27,21 +27,6 @@
       "browse": "Vinjari kompyuta yako",
       "title": "Chagua video"
     },
-    "spoken-to-signed": {
-      "text": "Maandishi ya Lugha Iliyotamkwa",
-      "actions": {
-        "download": "Pakua Tafsiri",
-        "copy": "Nakili Tafsiri",
-        "share": "Shiriki Tafsiri"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Inapakia muundo wa video wa binadamu",
-          "generating": "Inazalisha video"
-        }
-      },
-      "placeholder": "Ingiza Maandishi"
-    },
     "description": "Tafsiri ya Lugha ya Alama isiyo na Jitihada yenye Miundo ya Muda Halisi. ",
     "suggestions": {
       "translate-from": "Tafsiri kutoka",
@@ -62,7 +47,6 @@
         "img": "Mfano wa tafsiri ya moja kwa moja kati ya Lugha ya Ishara ya Marekani na Kiingereza"
       },
       "direction": {
-        "spoken-to-signed": "Tafsiri kutoka lugha zinazozungumzwa hadi lugha za ishara",
         "signed-to-spoken": "Au kutoka kwa lugha zilizotiwa sahihi hadi zinazozungumzwa"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar ya 3D",
           "avatarUsdz": "Avatar ya 3D ya AR kwenye iOS",
           "translation": "Tafsiri",
-          "translation.spokenToSigned": "Imesemwa-kwa-Saini",
           "translation.signedToSpoken": "Imesainiwa-kwa-Kutamkwa"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Bhrawza ikhompyutha",
       "title": "Khetha ividiyo"
     },
-    "spoken-to-signed": {
-      "text": "Isicatshulwa solwimi oluthethwayo",
-      "actions": {
-        "download": "Khuphela Inguqulelo",
-        "copy": "Khuphela Inguqulelo",
-        "share": "Yabelana Ngenguqulelo"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ilayisha imodeli yevidiyo yomntu",
-          "generating": "Ukuvelisa ividiyo"
-        }
-      },
-      "placeholder": "Ngenisa Okubhaliweyo"
-    },
     "description": "Ukuguqulela ngolwimi lwezandla olungenamgudu oluneMifuziselo yeXesha lokwenyani le-Cutting-Edge. ",
     "suggestions": {
       "translate-from": "Guqulela ukusuka",
@@ -62,7 +47,6 @@
         "img": "Umzekelo wenguqulelo ephilayo phakathi koLwimi lweZandla lwaseMelika kunye nesiNgesi"
       },
       "direction": {
-        "spoken-to-signed": "Guqulela ukusuka kwiilwimi ezithethwa ngezandla",
         "signed-to-spoken": "Okanye ukusuka kwiilwimi zezandla ukuya kwiilwimi ezithethwayo"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "IAvatar ye3D",
           "avatarUsdz": "I-Avatar ye-3D ye-AR kwi-iOS",
           "translation": "Uguqulo",
-          "translation.spokenToSigned": "Kuthethwa-ukusayinwa",
           "translation.signedToSpoken": "Isayinwe-kuya-Kuthethwa"
         },
         "actions": {

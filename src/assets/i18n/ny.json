@@ -27,21 +27,6 @@
       "browse": "Chitani burauzi kompyuta",
       "title": "Sankhani kanema"
     },
-    "spoken-to-signed": {
-      "text": "Mawu a Chinenero Cholankhulidwa",
-      "actions": {
-        "download": "Koperani Zomasulira",
-        "copy": "Koperani Kumasulira",
-        "share": "Gawani Zomasulira"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Kutsegula chitsanzo chamavidiyo amunthu",
-          "generating": "Kupanga kanema"
-        }
-      },
-      "placeholder": "Lowetsani Mawu"
-    },
     "description": "Kumasulira Kosavuta kwa Chinenero Chamanja ndi Ma Models a Nthawi Yeniyeni. ",
     "suggestions": {
       "translate-from": "Tanthauzirani kuchokera",
@@ -62,7 +47,6 @@
         "img": "Chitsanzo cha kumasulira kwamoyo pakati pa Chinenero Chamanja cha ku America ndi Chingerezi"
       },
       "direction": {
-        "spoken-to-signed": "Masulirani kuchokera ku zilankhulo zoyankhulidwa ndi manja",
         "signed-to-spoken": "Kapena kuchokera ku zilankhulo zoyankhulidwa ndi manja mpaka zolankhulidwa"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar ya 3D",
           "avatarUsdz": "3D avatar ya AR pa iOS",
           "translation": "Kumasulira",
-          "translation.spokenToSigned": "Kulankhulidwa-ku-Saina",
           "translation.signedToSpoken": "Kusaina-Kulankhulidwa"
         },
         "actions": {

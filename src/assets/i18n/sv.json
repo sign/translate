@@ -27,21 +27,6 @@
       "browse": "Bläddra efter filer på datorn",
       "title": "Välj en video"
     },
-    "spoken-to-signed": {
-      "text": "Talat språk text",
-      "actions": {
-        "download": "Ladda ner översättning",
-        "copy": "Kopiera översättning",
-        "share": "Dela översättning"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Laddar mänsklig videomodell",
-          "generating": "Genererar video"
-        }
-      },
-      "placeholder": "Skriv text"
-    },
     "description": "Enkel översättning av teckenspråk med banbrytande realtidsmodeller. ",
     "suggestions": {
       "translate-from": "Översätt från",
@@ -62,7 +47,6 @@
         "img": "Exempel på liveöversättning mellan amerikanskt teckenspråk och engelska"
       },
       "direction": {
-        "spoken-to-signed": "Översätt från talat till teckenspråk",
         "signed-to-spoken": "Eller från teckenspråk till talade språk"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D-avatar",
           "avatarUsdz": "3D Avatar för AR på iOS",
           "translation": "Översättning",
-          "translation.spokenToSigned": "Talat-till-signerad",
           "translation.signedToSpoken": "Signerad till talat"
         },
         "actions": {

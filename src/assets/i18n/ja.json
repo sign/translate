@@ -27,21 +27,6 @@
       "browse": "パソコンを参照",
       "title": "ビデオを選択してください"
     },
-    "spoken-to-signed": {
-      "text": "口頭言語テキスト",
-      "actions": {
-        "download": "翻訳をダウンロード",
-        "copy": "コピー翻訳",
-        "share": "翻訳を共有する"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "人間のビデオモデルを読み込んでいます",
-          "generating": "ビデオの生成"
-        }
-      },
-      "placeholder": "テキストを入力してください"
-    },
     "description": "最先端のリアルタイム モデルによる簡単な手話翻訳。",
     "suggestions": {
       "translate-from": "から翻訳",
@@ -62,7 +47,6 @@
         "img": "アメリカ手話と英語の間のライブ翻訳の例"
       },
       "direction": {
-        "spoken-to-signed": "話し言葉から手話への翻訳",
         "signed-to-spoken": "または署名された言語から話された言語へ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3Dアバター",
           "avatarUsdz": "iOS の AR 用 3D アバター",
           "translation": "翻訳",
-          "translation.spokenToSigned": "音声対署名",
           "translation.signedToSpoken": "手話音声"
         },
         "actions": {

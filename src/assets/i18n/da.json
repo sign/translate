@@ -27,21 +27,6 @@
       "browse": "Find en fil på din computer",
       "title": "Vælg en video"
     },
-    "spoken-to-signed": {
-      "text": "Talt sprog tekst",
-      "actions": {
-        "download": "Download oversættelse",
-        "copy": "Kopi oversættelse",
-        "share": "Del oversættelse"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Indlæser menneskelig videomodel",
-          "generating": "Generering af video"
-        }
-      },
-      "placeholder": "Indtast tekst"
-    },
     "description": "Ubesværet tegnsprogsoversættelse med banebrydende realtidsmodeller. ",
     "suggestions": {
       "translate-from": "Oversæt fra",
@@ -62,7 +47,6 @@
         "img": "Eksempel på liveoversættelse mellem amerikansk tegnsprog og engelsk"
       },
       "direction": {
-        "spoken-to-signed": "Oversæt fra talte til tegnsprog",
         "signed-to-spoken": "Eller fra tegnsprog til talesprog"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar til AR på iOS",
           "translation": "Oversættelse",
-          "translation.spokenToSigned": "Talt-til-underskrevet",
           "translation.signedToSpoken": "Signeret til talt"
         },
         "actions": {

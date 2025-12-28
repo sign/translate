@@ -27,21 +27,6 @@
       "browse": "Pregledajte na računalu",
       "title": "Odaberite video"
     },
-    "spoken-to-signed": {
-      "text": "Tekst na govornom jeziku",
-      "actions": {
-        "download": "Preuzmite prijevod",
-        "copy": "Kopiraj prijevod",
-        "share": "Dijeli prijevod"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Učitavanje ljudskog video modela",
-          "generating": "Generiranje videa"
-        }
-      },
-      "placeholder": "Unesite tekst"
-    },
     "description": "Prevođenje znakovnog jezika bez napora s vrhunskim modelima u stvarnom vremenu. ",
     "suggestions": {
       "translate-from": "Prevedi s",
@@ -62,7 +47,6 @@
         "img": "Primjer prijevoda uživo između američkog znakovnog jezika i engleskog"
       },
       "direction": {
-        "spoken-to-signed": "Prevodite s govornog na znakovni jezik",
         "signed-to-spoken": "Ili sa znakovnog na govorni jezik"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avatar",
           "avatarUsdz": "3D Avatar za AR na iOS-u",
           "translation": "Prijevod",
-          "translation.spokenToSigned": "Izgovoreno-potpisano",
           "translation.signedToSpoken": "Signal-to-Spoken"
         },
         "actions": {

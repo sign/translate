@@ -27,21 +27,6 @@
       "browse": "Выбраць на камп'ютары",
       "title": "Выберыце відэа"
     },
-    "spoken-to-signed": {
-      "text": "Размоўны тэкст",
-      "actions": {
-        "download": "Спампаваць пераклад",
-        "copy": "Капіяваць пераклад",
-        "share": "Падзяліцеся перакладам"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Загрузка мадэлі відэа чалавека",
-          "generating": "Стварэнне відэа"
-        }
-      },
-      "placeholder": "Увядзіце тэкст"
-    },
     "description": "Лёгкі пераклад на мову жэстаў з перадавымі мадэлямі ў рэжыме рэальнага часу. ",
     "suggestions": {
       "translate-from": "Перакласці з",
@@ -62,7 +47,6 @@
         "img": "Прыклад жывога перакладу паміж амерыканскай мовай жэстаў і англійскай"
       },
       "direction": {
-        "spoken-to-signed": "Пераклад з вуснай мовы на мову жэстаў",
         "signed-to-spoken": "Або з жэставых на гутарковыя мовы"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3d аватар",
           "avatarUsdz": "3D Аватар для AR на iOS",
           "translation": "Пераклад",
-          "translation.spokenToSigned": "Гаворка-падпісанне",
           "translation.signedToSpoken": "Размова з подпісам"
         },
         "actions": {

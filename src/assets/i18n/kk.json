@@ -27,21 +27,6 @@
       "browse": "Компьютерден шолу",
       "title": "Бейнені таңдаңыз"
     },
-    "spoken-to-signed": {
-      "text": "Сөйлеу тіліндегі мәтін",
-      "actions": {
-        "download": "Аударманы жүктеп алыңыз",
-        "copy": "Аударманы көшіру",
-        "share": "Аудармамен бөлісу"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Адам бейне үлгісі жүктелуде",
-          "generating": "Бейне жасау"
-        }
-      },
-      "placeholder": "Мәтінді енгізіңіз"
-    },
     "description": "Нақты уақыттағы ең озық үлгілері бар оңай ым тіліндегі аударма. ",
     "suggestions": {
       "translate-from": "Аудару",
@@ -62,7 +47,6 @@
         "img": "Американдық ым тілі мен ағылшын тілі арасындағы тікелей аударманың мысалы"
       },
       "direction": {
-        "spoken-to-signed": "Ауызекі тілден ым тіліне аударыңыз",
         "signed-to-spoken": "Немесе қолтаңбадан ауызекі сөйлеу тілдеріне дейін"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D аватары",
           "avatarUsdz": "iOS жүйесінде AR үшін 3D аватары",
           "translation": "Аударма",
-          "translation.spokenToSigned": "Сөйлеу-қол қою",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

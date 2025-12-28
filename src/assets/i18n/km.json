@@ -27,21 +27,6 @@
       "browse": "រុករក​កុំព្យូទ័រ​របស់អ្នក",
       "title": "ជ្រើសរើសវីដេអូ"
     },
-    "spoken-to-signed": {
-      "text": "អត្ថបទភាសានិយាយ",
-      "actions": {
-        "download": "ទាញយកការបកប្រែ",
-        "copy": "ចម្លងការបកប្រែ",
-        "share": "ចែករំលែកការបកប្រែ"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "កំពុងផ្ទុកគំរូវីដេអូរបស់មនុស្ស",
-          "generating": "ការបង្កើតវីដេអូ"
-        }
-      },
-      "placeholder": "បញ្ចូលអត្ថបទ"
-    },
     "description": "ការបកប្រែជាភាសាសញ្ញាដោយងាយស្រួលជាមួយនឹងគំរូពេលវេលាជាក់ស្តែងដ៏ទាន់សម័យ។ ",
     "suggestions": {
       "translate-from": "បកប្រែពី",
@@ -62,7 +47,6 @@
         "img": "ឧទាហរណ៍នៃការបកប្រែផ្ទាល់រវាងភាសាសញ្ញាអាមេរិក និងភាសាអង់គ្លេស"
       },
       "direction": {
-        "spoken-to-signed": "បកប្រែពីភាសានិយាយទៅជាភាសាសញ្ញា",
         "signed-to-spoken": "ឬពីសញ្ញាទៅភាសានិយាយ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "3D Avatar សម្រាប់ AR នៅលើ iOS",
           "translation": "ការបកប្រែ",
-          "translation.spokenToSigned": "និយាយទៅហត្ថលេខា",
           "translation.signedToSpoken": "ហត្ថលេខាទៅនិយាយ"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Mag-browse sa computer mo",
       "title": "Pumili ng video"
     },
-    "spoken-to-signed": {
-      "text": "Teksto ng Binigkas na Wika",
-      "actions": {
-        "download": "I-download ang Pagsasalin",
-        "copy": "Kopyahin ang Pagsasalin",
-        "share": "Ibahagi ang Pagsasalin"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Nilo-load ang modelo ng video ng tao",
-          "generating": "Bumubuo ng video"
-        }
-      },
-      "placeholder": "Ipasok ang Teksto"
-    },
     "description": "Walang Kahirap-hirap na Pagsasalin ng Sign Language sa Mga Cutting-Edge na Real-Time na Modelo. ",
     "suggestions": {
       "translate-from": "Isalin mula sa",
@@ -62,7 +47,6 @@
         "img": "Halimbawa ng live na pagsasalin sa pagitan ng American Sign Language at English"
       },
       "direction": {
-        "spoken-to-signed": "Isalin mula sa sinasalita patungo sa mga sign na wika",
         "signed-to-spoken": "O mula sa nilagdaan hanggang sa mga sinasalitang wika"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D na Avatar",
           "avatarUsdz": "3D Avatar para sa AR sa iOS",
           "translation": "Pagsasalin",
-          "translation.spokenToSigned": "Spoken-to-Signed",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

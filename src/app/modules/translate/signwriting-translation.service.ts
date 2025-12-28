@@ -5,7 +5,7 @@ import {AssetsService} from '../../core/services/assets/assets.service';
 import {filter, map} from 'rxjs/operators';
 import {ComlinkWorkerInterface, ModelRegistry, TranslationResponse} from '@sign-mt/browsermt';
 
-type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
+type TranslationDirection = 'signed-to-spoken';
 
 @Injectable({
   providedIn: 'root',
@@ -105,32 +105,6 @@ export class SignWritingTranslationService {
     return this.http
       .post<SpokenToSignWritingResponse>(url, body)
       .pipe(map(res => ({text: res.result.output.join(' ')})));
-  }
-
-  translateSpokenToSignWriting(
-    text: string,
-    sentences: string[],
-    spokenLanguage: string,
-    signedLanguage: string
-  ): Observable<TranslationResponse> {
-    const direction: TranslationDirection = 'spoken-to-signed';
-    const offlineSpecific = () => {
-      const newText = `${this.preProcessSpokenText(text)}`;
-      return from(this.translateOffline(direction, newText, spokenLanguage, signedLanguage));
-    };
-
-    const offlineGeneric = () => {
-      const newText = `$${spokenLanguage} $${signedLanguage} ${this.preProcessSpokenText(text)}`;
-      return from(this.translateOffline(direction, newText, 'spoken', 'signed'));
-    };
-
-    const online = () => this.translateOnline(direction, text, sentences, spokenLanguage, signedLanguage);
-
-    return offlineSpecific().pipe(
-      catchError(offlineGeneric),
-      filter(() => !('navigator' in globalThis) || navigator.onLine),
-      catchError(online)
-    );
   }
 
   preProcessSpokenText(text: string) {

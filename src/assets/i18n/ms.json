@@ -27,21 +27,6 @@
       "browse": "Semak imbas komputer anda",
       "title": "Pilih video"
     },
-    "spoken-to-signed": {
-      "text": "Teks Bahasa Pertuturan",
-      "actions": {
-        "download": "Muat turun Terjemahan",
-        "copy": "Salin Terjemahan",
-        "share": "Kongsi Terjemahan"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Memuatkan model video manusia",
-          "generating": "Menjana video"
-        }
-      },
-      "placeholder": "Masukkan Teks"
-    },
     "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Masa Nyata Termaju. ",
     "suggestions": {
       "translate-from": "Terjemah dari",
@@ -62,7 +47,6 @@
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggeris"
       },
       "direction": {
-        "spoken-to-signed": "Terjemah daripada bahasa pertuturan kepada bahasa isyarat",
         "signed-to-spoken": "Atau daripada bahasa yang ditandatangani kepada bahasa yang dituturkan"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D untuk AR pada iOS",
           "translation": "Terjemahan",
-          "translation.spokenToSigned": "Diucapkan kepada Ditandatangani",
           "translation.signedToSpoken": "Ditandatangani-untuk-Dituturkan"
         },
         "actions": {

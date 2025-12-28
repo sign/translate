@@ -27,21 +27,6 @@
       "browse": "আপনার কম্পিউটার ব্রাউজ করুন",
       "title": "একটি ভিডিও চয়ন করুন"
     },
-    "spoken-to-signed": {
-      "text": "কথ্য ভাষার পাঠ্য",
-      "actions": {
-        "download": "অনুবাদ ডাউনলোড করুন",
-        "copy": "অনুলিপি অনুবাদ",
-        "share": "অনুবাদ শেয়ার করুন"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "মানুষের ভিডিও মডেল লোড হচ্ছে",
-          "generating": "ভিডিও তৈরি করা হচ্ছে"
-        }
-      },
-      "placeholder": "লেখা অন্তর্ভুক্ত করুন"
-    },
     "description": "কাটিং-এজ রিয়েল-টাইম মডেল সহ অনায়াস সাংকেতিক ভাষা অনুবাদ। ",
     "suggestions": {
       "translate-from": "থেকে অনুবাদ করুন",
@@ -62,7 +47,6 @@
         "img": "আমেরিকান সাইন ল্যাঙ্গুয়েজ এবং ইংরেজির মধ্যে লাইভ অনুবাদের উদাহরণ"
       },
       "direction": {
-        "spoken-to-signed": "কথ্য থেকে স্বাক্ষরিত ভাষায় অনুবাদ করুন",
         "signed-to-spoken": "অথবা স্বাক্ষরিত থেকে কথ্য ভাষায়"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D অবতার",
           "avatarUsdz": "iOS-এ AR-এর জন্য 3D অবতার",
           "translation": "অনুবাদ",
-          "translation.spokenToSigned": "কথ্য থেকে স্বাক্ষরিত",
           "translation.signedToSpoken": "সাইন-টু-স্পোকেন"
         },
         "actions": {

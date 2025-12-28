@@ -27,21 +27,6 @@
       "browse": "Kompyuter ichidan tanlash",
       "title": "Videoni tanlang"
     },
-    "spoken-to-signed": {
-      "text": "Og'zaki til matni",
-      "actions": {
-        "download": "Tarjima yuklab olish",
-        "copy": "Tarjimani nusxalash",
-        "share": "Tarjimani ulashish"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Inson video modeli yuklanmoqda",
-          "generating": "Video yaratish"
-        }
-      },
-      "placeholder": "Matnni kiriting"
-    },
     "description": "Haqiqiy vaqtda zamonaviy modellar bilan imo-ishora tilini qiyinchiliksiz tarjima qilish. ",
     "suggestions": {
       "translate-from": "dan tarjima qiling",
@@ -62,7 +47,6 @@
         "img": "Amerika imo-ishora tili va ingliz tili o'rtasidagi jonli tarjimaga misol"
       },
       "direction": {
-        "spoken-to-signed": "Og'zaki tillardan imlo tillariga tarjima qiling",
         "signed-to-spoken": "Yoki imo-ishorali tillardan og'zaki tillarga"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avatar",
           "avatarUsdz": "iOS uchun AR uchun 3D Avatar",
           "translation": "Tarjima",
-          "translation.spokenToSigned": "Gap-to-imzo",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

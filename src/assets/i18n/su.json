@@ -27,21 +27,6 @@
       "browse": "Kotéktak komputer anjeun",
       "title": "Pilih pidéo"
     },
-    "spoken-to-signed": {
-      "text": "Téks Basa Sunda",
-      "actions": {
-        "download": "Unduh Tarjamahan",
-        "copy": "Salin Tarjamahan",
-        "share": "Bagikeun Tarjamahan"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ngamuat modél pidéo manusa",
-          "generating": "Ngahasilkeun video"
-        }
-      },
-      "placeholder": "Lebetkeun téks"
-    },
     "description": "Tarjamahan Basa Isyarat Effortless kalawan Modél Real-Time Motong-Tepi. ",
     "suggestions": {
       "translate-from": "Tarjamahkeun tina",
@@ -62,7 +47,6 @@
         "img": "Conto tarjamahan langsung antara Basa Isyarat Amérika sareng Inggris"
       },
       "direction": {
-        "spoken-to-signed": "Tarjamahkeun tina basa lisan ka basa anu ditandatanganan",
         "signed-to-spoken": "Atawa tina ditandatanganan kana basa lisan"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D pikeun AR dina ios",
           "translation": "Tarjamahan",
-          "translation.spokenToSigned": "Diucapkeun-ka-Ditandatanganan",
           "translation.signedToSpoken": "Ditandatanganan-ka-Diucapkeun"
         },
         "actions": {

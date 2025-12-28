@@ -27,21 +27,6 @@
       "browse": "Selaa tietokonetta",
       "title": "Valitse video"
     },
-    "spoken-to-signed": {
-      "text": "Puhutun kielen teksti",
-      "actions": {
-        "download": "Lataa käännös",
-        "copy": "Kopioi käännös",
-        "share": "Jaa käännös"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ladataan ihmisvideomallia",
-          "generating": "Luodaan videota"
-        }
-      },
-      "placeholder": "Kirjoita teksti"
-    },
     "description": "Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. ",
     "suggestions": {
       "translate-from": "Kääntää",
@@ -62,7 +47,6 @@
         "img": "Esimerkki live-käännöksestä amerikkalaisen viittomakielen ja englannin välillä"
       },
       "direction": {
-        "spoken-to-signed": "Käännä puhutuista viittomakielistä",
         "signed-to-spoken": "Tai viittomakielistä puhuttuihin kieliin"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar AR:lle iOS:ssä",
           "translation": "Käännös",
-          "translation.spokenToSigned": "Puhuttu allekirjoitetulle",
           "translation.signedToSpoken": "Allekirjoitettu puheeksi"
         },
         "actions": {

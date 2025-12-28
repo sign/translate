@@ -27,21 +27,6 @@
       "browse": "Op dyn kompjûter sykje",
       "title": "Kies in fideo"
     },
-    "spoken-to-signed": {
-      "text": "Sprektaal Tekst",
-      "actions": {
-        "download": "Download oersetting",
-        "copy": "Kopiearje oersetting",
-        "share": "Diele oersetting"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Laden fan minsklik fideomodel",
-          "generating": "It generearjen fan fideo"
-        }
-      },
-      "placeholder": "Tekst ynfiere"
-    },
     "description": "Moeiteleaze oersetting fan gebeartetaal mei moderne realtime modellen. ",
     "suggestions": {
       "translate-from": "Oersette fan",
@@ -62,7 +47,6 @@
         "img": "Foarbyld fan live oersetting tusken American Sign Language en Ingelsk"
       },
       "direction": {
-        "spoken-to-signed": "Oersette fan sprutsen nei ûndertekene talen",
         "signed-to-spoken": "Of fan tekentalen nei sprektalen"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar foar AR op iOS",
           "translation": "Oersetting",
-          "translation.spokenToSigned": "Sprekt-oan-ûndertekene",
           "translation.signedToSpoken": "Undertekene-to-Spreken"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Выбрать на компьютере",
       "title": "Выберите видео"
     },
-    "spoken-to-signed": {
-      "text": "Текст на разговорном языке",
-      "actions": {
-        "download": "Скачать перевод",
-        "copy": "Копировать перевод",
-        "share": "Поделиться переводом"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Загрузка видео модели человека",
-          "generating": "Создание видео"
-        }
-      },
-      "placeholder": "Введите текст"
-    },
     "description": "Легкий перевод жестового языка с помощью передовых моделей реального времени. ",
     "suggestions": {
       "translate-from": "Переведи с",
@@ -62,7 +47,6 @@
         "img": "Пример живого перевода между американским языком жестов и английским"
       },
       "direction": {
-        "spoken-to-signed": "Переводить с разговорного языка на язык жестов",
         "signed-to-spoken": "Или с жестового на разговорный язык"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D аватар",
           "avatarUsdz": "3D-аватар для AR на iOS",
           "translation": "Перевод",
-          "translation.spokenToSigned": "Разговорный с подписанным",
           "translation.signedToSpoken": "Подписано для разговора"
         },
         "actions": {

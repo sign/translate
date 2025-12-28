@@ -27,21 +27,6 @@
       "browse": "Procurar no computador",
       "title": "Escolha um vídeo"
     },
-    "spoken-to-signed": {
-      "text": "Texto em idioma falado",
-      "actions": {
-        "download": "Baixar tradução",
-        "copy": "Copiar Tradução",
-        "share": "Compartilhar tradução"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Carregando modelo de vídeo humano",
-          "generating": "Gerando vídeo"
-        }
-      },
-      "placeholder": "Digite o Texto"
-    },
     "description": "Tradução de linguagem de sinais sem esforço com modelos de ponta em tempo real. ",
     "suggestions": {
       "translate-from": "Traduzir de",
@@ -62,7 +47,6 @@
         "img": "Exemplo de tradução ao vivo entre American Sign Language e Inglês"
       },
       "direction": {
-        "spoken-to-signed": "Traduzir de línguas faladas para línguas sinalizadas",
         "signed-to-spoken": "Ou de línguas sinalizadas para línguas faladas"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D para RA no iOS",
           "translation": "Tradução",
-          "translation.spokenToSigned": "Falado para Assinado",
           "translation.signedToSpoken": "Assinado para Falar"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Pārlūkot savu datoru",
       "title": "Izvēlieties videoklipu"
     },
-    "spoken-to-signed": {
-      "text": "Runas valodas teksts",
-      "actions": {
-        "download": "Lejupielādēt tulkojumu",
-        "copy": "Kopēt tulkojumu",
-        "share": "Kopīgot tulkojumu"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Notiek cilvēka video modeļa ielāde",
-          "generating": "Notiek video ģenerēšana"
-        }
-      },
-      "placeholder": "Ievadiet tekstu"
-    },
     "description": "Vienkārša zīmju valodas tulkošana ar moderniem reāllaika modeļiem. ",
     "suggestions": {
       "translate-from": "Tulkot no",
@@ -62,7 +47,6 @@
         "img": "Tiešraides tulkojuma piemērs starp amerikāņu zīmju valodu un angļu valodu"
       },
       "direction": {
-        "spoken-to-signed": "Tulkot no sarunvalodas uz zīmju valodu",
         "signed-to-spoken": "Vai no zīmju valodas līdz runātajām valodām"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D iemiesojums",
           "avatarUsdz": "3D iemiesojums AR operētājsistēmā iOS",
           "translation": "Tulkošana",
-          "translation.spokenToSigned": "Runāts ar parakstu",
           "translation.signedToSpoken": "Parakstīts uz runātu"
         },
         "actions": {

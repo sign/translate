@@ -27,21 +27,6 @@
       "browse": "مرور رایانه",
       "title": "یک ویدیو را انتخاب کنید"
     },
-    "spoken-to-signed": {
-      "text": "متن زبان گفتاری",
-      "actions": {
-        "download": "دانلود ترجمه",
-        "copy": "ترجمه کپی",
-        "share": "ترجمه را به اشتراک بگذارید"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "در حال بارگیری مدل ویدیویی انسانی",
-          "generating": "در حال تولید ویدیو"
-        }
-      },
-      "placeholder": "متن را وارد کنید"
-    },
     "description": "ترجمه بی دردسر زبان اشاره با مدل های پیشرفته در زمان واقعی. ",
     "suggestions": {
       "translate-from": "ترجمه از",
@@ -62,7 +47,6 @@
         "img": "نمونه ای از ترجمه زنده بین زبان اشاره آمریکایی و انگلیسی"
       },
       "direction": {
-        "spoken-to-signed": "از زبان گفتاری به زبان اشاره ترجمه کنید",
         "signed-to-spoken": "یا از زبان های امضا شده به زبان های گفتاری"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "آواتار سه بعدی",
           "avatarUsdz": "آواتار سه بعدی برای AR در iOS",
           "translation": "ترجمه",
-          "translation.spokenToSigned": "گفتاری به امضا شده",
           "translation.signedToSpoken": "امضا شده به گفتار"
         },
         "actions": {

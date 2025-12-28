@@ -27,21 +27,6 @@
       "browse": "Ընտրել համակարգչում",
       "title": "Ընտրեք տեսանյութ"
     },
-    "spoken-to-signed": {
-      "text": "Խոսակցական լեզվի տեքստ",
-      "actions": {
-        "download": "Ներբեռնեք թարգմանությունը",
-        "copy": "Պատճենել թարգմանությունը",
-        "share": "Share Translation"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Մարդկային տեսանյութի մոդելի բեռնում",
-          "generating": "Տեսանյութի գեներացում"
-        }
-      },
-      "placeholder": "Մուտքագրեք Տեքստը"
-    },
     "description": "Ժեստերի լեզվի արագ թարգմանություն իրական ժամանակի ժամանակակից մոդելներով: ",
     "suggestions": {
       "translate-from": "Թարգմանել",
@@ -62,7 +47,6 @@
         "img": "Ամերիկյան ժեստերի լեզվի և անգլերենի կենդանի թարգմանության օրինակ"
       },
       "direction": {
-        "spoken-to-signed": "Թարգմանեք խոսակցականից ժեստերի լեզուների",
         "signed-to-spoken": "Կամ ստորագրվածից մինչև խոսակցական լեզու"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D ավատար",
           "avatarUsdz": "3D ավատար AR-ի համար iOS-ում",
           "translation": "Թարգմանություն",
-          "translation.spokenToSigned": "Խոսված-ստորագրված",
           "translation.signedToSpoken": "Ստորագրված-խոսավոր"
         },
         "actions": {

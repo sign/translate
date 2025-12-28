@@ -27,21 +27,6 @@
       "browse": "ඔබගේ පරිගණකය බ්‍රවුස් කරන්න",
       "title": "වීඩියෝවක් තෝරන්න"
     },
-    "spoken-to-signed": {
-      "text": "කථන භාෂා පෙළ",
-      "actions": {
-        "download": "පරිවර්තනය බාගන්න",
-        "copy": "පරිවර්තනය පිටපත් කරන්න",
-        "share": "පරිවර්තනය බෙදාගන්න"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "මානව වීඩියෝ ආකෘතිය පූරණය කරමින්",
-          "generating": "වීඩියෝ උත්පාදනය"
-        }
-      },
-      "placeholder": "පෙළ ඇතුලත් කරන්න"
-    },
     "description": "අති නවීන තත්‍ය කාලීන ආකෘති සමග වෙහෙසකින් තොරව සංඥා භාෂා පරිවර්තනය. ",
     "suggestions": {
       "translate-from": "වෙතින් පරිවර්තනය කරන්න",
@@ -62,7 +47,6 @@
         "img": "ඇමරිකානු සංඥා භාෂාව සහ ඉංග්‍රීසි අතර සජීවී පරිවර්තනයේ උදාහරණය"
       },
       "direction": {
-        "spoken-to-signed": "කථන භාෂාවෙන් සංඥා භාෂාවට පරිවර්තනය කරන්න",
         "signed-to-spoken": "එසේත් නැතිනම් අත්සන් කළ භාෂාවෙන් කතා කරන භාෂාවලට"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "iOS මත AR සඳහා 3D Avatar",
           "translation": "පරිවර්තනය",
-          "translation.spokenToSigned": "කථනයට අත්සන් කර ඇත",
           "translation.signedToSpoken": "කතා කිරීමට අත්සන් කර ඇත"
         },
         "actions": {

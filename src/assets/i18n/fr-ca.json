@@ -27,21 +27,6 @@
       "browse": "Parcourir les fichiers sur votre ordinateur",
       "title": "Choisissez une vidéo"
     },
-    "spoken-to-signed": {
-      "text": "Texte en langue parlée",
-      "actions": {
-        "download": "Télécharger la traduction",
-        "copy": "Copier la traduction",
-        "share": "Partager la traduction"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Chargement du modèle vidéo humain",
-          "generating": "Génération de vidéo"
-        }
-      },
-      "placeholder": "Entrez du texte"
-    },
     "description": "Traduction en langue des signes sans effort avec des modèles en temps réel de pointe. ",
     "suggestions": {
       "translate-from": "Traduit depuis",
@@ -62,7 +47,6 @@
         "img": "Exemple de traduction en direct entre la langue des signes américaine et l'anglais"
       },
       "direction": {
-        "spoken-to-signed": "Traduire de la langue parlée à la langue des signes",
         "signed-to-spoken": "Ou des langues signées aux langues parlées"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D pour AR sur iOS",
           "translation": "Traduction",
-          "translation.spokenToSigned": "Du parlé au signé",
           "translation.signedToSpoken": "Signé à parlé"
         },
         "actions": {

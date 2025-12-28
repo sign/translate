@@ -27,21 +27,6 @@
       "browse": "Компьютерден карап чыгуу",
       "title": "Видеону тандаңыз"
     },
-    "spoken-to-signed": {
-      "text": "Оозеки тил тексти",
-      "actions": {
-        "download": "Translation Download",
-        "copy": "Котормосун көчүрүү",
-        "share": "Котормо менен бөлүшүү"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Адамдын видео модели жүктөлүүдө",
-          "generating": "Видео түзүлүүдө"
-        }
-      },
-      "placeholder": "Текст киргизиңиз"
-    },
     "description": "Реалдуу убакыт режиминдеги заманбап моделдер менен жаңдоо тилине кыйынчылыксыз котормо. ",
     "suggestions": {
       "translate-from": "дан которуу",
@@ -62,7 +47,6 @@
         "img": "Америкалык жаңдоо тили менен англис тилинин ортосундагы жандуу котормонун мисалы"
       },
       "direction": {
-        "spoken-to-signed": "Кеп тилдерден кол коюлган тилдерге которуңуз",
         "signed-to-spoken": "Же кол коюлган тилдерден сүйлөө тилдерине чейин"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Аватар",
           "avatarUsdz": "iOS'то AR үчүн 3D Аватар",
           "translation": "Translation",
-          "translation.spokenToSigned": "Сүйлөшүп кол коюлган",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

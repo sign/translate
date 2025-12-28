@@ -27,21 +27,6 @@
       "browse": "Dhex baadh kombuyuutarkaaga",
       "title": "Dooro muuqaal"
     },
-    "spoken-to-signed": {
-      "text": "Qoraalka Luuqadda Lagu Hadlo",
-      "actions": {
-        "download": "Soo deji Tarjumaadda",
-        "copy": "Koobi Turjumaada",
-        "share": "La wadaag Turjumaada"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Soodejinaya qaabka muuqaalka dadka",
-          "generating": "Soo saarista muuqaal"
-        }
-      },
-      "placeholder": "Geli Qoraalka"
-    },
     "description": "Turjumaada Luqadda Calaamadaha oo aan Dedaal lahayn oo leh Qaabab-Waqtiga Dhabta ah ee Goynta ",
     "suggestions": {
       "translate-from": "Ka soo tarjun",
@@ -62,7 +47,6 @@
         "img": "Tusaalaha turjumaada tooska ah ee u dhexeeya Luqadda Calaamadaha Ameerika iyo Ingiriisiga"
       },
       "direction": {
-        "spoken-to-signed": "Ka soo tarjun luqadaha lagu hadlo oo saxeex",
         "signed-to-spoken": "Ama laga bilaabo saxeexa ilaa luqadaha lagu hadlo"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar ee AR ee iOS",
           "translation": "Turjumaada",
-          "translation.spokenToSigned": "Looga hadlay-La Saxiixay",
           "translation.signedToSpoken": "Saxiix-ku-hadal"
         },
         "actions": {

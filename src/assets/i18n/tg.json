@@ -27,21 +27,6 @@
       "browse": "Компютери худро ҷустуҷӯ кунед",
       "title": "Видеоро интихоб кунед"
     },
-    "spoken-to-signed": {
-      "text": "Матни забони гуфтугӯӣ",
-      "actions": {
-        "download": "Тарҷумаро зеркашӣ кунед",
-        "copy": "Тарҷумаи нусхабардорӣ",
-        "share": "Тарҷумаро мубодила кунед"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Боркунии модели видеоии инсон",
-          "generating": "Эҷоди видео"
-        }
-      },
-      "placeholder": "Матнро ворид кунед"
-    },
     "description": "Тарҷумаи бемаънӣ бо забони имову ишора бо моделҳои муосири вақти воқеӣ. ",
     "suggestions": {
       "translate-from": "Тарҷума аз",
@@ -62,7 +47,6 @@
         "img": "Намунаи тарҷумаи зинда байни забони имову ишораи амрикоӣ ва англисӣ"
       },
       "direction": {
-        "spoken-to-signed": "Аз забонҳои гуфтугӯӣ ба имову ишора тарҷума кунед",
         "signed-to-spoken": "Ё аз имзо ба забонҳои гуфтугӯӣ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Аватар 3D",
           "avatarUsdz": "Avatar 3D барои AR дар iOS",
           "translation": "Тарҷума",
-          "translation.spokenToSigned": "Гуфтугӯ-ба-имзо",
           "translation.signedToSpoken": "Имзо-ба-сухан"
         },
         "actions": {

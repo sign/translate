@@ -27,21 +27,6 @@
       "browse": "Phenya khomphuta ya hao",
       "title": "Khetha video"
     },
-    "spoken-to-signed": {
-      "text": "Sengoloa sa Puo e Builoeng",
-      "actions": {
-        "download": "Khoasolla Phetolelo",
-        "copy": "Kopitsa Phetolelo",
-        "share": "Arolelana Phetolelo"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "E kenya mofuta oa video oa motho",
-          "generating": "Ho hlahisa video"
-        }
-      },
-      "placeholder": "Kenya Mongolo"
-    },
     "description": "Phetolelo ea Puo ea Matsoho e sa Lekanyetsoang e nang le Meetso ea Nako ea Sebele ea Cutting-Edge. ",
     "suggestions": {
       "translate-from": "Fetolela ho tsoa ho",
@@ -62,7 +47,6 @@
         "img": "Mohlala oa phetolelo e phelang lipakeng tsa Puo ea Matsoho ea Amerika le Senyesemane"
       },
       "direction": {
-        "spoken-to-signed": "Fetolela ho tloha lipuong tse buuoang ho ea ho lipuo tsa matsoho",
         "signed-to-spoken": "Kapa ho tloha lipuong tsa matsoho ho ea ho tse buuoang"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar bakeng sa AR ho iOS",
           "translation": "Phetolelo",
-          "translation.spokenToSigned": "E builoeng-ho-Saenoa",
           "translation.signedToSpoken": "Saennwe-ho-Bua"
         },
         "actions": {

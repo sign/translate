@@ -27,21 +27,6 @@
       "browse": "ຊອກຫາໃນຄອມພິວເຕີ",
       "title": "ເລືອກວິດີໂອ"
     },
-    "spoken-to-signed": {
-      "text": "ຂໍ້ຄວາມພາສາເວົ້າ",
-      "actions": {
-        "download": "ດາວໂຫຼດການແປ",
-        "copy": "ສຳເນົາການແປ",
-        "share": "ແບ່ງປັນການແປ"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "ກຳລັງໂຫຼດຕົວແບບວິດີໂອຂອງມະນຸດ",
-          "generating": "ກຳລັງສ້າງວິດີໂອ"
-        }
-      },
-      "placeholder": "ໃສ່ຂໍ້ຄວາມ"
-    },
     "description": "ການແປພາສາມືບໍ່ສະດວກດ້ວຍຕົວແບບເວລາຈິງທີ່ທັນສະໄໝ. ",
     "suggestions": {
       "translate-from": "ແປຈາກ",
@@ -62,7 +47,6 @@
         "img": "ຕົວຢ່າງການແປສົດລະຫວ່າງພາສາມືອາເມລິກາ ແລະພາສາອັງກິດ"
       },
       "direction": {
-        "spoken-to-signed": "ແປຈາກພາສາເວົ້າເປັນພາສາລາຍເຊັນ",
         "signed-to-spoken": "ຫຼືຈາກລາຍເຊັນເປັນພາສາເວົ້າ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D ຮູບແທນຕົວ",
           "avatarUsdz": "3D Avatar ສໍາລັບ AR ໃນ iOS",
           "translation": "ການແປ",
-          "translation.spokenToSigned": "ເວົ້າກັບເຊັນ",
           "translation.signedToSpoken": "ເຊັນເພື່ອເວົ້າ"
         },
         "actions": {

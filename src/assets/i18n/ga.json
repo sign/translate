@@ -27,21 +27,6 @@
       "browse": "Brabhsáil do ríomhaire",
       "title": "Roghnaigh físeán"
     },
-    "spoken-to-signed": {
-      "text": "Téacs Teanga Labhartha",
-      "actions": {
-        "download": "Íosluchtaigh aistriúchán béarla",
-        "copy": "Cóipeáil Aistriúchán",
-        "share": "Comhroinn Aistriúchán"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Íosluchtaigh físeán múnla daonna",
-          "generating": "Físeán a ghiniúint"
-        }
-      },
-      "placeholder": "Iontráil Téacs"
-    },
     "description": "Aistriúchán Teanga Chomharthaíochta Gan stró le Múnlaí Ceannródaíocha Fíor-Ama. ",
     "suggestions": {
       "translate-from": "Aistrigh ó",
@@ -62,7 +47,6 @@
         "img": "Sampla d’aistriúchán beo idir Teanga Chomharthaíochta Mheiriceá agus Béarla"
       },
       "direction": {
-        "spoken-to-signed": "Aistrigh ó theangacha labhartha go teangacha sínithe",
         "signed-to-spoken": "Nó ó theangacha sínithe go teanga labhartha"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Cluiche avatar 3D",
           "avatarUsdz": "Íosluchtaigh avatar 3d le haghaidh ios",
           "translation": "Aistriúchán",
-          "translation.spokenToSigned": "Labhairt le Sínithe",
           "translation.signedToSpoken": "Sínithe go Labhartha"
         },
         "actions": {

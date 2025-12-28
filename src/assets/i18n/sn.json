@@ -27,21 +27,6 @@
       "browse": "Tsvaga pakombiyuta yako",
       "title": "Sarudza vhidhiyo"
     },
-    "spoken-to-signed": {
-      "text": "Mutauro Unotaurwa",
-      "actions": {
-        "download": "Dhaunirodha Shanduro",
-        "copy": "Copy Translation",
-        "share": "Goverana Shanduro"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Kurodha modhi yevhidhiyo yemunhu",
-          "generating": "Kugadzira vhidhiyo"
-        }
-      },
-      "placeholder": "Enter Text"
-    },
     "description": "Kusashanda Kushandura Mutauro Wemasaini neCutting-Edge Real-Time Models. ",
     "suggestions": {
       "translate-from": "Shandura kubva",
@@ -62,7 +47,6 @@
         "img": "Muenzaniso weshanduro iripo pakati peMutauro Wemasaini wekuAmerica neChirungu"
       },
       "direction": {
-        "spoken-to-signed": "Shandura kubva mumitauro yekutaura kuenda kumasaini",
         "signed-to-spoken": "Kana kuti kubva kumitauro yemasaini kuenda kune inotaurika"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar yeAR paIOS",
           "translation": "Shanduro",
-          "translation.spokenToSigned": "Kutaura-kune-Kusaina",
           "translation.signedToSpoken": "Saina-kune-Kutaura"
         },
         "actions": {

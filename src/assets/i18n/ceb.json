@@ -27,21 +27,6 @@
       "browse": "I-browse ang imong computer",
       "title": "Pagpili og video"
     },
-    "spoken-to-signed": {
-      "text": "Gisulti nga Pinulongan nga Teksto",
-      "actions": {
-        "download": "Pag-download sa Hubad",
-        "copy": "Kopyaha ang Hubad",
-        "share": "Ipakigbahin ang Hubad"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Nag-load sa modelo sa video sa tawo",
-          "generating": "Paghimo og video"
-        }
-      },
-      "placeholder": "Pagsulod sa Teksto"
-    },
     "description": "Walay Kusog nga Paghubad sa Sign Language uban sa Cutting-Edge Real-Time nga mga Modelo. ",
     "suggestions": {
       "translate-from": "Hubad gikan sa",
@@ -62,7 +47,6 @@
         "img": "Pananglitan sa live nga paghubad tali sa American Sign Language ug English"
       },
       "direction": {
-        "spoken-to-signed": "Paghubad gikan sa sinultihan ngadto sa signed nga mga pinulongan",
         "signed-to-spoken": "O gikan sa gipirmahan ngadto sa gisulti nga mga pinulongan"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D nga Avatar",
           "avatarUsdz": "3D Avatar alang sa AR sa iOS",
           "translation": "Paghubad",
-          "translation.spokenToSigned": "Gisulti-sa-Gipirmahan",
           "translation.signedToSpoken": "Gipirmahan-sa-Gisulti"
         },
         "actions": {

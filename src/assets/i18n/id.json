@@ -27,21 +27,6 @@
       "browse": "Jelajahi komputer",
       "title": "Pilih video"
     },
-    "spoken-to-signed": {
-      "text": "Teks Bahasa Lisan",
-      "actions": {
-        "download": "Unduh Terjemahan",
-        "copy": "Salin Terjemahan",
-        "share": "Bagikan Terjemahan"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Memuat model video manusia",
-          "generating": "Membuat video"
-        }
-      },
-      "placeholder": "Masukkan teks"
-    },
     "description": "Terjemahan Bahasa Isyarat yang Mudah dengan Model Real-Time Mutakhir. ",
     "suggestions": {
       "translate-from": "Diterjemahkan dari",
@@ -62,7 +47,6 @@
         "img": "Contoh terjemahan langsung antara Bahasa Isyarat Amerika dan Bahasa Inggris"
       },
       "direction": {
-        "spoken-to-signed": "Terjemahkan dari bahasa lisan ke bahasa isyarat",
         "signed-to-spoken": "Atau dari bahasa isyarat ke bahasa lisan"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D untuk AR di iOS",
           "translation": "Terjemahan",
-          "translation.spokenToSigned": "Diucapkan-untuk-Ditandatangani",
           "translation.signedToSpoken": "Ditandatangani-untuk-Diucapkan"
         },
         "actions": {

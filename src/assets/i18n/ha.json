@@ -27,21 +27,6 @@
       "browse": "Binciki kwamfutarka",
       "title": "Zaɓi bidiyo"
     },
-    "spoken-to-signed": {
-      "text": "Rubutun Harshen Magana",
-      "actions": {
-        "download": "Zazzage Fassara",
-        "copy": "Kwafi Fassara",
-        "share": "Raba Fassarar"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ana loda samfurin bidiyo na ɗan adam",
-          "generating": "Samar da bidiyo"
-        }
-      },
-      "placeholder": "Shigar da Rubutu"
-    },
     "description": "Fassarar Harshen Alamu mara Ƙoƙari tare da Samfuran Yanke-Edge na Gaskiya. ",
     "suggestions": {
       "translate-from": "Fassara daga",
@@ -62,7 +47,6 @@
         "img": "Misalin fassarar kai tsaye tsakanin Harshen Alamun Amurka da Ingilishi"
       },
       "direction": {
-        "spoken-to-signed": "Fassara daga magana zuwa harsunan sa hannu",
         "signed-to-spoken": "Ko daga sa hannu zuwa harsunan magana"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar don AR akan iOS",
           "translation": "Fassara",
-          "translation.spokenToSigned": "Magana-da- Sa hannu",
           "translation.signedToSpoken": "Sa hannu-da-Magana"
         },
         "actions": {

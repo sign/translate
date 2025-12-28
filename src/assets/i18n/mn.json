@@ -27,21 +27,6 @@
       "browse": "Компьютерээс хайх",
       "title": "Видео сонгоно уу"
     },
-    "spoken-to-signed": {
-      "text": "Ярианы хэлний текст",
-      "actions": {
-        "download": "Орчуулга татаж авах",
-        "copy": "Орчуулга хуулах",
-        "share": "Орчуулга хуваалцах"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Хүний видео загварыг ачаалж байна",
-          "generating": "Видео үүсгэж байна"
-        }
-      },
-      "placeholder": "Текст оруулна уу"
-    },
     "description": "Бодит цагийн хамгийн сүүлийн үеийн загвар бүхий дохионы хэлний орчуулга. ",
     "suggestions": {
       "translate-from": "-аас орчуулах",
@@ -62,7 +47,6 @@
         "img": "Америкийн дохионы хэл болон англи хэлний шууд орчуулгын жишээ"
       },
       "direction": {
-        "spoken-to-signed": "Ярианы хэлнээс дохионы хэл рүү орчуулах",
         "signed-to-spoken": "Эсвэл гарын үсэг зурсан хэлнээс ярианы хэл рүү"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D аватар",
           "avatarUsdz": "iOS дээрх AR-д зориулсан 3D Avatar",
           "translation": "Орчуулга",
-          "translation.spokenToSigned": "Гарын үсэг зурсан",
           "translation.signedToSpoken": "Гарын үсэг зурсан"
         },
         "actions": {

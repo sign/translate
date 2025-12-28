@@ -27,21 +27,6 @@
       "browse": "Răsfoiți pe computer",
       "title": "Alegeți un videoclip"
     },
-    "spoken-to-signed": {
-      "text": "Text în limba vorbită",
-      "actions": {
-        "download": "Descărcați traducerea",
-        "copy": "Copiați traducerea",
-        "share": "Partajați traducerea"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Se încarcă modelul video uman",
-          "generating": "Generare video"
-        }
-      },
-      "placeholder": "Introduceți text"
-    },
     "description": "Traducere fără efort în limbajul semnelor cu modele de ultimă oră în timp real. ",
     "suggestions": {
       "translate-from": "Tradu din",
@@ -62,7 +47,6 @@
         "img": "Exemplu de traducere live între limbajul semnelor american și engleză"
       },
       "direction": {
-        "spoken-to-signed": "Traduceți din limbile vorbite în limbile semnate",
         "signed-to-spoken": "Sau de la limbile semnate la cele vorbite"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D pentru AR pe iOS",
           "translation": "Traducere",
-          "translation.spokenToSigned": "Vorbite la semnat",
           "translation.signedToSpoken": "Semnat la vorbit"
         },
         "actions": {

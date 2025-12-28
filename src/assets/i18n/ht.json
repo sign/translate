@@ -27,21 +27,6 @@
       "browse": "Navige sou òdinatè w lan",
       "title": "Chwazi yon videyo"
     },
-    "spoken-to-signed": {
-      "text": "Tèks langaj pale",
-      "actions": {
-        "download": "Telechaje Tradiksyon",
-        "copy": "Kopi Tradiksyon",
-        "share": "Pataje tradiksyon"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Chaje modèl videyo imen",
-          "generating": "Jenere videyo"
-        }
-      },
-      "placeholder": "Antre tèks"
-    },
     "description": "Tradiksyon lang siy san efò ak modèl dènye kri an tan reyèl. ",
     "suggestions": {
       "translate-from": "Tradui soti nan",
@@ -62,7 +47,6 @@
         "img": "Egzanp tradiksyon an dirèk ant Lang siy Ameriken ak Angle"
       },
       "direction": {
-        "spoken-to-signed": "Tradui soti nan lang pale ak siyen",
         "signed-to-spoken": "Oswa soti nan lang siyen yo pale"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar pou AR sou iOS",
           "translation": "Tradiksyon",
-          "translation.spokenToSigned": "Pale-a-siyen",
           "translation.signedToSpoken": "Siyen-pou-pale"
         },
         "actions": {

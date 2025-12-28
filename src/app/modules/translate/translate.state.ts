@@ -6,7 +6,6 @@ import {
   CopySpokenLanguageText,
   DescribeSignWritingSign,
   DownloadSignedLanguageVideo,
-  FlipTranslationDirection,
   SetInputMode,
   SetSignedLanguageVideo,
   SetSignWritingText,
@@ -39,7 +38,6 @@ export interface SignWritingObj {
 }
 
 export interface TranslateStateModel {
-  spokenToSigned: boolean;
   inputMode: InputMode;
 
   spokenLanguage: string;
@@ -57,7 +55,6 @@ export interface TranslateStateModel {
 }
 
 const initialState: TranslateStateModel = {
-  spokenToSigned: false,
   inputMode: 'webcam',
 
   spokenLanguage: 'en',
@@ -178,39 +175,6 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(ChangeTranslation, {cancelUncompleted: true})
   changeTranslation({getState, patchState, dispatch}: StateContext<TranslateStateModel>): Observable<any> {
-    const {
-      spokenToSigned,
-      spokenLanguage,
-      signedLanguage,
-      detectedLanguage,
-      spokenLanguageText,
-      spokenLanguageSentences,
-    } = getState();
-    if (spokenToSigned) {
-      patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
-
-      const trimmedSpokenLanguageText = spokenLanguageText.trim();
-      if (!trimmedSpokenLanguageText) {
-        patchState({signedLanguagePose: null, signWriting: []});
-      } else {
-        const actualSpokenLanguage = spokenLanguage || detectedLanguage;
-        const path = this.service.translateSpokenToSigned(
-          trimmedSpokenLanguageText,
-          actualSpokenLanguage,
-          signedLanguage
-        );
-        patchState({signedLanguagePose: path});
-        return this.swService
-          .translateSpokenToSignWriting(
-            trimmedSpokenLanguageText,
-            spokenLanguageSentences,
-            actualSpokenLanguage,
-            signedLanguage
-          )
-          .pipe(tap(({text}) => dispatch(new SetSignWritingText(text.split(' ')))));
-      }
-    }
-
     //edit here
 
     return EMPTY;
@@ -218,10 +182,7 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(UploadPoseFile)
   uploadPoseFile({getState, patchState}: StateContext<TranslateStateModel>, {url}: UploadPoseFile): void {
-    const {spokenToSigned} = getState();
-    if (spokenToSigned) {
-      patchState({signedLanguagePose: url, signedLanguageVideo: initialState.signedLanguageVideo});
-    }
+    patchState({signedLanguagePose: url, signedLanguageVideo: initialState.signedLanguageVideo});
   }
 
   @Action(CopySignedLanguageVideo)

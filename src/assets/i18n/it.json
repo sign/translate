@@ -27,21 +27,6 @@
       "browse": "Cerca sul computer",
       "title": "Scegli un video"
     },
-    "spoken-to-signed": {
-      "text": "Testo in lingua parlata",
-      "actions": {
-        "download": "Scarica traduzione",
-        "copy": "Copia traduzione",
-        "share": "Condividi traduzione"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Caricamento del modello video umano",
-          "generating": "Generazione video"
-        }
-      },
-      "placeholder": "Inserire il testo"
-    },
     "description": "Traduzione semplificata della lingua dei segni con modelli in tempo reale all'avanguardia. ",
     "suggestions": {
       "translate-from": "Tradotto da",
@@ -62,7 +47,6 @@
         "img": "Esempio di traduzione dal vivo tra la lingua dei segni americana e l'inglese"
       },
       "direction": {
-        "spoken-to-signed": "Traduci dalle lingue parlate a quelle dei segni",
         "signed-to-spoken": "O dalle lingue dei segni a quelle parlate"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D per AR su iOS",
           "translation": "Traduzione",
-          "translation.spokenToSigned": "Da parlato a firmato",
           "translation.signedToSpoken": "Firmato a parlato"
         },
         "actions": {

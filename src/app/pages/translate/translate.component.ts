@@ -25,14 +25,11 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   private meta = inject(Meta);
   private title = inject(Title);
 
-  spokenToSigned$: Observable<boolean>;
-
   isMobile: MediaQueryList;
 
   constructor() {
     super();
 
-    this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
     this.isMobile = this.mediaMatcher.matchMedia('screen and (max-width: 599px)');
 
     // Default settings
@@ -57,16 +54,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
             },
             'name=description'
           );
-        }),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
-
-    this.spokenToSigned$
-      .pipe(
-        filter(spokenToSigned => !spokenToSigned),
-        tap(() => {
-          this.store.dispatch(new SetSetting('drawSignWriting', true));
         }),
         takeUntil(this.ngUnsubscribe)
       )

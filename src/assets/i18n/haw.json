@@ -27,21 +27,6 @@
       "browse": "Browse your computer",
       "title": "E koho i kahi wikiō"
     },
-    "spoken-to-signed": {
-      "text": "Palapala ʻŌlelo Haʻiʻōlelo",
-      "actions": {
-        "download": "Hoʻoiho i ka unuhi",
-        "copy": "E kope i ka unuhi",
-        "share": "Kaʻana unuhi"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ke hoʻouka nei i ke kumu hoʻohālike wikiō kanaka",
-          "generating": "Hoʻopuka wikiō"
-        }
-      },
-      "placeholder": "E komo i ke kikokikona"
-    },
     "description": "ʻO ka unuhi ʻōlelo hōʻailona ʻoluʻolu me nā hiʻohiʻona ʻokiʻoki i ka manawa maoli. ",
     "suggestions": {
       "translate-from": "Unuhi mai",
@@ -62,7 +47,6 @@
         "img": "Ka laʻana o ka unuhi ola ma waena o ka ʻōlelo hōʻailona ʻAmelika a me ka ʻōlelo Pelekania"
       },
       "direction": {
-        "spoken-to-signed": "Unuhi mai ka ʻōlelo ʻōlelo i nā ʻōlelo pūlima",
         "signed-to-spoken": "A i ʻole mai i pūlima ʻia i nā ʻōlelo ʻōlelo"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar no AR ma iOS",
           "translation": "Unuhi",
-          "translation.spokenToSigned": "ʻŌlelo-i-kaulima",
           "translation.signedToSpoken": "Kaulima-i-Spoken"
         },
         "actions": {

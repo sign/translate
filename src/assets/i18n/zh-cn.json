@@ -27,21 +27,6 @@
       "browse": "浏览您的计算机",
       "title": "选择一个视频"
     },
-    "spoken-to-signed": {
-      "text": "口语文本",
-      "actions": {
-        "download": "下载翻译",
-        "copy": "复制翻译",
-        "share": "分享翻译"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "加载人类视频模型",
-          "generating": "生成视频"
-        }
-      },
-      "placeholder": "输入文字"
-    },
     "description": "使用尖端实时模型轻松进行手语翻译。",
     "suggestions": {
       "translate-from": "翻译自",
@@ -62,7 +47,6 @@
         "img": "美国手语和英语之间的实时翻译示例"
       },
       "direction": {
-        "spoken-to-signed": "从口语翻译成手语",
         "signed-to-spoken": "或从手语到口语"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D头像",
           "avatarUsdz": "iOS 上的 AR 3D 头像",
           "translation": "翻译",
-          "translation.spokenToSigned": "口语签名",
           "translation.signedToSpoken": "口语签名"
         },
         "actions": {

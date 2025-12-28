@@ -27,21 +27,6 @@
       "browse": "זוּך דײַן קאָמפּוּטער",
       "title": "קלייַבן אַ ווידעא"
     },
-    "spoken-to-signed": {
-      "text": "גערעדט שפּראַך טעקסט",
-      "actions": {
-        "download": "אראפקאפיע איבערזעצונג",
-        "copy": "קאָפּי איבערזעצונג",
-        "share": "ייַנטיילן איבערזעצונג"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "לאָודינג מענטש ווידעא מאָדעל",
-          "generating": "דזשענערייטינג ווידעא"
-        }
-      },
-      "placeholder": "אַרייַן טעקסט"
-    },
     "description": "עפערטלאַס איבערזעצונג פון צייכן שפּראַך מיט פאַקטיש-צייט מאָדעלס. ",
     "suggestions": {
       "translate-from": "איבערזעצן פון",
@@ -62,7 +47,6 @@
         "img": "בייַשפּיל פון לעבן איבערזעצונג צווישן אמעריקאנער צייכן שפּראַך און ענגליש"
       },
       "direction": {
-        "spoken-to-signed": "איבערזעצן פון גערעדטע צו געחתמעטענע שפראכן",
         "signed-to-spoken": "אָדער פון געחתמעט צו גערעדט שפּראַכן"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3 ד אַוואַטאַר",
           "avatarUsdz": "3D Avatar פֿאַר AR אויף יאָס",
           "translation": "איבערזעצונג",
-          "translation.spokenToSigned": "גערעדט-צו-געחתמעט",
           "translation.signedToSpoken": "געחתמעט-צו-גערעדט"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "ኮምፒውተርዎን ያስሱ",
       "title": "ቪዲዮ ይምረጡ"
     },
-    "spoken-to-signed": {
-      "text": "የንግግር ቋንቋ ጽሑፍ",
-      "actions": {
-        "download": "ትርጉም አውርድ",
-        "copy": "ትርጉም ቅዳ",
-        "share": "አጋራ ትርጉም"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "የሰው ቪዲዮ ሞዴል በመጫን ላይ",
-          "generating": "ቪዲዮ በማመንጨት ላይ"
-        }
-      },
-      "placeholder": "ጽሑፍ ያስገቡ"
-    },
     "description": "ልፋት የሌለበት የምልክት ቋንቋ ትርጉም በእውነተኛ ጊዜ ሞዴሎች። ",
     "suggestions": {
       "translate-from": "ከ ተርጉም።",
@@ -62,7 +47,6 @@
         "img": "በአሜሪካ የምልክት ቋንቋ እና በእንግሊዝኛ መካከል የቀጥታ ትርጉም ምሳሌ"
       },
       "direction": {
-        "spoken-to-signed": "ከተነገረ ወደ ፊርማ ቋንቋዎች ተርጉም።",
         "signed-to-spoken": "ወይም ከተፈረመበት እስከ የንግግር ቋንቋዎች"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D አምሳያ",
           "avatarUsdz": "3D Avatar ለ AR በ iOS ላይ",
           "translation": "ትርጉም",
-          "translation.spokenToSigned": "የተነገረ-የተፈረመ",
           "translation.signedToSpoken": "የተፈረመ-ለመናገር"
         },
         "actions": {

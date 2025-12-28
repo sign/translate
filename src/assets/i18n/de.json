@@ -27,21 +27,6 @@
       "browse": "Computer durchsuchen",
       "title": "Wählen Sie ein Video aus"
     },
-    "spoken-to-signed": {
-      "text": "Text in gesprochener Sprache",
-      "actions": {
-        "download": "Übersetzung herunterladen",
-        "copy": "Übersetzung kopieren",
-        "share": "Übersetzung teilen"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Menschliches Videomodell wird geladen",
-          "generating": "Video generieren"
-        }
-      },
-      "placeholder": "Text eingeben"
-    },
     "description": "Mühelose Übersetzung in Gebärdensprache mit modernsten Echtzeitmodellen. ",
     "suggestions": {
       "translate-from": "Übersetzen von",
@@ -62,7 +47,6 @@
         "img": "Beispiel einer Live-Übersetzung zwischen Amerikanischer Gebärdensprache und Englisch"
       },
       "direction": {
-        "spoken-to-signed": "Übersetzen Sie von gesprochenen in Gebärdensprachen",
         "signed-to-spoken": "Oder von Gebärden- zu Lautsprachen"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D-Avatar",
           "avatarUsdz": "3D-Avatar für AR auf iOS",
           "translation": "Übersetzung",
-          "translation.spokenToSigned": "Gesprochen-zu-Signiert",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

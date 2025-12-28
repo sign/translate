@@ -27,21 +27,6 @@
       "browse": "Выбрать на компьютере",
       "title": "Wideo saýlaň"
     },
-    "spoken-to-signed": {
-      "text": "Gepleşik diliniň teksti",
-      "actions": {
-        "download": "Terjimäni göçürip al",
-        "copy": "Terjimäni göçüriň",
-        "share": "Terjimäni paýlaş"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Adam wideo modelini ýüklemek",
-          "generating": "Wideo döretmek"
-        }
-      },
-      "placeholder": "Tekst giriziň"
-    },
     "description": "“Cutting-Edge” real wagt modelleri bilen yhlasly dil diliniň terjimesi. ",
     "suggestions": {
       "translate-from": "Terjime",
@@ -62,7 +47,6 @@
         "img": "Amerikan alamat dili bilen iňlis diliniň arasynda göni terjime edilmeginiň mysaly"
       },
       "direction": {
-        "spoken-to-signed": "Gepleşiklerden gol çekilen dillere terjime ediň",
         "signed-to-spoken": "Ora-da gol çekilen dillerden başlap"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Awatar",
           "avatarUsdz": "IOS-da AR üçin 3D Awatar",
           "translation": "Terjime",
-          "translation.spokenToSigned": "Gepleşikden gol çekildi",
           "translation.signedToSpoken": "Gol çekildi"
         },
         "actions": {

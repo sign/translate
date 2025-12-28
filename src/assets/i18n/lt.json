@@ -27,21 +27,6 @@
       "browse": "Naršykite kompiuteryje",
       "title": "Pasirinkite vaizdo įrašą"
     },
-    "spoken-to-signed": {
-      "text": "Šnekamosios kalbos tekstas",
-      "actions": {
-        "download": "Atsisiųskite vertimą",
-        "copy": "Kopijuoti vertimą",
-        "share": "Pasidalinti vertimu"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Įkeliamas žmogaus vaizdo modelis",
-          "generating": "Kuriamas vaizdo įrašas"
-        }
-      },
-      "placeholder": "Įveskite tekstą"
-    },
     "description": "Nesudėtingas vertimas į gestų kalbą naudojant pažangiausius realiojo laiko modelius. ",
     "suggestions": {
       "translate-from": "Išversti iš",
@@ -62,7 +47,6 @@
         "img": "Tiesioginio vertimo iš Amerikos gestų kalbos į anglų kalbą pavyzdys"
       },
       "direction": {
-        "spoken-to-signed": "Versti iš šnekamųjų į gestų kalbas",
         "signed-to-spoken": "Arba nuo gestų iki šnekamųjų kalbų"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avataras",
           "avatarUsdz": "3D avataras, skirtas AR sistemoje „iOS“.",
           "translation": "Vertimas",
-          "translation.spokenToSigned": "Pasisakyta pasirašytinai",
           "translation.signedToSpoken": "Pasirašyta į kalbą"
         },
         "actions": {

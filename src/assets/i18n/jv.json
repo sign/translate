@@ -27,21 +27,6 @@
       "browse": "Tlusuri komputer",
       "title": "Pilih video"
     },
-    "spoken-to-signed": {
-      "text": "Teks Basa Jawi",
-      "actions": {
-        "download": "Download Terjemahan",
-        "copy": "Salin Terjemahan",
-        "share": "Nuduhake Terjemahan"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Loading model video manungsa",
-          "generating": "Nggawe video"
-        }
-      },
-      "placeholder": "Ketik Teks"
-    },
     "description": "Terjemahan Basa Isyarat Tanpa Usaha kanthi Model-Model Wektu Nyata. ",
     "suggestions": {
       "translate-from": "Nerjemahake saka",
@@ -62,7 +47,6 @@
         "img": "Conto terjemahan langsung antarane American Sign Language lan Inggris"
       },
       "direction": {
-        "spoken-to-signed": "Terjemahake saka basa lisan menyang basa teken",
         "signed-to-spoken": "Utawa saka mlebu menyang basa lisan"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D kanggo AR ing iOS",
           "translation": "Ngartekne",
-          "translation.spokenToSigned": "Spoken-to-Signed",
           "translation.signedToSpoken": "Mlebu-kanggo-Spoken"
         },
         "actions": {

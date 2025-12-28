@@ -27,21 +27,6 @@
       "browse": "Leita í tölvunni",
       "title": "Veldu myndband"
     },
-    "spoken-to-signed": {
-      "text": "Talað tungumál texti",
-      "actions": {
-        "download": "Sækja þýðingu",
-        "copy": "Afrita þýðing",
-        "share": "Deila þýðingu"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Hleður mannlegt myndbandslíkan",
-          "generating": "Búa til myndband"
-        }
-      },
-      "placeholder": "Sláðu inn texta"
-    },
     "description": "Áreynslulaus táknmálsþýðing með nýjustu rauntímalíkönum. ",
     "suggestions": {
       "translate-from": "Þýða úr",
@@ -62,7 +47,6 @@
         "img": "Dæmi um lifandi þýðingu á milli amerísks táknmáls og ensku"
       },
       "direction": {
-        "spoken-to-signed": "Þýða úr töluðu yfir á táknmál",
         "signed-to-spoken": "Eða frá táknmáli yfir í talað tungumál"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar fyrir AR á iOS",
           "translation": "Þýðing",
-          "translation.spokenToSigned": "Talað við-undirritað",
           "translation.signedToSpoken": "Undirritaður til að tala"
         },
         "actions": {

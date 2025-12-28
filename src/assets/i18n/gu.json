@@ -27,21 +27,6 @@
       "browse": "તમારા કમ્પ્યુટરમાં બ્રાઉઝ કરો",
       "title": "વિડિઓ પસંદ કરો"
     },
-    "spoken-to-signed": {
-      "text": "સ્પોકન લેંગ્વેજ ટેક્સ્ટ",
-      "actions": {
-        "download": "અનુવાદ ડાઉનલોડ કરો",
-        "copy": "અનુવાદની નકલ કરો",
-        "share": "અનુવાદ શેર કરો"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "માનવ વિડિઓ મૉડલ લોડ કરી રહ્યું છે",
-          "generating": "વિડિયો જનરેટ કરી રહ્યાં છીએ"
-        }
-      },
-      "placeholder": "ટેક્સ્ટ દાખલ કરો"
-    },
     "description": "કટીંગ-એજ રીઅલ-ટાઇમ મોડલ્સ સાથે સહેલો સાઇન લેંગ્વેજ અનુવાદ. ",
     "suggestions": {
       "translate-from": "થી અનુવાદ કરો",
@@ -62,7 +47,6 @@
         "img": "અમેરિકન સાઇન લેંગ્વેજ અને અંગ્રેજી વચ્ચે જીવંત અનુવાદનું ઉદાહરણ"
       },
       "direction": {
-        "spoken-to-signed": "બોલાતી ભાષામાંથી સહી કરેલી ભાષાઓમાં અનુવાદ કરો",
         "signed-to-spoken": "અથવા હસ્તાક્ષરિતથી બોલાતી ભાષાઓમાં"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D અવતાર",
           "avatarUsdz": "iOS પર AR માટે 3D અવતાર",
           "translation": "અનુવાદ",
-          "translation.spokenToSigned": "સ્પોકન ટુ સહી કરેલ",
           "translation.signedToSpoken": "સાઇન-ટુ-સ્પોકન"
         },
         "actions": {

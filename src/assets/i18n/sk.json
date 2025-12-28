@@ -27,21 +27,6 @@
       "browse": "Prehliadať počítač",
       "title": "Vyberte video"
     },
-    "spoken-to-signed": {
-      "text": "Text v hovorenom jazyku",
-      "actions": {
-        "download": "Stiahnuť Preklad",
-        "copy": "Kopírovať preklad",
-        "share": "Zdieľať preklad"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Načítava sa model ľudského videa",
-          "generating": "Generovanie videa"
-        }
-      },
-      "placeholder": "Zadajte text"
-    },
     "description": "Preklad posunkovej reči bez námahy so špičkovými modelmi v reálnom čase. ",
     "suggestions": {
       "translate-from": "Preložiť z",
@@ -62,7 +47,6 @@
         "img": "Príklad živého prekladu medzi americkým posunkovým jazykom a angličtinou"
       },
       "direction": {
-        "spoken-to-signed": "Preklad z hovoreného do posunkového jazyka",
         "signed-to-spoken": "Alebo od podpísaných po hovorené jazyky"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avatar",
           "avatarUsdz": "3D Avatar pre AR na iOS",
           "translation": "Preklad",
-          "translation.spokenToSigned": "Hovorené podpísané",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

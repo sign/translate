@@ -27,21 +27,6 @@
       "browse": "Browse your computer",
       "title": "Choose a video"
     },
-    "spoken-to-signed": {
-      "text": "Spoken Language Text",
-      "actions": {
-        "download": "Download Translation",
-        "copy": "Copy Translation",
-        "share": "Share Translation"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Loading human video model",
-          "generating": "Generating video"
-        }
-      },
-      "placeholder": "Enter Text"
-    },
     "description": "Effortless Sign Language Translation with Cutting-Edge Real-Time Models. Translate Sign Language instantly on desktop and mobile.",
     "suggestions": {
       "translate-from": "Translate from",
@@ -62,7 +47,6 @@
         "img": "Example of live translation between American Sign Language and English"
       },
       "direction": {
-        "spoken-to-signed": "Translate from spoken to signed languages",
         "signed-to-spoken": "Or from signed to spoken languages"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar for AR on iOS",
           "translation": "Translation",
-          "translation.spokenToSigned": "Spoken-to-Signed",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

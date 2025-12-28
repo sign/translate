@@ -27,21 +27,6 @@
       "browse": "Sirvi arvutit",
       "title": "Valige video"
     },
-    "spoken-to-signed": {
-      "text": "Kõnekeelne tekst",
-      "actions": {
-        "download": "Laadige alla tõlge",
-        "copy": "Kopeeri tõlge",
-        "share": "Jaga tõlget"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Inimese videomudeli laadimine",
-          "generating": "Video genereerimine"
-        }
-      },
-      "placeholder": "Sisesta tekst"
-    },
     "description": "Lihtne viipekeelte tõlge tipptasemel reaalajas mudelitega. ",
     "suggestions": {
       "translate-from": "Tõlgi keelest",
@@ -62,7 +47,6 @@
         "img": "Näide otsetõlkest Ameerika viipekeele ja inglise keele vahel"
       },
       "direction": {
-        "spoken-to-signed": "Tõlkige kõnekeeltest viipekeeltesse",
         "signed-to-spoken": "Või viipekeelest kõnekeeleni"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D-avatar AR jaoks iOS-is",
           "translation": "Tõlge",
-          "translation.spokenToSigned": "Räägitud allkirjaga",
           "translation.signedToSpoken": "Signeeritud kõneks"
         },
         "actions": {

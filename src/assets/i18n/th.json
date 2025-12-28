@@ -27,21 +27,6 @@
       "browse": "เรียกดูคอมพิวเตอร์",
       "title": "เลือกวิดีโอ"
     },
-    "spoken-to-signed": {
-      "text": "ข้อความภาษาพูด",
-      "actions": {
-        "download": "ดาวน์โหลดการแปล",
-        "copy": "คัดลอกการแปล",
-        "share": "แบ่งปันการแปล"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "กำลังโหลดโมเดลวิดีโอของมนุษย์",
-          "generating": "กำลังสร้างวิดีโอ"
-        }
-      },
-      "placeholder": "ป้อนข้อความ"
-    },
     "description": "การแปลภาษามือที่ง่ายดายด้วยโมเดลแบบเรียลไทม์ที่ทันสมัย ",
     "suggestions": {
       "translate-from": "แปลจาก",
@@ -62,7 +47,6 @@
         "img": "ตัวอย่างการแปลสดระหว่างภาษามือแบบอเมริกันและภาษาอังกฤษ"
       },
       "direction": {
-        "spoken-to-signed": "แปลจากภาษาพูดเป็นภาษามือ",
         "signed-to-spoken": "หรือจากที่ลงนามเป็นภาษาพูด"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "อวตารสามมิติ",
           "avatarUsdz": "3D Avatar สำหรับ AR บน iOS",
           "translation": "การแปล",
-          "translation.spokenToSigned": "พูดเพื่อลงนาม",
           "translation.signedToSpoken": "ลงนามเพื่อพูด"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Blaai deur jou rekenaar",
       "title": "Kies 'n video"
     },
-    "spoken-to-signed": {
-      "text": "Gesproke Taalteks",
-      "actions": {
-        "download": "Laai vertaling af",
-        "copy": "Kopieer vertaling",
-        "share": "Deel vertaling"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Laai tans menslike videomodel",
-          "generating": "Genereer video"
-        }
-      },
-      "placeholder": "Voer teks in"
-    },
     "description": "Moeitelose gebaretaalvertaling met die nuutste intydse modelle. ",
     "suggestions": {
       "translate-from": "Vertaal uit",
@@ -62,7 +47,6 @@
         "img": "Voorbeeld van lewendige vertaling tussen Amerikaanse Gebaretaal en Engels"
       },
       "direction": {
-        "spoken-to-signed": "Vertaal van gesproke na gebaretale",
         "signed-to-spoken": "Of van gebare- tot gesproke tale"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar vir AR op iOS",
           "translation": "Vertaling",
-          "translation.spokenToSigned": "Gepraat-tot-Geteken",
           "translation.signedToSpoken": "Geteken-tot-Gesproke"
         },
         "actions": {

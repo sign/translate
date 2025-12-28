@@ -27,21 +27,6 @@
       "browse": "Cerca a l'ordinador",
       "title": "Tria un vídeo"
     },
-    "spoken-to-signed": {
-      "text": "Text en llengua parlada",
-      "actions": {
-        "download": "Descarrega Traducció",
-        "copy": "Copia Traducció",
-        "share": "Comparteix la traducció"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "S'està carregant el model de vídeo humà",
-          "generating": "Generació de vídeo"
-        }
-      },
-      "placeholder": "Introduïu text"
-    },
     "description": "Traducció sense esforç de la llengua de signes amb models d'avantguarda en temps real. ",
     "suggestions": {
       "translate-from": "Traduir de",
@@ -62,7 +47,6 @@
         "img": "Exemple de traducció en directe entre la llengua de signes americana i l'anglès"
       },
       "direction": {
-        "spoken-to-signed": "Tradueix de llengües parlades a llengües de signes",
         "signed-to-spoken": "O de les llengües de signes a les parlades"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D per a AR a iOS",
           "translation": "Traducció",
-          "translation.spokenToSigned": "Parlat a signat",
           "translation.signedToSpoken": "Signat per parlar"
         },
         "actions": {

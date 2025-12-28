@@ -22,21 +22,6 @@
       "text": "טקסט"
     },
     "swapLanguages": "החלפת שפות",
-    "spoken-to-signed": {
-      "text": "טקסט בשפה דבורה",
-      "actions": {
-        "download": "הורדת תרגום",
-        "copy": "העתקת תרגום",
-        "share": "שיתוף תרגום"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "טוען דגם וידאו אנושי",
-          "generating": "יצירת וידאו"
-        }
-      },
-      "placeholder": "הזן טקסט"
-    },
     "upload": {
       "title": "יש לבחור וידאו",
       "types": "צריך להעלות קובץ MP4,‏ OGV,‏ או WEBM.",
@@ -62,7 +47,6 @@
         "img": "דוגמה לתרגום חי בין שפת הסימנים האמריקאית לאנגלית"
       },
       "direction": {
-        "spoken-to-signed": "תרגם משפות מדוברות לשפות סימנים",
         "signed-to-spoken": "או משפות סימנים לשפות מדוברות"
       },
       "benefits": {
@@ -177,7 +161,6 @@
           "avatarGlb": "אווטאר תלת מימד",
           "avatarUsdz": "אווטאר 3D עבור AR ב-iOS",
           "translation": "תִרגוּם",
-          "translation.spokenToSigned": "מדוברת אל חתום",
           "translation.signedToSpoken": "חתום לדיבור"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Lenye anya na kọmputa gị",
       "title": "Họrọ vidiyo"
     },
-    "spoken-to-signed": {
-      "text": "Ederede Asụsụ Asụsụ",
-      "actions": {
-        "download": "Budata Ntụgharị asụsụ",
-        "copy": "Detuo ntụgharị asụsụ",
-        "share": "Kekọrịta ntụgharị asụsụ"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Na-ebu ihe ngosi vidiyo mmadụ",
-          "generating": "Na-emepụta vidiyo"
-        }
-      },
-      "placeholder": "Tinye ederede"
-    },
     "description": "Ntụgharị asụsụ ogbi na-enweghị mgbakasị ike na ụdị igbu oge. ",
     "suggestions": {
       "translate-from": "Tụgharịa asụsụ site na",
@@ -62,7 +47,6 @@
         "img": "Ọmụmaatụ nke ntụgharị asụsụ dị ndụ n'etiti Asụsụ ogbi nke America na Bekee"
       },
       "direction": {
-        "spoken-to-signed": "Tụgharịa asụsụ site na asụ ka ọ bụrụ asụsụ ndị mbinye aka",
         "signed-to-spoken": "Ma ọ bụ site na mbinye aka gaa na asụsụ ndị a na-asụ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D maka AR na iOS",
           "translation": "Ntụgharị asụsụ",
-          "translation.spokenToSigned": "Kwuru-na-binyere aka",
           "translation.signedToSpoken": "Ebinyere aka na-ekwu okwu"
         },
         "actions": {

@@ -27,21 +27,6 @@
       "browse": "Ibbrawżja l-kompjuter tiegħek",
       "title": "Agħżel vidjo"
     },
-    "spoken-to-signed": {
-      "text": "Test tal-Lingwa Mitkellma",
-      "actions": {
-        "download": "Niżżel Traduzzjoni",
-        "copy": "Kopja tat-Traduzzjoni",
-        "share": "Share Traduzzjoni"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Tagħbija tal-mudell tal-vidjo uman",
-          "generating": "Ġenerazzjoni tal-vidjo"
-        }
-      },
-      "placeholder": "Daħħal it-Test"
-    },
     "description": "Traduzzjoni tal-Lingwa tas-Sinjali mingħajr Sforz b'Mudelli ta' l-Avanti f'Ħin Reali. ",
     "suggestions": {
       "translate-from": "Ittraduċi minn",
@@ -62,7 +47,6 @@
         "img": "Eżempju ta' traduzzjoni diretta bejn il-Lingwa tas-Sinjali Amerikana u l-Ingliż"
       },
       "direction": {
-        "spoken-to-signed": "Ittraduċi minn lingwi mitkellma għal lingwi tas-sinjali",
         "signed-to-spoken": "Jew minn lingwi ffirmati għal lingwi mitkellma"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar għal AR fuq iOS",
           "translation": "Traduzzjoni",
-          "translation.spokenToSigned": "Mitkellma biex Iffirmat",
           "translation.signedToSpoken": "Iffirmat għal Mitkellem"
         },
         "actions": {

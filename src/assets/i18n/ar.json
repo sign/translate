@@ -27,21 +27,6 @@
       "browse": "تصفّح الكمبيوتر",
       "title": "اختر مقطع فيديو"
     },
-    "spoken-to-signed": {
-      "text": "نص اللغة المنطوقة",
-      "actions": {
-        "download": "تحميل الترجمة",
-        "copy": "نسخ الترجمة",
-        "share": "مشاركة الترجمة"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "تحميل نموذج فيديو بشري",
-          "generating": "توليد الفيديو"
-        }
-      },
-      "placeholder": "أدخل النص"
-    },
     "description": "ترجمة لغة الإشارة بدون مجهود مع أحدث النماذج في الوقت الفعلي. ",
     "suggestions": {
       "translate-from": "الترجمة من",
@@ -62,7 +47,6 @@
         "img": "مثال على الترجمة الحية بين لغة الإشارة الأمريكية والإنجليزية"
       },
       "direction": {
-        "spoken-to-signed": "الترجمة من اللغات المنطوقة إلى لغة الإشارة",
         "signed-to-spoken": "أو من لغة موقعة إلى منطوقة"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D الصورة الرمزية",
           "avatarUsdz": "3D Avatar لـ AR على iOS",
           "translation": "ترجمة",
-          "translation.spokenToSigned": "تحدث إلى التوقيع",
           "translation.signedToSpoken": "التوقيع على الكلام"
         },
         "actions": {

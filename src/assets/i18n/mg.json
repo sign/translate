@@ -27,21 +27,6 @@
       "browse": "Hitety ny solosainao",
       "title": "Mifidiana video"
     },
-    "spoken-to-signed": {
-      "text": "Lahatsoratra amin'ny fiteny miteny",
-      "actions": {
-        "download": "Download Dikanteny",
-        "copy": "Adikao Dikanteny",
-        "share": "Mizara Dikanteny"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Loading modely video olombelona",
-          "generating": "Mamorona video"
-        }
-      },
-      "placeholder": "Ampidiro Text"
-    },
     "description": "Fandikana amin'ny tenin'ny tanana tsy misy ezaka be miaraka amin'ny maodely tena misy fotoana. ",
     "suggestions": {
       "translate-from": "Adika avy amin'ny",
@@ -62,7 +47,6 @@
         "img": "Ohatra amin'ny fandikana mivantana eo amin'ny Tenin'ny Tanana Amerikana sy Anglisy"
       },
       "direction": {
-        "spoken-to-signed": "Adikao avy amin'ny fiteny ampiasaina amin'ny teny sonia",
         "signed-to-spoken": "Na avy amin'ny sonia mankany amin'ny fiteny ampiasaina"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar ho an'ny AR amin'ny iOS",
           "translation": "Translation",
-          "translation.spokenToSigned": "Voasoratra amin'ny sonia",
           "translation.signedToSpoken": "Voasonia-to-Spoken"
         },
         "actions": {

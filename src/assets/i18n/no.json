@@ -27,21 +27,6 @@
       "browse": "Bla gjennom datamaskinen din",
       "title": "Velg en video"
     },
-    "spoken-to-signed": {
-      "text": "Muntlig språktekst",
-      "actions": {
-        "download": "Last ned oversettelse",
-        "copy": "Kopier oversettelse",
-        "share": "Del oversettelse"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Laster inn menneskelig videomodell",
-          "generating": "Genererer video"
-        }
-      },
-      "placeholder": "Skriv inn tekst"
-    },
     "description": "Uanstrengt tegnspråkoversettelse med banebrytende sanntidsmodeller. ",
     "suggestions": {
       "translate-from": "Oversett fra",
@@ -62,7 +47,6 @@
         "img": "Eksempel på direkte oversettelse mellom amerikansk tegnspråk og engelsk"
       },
       "direction": {
-        "spoken-to-signed": "Oversett fra talespråk til tegnspråk",
         "signed-to-spoken": "Eller fra tegnspråk til talespråk"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar for AR på iOS",
           "translation": "Oversettelse",
-          "translation.spokenToSigned": "Talt-til-signert",
           "translation.signedToSpoken": "Signert til talt"
         },
         "actions": {

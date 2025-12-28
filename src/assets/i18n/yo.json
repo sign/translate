@@ -27,21 +27,6 @@
       "browse": "Ṣàwákiri kọ̀npútà rẹ",
       "title": "Yan fidio kan"
     },
-    "spoken-to-signed": {
-      "text": "Ọrọ Èdè Sọ",
-      "actions": {
-        "download": "Ṣe igbasilẹ Itumọ",
-        "copy": "Daakọ Itumọ",
-        "share": "Pin Itumọ"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Ikojọpọ awoṣe fidio eniyan",
-          "generating": "Ti o npese fidio"
-        }
-      },
-      "placeholder": "Tẹ Ọrọ sii"
-    },
     "description": "Itumọ Èdè Adití Lọ́nà Lailakitiyan pẹlu Awọn awoṣe Ige Gige Gidigidi. ",
     "suggestions": {
       "translate-from": "Tumọ lati",
@@ -62,7 +47,6 @@
         "img": "Apeere ti itumọ laaye laarin Ede Atẹle Amẹrika ati Gẹẹsi"
       },
       "direction": {
-        "spoken-to-signed": "Tumọ lati sisọ si awọn ede ibuwọlu",
         "signed-to-spoken": "Tabi lati ibuwọlu si awọn ede sisọ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Afata",
           "avatarUsdz": "Afata 3D fun AR lori iOS",
           "translation": "Itumọ",
-          "translation.spokenToSigned": "Sọ-si-Afọwọsi",
           "translation.signedToSpoken": "Wole-si-Sọrọ"
         },
         "actions": {

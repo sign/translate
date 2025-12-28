@@ -27,21 +27,6 @@
       "browse": "Вибрати на комп’ютері",
       "title": "Виберіть відео"
     },
-    "spoken-to-signed": {
-      "text": "Розмовний текст",
-      "actions": {
-        "download": "Завантажити переклад",
-        "copy": "Копіювати переклад",
-        "share": "Поділіться перекладом"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Завантаження моделі відео людини",
-          "generating": "Генерація відео"
-        }
-      },
-      "placeholder": "Введіть текст"
-    },
     "description": "Легкий переклад мовою жестів із передовими моделями реального часу. ",
     "suggestions": {
       "translate-from": "Перекласти з",
@@ -62,7 +47,6 @@
         "img": "Приклад живого перекладу між американською мовою жестів та англійською"
       },
       "direction": {
-        "spoken-to-signed": "Перекладайте з розмовної мови на жестову",
         "signed-to-spoken": "Або з жестових на розмовні мови"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D аватар",
           "avatarUsdz": "3D Аватар для AR на iOS",
           "translation": "Переклад",
-          "translation.spokenToSigned": "Розмова з підписом",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {

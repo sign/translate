@@ -27,21 +27,6 @@
       "browse": "خپل کمپیوټر لټون کړئ",
       "title": "یو ویډیو غوره کړئ"
     },
-    "spoken-to-signed": {
-      "text": "د خبرې شوې ژبې متن",
-      "actions": {
-        "download": "ژباړه ډاونلوډ کړئ",
-        "copy": "کاپي ژباړه",
-        "share": "ژباړه شریک کړئ"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "د انسان ویډیو ماډل پورته کول",
-          "generating": "ویډیو جوړول"
-        }
-      },
-      "placeholder": "متن دننه کړئ"
-    },
     "description": "په ریښتیني وخت کې د کټنګ ایج ماډلونو سره د اشارې ژبې په زړه پورې ژباړه. ",
     "suggestions": {
       "translate-from": "څخه ژباړه",
@@ -62,7 +47,6 @@
         "img": "د امریکایی اشارو ژبې او انګلیسي ترمنځ د ژوندۍ ژباړې بیلګه"
       },
       "direction": {
-        "spoken-to-signed": "له خبرې شوي څخه لاسلیک شوي ژبې ته وژباړئ",
         "signed-to-spoken": "یا له لاسلیک شوي ژبې څخه خبرې شوي ژبې ته"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D اوتار",
           "avatarUsdz": "په iOS کې د AR لپاره 3D اوتار",
           "translation": "ژباړه",
-          "translation.spokenToSigned": "لاسلیک شوي خبرې",
           "translation.signedToSpoken": "لاسلیک شوي - خبرې"
         },
         "actions": {

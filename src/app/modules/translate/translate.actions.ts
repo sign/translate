@@ -1,9 +1,5 @@
 import {InputMode} from './translate.state';
 
-export class FlipTranslationDirection {
-  static readonly type = '[Translate] Flip Translation Direction';
-}
-
 export class SetInputMode {
   static readonly type = '[Translate] Set Input Mode';
 

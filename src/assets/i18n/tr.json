@@ -27,21 +27,6 @@
       "browse": "Bilgisayarınıza göz atın",
       "title": "Bir video seçin"
     },
-    "spoken-to-signed": {
-      "text": "Konuşulan Dil Metni",
-      "actions": {
-        "download": "Çeviriyi İndir",
-        "copy": "Çeviriyi Kopyala",
-        "share": "Çeviriyi Paylaş"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "İnsan video modeli yükleniyor",
-          "generating": "Video oluşturuluyor"
-        }
-      },
-      "placeholder": "Metni Girin"
-    },
     "description": "Son Teknoloji Gerçek Zamanlı Modellerle Zahmetsiz İşaret Dili Tercümesi. ",
     "suggestions": {
       "translate-from": "Den çeviri",
@@ -62,7 +47,6 @@
         "img": "Amerikan İşaret Dili ile İngilizce arasındaki canlı çeviri örneği"
       },
       "direction": {
-        "spoken-to-signed": "Konuşulan dillerden işaretli dillere çeviri yapın",
         "signed-to-spoken": "Veya işaretli dillerden konuşulan dillere"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avatar",
           "avatarUsdz": "iOS'ta AR için 3D Avatar",
           "translation": "Tercüme",
-          "translation.spokenToSigned": "Konuşulana İmzalı",
           "translation.signedToSpoken": "İmzalı Konuşulan"
         },
         "actions": {

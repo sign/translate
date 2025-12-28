@@ -27,21 +27,6 @@
       "browse": "Arakatu ordenagailua",
       "title": "Aukeratu bideo bat"
     },
-    "spoken-to-signed": {
-      "text": "Ahozko Hizkuntza Testua",
-      "actions": {
-        "download": "Deskargatu Itzulpena",
-        "copy": "Kopiatu Itzulpena",
-        "share": "Partekatu itzulpena"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Giza bideo eredua kargatzen",
-          "generating": "Bideoa sortzea"
-        }
-      },
-      "placeholder": "Sartu testua"
-    },
     "description": "Esfortzurik gabeko zeinu hizkuntzaren itzulpena punta-puntako denbora errealeko ereduekin. ",
     "suggestions": {
       "translate-from": "Itzul ezazu",
@@ -62,7 +47,6 @@
         "img": "Amerikako zeinu hizkuntzaren eta ingelesaren arteko zuzeneko itzulpenaren adibidea"
       },
       "direction": {
-        "spoken-to-signed": "Itzuli ahozko hizkuntzetatik zeinu hizkuntzetara",
         "signed-to-spoken": "Edo zeinudunetatik ahozko hizkuntzetara"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avatarra",
           "avatarUsdz": "3D Avatar ARrako iOS-n",
           "translation": "Itzulpena",
-          "translation.spokenToSigned": "Ahozkoa-Sinatua",
           "translation.signedToSpoken": "Ahozko sinatuta"
         },
         "actions": {

@@ -1,4 +1,10 @@
 {
+  "404": {
+    "title": "Page not found",
+    "doesNotExist": "Sorry, the page you were looking for doesn't exist.",
+    "errorLogged": "We've logged the error and will look into it.",
+    "goHome": "Go to Home"
+  },
   "languages.spoken": "All",
   "countries.signed": "All",
   "to": "{{a}} → {{b}}",
@@ -21,21 +27,6 @@
       "text": "Text"
     },
     "swapLanguages": "Swap languages",
-    "spoken-to-signed": {
-      "text": "Spoken Language Text",
-      "placeholder": "Enter Text",
-      "actions": {
-        "download": "Download Translation",
-        "copy": "Copy Translation",
-        "share": "Share Translation"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Loading human video model",
-          "generating": "Generating video"
-        }
-      }
-    },
     "signed-to-spoken": {
       "actions": {
         "copy": "Copy Translation"
@@ -64,7 +55,6 @@
         "img": "Example of live translation between American Sign Language and English"
       },
       "direction": {
-        "spoken-to-signed": "Translate from spoken to signed languages",
         "signed-to-spoken": "Or from signed to spoken languages"
       },
       "benefits": {
@@ -142,12 +132,6 @@
       "title": "Software and Licenses"
     }
   },
-  "404": {
-    "title": "Page not found",
-    "doesNotExist": "Sorry, the page you were looking for doesn't exist.",
-    "errorLogged": "We've logged the error and will look into it.",
-    "goHome": "Go to Home"
-  },
   "video": {
     "errors": {
       "starting": "Camera starting",
@@ -219,7 +203,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar for AR on iOS",
           "translation": "Translation",
-          "translation.spokenToSigned": "Spoken-to-Signed",
           "translation.signedToSpoken": "Signed-to-Spoken"
         }
       },

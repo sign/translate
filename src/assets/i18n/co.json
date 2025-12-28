@@ -27,21 +27,6 @@
       "browse": "Circà nantu à u to urdinatori",
       "title": "Sceglite un video"
     },
-    "spoken-to-signed": {
-      "text": "Testu in lingua parlata",
-      "actions": {
-        "download": "Scaricate a traduzzione",
-        "copy": "Copy Translation",
-        "share": "Share Translation"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Caricà u mudellu di video umanu",
-          "generating": "Generazione di video"
-        }
-      },
-      "placeholder": "Entre u testu"
-    },
     "description": "Traduzzione in lingua di i segni senza sforzu cù mudelli di punta in tempu reale. ",
     "suggestions": {
       "translate-from": "Traduce da",
@@ -62,7 +47,6 @@
         "img": "Esempiu di traduzzione in diretta trà Lingua di i Signi Americana è Inglese"
       },
       "direction": {
-        "spoken-to-signed": "Traduce da lingua parlata à lingua signata",
         "signed-to-spoken": "O da i segni à e lingue parlate"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D per AR in iOS",
           "translation": "Traduzzione",
-          "translation.spokenToSigned": "Parlate à firmatu",
           "translation.signedToSpoken": "Firmatu à parlà"
         },
         "actions": {

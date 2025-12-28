@@ -27,12 +27,7 @@ const OFFLINE_PATHS = {
   avatarUsdz: '3d/character.usdz',
   pix2pixGenerator: 'models/generator/model.h5.layers16/',
   pix2pixUpscaler: 'models/upscaler/model.h5.layers/',
-  translation: {
-    spokenToSigned: {
-      SpokenSigned: 'models/browsermt/spoken-to-signed/spoken-signed/',
-      EnFr: 'models/browsermt/spoken-to-signed/en-fr/',
-    },
-  },
+  translation: {},
 };
 
 if (!isIOS) {
@@ -137,16 +132,6 @@ export class SettingsOfflineComponent extends BaseComponent implements OnInit {
   }
 
   nodeLabel(node: AssetState) {
-    if (node.name?.includes('.spokenToSigned.')) {
-      const lastPart = node.name.split('.').pop();
-      const lang = lastPart.substring(0, lastPart.length / 2).toLowerCase();
-      const country = lastPart.substring(lastPart.length / 2).toLowerCase();
-
-      return this.transloco.translate(`to`, {
-        a: this.transloco.translate(`languages.${lang}`),
-        b: this.transloco.translate(`countries.${country}`),
-      });
-    }
     return this.transloco.translate('settings.other.offline.files.' + node.name);
   }
 

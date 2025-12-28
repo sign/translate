@@ -27,21 +27,6 @@
       "browse": "Rùraich an coimpiutair agad",
       "title": "Tagh bhidio"
     },
-    "spoken-to-signed": {
-      "text": "Teacs Cànain Labhairt",
-      "actions": {
-        "download": "Luchdaich a-nuas eadar-theangachadh",
-        "copy": "Dèan lethbhreac den eadar-theangachadh",
-        "share": "Co-roinn eadar-theangachadh"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Luchdaich a-nuas video duine model",
-          "generating": "A ' cruthachadh bhidio"
-        }
-      },
-      "placeholder": "Cuir a-steach Teacsa"
-    },
     "description": "Eadar-theangachadh cànan soidhnidh gun oidhirp le modalan fìor-ùine adhartach. ",
     "suggestions": {
       "translate-from": "Eadar-theangaich bho",
@@ -62,7 +47,6 @@
         "img": "Eisimpleir de eadar-theangachadh beò eadar Cànan Soidhnidh Ameireagaidh agus Beurla"
       },
       "direction": {
-        "spoken-to-signed": "Eadar-theangaich bho chànanan labhairteach gu cànanan soidhnichte",
         "signed-to-spoken": "No bho shoidhnichean gu cànanan labhairteach"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar ann an 3d a",
           "avatarUsdz": "Avatar 3d a airson ios",
           "translation": "Eadar-theangachadh",
-          "translation.spokenToSigned": "Labhairt ri Soidhne",
           "translation.signedToSpoken": "Soidhne-gu-labhairt"
         },
         "actions": {

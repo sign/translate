@@ -27,21 +27,6 @@
       "browse": "Pūtirotirotia tō rorohiko",
       "title": "Kōwhiria he ataata"
     },
-    "spoken-to-signed": {
-      "text": "Kuputuhi Reo Korero",
-      "actions": {
-        "download": "Tikiake Whakamaori",
-        "copy": "Tārua Whakamāoritanga",
-        "share": "Tiri Whakamaori"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Uta ana tauira ataata tangata",
-          "generating": "Te whakaputa ataata"
-        }
-      },
-      "placeholder": "Whakauru Kuputuhi"
-    },
     "description": "Te Whakamaoritanga Reo Waitohu Maamaa me nga Tauira Waa Tuturu. ",
     "suggestions": {
       "translate-from": "Whakamaori mai",
@@ -62,7 +47,6 @@
         "img": "He tauira o te whakamaoritanga ora i waenga i te Reo Waitohu Amerika me te reo Ingarihi"
       },
       "direction": {
-        "spoken-to-signed": "Whakamaori mai i nga reo korero ki nga reo hainatia",
         "signed-to-spoken": "Mai i haina ranei ki nga reo korero"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "Avatar 3D",
           "avatarUsdz": "Avatar 3D mo AR i runga iOS",
           "translation": "Whakamaoritanga",
-          "translation.spokenToSigned": "Korero-ki-Waitohu",
           "translation.signedToSpoken": "Waitohu-ki-Krero"
         },
         "actions": {

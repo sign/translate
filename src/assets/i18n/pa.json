@@ -27,21 +27,6 @@
       "browse": "ਆਪਣਾ ਕੰਪਿਊਟਰ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
       "title": "ਇੱਕ ਵੀਡੀਓ ਚੁਣੋ"
     },
-    "spoken-to-signed": {
-      "text": "ਬੋਲੀ ਦੀ ਭਾਸ਼ਾ ਦਾ ਪਾਠ",
-      "actions": {
-        "download": "ਅਨੁਵਾਦ ਡਾਊਨਲੋਡ ਕਰੋ",
-        "copy": "ਅਨੁਵਾਦ ਕਾਪੀ ਕਰੋ",
-        "share": "ਅਨੁਵਾਦ ਸਾਂਝਾ ਕਰੋ"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "ਮਨੁੱਖੀ ਵੀਡੀਓ ਮਾਡਲ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
-          "generating": "ਵੀਡੀਓ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
-        }
-      },
-      "placeholder": "ਟੈਕਸਟ ਦਰਜ ਕਰੋ"
-    },
     "description": "ਕਟਿੰਗ-ਐਜ ਰੀਅਲ-ਟਾਈਮ ਮਾਡਲਾਂ ਦੇ ਨਾਲ ਅਣਥੱਕ ਸੈਨਤ ਭਾਸ਼ਾ ਅਨੁਵਾਦ। ",
     "suggestions": {
       "translate-from": "ਤੋਂ ਅਨੁਵਾਦ ਕਰੋ",
@@ -62,7 +47,6 @@
         "img": "ਅਮਰੀਕੀ ਸੈਨਤ ਭਾਸ਼ਾ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਵਿਚਕਾਰ ਲਾਈਵ ਅਨੁਵਾਦ ਦੀ ਉਦਾਹਰਨ"
       },
       "direction": {
-        "spoken-to-signed": "ਬੋਲੀ ਤੋਂ ਹਸਤਾਖਰਿਤ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ",
         "signed-to-spoken": "ਜਾਂ ਹਸਤਾਖਰਿਤ ਤੋਂ ਬੋਲੀ ਜਾਣ ਵਾਲੀਆਂ ਭਾਸ਼ਾਵਾਂ ਤੱਕ"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D ਅਵਤਾਰ",
           "avatarUsdz": "iOS 'ਤੇ AR ਲਈ 3D ਅਵਤਾਰ",
           "translation": "ਅਨੁਵਾਦ",
-          "translation.spokenToSigned": "ਸਪੋਕਨ-ਟੂ-ਦਸਤਖਤ",
           "translation.signedToSpoken": "ਦਸਤਖਤ-ਤੋਂ-ਬੋਲੇ"
         },
         "actions": {

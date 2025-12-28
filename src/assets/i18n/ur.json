@@ -27,21 +27,6 @@
       "browse": "اپنا کمپیوٹر براؤز کریں",
       "title": "ایک ویڈیو کا انتخاب کریں۔"
     },
-    "spoken-to-signed": {
-      "text": "بولی جانے والی زبان کا متن",
-      "actions": {
-        "download": "ترجمہ ڈاؤن لوڈ کریں۔",
-        "copy": "ترجمہ کاپی کریں۔",
-        "share": "ترجمہ شیئر کریں۔"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "انسانی ویڈیو ماڈل لوڈ ہو رہا ہے۔",
-          "generating": "ویڈیو بنا رہا ہے۔"
-        }
-      },
-      "placeholder": "متن درج کریں۔"
-    },
     "description": "جدید ترین ریئل ٹائم ماڈلز کے ساتھ اشاراتی زبان کا آسان ترجمہ۔ ",
     "suggestions": {
       "translate-from": "سے ترجمہ کریں۔",
@@ -62,7 +47,6 @@
         "img": "امریکی اشارے کی زبان اور انگریزی کے درمیان براہ راست ترجمہ کی مثال"
       },
       "direction": {
-        "spoken-to-signed": "بولی جانے والی زبان سے دستخط شدہ زبانوں میں ترجمہ کریں۔",
         "signed-to-spoken": "یا دستخط شدہ سے بولی جانے والی زبانوں تک"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D اوتار",
           "avatarUsdz": "iOS پر AR کے لیے 3D اوتار",
           "translation": "ترجمہ",
-          "translation.spokenToSigned": "بات کرنے سے دستخط شدہ",
           "translation.signedToSpoken": "دستخط شدہ سے بولنے والا"
         },
         "actions": {

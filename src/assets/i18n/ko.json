@@ -27,21 +27,6 @@
       "browse": "컴퓨터에서 찾아보기",
       "title": "동영상 선택"
     },
-    "spoken-to-signed": {
-      "text": "구어체 텍스트",
-      "actions": {
-        "download": "번역 다운로드",
-        "copy": "번역 복사",
-        "share": "번역 공유"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "사람 비디오 모델 로드 중",
-          "generating": "비디오 생성"
-        }
-      },
-      "placeholder": "텍스트 입력"
-    },
     "description": "최첨단 실시간 모델을 통한 손쉬운 수화 번역. ",
     "suggestions": {
       "translate-from": "번역:",
@@ -62,7 +47,6 @@
         "img": "미국 수화와 영어의 실시간 번역 예"
       },
       "direction": {
-        "spoken-to-signed": "음성에서 수화로 번역",
         "signed-to-spoken": "또는 수화에서 음성 언어로"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D 아바타",
           "avatarUsdz": "iOS의 AR용 3D 아바타",
           "translation": "번역",
-          "translation.spokenToSigned": "음성 서명",
           "translation.signedToSpoken": "서명된 음성"
         },
         "actions": {

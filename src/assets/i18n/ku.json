@@ -27,21 +27,6 @@
       "browse": "Bilgisayarınıza göz atın",
       "title": "Vîdyoyek hilbijêrin"
     },
-    "spoken-to-signed": {
-      "text": "Nivîsara Ziman Axaftinê",
-      "actions": {
-        "download": "Download Translation",
-        "copy": "Wergerandinê kopî bikin",
-        "share": "Share Werger"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Modela vîdyoya mirovî tê barkirin",
-          "generating": "Vîdyoyê diafirîne"
-        }
-      },
-      "placeholder": "Nivîsar binivîse"
-    },
     "description": "Wergera Zimanê Îşaretê ya Bêhêz bi Modelên Dem-Rast ên Berbiçav. ",
     "suggestions": {
       "translate-from": "Wergerandin ji",
@@ -62,7 +47,6 @@
         "img": "Nimûneya wergera zindî ya di navbera Zimanê îşaretek Amerîkî û Englishngilîzî de"
       },
       "direction": {
-        "spoken-to-signed": "Ji zimanên axaftinê wergerînin zimanên îşaretan",
         "signed-to-spoken": "An jî ji zimanên îmzekirî ber bi zimanên axaftinê ve"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D Avatar",
           "avatarUsdz": "3D Avatar ji bo AR li ser iOS",
           "translation": "Werger",
-          "translation.spokenToSigned": "Peyv-bi-îmze kirin",
           "translation.signedToSpoken": "Îmze kirin-ji-gotin"
         },
         "actions": {

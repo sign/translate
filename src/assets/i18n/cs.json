@@ -27,21 +27,6 @@
       "browse": "Procházet počítač",
       "title": "Vyberte video"
     },
-    "spoken-to-signed": {
-      "text": "Text mluveného jazyka",
-      "actions": {
-        "download": "Stáhnout Překlad",
-        "copy": "Kopírovat překlad",
-        "share": "Sdílet překlad"
-      },
-      "progress-bars": {
-        "human-pose-viewer": {
-          "loading": "Načítání modelu lidského videa",
-          "generating": "Generování videa"
-        }
-      },
-      "placeholder": "Zadejte text"
-    },
     "description": "Překlad znakové řeči bez námahy se špičkovými modely v reálném čase. ",
     "suggestions": {
       "translate-from": "Přeložit z",
@@ -62,7 +47,6 @@
         "img": "Příklad živého překladu mezi americkým znakovým jazykem a angličtinou"
       },
       "direction": {
-        "spoken-to-signed": "Překlad z mluveného do znakového jazyka",
         "signed-to-spoken": "Nebo ze znakového jazyka do mluveného jazyka"
       },
       "benefits": {
@@ -217,7 +201,6 @@
           "avatarGlb": "3D avatar",
           "avatarUsdz": "3D Avatar pro AR na iOS",
           "translation": "Překlad",
-          "translation.spokenToSigned": "Mluvený podepsaný",
           "translation.signedToSpoken": "Signed-to-Spoken"
         },
         "actions": {
