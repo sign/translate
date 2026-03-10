@@ -9,6 +9,15 @@ on:
   pull_request:
     branches: [main, master]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,14 +32,6 @@ jobs:
 
       - name: Setup Bun Runtime
         uses: antongolub/action-setup-bun@v1
-
-      # Using npm it is faster to cache the node modules. Using bun it seems like it is not.
-      #- name: Cache node_modules
-      #  uses: actions/cache@v3
-      #  with:
-      #    path: |
-      #      node_modules
-      #    key: client-${{ runner.os }} # Key is generic as for frequent package updates
 
       - name: Install Dependencies
         run: bun install
@@ -56,7 +57,7 @@ jobs:
         run: node tools/generate-build-version.js
 
       - name: Build project
-        run: bun run build
+        run: bun run build -- --base-href=/translate/
 
       - name: Generate Sitemap
         run: bun run generate:sitemap
@@ -74,6 +75,12 @@ jobs:
       - name: Move .well-known to root
         working-directory: dist/sign-translate/browser/
         run: mv assets/.well-known .well-known
+
+      - name: Copy index.html to 404.html
+        run: cp dist/sign-translate/browser/index.html dist/sign-translate/browser/404.html
+
+      - name: Add .nojekyll
+        run: touch dist/sign-translate/browser/.nojekyll
 
       - name: Zip dist
         run: zip -r dist/sign-translate/browser.zip dist/sign-translate/browser/
@@ -111,18 +118,18 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
 
-  website-deploy:
-    name: Deploy to Firebase
+  deploy:
+    name: Deploy to GitHub Pages
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     needs: build
     permissions:
-      checks: write
-      contents: read
-      pull-requests: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-
       - name: Download built dist artifact
         uses: actions/download-artifact@v4
         with:
@@ -132,42 +139,11 @@ jobs:
       - name: Unzip dist
         run: unzip browser.zip
 
-      # Experimentally, HTTP/2 Push degrades performance with prerendered pages
-      # - name: Create HTTP/2 Server Push Headers
-      #  run: node tools/firebase-http-push.js
-
-      - name: Deploy Live Channel 🚀
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
-          channelId: live
-          projectId: sign-mt
+          path: dist/sign-translate/browser
 
-  website-deploy-dev:
-    name: Deploy to Firebase
-    if: github.event.pull_request.head.repo.full_name == github.repository
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      checks: write
-      contents: read
-      pull-requests: write
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download built dist artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build-dist
-          path: .
-
-      - name: Unzip dist
-        run: unzip browser.zip
-
-      - name: Deploy Development Channel 🚀
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SIGN_MT }}
-          projectId: sign-mt
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

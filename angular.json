@@ -55,16 +55,6 @@
                 "glob": "**/*.json",
                 "input": "node_modules/@sign-mt/i18n/build/",
                 "output": "./assets/i18n/"
-              },
-              {
-                "glob": "**/*",
-                "input": "node_modules/@sign-mt/browsermt/artifacts/",
-                "output": "./browsermt/"
-              },
-              {
-                "glob": "worker.js",
-                "input": "node_modules/@sign-mt/browsermt/build/bundled/",
-                "output": "./browsermt/"
               }
             ],
             "styles": [
@@ -94,10 +84,7 @@
             "webWorkerTsConfig": "tsconfig.worker.json",
             "browser": "src/main.ts",
             "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "prerender": true
           },
           "configurations": {
             "production": {
@@ -134,10 +121,6 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "options": {
-            "headers": {
-              "Cross-Origin-Opener-Policy": "same-origin",
-              "Cross-Origin-Embedder-Policy": "require-corp"
-            },
             "buildTarget": "sign-translate:build"
           },
           "configurations": {
@@ -200,16 +183,6 @@
                 "glob": "**/*.json",
                 "input": "node_modules/@sign-mt/i18n/build/",
                 "output": "./assets/i18n/"
-              },
-              {
-                "glob": "**/*",
-                "input": "node_modules/@sign-mt/browsermt/artifacts/",
-                "output": "./browsermt/"
-              },
-              {
-                "glob": "worker.js",
-                "input": "node_modules/@sign-mt/browsermt/build/bundled/",
-                "output": "./browsermt/"
               }
             ],
             "styles": ["src/theme/styles.scss"],

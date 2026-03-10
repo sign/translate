@@ -63,19 +63,6 @@
             "value": "public, max-age=86400, s-maxage=0"
           }
         ]
-      },
-      {
-        "source": "**",
-        "headers": [
-          {
-            "key": "Cross-Origin-Opener-Policy",
-            "value": "same-origin"
-          },
-          {
-            "key": "Cross-Origin-Embedder-Policy",
-            "value": "require-corp"
-          }
-        ]
       }
     ],
     "rewrites": [

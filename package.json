@@ -14,7 +14,7 @@
     "test:chrome": "ng test --browsers=Chrome --code-coverage",
     "test:firefox": "ng test --browsers=Firefox --code-coverage",
     "test:ci": "ng test --browsers=ChromeHeadless,FirefoxHeadless --watch=false --code-coverage",
-    "deploy": "firebase deploy --only=hosting",
+    "deploy": "npx angular-cli-ghpages --dir=dist/sign-translate/browser",
     "mobile:sync": "tsx tools/mobile/sync.ts",
     "mobile:metadata": "tsx tools/mobile/metadata/metadata.ts",
     "prepare:husky": "node -e \"require('fs').cpSync('node_modules/@sign-mt/configuration/.husky/', '.husky/', {recursive: true})\"",
@@ -25,8 +25,7 @@
     "generate:sitemap": "node tools/sitemap-generator.js",
     "generate:licenses": "npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude ios --exclude android --exclude dist --exclude functions",
     "generate:docs": "cd docs && npm run docs:build && mv .vitepress/dist ../dist/sign-translate/browser/docs",
-    "build:full": "npm run generate:terms && npm run generate:privacy && npm run build && npm run generate:sitemap && npm run generate:licenses && npm run generate:docs",
-    "serve:ssr:sign-translate": "node dist/sign-translate/server/server.mjs"
+    "build:full": "npm run generate:terms && npm run generate:privacy && npm run build && npm run generate:sitemap && npm run generate:licenses && npm run generate:docs"
   },
   "engines": {
     "node": ">=18",
@@ -73,7 +72,6 @@
     "@mediapipe/holistic": "0.5.1675471629",
     "@mediapipe/tasks-text": "0.10.21",
     "@ngxs/store": "21.0.0",
-    "@sign-mt/browsermt": "0.2.3",
     "@sign-mt/i18n": "git://github.com/sign/i18n.git",
     "@sutton-signwriting/font-ttf": "1.6.0",
     "@sutton-signwriting/sgnw-components": "1.1.0",
@@ -88,7 +86,6 @@
     "capacitor-blob-writer": "1.1.19",
     "cld3-asm": "4.0.0",
     "comlink": "4.4.2",
-    "express": "5.2.1",
     "filesize": "9.0.11",
     "firebase": "12.7.0",
     "flag-icons": "7.5.0",
@@ -125,7 +122,6 @@
     "@types/dom-mediacapture-transform": "0.1.11",
     "@types/dom-speech-recognition": "0.0.7",
     "@types/dom-webcodecs": "0.1.18",
-    "@types/express": "5.0.6",
     "@types/jasmine": "5.1.13",
     "@types/jasminewd2": "2.0.13",
     "@types/offscreencanvas": "2019.7.3",
