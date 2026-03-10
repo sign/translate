@@ -35,7 +35,10 @@ describe('VideoState', () => {
       providers: [provideStore([VideoState], ngxsConfig), NavigatorService],
     });
 
-    mockCamera = new MediaStream();
+    mockCamera = {
+      getVideoTracks: () => [] as MediaStreamTrack[],
+      getTracks: () => [] as MediaStreamTrack[],
+    } as unknown as MediaStream;
 
     store = TestBed.inject(Store);
     navigatorService = TestBed.inject(NavigatorService);
