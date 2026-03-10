@@ -5,7 +5,16 @@ import {SettingsState} from '../../../../modules/settings/settings.state';
 import {ngxsConfig} from '../../../../app.config';
 import {provideStore} from '@ngxs/store';
 
-describe('AvatarPoseViewerComponent', () => {
+const hasWebGL = (() => {
+  try {
+    const canvas = document.createElement('canvas');
+    return !!(canvas.getContext('webgl') || canvas.getContext('webgl2'));
+  } catch {
+    return false;
+  }
+})();
+
+(hasWebGL ? describe : xdescribe)('AvatarPoseViewerComponent', () => {
   let component: AvatarPoseViewerComponent;
   let fixture: ComponentFixture<AvatarPoseViewerComponent>;
   beforeEach(async () => {
