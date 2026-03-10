@@ -5,16 +5,16 @@ describe('transferableImage', () => {
   let img: HTMLImageElement;
   // let video: HTMLVideoElement;
 
-  beforeAll(() => {
+  beforeAll(async () => {
     canvas = document.createElement('canvas');
     canvas.width = 256;
     canvas.height = 256;
 
     img = document.createElement('img');
-    img.src = canvas.toDataURL();
-    //
-    // video = document.createElement('video');
-    // video.src = img.src;
+    await new Promise<void>(resolve => {
+      img.onload = () => resolve();
+      img.src = canvas.toDataURL();
+    });
   });
 
   it('All latest browsers should get an image bitmap', async () => {
