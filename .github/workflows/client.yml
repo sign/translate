@@ -48,10 +48,10 @@ jobs:
       - name: Test code
         run: bun run test:ci
 
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Coveralls
+      #   uses: coverallsapp/github-action@master
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate a cache busting version
         run: node tools/generate-build-version.js
