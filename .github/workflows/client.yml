@@ -57,7 +57,7 @@ jobs:
         run: node tools/generate-build-version.js
 
       - name: Build project
-        run: bun run build -- --base-href=/translate/
+        run: bun run build
 
       - name: Generate Sitemap
         run: bun run generate:sitemap
