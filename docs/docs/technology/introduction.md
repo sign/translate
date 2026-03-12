@@ -18,7 +18,7 @@ Each node represents a different module or function in the pipeline, with a link
 flowchart TD
   A0[Spoken Language Audio] --> A1(Spoken Language Text)
   A1[Spoken Language Text] --> B[<a target='_blank' href='https://github.com/sign/translate/issues/10'>Language Identification</a>]
-  A1 --> C(<a target='_blank' href='https://github.com/sign/translate/tree/master/functions/src/text-normalization'>Normalized Text</a>)
+  A1 --> C(Normalized Text)
   B --> C
   C & B --> Q(<a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter'>Sentence Splitter</a>)
   Q & B --> D(<a target='_blank' href='https://github.com/sign-language-processing/signbank-plus'>SignWriting</a>)

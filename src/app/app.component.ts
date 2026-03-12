@@ -200,13 +200,6 @@ export class AppComponent implements AfterViewInit {
         tap(lang => {
           document.documentElement.lang = lang;
           document.dir = ['he', 'ar', 'fa', 'ku', 'ps', 'sd', 'ug', 'ur', 'yi'].includes(lang) ? 'rtl' : 'ltr';
-
-          // Set pre-rendered cloud function path with lang attribute
-          const openSearch = Array.from(document.head.children).find(t => t.getAttribute('rel') === 'search');
-          if (openSearch) {
-            // not available in the test environment sometimes
-            openSearch.setAttribute('href', `/opensearch.xml?lang=${lang}`);
-          }
         })
       )
       .subscribe();

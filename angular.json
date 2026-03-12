@@ -26,6 +26,8 @@
             "assets": [
               "src/assets",
               "src/manifest.webmanifest",
+              "src/robots.txt",
+              "src/opensearch.xml",
               {
                 "glob": "**/*",
                 "input": "./node_modules/@mediapipe/holistic/",
@@ -154,6 +156,8 @@
             "assets": [
               "src/assets",
               "src/manifest.webmanifest",
+              "src/robots.txt",
+              "src/opensearch.xml",
               {
                 "glob": "**/*",
                 "input": "./node_modules/@mediapipe/holistic/",
