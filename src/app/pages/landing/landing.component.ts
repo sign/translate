@@ -23,7 +23,6 @@ import {arrowForward} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 import {LandingFooterComponent} from './landing-footer/landing-footer.component';
 import {LogoComponent} from '../../components/logo/logo.component';
-import {AnnouncementBannerComponent} from '../../components/announcement-banner/announcement-banner.component';
 
 @Component({
   selector: 'app-landing',
@@ -50,7 +49,6 @@ import {AnnouncementBannerComponent} from '../../components/announcement-banner/
     RouterOutlet,
     LandingFooterComponent,
     LogoComponent,
-    AnnouncementBannerComponent,
   ],
 })
 export class LandingComponent {

@@ -1,19 +1,19 @@
 {
-  "name": "sign",
-  "short_name": "Sign Translate",
+  "name": "Rylo Translate",
+  "short_name": "Rylo Translate",
   "scope": "/",
   "id": "sign.mt",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#3F51B5",
+  "theme_color": "#F57C00",
   "background_color": "#FFF",
   "user_preferences": {
     "color_scheme_dark": {
-      "theme_color": "#3F51B5",
+      "theme_color": "#F57C00",
       "background_color": "#000"
     },
     "color_scheme_light": {
-      "theme_color": "#3F51B5",
+      "theme_color": "#F57C00",
       "background_color": "#FFF"
     }
   },
@@ -87,6 +87,6 @@
       "url": "/?direction=spoken-to-signed"
     }
   ],
-  "description": "Open source web app for sign language translation",
+  "description": "Effortless real-time sign language translation by Rylo",
   "screenshots": []
 }

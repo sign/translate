@@ -1,13 +1,13 @@
 :host {
   display: flex;
-  align-items: end;
+  align-items: center;
   font-size: 1.2em;
-  gap: 8px;
 }
 
 a {
   display: flex;
-  align-items: end;
+  align-items: center;
+  gap: 0.2em;
   color: unset;
   text-decoration: none;
 }
@@ -17,8 +17,9 @@ img {
   display: block;
 }
 
-.nagish-logo {
-  img {
-    height: 1em;
-  }
+.product-name {
+  font-weight: 300;
+  font-size: 0.85em;
+  letter-spacing: 0.02em;
+  opacity: 0.55;
 }

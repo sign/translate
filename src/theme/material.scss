@@ -1,18 +1,46 @@
 @use '@angular/material' as mat;
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
+$rylo-orange-palette: (
+  50: #fff3e0,
+  100: #ffe0b2,
+  200: #ffcc80,
+  300: #ffb74d,
+  400: #ffa726,
+  500: #ff8d30,
+  600: #fb8c00,
+  700: #f57c00,
+  800: #ef6c00,
+  900: #e65100,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(0, 0, 0, 0.87),
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: rgba(0, 0, 0, 0.87),
+    A200: rgba(0, 0, 0, 0.87),
+    A400: rgba(0, 0, 0, 0.87),
+    A700: rgba(0, 0, 0, 0.87),
+  ),
+);
 
-$app-accent: mat.m2-define-palette(mat.$m2-pink-palette);
+$app-accent: mat.m2-define-palette(mat.$m2-teal-palette);
 $app-warn: mat.m2-define-palette(mat.$m2-red-palette);
 $app-typography: mat.m2-define-typography-config(
   $font-family: 'Roboto,Helvetica Neue,sans-serif',
 );
 
-// Create the theme object (a Sass map containing all of the palettes).
 $app-color: (
-  primary: mat.m2-define-palette(mat.$m2-deep-purple-palette, $default: 700),
+  primary: mat.m2-define-palette($rylo-orange-palette, $default: 700),
   accent: $app-accent,
   warn: $app-warn,
 );
@@ -24,7 +52,7 @@ $app-theme: mat.m2-define-light-theme(
 $app-dark-theme: mat.m2-define-dark-theme(
   (
     color: (
-      primary: mat.m2-define-palette(mat.$m2-deep-purple-palette, $default: 400),
+      primary: mat.m2-define-palette($rylo-orange-palette, $default: 400),
       accent: $app-accent,
       warn: $app-warn,
     ),
