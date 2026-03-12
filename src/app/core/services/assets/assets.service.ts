@@ -1,11 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Capacitor} from '@capacitor/core';
-import type {GetMetadataResult} from '@capacitor-firebase/storage';
-
-/**
- * Navigator.storage is used as iOS service worker cache is limited to 50MB.
- * Capacitor.Filesystem is used as a fallback.
- */
+import {getStorage, ref, listAll, getMetadata, getDownloadURL, type FullMetadata} from 'firebase/storage';
 
 export type AssetState = {
   name?: string;
@@ -27,14 +21,6 @@ export class AssetsService {
   static BUCKET_URL = 'https://firebasestorage.googleapis.com/v0/b/sign-mt-assets/o/';
   static BUCKET = 'gs://sign-mt-assets';
 
-  private getStorage() {
-    return import(/* webpackChunkName: "@capacitor-firebase/storage" */ '@capacitor-firebase/storage');
-  }
-
-  private getFilesystem() {
-    return import(/* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem');
-  }
-
   stat(path: string): AssetState {
     if (path.endsWith('/')) {
       const files = this.getLocalStorageDirectory(path);
@@ -54,13 +40,13 @@ export class AssetsService {
     if (!fileStatStr) {
       return {path, exists: false};
     }
-    const fileStat = JSON.parse(fileStatStr) as GetMetadataResult;
+    const fileStat = JSON.parse(fileStatStr) as Pick<FullMetadata, 'size' | 'updated'>;
 
     return {
       path,
       exists: true,
       size: fileStat.size,
-      modified: new Date(fileStat.updatedAt),
+      modified: new Date(fileStat.updated),
     };
   }
 
@@ -130,39 +116,25 @@ export class AssetsService {
   }
 
   async getFileUri(path: string, progressCallback?: ProgressCallback): Promise<string> {
-    const download = async (asBlob = false) => {
-      if (asBlob) {
-        return this.getRemoteFileAsBlob(path, progressCallback);
-      }
+    const download = async () => {
       return this.getRemoteFile(path, progressCallback);
     };
 
     const downloadDone = async () => {
       // Save metadata, so we can check for updates later
       const metadata = await this.statRemoteFile(path);
-      localStorage.setItem(path, JSON.stringify(metadata));
+      localStorage.setItem(path, JSON.stringify({size: metadata.size, updated: metadata.updated}));
     };
 
     try {
       return await this.navigatorStorageFileUri(path, download, downloadDone);
-    } catch (e) {
-      // console.log('Navigator storage api not supported', e);
-    }
-
-    try {
-      return await this.capacitorGetFileUri(path, download, downloadDone);
-    } catch (e) {
-      // console.log('Capacitor file API not supported', e);
-    }
+    } catch (e) {}
 
     return this.buildRemotePath(path);
   }
 
   async deleteFile(path: string) {
-    return Promise.all([
-      this.deleteNavigatorStorageFile(path).catch(() => {}),
-      this.deleteCapacitorGetFileUri(path).catch(() => {}),
-    ]);
+    await this.deleteNavigatorStorageFile(path).catch(() => {});
   }
 
   async deleteNavigatorStorageFile(path: string) {
@@ -246,87 +218,25 @@ export class AssetsService {
     return URL.createObjectURL(file);
   }
 
-  async deleteCapacitorGetFileUri(path: string) {
-    const {Directory, Filesystem} = await this.getFilesystem();
-    const fileOptions = {directory: Directory.External, path};
-    await Filesystem.deleteFile(fileOptions);
-  }
-
-  async capacitorGetFileUri(path: string, download: CallableFunction, downloadDone: CallableFunction) {
-    const {Directory, Filesystem} = await this.getFilesystem();
-
-    const fileOptions = {directory: Directory.External, path};
-    try {
-      const stat = await Filesystem.stat(fileOptions);
-      if (stat.size === 0) {
-        // In case of corrupt file
-        await Filesystem.deleteFile(fileOptions);
-        return this.capacitorGetFileUri(path, download, downloadDone);
-      }
-    } catch (e) {
-      // File does not exist
-      const blob = await download(true);
-      const writeBlob = await import(/* webpackChunkName: "@capacitor/blob-writer" */ 'capacitor-blob-writer');
-      await writeBlob.default({
-        path,
-        directory: Directory.External,
-        blob,
-        fast_mode: true,
-        recursive: true,
-      });
-      await downloadDone();
-    }
-
-    if (Capacitor.isNativePlatform()) {
-      const {uri} = await Filesystem.getUri(fileOptions);
-      return Capacitor.convertFileSrc(uri);
-    }
-
-    // For the web, we have to create an object URL
-    const {data} = await Filesystem.readFile(fileOptions);
-    return URL.createObjectURL(data as any as Blob);
-  }
-
   buildRemotePath(path: string) {
     return AssetsService.BUCKET_URL + encodeURIComponent(path);
   }
 
   async listDirectory(path: string): Promise<string[]> {
-    const {FirebaseStorage} = await this.getStorage();
-    const {items} = await FirebaseStorage.listFiles({path: `${AssetsService.BUCKET}/${path}`});
+    const storage = getStorage(undefined, AssetsService.BUCKET);
+    const listRef = ref(storage, path);
+    const {items} = await listAll(listRef);
     return items.map(i => i.name);
   }
 
   async statRemoteFile(path: string) {
-    const {FirebaseStorage} = await this.getStorage();
-    return FirebaseStorage.getMetadata({path: `${AssetsService.BUCKET}/${path}`});
-  }
-
-  async getRemoteFileAsBlob(path: string, progressCallback?: ProgressCallback) {
-    let array: Uint8Array = null;
-    let arrayIndex = 0;
-
-    const chunks = this.getRemoteFile(path, (loaded, total) => {
-      if (!array) {
-        array = new Uint8Array(total);
-      }
-      if (progressCallback) {
-        progressCallback(loaded, total);
-      }
-    });
-    for await (const chunk of chunks) {
-      array.set(chunk, arrayIndex);
-      arrayIndex += chunk.length;
-    }
-
-    return new Blob([array.slice()]);
+    const storage = getStorage(undefined, AssetsService.BUCKET);
+    return getMetadata(ref(storage, path));
   }
 
   async *getRemoteFile(path: string, progressCallback?: ProgressCallback) {
-    const {FirebaseStorage} = await this.getStorage();
-    const {downloadUrl} = await FirebaseStorage.getDownloadUrl({
-      path: `${AssetsService.BUCKET}/${path}`,
-    });
+    const storage = getStorage(undefined, AssetsService.BUCKET);
+    const downloadUrl = await getDownloadURL(ref(storage, path));
     const response = await fetch(downloadUrl);
 
     const reader = response.body.getReader();

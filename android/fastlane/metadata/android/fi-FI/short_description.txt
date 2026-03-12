@@ -1,1 +1,0 @@
-Vaivaton viittomakielen käännös huippuluokan reaaliaikaisten mallien avulla. 

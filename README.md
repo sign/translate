@@ -134,14 +134,6 @@ Test the application:
 npm test
 ```
 
-Run the application on iOS:
-
-```bash
-npm run build:full && \
-npx cap sync ios && \
-npx cap run ios
-```
-
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm
 

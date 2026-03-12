@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
+import {getAnalytics, logEvent} from 'firebase/analytics';
+import {getPerformance, trace} from 'firebase/performance';
 import {onCLS, onINP, onLCP} from 'web-vitals';
-
-import {FirebaseAnalytics} from '@capacitor-firebase/analytics';
-import {FirebasePerformance} from '@capacitor-firebase/performance';
 import {environment} from '../../../../environments/environment';
 
 function isPromise(promise) {
@@ -27,7 +26,7 @@ export class GoogleAnalyticsService {
     if (!this.isSupported) {
       return;
     }
-    await FirebaseAnalytics.setCurrentScreen({screenName});
+    logEvent(getAnalytics(), 'screen_view', {firebase_screen: screenName, firebase_screen_class: screenName});
   }
 
   logPerformanceMetrics() {
@@ -36,14 +35,11 @@ export class GoogleAnalyticsService {
     }
 
     const sendToGoogleAnalytics = ({name, delta, value, id}) => {
-      return FirebaseAnalytics.logEvent({
-        name,
-        params: {
-          value: delta,
-          metric_id: id,
-          metric_value: value,
-          metric_delta: delta,
-        },
+      return logEvent(getAnalytics(), name, {
+        value: delta,
+        metric_id: id,
+        metric_value: value,
+        metric_delta: delta,
       });
     };
 
@@ -59,10 +55,11 @@ export class GoogleAnalyticsService {
 
     const startTime = performance.now();
     const traceName = `${timingCategory}:${timingVar}`;
-    await FirebasePerformance.startTrace({traceName});
+    const t = trace(getPerformance(), traceName);
+    t.start();
     const stopTrace = () => {
       this.traces.push({name: traceName, time: performance.now() - startTime});
-      FirebasePerformance.stopTrace({traceName}).catch().then();
+      t.stop();
     };
 
     let call = callable();

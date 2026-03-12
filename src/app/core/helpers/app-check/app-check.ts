@@ -1,16 +1,21 @@
 import {environment} from '../../../../environments/environment';
+import {initializeAppCheck, ReCaptchaV3Provider, getToken} from 'firebase/app-check';
+import {getApp} from 'firebase/app';
+
+let appCheck;
 
 export class AppCheck {
-  static isInitialized = false;
-
   static async getToken(): Promise<string> {
-    const {FirebaseAppCheck} = await import(
-      /* webpackChunkName: "@capacitor-firebase/app-check" */ '@capacitor-firebase/app-check'
-    );
-    if (!AppCheck.isInitialized) {
-      await FirebaseAppCheck.initialize({siteKey: environment.reCAPTCHAKey, debug: !environment.production});
+    if (!appCheck) {
+      if (!environment.production) {
+        (self as any).FIREBASE_APPCHECK_DEBUG_TOKEN = true;
+      }
+      appCheck = initializeAppCheck(getApp(), {
+        provider: new ReCaptchaV3Provider(environment.reCAPTCHAKey),
+        isTokenAutoRefreshEnabled: true,
+      });
     }
-    const {token} = await FirebaseAppCheck.getToken({forceRefresh: false});
+    const {token} = await getToken(appCheck, false);
     return token;
   }
 }

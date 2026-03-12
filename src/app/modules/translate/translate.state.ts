@@ -22,7 +22,6 @@ import {SetVideo, StartCamera, StopVideo} from '../../core/modules/ngxs/store/vi
 import {catchError, EMPTY, filter, Observable, of} from 'rxjs';
 import {PoseViewerSetting} from '../settings/settings.state';
 import {tap} from 'rxjs/operators';
-import {Capacitor} from '@capacitor/core';
 import {SignWritingService} from '../sign-writing/sign-writing.service';
 import {SignWritingTranslationService} from './signwriting-translation.service';
 import {LanguageDetectionService} from './language-detection/language-detection.service';
@@ -358,29 +357,11 @@ export class TranslateState implements NgxsOnInit {
     const {spokenLanguageText} = getState();
 
     try {
-      const {Clipboard} = await import(/* webpackChunkName: "@capacitor/clipboard" */ '@capacitor/clipboard');
-      await Clipboard.write({string: spokenLanguageText});
+      await navigator.clipboard.writeText(spokenLanguageText);
     } catch (e) {
       console.error(e);
       alert(e.message);
     }
-  }
-
-  async shareNative(file: File) {
-    // Save video to file system
-    const {Directory, Filesystem} = await import(
-      /* webpackChunkName: "@capacitor/filesystem" */ '@capacitor/filesystem'
-    );
-    const {blobToBase64} = await import(/* webpackChunkName: "base64-blob" */ 'base64-blob');
-
-    const data = await blobToBase64(file);
-    const fileOptions = {directory: Directory.Cache, path: 'video.mp4'};
-    await Filesystem.writeFile({...fileOptions, data});
-    const {uri} = await Filesystem.getUri(fileOptions);
-
-    // Share video
-    const {Share} = await import(/* webpackChunkName: "@capacitor/share" */ '@capacitor/share');
-    await Share.share({url: uri});
   }
 
   async shareWeb(file: File) {
@@ -413,10 +394,6 @@ export class TranslateState implements NgxsOnInit {
     const ext = blob.type.split('/').pop();
 
     const file = new File([blob], 'video.' + ext, {type: blob.type});
-
-    if (Capacitor.isNativePlatform()) {
-      return this.shareNative(file);
-    }
 
     return this.shareWeb(file);
   }

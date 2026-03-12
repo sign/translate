@@ -1,1 +1,0 @@
-Enostavno prevajanje znakovnega jezika z najsodobnejšimi modeli v realnem času. 

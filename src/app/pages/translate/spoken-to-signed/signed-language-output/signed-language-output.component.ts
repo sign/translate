@@ -10,7 +10,6 @@ import {
   ShareSignedLanguageVideo,
 } from '../../../../modules/translate/translate.actions';
 import {BaseComponent} from '../../../../components/base/base.component';
-import {Capacitor} from '@capacitor/core';
 import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
 import {ViewerSelectorComponent} from '../../pose-viewers/viewer-selector/viewer-selector.component';
 import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
@@ -59,7 +58,7 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
     this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
 
-    this.isSharingSupported = Capacitor.isNativePlatform() || ('navigator' in globalThis && 'share' in navigator);
+    this.isSharingSupported = 'navigator' in globalThis && 'share' in navigator;
 
     addIcons({downloadOutline, shareOutline, shareSocialOutline});
   }

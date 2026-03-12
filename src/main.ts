@@ -1,6 +1,5 @@
 import {enableProdMode, provideZoneChangeDetection} from '@angular/core';
 import {environment} from './environments/environment';
-import {Capacitor} from '@capacitor/core';
 import {initializeApp} from 'firebase/app';
 import {appConfig} from './app/app.config';
 import {AppComponent} from './app/app.component';
@@ -10,9 +9,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-if (!Capacitor.isNativePlatform()) {
-  initializeApp(environment.firebase);
-}
+initializeApp(environment.firebase);
 
 bootstrapApplication(AppComponent, {
   ...appConfig,

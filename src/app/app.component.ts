@@ -4,13 +4,11 @@ import {filter, tap} from 'rxjs/operators';
 import {firstValueFrom} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
 import {GoogleAnalyticsService} from './core/modules/google-analytics/google-analytics.service';
-import {Capacitor} from '@capacitor/core';
 import {languageCodeNormalizer} from './core/modules/transloco/languages';
-import {Meta} from '@angular/platform-browser';
 import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
 import {getUrlParams} from './core/helpers/url';
 import * as CookieConsent from 'vanilla-cookieconsent';
-import {ConsentStatus, ConsentType, FirebaseAnalytics} from '@capacitor-firebase/analytics';
+import {setConsent} from 'firebase/analytics';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
@@ -20,7 +18,6 @@ import {MediaMatcher} from '@angular/cdk/layout';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent implements AfterViewInit {
-  private meta = inject(Meta);
   private ga = inject(GoogleAnalyticsService);
   private transloco = inject(TranslocoService);
   private router = inject(Router);
@@ -33,23 +30,9 @@ export class AppComponent implements AfterViewInit {
     this.logRouterNavigation();
     this.checkURLEmbedding();
     this.updateToolbarColor();
-    this.setPageKeyboardClass();
   }
 
   async ngAfterViewInit() {
-    if (Capacitor.isNativePlatform()) {
-      this.meta.updateTag({
-        name: 'viewport',
-        content:
-          'minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1.0, viewport-fit=cover, width=device-width',
-      });
-
-      const {SplashScreen} = await import(
-        /* webpackChunkName: "@capacitor/splash-screen" */ '@capacitor/splash-screen'
-      );
-      await SplashScreen.hide();
-    }
-
     this.initCookieConsent();
   }
 
@@ -116,20 +99,21 @@ export class AppComponent implements AfterViewInit {
         },
       },
       onConsent: ({cookie}) => {
-        console.log('Consent given:', cookie);
-        const categories: {[key: string]: ConsentType[]} = {
-          functionality: [ConsentType.FunctionalityStorage, ConsentType.PersonalizationStorage],
-          analytics: [ConsentType.AnalyticsStorage],
-          marketing: [ConsentType.AdStorage, ConsentType.AdPersonalization, ConsentType.AdUserData],
-        };
-        for (const [category, types] of Object.entries(categories)) {
-          const consent: ConsentStatus = cookie.categories.includes(category)
-            ? ConsentStatus.Granted
-            : ConsentStatus.Denied;
-          for (const type of types) {
-            FirebaseAnalytics.setConsent({type, status: consent});
-          }
-        }
+        const granted = 'granted' as const;
+        const denied = 'denied' as const;
+
+        const functionality = cookie.categories.includes('functionality');
+        const analyticsConsent = cookie.categories.includes('analytics');
+        const marketing = cookie.categories.includes('marketing');
+
+        setConsent({
+          functionality_storage: functionality ? granted : denied,
+          personalization_storage: functionality ? granted : denied,
+          analytics_storage: analyticsConsent ? granted : denied,
+          ad_storage: marketing ? granted : denied,
+          ad_personalization: marketing ? granted : denied,
+          ad_user_data: marketing ? granted : denied,
+        });
       },
       categories: {
         necessary: {
@@ -212,16 +196,5 @@ export class AppComponent implements AfterViewInit {
     if (urlParam !== null) {
       document.body.classList.add('embed');
     }
-  }
-
-  async setPageKeyboardClass() {
-    if (!Capacitor.isNativePlatform()) {
-      return;
-    }
-    const {Keyboard} = await import(/* webpackChunkName: "@capacitor/keyboard" */ '@capacitor/keyboard');
-    const html = document.documentElement;
-    const className = 'keyboard-is-open';
-    Keyboard.addListener('keyboardWillShow', () => html.classList.add(className));
-    Keyboard.addListener('keyboardWillHide', () => html.classList.remove(className));
   }
 }
