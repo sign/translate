@@ -5,8 +5,7 @@ import {routes} from './app.routes';
 import {provideClientHydration, withEventReplay} from '@angular/platform-browser';
 import {NavigatorService} from './core/services/navigator/navigator.service';
 import {IonicRouteStrategy, provideIonicAngular} from '@ionic/angular/standalone';
-import {HTTP_INTERCEPTORS, provideHttpClient, withFetch, withInterceptorsFromDi} from '@angular/common/http';
-import {TokenInterceptor} from './core/services/http/token-interceptor.service';
+import {provideHttpClient, withFetch} from '@angular/common/http';
 import {AppTranslocoProviders} from './core/modules/transloco/transloco.module';
 import {NgxsModuleOptions, provideStore} from '@ngxs/store';
 import {SettingsState} from './modules/settings/settings.state';
@@ -51,8 +50,7 @@ export const appConfig: ApplicationConfig = {
     NavigatorService,
 
     // HTTP Requests
-    provideHttpClient(withFetch(), withInterceptorsFromDi()),
-    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}, // TODO withInterceptors
+    provideHttpClient(withFetch()),
 
     ...AppTranslocoProviders,
 

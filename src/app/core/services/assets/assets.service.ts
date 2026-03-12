@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {getStorage, ref, listAll, getMetadata, getDownloadURL, type FullMetadata} from 'firebase/storage';
 
 export type AssetState = {
   name?: string;
@@ -12,14 +11,19 @@ export type AssetState = {
   children?: AssetState[];
 };
 
+type FileMetadata = {
+  size: number;
+  updated: string;
+};
+
 type ProgressCallback = (receivedLength: number, totalLength: number) => void;
 
 @Injectable({
   providedIn: 'root',
 })
 export class AssetsService {
-  static BUCKET_URL = 'https://firebasestorage.googleapis.com/v0/b/sign-mt-assets/o/';
-  static BUCKET = 'gs://sign-mt-assets';
+  static BUCKET = 'sign-mt-assets';
+  static BUCKET_URL = `https://firebasestorage.googleapis.com/v0/b/${AssetsService.BUCKET}/o/`;
 
   stat(path: string): AssetState {
     if (path.endsWith('/')) {
@@ -40,7 +44,7 @@ export class AssetsService {
     if (!fileStatStr) {
       return {path, exists: false};
     }
-    const fileStat = JSON.parse(fileStatStr) as Pick<FullMetadata, 'size' | 'updated'>;
+    const fileStat = JSON.parse(fileStatStr) as FileMetadata;
 
     return {
       path,
@@ -93,7 +97,7 @@ export class AssetsService {
     let totalLength = 0;
     const received = new Array(files.length).fill(0);
     const progressSet = new Set<number>();
-    const fileProgressCallback = (i, fileReceivedLength, fileTotalLength) => {
+    const fileProgressCallback = (i: number, fileReceivedLength: number, fileTotalLength: number) => {
       if (!progressSet.has(i)) {
         progressSet.add(i);
         totalLength += fileTotalLength;
@@ -123,7 +127,7 @@ export class AssetsService {
     const downloadDone = async () => {
       // Save metadata, so we can check for updates later
       const metadata = await this.statRemoteFile(path);
-      localStorage.setItem(path, JSON.stringify({size: metadata.size, updated: metadata.updated}));
+      localStorage.setItem(path, JSON.stringify(metadata));
     };
 
     try {
@@ -191,7 +195,7 @@ export class AssetsService {
       const stat = JSON.parse(statStr);
 
       // File does not exist
-      let fileHandle;
+      let fileHandle: any;
       try {
         fileHandle = await directory.getFileHandle(fileName);
       } catch (e) {
@@ -223,21 +227,22 @@ export class AssetsService {
   }
 
   async listDirectory(path: string): Promise<string[]> {
-    const storage = getStorage(undefined, AssetsService.BUCKET);
-    const listRef = ref(storage, path);
-    const {items} = await listAll(listRef);
-    return items.map(i => i.name);
+    const url = AssetsService.BUCKET_URL + `?prefix=${encodeURIComponent(path)}&delimiter=/`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return (data.items || []).map((item: {name: string}) => item.name.slice(path.length));
   }
 
-  async statRemoteFile(path: string) {
-    const storage = getStorage(undefined, AssetsService.BUCKET);
-    return getMetadata(ref(storage, path));
+  async statRemoteFile(path: string): Promise<FileMetadata> {
+    const url = AssetsService.BUCKET_URL + encodeURIComponent(path);
+    const response = await fetch(url);
+    const data = await response.json();
+    return {size: Number(data.size), updated: data.updated};
   }
 
   async *getRemoteFile(path: string, progressCallback?: ProgressCallback) {
-    const storage = getStorage(undefined, AssetsService.BUCKET);
-    const downloadUrl = await getDownloadURL(ref(storage, path));
-    const response = await fetch(downloadUrl);
+    const url = AssetsService.BUCKET_URL + encodeURIComponent(path) + '?alt=media';
+    const response = await fetch(url);
 
     const reader = response.body.getReader();
 

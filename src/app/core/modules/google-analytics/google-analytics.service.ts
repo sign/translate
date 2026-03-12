@@ -1,6 +1,4 @@
 import {Injectable} from '@angular/core';
-import {getAnalytics, logEvent} from 'firebase/analytics';
-import {getPerformance, trace} from 'firebase/performance';
 import {onCLS, onINP, onLCP} from 'web-vitals';
 import {environment} from '../../../../environments/environment';
 
@@ -15,18 +13,37 @@ export class GoogleAnalyticsService {
   traces: {name: string; time: number}[] = [];
 
   constructor() {
+    this.initGtag();
     this.logPerformanceMetrics();
   }
 
   get isSupported() {
-    return environment.firebase.measurementId && 'window' in globalThis && 'document' in globalThis;
+    return environment.measurementId && 'window' in globalThis && 'document' in globalThis;
+  }
+
+  private initGtag() {
+    if (!this.isSupported) {
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${environment.measurementId}`;
+    document.head.appendChild(script);
+
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).gtag = function () {
+      (window as any).dataLayer.push(arguments);
+    };
+    gtag('js', new Date());
+    gtag('config', environment.measurementId);
   }
 
   async setCurrentScreen(screenName: string) {
     if (!this.isSupported) {
       return;
     }
-    logEvent(getAnalytics(), 'screen_view', {firebase_screen: screenName, firebase_screen_class: screenName});
+    gtag('event', 'screen_view', {firebase_screen: screenName, firebase_screen_class: screenName});
   }
 
   logPerformanceMetrics() {
@@ -35,7 +52,7 @@ export class GoogleAnalyticsService {
     }
 
     const sendToGoogleAnalytics = ({name, delta, value, id}) => {
-      return logEvent(getAnalytics(), name, {
+      gtag('event', name, {
         value: delta,
         metric_id: id,
         metric_value: value,
@@ -55,11 +72,15 @@ export class GoogleAnalyticsService {
 
     const startTime = performance.now();
     const traceName = `${timingCategory}:${timingVar}`;
-    const t = trace(getPerformance(), traceName);
-    t.start();
     const stopTrace = () => {
-      this.traces.push({name: traceName, time: performance.now() - startTime});
-      t.stop();
+      const duration = performance.now() - startTime;
+      this.traces.push({name: traceName, time: duration});
+      gtag('event', 'timing_complete', {
+        name: traceName,
+        value: Math.round(duration),
+        event_category: timingCategory,
+        event_label: timingVar,
+      });
     };
 
     let call = callable();

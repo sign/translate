@@ -1,5 +1,4 @@
 .angular
-.firebase
 dist
 coverage
 tools/cache

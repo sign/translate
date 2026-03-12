@@ -11,7 +11,8 @@
       "@types/offscreencanvas",
       "@types/dom-mediacapture-transform",
       "@types/wicg-file-system-access",
-      "@types/long"
+      "@types/long",
+      "@types/gtag.js"
     ]
   },
   "files": ["node_modules/pose-viewer/dist/types/components.d.ts"],

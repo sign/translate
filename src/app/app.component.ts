@@ -8,7 +8,6 @@ import {languageCodeNormalizer} from './core/modules/transloco/languages';
 import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
 import {getUrlParams} from './core/helpers/url';
 import * as CookieConsent from 'vanilla-cookieconsent';
-import {setConsent} from 'firebase/analytics';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
@@ -99,6 +98,10 @@ export class AppComponent implements AfterViewInit {
         },
       },
       onConsent: ({cookie}) => {
+        if (typeof gtag === 'undefined') {
+          return;
+        }
+
         const granted = 'granted' as const;
         const denied = 'denied' as const;
 
@@ -106,7 +109,7 @@ export class AppComponent implements AfterViewInit {
         const analyticsConsent = cookie.categories.includes('analytics');
         const marketing = cookie.categories.includes('marketing');
 
-        setConsent({
+        gtag('consent', 'update', {
           functionality_storage: functionality ? granted : denied,
           personalization_storage: functionality ? granted : denied,
           analytics_storage: analyticsConsent ? granted : denied,

@@ -53,9 +53,6 @@ Thumbs.db
 # Tools
 tools/cache
 
-# Firebase
-.firebase
-
 .env
 
 
