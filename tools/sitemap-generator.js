@@ -40,7 +40,7 @@ for (const url of additionalUrls) {
 }
 
 async function main() {
-  const buildDir = `${baseDir}dist/sign-translate/browser/`;
+  const buildDir = `${baseDir}${path.sep}dist${path.sep}sign-translate${path.sep}browser${path.sep}`;
 
   // writes sitemaps and index out to the destination you provide.
   await simpleSitemapAndIndex({
