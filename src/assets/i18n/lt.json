@@ -51,8 +51,7 @@
       "actions": {
         "copy": "Kopijuoti vertimą"
       }
-    },
-    "logo": "Vertėjas"
+    }
   },
   "landing": {
     "try": "Versti dabar",

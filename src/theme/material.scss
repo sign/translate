@@ -4,43 +4,76 @@ $rylo-orange-palette: (
   50: #fff3e0,
   100: #ffe0b2,
   200: #ffcc80,
-  300: #ffb74d,
-  400: #ffa726,
-  500: #ff8d30,
-  600: #fb8c00,
-  700: #f57c00,
-  800: #ef6c00,
-  900: #e65100,
-  A100: #ffd180,
-  A200: #ffab40,
-  A400: #ff9100,
-  A700: #ff6d00,
+  300: #ffb366,
+  400: #ff9d48,
+  500: #ff882b,
+  600: #f07a20,
+  700: #e06b15,
+  800: #d05c0a,
+  900: #b54800,
+  A100: #ffd4a8,
+  A200: #ffba75,
+  A400: #ff9b3d,
+  A700: #ff7700,
   contrast: (
-    50: rgba(0, 0, 0, 0.87),
-    100: rgba(0, 0, 0, 0.87),
-    200: rgba(0, 0, 0, 0.87),
-    300: rgba(0, 0, 0, 0.87),
-    400: rgba(0, 0, 0, 0.87),
+    50: #191412,
+    100: #191412,
+    200: #191412,
+    300: #191412,
+    400: #191412,
     500: #ffffff,
     600: #ffffff,
     700: #ffffff,
     800: #ffffff,
     900: #ffffff,
-    A100: rgba(0, 0, 0, 0.87),
-    A200: rgba(0, 0, 0, 0.87),
-    A400: rgba(0, 0, 0, 0.87),
-    A700: rgba(0, 0, 0, 0.87),
+    A100: #191412,
+    A200: #191412,
+    A400: #191412,
+    A700: #ffffff,
   ),
 );
 
-$app-accent: mat.m2-define-palette(mat.$m2-teal-palette);
+$rylo-sky-palette: (
+  50: #eef4f9,
+  100: #d5e2ed,
+  200: #bacfe0,
+  300: #a9c2d7,
+  400: #92b3cc,
+  500: #7ba4c1,
+  600: #6893b2,
+  700: #56829f,
+  800: #45718c,
+  900: #335e78,
+  A100: #d5e8f5,
+  A200: #a9c2d7,
+  A400: #7ba4c1,
+  A700: #56829f,
+  contrast: (
+    50: #191412,
+    100: #191412,
+    200: #191412,
+    300: #191412,
+    400: #191412,
+    500: #191412,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #191412,
+    A200: #191412,
+    A400: #191412,
+    A700: #ffffff,
+  ),
+);
+
+$app-accent: mat.m2-define-palette($rylo-sky-palette);
 $app-warn: mat.m2-define-palette(mat.$m2-red-palette);
 $app-typography: mat.m2-define-typography-config(
-  $font-family: 'Roboto,Helvetica Neue,sans-serif',
+  $font-family: "'Inter Tight', sans-serif",
 );
 
 $app-color: (
-  primary: mat.m2-define-palette($rylo-orange-palette, $default: 700),
+  primary: mat.m2-define-palette($rylo-orange-palette, $default: 500),
   accent: $app-accent,
   warn: $app-warn,
 );
@@ -61,9 +94,6 @@ $app-dark-theme: mat.m2-define-dark-theme(
 
 @include mat.core();
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @mixin theme-components($theme) {
   @include mat.core-color($theme);
 
@@ -73,7 +103,6 @@ $app-dark-theme: mat.m2-define-dark-theme(
   @include mat.tabs-color($theme);
 }
 
-// Include typography and density styles once, for light and dark modes
 @include mat.all-component-typographies($app-theme);
 @include mat.all-component-densities($app-theme);
 

@@ -7,7 +7,6 @@
     "shift": "Shift"
   },
   "translate": {
-    "logo": "Translate",
     "title": "Rylo Translate",
     "language-selector": {
       "detected": "{{lang}} - Detected",

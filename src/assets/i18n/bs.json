@@ -51,8 +51,7 @@
       "actions": {
         "copy": "Kopiraj prevod"
       }
-    },
-    "logo": "Prevodilac"
+    }
   },
   "landing": {
     "try": "Prevedi odmah",

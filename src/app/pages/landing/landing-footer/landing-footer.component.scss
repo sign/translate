@@ -1,8 +1,8 @@
 @use '../../../../theme/breakpoints' as breakpoints;
 
 footer {
-  background-color: #141518;
-  color: #ffffff;
+  background-color: #191412;
+  color: #faf5f2;
   padding: 20px 40px;
 }
 
@@ -42,12 +42,12 @@ ul {
   gap: 16px;
 
   li {
-    color: #ccc;
+    color: rgba(250, 245, 242, 0.7);
   }
 }
 
 a {
-  color: #bbb;
+  color: rgba(250, 245, 242, 0.7);
   text-decoration: none;
   font-size: 0.8em;
 
@@ -57,7 +57,7 @@ a {
 }
 
 app-i18n-language-selector {
-  border: 1px solid white;
+  border: 1px solid rgba(250, 245, 242, 0.3);
   display: inline-block;
   border-radius: 16px;
   padding: 4px;
