@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Contact: mailto:security@sign.mt
+Contact: mailto:research@rylo.com
 Expires: 2024-12-31T23:59:59.000Z
-Canonical: https://sign.mt/.well-known/security.txt
-Encryption: https://sign.mt/.well-known/gpg.asc
+Canonical: https://translate.rylo.com/.well-known/security.txt
+Encryption: https://translate.rylo.com/.well-known/gpg.asc
 Preferred-Languages: en, he
 -----BEGIN PGP SIGNATURE-----
 

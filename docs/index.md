@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: 'sign.mt Docs'
+  name: 'translate.rylo.com Docs'
   text: 'Documentation and Blog'
   tagline: 'A collection of resources on sign languages, deaf culture, and our technology.'
   actions:

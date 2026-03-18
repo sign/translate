@@ -1,10 +1,10 @@
-# License for [`sign.mt`](https://sign.mt)
+# License for [`translate.rylo.com`](https://translate.rylo.com)
 
-The license for `sign.mt` is divided into two tiers, based on the type of your legal entity.
-Individuals, non-profit organizations, and educational institutions are permitted to use `sign.mt` for sign language translation without charge,
+The license for `translate.rylo.com` is divided into two tiers, based on the type of your legal entity.
+Individuals, non-profit organizations, and educational institutions are permitted to use `translate.rylo.com` for sign language translation without charge,
 while a separate license is required for for-profit commercial organizations.
 
-This licensing model has been designed to provide funding for the development and maintenance of `sign.mt`,
+This licensing model has been designed to provide funding for the development and maintenance of `translate.rylo.com`,
 while still making the source code accessible and the program free for a majority of users.
 
 Please review the following license terms carefully to determine which license applies to your use case.
@@ -16,7 +16,7 @@ Please review the following license terms carefully to determine which license a
 
 ## Free license
 
-Copyright (c) 2022 sign.mt ltd
+Copyright (c) 2022 translate.rylo.com ltd
 
 ### [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 

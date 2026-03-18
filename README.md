@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://sign.mt/"><strong>sign.mt</strong></a>
+  <a href="https://translate.rylo.com/"><strong>translate.rylo.com</strong></a>
   <br>
 </p>
 
@@ -47,7 +47,7 @@
 </p>
 
 <p align="center">
-  <a href="https://sign.mt" target="_blank">
+  <a href="https://translate.rylo.com" target="_blank">
     <img src="src/assets/promotional/about/hero.webp" alt="Sign Language Translation Demo Image" />
   </a>
 </p>
@@ -141,9 +141,9 @@ npm test
 
 ```bibtex
 @misc{moryossef2023signmt,
-    title={sign.mt: Effortless Real-Time Sign Language Translation},
+    title={translate.rylo.com: Effortless Real-Time Sign Language Translation},
     author={Moryossef, Amit},
-    howpublished={\url{https://sign.mt/}},
+    howpublished={\url{https://translate.rylo.com/}},
     year={2023}
 }
 ```

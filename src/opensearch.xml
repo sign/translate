@@ -3,5 +3,5 @@
   <ShortName>Rylo Translate</ShortName>
   <Description>Translate between spoken and signed languages</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Url type="text/html" template="https://sign.mt/?text={searchTerms}" />
+  <Url type="text/html" template="https://translate.rylo.com/?text={searchTerms}" />
 </OpenSearchDescription>
