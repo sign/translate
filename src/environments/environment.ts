@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   measurementId: null as string | null,
+  apiDomain: 'nagish.dev',
+  recaptchaSiteKey: '6LcGHIssAAAAABt5Kiu1hc7bgZt3Pw_l69w17hip',
 };
 
 /*

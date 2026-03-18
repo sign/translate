@@ -2,6 +2,7 @@ import {inject, Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
 
 type TranslationDirection = 'spoken-to-signed' | 'signed-to-spoken';
 
@@ -22,25 +23,19 @@ export class SignWritingTranslationService {
     from: string,
     to: string
   ): Observable<TranslationResponse> {
-    const url = 'https://sign.mt/api/spoken-text-to-signwriting';
+    const url = `https://sw-translation.${environment.apiDomain}/`;
     const body = {
-      data: {
-        texts: sentences.map(s => s.trim()),
-        spoken_language: from,
-        signed_language: to,
-      },
+      texts: sentences.map(s => s.trim()),
+      spoken_language: from,
+      signed_language: to,
     };
 
     interface SpokenToSignWritingResponse {
-      result: {
-        input: string[];
-        output: string[];
-      };
+      input: string[];
+      output: string[];
     }
 
-    return this.http
-      .post<SpokenToSignWritingResponse>(url, body)
-      .pipe(map(res => ({text: res.result.output.join(' ')})));
+    return this.http.post<SpokenToSignWritingResponse>(url, body).pipe(map(res => ({text: res.output.join(' ')})));
   }
 
   translateSpokenToSignWriting(

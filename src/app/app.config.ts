@@ -5,7 +5,8 @@ import {routes} from './app.routes';
 import {provideClientHydration, withEventReplay} from '@angular/platform-browser';
 import {NavigatorService} from './core/services/navigator/navigator.service';
 import {IonicRouteStrategy, provideIonicAngular} from '@ionic/angular/standalone';
-import {provideHttpClient, withFetch} from '@angular/common/http';
+import {provideHttpClient, withFetch, withInterceptors} from '@angular/common/http';
+import {recaptchaInterceptor} from './core/interceptors/recaptcha.interceptor';
 import {AppTranslocoProviders} from './core/modules/transloco/transloco.module';
 import {NgxsModuleOptions, provideStore} from '@ngxs/store';
 import {SettingsState} from './modules/settings/settings.state';
@@ -50,7 +51,7 @@ export const appConfig: ApplicationConfig = {
     NavigatorService,
 
     // HTTP Requests
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch(), withInterceptors([recaptchaInterceptor])),
 
     ...AppTranslocoProviders,
 

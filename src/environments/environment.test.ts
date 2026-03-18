@@ -7,6 +7,8 @@ import type {InitialNavigation} from '@angular/router';
 export const environment = {
   production: false,
   measurementId: null as string | null,
+  apiDomain: 'nagish.dev',
+  recaptchaSiteKey: '',
   initialNavigation: 'enabledNonBlocking' as InitialNavigation,
 };
 

@@ -187,4 +187,4 @@ d. Nothing in this Public License constitutes or may be interpreted as a limitat
 The commercial license is required for organizations that do not meet the criteria for the free license.
 
 Detailed information about the commercial license, including the scope of its usage and the licensing fee, will be provided upon request.
-Please direct all inquiries regarding the commercial license to <a href="mailto:sign@nagish.com">sign&#64;nagish.com</a>.
+Please direct all inquiries regarding the commercial license to <a href="mailto:research@rylo.com">sign&#64;nagish.com</a>.

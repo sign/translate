@@ -2,6 +2,7 @@ import {inject, Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -190,17 +191,17 @@ export class TranslationService {
     const params = new URLSearchParams();
     params.set('lang', language);
     params.set('text', text);
-    const url = 'https://sign.mt/api/text-normalization?' + params.toString();
+    const url = `https://text-normalization.${environment.apiDomain}/?` + params.toString();
 
     return this.http.get<{text: string}>(url).pipe(map(response => response.text));
   }
 
   describeSignWriting(fsw: string): Observable<string> {
-    const url = 'https://sign.mt/api/signwriting-description';
+    const params = new URLSearchParams();
+    params.set('fsw', fsw);
+    const url = `https://sw-description.${environment.apiDomain}/?` + params.toString();
 
-    return this.http
-      .post<{result: {description: string}}>(url, {data: {fsw}})
-      .pipe(map(response => response.result.description));
+    return this.http.get<{description: string}>(url).pipe(map(response => response.description));
   }
 
   translateSpokenToSigned(text: string, spokenLanguage: string, signedLanguage: string): string {

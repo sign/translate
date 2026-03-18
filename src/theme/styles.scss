@@ -65,3 +65,7 @@ ion-content::part(scroll) {
 ion-header ion-button {
   text-transform: none;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
