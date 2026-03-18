@@ -51,8 +51,7 @@
       "actions": {
         "copy": "Kopeeri tõlge"
       }
-    },
-    "logo": "Tõlk"
+    }
   },
   "landing": {
     "try": "Tõlgi kohe",

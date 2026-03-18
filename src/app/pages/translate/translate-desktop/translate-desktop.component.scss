@@ -46,7 +46,7 @@
   // Input mode button group
   #input-mode-group {
     height: 68px;
-    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-family: 'Inter Tight', sans-serif;
     align-items: center;
     display: flex;
     gap: 0.75em;
@@ -62,7 +62,7 @@
 
   // Translation card with Material Design 3 styling
   #translation-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    background: linear-gradient(135deg, #faf5f2 0%, #eee7e1 100%);
     width: 100%;
     height: 100%;
     box-shadow:
@@ -117,7 +117,7 @@
     }
 
     @media (prefers-color-scheme: dark) {
-      background: linear-gradient(135deg, #1c1b1f 0%, #2d2c31 100%);
+      background: linear-gradient(135deg, #191412 0%, #312623 100%);
     }
 
     @media #{breakpoints.$breakpoint-gt-xs} {
@@ -198,10 +198,10 @@ ntkme-github-button {
   }
 
   &-text {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(25, 20, 18, 0.7);
 
     @media (prefers-color-scheme: dark) {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(250, 245, 242, 0.7);
     }
   }
 

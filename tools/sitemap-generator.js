@@ -40,11 +40,11 @@ for (const url of additionalUrls) {
 }
 
 async function main() {
-  const buildDir = `${baseDir}dist/sign-translate/browser/`;
+  const buildDir = `${baseDir}${path.sep}dist${path.sep}sign-translate${path.sep}browser${path.sep}`;
 
   // writes sitemaps and index out to the destination you provide.
   await simpleSitemapAndIndex({
-    hostname: 'https://sign.mt',
+    hostname: 'https://translate.rylo.com',
     destinationDir: buildDir,
     sourceData,
     gzip: false,
@@ -52,14 +52,14 @@ async function main() {
 
   // Now we add the docs sitemap to the sitemap index
   const sitemapIndex = `${buildDir}sitemap-index.xml`;
-  // Read the sitemap index, parse the xml, under sitemapindex add a new sitemap to https://sign.mt/docs/sitemap.xml
+  // Read the sitemap index, parse the xml, under sitemapindex add a new sitemap to https://translate.rylo.com/docs/sitemap.xml
   const sitemapIndexContent = String(fs.readFileSync(sitemapIndex, 'utf8'));
   const tagIndex = sitemapIndexContent.indexOf('</sitemapindex>');
   const preText = sitemapIndexContent.slice(0, tagIndex);
   const postText = sitemapIndexContent.slice(tagIndex);
 
   // Combine and write new sitemap index
-  const newSitemap = `${preText}<sitemap><loc>https://sign.mt/docs/sitemap.xml</loc></sitemap>${postText}`;
+  const newSitemap = `${preText}<sitemap><loc>https://translate.rylo.com/docs/sitemap.xml</loc></sitemap>${postText}`;
   fs.writeFileSync(sitemapIndex, newSitemap, 'utf8');
 }
 

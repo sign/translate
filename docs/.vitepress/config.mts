@@ -6,11 +6,11 @@ import {defineConfig} from 'vitepress';
 export default withMermaid(
   defineConfig({
     title: 'Documentation',
-    description: 'sign.mt Documentation and Blog',
+    description: 'translate.rylo.com Documentation and Blog',
     base: '/docs/',
     lastUpdated: true,
     sitemap: {
-      hostname: 'https://sign.mt/docs/',
+      hostname: 'https://translate.rylo.com/docs/',
     },
     themeConfig: {
       search: {
@@ -22,7 +22,7 @@ export default withMermaid(
       logo: {
         light: '/logo-light.svg',
         dark: '/logo-dark.svg',
-        alt: 'sign.mt Logo',
+        alt: 'translate.rylo.com Logo',
       },
       nav: [
         {text: 'Docs', link: '/docs/introduction/getting-started'},

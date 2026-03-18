@@ -51,8 +51,7 @@
       "actions": {
         "copy": "复制翻译"
       }
-    },
-    "logo": "翻译"
+    }
   },
   "landing": {
     "try": "立即翻译",
