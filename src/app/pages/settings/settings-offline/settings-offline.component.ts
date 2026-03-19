@@ -9,16 +9,7 @@ import {BaseComponent} from '../../../components/base/base.component';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {NgTemplateOutlet} from '@angular/common';
 import {NgxFilesizeModule} from 'ngx-filesize';
-import {
-  IonBackButton,
-  IonButton,
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonIcon,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/angular/standalone';
+import {IonBackButton, IonButton, IonContent, IonHeader, IonIcon} from '@ionic/angular/standalone';
 import {chevronDownOutline, chevronForwardOutline, cloudDownloadOutline, refresh, trash} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
 
@@ -47,10 +38,7 @@ if (!isIOS) {
     NgxFilesizeModule,
     IonContent,
     IonHeader,
-    IonToolbar,
-    IonTitle,
     IonBackButton,
-    IonButtons,
     IonButton,
     IonIcon,
   ],

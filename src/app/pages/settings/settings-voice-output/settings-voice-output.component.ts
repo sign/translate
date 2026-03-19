@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
-import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
-import {IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {TranslocoDirective} from '@jsverse/transloco';
+import {IonBackButton, IonContent, IonHeader} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-settings-voice-output',
   templateUrl: './settings-voice-output.component.html',
   styleUrls: ['./settings-voice-output.component.scss'],
-  imports: [TranslocoDirective, TranslocoPipe, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent],
+  imports: [TranslocoDirective, IonHeader, IonBackButton, IonContent],
 })
 export class SettingsVoiceOutputComponent {}

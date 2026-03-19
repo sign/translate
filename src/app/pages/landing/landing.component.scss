@@ -1,4 +1,5 @@
 @use '../../../theme/breakpoints' as breakpoints;
+@use '../../../theme/floating-nav' as nav;
 
 :host ::ng-deep {
   router-outlet + * {
@@ -13,4 +14,37 @@
       flex-direction: column;
     }
   }
+
+  ion-header.floating-header {
+    @include nav.floating-header;
+  }
+}
+
+.nav-inner {
+  @include nav.glass-container;
+  max-width: 1200px;
+  margin: 8px auto 0;
+
+  @media #{breakpoints.$breakpoint-lt-md} {
+    margin: 8px 8px 0;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  @include nav.nav-link;
+}
+
+.nav-cta {
+  @include nav.nav-cta;
 }

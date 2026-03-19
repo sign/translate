@@ -27,32 +27,27 @@
   </ion-menu>
 }
 
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    @if (isMobile.matches) {
-      <ion-buttons slot="start">
-        <ion-menu-button auto-hide="true"></ion-menu-button>
-      </ion-buttons>
-    }
-    <ion-title>
-      <app-logo />
-    </ion-title>
+<ion-header class="ion-no-border floating-header">
+  <nav class="nav-inner">
+    <app-logo />
     @if (!isMobile.matches) {
-      <ion-buttons slot="primary">
-        <ion-button routerLink="/" queryParamsHandling="preserve" color="primary" shape="round" fill="solid">
+      <div class="nav-right">
+        <div class="nav-links">
+          @for (page of pages; track page.key) {
+            <a [routerLink]="page.route" queryParamsHandling="preserve" class="nav-link">
+              {{ 'landing.' + page.key + '.title' | transloco }}
+            </a>
+          }
+        </div>
+        <a routerLink="/" queryParamsHandling="preserve" class="nav-cta">
           {{ 'landing.try' | transloco }}
-          <ion-icon slot="end" name="arrow-forward" />
-        </ion-button>
-      </ion-buttons>
-      <ion-buttons slot="secondary">
-        @for (page of pages; track page.key) {
-          <ion-button [routerLink]="page.route" queryParamsHandling="preserve" fill="solid" color="light" shape="round">
-            {{ 'landing.' + page.key + '.title' | transloco }}
-          </ion-button>
-        }
-      </ion-buttons>
+          <ion-icon name="arrow-forward" />
+        </a>
+      </div>
+    } @else {
+      <ion-menu-button auto-hide="true" />
     }
-  </ion-toolbar>
+  </nav>
 </ion-header>
 
 <ion-content [fullscreen]="true" id="main-content">

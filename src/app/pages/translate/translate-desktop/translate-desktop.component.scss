@@ -1,30 +1,35 @@
 @use '../../../../theme/breakpoints' as breakpoints;
 @use '../../../../theme/md3-tokens' as md3;
 @use '../../../../theme/animations' as anim;
+@use '../../../../theme/floating-nav' as nav;
+
+:host ::ng-deep {
+  ion-header.floating-header {
+    @include nav.floating-header;
+  }
+}
+
+.nav-inner {
+  @include nav.glass-container;
+  max-width: 1200px;
+  margin: 8px auto 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  @include nav.nav-link;
+}
+
+.nav-cta {
+  @include nav.nav-cta;
+}
 
 .container {
   flex: 1;
-}
-
-// Header background with gradient fade
-@media #{breakpoints.$breakpoint-gt-xs} {
-  .container::before {
-    background: linear-gradient(
-      135deg,
-      var(--app-tinted-background-color) 0%,
-      rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.08) 50%,
-      transparent 100%
-    );
-    border-bottom: 1px solid rgba(var(--ion-color-primary-rgb, 66, 133, 244), 0.2);
-    content: '';
-    display: block;
-    height: 106px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    @include anim.animate-fade-in(md3.$md3-duration-long2);
-  }
 }
 
 // Container
@@ -34,8 +39,6 @@
   flex-direction: column;
 
   @media #{breakpoints.$breakpoint-gt-md} {
-    padding: 48px;
-    padding-top: 0;
     padding-bottom: 16px;
   }
 

@@ -6,13 +6,11 @@
   </ion-menu>
 
   <div class="ion-page" id="main">
-    <ion-header [translucent]="true">
-      <ion-toolbar>
-        <ion-title>
-          <ion-icon name="ear-outline" />
-          {{ 'playground.title' | transloco }}
-        </ion-title>
-      </ion-toolbar>
+    <ion-header class="ion-no-border floating-header">
+      <div class="nav-inner">
+        <ion-icon name="ear-outline" />
+        <span class="nav-title">{{ 'playground.title' | transloco }}</span>
+      </div>
     </ion-header>
     <ion-content>
       <div id="video-page-container">

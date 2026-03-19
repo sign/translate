@@ -1,19 +1,11 @@
 <ng-container *transloco="let t; read: 'settings.voice.input'">
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button [text]="'settings.title' | transloco"></ion-back-button>
-      </ion-buttons>
-      <ion-title>{{ t('title') }}</ion-title>
-    </ion-toolbar>
+  <ion-header class="ion-no-border floating-header">
+    <div class="nav-inner">
+      <ion-back-button />
+      <span class="nav-title">{{ t('title') }}</span>
+    </div>
   </ion-header>
   <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">{{ t('title') }}</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
     <p style="text-align: center">Voice input language selection is not yet implemented.</p>
   </ion-content>
 </ng-container>

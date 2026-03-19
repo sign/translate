@@ -1,21 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="primary">
-      <ion-button href="https://rylo.com/sign" target="_blank" color="primary" shape="round" fill="solid">
-        {{ 'landing.about.title' | transloco }}
-      </ion-button>
-    </ion-buttons>
-    <ion-title>
-      <app-logo />
-    </ion-title>
-    <ion-buttons slot="secondary">
+<ion-header class="ion-no-border floating-header">
+  <nav class="nav-inner">
+    <app-logo />
+    <div class="nav-links">
       @for (page of pages; track page.key) {
-        <ion-button [routerLink]="page.route" queryParamsHandling="preserve" fill="solid" color="light" shape="round">
+        <a [routerLink]="page.route" queryParamsHandling="preserve" class="nav-link">
           {{ 'landing.' + page.key + '.title' | transloco }}
-        </ion-button>
+        </a>
       }
-    </ion-buttons>
-  </ion-toolbar>
+      <a href="https://rylo.com/sign" target="_blank" class="nav-link">
+        {{ 'landing.about.title' | transloco }}
+      </a>
+    </div>
+  </nav>
 </ion-header>
 
 <ion-content [fullscreen]="true">

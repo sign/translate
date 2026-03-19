@@ -5,7 +5,7 @@ import {filter, takeUntil, tap} from 'rxjs/operators';
 import {SetVideo, StartCamera} from '../../core/modules/ngxs/store/video/video.actions';
 import {TranslocoPipe, TranslocoService} from '@jsverse/transloco';
 import {Observable} from 'rxjs';
-import {IonContent, IonHeader, IonIcon, IonMenu, IonSplitPane, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {IonContent, IonHeader, IonIcon, IonMenu, IonSplitPane} from '@ionic/angular/standalone';
 import {SettingsComponent} from '../../modules/settings/settings/settings.component';
 import {earOutline} from 'ionicons/icons';
 import {addIcons} from 'ionicons';
@@ -15,18 +15,7 @@ import {VideoModule} from '../../components/video/video.module';
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss'],
-  imports: [
-    IonSplitPane,
-    IonContent,
-    IonMenu,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    VideoModule,
-    SettingsComponent,
-    IonIcon,
-    TranslocoPipe,
-  ],
+  imports: [IonSplitPane, IonContent, IonMenu, IonHeader, VideoModule, SettingsComponent, IonIcon, TranslocoPipe],
 })
 export class PlaygroundComponent extends BaseComponent implements OnInit {
   private store = inject(Store);

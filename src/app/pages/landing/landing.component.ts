@@ -2,7 +2,6 @@ import {Component, inject} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {
   IonButton,
-  IonButtons,
   IonContent,
   IonFooter,
   IonHeader,
@@ -43,7 +42,6 @@ import {LogoComponent} from '../../components/logo/logo.component';
     IonFooter,
     IonButton,
     TranslocoPipe,
-    IonButtons,
     IonMenuButton,
     IonIcon,
     RouterOutlet,

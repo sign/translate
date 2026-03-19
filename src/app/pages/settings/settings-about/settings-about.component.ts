@@ -1,17 +1,7 @@
 import {Component} from '@angular/core';
 import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
 import {RouterLink} from '@angular/router';
-import {
-  IonBackButton,
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/angular/standalone';
+import {IonBackButton, IonContent, IonHeader, IonItem, IonLabel, IonList} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-settings-about',
@@ -21,11 +11,8 @@ import {
     TranslocoDirective,
     RouterLink,
     TranslocoPipe,
-    IonTitle,
     IonBackButton,
-    IonToolbar,
     IonHeader,
-    IonButtons,
     IonContent,
     IonList,
     IonItem,

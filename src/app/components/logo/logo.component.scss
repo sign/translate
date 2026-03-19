@@ -15,4 +15,8 @@ a {
 img {
   height: 1em;
   display: block;
+
+  @media (prefers-color-scheme: dark) {
+    filter: invert(1) hue-rotate(180deg);
+  }
 }

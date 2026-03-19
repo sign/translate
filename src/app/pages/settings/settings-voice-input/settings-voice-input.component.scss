@@ -1,0 +1,20 @@
+@use '../../../../theme/floating-nav' as nav;
+
+:host ::ng-deep {
+  ion-header.floating-header {
+    @include nav.floating-header;
+  }
+}
+
+.nav-inner {
+  @include nav.glass-container;
+  margin: 8px 8px 0;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.nav-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ion-text-color);
+}

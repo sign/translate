@@ -1,15 +1,10 @@
 <ng-container *transloco="let t; read: 'settings'">
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-title>{{ t('title') }}</ion-title>
-    </ion-toolbar>
+  <ion-header class="ion-no-border floating-header">
+    <div class="nav-inner">
+      <span class="nav-title">{{ t('title') }}</span>
+    </div>
   </ion-header>
   <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">{{ t('title') }}</ion-title>
-      </ion-toolbar>
-    </ion-header>
     @for (group of groups; track group) {
       <ion-list>
         <ion-list-header>

@@ -1,10 +1,8 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      <ion-icon name="analytics" />
-      {{ 'benchmark.title' | transloco }}
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border floating-header">
+  <div class="nav-inner">
+    <ion-icon name="analytics" />
+    <span class="nav-title">{{ 'benchmark.title' | transloco }}</span>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">

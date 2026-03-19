@@ -13,8 +13,6 @@ import {
   IonContent,
   IonHeader,
   IonIcon,
-  IonTitle,
-  IonToolbar,
 } from '@ionic/angular/standalone';
 import {BenchmarkItemComponent} from './benchmark-item/benchmark-item.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
@@ -29,8 +27,6 @@ import {analytics} from 'ionicons/icons';
   styleUrls: ['./benchmark.component.scss'],
   imports: [
     IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
     IonButton,
     IonCard,

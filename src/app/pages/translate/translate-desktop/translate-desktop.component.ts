@@ -2,7 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
-import {IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonTitle, IonToolbar} from '@ionic/angular/standalone';
+import {IonContent, IonHeader, IonIcon} from '@ionic/angular/standalone';
 import {TranslateInputButtonComponent} from '../input/button/button.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
 import {SendFeedbackComponent} from '../send-feedback/send-feedback.component';
@@ -24,10 +24,7 @@ import {LandingFooterComponent} from '../../landing/landing-footer/landing-foote
   styleUrls: ['./translate-desktop.component.scss'],
   imports: [
     IonHeader,
-    IonToolbar,
-    IonButtons,
     IonContent,
-    IonTitle,
     IonIcon,
     TranslateInputButtonComponent,
     LanguageSelectorsComponent,
@@ -36,7 +33,6 @@ import {LandingFooterComponent} from '../../landing/landing-footer/landing-foote
     SpokenToSignedComponent,
     SignedToSpokenComponent,
     DropPoseFileComponent,
-    IonButton,
     RouterLink,
     LogoComponent,
 

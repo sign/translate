@@ -1,3 +1,36 @@
+@use '../../../../theme/floating-nav' as nav;
+
+:host ::ng-deep {
+  ion-header.floating-header {
+    @include nav.floating-header;
+  }
+
+  .nav-inner {
+    @include nav.glass-container;
+    margin: 8px;
+    padding: 8px;
+    justify-content: center;
+    overflow: hidden;
+
+    app-language-selectors {
+      height: 48px;
+
+      app-language-selector {
+        height: 48px;
+
+        ion-button.menu-language-button {
+          height: 48px;
+          border-radius: 10px;
+
+          &::part(native) {
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 app-signed-language-output {
   display: block;
   width: 100%;
