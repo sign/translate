@@ -37,6 +37,7 @@
   @include anim.animate-fade-in(md3.$md3-duration-medium2);
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
 
   @media #{breakpoints.$breakpoint-gt-md} {
     padding-bottom: 16px;
@@ -44,23 +45,6 @@
 
   app-drop-pose-file {
     flex: 0 0 auto;
-  }
-
-  // Input mode button group
-  #input-mode-group {
-    height: 68px;
-    font-family: 'Inter Tight', sans-serif;
-    align-items: center;
-    display: flex;
-    gap: 0.75em;
-
-    @media #{breakpoints.$breakpoint-lt-lg} {
-      padding: 0 12px;
-    }
-
-    @media #{breakpoints.$breakpoint-lt-sm} {
-      display: none;
-    }
   }
 
   // Translation card with Material Design 3 styling
@@ -170,10 +154,11 @@ ntkme-github-button {
 .disclaimer {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 13px;
-  text-align: end;
-  margin-left: auto;
+  text-align: center;
+  margin: 16px auto 0;
   max-width: max-content;
   padding: 10px 14px;
   background: linear-gradient(

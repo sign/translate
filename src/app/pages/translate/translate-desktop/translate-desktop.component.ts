@@ -3,7 +3,6 @@ import {Store} from '@ngxs/store';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BaseComponent} from '../../../components/base/base.component';
 import {IonContent, IonHeader, IonIcon} from '@ionic/angular/standalone';
-import {TranslateInputButtonComponent} from '../input/button/button.component';
 import {LanguageSelectorsComponent} from '../language-selectors/language-selectors.component';
 import {SendFeedbackComponent} from '../send-feedback/send-feedback.component';
 import {TranslocoPipe} from '@jsverse/transloco';
@@ -12,7 +11,7 @@ import {SpokenToSignedComponent} from '../spoken-to-signed/spoken-to-signed.comp
 import {SignedToSpokenComponent} from '../signed-to-spoken/signed-to-spoken.component';
 import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component';
 import {addIcons} from 'ionicons';
-import {cloudUpload, informationCircleOutline, language, videocam} from 'ionicons/icons';
+import {informationCircleOutline} from 'ionicons/icons';
 import {RouterLink} from '@angular/router';
 import {LogoComponent} from '../../../components/logo/logo.component';
 
@@ -26,7 +25,6 @@ import {LandingFooterComponent} from '../../landing/landing-footer/landing-foote
     IonHeader,
     IonContent,
     IonIcon,
-    TranslateInputButtonComponent,
     LanguageSelectorsComponent,
     SendFeedbackComponent,
     TranslocoPipe,
@@ -53,7 +51,7 @@ export class TranslateDesktopComponent extends BaseComponent implements OnInit {
   constructor() {
     super();
 
-    addIcons({language, videocam, cloudUpload, informationCircleOutline});
+    addIcons({informationCircleOutline});
   }
 
   ngOnInit(): void {
