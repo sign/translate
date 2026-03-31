@@ -36,24 +36,33 @@
         [matTooltipPosition]="'above'">
         <ion-icon name="download-outline" slot="icon-only" />
       </ion-button>
-      @if (isSharingSupported) {
-        <ion-button
-          class="action-button"
-          fill="solid"
-          shape="round"
-          color="primary"
-          (click)="shareTranslation()"
-          [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
-          [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
-          [matTooltipPosition]="'above'">
+      <ion-button
+        class="action-button"
+        fill="solid"
+        shape="round"
+        color="primary"
+        (click)="shareTranslation()"
+        [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
+        [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
+        [matTooltipPosition]="'above'">
+        @if (isMobile) {
           <ion-icon ios="share-outline" md="share-social-outline" slot="icon-only" />
-        </ion-button>
-      }
+        } @else {
+          <ion-icon name="link-outline" slot="icon-only" />
+        }
+      </ion-button>
     } @else {
-      <ion-button [disabled]="true" class="action-button" fill="solid" shape="round">
-        <ion-spinner name="crescent"></ion-spinner>
+      <ion-button [disabled]="true" class="action-button" fill="solid" shape="round" color="primary">
+        <ion-spinner name="crescent" slot="icon-only"></ion-spinner>
+      </ion-button>
+      <ion-button [disabled]="true" class="action-button" fill="solid" shape="round" color="primary">
+        <ion-spinner name="crescent" slot="icon-only"></ion-spinner>
       </ion-button>
     }
   </div>
   <app-viewer-selector></app-viewer-selector>
+}
+
+@if (shareDialogUrl) {
+  <app-share-dialog [url]="shareDialogUrl" (closed)="shareDialogUrl = null" />
 }

@@ -364,38 +364,33 @@ export class TranslateState implements NgxsOnInit {
     }
   }
 
-  async shareWeb(file: File) {
-    if (!('share' in navigator)) {
-      // For example in non-HTTPS on iOS
-      alert(`Share functionality is not available`);
-      return;
-    }
-
-    const files: File[] = [file];
-
-    const url = window.location.href;
-    const title = 'Signed Language Video for text';
-
-    if ('canShare' in navigator && (navigator as any).canShare({files})) {
-      // Apps like WhatsApp only support sharing a single item
-      await navigator.share({files} as ShareData);
-    } else {
-      // TODO convert the video to GIF, try to share the GIF.
-      await navigator.share({text: title, title, url});
-    }
+  static buildShareUrl(state: TranslateStateModel): string {
+    const params = new URLSearchParams({
+      text: state.spokenLanguageText,
+      spl: state.spokenLanguage,
+      sil: state.signedLanguage,
+    });
+    return `${window.location.origin}/?${params.toString()}`;
   }
 
   @Action(ShareSignedLanguageVideo)
   async shareSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
-    const {signedLanguageVideo} = getState();
+    const state = getState();
+    const watchUrl = TranslateState.buildShareUrl(state);
+    const shareText = `Translated with Rylo Translate\n${watchUrl}`;
 
-    const data = await fetch(signedLanguageVideo);
+    const data = await fetch(state.signedLanguageVideo);
     let blob = await data.blob();
     const ext = blob.type.split('/').pop();
+    const file = new File([blob], 'rylo-translate.' + ext, {type: blob.type});
 
-    const file = new File([blob], 'video.' + ext, {type: blob.type});
+    const files: File[] = [file];
 
-    return this.shareWeb(file);
+    if ('canShare' in navigator && (navigator as any).canShare({files})) {
+      await navigator.share({files, text: shareText} as ShareData);
+    } else if ('share' in navigator) {
+      await navigator.share({text: shareText, title: 'Rylo Translate', url: watchUrl});
+    }
   }
 
   @Action(DownloadSignedLanguageVideo)

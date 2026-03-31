@@ -9,6 +9,7 @@ import {
   DownloadSignedLanguageVideo,
   ShareSignedLanguageVideo,
 } from '../../../../modules/translate/translate.actions';
+import {TranslateState, TranslateStateModel} from '../../../../modules/translate/translate.state';
 import {BaseComponent} from '../../../../components/base/base.component';
 import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
 import {ViewerSelectorComponent} from '../../pose-viewers/viewer-selector/viewer-selector.component';
@@ -16,11 +17,12 @@ import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
 import {AvatarPoseViewerComponent} from '../../pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
 import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
+import {ShareDialogComponent} from '../../../../components/share-dialog/share-dialog.component';
 import {TranslocoPipe} from '@jsverse/transloco';
 import {AsyncPipe} from '@angular/common';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {addIcons} from 'ionicons';
-import {downloadOutline, shareOutline, shareSocialOutline} from 'ionicons/icons';
+import {downloadOutline, linkOutline, shareOutline, shareSocialOutline} from 'ionicons/icons';
 
 @Component({
   selector: 'app-signed-language-output',
@@ -33,6 +35,7 @@ import {downloadOutline, shareOutline, shareSocialOutline} from 'ionicons/icons'
     AvatarPoseViewerComponent,
     SkeletonPoseViewerComponent,
     HumanPoseViewerComponent,
+    ShareDialogComponent,
     TranslocoPipe,
     AsyncPipe,
     MatTooltipModule,
@@ -49,7 +52,8 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
 
   videoUrl: string;
   safeVideoUrl: SafeUrl;
-  isSharingSupported: boolean;
+  isMobile: boolean;
+  shareDialogUrl: string | null = null;
 
   constructor() {
     super();
@@ -58,9 +62,12 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
     this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
 
-    this.isSharingSupported = 'navigator' in globalThis && 'share' in navigator;
+    this.isMobile =
+      'navigator' in globalThis &&
+      navigator.maxTouchPoints > 0 &&
+      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    addIcons({downloadOutline, shareOutline, shareSocialOutline});
+    addIcons({downloadOutline, linkOutline, shareOutline, shareSocialOutline});
   }
 
   ngOnInit(): void {
@@ -84,7 +91,12 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   }
 
   shareTranslation(): void {
-    this.store.dispatch(ShareSignedLanguageVideo);
+    if (this.isMobile) {
+      this.store.dispatch(ShareSignedLanguageVideo);
+    } else {
+      const state = this.store.selectSnapshot<TranslateStateModel>(state => state.translate);
+      this.shareDialogUrl = TranslateState.buildShareUrl(state);
+    }
   }
 
   playVideoIfPaused(event: MouseEvent): void {

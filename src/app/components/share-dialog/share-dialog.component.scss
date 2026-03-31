@@ -1,0 +1,97 @@
+.share-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.share-dialog {
+  background: var(--ion-background-color, #fff);
+  color: var(--ion-text-color, #1a1a1a);
+  border-radius: 16px;
+  padding: 20px 24px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
+  animation: slideUp 0.2s ease-out;
+
+  @media (prefers-color-scheme: dark) {
+    background: #2a2a2a;
+    color: #eee;
+  }
+}
+
+.share-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+.share-label {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: #666;
+
+  @media (prefers-color-scheme: dark) {
+    color: #aaa;
+  }
+}
+
+.share-url-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.share-url-input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: monospace;
+  background: #f5f5f5;
+  color: inherit;
+  outline: none;
+
+  &:focus {
+    border-color: var(--ion-color-primary, #4285f4);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: #1a1a1a;
+    border-color: #444;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="share-backdrop" (click)="onBackdropClick($event)">
+  <div class="share-dialog">
+    <div class="share-header">
+      <h3>Share Translation</h3>
+      <ion-button fill="clear" size="small" (click)="close()">
+        <ion-icon name="close-outline" slot="icon-only" />
+      </ion-button>
+    </div>
+
+    <p class="share-label">Copy this link to share:</p>
+
+    <div class="share-url-row">
+      <input type="text" [value]="url" readonly class="share-url-input" (click)="$any($event.target).select()" />
+      <ion-button fill="solid" color="primary" (click)="copyUrl()">
+        <ion-icon [name]="copied ? 'checkmark-outline' : 'copy-outline'" slot="start" />
+        {{ copied ? 'Copied' : 'Copy' }}
+      </ion-button>
+    </div>
+  </div>
+</div>

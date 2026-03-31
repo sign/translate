@@ -3,6 +3,7 @@ import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {PlayableVideoEncoder} from '../playable-video-encoder';
+import {drawWatermark} from '../../../../core/helpers/watermark';
 
 @Component({
   selector: 'app-skeleton-pose-viewer',
@@ -13,43 +14,52 @@ import {PlayableVideoEncoder} from '../playable-video-encoder';
 export class SkeletonPoseViewerComponent extends BasePoseViewerComponent implements AfterViewInit {
   @Input() src: string;
 
+  private recordingCanvas: HTMLCanvasElement | null = null;
+
   ngAfterViewInit(): void {
     const pose = this.poseEl().nativeElement;
 
     fromEvent(pose, 'firstRender$')
       .pipe(
         tap(async () => {
-          const poseCanvas = pose.shadowRoot.querySelector('canvas');
+          const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
           pose.currentTime = 0; // Force time back to 0
 
-          // startRecording is imperfect, specifically when the tab is out of focus.
           if (!PlayableVideoEncoder.isSupported()) {
-            await this.startRecording(poseCanvas as any);
+            // Create a compositing canvas for watermarked MediaRecorder capture
+            this.recordingCanvas = document.createElement('canvas');
+            this.recordingCanvas.width = poseCanvas.width;
+            this.recordingCanvas.height = poseCanvas.height;
+            await this.startRecording(this.recordingCanvas);
           }
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
 
-    // Most reliable method to create a video from a canvas
-    if (PlayableVideoEncoder.isSupported()) {
-      let lastRendered = NaN;
-      fromEvent(pose, 'render$')
-        .pipe(
-          tap(async () => {
-            if (pose.currentTime === lastRendered) {
-              // There are possibly redundant renders when video is paused or tab is out of focus
-              return;
-            }
-            const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
+    let lastRendered = NaN;
+    fromEvent(pose, 'render$')
+      .pipe(
+        tap(async () => {
+          if (pose.currentTime === lastRendered) {
+            return;
+          }
+          const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
+
+          if (PlayableVideoEncoder.isSupported()) {
             const imageBitmap = await createImageBitmap(poseCanvas);
             await this.addCacheFrame(imageBitmap);
-            lastRendered = pose.currentTime;
-          }),
-          takeUntil(this.ngUnsubscribe)
-        )
-        .subscribe();
-    }
+          } else if (this.recordingCanvas) {
+            const ctx = this.recordingCanvas.getContext('2d');
+            ctx.drawImage(poseCanvas, 0, 0);
+            await drawWatermark(this.recordingCanvas);
+          }
+
+          lastRendered = pose.currentTime;
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
 
     fromEvent(pose, 'ended$')
       .pipe(
