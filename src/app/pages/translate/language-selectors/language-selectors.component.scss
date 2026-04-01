@@ -1,5 +1,6 @@
 :host {
   display: flex;
+  align-items: center;
   width: 100%;
 
   &.spoken-to-signed {
@@ -16,8 +17,10 @@ app-language-selector {
   width: 36px;
   margin: 0;
   flex-shrink: 0;
-  --padding-start: 0;
-  --padding-end: 0;
+
+  &::part(native) {
+    padding: 0;
+  }
 
   &[disabled] {
     opacity: 0.5;
