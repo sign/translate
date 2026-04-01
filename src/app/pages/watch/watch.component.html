@@ -1,0 +1,30 @@
+<div class="watch-page">
+  <header class="watch-header">
+    <app-logo />
+  </header>
+
+  <main class="watch-content">
+    @if (hasParams) {
+      <div class="video-container">
+        <app-signed-language-output />
+      </div>
+
+      @if (text) {
+        <p class="watch-text">"{{ text }}"</p>
+      }
+    } @else {
+      <div class="empty-state">
+        <p>This translation link is invalid.</p>
+      </div>
+    }
+
+    <div class="cta-section">
+      <a routerLink="/" class="cta-button primary">Try Rylo Translate</a>
+      <a href="https://rylo.com" target="_blank" rel="noopener" class="cta-button secondary">Get Rylo</a>
+    </div>
+  </main>
+
+  <footer class="watch-footer">
+    <p>Powered by <a href="https://rylo.com" target="_blank" rel="noopener">Rylo</a></p>
+  </footer>
+</div>

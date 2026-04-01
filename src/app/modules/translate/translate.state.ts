@@ -370,7 +370,7 @@ export class TranslateState implements NgxsOnInit {
       spl: state.spokenLanguage,
       sil: state.signedLanguage,
     });
-    return `${window.location.origin}/?${params.toString()}`;
+    return `${window.location.origin}/watch?${params.toString()}`;
   }
 
   @Action(ShareSignedLanguageVideo)

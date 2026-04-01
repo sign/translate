@@ -1,0 +1,111 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #fafafa;
+  color: #1a1a1a;
+
+  @media (prefers-color-scheme: dark) {
+    background: #0a0a0a;
+    color: #eee;
+  }
+}
+
+.watch-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.watch-header {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+
+  app-logo {
+    display: block;
+    max-width: 160px;
+  }
+}
+
+.watch-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.video-container {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+
+  app-signed-language-output {
+    display: block;
+    width: 100%;
+  }
+}
+
+.empty-state {
+  padding: 48px 0;
+  text-align: center;
+  color: #999;
+}
+
+.watch-text {
+  font-size: 1.1rem;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+  padding-top: 8px;
+}
+
+.cta-button {
+  display: block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.primary {
+    background: #ff8b2b;
+    color: white;
+  }
+
+  &.secondary {
+    background: transparent;
+    color: #ff8b2b;
+    border: 1.5px solid #ff8b2b;
+  }
+}
+
+.watch-footer {
+  padding: 24px 0 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.5;
+
+  a {
+    color: #ff8b2b;
+    text-decoration: none;
+  }
+}
