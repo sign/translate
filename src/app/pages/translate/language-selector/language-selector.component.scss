@@ -25,6 +25,13 @@ ion-button.menu-language-button {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-size: 0.85rem;
+  --padding-start: 8px;
+  --padding-end: 8px;
+
+  app-flag-icon {
+    padding-bottom: 2px;
+  }
 }
 
 @media #{breakpoints.$breakpoint-lt-md} {
@@ -68,4 +75,5 @@ ion-segment.language-segment {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-bottom: 2px;
 }

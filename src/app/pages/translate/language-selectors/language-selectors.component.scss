@@ -8,12 +8,16 @@
 }
 
 app-language-selector {
-  width: calc(50% - 24px);
+  width: calc(50% - 18px);
 }
 
 #swap-languages {
   height: 48px;
+  width: 36px;
   margin: 0;
+  flex-shrink: 0;
+  --padding-start: 0;
+  --padding-end: 0;
 
   &[disabled] {
     opacity: 0.5;
