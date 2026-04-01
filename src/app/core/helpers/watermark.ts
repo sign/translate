@@ -4,9 +4,10 @@ const LOGO_SVG_PATH =
 const SVG_VIEWBOX_WIDTH = 503.141;
 const SVG_VIEWBOX_HEIGHT = 564.56;
 const ASPECT_RATIO = SVG_VIEWBOX_WIDTH / SVG_VIEWBOX_HEIGHT;
-const LOGO_PATH = new Path2D(LOGO_SVG_PATH);
+const LOGO_PATH = typeof Path2D !== 'undefined' ? new Path2D(LOGO_SVG_PATH) : null;
 
 export function drawWatermark(canvas: HTMLCanvasElement): void {
+  if (!LOGO_PATH) return;
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
