@@ -1,4 +1,13 @@
-import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, Input, viewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
+  inject,
+  Input,
+  OnDestroy,
+  viewChild,
+} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {AnimationStateModel} from '../../modules/animation/animation.state';
 import {BaseComponent} from '../base/base.component';
@@ -14,7 +23,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./animation.component.scss'],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AnimationComponent extends BaseComponent implements AfterViewInit {
+export class AnimationComponent extends BaseComponent implements AfterViewInit, OnDestroy {
   private store = inject(Store);
   private three = inject(ThreeService);
   private assets = inject(AssetsService);
@@ -26,6 +35,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
   @Input() fps = 1;
 
   static isCustomElementDefined = false;
+  private cameraAnimationId: number | null = null;
 
   constructor() {
     super();
@@ -58,6 +68,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
     this.applyStyle(el);
 
     el.addEventListener('load', () => {
+      this.startCameraAnimation(el);
       const scene = this.getScene();
 
       this.animationState$
@@ -68,7 +79,7 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
             const tracks = []; // new this.three.VectorKeyframeTrack('mixamorigHips.position', [0], [0, 0, 0])
             if (trackDict) {
               Object.entries(trackDict).forEach(([k, qs]) => {
-                const times = qs.map((q, j) => j / this.fps);
+                const times = qs.map((_, j) => j / this.fps);
                 const flatQs = [].concat(...qs);
                 tracks.push(new this.three.QuaternionKeyframeTrack(k, times, flatQs));
               });
@@ -105,6 +116,30 @@ export class AnimationComponent extends BaseComponent implements AfterViewInit {
         left: 16px;
       }`;
     el.shadowRoot.appendChild(style);
+  }
+
+  private startCameraAnimation(el: HTMLElement): void {
+    const start = performance.now();
+    const animate = () => {
+      const t = (performance.now() - start) / 1000;
+
+      const azimuth = 15 * Math.sin(t * 0.4);
+      const elevation = 90 + 5 * Math.sin(t * 0.3);
+      const fov = 90 - 5 * Math.sin(t * 0.2);
+
+      el.setAttribute('camera-orbit', `${azimuth}deg ${elevation}deg auto`);
+      el.setAttribute('field-of-view', `${fov}deg`);
+
+      this.cameraAnimationId = requestAnimationFrame(animate);
+    };
+    this.cameraAnimationId = requestAnimationFrame(animate);
+  }
+
+  override ngOnDestroy(): void {
+    if (this.cameraAnimationId !== null) {
+      cancelAnimationFrame(this.cameraAnimationId);
+    }
+    super.ngOnDestroy();
   }
 
   async attach3DCharacter() {
