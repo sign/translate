@@ -1,13 +1,14 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
-import {fromEvent, Observable} from 'rxjs';
+import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
 import {filter, takeUntil, tap} from 'rxjs/operators';
 import {TranslocoService} from '@jsverse/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';
+import {ActivatedRoute} from '@angular/router';
 import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
 import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
 
@@ -24,15 +25,13 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   private mediaMatcher = inject(MediaMatcher);
   private meta = inject(Meta);
   private title = inject(Title);
-
-  spokenToSigned$: Observable<boolean>;
+  private route = inject(ActivatedRoute);
 
   isMobile: MediaQueryList;
 
   constructor() {
     super();
 
-    this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
     this.isMobile = this.mediaMatcher.matchMedia('screen and (max-width: 599px)');
 
     // Default settings
@@ -62,9 +61,9 @@ export class TranslateComponent extends BaseComponent implements OnInit {
       )
       .subscribe();
 
-    this.spokenToSigned$
+    this.route.queryParams
       .pipe(
-        filter(spokenToSigned => !spokenToSigned),
+        filter(params => params['dev'] === '1'),
         tap(() => {
           this.store.dispatch(new SetSetting('drawSignWriting', true));
         }),

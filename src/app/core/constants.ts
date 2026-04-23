@@ -15,3 +15,6 @@ export const isChrome = /(Chrome|Chromium)/i.test(nav('userAgent'));
 
 // Safari, mobile Chrome, not including desktop Chrome
 export const isWebKit = /AppleWebKit/i.test(nav('userAgent')) && (!isChrome || (isIOS && isChrome));
+
+export const APPLE_APP_STORE_ID = 'id1514154600';
+export const ANDROID_PLAY_STORE_URL = 'https://rylo.com/download/android';

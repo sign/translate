@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {Store} from '@ngxs/store';
+import {combineLatest} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {
   CopySignedLanguageVideo,
@@ -13,7 +14,7 @@ import {TranslateState, TranslateStateModel} from '../../../../modules/translate
 import {BaseComponent} from '../../../../components/base/base.component';
 import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
 import {ViewerSelectorComponent} from '../../pose-viewers/viewer-selector/viewer-selector.component';
-import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
+import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {AvatarPoseViewerComponent} from '../../pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
 import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
@@ -29,7 +30,6 @@ import {downloadOutline, linkOutline, shareOutline, shareSocialOutline} from 'io
   templateUrl: './signed-language-output.component.html',
   styleUrls: ['./signed-language-output.component.scss'],
   imports: [
-    IonSpinner,
     IonButton,
     ViewerSelectorComponent,
     AvatarPoseViewerComponent,
@@ -49,10 +49,12 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<string>;
   video$!: Observable<string>;
+  spokenLanguageText$!: Observable<string>;
 
   videoUrl: string;
   safeVideoUrl: SafeUrl;
   isMobile: boolean;
+  isLoading = false;
   shareDialogUrl: string | null = null;
 
   constructor() {
@@ -61,6 +63,7 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
     this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
     this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
+    this.spokenLanguageText$ = this.store.select<string>(state => state.translate.spokenLanguageText);
 
     this.isMobile =
       'navigator' in globalThis &&
@@ -76,6 +79,15 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
         tap(url => {
           this.videoUrl = url;
           this.safeVideoUrl = url ? this.domSanitizer.bypassSecurityTrustUrl(url) : null;
+        }),
+        takeUntil(this.ngUnsubscribe)
+      )
+      .subscribe();
+
+    combineLatest([this.video$, this.spokenLanguageText$])
+      .pipe(
+        tap(([video, text]) => {
+          this.isLoading = !!text.trim() && !video;
         }),
         takeUntil(this.ngUnsubscribe)
       )

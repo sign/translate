@@ -21,7 +21,9 @@
       <app-video [displayControls]="false" [displayFps]="false" />
     </div>
 
-    <app-sign-writing />
+    @if (drawSignWriting$ | async) {
+      <app-sign-writing />
+    }
 
     @if (spokenLanguageText$ | async; as translation) {
       <div class="translation-text">

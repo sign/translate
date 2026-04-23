@@ -6,7 +6,6 @@ import {Store} from '@ngxs/store';
 import {SetSignedLanguageVideo} from '../../../modules/translate/translate.actions';
 import {PlayableVideoEncoder} from './playable-video-encoder';
 import {isChrome} from '../../../core/constants';
-import {watermarkImageBitmap} from '../../../core/helpers/watermark';
 
 @Component({
   selector: 'app-pose-viewer',
@@ -156,16 +155,13 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   async addCacheFrame(image: ImageBitmap): Promise<void> {
-    const watermarked = await watermarkImageBitmap(image);
-    image.close();
-
     if (PlayableVideoEncoder.isSupported()) {
       if (!this.videoEncoder) {
-        await this.initVideoEncoder(watermarked);
+        await this.initVideoEncoder(image);
       }
-      await this.videoEncoder.addFrame(watermarked);
+      await this.videoEncoder.addFrame(image);
     } else {
-      this.cache.push(watermarked);
+      this.cache.push(image);
     }
 
     this.frameIndex++;

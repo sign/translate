@@ -7,6 +7,7 @@ import {GoogleAnalyticsService} from './core/modules/google-analytics/google-ana
 import {languageCodeNormalizer} from './core/modules/transloco/languages';
 import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
 import {getUrlParams} from './core/helpers/url';
+import {APPLE_APP_STORE_ID} from './core/constants';
 import * as CookieConsent from 'vanilla-cookieconsent';
 import {MediaMatcher} from '@angular/cdk/layout';
 
@@ -29,6 +30,7 @@ export class AppComponent implements AfterViewInit {
     this.logRouterNavigation();
     this.checkURLEmbedding();
     this.updateToolbarColor();
+    this.setSmartAppBanner();
   }
 
   async ngAfterViewInit() {
@@ -192,6 +194,16 @@ export class AppComponent implements AfterViewInit {
       .subscribe();
 
     this.transloco.setActiveLang(urlParam || languageCodeNormalizer(navigator.language));
+  }
+
+  setSmartAppBanner(): void {
+    if (!('document' in globalThis)) {
+      return;
+    }
+    const meta = document.createElement('meta');
+    meta.name = 'apple-itunes-app';
+    meta.content = `app-id=${APPLE_APP_STORE_ID}`;
+    document.head.appendChild(meta);
   }
 
   checkURLEmbedding(): void {

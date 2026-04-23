@@ -3,7 +3,6 @@ import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {PlayableVideoEncoder} from '../playable-video-encoder';
-import {drawWatermark} from '../../../../core/helpers/watermark';
 
 @Component({
   selector: 'app-skeleton-pose-viewer',
@@ -52,7 +51,6 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
           } else if (this.recordingCanvas) {
             const ctx = this.recordingCanvas.getContext('2d');
             ctx.drawImage(poseCanvas, 0, 0);
-            await drawWatermark(this.recordingCanvas);
           }
 
           lastRendered = pose.currentTime;

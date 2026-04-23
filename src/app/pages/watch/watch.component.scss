@@ -98,6 +98,69 @@
   }
 }
 
+.app-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #f0ebe8;
+  border-radius: 12px;
+  margin-bottom: 8px;
+
+  @media (prefers-color-scheme: dark) {
+    background: #2a2220;
+  }
+}
+
+.app-banner-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  flex-shrink: 0;
+
+  @media (prefers-color-scheme: dark) {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+.app-banner-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+
+  strong {
+    font-size: 0.9rem;
+  }
+
+  span {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+}
+
+.app-banner-button {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #ff8b2b;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.app-banner-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  opacity: 0.4;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  color: inherit;
+}
+
 .watch-footer {
   padding: 24px 0 8px;
   text-align: center;

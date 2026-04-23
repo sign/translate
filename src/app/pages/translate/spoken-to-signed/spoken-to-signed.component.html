@@ -1,3 +1,5 @@
 <app-spoken-language-input />
-<app-sign-writing />
+@if (drawSignWriting$ | async) {
+  <app-sign-writing />
+}
 <app-signed-language-output />

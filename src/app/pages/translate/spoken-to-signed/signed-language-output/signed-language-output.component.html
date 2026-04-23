@@ -5,6 +5,7 @@
     loop
     muted
     playsinline
+    controlsList="nodownload"
     height="100%"
     width="100%"
     (error)="onVideoError($event)"
@@ -20,6 +21,11 @@
         <app-avatar-pose-viewer [src]="pose" />
       }
     }
+  }
+  @if (isLoading) {
+    <div class="loading-placeholder">
+      <div class="loading-pulse"></div>
+    </div>
   }
 }
 @if (pose$ | async; as pose) {
@@ -50,13 +56,6 @@
         } @else {
           <ion-icon name="link-outline" slot="icon-only" />
         }
-      </ion-button>
-    } @else {
-      <ion-button [disabled]="true" class="action-button" fill="solid" shape="round" color="primary">
-        <ion-spinner name="crescent" slot="icon-only"></ion-spinner>
-      </ion-button>
-      <ion-button [disabled]="true" class="action-button" fill="solid" shape="round" color="primary">
-        <ion-spinner name="crescent" slot="icon-only"></ion-spinner>
       </ion-button>
     }
   </div>

@@ -3,6 +3,18 @@
     <app-logo />
   </header>
 
+  @if (showAppBanner && isAndroid) {
+    <div class="app-banner">
+      <img src="assets/brand/logo.svg" alt="Rylo" class="app-banner-icon" />
+      <div class="app-banner-text">
+        <strong>Rylo</strong>
+        <span>Get the app for the best experience</span>
+      </div>
+      <a [href]="androidStoreUrl" target="_blank" rel="noopener" class="app-banner-button">Open</a>
+      <button class="app-banner-close" (click)="showAppBanner = false" aria-label="Dismiss">&times;</button>
+    </div>
+  }
+
   <main class="watch-content">
     @if (hasParams) {
       <div class="video-container">

@@ -30,6 +30,7 @@ import {EstimatedPose} from '../pose/pose.state';
 import {StoreFramePose} from '../pose/pose.actions';
 import {PoseService} from '../pose/pose.service';
 import {getUrlParams} from '../../core/helpers/url';
+import {watermarkVideoBlob} from '../../core/helpers/watermark-video';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -379,10 +380,9 @@ export class TranslateState implements NgxsOnInit {
     const watchUrl = TranslateState.buildShareUrl(state);
     const shareText = `Translated with Rylo Translate\n${watchUrl}`;
 
-    const data = await fetch(state.signedLanguageVideo);
-    let blob = await data.blob();
-    const ext = blob.type.split('/').pop();
-    const file = new File([blob], 'rylo-translate.' + ext, {type: blob.type});
+    const watermarked = await watermarkVideoBlob(state.signedLanguageVideo);
+    const ext = watermarked.type.split('/').pop();
+    const file = new File([watermarked], 'rylo-translate.' + ext, {type: watermarked.type});
 
     const files: File[] = [file];
 
@@ -397,12 +397,14 @@ export class TranslateState implements NgxsOnInit {
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {signedLanguageVideo, spokenLanguageText} = getState();
 
+    const watermarked = await watermarkVideoBlob(signedLanguageVideo);
+    const watermarkedUrl = URL.createObjectURL(watermarked);
+
     let filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
-    // File names are limited to 255 characters, so we limit to 250 to be safe with the extension
     filename = filename.slice(0, 250);
 
     const a = document.createElement('a');
-    a.href = signedLanguageVideo;
+    a.href = watermarkedUrl;
     a.download = filename;
     document.body.appendChild(a);
     try {
@@ -411,6 +413,7 @@ export class TranslateState implements NgxsOnInit {
       alert(`Downloading "${filename}" on this device is not supported`);
     }
     document.body.removeChild(a);
+    URL.revokeObjectURL(watermarkedUrl);
   }
 
   // Listen to pose estimation results from the pose store
