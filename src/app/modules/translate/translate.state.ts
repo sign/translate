@@ -30,7 +30,7 @@ import {EstimatedPose} from '../pose/pose.state';
 import {StoreFramePose} from '../pose/pose.actions';
 import {PoseService} from '../pose/pose.service';
 import {getUrlParams} from '../../core/helpers/url';
-import {watermarkVideoBlob} from '../../core/helpers/watermark-video';
+import {FrameCacheService} from '../../core/services/frame-cache.service';
 
 export type InputMode = 'webcam' | 'upload' | 'text';
 
@@ -87,6 +87,7 @@ export class TranslateState implements NgxsOnInit {
   private swService = inject(SignWritingTranslationService);
   private poseService = inject(PoseService);
   private languageDetectionService = inject(LanguageDetectionService);
+  private frameCache = inject(FrameCacheService);
 
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<EstimatedPose>;
@@ -303,7 +304,7 @@ export class TranslateState implements NgxsOnInit {
       spokenLanguageSentences,
     } = getState();
     if (spokenToSigned) {
-      patchState({signedLanguageVideo: null, signWriting: null}); // reset the signed language translation
+      patchState({signedLanguageVideo: null, signWriting: null});
 
       const trimmedSpokenLanguageText = spokenLanguageText.trim();
       if (!trimmedSpokenLanguageText) {
@@ -380,9 +381,9 @@ export class TranslateState implements NgxsOnInit {
     const watchUrl = TranslateState.buildShareUrl(state);
     const shareText = `Translated with Rylo Translate\n${watchUrl}`;
 
-    const watermarked = await watermarkVideoBlob(state.signedLanguageVideo);
-    const ext = watermarked.type.split('/').pop();
-    const file = new File([watermarked], 'rylo-translate.' + ext, {type: watermarked.type});
+    const blob = await this.frameCache.encodeWithWatermark();
+    const ext = blob.type.split('/').pop();
+    const file = new File([blob], 'rylo-translate.' + ext, {type: blob.type});
 
     const files: File[] = [file];
 
@@ -395,16 +396,16 @@ export class TranslateState implements NgxsOnInit {
 
   @Action(DownloadSignedLanguageVideo)
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
-    const {signedLanguageVideo, spokenLanguageText} = getState();
+    const {spokenLanguageText} = getState();
 
-    const watermarked = await watermarkVideoBlob(signedLanguageVideo);
-    const watermarkedUrl = URL.createObjectURL(watermarked);
+    const blob = await this.frameCache.encodeWithWatermark();
+    const url = URL.createObjectURL(blob);
 
     let filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
     filename = filename.slice(0, 250);
 
     const a = document.createElement('a');
-    a.href = watermarkedUrl;
+    a.href = url;
     a.download = filename;
     document.body.appendChild(a);
     try {
@@ -413,7 +414,7 @@ export class TranslateState implements NgxsOnInit {
       alert(`Downloading "${filename}" on this device is not supported`);
     }
     document.body.removeChild(a);
-    URL.revokeObjectURL(watermarkedUrl);
+    URL.revokeObjectURL(url);
   }
 
   // Listen to pose estimation results from the pose store

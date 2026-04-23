@@ -17,4 +17,4 @@ export const isChrome = /(Chrome|Chromium)/i.test(nav('userAgent'));
 export const isWebKit = /AppleWebKit/i.test(nav('userAgent')) && (!isChrome || (isIOS && isChrome));
 
 export const APPLE_APP_STORE_ID = 'id1514154600';
-export const ANDROID_PLAY_STORE_URL = 'https://rylo.com/download/android';
+export const ANDROID_PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.talknagish.app';

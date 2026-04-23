@@ -9,7 +9,7 @@ import {
   viewChild,
 } from '@angular/core';
 import {Pix2PixService} from '../../../../modules/pix2pix/pix2pix.service';
-import {fromEvent, interval} from 'rxjs';
+import {fromEvent} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 import {BasePoseViewerComponent} from '../pose-viewer.component';
 import {transferableImage} from '../../../../core/helpers/image/transferable';
@@ -38,49 +38,46 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
   ready = false;
   modelReady = false;
-
   totalFrames = 1;
+
+  private localCache: ImageBitmap[] = [];
+  private poseFps: number;
+  private destroyed = false;
+  private loopAnimationId: number | null = null;
 
   ngAfterViewInit(): void {
     const pose = this.poseEl().nativeElement;
-
     const canvas = this.canvasEl().nativeElement;
     const ctx = canvas.getContext('2d');
 
-    let destroyed = false;
-    this.ngUnsubscribe.subscribe(() => (destroyed = true));
+    this.ngUnsubscribe.subscribe(() => (this.destroyed = true));
 
     fromEvent(pose, 'firstRender$')
       .pipe(
         tap(async () => {
-          this.reset();
-          this.totalFrames = (await this.fps()) * pose.duration;
+          this.resetLocal();
+          this.poseFps = await this.fps();
+          this.totalFrames = this.poseFps * pose.duration;
 
           await this.pix2pix.loadModel();
 
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
           const poseCtx = poseCanvas.getContext('2d', {willReadFrequently: true});
-
-          // To avoid communication time losses, we create a queue sent to be translated
           let queued = 0;
 
           const iterFrame = async () => {
-            // Verify element is not destroyed
-            if (destroyed) {
-              return;
-            }
+            if (this.destroyed) return;
 
             if (pose.ended) {
               if (queued === 0) {
-                // Reset the pose-viewer drawing
                 this.ready = true;
-                await this.drawCache();
+                this.startCanvasLoop();
               }
               return;
             }
 
             queued++;
-            await new Promise(requestAnimationFrame); // Await animation frame due to canvas change
+            await new Promise(requestAnimationFrame);
             const image = await transferableImage(poseCanvas, poseCtx);
             await pose.nextFrame();
             this.translateFrame(image, canvas, ctx).then(() => {
@@ -100,13 +97,14 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
   async translateFrame(image: ImageBitmap | ImageData, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
     const uint8Array: Uint8ClampedArray = await this.pix2pix.translate(image);
-    this.modelReady = true; // Stop loading after first model inference
+    this.modelReady = true;
 
     const imageData = new ImageData(new Uint8ClampedArray(uint8Array), canvas.width, canvas.height);
     ctx.putImageData(imageData, 0, 0);
 
     const imageBitmap = await createImageBitmap(imageData);
-    await this.addCacheFrame(imageBitmap);
+    this.localCache.push(imageBitmap);
+    this.addCacheFrame(imageBitmap, this.poseFps);
   }
 
   drawFrame(bitmap: ImageBitmap, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
@@ -118,55 +116,56 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
     ctx.drawImage(bitmap, 0, 0);
   }
 
-  override reset(): void {
-    super.reset();
+  startCanvasLoop(): void {
+    if (this.localCache.length === 0) return;
+
+    const canvas = this.canvasEl().nativeElement;
+    const ctx = canvas.getContext('2d');
+    const interval = 1000 / this.poseFps;
+
+    let i = 0;
+    let lastTime = 0;
+
+    const loop = (time: number) => {
+      if (this.destroyed) return;
+
+      if (time - lastTime >= interval) {
+        this.drawFrame(this.localCache[i], canvas, ctx);
+        i = (i + 1) % this.localCache.length;
+        lastTime = time;
+      }
+
+      this.loopAnimationId = requestAnimationFrame(loop);
+    };
+
+    this.loopAnimationId = requestAnimationFrame(loop);
+  }
+
+  private resetLocal(): void {
+    if (this.loopAnimationId !== null) {
+      cancelAnimationFrame(this.loopAnimationId);
+      this.loopAnimationId = null;
+    }
+    this.localCache = [];
     this.ready = false;
   }
 
-  async drawCache(): Promise<void> {
-    // Supported in selected browsers https://caniuse.com/?search=MediaStreamTrackGenerator
-    if (this.videoEncoder) {
-      return this.stopRecording();
-    }
+  override reset(): void {
+    this.resetLocal();
+    super.reset();
+  }
 
-    if (this.cache.length === 0) {
-      return;
-    }
-
-    const canvas = this.canvasEl().nativeElement;
-    await this.startRecording(canvas as any);
-
-    const ctx = canvas.getContext('2d');
-    const fps = await this.fps();
-
-    let i = -1;
-    this.cacheSubscription = interval(1000 / fps)
-      .pipe(
-        tap(() => {
-          i++;
-          if (i < this.cache.length) {
-            this.drawFrame(this.cache[i], canvas, ctx);
-            delete this.cache[i]; // Free up memory after cached frame is no longer necessary
-          } else {
-            this.cacheSubscription.unsubscribe();
-            this.stopRecording();
-          }
-        }),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
+  override ngOnDestroy(): void {
+    this.destroyed = true;
+    this.resetLocal();
+    super.ngOnDestroy();
   }
 
   get progress(): number {
     const poseEl = this.poseEl();
-    if (!poseEl) {
-      return 0;
-    }
+    if (!poseEl) return 0;
     const pose = poseEl.nativeElement;
-    if (!pose.duration) {
-      return 0;
-    }
-
+    if (!pose.duration) return 0;
     return this.frameIndex / this.totalFrames;
   }
 }

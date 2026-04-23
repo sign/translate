@@ -26,10 +26,6 @@ app-avatar-pose-viewer {
   z-index: 1;
 }
 
-video {
-  display: block;
-}
-
 .loading-placeholder {
   display: flex;
   align-items: center;
@@ -64,6 +60,7 @@ video {
 
 // Action buttons with gradient background and animated glow
 .actions-row {
+  z-index: 2;
   .action-button {
     --border-radius: 50%;
     --box-shadow: #{md3.$md3-elevation-1};

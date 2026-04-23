@@ -1,20 +1,14 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, inject, NgZone, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
-import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {Store} from '@ngxs/store';
-import {combineLatest} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
-import {
-  CopySignedLanguageVideo,
-  DownloadSignedLanguageVideo,
-  ShareSignedLanguageVideo,
-} from '../../../../modules/translate/translate.actions';
+import {ShareSignedLanguageVideo} from '../../../../modules/translate/translate.actions';
+import {FrameCacheService} from '../../../../core/services/frame-cache.service';
 import {TranslateState, TranslateStateModel} from '../../../../modules/translate/translate.state';
 import {BaseComponent} from '../../../../components/base/base.component';
-import {getMediaSourceClass} from '../../pose-viewers/playable-video-encoder';
 import {ViewerSelectorComponent} from '../../pose-viewers/viewer-selector/viewer-selector.component';
-import {IonButton, IonIcon} from '@ionic/angular/standalone';
+import {IonButton, IonIcon, IonSpinner} from '@ionic/angular/standalone';
 import {AvatarPoseViewerComponent} from '../../pose-viewers/avatar-pose-viewer/avatar-pose-viewer.component';
 import {SkeletonPoseViewerComponent} from '../../pose-viewers/skeleton-pose-viewer/skeleton-pose-viewer.component';
 import {HumanPoseViewerComponent} from '../../pose-viewers/human-pose-viewer/human-pose-viewer.component';
@@ -31,6 +25,7 @@ import {downloadOutline, linkOutline, shareOutline, shareSocialOutline} from 'io
   styleUrls: ['./signed-language-output.component.scss'],
   imports: [
     IonButton,
+    IonSpinner,
     ViewerSelectorComponent,
     AvatarPoseViewerComponent,
     SkeletonPoseViewerComponent,
@@ -44,26 +39,25 @@ import {downloadOutline, linkOutline, shareOutline, shareSocialOutline} from 'io
 })
 export class SignedLanguageOutputComponent extends BaseComponent implements OnInit {
   private store = inject(Store);
-  private domSanitizer = inject(DomSanitizer);
+  private cdr = inject(ChangeDetectorRef);
+  private frameCache = inject(FrameCacheService);
+  private zone = inject(NgZone);
 
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<string>;
-  video$!: Observable<string>;
-  spokenLanguageText$!: Observable<string>;
 
-  videoUrl: string;
-  safeVideoUrl: SafeUrl;
-  isMobile: boolean;
+  signedLanguageReady = false;
   isLoading = false;
+  downloading = false;
+  isMobile: boolean;
   shareDialogUrl: string | null = null;
+  private text = '';
 
   constructor() {
     super();
 
     this.poseViewerSetting$ = this.store.select<PoseViewerSetting>(state => state.settings.poseViewer);
     this.pose$ = this.store.select<string>(state => state.translate.signedLanguagePose);
-    this.video$ = this.store.select<string>(state => state.translate.signedLanguageVideo);
-    this.spokenLanguageText$ = this.store.select<string>(state => state.translate.spokenLanguageText);
 
     this.isMobile =
       'navigator' in globalThis &&
@@ -74,32 +68,54 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
   }
 
   ngOnInit(): void {
-    this.video$
+    this.store
+      .select<string>(state => state.translate.signedLanguageVideo)
       .pipe(
-        tap(url => {
-          this.videoUrl = url;
-          this.safeVideoUrl = url ? this.domSanitizer.bypassSecurityTrustUrl(url) : null;
+        tap(video => {
+          this.signedLanguageReady = !!video;
+          this.updateLoadingState();
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
 
-    combineLatest([this.video$, this.spokenLanguageText$])
+    this.store
+      .select<string>(state => state.translate.spokenLanguageText)
       .pipe(
-        tap(([video, text]) => {
-          this.isLoading = !!text.trim() && !video;
+        tap(text => {
+          this.text = text;
+          this.updateLoadingState();
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
   }
 
-  copyTranslation(): void {
-    this.store.dispatch(CopySignedLanguageVideo);
+  private updateLoadingState(): void {
+    this.isLoading = !!this.text.trim() && !this.signedLanguageReady;
+    this.cdr.detectChanges();
   }
 
-  downloadTranslation(): void {
-    this.store.dispatch(DownloadSignedLanguageVideo);
+  async downloadTranslation(): Promise<void> {
+    this.zone.run(() => (this.downloading = true));
+    await new Promise(requestAnimationFrame);
+
+    try {
+      const blob = await this.frameCache.encodeWithWatermark();
+      const url = URL.createObjectURL(blob);
+      const text = this.store.selectSnapshot<string>(state => state.translate.spokenLanguageText);
+      const filename = encodeURIComponent(text).replaceAll('%20', '-').slice(0, 250);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } finally {
+      this.zone.run(() => (this.downloading = false));
+    }
   }
 
   shareTranslation(): void {
@@ -108,51 +124,6 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     } else {
       const state = this.store.selectSnapshot<TranslateStateModel>(state => state.translate);
       this.shareDialogUrl = TranslateState.buildShareUrl(state);
-    }
-  }
-
-  playVideoIfPaused(event: MouseEvent): void {
-    const video = event.target as HTMLVideoElement;
-    if (video.paused) {
-      video.play().then().catch();
-    }
-  }
-
-  async createVideoMediaSource() {
-    const res = await fetch(this.videoUrl);
-    const blob = await res.blob();
-
-    const mediaSourceClass = getMediaSourceClass();
-    if (!mediaSourceClass) {
-      return null;
-    }
-
-    const mediaSource = new mediaSourceClass();
-    mediaSource.addEventListener('sourceopen', async () => {
-      const sourceBuffer = mediaSource.addSourceBuffer(blob.type);
-      sourceBuffer.addEventListener('updateend', () => {
-        if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
-          mediaSource.endOfStream();
-        }
-      });
-      sourceBuffer.appendBuffer(await blob.arrayBuffer());
-    });
-
-    return mediaSource;
-  }
-
-  async onVideoError(event: ErrorEvent) {
-    // https://github.com/sign/translate/issues/127
-    if (this.safeVideoUrl === null) {
-      return;
-    }
-
-    const video = event.target as HTMLVideoElement;
-    if (!video.srcObject) {
-      // Fallback behavior to make sure the browser can play the video
-      this.safeVideoUrl = null;
-      video.disableRemotePlayback = true; // Disable AirPlay, must be used for ManagedMediaSource
-      video.srcObject = await this.createVideoMediaSource();
     }
   }
 }

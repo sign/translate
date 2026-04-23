@@ -1,63 +1,52 @@
-@if (videoUrl) {
-  <video
-    [src]="safeVideoUrl"
-    autoplay
-    loop
-    muted
-    playsinline
-    controlsList="nodownload"
-    height="100%"
-    width="100%"
-    (error)="onVideoError($event)"
-    (click)="playVideoIfPaused($event)"></video>
-} @else {
-  @if (pose$ | async; as pose) {
-    @if (poseViewerSetting$ | async; as poseViewerSetting) {
-      @if (poseViewerSetting === 'pose') {
-        <app-skeleton-pose-viewer [src]="pose" />
-      } @else if (poseViewerSetting === 'person') {
-        <app-human-pose-viewer [src]="pose" />
-      } @else if (poseViewerSetting === 'avatar') {
-        <app-avatar-pose-viewer [src]="pose" />
-      }
+@if (pose$ | async; as pose) {
+  @if (poseViewerSetting$ | async; as poseViewerSetting) {
+    @if (poseViewerSetting === 'pose') {
+      <app-skeleton-pose-viewer [src]="pose" />
+    } @else if (poseViewerSetting === 'person') {
+      <app-human-pose-viewer [src]="pose" />
+    } @else if (poseViewerSetting === 'avatar') {
+      <app-avatar-pose-viewer [src]="pose" />
     }
-  }
-  @if (isLoading) {
-    <div class="loading-placeholder">
-      <div class="loading-pulse"></div>
-    </div>
   }
 }
-@if (pose$ | async; as pose) {
+@if (isLoading) {
+  <div class="loading-placeholder">
+    <div class="loading-pulse"></div>
+  </div>
+}
+@if (signedLanguageReady) {
   <div class="actions-row">
-    @if (videoUrl) {
-      <ion-button
-        class="action-button"
-        fill="solid"
-        shape="round"
-        color="primary"
-        (click)="downloadTranslation()"
-        [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
-        [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
-        [matTooltipPosition]="'above'">
+    <ion-button
+      class="action-button"
+      fill="solid"
+      shape="round"
+      color="primary"
+      [disabled]="downloading"
+      (click)="downloadTranslation()"
+      [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
+      [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
+      [matTooltipPosition]="'above'">
+      @if (downloading) {
+        <ion-spinner name="crescent" slot="icon-only" />
+      } @else {
         <ion-icon name="download-outline" slot="icon-only" />
-      </ion-button>
-      <ion-button
-        class="action-button"
-        fill="solid"
-        shape="round"
-        color="primary"
-        (click)="shareTranslation()"
-        [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
-        [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
-        [matTooltipPosition]="'above'">
-        @if (isMobile) {
-          <ion-icon ios="share-outline" md="share-social-outline" slot="icon-only" />
-        } @else {
-          <ion-icon name="link-outline" slot="icon-only" />
-        }
-      </ion-button>
-    }
+      }
+    </ion-button>
+    <ion-button
+      class="action-button"
+      fill="solid"
+      shape="round"
+      color="primary"
+      (click)="shareTranslation()"
+      [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
+      [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"
+      [matTooltipPosition]="'above'">
+      @if (isMobile) {
+        <ion-icon ios="share-outline" md="share-social-outline" slot="icon-only" />
+      } @else {
+        <ion-icon name="link-outline" slot="icon-only" />
+      }
+    </ion-button>
   </div>
   <app-viewer-selector></app-viewer-selector>
 }
