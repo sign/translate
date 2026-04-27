@@ -14,6 +14,7 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
 
   private firstPassDone = false;
   private poseFps: number;
+  private expectedFrames = Infinity;
 
   ngAfterViewInit(): void {
     const pose = this.poseEl().nativeElement;
@@ -21,7 +22,14 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
     fromEvent(pose, 'firstRender$')
       .pipe(
         tap(() => {
-          pose.getPose().then(poseData => (this.poseFps = poseData.body.fps));
+          this.firstPassDone = false;
+          this.expectedFrames = Infinity;
+          this.reset();
+          pose.getPose().then(poseData => {
+            this.poseFps = poseData.body.fps;
+            this.expectedFrames = Math.round(this.poseFps * pose.duration);
+            this.checkComplete();
+          });
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -32,8 +40,11 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
         tap(async () => {
           if (this.firstPassDone) return;
           const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
+          if (!poseCanvas) return;
           const imageBitmap = await createImageBitmap(poseCanvas);
+          if (this.firstPassDone) return;
           this.addCacheFrame(imageBitmap, this.poseFps);
+          this.checkComplete();
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -41,9 +52,21 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
 
     fromEvent(pose, 'ended$')
       .pipe(
-        tap(() => (this.firstPassDone = true)),
+        tap(() => {
+          if (!this.firstPassDone) {
+            this.firstPassDone = true;
+            this.signalReady();
+          }
+        }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
+  }
+
+  private checkComplete(): void {
+    if (!this.firstPassDone && this.frameIndex >= this.expectedFrames) {
+      this.firstPassDone = true;
+      this.signalReady();
+    }
   }
 }

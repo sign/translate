@@ -5,7 +5,6 @@ import {drawWatermark} from '../helpers/watermark';
 export class FrameCacheService {
   private frames: ImageBitmap[] = [];
   private _fps = 0;
-
   get fps(): number {
     return this._fps;
   }
@@ -32,10 +31,11 @@ export class FrameCacheService {
     canvas.height = this.frames[0].height;
     const ctx = canvas.getContext('2d');
 
+    const totalFrames = this.frames.length;
     const watermarkedFrames: ImageBitmap[] = [];
-    for (const frame of this.frames) {
-      ctx.drawImage(frame, 0, 0);
-      drawWatermark(canvas);
+    for (let i = 0; i < totalFrames; i++) {
+      ctx.drawImage(this.frames[i], 0, 0);
+      drawWatermark(canvas, i, totalFrames, this._fps);
       watermarkedFrames.push(await createImageBitmap(canvas));
     }
 

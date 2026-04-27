@@ -71,6 +71,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             if (pose.ended) {
               if (queued === 0) {
                 this.ready = true;
+                this.signalReady();
                 this.startCanvasLoop();
               }
               return;
