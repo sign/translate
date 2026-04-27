@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, inject, NgZone, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, inject, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {PoseViewerSetting} from '../../../../modules/settings/settings.state';
 import {Store} from '@ngxs/store';
@@ -40,18 +40,17 @@ import {downloadOutline, linkOutline, shareOutline, shareSocialOutline} from 'io
 export class SignedLanguageOutputComponent extends BaseComponent implements OnInit {
   private store = inject(Store);
   private cdr = inject(ChangeDetectorRef);
-  private frameCache = inject(FrameCacheService);
-  private zone = inject(NgZone);
+  frameCache = inject(FrameCacheService);
 
   poseViewerSetting$!: Observable<PoseViewerSetting>;
   pose$!: Observable<string>;
 
   signedLanguageReady = false;
   isLoading = false;
-  downloading = false;
   isMobile: boolean;
   shareDialogUrl: string | null = null;
   private text = '';
+  private progressRafId: number | null = null;
 
   constructor() {
     super();
@@ -85,6 +84,11 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
         tap(text => {
           this.text = text;
           this.updateLoadingState();
+          if (text.trim()) {
+            this.startProgressTracking();
+          } else {
+            this.stopProgressTracking();
+          }
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -96,30 +100,45 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
     this.cdr.detectChanges();
   }
 
-  async downloadTranslation(): Promise<void> {
-    this.zone.run(() => (this.downloading = true));
-    await new Promise(requestAnimationFrame);
+  private startProgressTracking(): void {
+    if (this.progressRafId !== null) return;
+    const tick = () => {
+      this.cdr.detectChanges();
+      if (this.frameCache.encoding) {
+        this.progressRafId = requestAnimationFrame(tick);
+      } else {
+        this.progressRafId = null;
+      }
+    };
+    this.progressRafId = requestAnimationFrame(tick);
+  }
 
-    try {
-      const blob = await this.frameCache.encodeWithWatermark();
-      const url = URL.createObjectURL(blob);
-      const text = this.store.selectSnapshot<string>(state => state.translate.spokenLanguageText);
-      const ext = '.' + blob.type.split('/').pop();
-      const filename =
-        encodeURIComponent(text)
-          .replaceAll('%20', '-')
-          .slice(0, 250 - ext.length) + ext;
-
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } finally {
-      this.zone.run(() => (this.downloading = false));
+  private stopProgressTracking(): void {
+    if (this.progressRafId !== null) {
+      cancelAnimationFrame(this.progressRafId);
+      this.progressRafId = null;
     }
+  }
+
+  downloadTranslation(): void {
+    const blob = this.frameCache.blob;
+    if (!blob) return;
+
+    const url = URL.createObjectURL(blob);
+    const text = this.store.selectSnapshot<string>(state => state.translate.spokenLanguageText);
+    const ext = '.' + blob.type.split('/').pop();
+    const filename =
+      encodeURIComponent(text)
+        .replaceAll('%20', '-')
+        .slice(0, 250 - ext.length) + ext;
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 
   shareTranslation(): void {
@@ -129,5 +148,10 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
       const state = this.store.selectSnapshot<TranslateStateModel>(state => state.translate);
       this.shareDialogUrl = TranslateState.buildShareUrl(state);
     }
+  }
+
+  override ngOnDestroy(): void {
+    this.stopProgressTracking();
+    super.ngOnDestroy();
   }
 }

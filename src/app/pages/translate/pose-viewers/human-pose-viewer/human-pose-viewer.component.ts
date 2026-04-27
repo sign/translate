@@ -61,6 +61,8 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
           await this.pix2pix.loadModel();
 
+          this.totalFrames = Math.round(this.poseFps * pose.duration);
+
           const poseCanvas = pose.shadowRoot.querySelector('canvas');
           const poseCtx = poseCanvas.getContext('2d', {willReadFrequently: true});
           let queued = 0;
@@ -71,6 +73,7 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
             if (pose.ended) {
               if (queued === 0) {
                 this.ready = true;
+                await this.frameCache.finalize();
                 this.signalReady();
                 this.startCanvasLoop();
               }
@@ -105,7 +108,13 @@ export class HumanPoseViewerComponent extends BasePoseViewerComponent implements
 
     const imageBitmap = await createImageBitmap(imageData);
     this.localCache.push(imageBitmap);
-    this.addCacheFrame(imageBitmap, this.poseFps);
+
+    const encodeBitmap = await createImageBitmap(imageData);
+    if (this.frameIndex === 0) {
+      await this.frameCache.initEncoder(encodeBitmap, this.poseFps, this.totalFrames);
+    }
+    await this.frameCache.addFrame(encodeBitmap);
+    this.frameIndex++;
   }
 
   drawFrame(bitmap: ImageBitmap, canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {

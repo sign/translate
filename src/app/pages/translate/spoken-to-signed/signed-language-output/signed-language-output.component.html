@@ -14,29 +14,29 @@
     <div class="loading-pulse"></div>
   </div>
 }
-@if (signedLanguageReady) {
+@if (frameCache.encoding) {
+  <div class="encode-progress" [style.width.%]="frameCache.progress * 100"></div>
+}
+@if (signedLanguageReady || frameCache.encoding) {
   <div class="actions-row">
     <ion-button
       class="action-button"
       fill="solid"
       shape="round"
       color="primary"
-      [disabled]="downloading"
+      [disabled]="!signedLanguageReady"
       (click)="downloadTranslation()"
       [attr.aria-label]="'translate.spoken-to-signed.actions.download' | transloco"
       [matTooltip]="'translate.spoken-to-signed.actions.download' | transloco"
       [matTooltipPosition]="'above'">
-      @if (downloading) {
-        <ion-spinner name="crescent" slot="icon-only" />
-      } @else {
-        <ion-icon name="download-outline" slot="icon-only" />
-      }
+      <ion-icon name="download-outline" slot="icon-only" />
     </ion-button>
     <ion-button
       class="action-button"
       fill="solid"
       shape="round"
       color="primary"
+      [disabled]="!signedLanguageReady"
       (click)="shareTranslation()"
       [attr.aria-label]="'translate.spoken-to-signed.actions.share' | transloco"
       [matTooltip]="'translate.spoken-to-signed.actions.share' | transloco"

@@ -15,6 +15,9 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
   private firstPassDone = false;
   private poseFps: number;
   private expectedFrames = Infinity;
+  private encodeQueue: Promise<void> = Promise.resolve();
+  private metadataReady: Promise<void>;
+  private resolveMetadata: () => void;
 
   ngAfterViewInit(): void {
     const pose = this.poseEl().nativeElement;
@@ -24,11 +27,14 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
         tap(() => {
           this.firstPassDone = false;
           this.expectedFrames = Infinity;
+          this.encodeQueue = Promise.resolve();
+          this.metadataReady = new Promise(resolve => (this.resolveMetadata = resolve));
           this.reset();
+
           pose.getPose().then(poseData => {
             this.poseFps = poseData.body.fps;
             this.expectedFrames = Math.round(this.poseFps * pose.duration);
-            this.checkComplete();
+            this.resolveMetadata();
           });
         }),
         takeUntil(this.ngUnsubscribe)
@@ -37,14 +43,32 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
 
     fromEvent(pose, 'render$')
       .pipe(
-        tap(async () => {
+        tap(() => {
           if (this.firstPassDone) return;
           const poseCanvas = pose.shadowRoot.querySelector('canvas') as HTMLCanvasElement;
           if (!poseCanvas) return;
-          const imageBitmap = await createImageBitmap(poseCanvas);
-          if (this.firstPassDone) return;
-          this.addCacheFrame(imageBitmap, this.poseFps);
-          this.checkComplete();
+
+          const bitmapPromise = createImageBitmap(poseCanvas);
+
+          this.encodeQueue = this.encodeQueue.then(async () => {
+            if (this.firstPassDone) return;
+            await this.metadataReady;
+            const bitmap = await bitmapPromise;
+            if (this.firstPassDone) return;
+
+            if (this.frameIndex === 0) {
+              await this.frameCache.initEncoder(bitmap, this.poseFps, this.expectedFrames);
+            }
+
+            await this.frameCache.addFrame(bitmap);
+            this.frameIndex++;
+
+            if (this.frameIndex >= this.expectedFrames) {
+              this.firstPassDone = true;
+              await this.frameCache.finalize();
+              this.signalReady();
+            }
+          });
         }),
         takeUntil(this.ngUnsubscribe)
       )
@@ -55,18 +79,14 @@ export class SkeletonPoseViewerComponent extends BasePoseViewerComponent impleme
         tap(() => {
           if (!this.firstPassDone) {
             this.firstPassDone = true;
-            this.signalReady();
+            this.encodeQueue.then(async () => {
+              await this.frameCache.finalize();
+              this.signalReady();
+            });
           }
         }),
         takeUntil(this.ngUnsubscribe)
       )
       .subscribe();
-  }
-
-  private checkComplete(): void {
-    if (!this.firstPassDone && this.frameIndex >= this.expectedFrames) {
-      this.firstPassDone = true;
-      this.signalReady();
-    }
   }
 }

@@ -381,7 +381,8 @@ export class TranslateState implements NgxsOnInit {
     const watchUrl = TranslateState.buildShareUrl(state);
     const shareText = `Translated with Rylo Translate\n${watchUrl}`;
 
-    const blob = await this.frameCache.encodeWithWatermark();
+    const blob = this.frameCache.blob;
+    if (!blob) return;
     const ext = blob.type.split('/').pop();
     const file = new File([blob], 'rylo-translate.' + ext, {type: blob.type});
 
@@ -398,7 +399,8 @@ export class TranslateState implements NgxsOnInit {
   async downloadSignedLanguageVideo({getState}: StateContext<TranslateStateModel>): Promise<void> {
     const {spokenLanguageText} = getState();
 
-    const blob = await this.frameCache.encodeWithWatermark();
+    const blob = this.frameCache.blob;
+    if (!blob) return;
     const url = URL.createObjectURL(blob);
 
     const ext = '.' + blob.type.split('/').pop();

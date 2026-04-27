@@ -58,7 +58,16 @@ app-avatar-pose-viewer {
   }
 }
 
-// Action buttons with gradient background and animated glow
+.encode-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--ion-color-primary);
+  z-index: 3;
+  transition: width 0.15s linear;
+}
+
 .actions-row {
   z-index: 2;
   .action-button {

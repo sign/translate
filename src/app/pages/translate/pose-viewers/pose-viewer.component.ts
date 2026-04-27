@@ -66,11 +66,6 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
     this.zone.run(() => this.store.dispatch(new SetSignedLanguageVideo('ready')));
   }
 
-  addCacheFrame(image: ImageBitmap, fps?: number): void {
-    this.frameCache.addFrame(image, fps);
-    this.frameIndex++;
-  }
-
   reset(): void {
     this.frameCache.reset();
     this.frameIndex = 0;
