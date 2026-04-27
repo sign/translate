@@ -104,7 +104,11 @@ export class SignedLanguageOutputComponent extends BaseComponent implements OnIn
       const blob = await this.frameCache.encodeWithWatermark();
       const url = URL.createObjectURL(blob);
       const text = this.store.selectSnapshot<string>(state => state.translate.spokenLanguageText);
-      const filename = encodeURIComponent(text).replaceAll('%20', '-').slice(0, 250);
+      const ext = '.' + blob.type.split('/').pop();
+      const filename =
+        encodeURIComponent(text)
+          .replaceAll('%20', '-')
+          .slice(0, 250 - ext.length) + ext;
 
       const a = document.createElement('a');
       a.href = url;

@@ -401,8 +401,11 @@ export class TranslateState implements NgxsOnInit {
     const blob = await this.frameCache.encodeWithWatermark();
     const url = URL.createObjectURL(blob);
 
-    let filename = encodeURIComponent(spokenLanguageText).replaceAll('%20', '-');
-    filename = filename.slice(0, 250);
+    const ext = '.' + blob.type.split('/').pop();
+    const filename =
+      encodeURIComponent(spokenLanguageText)
+        .replaceAll('%20', '-')
+        .slice(0, 250 - ext.length) + ext;
 
     const a = document.createElement('a');
     a.href = url;

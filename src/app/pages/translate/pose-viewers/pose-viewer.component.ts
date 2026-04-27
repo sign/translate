@@ -22,12 +22,23 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
 
   static isCustomElementDefined = false;
 
+  private onVisibilityChange = () => {
+    const pose = this.poseEl()?.nativeElement;
+    if (!pose) return;
+    if (document.hidden) {
+      pose.pause();
+    } else {
+      pose.play();
+    }
+  };
+
   async ngOnInit() {
     const el = document.querySelector('app-signed-language-output');
     if (el) {
       this.background = getComputedStyle(el).backgroundColor;
     }
 
+    document.addEventListener('visibilitychange', this.onVisibilityChange);
     await this.definePoseViewerElement();
   }
 
@@ -41,6 +52,7 @@ export abstract class BasePoseViewerComponent extends BaseComponent implements O
   }
 
   override ngOnDestroy(): void {
+    document.removeEventListener('visibilitychange', this.onVisibilityChange);
     super.ngOnDestroy();
     this.reset();
   }

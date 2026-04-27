@@ -37,6 +37,7 @@ export class FrameCacheService {
       ctx.drawImage(this.frames[i], 0, 0);
       drawWatermark(canvas, i, totalFrames, this._fps);
       watermarkedFrames.push(await createImageBitmap(canvas));
+      if (i % 10 === 0) await new Promise(requestAnimationFrame);
     }
 
     const {PlayableVideoEncoder} = await import('../../pages/translate/pose-viewers/playable-video-encoder');
