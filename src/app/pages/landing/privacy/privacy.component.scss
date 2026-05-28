@@ -1,5 +1,13 @@
+@use '../../../../theme/breakpoints' as breakpoints;
+
 :host {
   display: block;
-  max-width: min(90%, 1200px);
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px 0 16px;
+  box-sizing: border-box;
+
+  @media #{breakpoints.$breakpoint-lt-md} {
+    margin: 0 8px;
+  }
 }
