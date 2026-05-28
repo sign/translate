@@ -1,11 +1,8 @@
 @use '../../../../theme/breakpoints' as breakpoints;
+@use '../../../../theme/floating-nav' as nav;
 
 :host {
-  display: block;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 8px 0 16px;
-  box-sizing: border-box;
+  @include nav.nav-aligned-container;
 
   @media #{breakpoints.$breakpoint-lt-md} {
     margin: 0 8px;

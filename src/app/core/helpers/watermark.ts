@@ -1,4 +1,5 @@
-// Logo paths from logo.svg — icon (139x152) + "Rylo" letterforms, all in the 1039x152 viewBox
+// Logo paths from logo.svg — icon (139x152) + "Rylo" letterforms, cropped to 460x152 (the
+// "Translate" portion of the source 1039x152 viewBox is omitted from the watermark)
 const ICON_BOTTOM_D =
   'M135.553 125.712C141.026 120.099 139.239 115.693 129.823 119.136C112.145 125.602 78.651 124.786 64.3354 110.47C43.318 89.4525 55.5959 42.0107 31.6433 42.0107C7.6907 42.0107 -21.3084 114.03 23.2275 141.875C65.3727 168.218 127.792 133.679 135.561 125.72L135.553 125.712Z';
 const ICON_TOP_D =
