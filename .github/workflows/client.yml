@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Bun Runtime
-        uses: antongolub/action-setup-bun@v1
+        uses: oven-sh/setup-bun@v2
 
       - name: Install Dependencies
         run: bun install
@@ -155,10 +155,19 @@ jobs:
       - name: Unzip dist
         run: unzip browser.zip
 
+      - name: Stage dist under BASE_PATH
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_PATH=$(node -p "require('./base-path.json').basePath")
+          STRIPPED=${BASE_PATH#/}; STRIPPED=${STRIPPED%/}
+          mkdir -p deploy/"$STRIPPED"
+          cp -a dist/sign-translate/browser/. deploy/"$STRIPPED"/
+
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/sign-translate/browser
+          path: deploy
 
       - name: Deploy to GitHub Pages
         id: deployment

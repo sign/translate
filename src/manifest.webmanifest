@@ -2,7 +2,6 @@
   "name": "Rylo Translate",
   "short_name": "Rylo Translate",
   "scope": "./",
-  "id": "rylo.com/sign/translate",
   "start_url": "./",
   "display": "standalone",
   "theme_color": "#F57C00",
