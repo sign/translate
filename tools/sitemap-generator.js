@@ -1,6 +1,7 @@
 const {simpleSitemapAndIndex} = require('sitemap');
 const path = require('path');
 const fs = require('fs');
+const {basePath, canonicalOrigin} = require('../base-path.json');
 
 // Get list of supported languages
 const baseDir = path.resolve(__dirname, '..');
@@ -11,18 +12,20 @@ for (const file of fs.readdirSync(langsDir)) {
   languages.push(lang);
 }
 
+const withBase = relPath => basePath + relPath.replace(/^\/+/, '');
+
 const lastmod = new Date();
 const baseUrls = [
-  '/',
-  // '/legal/terms/', '/legal/privacy/',
+  withBase('/'),
+  // withBase('/legal/terms/'), withBase('/legal/privacy/'),
 ];
 
 const additionalUrls = [
-  '/about/', // TODO move to baseUrls once translated
-  '/about/contribute/',
-  '/legal/licenses/',
-  '/legal/terms/',
-  '/legal/privacy/',
+  withBase('/about/'), // TODO move to baseUrls once translated
+  withBase('/about/contribute/'),
+  withBase('/legal/licenses/'),
+  withBase('/legal/terms/'),
+  withBase('/legal/privacy/'),
 ];
 
 const sourceData = [];
@@ -44,22 +47,22 @@ async function main() {
 
   // writes sitemaps and index out to the destination you provide.
   await simpleSitemapAndIndex({
-    hostname: 'https://translate.rylo.com',
+    hostname: canonicalOrigin,
+    publicBasePath: basePath,
     destinationDir: buildDir,
     sourceData,
     gzip: false,
   });
 
-  // Now we add the docs sitemap to the sitemap index
+  // Append the docs sitemap to the sitemap index.
   const sitemapIndex = `${buildDir}sitemap-index.xml`;
-  // Read the sitemap index, parse the xml, under sitemapindex add a new sitemap to https://translate.rylo.com/docs/sitemap.xml
   const sitemapIndexContent = String(fs.readFileSync(sitemapIndex, 'utf8'));
   const tagIndex = sitemapIndexContent.indexOf('</sitemapindex>');
   const preText = sitemapIndexContent.slice(0, tagIndex);
   const postText = sitemapIndexContent.slice(tagIndex);
+  const docsSitemap = `${canonicalOrigin}${withBase('/docs/sitemap.xml')}`;
 
-  // Combine and write new sitemap index
-  const newSitemap = `${preText}<sitemap><loc>https://translate.rylo.com/docs/sitemap.xml</loc></sitemap>${postText}`;
+  const newSitemap = `${preText}<sitemap><loc>${docsSitemap}</loc></sitemap>${postText}`;
   fs.writeFileSync(sitemapIndex, newSitemap, 'utf8');
 }
 
