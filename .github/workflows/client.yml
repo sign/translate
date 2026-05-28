@@ -33,6 +33,9 @@ jobs:
       - name: Install Dependencies
         run: bun install
 
+      - name: Apply BASE_PATH to static files
+        run: bun run generate:base-path
+
       - name: Create terms and conditions
         run: bun run generate:terms
 

@@ -1,3 +1,5 @@
+@use '../../../theme/base-path' as *;
+
 span {
   background-size: cover;
   border-radius: 50%;
@@ -28,7 +30,7 @@ span {
   }
 }
 
-$flag-icons-path: '/assets/flags';
+$flag-icons-path: $base-path + 'assets/flags';
 $flag-icons-rect-path: '/4x3';
 $flag-icons-square-path: '/1x1';
 $flag-icons-use-square: true;

@@ -1,9 +1,9 @@
 {
   "name": "Rylo Translate",
   "short_name": "Rylo Translate",
-  "scope": "/",
-  "id": "translate.rylo.com",
-  "start_url": "/",
+  "scope": "./",
+  "id": "rylo.com/sign/translate",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#F57C00",
   "background_color": "#FFF",
@@ -46,12 +46,12 @@
   "protocol_handlers": [
     {
       "protocol": "web+sign",
-      "url": "/?text=%s"
+      "url": "./?text=%s"
     }
   ],
   "file_handlers": [
     {
-      "action": "/",
+      "action": "./",
       "accept": {
         "application/*": [".pose"]
       },
@@ -71,7 +71,7 @@
           "type": "image/png"
         }
       ],
-      "url": "/?direction=signed-to-spoken"
+      "url": "./?direction=signed-to-spoken"
     },
     {
       "name": "Translate spoken language",
@@ -84,7 +84,7 @@
           "type": "image/png"
         }
       ],
-      "url": "/?direction=spoken-to-signed"
+      "url": "./?direction=spoken-to-signed"
     }
   ],
   "description": "Effortless real-time sign language translation by Rylo",

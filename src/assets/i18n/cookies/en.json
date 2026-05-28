@@ -6,7 +6,7 @@
     "acceptAllBtn": "Accept all",
     "acceptNecessaryBtn": "Reject all",
     "showPreferencesBtn": "Manage preferences",
-    "footer": "<a href='https://translate.rylo.com/legal/privacy' target='_blank'>Privacy Policy</a><a href='https://translate.rylo.com/legal/terms' target='_blank'>Terms and Conditions</a>"
+    "footer": "<a href='legal/privacy' target='_blank'>Privacy Policy</a><a href='legal/terms' target='_blank'>Terms and Conditions</a>"
   },
   "preferencesModal": {
     "title": "Consent Preferences Center",
@@ -56,7 +56,7 @@
       },
       {
         "title": "More information",
-        "description": "For any queries about how we use cookies, please visit our <a class='cc__link' href='https://translate.rylo.com/legal/privacy' target='_blank'>Privacy Policy</a>."
+        "description": "For any queries about how we use cookies, please visit our <a class='cc__link' href='legal/privacy' target='_blank'>Privacy Policy</a>."
       }
     ]
   }
