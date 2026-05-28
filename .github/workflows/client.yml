@@ -111,6 +111,22 @@ jobs:
       - name: Remove original html file from before prerendering
         run: rm -f dist/sign-translate/browser/index.original.html || true
 
+      - name: Stage dist under BASE_PATH for Lighthouse
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_PATH=$(node -p "require('./base-path.json').basePath")
+          STRIPPED=${BASE_PATH#/}; STRIPPED=${STRIPPED%/}
+          if [ -n "$STRIPPED" ]; then
+            DIST=dist/sign-translate/browser
+            STAGE=$(mktemp -d)
+            shopt -s dotglob
+            mv "$DIST"/* "$STAGE/"
+            mkdir -p "$DIST/$STRIPPED"
+            mv "$STAGE"/* "$DIST/$STRIPPED/"
+            rmdir "$STAGE"
+          fi
+
       - name: Run Lighthouse against a static dist dir
         uses: treosh/lighthouse-ci-action@v12
         with:
