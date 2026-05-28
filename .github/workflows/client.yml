@@ -148,8 +148,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-
       - name: Download built dist artifact
         uses: actions/download-artifact@v4
         with:
@@ -159,19 +157,10 @@ jobs:
       - name: Unzip dist
         run: unzip browser.zip
 
-      - name: Stage dist under BASE_PATH
-        shell: bash
-        run: |
-          set -euo pipefail
-          BASE_PATH=$(node -p "require('./base-path.json').basePath")
-          STRIPPED=${BASE_PATH#/}; STRIPPED=${STRIPPED%/}
-          mkdir -p deploy/"$STRIPPED"
-          cp -a dist/sign-translate/browser/. deploy/"$STRIPPED"/
-
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: deploy
+          path: dist/sign-translate/browser
 
       - name: Deploy to GitHub Pages
         id: deployment
