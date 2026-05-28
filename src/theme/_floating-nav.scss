@@ -26,6 +26,16 @@
   }
 }
 
+// Aligns page content with the floating navbar's logo: glass-container has 16px left
+// padding, so 16px left padding here puts text flush with the wordmark above.
+@mixin nav-aligned-container {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 8px 0 16px;
+  box-sizing: border-box;
+}
+
 @mixin nav-link {
   padding: 8px 16px;
   font-weight: 600;
