@@ -27,28 +27,29 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Bun Runtime
-        uses: oven-sh/setup-bun@v2
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          bun-version: 1.3.14
+          node-version: 22
+          cache: npm
 
       - name: Install Dependencies
-        run: bun install
+        run: npm ci
 
       - name: Apply BASE_PATH to static files
-        run: bun run generate:base-path
+        run: npm run generate:base-path
 
       - name: Create terms and conditions
-        run: bun run generate:terms
+        run: npm run generate:terms
 
       - name: Create privacy page
-        run: bun run generate:privacy
+        run: npm run generate:privacy
 
       - name: Lint code
-        run: bun run lint
+        run: npm run lint
 
       - name: Test code
-        run: bun run test:ci
+        run: npm run test:ci
 
       # - name: Coveralls
       #   uses: coverallsapp/github-action@master
@@ -59,20 +60,20 @@ jobs:
         run: node tools/generate-build-version.js
 
       - name: Build project
-        run: bun run build
+        run: npm run build
 
       - name: Generate Sitemap
-        run: bun run generate:sitemap
+        run: npm run generate:sitemap
 
       - name: Generate Licenses File
-        run: bun run generate:licenses
+        run: npm run generate:licenses
 
       - name: Install Docs Dependencies
         working-directory: docs
-        run: bun install
+        run: npm install
 
       - name: Generate Docs
-        run: bun run generate:docs
+        run: npm run generate:docs
 
       - name: Move .well-known to root
         working-directory: dist/sign-translate/browser/

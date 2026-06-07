@@ -59,7 +59,6 @@ tools/cache
 src/assets/promotional/about/iphone/*.png
 src/assets/promotional/about/android/*.png
 
-package-lock.json
 bun.lockb
 bun.lock
 
