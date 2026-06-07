@@ -73,7 +73,9 @@
             matTreeNodeToggle
             [disabled]="node.children.length === 0"
             [attr.aria-label]="'settings.other.offline.actions.toggle' | transloco: {label: node.label}">
-            <ion-icon [name]="treeControl.isExpanded(node) ? 'chevron-down-outline' : 'chevron-forward-outline'" />
+            <ion-icon
+              [name]="treeControl.isExpanded(node) ? 'chevron-down-outline' : 'chevron-forward-outline'"
+              aria-hidden="true" />
           </button>
           <ng-container *ngTemplateOutlet="nodeTemplate; context: {$implicit: node}"></ng-container>
         </div>

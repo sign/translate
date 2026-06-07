@@ -13,7 +13,11 @@
     <ion-progress-bar [value]="progress" [attr.aria-label]="t('generating')"></ion-progress-bar>
   }
   @if (!modelReady) {
-    <ion-spinner [matTooltip]="t('loading')" color="primary"></ion-spinner>
+    <ion-spinner
+      role="progressbar"
+      [matTooltip]="t('loading')"
+      [attr.aria-label]="t('loading')"
+      color="primary"></ion-spinner>
   }
 
   <canvas #canvas width="768" height="768"></canvas>
