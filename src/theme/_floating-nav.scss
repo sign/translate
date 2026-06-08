@@ -20,6 +20,7 @@
 
 @mixin floating-header {
   background: transparent;
+  padding-inline-end: var(--scrollbar-width, 0px);
 
   &::after {
     display: none !important;

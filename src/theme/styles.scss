@@ -53,6 +53,7 @@ ion-content::part(scroll) {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  scrollbar-gutter: stable;
 }
 
 .actions-row {

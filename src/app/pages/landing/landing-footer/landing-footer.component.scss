@@ -4,6 +4,13 @@ footer {
   background-color: #191412;
   color: #faf5f2;
   padding: 20px 40px;
+
+  // Bleed into the reserved scrollbar gutter so the bar reaches the edge on non-scrolling pages
+  box-shadow: var(--scrollbar-width, 0px) 0 0 0 #191412;
+}
+
+:host-context([dir='rtl']) footer {
+  box-shadow: calc(-1 * var(--scrollbar-width, 0px)) 0 0 0 #191412;
 }
 
 .container {

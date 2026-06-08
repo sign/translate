@@ -30,6 +30,7 @@ export class AppComponent implements AfterViewInit {
     this.logRouterNavigation();
     this.checkURLEmbedding();
     this.updateToolbarColor();
+    this.setScrollbarWidth();
     this.setSmartAppBanner();
   }
 
@@ -66,6 +67,24 @@ export class AppComponent implements AfterViewInit {
 
     matcher.addEventListener('change', onColorSchemeChange);
     onColorSchemeChange();
+  }
+
+  setScrollbarWidth() {
+    if (!('window' in globalThis)) {
+      return;
+    }
+
+    const measure = () => {
+      const probe = document.createElement('div');
+      probe.style.cssText = 'position:absolute;visibility:hidden;overflow:scroll;width:100px;height:100px;';
+      document.body.appendChild(probe);
+      const width = probe.offsetWidth - probe.clientWidth;
+      probe.remove();
+      document.documentElement.style.setProperty('--scrollbar-width', `${width}px`);
+    };
+
+    measure();
+    window.addEventListener('resize', measure);
   }
 
   initCookieConsent() {
