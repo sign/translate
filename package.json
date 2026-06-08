@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "lint": "NODE_OPTIONS=--max_old_space_size=16384 ng lint",
+    "prestart": "npm run generate:licenses",
     "start": "ng serve --host 0.0.0.0",
     "build": "ng build --configuration=production --base-href=\"$(node -p \"require('./base-path.json').basePath\")\"",
     "build:stats": "ng build --stats-json --base-href=\"$(node -p \"require('./base-path.json').basePath\")\"",
@@ -21,9 +22,9 @@
     "generate:privacy": "marked -i PRIVACY.md -o src/app/pages/landing/privacy/privacy.component.html",
     "generate:base-path": "node tools/apply-base-path.js",
     "generate:sitemap": "node tools/sitemap-generator.js",
-    "generate:licenses": "npm-license-crawler --json dist/sign-translate/browser/licenses.json --onlyDirectDependencies --exclude dist",
+    "generate:licenses": "npm-license-crawler --json src/assets/licenses.json --onlyDirectDependencies --exclude dist",
     "generate:docs": "cd docs && npm run docs:build && mv .vitepress/dist ../dist/sign-translate/browser/docs",
-    "build:full": "npm run generate:base-path && npm run generate:terms && npm run generate:privacy && npm run build && npm run generate:sitemap && npm run generate:licenses && npm run generate:docs"
+    "build:full": "npm run generate:base-path && npm run generate:terms && npm run generate:privacy && npm run generate:licenses && npm run build && npm run generate:sitemap && npm run generate:docs"
   },
   "engines": {
     "node": ">=18",

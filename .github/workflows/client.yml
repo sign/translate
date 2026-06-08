@@ -45,6 +45,9 @@ jobs:
       - name: Create privacy page
         run: npm run generate:privacy
 
+      - name: Generate Licenses File
+        run: npm run generate:licenses
+
       - name: Lint code
         run: npm run lint
 
@@ -64,9 +67,6 @@ jobs:
 
       - name: Generate Sitemap
         run: npm run generate:sitemap
-
-      - name: Generate Licenses File
-        run: npm run generate:licenses
 
       - name: Install Docs Dependencies
         working-directory: docs

@@ -4,6 +4,7 @@
 
 # compiled output
 /dist
+/src/assets/licenses.json
 /tmp
 /out-tsc
 # Only exists if Bazel was run

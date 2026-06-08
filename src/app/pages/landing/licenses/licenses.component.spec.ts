@@ -22,7 +22,7 @@ describe('LicensesComponent', () => {
     fixture.detectChanges();
 
     const httpTestingController = TestBed.inject(HttpTestingController);
-    const req = httpTestingController.expectOne('/licenses.json');
+    const req = httpTestingController.expectOne('assets/licenses.json');
 
     // Assert that the request is a GET.
     expect(req.request.method).toEqual('GET');
