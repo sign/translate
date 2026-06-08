@@ -12,11 +12,8 @@ a {
   text-decoration: none;
 }
 
-img {
+svg {
   height: 1.3em;
+  width: auto;
   display: block;
-
-  @media (prefers-color-scheme: dark) {
-    filter: invert(1) hue-rotate(180deg);
-  }
 }
