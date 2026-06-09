@@ -53,19 +53,15 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     fromEvent(this.speechRecognition, 'result')
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((event: SpeechRecognitionEvent) => {
-        let interim = '';
-        let final = '';
+        // Commit interim text too: the browser may end a session on silence before its last
+        // words finalize, and we must not drop what the user already saw on the next restart.
+        let transcript = '';
         for (let i = 0; i < event.results.length; i++) {
-          const result = event.results[i];
-          if (result.isFinal) {
-            final += result[0].transcript;
-          } else {
-            interim += result[0].transcript;
-          }
+          transcript += event.results[i][0].transcript;
         }
 
-        this.sessionTranscript = final;
-        this.changeText.emit(this.committedTranscript + final + interim);
+        this.sessionTranscript = transcript;
+        this.changeText.emit(this.committedTranscript + transcript);
       });
 
     fromEvent(this.speechRecognition, 'error')
@@ -108,6 +104,12 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     if (changes.lang && this.speechRecognition) {
       this.speechRecognition.lang = this.lang;
     }
+  }
+
+  override ngOnDestroy(): void {
+    this.userRequestedRecording = false;
+    this.speechRecognition?.stop(); // Release the microphone; unsubscribing alone leaves it running
+    super.ngOnDestroy();
   }
 
   requestPermission() {
