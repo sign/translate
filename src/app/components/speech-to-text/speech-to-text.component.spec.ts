@@ -161,6 +161,16 @@ describe('SpeechToTextComponent', () => {
       expect(lastEmitted()).toBe('hello world');
     });
 
+    it('preserves interim text that never finalized before a restart', () => {
+      component.start();
+      mock.emitResult([{transcript: 'hello', isFinal: false}]);
+
+      mock.endByBrowser();
+      mock.emitResult([{transcript: ' world', isFinal: true}]);
+
+      expect(lastEmitted()).toBe('hello world');
+    });
+
     it('stop ends recording and does not auto-restart', () => {
       component.start();
 
@@ -219,6 +229,15 @@ describe('SpeechToTextComponent', () => {
       mock.emitResult([{transcript: 'ignored', isFinal: true}]);
 
       expect(emitted.length).toBe(count);
+    });
+
+    it('stops recognition when the component is destroyed while recording', () => {
+      component.start();
+      expect(mock.running).toBeTrue();
+
+      component.ngOnDestroy();
+
+      expect(mock.running).toBeFalse();
     });
   });
 });
