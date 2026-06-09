@@ -1,11 +1,14 @@
 import {Component, Input, OnChanges, OnInit, output, SimpleChanges} from '@angular/core';
 import {fromEvent} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 import {BaseComponent} from '../base/base.component';
 import {MatTooltipModule, TooltipPosition} from '@angular/material/tooltip';
 import {IonButton, IonIcon} from '@ionic/angular/standalone';
 import {TranslocoDirective} from '@jsverse/transloco';
 import {addIcons} from 'ionicons';
 import {micOutline, stopCircleOutline} from 'ionicons/icons';
+
+const FATAL_ERRORS = ['not-allowed', 'language-not-supported', 'service-not-allowed'];
 
 @Component({
   selector: 'app-speech-to-text',
@@ -24,6 +27,12 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   supportError = null;
   isRecording = false;
 
+  // The browser ends recognition on its own after a few seconds of silence. While the user
+  // wants to keep recording, we restart it on `end` so dictation survives natural pauses.
+  private userRequestedRecording = false;
+  private committedTranscript = '';
+  private sessionTranscript = '';
+
   constructor() {
     super();
 
@@ -37,45 +46,62 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
     }
 
     this.speechRecognition = new this.SpeechRecognition();
+    this.speechRecognition.continuous = true;
     this.speechRecognition.interimResults = true;
-    this.speechRecognition.continuous = false;
     this.speechRecognition.lang = this.lang;
 
-    fromEvent(this.speechRecognition, 'result').subscribe((event: SpeechRecognitionEvent) => {
-      const transcription = event.results[0][0].transcript;
-      this.changeText.emit(transcription);
-    });
+    fromEvent(this.speechRecognition, 'result')
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((event: SpeechRecognitionEvent) => {
+        let interim = '';
+        let final = '';
+        for (let i = 0; i < event.results.length; i++) {
+          const result = event.results[i];
+          if (result.isFinal) {
+            final += result[0].transcript;
+          } else {
+            interim += result[0].transcript;
+          }
+        }
 
-    fromEvent(this.speechRecognition, 'error').subscribe((event: SpeechRecognitionErrorEvent) => {
-      console.error('error', event.error);
+        this.sessionTranscript = final;
+        this.changeText.emit(this.committedTranscript + final + interim);
+      });
 
-      if (['not-allowed', 'language-not-supported', 'service-not-allowed'].includes(event.error)) {
-        this.supportError = event.error;
-      } else {
-        this.supportError = null;
-      }
+    fromEvent(this.speechRecognition, 'error')
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((event: SpeechRecognitionErrorEvent) => {
+        if (FATAL_ERRORS.includes(event.error)) {
+          this.supportError = event.error;
+          this.userRequestedRecording = false;
+        } else {
+          this.supportError = null;
+        }
 
-      // Try accessing microphone, to request permission
-      if (event.error === 'not-allowed') {
-        this.requestPermission();
-      }
-    });
+        // Try accessing microphone, to request permission
+        if (event.error === 'not-allowed') {
+          this.requestPermission();
+        }
+      });
 
-    fromEvent(this.speechRecognition, 'start').subscribe(() => {
-      console.error('start');
+    fromEvent(this.speechRecognition, 'start')
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(() => {
+        this.isRecording = true;
+      });
 
-      this.changeText.emit('');
-      this.isRecording = true;
-    });
+    fromEvent(this.speechRecognition, 'end')
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(() => {
+        this.committedTranscript += this.sessionTranscript;
+        this.sessionTranscript = '';
 
-    // TODO: ongoing safari bug: on end, microphone is still active
-    // https://stackoverflow.com/questions/75498609/safari-webkitspeechrecognition-continuous-bug
-    fromEvent(this.speechRecognition, 'end').subscribe(() => {
-      this.isRecording = false;
-      this.speechRecognition.stop(); // Explicitly stop the recognition service, to disengage the microphone
-    });
-
-    fromEvent(this.speechRecognition, 'speechend').subscribe(this.stop.bind(this));
+        if (this.userRequestedRecording) {
+          this.safeStart();
+        } else {
+          this.isRecording = false;
+        }
+      });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -92,10 +118,26 @@ export class SpeechToTextComponent extends BaseComponent implements OnInit, OnCh
   }
 
   start() {
-    this.speechRecognition.start();
+    this.userRequestedRecording = true;
+    this.committedTranscript = '';
+    this.sessionTranscript = '';
+    this.changeText.emit('');
+    this.safeStart();
   }
 
   stop() {
+    this.userRequestedRecording = false;
+    // TODO: ongoing safari bug: the microphone can stay active after stop
+    // https://stackoverflow.com/questions/75498609/safari-webkitspeechrecognition-continuous-bug
     this.speechRecognition.stop();
+  }
+
+  private safeStart() {
+    try {
+      this.speechRecognition.start();
+    } catch {
+      // start() throws InvalidStateError when recognition is already running; the existing
+      // session keeps the microphone open, so there is nothing to recover from.
+    }
   }
 }
