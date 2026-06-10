@@ -28,7 +28,7 @@
   text-align: center;
   border-radius: 28px;
   background-color: #5d7c93;
-  background-image: linear-gradient(rgba(25, 20, 18, 0.32), rgba(25, 20, 18, 0.42)), url('/assets/rylo-clouds.webp');
+  background-image: linear-gradient(rgba(25, 20, 18, 0.1), rgba(25, 20, 18, 0.18)), url('/assets/rylo-clouds.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,6 +49,7 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: #faf5f2;
+  text-shadow: 0 2px 16px rgba(25, 20, 18, 0.45);
 }
 
 .rylo-overlay__subtitle {
@@ -57,7 +58,8 @@
   font-weight: 400;
   font-size: clamp(16px, 2.2vw, 19px);
   line-height: 1.45;
-  color: rgba(250, 245, 242, 0.92);
+  color: rgba(250, 245, 242, 0.95);
+  text-shadow: 0 1px 10px rgba(25, 20, 18, 0.4);
 }
 
 .rylo-overlay__cta {
