@@ -11,23 +11,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   padding: 24px;
-  background-color: #5d7c93;
-  background-image:
-    linear-gradient(rgba(25, 20, 18, 0.28), rgba(25, 20, 18, 0.28)), url('/assets/rylo-hero-background.webp');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgba(25, 20, 18, 0.6);
+  backdrop-filter: blur(2px);
 }
 
-.rylo-overlay__content {
+.rylo-overlay__card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-  max-width: 640px;
+  gap: 28px;
+  width: 100%;
+  max-width: 460px;
+  padding: 40px 32px 104px;
+  overflow: hidden;
   text-align: center;
+  border-radius: 24px;
+  background-color: #5d7c93;
+  background-image: url('/assets/rylo-clouds.webp');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  box-shadow: 0 24px 48px rgba(25, 20, 18, 0.35);
 }
 
 .rylo-overlay__text {
@@ -40,8 +45,8 @@
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: clamp(26px, 4vw, 44px);
-  line-height: 1.15;
+  font-size: clamp(22px, 5vw, 28px);
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: #faf5f2;
 }
@@ -50,9 +55,9 @@
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: clamp(15px, 2vw, 18px);
-  line-height: 1.4;
-  color: rgba(250, 245, 242, 0.88);
+  font-size: 15px;
+  line-height: 1.45;
+  color: rgba(250, 245, 242, 0.9);
 }
 
 .rylo-overlay__cta {
