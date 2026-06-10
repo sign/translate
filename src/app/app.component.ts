@@ -8,6 +8,7 @@ import {Capacitor} from '@capacitor/core';
 import {languageCodeNormalizer} from './core/modules/transloco/languages';
 import {Meta} from '@angular/platform-browser';
 import {IonApp, IonRouterOutlet} from '@ionic/angular/standalone';
+import {RyloRedirectOverlayComponent} from './components/rylo-redirect-overlay/rylo-redirect-overlay.component';
 import {getUrlParams} from './core/helpers/url';
 import * as CookieConsent from 'vanilla-cookieconsent';
 import {ConsentStatus, ConsentType, FirebaseAnalytics} from '@capacitor-firebase/analytics';
@@ -17,7 +18,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [IonApp, IonRouterOutlet],
+  imports: [IonApp, IonRouterOutlet, RyloRedirectOverlayComponent],
 })
 export class AppComponent implements AfterViewInit {
   private meta = inject(Meta);
