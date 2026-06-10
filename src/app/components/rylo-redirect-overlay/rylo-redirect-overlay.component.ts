@@ -1,9 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Capacitor} from '@capacitor/core';
-import {FirebaseAnalytics} from '@capacitor-firebase/analytics';
-import {environment} from '../../../environments/environment';
-
-const RYLO_TRANSLATE_URL = 'https://rylo.com/sign/translate';
+import {GoogleAnalyticsService} from '../../core/modules/google-analytics/google-analytics.service';
 
 @Component({
   selector: 'app-rylo-redirect-overlay',
@@ -12,23 +9,18 @@ const RYLO_TRANSLATE_URL = 'https://rylo.com/sign/translate';
   styleUrl: './rylo-redirect-overlay.component.scss',
 })
 export class RyloRedirectOverlayComponent {
+  private ga = inject(GoogleAnalyticsService);
+
   readonly visible = !Capacitor.isNativePlatform();
-  readonly redirectUrl = RYLO_TRANSLATE_URL;
+  readonly redirectUrl = 'https://rylo.com/sign/translate';
 
   async redirect(event: Event): Promise<void> {
     event.preventDefault();
-    await this.logRedirectEvent();
-    window.location.href = this.redirectUrl;
-  }
-
-  private async logRedirectEvent(): Promise<void> {
-    if (!environment.firebase.measurementId || !('window' in globalThis)) {
-      return;
-    }
     try {
-      await FirebaseAnalytics.logEvent({name: 'rylo_redirect_click'});
+      await this.ga.logEvent('rylo_redirect_click');
     } catch {
       // Analytics must never block the redirect.
     }
+    window.location.href = this.redirectUrl;
   }
 }

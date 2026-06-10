@@ -30,6 +30,13 @@ export class GoogleAnalyticsService {
     await FirebaseAnalytics.setCurrentScreen({screenName});
   }
 
+  async logEvent(name: string, params?: Record<string, any>) {
+    if (!this.isSupported) {
+      return;
+    }
+    await FirebaseAnalytics.logEvent({name, params});
+  }
+
   logPerformanceMetrics() {
     if (!this.isSupported) {
       return;
