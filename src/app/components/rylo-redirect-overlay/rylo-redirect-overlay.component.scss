@@ -1,0 +1,70 @@
+@forward '../../../theme/fonts/poppins.css';
+
+:host {
+  display: contents;
+}
+
+.rylo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 24px;
+  background-color: #5d7c93;
+  background-image: url('/assets/rylo-clouds.webp');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.rylo-overlay__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 720px;
+  text-align: center;
+}
+
+.rylo-overlay__title {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #faf5f2;
+}
+
+.rylo-overlay__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 8px 24px;
+  border-radius: 12px;
+  background-color: #ff8b2b;
+  color: #191412;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow:
+    0 8px 12px rgba(25, 20, 18, 0.15),
+    inset 0 0 8px rgba(255, 255, 255, 0.4);
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.rylo-overlay__cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.rylo-overlay__cta:active {
+  transform: translateY(0);
+}
