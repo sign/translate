@@ -10,13 +10,12 @@ import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';
 import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
 import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
-import {RyloRedirectOverlayComponent} from '../../components/rylo-redirect-overlay/rylo-redirect-overlay.component';
 
 @Component({
   selector: 'app-translate',
   templateUrl: './translate.component.html',
   styleUrls: ['./translate.component.scss'],
-  imports: [TranslateMobileComponent, TranslateDesktopComponent, RyloRedirectOverlayComponent],
+  imports: [TranslateMobileComponent, TranslateDesktopComponent],
 })
 export class TranslateComponent extends BaseComponent implements OnInit {
   private store = inject(Store);
