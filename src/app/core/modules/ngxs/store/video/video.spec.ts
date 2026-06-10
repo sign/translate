@@ -11,7 +11,6 @@ describe('VideoState', () => {
   let navigatorService: NavigatorService;
   let snapshot: {video: VideoStateModel};
 
-  let mockCamera: MediaStream;
   let mockSettings: MediaTrackSettings;
   let mockTrack: MediaStreamVideoTrack;
 
@@ -25,8 +24,8 @@ describe('VideoState', () => {
     };
     mockTrack = {
       getSettings: () => mockSettings,
-      addEventListener: (() => {}) as any,
-    } as MediaStreamVideoTrack;
+      addEventListener: jasmine.createSpy('addEventListener'),
+    } as unknown as MediaStreamVideoTrack;
   });
 
   beforeEach(() => {
@@ -34,8 +33,6 @@ describe('VideoState', () => {
       imports: [],
       providers: [provideStore([VideoState], ngxsConfig), NavigatorService],
     });
-
-    mockCamera = new MediaStream();
 
     store = TestBed.inject(Store);
     navigatorService = TestBed.inject(NavigatorService);
@@ -75,8 +72,7 @@ describe('VideoState', () => {
   });
 
   it('StartCamera error should update store', async () => {
-    const testError = 'testError';
-    const spy = spyOn(navigatorService, 'getCamera').and.throwError(new Error(testError));
+    const spy = spyOn(navigatorService, 'getCamera').and.throwError(new Error('testError'));
 
     snapshot.video.error = null;
     store.reset(snapshot);
@@ -86,20 +82,22 @@ describe('VideoState', () => {
     expect(spy).toHaveBeenCalled();
 
     const error = store.selectSnapshot(state => state.video.error);
-    expect(error).toBe(testError);
+    expect(error).toBe('testError');
   });
 
   it('StartCamera should get camera from navigator', async () => {
-    // Setup mock camera
-    const tracksSpy = spyOn(mockCamera, 'getVideoTracks').and.returnValue([mockTrack]);
+    const tracksSpy = jasmine.createSpy('getVideoTracks').and.returnValue([mockTrack]);
+    const mockCamera = {
+      getVideoTracks: tracksSpy,
+      getTracks: () => [] as MediaStreamTrack[],
+    } as unknown as MediaStream;
     const cameraSpy = spyOn(navigatorService, 'getCamera').and.returnValue(Promise.resolve(mockCamera));
-    const listenerSpy = spyOn(mockTrack, 'addEventListener');
 
     await firstValueFrom(store.dispatch(StartCamera));
 
     expect(tracksSpy).toHaveBeenCalled();
     expect(cameraSpy).toHaveBeenCalled();
-    expect(listenerSpy).toHaveBeenCalled();
+    expect(mockTrack.addEventListener).toHaveBeenCalled();
 
     const {camera, error} = store.selectSnapshot(state => state.video);
 
@@ -108,7 +106,11 @@ describe('VideoState', () => {
   });
 
   it('StartCamera should set camera settings', async () => {
-    const tracksSpy = spyOn(mockCamera, 'getVideoTracks').and.returnValue([mockTrack]);
+    const tracksSpy = jasmine.createSpy('getVideoTracks').and.returnValue([mockTrack]);
+    const mockCamera = {
+      getVideoTracks: tracksSpy,
+      getTracks: () => [] as MediaStreamTrack[],
+    } as unknown as MediaStream;
     const cameraSpy = spyOn(navigatorService, 'getCamera').and.returnValue(Promise.resolve(mockCamera));
 
     await firstValueFrom(store.dispatch(StartCamera));
