@@ -14,29 +14,45 @@
   overflow: hidden;
   padding: 24px;
   background-color: #5d7c93;
-  background-image: url('/assets/rylo-clouds.webp');
-  background-position: bottom center;
+  background-image:
+    linear-gradient(rgba(25, 20, 18, 0.28), rgba(25, 20, 18, 0.28)), url('/assets/rylo-hero-background.webp');
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .rylo-overlay__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  max-width: 720px;
+  gap: 32px;
+  max-width: 640px;
   text-align: center;
+}
+
+.rylo-overlay__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .rylo-overlay__title {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: clamp(28px, 5vw, 56px);
-  line-height: 1.1;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1.15;
   letter-spacing: -0.02em;
   color: #faf5f2;
+}
+
+.rylo-overlay__subtitle {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.4;
+  color: rgba(250, 245, 242, 0.88);
 }
 
 .rylo-overlay__cta {
