@@ -38,6 +38,26 @@
   gap: 24px;
 }
 
+.research-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-align: center;
+  background: rgba(255, 139, 43, 0.08);
+  border: 1px solid rgba(255, 139, 43, 0.3);
+  border-radius: 12px;
+
+  ion-icon {
+    font-size: 18px;
+    color: #ff8b2b;
+    flex-shrink: 0;
+  }
+}
+
 .video-container {
   width: 100%;
   border-radius: 16px;

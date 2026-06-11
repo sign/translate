@@ -4,6 +4,11 @@
   font-size: 1.2em;
 }
 
+.logo-content {
+  display: inline-flex;
+  align-items: center;
+}
+
 a {
   display: flex;
   align-items: center;
@@ -16,4 +21,18 @@ svg {
   height: 1.3em;
   width: auto;
   display: block;
+}
+
+.beta-chip {
+  margin-left: 0.5em;
+  padding: 0.2em 0.55em;
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #191412;
+  background: var(--ion-color-primary);
+  border-radius: 999px;
+  cursor: help;
 }

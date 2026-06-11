@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TranslateDesktopComponent} from '../translate-desktop/translate-desktop.component';
-import {IonContent, IonFooter, IonHeader} from '@ionic/angular/standalone';
+import {IonContent, IonFooter, IonHeader, IonIcon} from '@ionic/angular/standalone';
 import {SpokenLanguageInputComponent} from '../spoken-to-signed/spoken-language-input/spoken-language-input.component';
 import {SignedLanguageOutputComponent} from '../spoken-to-signed/signed-language-output/signed-language-output.component';
 import {SignedLanguageInputComponent} from '../signed-to-spoken/signed-language-input/signed-language-input.component';
@@ -15,6 +15,7 @@ import {VideoModule} from '../../../components/video/video.module';
     IonContent,
     IonHeader,
     IonFooter,
+    IonIcon,
     SignedLanguageOutputComponent,
     SignedLanguageInputComponent,
     SpokenLanguageInputComponent,
