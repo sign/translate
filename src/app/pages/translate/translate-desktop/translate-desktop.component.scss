@@ -207,15 +207,23 @@ ntkme-github-button {
 
 .disclaimer.research-preview {
   max-width: 640px;
-  background: linear-gradient(135deg, rgba(255, 139, 43, 0.1) 0%, rgba(255, 139, 43, 0.04) 100%);
-  border-color: rgba(255, 139, 43, 0.25);
+  background: linear-gradient(
+    135deg,
+    rgba(var(--ion-color-primary-rgb), 0.1) 0%,
+    rgba(var(--ion-color-primary-rgb), 0.04) 100%
+  );
+  border-color: rgba(var(--ion-color-primary-rgb), 0.25);
 
   &:hover {
-    background: linear-gradient(135deg, rgba(255, 139, 43, 0.14) 0%, rgba(255, 139, 43, 0.06) 100%);
-    border-color: rgba(255, 139, 43, 0.35);
+    background: linear-gradient(
+      135deg,
+      rgba(var(--ion-color-primary-rgb), 0.14) 0%,
+      rgba(var(--ion-color-primary-rgb), 0.06) 100%
+    );
+    border-color: rgba(var(--ion-color-primary-rgb), 0.35);
   }
 
   .disclaimer-icon {
-    color: rgba(255, 139, 43, 0.9);
+    color: rgba(var(--ion-color-primary-rgb), 0.9);
   }
 }

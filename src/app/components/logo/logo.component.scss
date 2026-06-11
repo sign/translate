@@ -26,10 +26,9 @@ svg {
   letter-spacing: 0.06em;
   line-height: 1;
   text-transform: uppercase;
-  color: #ff8b2b;
-  background: rgba(255, 139, 43, 0.12);
-  border: 1px solid rgba(255, 139, 43, 0.35);
+  color: var(--ion-color-primary);
+  background: rgba(var(--ion-color-primary-rgb), 0.12);
+  border: 1px solid rgba(var(--ion-color-primary-rgb), 0.35);
   border-radius: 999px;
-  white-space: nowrap;
   cursor: help;
 }
