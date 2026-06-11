@@ -153,7 +153,6 @@ ntkme-github-button {
 // Privacy disclaimer with gradient background
 .disclaimer {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 10px;
   font-size: 13px;
@@ -203,5 +202,20 @@ ntkme-github-button {
       opacity: 0.8;
       text-decoration: underline;
     }
+  }
+}
+
+.disclaimer.research-preview {
+  max-width: 640px;
+  background: linear-gradient(135deg, rgba(255, 139, 43, 0.1) 0%, rgba(255, 139, 43, 0.04) 100%);
+  border-color: rgba(255, 139, 43, 0.25);
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(255, 139, 43, 0.14) 0%, rgba(255, 139, 43, 0.06) 100%);
+    border-color: rgba(255, 139, 43, 0.35);
+  }
+
+  .disclaimer-icon {
+    color: rgba(255, 139, 43, 0.9);
   }
 }

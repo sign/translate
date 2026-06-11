@@ -17,3 +17,19 @@ svg {
   width: auto;
   display: block;
 }
+
+.beta-chip {
+  margin-left: 0.5em;
+  padding: 0.2em 0.55em;
+  font-size: 0.55em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ff8b2b;
+  background: rgba(255, 139, 43, 0.12);
+  border: 1px solid rgba(255, 139, 43, 0.35);
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: help;
+}
