@@ -1,18 +1,18 @@
 # Awards and Recognition
 
-In this page, we list the awards and recognition that the technology behind translate.rylo.com has received in the last few years, alongside public independent reviews.
+In this page, we list the awards and recognition that the technology behind Rylo Translate has received in the last few years, alongside public independent reviews.
 
 ## 2024
 
-- We received an `EMNLP Outstanding Demo Paper Award` for our demonstration of "translate.rylo.com: Real-Time Multilingual Sign Language Translation Application"[^emnlp2024-award].
+- We received an `EMNLP Outstanding Demo Paper Award` for our demonstration of "Rylo Translate: Real-Time Multilingual Sign Language Translation Application"[^emnlp2024-award].
 
-[^emnlp2024-award]: translate.rylo.com. 2024. [Twitter Post](https://x.com/signmt_/status/1857181686045540787).
+[^emnlp2024-award]: Rylo Translate. 2024. [Twitter Post](https://x.com/signmt_/status/1857181686045540787).
 
 - Dr. Amit Moryossef (among others) received the `SwissNLP Award` for his "outstanding contribution to Sign Language Translation in Switzerland"[^swissnlp2024-award].
 
 [^swissnlp2024-award]: SwissNLP. 2024. [SwissNLP Award](https://swissnlp.org/home/activities/swissnlp-award/).
 
-- translate.rylo.com was independently reviewed for Kazakh-Russian Sign Language translation, reporting accuracy of 37% compared to 98% for human translation[^kazakh-russian-review].
+- Rylo Translate was independently reviewed for Kazakh-Russian Sign Language translation, reporting accuracy of 37% compared to 98% for human translation[^kazakh-russian-review].
 
 [^kazakh-russian-review]: Imashev et al. 2024. [Comparative Analysis of Sign Language Interpreting Agents Perception: A Study of the Deaf](hhttps://aclanthology.org/2024.lrec-main.319/).
 
