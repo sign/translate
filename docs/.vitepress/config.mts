@@ -7,7 +7,8 @@ export default withMermaid(
   defineConfig({
     title: 'Documentation',
     description: 'Rylo Translate Documentation and Blog',
-    base: '/docs/',
+    // Must match base-path.json basePath + 'docs/' — the app is served under /sign/translate/.
+    base: '/sign/translate/docs/',
     lastUpdated: true,
     sitemap: {
       hostname: 'https://rylo.com/sign/translate/docs/',
