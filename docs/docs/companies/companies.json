@@ -1,10 +1,10 @@
 [
   {
-    "name": "translate.rylo.com",
+    "name": "Rylo Translate",
     "deepDive": "../technology/introduction.html",
     "sector": "Translation",
     "country": "Israel / Switzerland",
-    "website": "https://translate.rylo.com/about",
+    "website": "https://rylo.com/sign/translate/about",
     "social": {
       "linkedIn": "https://www.linkedin.com/company/sign-mt/",
       "github": "https://github.com/sign",
@@ -19,7 +19,7 @@
     "spokenToSigned": "✅",
     "signedToSpoken": "✅",
     "keyFeatures": "Neural machine translation for sign languages",
-    "fullDescription": "translate.rylo.com is dedicated to advancing sign language translation using state-of-the-art neural machine translation models through SignWriting. The company focuses on building high-quality datasets and developing AI-driven solutions that enable real-time translation between spoken and signed languages. With a strong emphasis on research and accessibility, translate.rylo.com collaborates with academic institutions and contributes to open-source initiatives, helping to bridge communication gaps for the deaf community and businesses seeking inclusive solutions.",
+    "fullDescription": "Rylo Translate is dedicated to advancing sign language translation using state-of-the-art neural machine translation models through SignWriting. The company focuses on building high-quality datasets and developing AI-driven solutions that enable real-time translation between spoken and signed languages. With a strong emphasis on research and accessibility, Rylo Translate collaborates with academic institutions and contributes to open-source initiatives, helping to bridge communication gaps for the deaf community and businesses seeking inclusive solutions.",
     "video": "https://www.youtube.com/embed/0-cvX0OwLGM"
   },
   {
@@ -331,7 +331,7 @@
     "spokenToSigned": "✅",
     "signedToSpoken": "✅",
     "keyFeatures": "Translation between different sign languages",
-    "additionalInformation": "Contacted [translate.rylo.com](http://translate.rylo.com/) for help",
+    "additionalInformation": "Contacted [Rylo Translate](https://rylo.com/sign/translate/) for help",
     "fullDescription": "Abili-Tech Systems provides real-time sign language translation through a user-friendly interface, offering text-to-sign, sign-to-text, and sign-to-speech translation services. The company focuses on bridging communication gaps between sign language and spoken language users, particularly in educational and business environments, with seamless integration across devices."
   },
   {

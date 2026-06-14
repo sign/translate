@@ -109,22 +109,22 @@ Potentially, the system can be as good as a deaf human translator, given quality
 
 Here is an example where a minor, inconsequential, and possibly even **wrong** modification to the spoken language yields the same correct translation in SignWriting (the sign for the city of zurich) but the dictionary yields different ones.
 
-| Text                                                                    | Machine Translation                                                                | Dictionary Translation                          |
-| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [Zürich](https://translate.rylo.com/?spl=de&sil=sgg&text=Z%C3%BCrich)   | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Zürich.png)  | The sign for Zurich (correct)                   |
-| [Zurich](https://translate.rylo.com/?spl=de&sil=sgg&text=Zurich)        | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Zurich.png)  | Spelling the city name without umlaut (strange) |
-| [Züerich](https://translate.rylo.com/?spl=de&sil=sgg&text=Z%C3%BCerich) | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Züerich.png) | Spelling the city name (strange)                |
+| Text                                                                         | Machine Translation                                                                | Dictionary Translation                          |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [Zürich](https://rylo.com/sign/translate/?spl=de&sil=sgg&text=Z%C3%BCrich)   | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Zürich.png)  | The sign for Zurich (correct)                   |
+| [Zurich](https://rylo.com/sign/translate/?spl=de&sil=sgg&text=Zurich)        | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Zurich.png)  | Spelling the city name without umlaut (strange) |
+| [Züerich](https://rylo.com/sign/translate/?spl=de&sil=sgg&text=Z%C3%BCerich) | ![SignWriting for Zurich in Swiss-German Sign Language](assets/zurich/Züerich.png) | Spelling the city name (strange)                |
 
 ##### Adaptivity to minor important changes
 
 Here is an example where a minor, important modification to the spoken language (exclamation) yields different, correct translations in SignWriting (reflecting the emotion) but the dictionary yields the same one.
 Changing to question mark, the face correctly become questioning (even though the SignWriting is not perfect).
 
-| Text                                                                             | Machine Translation                                                                               | Dictionary Translation                                |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| [Hello world.](https://translate.rylo.com/?spl=en&sil=ase&text=Hello%20world.)   | ![SignWriting for "Hello World." in American Sign Language](assets/hello_world/period.png)        | The sign for "Hello" followed by the sign for "World" |
-| [Hello world!](https://translate.rylo.com/?spl=en&sil=ase&text=Hello%20world!)   | ![SignWriting for "Hello World!" in American Sign Language](assets/hello_world/exclamation.png)   | The sign for "Hello" followed by the sign for "World" |
-| [Hello world?](https://translate.rylo.com/?spl=en&sil=ase&text=Hello%20world%3F) | ![SignWriting for "Hello World?" in American Sign Language](assets/hello_world/question_mark.png) | The sign for "Hello" followed by the sign for "World" |
+| Text                                                                                  | Machine Translation                                                                               | Dictionary Translation                                |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| [Hello world.](https://rylo.com/sign/translate/?spl=en&sil=ase&text=Hello%20world.)   | ![SignWriting for "Hello World." in American Sign Language](assets/hello_world/period.png)        | The sign for "Hello" followed by the sign for "World" |
+| [Hello world!](https://rylo.com/sign/translate/?spl=en&sil=ase&text=Hello%20world!)   | ![SignWriting for "Hello World!" in American Sign Language](assets/hello_world/exclamation.png)   | The sign for "Hello" followed by the sign for "World" |
+| [Hello world?](https://rylo.com/sign/translate/?spl=en&sil=ase&text=Hello%20world%3F) | ![SignWriting for "Hello World?" in American Sign Language](assets/hello_world/question_mark.png) | The sign for "Hello" followed by the sign for "World" |
 
 ## Signed to Spoken Language Translation
 

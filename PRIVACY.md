@@ -1,8 +1,8 @@
-# Privacy Policy for [translate.rylo.com](https://translate.rylo.com)
+# Privacy Policy for [Rylo Translate](https://rylo.com/sign/translate)
 
 Last Update: 21 October 2025
 
-This Privacy Policy describes how Nagish Inc. and our subsidiaries and affiliates (collectively, “Nagish”, “we”, “us”, or “our”) handle information in connection with our website located at [https://translate.rylo.com](https://translate.rylo.com) (collectively with any related websites and successor websites, the “Website”), and any other services that we own or control and which post or link to this Privacy Policy (collectively, the “Services”), and the rights and choices available to you with respect to your information.  
+This Privacy Policy describes how Nagish Inc. and our subsidiaries and affiliates (collectively, “Nagish”, “we”, “us”, or “our”) handle information in connection with our website located at [https://rylo.com/sign/translate](https://rylo.com/sign/translate) (collectively with any related websites and successor websites, the “Website”), and any other services that we own or control and which post or link to this Privacy Policy (collectively, the “Services”), and the rights and choices available to you with respect to your information.  
 This Privacy Notice is governed by our Terms of Service. Defined terms used herein and not otherwise defined have the meanings set forth in the Terms of Service.
 
 > PLEASE READ THIS PRIVACY POLICY CAREFULLY TO UNDERSTAND HOW WE HANDLE YOUR PERSONAL INFORMATION.  
@@ -69,4 +69,4 @@ You also have the right to lodge a complaint with your local supervisory authori
 ## 7. Updates to This Policy
 
 We update this Privacy Policy when our technology, legal obligations, or data-handling practices change.  
-The most recent version is always available at [translate.rylo.com](https://translate.rylo.com), and the “Last Update” date above reflects the date of the latest substantive revision.
+The most recent version is always available at [Rylo Translate](https://rylo.com/sign/translate), and the “Last Update” date above reflects the date of the latest substantive revision.
