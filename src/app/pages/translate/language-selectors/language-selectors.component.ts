@@ -9,12 +9,7 @@ import {addIcons} from 'ionicons';
 import {arrowForward} from 'ionicons/icons';
 import {IonIcon} from '@ionic/angular/standalone';
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
-import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
-import {TranslocoDirective} from '@jsverse/transloco';
-import {MatProgressSpinner} from '@angular/material/progress-spinner';
-import {MatTreeModule} from '@angular/material/tree';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {NgxFilesizeModule} from 'ngx-filesize';
+import {AsyncPipe} from '@angular/common';
 
 @Component({
   selector: 'app-language-selectors',
@@ -29,7 +24,6 @@ export class LanguageSelectorsComponent extends BaseComponent implements OnInit 
   spokenToSigned$: Observable<boolean>;
   spokenLanguage$: Observable<string>;
   signedLanguage$: Observable<string>;
-  detectedLanguage$: Observable<string>;
 
   @HostBinding('class.spoken-to-signed') spokenToSigned: boolean;
 
@@ -38,7 +32,6 @@ export class LanguageSelectorsComponent extends BaseComponent implements OnInit 
     this.spokenToSigned$ = this.store.select<boolean>(state => state.translate.spokenToSigned);
     this.spokenLanguage$ = this.store.select<string>(state => state.translate.spokenLanguage);
     this.signedLanguage$ = this.store.select<string>(state => state.translate.signedLanguage);
-    this.detectedLanguage$ = this.store.select<string>(state => state.translate.detectedLanguage);
 
     addIcons({arrowForward});
   }
