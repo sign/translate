@@ -128,3 +128,14 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+/**
+ * Component: Nav bar
+ * -------------------------------------------------------------------------- */
+
+/* The wordmark logo's caps are centered in its box, but the adjacent site-title
+   font renders its caps higher in the line box, so the logo reads ~2px low next
+   to "Documentation". Optically align the two by nudging the logo up. */
+.VPNavBarTitle .logo {
+  transform: translateY(-2px);
+}
