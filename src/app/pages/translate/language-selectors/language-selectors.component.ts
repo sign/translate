@@ -1,30 +1,16 @@
 import {Component, HostBinding, inject, OnInit} from '@angular/core';
-import {
-  FlipTranslationDirection,
-  SetSignedLanguage,
-  SetSpokenLanguage,
-} from '../../../modules/translate/translate.actions';
+import {SetSignedLanguage, SetSpokenLanguage} from '../../../modules/translate/translate.actions';
 import {Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {TranslationService} from '../../../modules/translate/translate.service';
 import {BaseComponent} from '../../../components/base/base.component';
 import {takeUntil, tap} from 'rxjs/operators';
 import {addIcons} from 'ionicons';
-import {swapHorizontal} from 'ionicons/icons';
-import {
-  IonBackButton,
-  IonButton,
-  IonButtons,
-  IonContent,
-  IonHeader,
-  IonIcon,
-  IonTitle,
-  IonToolbar,
-} from '@ionic/angular/standalone';
+import {arrowForward} from 'ionicons/icons';
+import {IonIcon} from '@ionic/angular/standalone';
 import {LanguageSelectorComponent} from '../language-selector/language-selector.component';
 import {AsyncPipe, NgTemplateOutlet} from '@angular/common';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {TranslocoDirective, TranslocoPipe} from '@jsverse/transloco';
+import {TranslocoDirective} from '@jsverse/transloco';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {MatTreeModule} from '@angular/material/tree';
 import {CdkTreeModule} from '@angular/cdk/tree';
@@ -34,7 +20,7 @@ import {NgxFilesizeModule} from 'ngx-filesize';
   selector: 'app-language-selectors',
   templateUrl: './language-selectors.component.html',
   styleUrls: ['./language-selectors.component.scss'],
-  imports: [LanguageSelectorComponent, AsyncPipe, MatTooltipModule, TranslocoPipe, IonButton, IonIcon],
+  imports: [LanguageSelectorComponent, AsyncPipe, IonIcon],
 })
 export class LanguageSelectorsComponent extends BaseComponent implements OnInit {
   private store = inject(Store);
@@ -54,7 +40,7 @@ export class LanguageSelectorsComponent extends BaseComponent implements OnInit 
     this.signedLanguage$ = this.store.select<string>(state => state.translate.signedLanguage);
     this.detectedLanguage$ = this.store.select<string>(state => state.translate.detectedLanguage);
 
-    addIcons({swapHorizontal});
+    addIcons({arrowForward});
   }
 
   ngOnInit() {
@@ -74,9 +60,5 @@ export class LanguageSelectorsComponent extends BaseComponent implements OnInit 
 
   setSpokenLanguage(lang: string): void {
     this.store.dispatch(new SetSpokenLanguage(lang));
-  }
-
-  swapLanguages(): void {
-    this.store.dispatch(FlipTranslationDirection);
   }
 }
