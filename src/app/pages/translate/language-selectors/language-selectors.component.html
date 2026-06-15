@@ -6,18 +6,7 @@
   translationKey="signedLanguagesShort"
   (languageChange)="setSignedLanguage($event)"></app-language-selector>
 
-<!--  [disabled]="(spokenLanguage$ | async) === null && (detectedLanguage$ | async) === null"-->
-<ion-button
-  (click)="swapLanguages()"
-  id="swap-languages"
-  fill="clear"
-  expand="full"
-  color="dark"
-  [disabled]="true"
-  [matTooltip]="'translate.swapLanguages' | transloco"
-  [attr.aria-label]="'translate.swapLanguages' | transloco">
-  <ion-icon name="swap-horizontal" />
-</ion-button>
+<ion-icon name="arrow-forward" id="translation-direction" aria-hidden="true" />
 
 <app-language-selector
   [hasLanguageDetection]="false"

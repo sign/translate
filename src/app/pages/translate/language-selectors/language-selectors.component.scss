@@ -12,17 +12,9 @@ app-language-selector {
   width: calc(50% - 18px);
 }
 
-#swap-languages {
-  height: 48px;
+#translation-direction {
   width: 36px;
-  margin: 0;
   flex-shrink: 0;
-
-  &::part(native) {
-    padding: 0;
-  }
-
-  &[disabled] {
-    opacity: 0.5;
-  }
+  font-size: 20px;
+  color: var(--ion-color-medium);
 }
