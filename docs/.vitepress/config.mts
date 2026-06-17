@@ -143,7 +143,7 @@ export default withMermaid(
       socialLinks: [
         {icon: 'github', link: 'https://github.com/sign/translate'},
         {icon: 'x', link: 'https://x.com/signmt_'},
-        {icon: 'linkedin', link: 'https://www.linkedin.com/company/sign-mt'},
+        {icon: 'linkedin', link: 'https://www.linkedin.com/company/rylohq/'},
       ],
     },
     head: [
