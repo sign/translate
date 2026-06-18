@@ -9,6 +9,7 @@ import {TranslocoPipe} from '@jsverse/transloco';
 import {NtkmeButtonModule} from '@ctrl/ngx-github-buttons';
 import {SpokenToSignedComponent} from '../spoken-to-signed/spoken-to-signed.component';
 import {SignedToSpokenComponent} from '../signed-to-spoken/signed-to-spoken.component';
+import {SignWritingToggleComponent} from '../signwriting/sign-writing-toggle.component';
 import {DropPoseFileComponent} from '../drop-pose-file/drop-pose-file.component';
 import {addIcons} from 'ionicons';
 import {informationCircleOutline} from 'ionicons/icons';
@@ -30,6 +31,7 @@ import {LandingFooterComponent} from '../../landing/landing-footer/landing-foote
     TranslocoPipe,
     SpokenToSignedComponent,
     SignedToSpokenComponent,
+    SignWritingToggleComponent,
     DropPoseFileComponent,
     RouterLink,
     LogoComponent,

@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.options-button {
+  --padding-start: 6px;
+  --padding-end: 6px;
+  height: 32px;
+  margin: 0;
+}
+
+::ng-deep .signwriting-menu .menu-row {
+  padding: 4px 16px;
+
+  ion-toggle {
+    font-size: 14px;
+  }
+}

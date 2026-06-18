@@ -1,0 +1,22 @@
+<ion-button
+  fill="clear"
+  color="medium"
+  class="options-button"
+  [matMenuTriggerFor]="menu"
+  [attr.aria-label]="'translate.signwriting.options' | transloco">
+  <ion-icon name="ellipsis-horizontal" slot="icon-only" />
+</ion-button>
+
+<mat-menu #menu="matMenu" class="signwriting-menu">
+  <ng-template matMenuContent>
+    <div class="menu-row" (click)="$event.stopPropagation()">
+      <ion-toggle
+        [checked]="(drawSignWriting$ | async) ?? false"
+        (ionChange)="setDrawSignWriting($event)"
+        labelPlacement="start"
+        mode="md">
+        {{ 'translate.signwriting.toggle' | transloco }}
+      </ion-toggle>
+    </div>
+  </ng-template>
+</mat-menu>

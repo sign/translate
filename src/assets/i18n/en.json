@@ -40,6 +40,10 @@
         "copy": "Copy Translation"
       }
     },
+    "signwriting": {
+      "options": "Options",
+      "toggle": "Show SignWriting"
+    },
     "upload": {
       "title": "Choose a video",
       "types": "Upload a .mp4, .ogv, or .webm.",

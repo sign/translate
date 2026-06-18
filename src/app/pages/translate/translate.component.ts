@@ -3,14 +3,14 @@ import {Store} from '@ngxs/store';
 import {SetSetting} from '../../modules/settings/settings.actions';
 import {fromEvent} from 'rxjs';
 import {BaseComponent} from '../../components/base/base.component';
-import {filter, takeUntil, tap} from 'rxjs/operators';
+import {takeUntil, tap} from 'rxjs/operators';
 import {TranslocoService} from '@jsverse/transloco';
 import {TranslationService} from '../../modules/translate/translate.service';
 import {Meta, Title} from '@angular/platform-browser';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ActivatedRoute} from '@angular/router';
 import {TranslateMobileComponent} from './translate-mobile/translate-mobile.component';
 import {TranslateDesktopComponent} from './translate-desktop/translate-desktop.component';
+import {loadSignWritingPreference} from './signwriting/sign-writing-preference';
 
 @Component({
   selector: 'app-translate',
@@ -25,7 +25,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
   private mediaMatcher = inject(MediaMatcher);
   private meta = inject(Meta);
   private title = inject(Title);
-  private route = inject(ActivatedRoute);
 
   isMobile: MediaQueryList;
 
@@ -38,7 +37,7 @@ export class TranslateComponent extends BaseComponent implements OnInit {
     this.store.dispatch([
       new SetSetting('receiveVideo', true),
       new SetSetting('detectSign', false),
-      new SetSetting('drawSignWriting', false), // This setting currently also controls loading the SignWriting models.
+      new SetSetting('drawSignWriting', loadSignWritingPreference()), // This setting currently also controls loading the SignWriting models.
       new SetSetting('drawPose', true),
       new SetSetting('poseViewer', 'pose'),
     ]);
@@ -56,16 +55,6 @@ export class TranslateComponent extends BaseComponent implements OnInit {
             },
             'name=description'
           );
-        }),
-        takeUntil(this.ngUnsubscribe)
-      )
-      .subscribe();
-
-    this.route.queryParams
-      .pipe(
-        filter(params => params['dev'] === '1'),
-        tap(() => {
-          this.store.dispatch(new SetSetting('drawSignWriting', true));
         }),
         takeUntil(this.ngUnsubscribe)
       )

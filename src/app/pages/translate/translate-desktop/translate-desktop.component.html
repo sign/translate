@@ -18,7 +18,10 @@
   <div class="container">
     <app-drop-pose-file>
       <div id="translation-card">
-        <app-language-selectors />
+        <div id="card-header">
+          <app-language-selectors />
+          <app-sign-writing-toggle />
+        </div>
 
         <div id="content">
           @if (spokenToSigned) {
