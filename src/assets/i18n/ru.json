@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Переводчик жестов",
+    "title": "Переводчик жестов | Rylo Translate",
     "language-selector": {
       "detected": "{{lang}} – обнаружен",
       "detect": "Определить язык",

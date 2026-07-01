@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "手语翻译",
+    "title": "手语翻译 | Rylo Translate",
     "language-selector": {
       "detected": "{{lang}} - 检测到",
       "detect": "检测语言",
