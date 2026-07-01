@@ -7,13 +7,13 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Rylo Translate",
+    "title": "Sign Language Translator | Rylo Translate",
     "language-selector": {
       "detected": "{{lang}} - Detected",
       "more": "More Languages",
       "detect": "Detect language"
     },
-    "description": "Effortless Real-Time Sign Language Translation. Translate Sign Language instantly on desktop and mobile.",
+    "description": "The sign language translation tool Sign.mt is now part of Rylo!",
     "input": {
       "webcam": "Webcam",
       "upload": "Upload",
