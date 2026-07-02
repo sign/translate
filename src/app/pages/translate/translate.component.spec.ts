@@ -53,10 +53,10 @@ describe('TranslateComponent', () => {
     const transloco = TestBed.inject(TranslocoService);
 
     transloco.setActiveLang('he');
-    expect(document.title).toEqual('תרגום סימנים');
+    expect(document.title).toEqual('תרגום סימנים | Rylo Translate');
 
     transloco.setActiveLang('en');
-    expect(document.title).toEqual('Rylo Translate');
+    expect(document.title).toEqual('Sign Language Translator | Rylo Translate');
   });
 
   // TODO test state

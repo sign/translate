@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Rylo Translate",
+    "title": "Sign Language Translator",
     "language-selector": {
       "detected": "{{lang}} - Detected",
       "detect": "Detect language",
