@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Sign Language Translator | Rylo Translate",
+    "title": "Sign Language Translator",
     "language-selector": {
       "detected": "{{lang}} - ʻIke ʻia",
       "detect": "Detect language",

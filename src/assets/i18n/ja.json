@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "手話翻訳 | Rylo Translate",
+    "title": "手話翻訳",
     "language-selector": {
       "detected": "{{lang}} - 検出されました",
       "detect": "言語を検出する",

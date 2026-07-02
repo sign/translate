@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "مترجم الإشارات | Rylo Translate",
+    "title": "مترجم الإشارات",
     "language-selector": {
       "detected": "{{lang}} - تم الكشف عنه",
       "detect": "التعرّف التلقائي على اللغة",

@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Tegn Oversætter | Rylo Translate",
+    "title": "Tegn Oversætter",
     "language-selector": {
       "detected": "{{lang}} - fundet",
       "detect": "Registrer sprog",

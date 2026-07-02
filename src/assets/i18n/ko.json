@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "수화 번역기 | Rylo Translate",
+    "title": "수화 번역기",
     "language-selector": {
       "detected": "{{lang}} - 감지됨",
       "detect": "언어 감지",

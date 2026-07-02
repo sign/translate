@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Tłumacz znaków | Rylo Translate",
+    "title": "Tłumacz znaków",
     "language-selector": {
       "detected": "{{lang}} - Wykryto",
       "detect": "Wykryj język",

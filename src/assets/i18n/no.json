@@ -10,7 +10,7 @@
     "shift": "Shift"
   },
   "translate": {
-    "title": "Tegnspråktolk | Rylo Translate",
+    "title": "Tegnspråktolk",
     "language-selector": {
       "detected": "{{lang}} – oppdaget",
       "detect": "Gjenkjenn språk",

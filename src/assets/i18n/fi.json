@@ -10,7 +10,7 @@
     "shift": "vaihto"
   },
   "translate": {
-    "title": "Viittomakääntäjä | Rylo Translate",
+    "title": "Viittomakääntäjä",
     "language-selector": {
       "detected": "{{lang}} - Havaittu",
       "detect": "Tunnista kieli",
