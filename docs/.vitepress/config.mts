@@ -148,14 +148,14 @@ export default withMermaid(
       ],
     },
     head: [
-      ['script', {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-87YJPM7261'}],
+      ['script', {async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-4VVY23YXMF'}],
       [
         'script',
         {},
         `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-87YJPM7261');`,
+      gtag('config', 'G-4VVY23YXMF');`,
       ],
     ],
     markdown: {
