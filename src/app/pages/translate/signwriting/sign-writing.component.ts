@@ -41,10 +41,11 @@ export class SignWritingComponent {
     fromEvent(this.colorSchemeMedia, 'change')
       .pipe(
         tap(() => {
-          // Update signs to force re-rendering
+          // Update signs to force re-rendering.
+          // setTimeout, not requestAnimationFrame: headless browsers throttle rAF, which left signs empty forever in CI
           const signs = this.signs;
           this.signs = [];
-          requestAnimationFrame(() => (this.signs = signs));
+          setTimeout(() => (this.signs = signs));
         }),
         takeUntilDestroyed()
       )

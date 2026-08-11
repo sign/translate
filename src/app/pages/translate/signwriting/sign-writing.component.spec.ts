@@ -70,11 +70,15 @@ describe('SignWritingComponent', () => {
         return slot.assignedElements()[0];
       };
 
+      // Bounded loop: an unbounded poll outlives a jasmine timeout and leaks its expect() into the next spec
       let svg;
-      while (!svg) {
+      for (let i = 0; !svg && i < 500; i++) {
         fixture.detectChanges();
         await new Promise(resolve => setTimeout(resolve, 10)); // Wait for element to be fully loaded
         svg = getSVG();
+      }
+      if (!svg) {
+        throw new Error('fsw-sign svg never rendered');
       }
 
       const textEl = svg.querySelector('text.sym-line');
