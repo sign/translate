@@ -12,9 +12,13 @@ app-language-selector {
   width: calc(50% - 18px);
 }
 
-#translation-direction {
+#swap-languages {
+  height: 48px;
   width: 36px;
+  margin: 0;
   flex-shrink: 0;
-  font-size: 20px;
-  color: var(--ion-color-medium);
+
+  &::part(native) {
+    padding: 0;
+  }
 }

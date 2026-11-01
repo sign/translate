@@ -11,10 +11,14 @@ import {provideHttpClientTesting} from '@angular/common/http/testing';
 import {AppTranslocoTestingModule} from '../../../core/modules/transloco/transloco-testing.module';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {provideIonicAngular} from '@ionic/angular/standalone';
+import {Store} from '@ngxs/store';
+import {FlipTranslationDirection} from '../../../modules/translate/translate.actions';
+import {firstValueFrom} from 'rxjs';
 
 describe('LanguageSelectorsComponent', () => {
   let component: LanguageSelectorsComponent;
   let fixture: ComponentFixture<LanguageSelectorsComponent>;
+  let store: Store;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -28,11 +32,22 @@ describe('LanguageSelectorsComponent', () => {
     });
     fixture = TestBed.createComponent(LanguageSelectorsComponent);
     component = fixture.componentInstance;
+    store = TestBed.inject(Store);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should swap from sign to text mode', async () => {
+    await firstValueFrom(store.dispatch(FlipTranslationDirection));
+    expect(store.selectSnapshot(state => state.translate.spokenToSigned)).toBeFalse();
+
+    await firstValueFrom(component.swapLanguages());
+
+    expect(store.selectSnapshot(state => state.translate.spokenToSigned)).toBeTrue();
+    expect(store.selectSnapshot(state => state.translate.inputMode)).toBe('text');
   });
 
   // TODO: Fix accessibility test once https://github.com/ionic-team/ionic-framework/issues/30047 is resolved
